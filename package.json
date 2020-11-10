@@ -1,28 +1,15 @@
 {
-  "name": "zed-automation",
+  "name": "automate-test",
   "version": "1.0.0",
-  "description": "Automation testing framework for ZED RUN",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anhvhslab/zed-automation.git"
-  },
-  "keywords": [
-    "playwright",
-    "automation",
-    "framework"
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anhvhslab/zed-automation/issues"
-  },
-  "homepage": "https://github.com/anhvhslab/zed-automation#readme",
   "devDependencies": {
-    "playwright": "^1.5.2",
-    "supertest": "^6.0.1"
+    "playwright": "^1.5.2"
   }
 }
