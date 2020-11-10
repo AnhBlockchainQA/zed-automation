@@ -1,0 +1,5 @@
+{
+    "jestTimeoutMS": 30000,
+    "baseURL": "https://zed-front-pr-333.herokuapp.com/",
+    "headless": true
+}
