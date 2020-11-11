@@ -60,7 +60,7 @@ const {
   await metamaskPage.click('text="Goerli Test Network"')
  
   const page = await browserContext.newPage()
-  await page.goto('https://zed-front-pr-333.herokuapp.com/stable/stable-48795285', { timeout: 0 });
+  await page.goto('https://zed-front-pr-333.herokuapp.com', { timeout: 0 });
 
   // Navigate implicitly by clicking a link.
   await page.click('div.start-part');
