@@ -1,0 +1,17 @@
+{
+  "metamask": {
+    "CLICK_FIRST_TIME_FLOW__BUTTON": ".first-time-flow__button",
+    "CLICK_PAGE_CONTAINER_FOOTER": ".page-container__footer",
+    "FILL_TEXT_AREA_FILL_PASSPHASE": "[placeholder='Paste seed phrase from clipboard']",
+    "SEED_PHASE": "promote involve unaware today camera major net tail area rule manual humor",
+    "FILL_PASSWORD_INPUT": "#password",
+    "PASSWORD": "nidalee1",
+    "FILL_PASSWORD_CONFIRM_INPUT": "#confirm-password",
+    "PASSWORD_CONFIRM": "nidalee1",
+    "CHECKBOX_AGREE": ".first-time-flow__terms",
+    "CLICK_ALL_DONE": "text='All Done'",
+    "CLICK_CLOSE": "[title='Close']",
+    "CLICK_NETWORK_NAME": ".network-name",
+    "CLICK_CHOOSE_NETWORK": "text='Goerli Test Network'"
+  }
+}

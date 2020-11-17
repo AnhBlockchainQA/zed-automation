@@ -10,40 +10,14 @@ const {
     args: [
       `--disable-extensions-except=${pathToExtension}`,
       `--load-extension=${pathToExtension}`
-    ]
-  })
-  browserContext.on("page", async (page) => {
-    await page.waitForLoadState("domcontentloaded")
-    await page.waitForTimeout(3000)
-    // const content = await page.content()
-    // console.log('page:', content)
-    const check = await page.$('text="Next"')
-    if (check) {
-      console.log('check:', 1111)
-      await page.click('text="Next"')
-      await page.click('text="Connect"')
-    }
-
-    const check2 = await page.$('text="Sign"')
-    if (check2) {
-      console.log('check 2222')
-      await page.click('text="Sign"')
-    }
+    ],
+    timeout: 0
   })
 
-  const backgroundPage = await browserContext.backgroundPages()[0];
-  console.log('backgroundPage:', backgroundPage)
-  const page1 = await browserContext.newPage()
-  await page1.waitForTimeout(6000)
-  const allPages = await browserContext.pages();
-  // console.log('allPages:', allPages)
-
-  const metamaskPage = allPages[2]
-  // await metamaskPage.type("#password", "nidalee1")
-  // await metamaskPage.click('.MuiButton-label');0
-  // await metamaskPage.close()
-  // await page.waitForTimeout(2000)
-  // console.log('length:', allPages.length)
+  const [metamaskPage] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    browserContext.backgroundPages()[0]
+  ])
 
   await metamaskPage.click('.first-time-flow__button');
   await metamaskPage.click('.first-time-flow__button');
@@ -58,21 +32,48 @@ const {
   await metamaskPage.click('[title="Close"]')
   await metamaskPage.click('.network-name')
   await metamaskPage.click('text="Goerli Test Network"')
- 
+  
   const page = await browserContext.newPage()
   await page.goto('https://zed-front-pr-333.herokuapp.com', { timeout: 0 });
 
-  // Navigate implicitly by clicking a link.
+  // await metamaskPage.bringToFront();
+
   await page.click('div.start-part');
+
   const res = await page.click('.overline-text.bold', { timeout: 0 });
   console.log('res:', res)
-  // console.log('>>>:', await page.content())
 
-  // const newas = await page.click('[type="submit"]');
-  // await page.fill("#password", "nidalee1")
-  await page.waitForTimeout(10000)
-  await page.click('text="authenticate"')
+  const [metaMaskSign] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    page.click('.overline-text.bold', { timeout: 0 }) 
+  ])
+  await metaMaskSign.waitForLoadState();
+  console.log(await metaMaskSign.title());
+  await metaMaskSign.click('text="Next"')
+  await metaMaskSign.click('text="Connect"')
+  await metaMaskSign.waitForEvent("close")
 
+  const [metaMaskSign2] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    page.click('text="authenticate"', { timeout: 0 }) 
+  ])
+  await metaMaskSign2.waitForLoadState()
+  await metaMaskSign2.click('text="Sign"')
+  await metaMaskSign2.waitForEvent("close")
+
+  // buy horst
+  await page.click('text="Marketplace"')
+  await page.click('.horse-sale-card')
+  await page.click('text="Buy with ETH"')
+  await page.waitForTimeout(2000)
+  // const [popup] = await Promise.all([
+  //   page.waitForEvent('popup'),
+  //   page.click('text="Buy with ETH"')
+  // ])
+  // const check = await page.$('text="confirm"')
+  // console.log('check:', check)
+  await page.hover('.confirm-btn')
+  await page.dblclick('.confirm-btn', { button: "left", force: true })
 
   // Test the background page as you would any other page.
   // await browserContext.close();

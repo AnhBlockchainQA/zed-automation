@@ -1,90 +1,92 @@
-const {chromium} = require('playwright');
+const { chromium } = require("playwright");
+const superagent = require("superagent");
+require("superagent-retry-delay")(superagent);
 const request = require("supertest");
 
 (async () => {
-  let randomEmail;
-  let username;
+  let email;
   var messageId;
   let domain;
   let magicLink;
+  const pattern = /<a style="color: #27B18A; text-decoration: none; line-height: inherit;" target="_blank" href="(.*)">/;
+  const server = "https://www.1secmail.com/api/v1";
 
-  let server = "https://www.1secmail.com/api/v1";
-  
+  const browser = await chromium.launch({
+    headless: false,
+    slowMo: 20,
+    timeout: 60000,
+  });
+  const context = await browser.newContext();
+  const zedPage = await context.newPage();
+  const page = await context.newPage();
+
   //Random the email
-//   request(server)
-//     .get("/")
-//     .query({
-//       action: "genRandomMailbox",
-//       count: 10,
-//     })
-//     .end((err, res) => {
-//       if (err) {
-//         throw new Error("An error occured with the payment service, err: " + err);
-//       }else{
-//       randomEmail = res.body[Math.floor(Math.random() * res.body.length)];
-//       username = randomEmail.split("@")[0];
-//       domain = randomEmail.split("@")[1];
-//       console.log(randomEmail + " " + username + " " + domain );
-//       }
-//     });
+  const randomEmail = await request(server).get("/").query({
+    action: "genRandomMailbox",
+    count: 10,
+  });
 
-    // Launch ZED Run and input email
-    const browser = await chromium.launch({headless: false, slowMo: 20, timeout: 60000});
-    const context = await browser.newContext();
-    const zedPage = await context.newPage();
-    const page = await context.newPage()
-    
-    zedPage.bringToFront();
-    await zedPage.goto('https://zed-front-pr-333.herokuapp.com/');
-    // await zedPage.click('div.start-part');
-    // await zedPage.fill('div.m-input-content > input[placeholder="Email"]', randomEmail);
-    // await zedPage.click('button[type="Submit"]');
+  let testEmail = randomEmail.body[
+    Math.floor(Math.random() * randomEmail.body.length)
+  ].toString();
+  username = testEmail.split("@")[0];
+  domain = testEmail.split("@")[1];
 
-    // Check email inbox
-    // request(server)
-    // .get("/")
-    // .query({
-    //   action: "getMessages",
-    //   login: username,
-    //   domain: domain,
-    // })
-    // .end((err, res) => {
-    //   if (err) {
-    //     throw new Error("An error occured with the payment service, err: " + err);
-    //   }else{
-    //     console.log(res.body);
-    //     let message = res.body.find(el => el.subject == "[TEST] Log in to ZED Run");
-    //     if(message !== undefined) {
-    //       messageId = message.id;
-    //     }
-    //   }
-    //   });
+  await zedPage.bringToFront();
+  await zedPage.goto("https://zed-front-pr-333.herokuapp.com/", { timeout: 0 });
+  await zedPage.click("div.start-part");
+  await zedPage.fill(
+    'div.m-input-content > input[placeholder="Email"]',
+    testEmail
+  );
+  await zedPage.click('button[type="Submit"]');
+  await zedPage.waitForTimeout(7000);
 
-      request(server)
-      .get("/")
-      .query({
-        action: "readMessage",
-        login: "2bd51hcp",
-        domain: "1secmail.com",
-        id: 93283243
-      }).end((err, res) => {
-            var pattern =/<a style="color: #27B18A; text-decoration: none; line-height: inherit;" target="_blank" href="(.*)">/;
-            if(res.body !== []){
-               let emailBody = res.body.body;
-               console.log(emailBody);
-               magicLink = emailBody.match(pattern)[1];
-               console.log('\n', magicLink);
+  const checkInbox = await request(server)
+    .get("/")
+    .query({
+      action: "getMessages",
+      login: username,
+      domain: domain,
+    })
+    .retry(5, 3000, [404, 500]);
 
-               page.bringToFront();
-               page.goto(magicLink);  
-            }
-      })
+  console.log(checkInbox.body);
+  if (checkInbox.body !== []) {
+    messageId = Number(checkInbox.body[0].id);
+    console.log(messageId);
+  }
 
+  const getMagicLink = await request(server)
+    .get("/")
+    .query({
+      action: "readMessage",
+      login: username,
+      domain: domain,
+      id: messageId,
+    })
+    .retry(5, 3000, [400, 404, 500]);
 
-    //   const page = await context.newPage()
-    //   await page.goto(magicLink);
+  let emailBody = getMagicLink.body.body;
+  magicLink = emailBody.match(pattern)[1];
+  console.log("\n", magicLink);
 
-      zedPage.bringToFront();
-      //Validate that we login successfully
-
+  await page.bringToFront();
+  await page.goto(magicLink);
+  await page.waitForTimeout(10000);
+  // await page.click('//div[contains(@class,"auth-anomaly-detected__actionRack")]/span[@role="button" and descendant::text()="Yes, this is me"]');
+  await page.waitForSelector('//h1/p[contains(text(),"logged into ZED Run!")]', {
+    timeout: 5000,
+  });
+  
+  await zedPage.bringToFront();
+  await page.waitForTimeout(10000);
+  try {
+    await zedPage.waitForSelector(
+      '//h1[text()="Welcome To Zed!"]',
+      { timeout: 5000 }
+    );
+  } catch (error) {
+    console.log("User did not login yet!");
+  }
 })();
