@@ -1,9 +1,4 @@
-Run:
-- npm i
-- rm -rf /tmp/test-user-data-dir
-- node extension.js
-
-For running login with magic link:
-- npm install supertest
-- npm install superagent-retry-delay
-- node magic.link.js
+1. Git clone https://github.com/vhslab/qa-automationtest.git
+2. cd qa-automationtest
+3. npm install
+4. npm run test
