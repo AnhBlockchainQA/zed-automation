@@ -1,24 +1,65 @@
-// import {sess} from '../utils/browser/session';
-// import LoginPage from '../pages/LoginPage';
-// const request = require('../utils/api/api');
-const BrowserSession = require("../utils/browser/session");
-const LoginPage = require("../pages/LoginPage");
-  // describe('E2E test as an end-user, perform the test on below', () => {
-  //   if('As an end-user, I want to input email', async() => {
-  //      await BrowserSession.startTest('https://zed-front-pr-333.herokuapp.com/', true, 60000);
-  //      await LoginPage.clickOnStartButton();
-  //      await LoginPage.typeEmail('test@yopmail.com');
-  //      await LoginPage.clickOnContinueButton();
-  //   });
+const { PageFactory } = require("../utils/browser/pageFactory");
+const { LoginPage } = require("../pages/LoginPage");
+const { MagicLinkPage } = require("../pages/MagicLinkPage");
+const apiRequest = require("../utils/api/api");
 
-  // });
-  (async () => {
-    await BrowserSession.startTest(
-      "https://zed-front-pr-333.herokuapp.com/",
-      false,
-      0
+let pageFactory;
+let login;
+let domain;
+let messageId;
+let magicLink;
+let email;
+let loginPage;
+let magicLinkPage;
+const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
+
+describe("E2E test as an end-user, perform the test on below", () => {
+  beforeAll(async () => {
+    pageFactory = new PageFactory();
+  });
+
+  test("Open ZedRun page and input valid email to generate magic link", async () => {
+    email = await apiRequest.generateRandomEmail();
+    login = email.split("@")[0];
+    domain = email.split("@")[1];
+
+    let page = await pageFactory.newTab(false, 0);
+    loginPage = new LoginPage(page);
+    await loginPage.navigate();
+    await loginPage.clickOnStartButton();
+    await loginPage.typeEmail(email);
+    await loginPage.clickOnContinueButton();
+    await loginPage.waitForTimeout();
+  });
+
+  test("Check mail inbox to get magic link", async () => {
+    messageId = await apiRequest.getZedRunMessageId(login, domain);
+    magicLink = await apiRequest.getMagicLink(
+      login,
+      domain,
+      messageId,
+      pattern
     );
-    await LoginPage.clickOnStartButton();
-    await LoginPage.typeEmail("test@yopmail.com");
-    await LoginPage.clickOnContinueButton();
-  })();
+  });
+
+  test("Open new browser with magic link", async () => {
+    let newPage = await pageFactory.newTab(false, 0);
+    magicLinkPage = new MagicLinkPage(newPage);
+    await magicLinkPage.bringToFront();
+    await magicLinkPage.navigate(magicLink);
+    await magicLinkPage.waitForTimeout();
+    await magicLinkPage.clickToTrustMe();
+    await magicLinkPage.waitForLoggedInMessage();
+    await magicLinkPage.waitForTimeout();
+  });
+
+  test("Switch back to ZedRun page and verify login successful", async () => {
+    await loginPage.bringToFront();
+    await loginPage.waitForTimeout();
+    await loginPage.checkIfWelcomeLabelPresent();
+  });
+
+  afterAll(async () => {
+    pageFactory.endTest();
+  });
+});

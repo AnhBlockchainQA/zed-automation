@@ -1,16 +1,14 @@
-// class ZedRunLocators{
-
-//     async getStartButton(){return this.START_BUTTON;}
-//     async getEmailInput(){return this.EMAIL_INPUT};
-//     async getContinueButton(){return this.CONTINUE_BUTTON;}
-//     async getWelcomeText(){return this.WELCOME_TEXT;}
-// }
-
-exports.START_BUTTON = 'div.start-part';
-exports.EMAIL_INPUT = 'div.m-input-content > input[placeholder="Email"]';
-exports.CONTINUE_BUTTON = 'button[type="Submit"]';
-exports.AUTHENTICATE_BUTTON = 'text="authenticate"';
-exports.WELCOME_TEXT = '//h1[text()="Welcome To Zed!"]';
-
-// module.exports = new ZedRunLocators
-
+const config = require('config')
+const zedRunConfig = config.get("zedRun")
+module.exports = {
+    LOGIN_START_BUTTON: zedRunConfig.LOGIN_START_BUTTON,
+    EMAIL_INPUT: zedRunConfig.EMAIL_INPUT,
+    CONTINUE_BUTTON: zedRunConfig.CONTINUE_BUTTON,
+    AUTHENTICATE_BUTTON: zedRunConfig.AUTHENTICATE_BUTTON,
+    WELCOME_LABEL: zedRunConfig.WELCOME_LABEL,
+    TRUST_ME_BUTTON: zedRunConfig.TRUST_ME_BUTTON,
+    LOGIN_SUCESSFUL_MESSAGE: zedRunConfig.LOGIN_SUCESSFUL_MESSAGE,
+    CONNECT_METAMASK: zedRunConfig.CONNECT_METAMASK,
+    ACCEPT_BUTTON: zedRunConfig.ACCEPT_BUTTON,
+    MARKETPLACE_LINK: zedRunConfig.MARKETPLACE_LINK,
+}

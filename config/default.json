@@ -1,17 +1,49 @@
 {
+  "zedRun": {
+    "LOGIN_START_BUTTON": "div.start-part",
+    "EMAIL_INPUT": "div.m-input-content > input[placeholder='Email']",
+    "CONTINUE_BUTTON": "button[type='Submit']",
+    "AUTHENTICATE_BUTTON": "//button[text()='authenticate']",
+    "WELCOME_LABEL": "//h1[text()='Welcome To Zed!']",
+    "TRUST_ME_BUTTON": "//div[contains(@class,'auth-anomaly-detected__actionRack')]/span[@role='button' and descendant::text()='Yes, this is me']",
+    "LOGIN_SUCESSFUL_MESSAGE": "//h1/p[contains(text(),'logged into ZED Run!')]",
+    "CONNECT_METAMASK": "//div[text()='Connect Metamask']",
+    "ACCEPT_BUTTON": ".accept-btn",
+    "MARKETPLACE_LINK": "//div[@class='header-desktop']/header/div[@class='header-content']/div[@class='left-part']//div[@data-tour='header-marketplace']//a[@href='/marketplace']"
+  },
+  "marketPlace":{
+    "FIRST_HORSE_PREVIEW": "//div[@class='marketplace-content']//ul/div[1]/div[@class='preview']/img",
+    "BUY_WITH_CREDIT_CARD_BUTTON": "//button[text()='Buy With Credit Card']",
+    "BUY_WITH_CREDIT_CARD_LABEL": "//h2[text()='Buy With Credit Card']",
+    "CREDIT_CARD_NUMBER_INPUT": "//input[@aria-label='Credit or debit card number']",
+    "CREDIT_CARD_EXPIRATION_DATE_INPUT" : "//input[@aria-label='Credit or debit card expiration date']",
+    "CREDIT_CARD_CVC_INPUT": "//input[@aria-label='Credit or debit card CVC/CVV']",
+    "PAY_BUTTON": "//button[descendant::text()='Pay']",
+    "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
+    "DONE_BUTTON": "//button[text()='Done']"
+  },
   "metamask": {
-    "CLICK_FIRST_TIME_FLOW__BUTTON": ".first-time-flow__button",
-    "CLICK_PAGE_CONTAINER_FOOTER": ".page-container__footer",
+    "CLICK_GET_STARTED_BUTTON": "//button[text()='Get Started']",
+    "CLICK_IMPORT_WALLET_BUTTON": "//button[text()='Import wallet']",
+    "CLICK_I_AGREE_BUTTON": "//button[text()='I Agree']",
     "FILL_TEXT_AREA_FILL_PASSPHASE": "[placeholder='Paste seed phrase from clipboard']",
     "SEED_PHASE": "promote involve unaware today camera major net tail area rule manual humor",
     "FILL_PASSWORD_INPUT": "#password",
-    "PASSWORD": "nidalee1",
     "FILL_PASSWORD_CONFIRM_INPUT": "#confirm-password",
-    "PASSWORD_CONFIRM": "nidalee1",
     "CHECKBOX_AGREE": ".first-time-flow__terms",
+    "CLICK_IMPORT_BUTTON": "//button[text()='Import']",
     "CLICK_ALL_DONE": "text='All Done'",
     "CLICK_CLOSE": "[title='Close']",
     "CLICK_NETWORK_NAME": ".network-name",
-    "CLICK_CHOOSE_NETWORK": "text='Goerli Test Network'"
+    "CLICK_CHOOSE_NETWORK": "text='Goerli Test Network'",
+    "CLICK_NEXT_BUTTON" : "text='Next'",
+    "CLICK_CONNECT_BUTTON" : "text='Connect'",
+    "CLICK_SIGN_BUTTON" : "text='Sign'"
+  },
+  "apiConfig":{
+    "GENERATE_RANDOM_EMAIL": "genRandomMailbox",
+    "GET_MESSAGES": "getMessages",
+    "READ_MESSAGE": "readMessage",
+    "ERROR_CODES": [400, 401, 500]
   }
 }
