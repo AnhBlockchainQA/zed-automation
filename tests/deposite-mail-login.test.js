@@ -1,16 +1,17 @@
 const { PageFactory } = require("../utils/browser/pageFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
+const { TopUpPage } = require('../pages/TopUpPage');
 const apiRequest = require("../utils/api/api");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, DEPOSITE_AMOUNT } = require("../data/env");
 
 let pageFactory;
-let login;
-let domain;
 let messageId;
 let magicLink;
-let email;
 let loginPage;
 let magicLinkPage;
+let topUpPage;
+let pageInstance;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
@@ -20,32 +21,28 @@ beforeAll(async () => {
 describe("Login to ZedRUn with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
-    email = await apiRequest.generateRandomEmail();
-    login = email.split("@")[0];
-    domain = email.split("@")[1];
-
-    let page = await pageFactory.newTab(false, 0);
-    loginPage = new LoginPage(page);
+    pageInstance = await pageFactory.newTab(false, 0);
+    loginPage = new LoginPage(pageInstance);
     await loginPage.navigate();
     await loginPage.clickOnStartButton();
-    await loginPage.typeEmail(email);
+    await loginPage.typeEmail(TEST_EMAIL);
     await loginPage.clickOnContinueButton();
     await loginPage.waitForTimeout();
   });
 
   test("Check mail inbox to get magic link", async () => {
-    messageId = await apiRequest.getZedRunMessageId(login, domain);
+    messageId = await apiRequest.getZedRunMessageId(TEST_LOGIN, TEST_DOMAIN);
     magicLink = await apiRequest.getMagicLink(
-      login,
-      domain,
+      TEST_LOGIN,
+      TEST_DOMAIN,
       messageId,
       pattern
     );
   });
 
   test("Open new browser with magic link", async () => {
-    let newPage = await pageFactory.newTab(false, 0);
-    magicLinkPage = new MagicLinkPage(newPage);
+    let newPageInstance = await pageFactory.newTab(false, 0);
+    magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
     await magicLinkPage.waitForTimeout();
@@ -58,9 +55,24 @@ describe("Login to ZedRUn with magic link", () => {
     await loginPage.bringToFront();
     await loginPage.waitForTimeout();
     await loginPage.checkIfWelcomeLabelPresent();
+    await loginPage.clickOnAcceptButton();
+  });
+
+  test ("Click on Deposit button", async () => {
+    await loginPage.clickOnWalletIcon();
+    topUpPage = new TopUpPage(pageInstance);
+    await topUpPage.clickOnDepositButton();
+    let currentAmount = await topUpPage.getCurrentZedBalance();
+    console.log(currentAmount);
+    await topUpPage.typeDepositeAmount(DEPOSITE_AMOUNT);
+    await topUpPage.clickOnDepositeToZedWallet();
+    await topUpPage.waitForTimeout(10000);
   });
 });
+
 
 afterAll(async () => {
   pageFactory.endTest();
 });
+
+

@@ -4,7 +4,7 @@ const { LoginPage } = require('../pages/LoginPage');
 const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
-const { MarketPlacePage, MarketplacePage } = require('../pages/MarketPlacePage');
+const { MarketplacePage } = require('../pages/MarketPlacePage');
 
 
 
@@ -19,14 +19,13 @@ let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
 
-describe("flow test", () => {
+beforeAll(async () => {
+  metamaskFactory = new MetamaskFactory();
+  await metamaskFactory.removeCache();
+  metamaskInstance = await metamaskFactory.init();
+});
 
-  
-  beforeAll(async () => {
-    metamaskFactory = new MetamaskFactory();
-    await metamaskFactory.removeCache();
-    metamaskInstance = await metamaskFactory.init();
-  });
+describe("Buy horse with credit card", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -42,7 +41,7 @@ describe("flow test", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
@@ -66,7 +65,7 @@ describe("flow test", () => {
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
 
- });
+ })
 
   test ("Go to Marketplace and buy horse by CC", async () => {
     await zedRunPage.clickOnMarketplaceLink();
@@ -80,9 +79,9 @@ describe("flow test", () => {
     await marketPlacePage.clickPayButton();
     await marketPlacePage.checkPaySuccessfulLabelPresent();
     await marketPlacePage.clickDoneButton();
-  })
+  });
+})
 
 afterAll(async () => {
-   await MetamaskFactory.close();
+  await metamaskFactory.close();
 });
-})
