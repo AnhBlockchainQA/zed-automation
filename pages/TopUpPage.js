@@ -1,7 +1,7 @@
-const marketPlaceConfig = require("../locators/MarketPlace");
+const depositeConfig = require("../locators/TopUp");
  
 
-class MarketplacePage{
+class TopUpPage{
     constructor(page){
         this.page = page;
     }
@@ -82,6 +82,7 @@ class MarketplacePage{
         )
         await this.page.click(marketPlaceConfig.DONE_BUTTON); 
     }
+
 }
 
-module.exports = { MarketplacePage };
+module.exports = { TopUpPage };

@@ -20,17 +20,17 @@ class MagicLinkPage {
 
   async clickToTrustMe() {
     try{
-      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {timeout : WAIT_TIME});
+      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true});
       console.log(">>> Skip this step");
     }catch(error){
       this.page.click(zedRunConfig.TRUST_ME_BUTTON);
     }  
-    this.page.waitForTimeout(WAIT_TIME);
+    this.page.waitForLoadState();
   }
 
   async waitForLoggedInMessage() {
     try{
-      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {timeout : WAIT_TIME});
+      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true});
       return true;
     }catch(error){
       return false;

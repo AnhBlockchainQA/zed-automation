@@ -68,7 +68,7 @@ describe("flow test", () => {
 
  })
 
-  test ("Go to Marketplace and buy horse by CC", async () => {
+  test ("Click on Deposit button", async () => {
     await zedRunPage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.clickFirstHorsePreview();
