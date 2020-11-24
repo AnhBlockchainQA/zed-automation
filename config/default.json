@@ -8,7 +8,7 @@
     "TRUST_ME_BUTTON": "//div[contains(@class,'auth-anomaly-detected__actionRack')]/span[@role='button' and descendant::text()='Yes, this is me']",
     "LOGIN_SUCESSFUL_MESSAGE": "//h1/p[contains(text(),'logged into ZED Run!')]",
     "CONNECT_METAMASK": "//div[text()='Connect Metamask']",
-    "ACCEPT_BUTTON": ".accept-btn",
+    "ACCEPT_BUTTON": "text='Accept'",
     "MARKETPLACE_LINK": "//div[@class='header-desktop']/header/div[@class='header-content']/div[@class='left-part']//div[@data-tour='header-marketplace']//a[@href='/marketplace']"
   },
   "marketPlace":{
@@ -20,7 +20,9 @@
     "CREDIT_CARD_CVC_INPUT": "//input[@aria-label='Credit or debit card CVC/CVV']",
     "PAY_BUTTON": "//button[descendant::text()='Pay']",
     "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
-    "DONE_BUTTON": "//button[text()='Done']"
+    "DONE_BUTTON": "//button[text()='Done']",
+    "BUY_WITH_ETH_BUTTON" : "//button[text()='Buy with ETH']",
+    "CONFIRM_BUTTON": "//div[@class='buy-method-choice']/div[@class='method-options']/form//div[@class='section-footer']/button[text()='confirm']"
   },
   "metamask": {
     "CLICK_GET_STARTED_BUTTON": "//button[text()='Get Started']",
@@ -38,7 +40,15 @@
     "CLICK_CHOOSE_NETWORK": "text='Goerli Test Network'",
     "CLICK_NEXT_BUTTON" : "text='Next'",
     "CLICK_CONNECT_BUTTON" : "text='Connect'",
-    "CLICK_SIGN_BUTTON" : "text='Sign'"
+    "CLICK_SIGN_BUTTON" : "text='Sign'",
+    "CLICK_CONFIRM_BUTTON": "//button[text()='Confirm']"
+  },
+  "deposite":{
+    "WALLET_ICON": "//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']",
+    "DEPOSITE_BUTTON": "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='deposit-withdraw']//div[text()='Deposit']",
+    "DEPOSITE_AMOUNT_INPUT": "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'dw-content')]/div[@class='matic-deposit']/div[contains(@class,'dw-price')]/input[1]",
+    "DEPOSITE_TO_ZED_BUTTON": "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'dw-content')]/div[@class='matic-deposit']/button[text()='Deposit to ZED Balance']",
+    "CURRENT_ZED_BALANCE": "//div[@class='header-desktop']//div[@class='sidebar-content']/div[@class='dw-content-container']/following-sibling::div//div[@class='wallet-price']/div[1]"
   },
   "apiConfig":{
     "GENERATE_RANDOM_EMAIL": "genRandomMailbox",

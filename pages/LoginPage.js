@@ -1,5 +1,6 @@
 const { ZEDRUN_URL, WAIT_TIME } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
+const depositeConfig = require('../locators/TopUp');
 
 class LoginPage{
     constructor(page){
@@ -54,11 +55,17 @@ class LoginPage{
     }
 
     async clickOnAcceptButton(){
+        await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {visible: true});
         await this.page.click(zedRunConfig.ACCEPT_BUTTON);
     }
 
     async clickOnMarketplaceLink(){
         await this.page.click(zedRunConfig.MARKETPLACE_LINK);
+    }
+
+    async clickOnWalletIcon(){
+        await this.page.waitForSelector(depositeConfig.WALLET_ICON);
+        await this.page.click(depositeConfig.WALLET_ICON);
     }
 }
 

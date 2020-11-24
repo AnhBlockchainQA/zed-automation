@@ -25,6 +25,11 @@ class MetamaskNotificationPage{
     async waitForCloseEvent(){
         await this.page.waitForEvent('close');
     }
+
+    async clickOnConfirmButton(){
+        await this.page.waitForSelector(metamaskConfig.CLICK_CONFIRM_BUTTON, {timeout: 0})
+        await this.page.click(metamaskConfig.CLICK_CONFIRM_BUTTON);
+    }
 }
 
 module.exports = { MetamaskNotificationPage };

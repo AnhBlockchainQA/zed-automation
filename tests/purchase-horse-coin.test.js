@@ -1,21 +1,12 @@
-const {
-  MetamaskPage
-} = require('../pages/MetamaskPage');
-const {
-  MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
-const {
-  LoginPage
-} = require('../pages/LoginPage');
-const {
-  MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
-const {
-  SEED_PHRASE,
-  PASSWORD,
-  CONFIRM_PASSWORD
-} = require('../data/env');
+const { MetamaskPage } = require('../pages/MetamaskPage');
+const { MetamaskFactory } = require('../utils/browser/metamaskFactory');
+const { LoginPage } = require('../pages/LoginPage');
+const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
+const marketPlaceConfig = require('../locators/MarketPlace');
+const { MarketplacePage } = require('../pages/MarketPlacePage');
+
 
 
 let metamaskFactory;
@@ -27,15 +18,18 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let marketPlacePage;
+let confirmMetamaskNotificationInstance;
+let confirmMetamaskNotificationPage;
 
-describe("flow test", () => {
+beforeAll(async () => {
+  metamaskFactory = new MetamaskFactory();
+  await metamaskFactory.removeCache();
+  metamaskInstance = await metamaskFactory.init();
+});
 
 
-  beforeAll(async () => {
-    metamaskFactory = new MetamaskFactory();
-    await metamaskFactory.removeCache();
-    metamaskInstance = await metamaskFactory.init();
-  });
+describe("flow test", () => {  
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -67,36 +61,32 @@ describe("flow test", () => {
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
+    
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
     otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-  });
 
-  test("generate child horse", async () => {
-    // await zedPage.click('.icon-arrow')
-    // await zedPage.click('text="stud service"')
-    // await zedPage.click('.panel')
-    // await zedPage.click('text="select mate"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('text="select female"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('.horse-card')
-    // await zedPage.click('text="Select"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('text="Buy Cover"')
-    // await zedPage.waitForLoadState()
-    // // await zedPage.click('text="Confirm"')
-    // const metaMaskSign = await Metamask.clickNewPage(zedPage, 'text="Confirm"')
-    // await metaMaskSign.click('text="Confirm"')
-    // await metaMaskSign.waitForEvent("close")
-    // await zedPage.waitForLoadState()
-  });
+ })
 
-  afterAll(async () => {
-    // await MetamaskFactory.close();
-  });
+  test ("Go to Marketplace and buy horse by ETH", async () => {
+    await zedRunPage.clickOnMarketplaceLink();
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.clickFirstHorsePreview();
+    await marketPlacePage.clickOnBuyWithETH();
+    await marketPlacePage.clickOnConfirmButton();
+
+    // confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, marketPlaceConfig.CONFIRM_BUTTON);
+    // confirmMetamaskNotificationPage = new MetamaskNotificationPage(confirmMetamaskNotificationInstance);
+    
+    // await confirmMetamaskNotificationPage.waitForLoadState();
+    // await confirmMetamaskNotificationPage.clickOnConfirmButton();
+    // await otherMetamaskNotificationPage.waitForCloseEvent();
+  })
 })
+
+afterAll(async () => {
+  await metamaskFactory.close();
+});
