@@ -1,8 +1,20 @@
-const { MetamaskPage } = require('../pages/MetamaskPage');
-const { MetamaskFactory } = require('../utils/browser/metamaskFactory');
-const { LoginPage } = require('../pages/LoginPage');
-const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require('../data/env');
+const {
+  MetamaskPage
+} = require('../pages/MetamaskPage');
+const {
+  MetamaskFactory
+} = require('../utils/browser/metamaskFactory');
+const {
+  LoginPage
+} = require('../pages/LoginPage');
+const {
+  MetamaskNotificationPage
+} = require('../pages/MetamaskNotification');
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD
+} = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
 
 
@@ -15,15 +27,19 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+beforeAll(async () => {
+  metamaskFactory = new MetamaskFactory();
+  await metamaskFactory.removeCache();
+  metamaskInstance = await metamaskFactory.init();
+});
 
-describe("flow test", () => {
+afterAll(async () => {
+  // await metamaskFactory.close();
+});
 
-  
-  beforeAll(async () => {
-    metamaskFactory = new MetamaskFactory();
-    await metamaskFactory.removeCache();
-    metamaskInstance = await metamaskFactory.init();
-  });
+describe("flow test generate child horse", () => {
+
+
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -55,36 +71,63 @@ describe("flow test", () => {
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
-    
+
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
     otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
- });
+    await newPageInstance.click('text="Accept"')
+  });
 
-    test("generate child horse", async () => {
-    // await zedPage.click('.icon-arrow')
-    // await zedPage.click('text="stud service"')
-    // await zedPage.click('.panel')
-    // await zedPage.click('text="select mate"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('text="select female"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('.horse-card')
-    // await zedPage.click('text="Select"')
-    // await zedPage.waitForLoadState()
-    // await zedPage.click('text="Buy Cover"')
-    // await zedPage.waitForLoadState()
-    // // await zedPage.click('text="Confirm"')
-    // const metaMaskSign = await Metamask.clickNewPage(zedPage, 'text="Confirm"')
-    // await metaMaskSign.click('text="Confirm"')
-    // await metaMaskSign.waitForEvent("close")
-    // await zedPage.waitForLoadState()
- });
+  test("generate child horse", async () => {
+    await newPageInstance.click('.icon-arrow')
+    await newPageInstance.click('text="stud service"')
+    await newPageInstance.click('.panel')
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector('text="select mate"', {
+      timeout: 0
+    })
+    await newPageInstance.click('text="select mate"')
 
-afterAll(async () => {
-  await MetamaskFactory.close();
-});
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector('.female-content', {
+      timeout: 0
+    })
+    await newPageInstance.click('.female-content')
+
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector('.horse-card', {
+      timeout: 0
+    })
+    await newPageInstance.click('.horse-card')
+
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector('text="Select"', {
+      timeout: 0
+    })
+    await newPageInstance.click('text="Select"')
+
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector('text="Buy Cover"', {
+      timeout: 0
+    })
+    await newPageInstance.click('text="Buy Cover"')
+
+    await newPageInstance.waitForLoadState()
+    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, 'text="Confirm"');
+    await metaMaskSign.click('text="Confirm"')
+    await metaMaskSign.waitForEvent("close")
+
+    await newPageInstance.waitForSelector('text="Check Activity"', {
+      timeout: 0
+    })
+    await newPageInstance.click('text="Check Activity"')
+    await newPageInstance.waitForLoadState()
+
+
+  });
+
+
 })

@@ -82,6 +82,7 @@ class MarketplacePage{
         )
         await this.page.click(marketPlaceConfig.DONE_BUTTON); 
     }
+
 }
 
 module.exports = { MarketplacePage };

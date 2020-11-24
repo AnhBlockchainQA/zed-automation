@@ -17,7 +17,7 @@ beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("E2E test as an end-user, perform the test on below", () => {
+describe("Login to ZedRUn with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     email = await apiRequest.generateRandomEmail();
@@ -59,7 +59,6 @@ describe("E2E test as an end-user, perform the test on below", () => {
     await loginPage.waitForTimeout();
     await loginPage.checkIfWelcomeLabelPresent();
   });
-
 });
 
 afterAll(async () => {
