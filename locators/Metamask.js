@@ -17,4 +17,5 @@ module.exports = {
     CLICK_NEXT_BUTTON: metamaskConfig.CLICK_NEXT_BUTTON,
     CLICK_CONNECT_BUTTON: metamaskConfig.CLICK_CONNECT_BUTTON,
     CLICK_SIGN_BUTTON: metamaskConfig.CLICK_SIGN_BUTTON,
+    CLICK_CONFIRM_BUTTON : metamaskConfig.CLICK_CONFIRM_BUTTON
 }

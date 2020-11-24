@@ -4,7 +4,8 @@ const { LoginPage } = require('../pages/LoginPage');
 const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
-const { MarketPlacePage, MarketplacePage } = require('../pages/MarketPlacePage');
+const marketPlaceConfig = require('../locators/MarketPlace');
+const { MarketplacePage } = require('../pages/MarketPlacePage');
 
 
 
@@ -18,6 +19,8 @@ let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
+let confirmMetamaskNotificationInstance;
+let confirmMetamaskNotificationPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -68,18 +71,19 @@ describe("flow test", () => {
 
  })
 
-  test ("Go to Marketplace and buy horse by CC", async () => {
+  test ("Go to Marketplace and buy horse by ETH", async () => {
     await zedRunPage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.clickFirstHorsePreview();
-    await marketPlacePage.clickBuyWithCreditCard();
-    await marketPlacePage.waitUntilPaymentFormPresent();
-    await marketPlacePage.typeCreditCardNumber(CARD_NUMBER);
-    await marketPlacePage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-    await marketPlacePage.typeCreditCardCVC(CARD_CVC);
-    await marketPlacePage.clickPayButton();
-    await marketPlacePage.checkPaySuccessfulLabelPresent();
-    await marketPlacePage.clickDoneButton();
+    await marketPlacePage.clickOnBuyWithETH();
+    await marketPlacePage.clickOnConfirmButton();
+
+    // confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, marketPlaceConfig.CONFIRM_BUTTON);
+    // confirmMetamaskNotificationPage = new MetamaskNotificationPage(confirmMetamaskNotificationInstance);
+    
+    // await confirmMetamaskNotificationPage.waitForLoadState();
+    // await confirmMetamaskNotificationPage.clickOnConfirmButton();
+    // await otherMetamaskNotificationPage.waitForCloseEvent();
   })
 })
 

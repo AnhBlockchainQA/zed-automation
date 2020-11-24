@@ -83,6 +83,17 @@ class MarketplacePage{
         await this.page.click(marketPlaceConfig.DONE_BUTTON); 
     }
 
+    async clickOnBuyWithETH(){
+        await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_ETH_BUTTON);
+        await this.page.click(marketPlaceConfig.BUY_WITH_ETH_BUTTON);
+    }
+
+    async clickOnConfirmButton(){
+        await this.page.waitForSelector(marketPlaceConfig.CONFIRM_BUTTON);
+        await this.page.click(marketPlaceConfig.CONFIRM_BUTTON, {force});
+    }
+
+
 }
 
 module.exports = { MarketplacePage };

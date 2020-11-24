@@ -1,9 +1,10 @@
 const config = require('config')
-const marketPlaceConfig = config.get("deposite")
+const depositeConfig = config.get("deposite")
 
 module.exports = {
-    WALLET_ICON: marketPlaceConfig.DEPOSITE_TO_ZED_BUTTON,
-    DEPOSITE_BUTTON: marketPlaceConfig.DEPOSITE_TO_ZED_BUTTON,
-    DEPOSITE_AMOUNT_INPUT: marketPlaceConfig.DEPOSITE_TO_ZED_BUTTON,
-    DEPOSITE_TO_ZED_BUTTON: marketPlaceConfig.DEPOSITE_TO_ZED_BUTTON
+    WALLET_ICON: depositeConfig.WALLET_ICON,
+    DEPOSITE_BUTTON: depositeConfig.DEPOSITE_BUTTON,
+    DEPOSITE_AMOUNT_INPUT: depositeConfig.DEPOSITE_AMOUNT_INPUT,
+    DEPOSITE_TO_ZED_BUTTON: depositeConfig.DEPOSITE_TO_ZED_BUTTON,
+    CURRENT_ZED_BALANCE: depositeConfig.CURRENT_ZED_BALANCE,
 }

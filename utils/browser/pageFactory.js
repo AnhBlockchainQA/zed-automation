@@ -8,7 +8,7 @@ class PageFactory{
     }
 
     async createBrowser(headlessStatus, timeout){
-        this.browser = await chromium.launch({headless: headlessStatus, args: ['--start-maximized'], timeout: timeout});
+        this.browser = await chromium.launch({headless: headlessStatus, args: [`--start-maximized`], timeout: timeout});
         return this.browser;
     }    
 

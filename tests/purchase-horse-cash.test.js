@@ -4,7 +4,7 @@ const { LoginPage } = require('../pages/LoginPage');
 const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
-const { MarketPlacePage, MarketplacePage } = require('../pages/MarketPlacePage');
+const { MarketplacePage } = require('../pages/MarketPlacePage');
 
 
 

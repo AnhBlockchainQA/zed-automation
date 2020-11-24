@@ -11,4 +11,6 @@ module.exports = {
     PAY_BUTTON: marketPlaceConfig.PAY_BUTTON,
     PAYMENT_SUCESSFUL_LABEL: marketPlaceConfig.PAYMENT_SUCESSFUL_LABEL,
     DONE_BUTTON: marketPlaceConfig.DONE_BUTTON,
+    BUY_WITH_ETH_BUTTON: marketPlaceConfig.BUY_WITH_ETH_BUTTON,
+    CONFIRM_BUTTON: marketPlaceConfig.CONFIRM_BUTTON,
 }
