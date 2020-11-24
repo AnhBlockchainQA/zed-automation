@@ -23,6 +23,7 @@ class MarketplacePage{
 
     async waitUntilPaymentFormPresent(){
         await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_CREDIT_CARD_LABEL, {visible: true});
+        await this.page.waitForTimeout(5000);
     }
 
     async typeCreditCardNumber(cardNumber){

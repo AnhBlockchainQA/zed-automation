@@ -19,14 +19,14 @@ let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
 
-describe("flow test", () => {
+beforeAll(async () => {
+  metamaskFactory = new MetamaskFactory();
+  await metamaskFactory.removeCache();
+  metamaskInstance = await metamaskFactory.init();
+});
 
-  
-  beforeAll(async () => {
-    metamaskFactory = new MetamaskFactory();
-    await metamaskFactory.removeCache();
-    metamaskInstance = await metamaskFactory.init();
-  });
+describe("Buy horse with credit card", () => {
+
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -42,7 +42,7 @@ describe("flow test", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
@@ -80,9 +80,10 @@ describe("flow test", () => {
     await marketPlacePage.clickPayButton();
     await marketPlacePage.checkPaySuccessfulLabelPresent();
     await marketPlacePage.clickDoneButton();
-  })
+  });
+
+});
 
 afterAll(async () => {
-   await MetamaskFactory.close();
+  await metamaskFactory.close();
 });
-})

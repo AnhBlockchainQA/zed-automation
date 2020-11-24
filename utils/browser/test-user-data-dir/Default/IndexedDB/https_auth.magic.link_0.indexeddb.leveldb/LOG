@@ -1,5 +1,0 @@
-2020/11/23-20:59:34.089 6e03 Reusing MANIFEST /Users/davidle/zed-automation/utils/browser/test-user-data-dir/Default/IndexedDB/https_auth.magic.link_0.indexeddb.leveldb/MANIFEST-000001
-2020/11/23-20:59:55.065 f603 Level-0 table #5: started
-2020/11/23-20:59:55.075 f603 Level-0 table #5: 2641 bytes OK
-2020/11/23-20:59:55.087 f603 Delete type=0 #3
-2020/11/23-20:59:55.091 f603 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
