@@ -1,16 +1,16 @@
 const { PageFactory } = require("../utils/browser/pageFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { TopUpPage } = require('../pages/TopUpPage');
+const { WalletPage } = require('../pages/WalletPage');
 const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, DEPOSITE_AMOUNT } = require("../data/env");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, DEPOSITE_AMOUNT, AMOUNT } = require("../data/env");
 
 let pageFactory;
 let messageId;
 let magicLink;
 let loginPage;
 let magicLinkPage;
-let topUpPage;
+let walletPage;
 let pageInstance;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
@@ -45,7 +45,6 @@ describe("Login to ZedRUn with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForTimeout();
     await magicLinkPage.clickToTrustMe();
     await magicLinkPage.waitForLoggedInMessage();
     await magicLinkPage.waitForTimeout();
@@ -53,20 +52,21 @@ describe("Login to ZedRUn with magic link", () => {
 
   test("Switch back to ZedRun page and verify login successful", async () => {
     await loginPage.bringToFront();
-    await loginPage.waitForTimeout();
-    await loginPage.checkIfWelcomeLabelPresent();
+    await loginPage.waitForLoginFormHidden();
     await loginPage.clickOnAcceptButton();
   });
 
-  test ("Click on Deposit button", async () => {
+  test ("Click on Deposit button and check if ETH balance is updated", async () => {
     await loginPage.clickOnWalletIcon();
-    topUpPage = new TopUpPage(pageInstance);
-    await topUpPage.clickOnDepositButton();
-    let currentAmount = await topUpPage.getCurrentZedBalance();
-    console.log(currentAmount);
-    await topUpPage.typeDepositeAmount(DEPOSITE_AMOUNT);
-    await topUpPage.clickOnDepositeToZedWallet();
-    await topUpPage.waitForTimeout(10000);
+    walletPage = new WalletPage(pageInstance);
+    await walletPage.clickOnDepositButton();
+    let ethBalance = await walletPage.getETHBalance();
+    let newETHBalance = ethBalance - AMOUNT;
+    console.log(">>> Old ETH Balance: ", ethBalance);
+    console.log(">>> Expected ETH Balance: ", newETHBalance);
+    await walletPage.typeDepositeAmount(AMOUNT);
+    await walletPage.clickOnDepositeToZedWallet();
+    await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
   });
 });
 
