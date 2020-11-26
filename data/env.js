@@ -12,5 +12,5 @@ module.exports = {
   TEST_EMAIL: "zedrun@1secmail.net",
   TEST_LOGIN : "zedrun", 
   TEST_DOMAIN: "1secmail.net",
-  DEPOSITE_AMOUNT : "0.05"
+  AMOUNT : "0.01"
 }

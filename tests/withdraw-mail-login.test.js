@@ -45,6 +45,7 @@ describe("Login to ZedRUn with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
+    await magicLinkPage.waitForTimeout();
     await magicLinkPage.clickToTrustMe();
     await magicLinkPage.waitForLoggedInMessage();
     await magicLinkPage.waitForTimeout();
@@ -56,17 +57,18 @@ describe("Login to ZedRUn with magic link", () => {
     await loginPage.clickOnAcceptButton();
   });
 
-  test ("Click on Deposit button and check if ETH balance is updated", async () => {
+  test ("Click on Withdraw button and check if ZED balance is updated", async () => {
     await loginPage.clickOnWalletIcon();
     walletPage = new WalletPage(pageInstance);
-    await walletPage.clickOnDepositButton();
-    let ethBalance = await walletPage.getETHBalance();
-    let newETHBalance = ethBalance - AMOUNT;
-    console.log(">>> Old ETH Balance: ", ethBalance);
-    console.log(">>> Expected ETH Balance: ", newETHBalance);
-    await walletPage.typeDepositeAmount(AMOUNT);
-    await walletPage.clickOnDepositeToZedWallet();
-    await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
+    await walletPage.clickOnWithdrawButton();
+    await walletPage.scrollToZedBalance();
+    let zedBalance = await walletPage.getZedBalance();
+    let newZedBalance = zedBalance - AMOUNT;
+    console.log(">>> Old Zed Balance: ", zedBalance);
+    console.log(">>> Expected Zed Balance: ", newZedBalance);
+    await walletPage.typeWithDrawAmount(AMOUNT);
+    await walletPage.clickOnWithdrawFromZedWallet();
+    await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  
   });
 });
 

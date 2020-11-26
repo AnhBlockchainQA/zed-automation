@@ -11,4 +11,5 @@ module.exports = {
     CONNECT_METAMASK: zedRunConfig.CONNECT_METAMASK,
     ACCEPT_BUTTON: zedRunConfig.ACCEPT_BUTTON,
     MARKETPLACE_LINK: zedRunConfig.MARKETPLACE_LINK,
+    LOGIN_POPUP: zedRunConfig.LOGIN_POPUP,
 }
