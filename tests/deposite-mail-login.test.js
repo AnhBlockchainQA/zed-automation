@@ -3,7 +3,7 @@ const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
 const { WalletPage } = require('../pages/WalletPage');
 const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, DEPOSITE_AMOUNT, AMOUNT } = require("../data/env");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
 
 let pageFactory;
 let messageId;

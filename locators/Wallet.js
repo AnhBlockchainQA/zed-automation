@@ -11,4 +11,5 @@ module.exports = {
     WITHDRAW_AMOUNT_INPUT : walletConfig.WITHDRAW_AMOUNT_INPUT,
     ZED_BALANCE: walletConfig.ZED_BALANCE,
     WITHDRAW_FROM_ZED_BUTTON: walletConfig.WITHDRAW_FROM_ZED_BUTTON,
+    CLAIM_BUTTON: walletConfig.CLAIM_BUTTON,
 }
