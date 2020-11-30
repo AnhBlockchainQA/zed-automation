@@ -8,7 +8,7 @@ class LoginPage {
   }
 
   async navigate() {
-    await this.page.goto(ZEDRUN_URL);
+    await this.page.goto(ZEDRUN_URL, { timeout: 0 });
   }
 
   async clickOnStartButton() {
