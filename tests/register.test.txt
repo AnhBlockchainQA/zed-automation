@@ -1,5 +1,5 @@
 const Metamask = require('../../pages/Metamask')
-const METAMASKCONFIG = require('../../locators/Metamask')
+const METAMASKCONFIG = require('../locators/Metamask')
 
 let metamaskPage
 beforeAll(async () => {

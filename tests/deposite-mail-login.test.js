@@ -72,7 +72,7 @@ describe("Login to ZedRUn with magic link", () => {
 
 
 afterAll(async () => {
-  pageFactory.endTest();
+ await pageFactory.endTest();
 });
 
 

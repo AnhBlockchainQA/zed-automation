@@ -90,7 +90,7 @@ class MarketplacePage{
 
     async clickOnConfirmButton(){
         await this.page.waitForSelector(marketPlaceConfig.CONFIRM_BUTTON);
-        await this.page.click(marketPlaceConfig.CONFIRM_BUTTON, {force});
+        await this.page.click(marketPlaceConfig.CONFIRM_BUTTON, {force: true});
     }
 
 
