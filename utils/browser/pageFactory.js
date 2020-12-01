@@ -16,7 +16,7 @@ class PageFactory{
         if(this.browser === null){
             await this.createBrowser(headlessStatus, timeout);
         }
-        this.context = await this.browser.newContext();
+        this.context = await this.browser.newContext({ viewport: null });
         return this.context;
     }
 

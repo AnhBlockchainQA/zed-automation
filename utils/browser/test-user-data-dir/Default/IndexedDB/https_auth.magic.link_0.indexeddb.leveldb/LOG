@@ -1,0 +1,5 @@
+2020/12/01-10:25:22.182 12603 Reusing MANIFEST /Users/davidle/qa-automationtest/utils/browser/test-user-data-dir/Default/IndexedDB/https_auth.magic.link_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/01-10:26:58.390 1f80f Level-0 table #5: started
+2020/12/01-10:26:58.397 1f80f Level-0 table #5: 2641 bytes OK
+2020/12/01-10:26:58.463 1f80f Delete type=0 #3
+2020/12/01-10:26:58.523 1f80f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -27,6 +27,7 @@ describe("Login to ZedRUn with magic link", () => {
     let page = await pageFactory.newTab(false, 0);
     loginPage = new LoginPage(page);
     await loginPage.navigate();
+    await loginPage.clickOnAcceptButton();
     await loginPage.clickOnStartButton();
     await loginPage.typeEmail(email);
     await loginPage.clickOnContinueButton();
@@ -54,10 +55,12 @@ describe("Login to ZedRUn with magic link", () => {
     await magicLinkPage.waitForTimeout();
   });
 
+ 
   test("Switch back to ZedRun page and verify login successful", async () => {
     await loginPage.bringToFront();
-    await loginPage.waitForTimeout();
+    await loginPage.waitForLoginFormHidden();
     await loginPage.checkIfWelcomeLabelPresent();
+    await loginPage.waitForTimeout(10000);
   });
 });
 

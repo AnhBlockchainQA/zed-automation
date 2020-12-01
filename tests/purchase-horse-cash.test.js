@@ -4,7 +4,7 @@ const { LoginPage } = require('../pages/LoginPage');
 const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
-const { MarketPlacePage, MarketplacePage } = require('../pages/MarketPlacePage');
+const { MarketplacePage } = require('../pages/MarketPlacePage');
 
 
 
@@ -26,7 +26,6 @@ beforeAll(async () => {
 });
 
 describe("Buy horse with credit card", () => {
-
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -66,7 +65,7 @@ describe("Buy horse with credit card", () => {
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
 
- });
+ })
 
   test ("Go to Marketplace and buy horse by CC", async () => {
     await zedRunPage.clickOnMarketplaceLink();
@@ -81,8 +80,7 @@ describe("Buy horse with credit card", () => {
     await marketPlacePage.checkPaySuccessfulLabelPresent();
     await marketPlacePage.clickDoneButton();
   });
-
-});
+})
 
 afterAll(async () => {
   await metamaskFactory.close();

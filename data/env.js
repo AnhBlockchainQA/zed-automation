@@ -8,5 +8,9 @@ module.exports = {
   THRESHOLD: 3,
   CARD_NUMBER: "371449635398431",
   CARD_EXPIRATION_DATE: "08/25",
-  CARD_CVC: "324"
+  CARD_CVC: "324",
+  TEST_EMAIL: "zedrun@1secmail.net",
+  TEST_LOGIN : "zedrun", 
+  TEST_DOMAIN: "1secmail.net",
+  AMOUNT : "0.01"
 }
