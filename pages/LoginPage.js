@@ -8,7 +8,14 @@ class LoginPage {
   }
 
   async navigate() {
-    await this.page.goto(ZEDRUN_URL);
+    try {
+      await this.page.waitForLoadState()
+      await this.page.goto(ZEDRUN_URL, { timeout: 0 });
+      await this.page.waitForLoadState()
+    } catch (error) {
+      console.log('error:', error)
+    }
+   
   }
 
   async clickOnStartButton() {

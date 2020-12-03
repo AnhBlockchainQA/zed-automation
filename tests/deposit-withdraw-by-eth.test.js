@@ -17,6 +17,19 @@ const {
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
 
+const Wallet = require('../locators/Wallet')
+const MetamaskConfig = require('../locators/Metamask')
+const {
+  WalletPage
+} = require('../pages/WalletPage');
+const {
+  TEST_EMAIL,
+  TEST_LOGIN,
+  TEST_DOMAIN,
+  DEPOSITE_AMOUNT,
+  AMOUNT
+} = require("../data/env");
+
 
 let metamaskFactory;
 let metamaskPage;
@@ -81,53 +94,44 @@ describe("flow test generate child horse", () => {
     await newPageInstance.click('text="Accept"')
   });
 
-  test("generate child horse", async () => {
-    await newPageInstance.click('.icon-arrow')
-    await newPageInstance.click('text="stud service"')
-    await newPageInstance.click('.panel')
+  let walletPage
+  test("Deposit", async () => {
+    walletPage = new WalletPage(newPageInstance);
+    await newPageInstance.click(Wallet.WALLET_ICON)
+    await newPageInstance.click(Wallet.DEPOSITE_BUTTON)
+    let ethBalance = await walletPage.getETHBalance();
+    const selector = Wallet.ETH_BALANCE;
+    const res = await newPageInstance.evaluate((locator) => {
+      return document.querySelector(locator).innerText
+    }, selector);
+    console.log('res:', res)
+    let newETHBalance = ethBalance - AMOUNT;
+    console.log('ethBalance:', ethBalance)
+    await newPageInstance.fill(Wallet.DEPOSITE_AMOUNT_INPUT, AMOUNT.toString())
     await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="select mate"', {
+    await newPageInstance.waitForSelector(Wallet.DEPOSITE_TO_ZED_BUTTON, {
       timeout: 0
     })
-    await newPageInstance.click('text="select mate"')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('.female-content', {
-      timeout: 0
-    })
-    await newPageInstance.click('.female-content')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('.horse-card', {
-      timeout: 0
-    })
-    await newPageInstance.click('.horse-card')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="Select"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Select"')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="Buy Cover"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Buy Cover"')
-
-    await newPageInstance.waitForLoadState()
-    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, 'text="Confirm"');
-    await metaMaskSign.click('text="Confirm"')
+    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, Wallet.DEPOSITE_TO_ZED_BUTTON)
+    await metaMaskSign.click(MetamaskConfig.CLICK_CONFIRM_BUTTON)
     await metaMaskSign.waitForEvent("close")
-
-    await newPageInstance.waitForSelector('text="Check Activity"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Check Activity"')
-    await newPageInstance.waitForLoadState()
-
-
+    await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
   });
 
-
-})
+  test("Withdraw", async () => {
+    // await newPageInstance.click(Wallet.WALLET_ICON)
+    console.log('KKKKKKKKKKKKKKKKKKKKKKKKKK')
+    await newPageInstance.click(Wallet.WITHDRAW_BUTTON)
+    let zedBalance = await walletPage.getZedBalance();
+    let newZedBalance = zedBalance - AMOUNT;
+    await newPageInstance.fill(Wallet.WITHDRAW_AMOUNT_INPUT, AMOUNT.toString())
+    await newPageInstance.waitForLoadState()
+    await newPageInstance.waitForSelector(Wallet.WITHDRAW_FROM_ZED_BUTTON, {
+      timeout: 0
+    })
+    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, Wallet.WITHDRAW_FROM_ZED_BUTTON)
+    await metaMaskSign.click(MetamaskConfig.CLICK_SIGN_BUTTON)
+    await metaMaskSign.waitForEvent("close")
+    // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
+  });
+});
