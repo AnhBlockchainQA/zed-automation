@@ -1,16 +1,16 @@
 const { PageFactory } = require("../utils/browser/pageFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { TopUpPage } = require('../pages/WalletPage');
+const { WalletPage } = require('../pages/WalletPage');
 const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, DEPOSITE_AMOUNT, AMOUNT } = require("../data/env");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
 
 let pageFactory;
 let messageId;
 let magicLink;
 let loginPage;
 let magicLinkPage;
-let topUpPage;
+let walletPage;
 let pageInstance;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
@@ -59,8 +59,16 @@ describe("Login to ZedRUn with magic link", () => {
 
   test ("Click on Withdraw button and check if ZED balance is updated", async () => {
     await loginPage.clickOnWalletIcon();
-    topUpPage = new TopUpPage(pageInstance);
-    await topUpPage
+    walletPage = new WalletPage(pageInstance);
+    await walletPage.clickOnWithdrawButton();
+    await walletPage.scrollToZedBalance();
+    let zedBalance = await walletPage.getZedBalance();
+    let newZedBalance = zedBalance - AMOUNT;
+    // console.log(">>> Old Zed Balance: ", zedBalance);
+    // console.log(">>> Expected Zed Balance: ", newZedBalance);
+    await walletPage.typeWithDrawAmount(AMOUNT);
+    await walletPage.clickOnWithdrawFromZedWallet();
+    await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  
   });
 });
 

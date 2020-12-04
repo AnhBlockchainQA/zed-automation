@@ -57,7 +57,7 @@ class APIRequest {
     });
 
     let emailBody = getMagicLink.body.body;
-    console.log(">>> Email body is: " + emailBody);
+    // console.log(">>> Email body is: " + emailBody);
     return emailBody.match(pattern)[1];
   }
 }
