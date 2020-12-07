@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV= jest --testTimeout=100000"
+    "test": "jest --runInBand --testTimeout=100000"
+  },
+  "jest": {
+    "verbose": true
   },
   "keywords": [],
   "author": "",

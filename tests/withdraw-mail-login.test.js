@@ -64,8 +64,8 @@ describe("Login to ZedRUn with magic link", () => {
     await walletPage.scrollToZedBalance();
     let zedBalance = await walletPage.getZedBalance();
     let newZedBalance = zedBalance - AMOUNT;
-    console.log(">>> Old Zed Balance: ", zedBalance);
-    console.log(">>> Expected Zed Balance: ", newZedBalance);
+    // console.log(">>> Old Zed Balance: ", zedBalance);
+    // console.log(">>> Expected Zed Balance: ", newZedBalance);
     await walletPage.typeWithDrawAmount(AMOUNT);
     await walletPage.clickOnWithdrawFromZedWallet();
     await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  

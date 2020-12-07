@@ -121,6 +121,7 @@ describe("flow test generate child horse", () => {
   test("Withdraw", async () => {
     // await newPageInstance.click(Wallet.WALLET_ICON)
     console.log('KKKKKKKKKKKKKKKKKKKKKKKKKK')
+    await newPageInstance.click(Wallet.WITHDRAW_BUTTON)
     let zedBalance = await walletPage.getZedBalance();
     let newZedBalance = zedBalance - AMOUNT;
     await newPageInstance.fill(Wallet.WITHDRAW_AMOUNT_INPUT, AMOUNT.toString())
@@ -129,7 +130,7 @@ describe("flow test generate child horse", () => {
       timeout: 0
     })
     const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, Wallet.WITHDRAW_FROM_ZED_BUTTON)
-    await metaMaskSign.click(MetamaskConfig.CLICK_CONFIRM_BUTTON)
+    await metaMaskSign.click(MetamaskConfig.CLICK_SIGN_BUTTON)
     await metaMaskSign.waitForEvent("close")
     // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
   });
