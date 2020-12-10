@@ -16,6 +16,7 @@ jobs:
     - name: Run test when have event ping
       if: github.event.action == 'ping'
       run: |
+        echo "Event '${{ github.event }}' "
         npm ci
         npm test
       env:
