@@ -17,5 +17,10 @@ jobs:
       if: github.event.action == 'ping'
       run: |
         echo "Event '${{ github.event }}' "
-      env:
-        CI: true
+        echo "action '${{ github.event.action }}' "
+        echo "client_payload '${{ github.client_payload }}' "
+        echo "owner '${{ github.owner }}' "
+      # npm ci
+      # npm test
+      # env:
+      #   CI: true
