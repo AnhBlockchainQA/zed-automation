@@ -16,7 +16,11 @@ jobs:
     - name: Run test when have event ping
       if: github.event.action == 'ping'
       run: |
-        npm ci
-        npm test
-      env:
-        CI: true
+        echo "Event '${{ github.event }}' "
+        echo "action '${{ github.event.action }}' "
+        echo "client_payload '${{ github.client_payload }}' "
+        echo "owner '${{ github.owner }}' "
+      # npm ci
+      # npm test
+      # env:
+      #   CI: true
