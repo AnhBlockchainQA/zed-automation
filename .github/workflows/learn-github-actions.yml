@@ -16,7 +16,8 @@ jobs:
     - name: Run test when have event ping
       if: github.event.action == 'ping'
       run: |
-        echo "Event '${{ github.event }}' "
+        echo "inputs '${{ github.event.inputs }}' "
+        echo "input '${{ github.event.inputs.name }}' "
         echo "action '${{ github.event.action }}' "
         echo "client_payload '${{ github.client_payload }}' "
         echo "owner '${{ github.owner }}' "
