@@ -19,8 +19,9 @@ jobs:
         echo "inputs '${{ github.event.inputs }}' "
         echo "input '${{ github.event.inputs.name }}' "
         echo "action '${{ github.event.action }}' "
-        echo "client_payload '${{ github.client_payload }}' "
-        echo "owner '${{ github.owner }}' "
+        echo "client_payload '${{ github.event.client_payload }}' "
+        echo "owner '${{ github.event.owner }}' "
+        echo "repository '${{ github.event.client_payload.repository }}' "
       # npm ci
       # npm test
       # env:
