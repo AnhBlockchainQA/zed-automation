@@ -38,6 +38,7 @@ describe("Login to ZedRUn with magic link", () => {
       messageId,
       pattern
     );
+    console.log(">>>>>", magicLink);
   });
 
   test("Open new browser with magic link", async () => {
@@ -74,7 +75,7 @@ describe("Login to ZedRUn with magic link", () => {
 
 
 afterAll(async () => {
-  pageFactory.endTest();
+  await pageFactory.endTest();
 });
 
 
