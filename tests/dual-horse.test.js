@@ -108,13 +108,13 @@ describe("flow test generate child horse", () => {
         return number
       }
     }).filter(e => !!e)
-    // for (let i = 0; i< listNumber.length; i++) {
-    //   await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
-    //   await newPageInstance.waitForLoadState();
-    //   await newPageInstance.hover(`.horse-infos`)
-    //   await newPageInstance.click('text="Free Entry"')
-    //   await newPageInstance.waitForLoadState();
-    // }    
+    for (let i = 0; i< listNumber.length; i++) {
+      await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
+      await newPageInstance.waitForLoadState();
+      await newPageInstance.hover(`.horse-infos`)
+      await newPageInstance.click('text="Free Entry"')
+      await newPageInstance.waitForLoadState();
+    }    
     await newPageInstance.waitForLoadState();
     // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
     await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
