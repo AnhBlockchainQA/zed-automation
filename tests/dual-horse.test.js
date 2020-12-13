@@ -108,91 +108,32 @@ describe("flow test generate child horse", () => {
         return number
       }
     }).filter(e => !!e)
-    console.log('listNumber:', listNumber)
-    console.log('texts:', texts.split(`\n`))
-    console.log('texts 0:', texts[0])
-    console.log('texts 1:', texts[1])
-    // console.log('getAttribute:', await group.getAttribute())
-    for (let i = 0; i< listNumber.length; i++) {
-      await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
-      await newPageInstance.waitForLoadState();
-      await newPageInstance.hover(`.horse-infos`)
-      await newPageInstance.click('text="Free Entry"')
-      await newPageInstance.waitForLoadState();
+    // for (let i = 0; i< listNumber.length; i++) {
+    //   await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
+    //   await newPageInstance.waitForLoadState();
+    //   await newPageInstance.hover(`.horse-infos`)
+    //   await newPageInstance.click('text="Free Entry"')
+    //   await newPageInstance.waitForLoadState();
+    // }    
+    await newPageInstance.waitForLoadState();
+    // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
+    await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    const eventDual = await newPageInstance.$(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    console.log('eventDual', await eventDual.innerText())
+    let listText = await eventDual.innerText()
+    listText = listText.split('\n')
+    await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // console.log('innerText:',await eventDual.innerText())
+    // const eventText = await eventDual.innerText()
+    await newPageInstance.waitForSelector(`//div[@class='in-race-info']/div/div/h1`)
+    const newDiv = await newPageInstance.$(`//div[@class='in-race-info']/div/div/h1`)
+    console.log('new text:', await newDiv.innerText())
+    const listNewText = await newDiv.innerText()
+    console.log('listText[0]:', listText[0])
+    console.log('compare', listNewText.indexOf(listText[0]))
+    const check = listNewText.indexOf(listText[0])
+    if (check !== 0) {
+      throw new Error('check not is true')
     }
-
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='1']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='2']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='3']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='4']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='5']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='6']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='7']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='8']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='9']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='10']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='11']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-    
-    // await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='12']`)
-    // await newPageInstance.waitForLoadState();
-    // await newPageInstance.hover(`.horse-infos`)
-    // await newPageInstance.click('text="Free Entry"')
-    // await newPageInstance.waitForLoadState();
-
-    // await newPageInstance.click(`//div[@class='race-name primary-text bold']/span/text()`)
   })
 });
