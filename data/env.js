@@ -1,5 +1,5 @@
 module.exports = {
-  ZEDRUN_URL: 'https://zed-front-pr-470.herokuapp.com/',
+  ZEDRUN_URL: 'https://zed-production--pr501-fix-coupon-ui-bil6l7ll.web.app/',
   EMAIL_API : 'https://www.1secmail.com/api/v1/',
   SEED_PHRASE: 'promote involve unaware today camera major net tail area rule manual humor',
   PASSWORD: 'nidalee1',

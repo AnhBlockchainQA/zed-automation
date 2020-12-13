@@ -1,0 +1,46 @@
+{
+  "uid" : "8de3e39e91eb3112",
+  "name" : "Update metamask info",
+  "fullName" : "flow test generate child horse.Update metamask info",
+  "historyId" : "a9726a38b743f3a1bfd2c5b6fdc56a9f",
+  "time" : {
+    "start" : 1607334586117,
+    "stop" : 1607334590167,
+    "duration" : 4050
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "flow test generate child horse"
+  }, {
+    "name" : "testClass",
+    "value" : "flow test generate child horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "flow test generate child horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8de3e39e91eb3112.json",
+  "parameterValues" : [ ]
+}

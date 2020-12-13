@@ -1,0 +1,46 @@
+{
+  "uid" : "3b0b3459d8cf924a",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Login to ZedRUn with magic link.Open new browser with magic link",
+  "historyId" : "b1793d1afe8c9357562f1ec33392daf7",
+  "time" : {
+    "start" : 1606749772474,
+    "stop" : 1606749775894,
+    "duration" : 3420
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3b0b3459d8cf924a.json",
+  "parameterValues" : [ ]
+}

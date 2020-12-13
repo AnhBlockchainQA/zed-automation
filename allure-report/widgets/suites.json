@@ -1,4 +1,26 @@
 {
-  "total" : 0,
-  "items" : [ ]
+  "total" : 2,
+  "items" : [ {
+    "uid" : "58159176d8e5e95ecb08f23ffa1057f1",
+    "name" : "flow test generate child horse",
+    "statistic" : {
+      "failed" : 3,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
+    "uid" : "14b4ba7a23d71dfeb3e0deb32ea40968",
+    "name" : "Login to ZedRUn with magic link",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    }
+  } ]
 }
