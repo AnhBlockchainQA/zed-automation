@@ -1,0 +1,24 @@
+name: Node.js CI
+
+on: [repository_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Run test when have event ping
+      if: github.event.action == 'ping'
+      run: |
+        echo "action '${{ github.event.action }}' "
+        echo "repository '${{ github.event.client_payload.repository }}' "
+        npm ci
+        npm test
+      env:
+        CI: true
