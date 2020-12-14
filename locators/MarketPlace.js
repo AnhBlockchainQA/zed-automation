@@ -13,4 +13,12 @@ module.exports = {
     DONE_BUTTON: marketPlaceConfig.DONE_BUTTON,
     BUY_WITH_ETH_BUTTON: marketPlaceConfig.BUY_WITH_ETH_BUTTON,
     CONFIRM_BUTTON: marketPlaceConfig.CONFIRM_BUTTON,
-}
+    DOWNWARD_ARROW : marketPlaceConfig.DOWNWARD_ARROW,
+    COUPON_INPUT: marketPlaceConfig.COUPON_INPUT,
+    APPLY_BUTTON: marketPlaceConfig.APPLY_BUTTON,
+    DISCOUNT_LABEL: marketPlaceConfig.DISCOUNT_LABEL,
+    HORSE_PRICE: marketPlaceConfig.HORSE_PRICE,
+    HORSE_NAME: marketPlaceConfig.HORSE_NAME,
+    HORSE_LIST: marketPlaceConfig.HORSE_LIST,
+    ERROR_MESSAGE: marketPlaceConfig.ERROR_MESSAGE
+};    
