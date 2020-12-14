@@ -13,7 +13,7 @@
     "LOGIN_POPUP": "#login-steps form .section-content"
   },
   "marketPlace":{
-    "FIRST_HORSE_PREVIEW": "//div[@class='marketplace-content']//ul/div[1]/div[@class='preview']/img",
+    "FIRST_HORSE_PREVIEW": ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
     "BUY_WITH_CREDIT_CARD_BUTTON": "//button[text()='Buy With Credit Card']",
     "BUY_WITH_CREDIT_CARD_LABEL": "//h2[text()='Buy With Credit Card']",
     "CREDIT_CARD_NUMBER_INPUT": "//input[@aria-label='Credit or debit card number']",
@@ -23,7 +23,15 @@
     "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
     "DONE_BUTTON": "//button[text()='Done']",
     "BUY_WITH_ETH_BUTTON" : "//button[text()='Buy with ETH']",
-    "CONFIRM_BUTTON": "//div[@class='buy-method-choice']/div[@class='method-options']/form//div[@class='section-footer']/button[text()='confirm']"
+    "CONFIRM_BUTTON": ".method-options > .buy-confirm-form > section > .section-footer > .primary-btn",
+    "DOWNWARD_ARROW": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
+    "COUPON_INPUT": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
+    "APPLY_BUTTON": ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .secondary-btn",
+    "DISCOUNT_LABEL": ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .m-input-content > p.normal-text",
+    "HORSE_PRICE": "div.buy-method-choice > .method-options > .fiat-price > span",
+    "HORSE_NAME": "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
+    "HORSE_LIST" : "div.marketplace div.marketplace-content .ifs ul > div.horse-sale-card",
+    "ERROR_MESSAGE" : ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text"
   },
   "metamask": {
     "CLICK_GET_STARTED_BUTTON": "//button[text()='Get Started']",
@@ -55,6 +63,9 @@
     "WITHDRAW_FROM_ZED_BUTTON": "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/button[text()='Withdraw from ZED Balance']",
     "ZED_BALANCE": ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='zed'] .wallet-price div[class*='lg-text']",
     "CLAIM_BUTTON": ".header-desktop header div.balance-sidebar.opened div.sidebar-content div.wallet button"
+  },
+  "activity":{
+    "ACTIVITY_HORSE_INFO_NAME" : "section.main-section > div.activity > .activity-content div.activity-row:nth-child(1) .activity-info div.horse-info span"
   },
   "apiConfig":{
     "GENERATE_RANDOM_EMAIL": "genRandomMailbox",
