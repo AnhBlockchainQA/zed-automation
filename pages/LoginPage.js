@@ -7,6 +7,10 @@ class LoginPage {
     this.page = page;
   }
 
+  async setPageInstance(page){
+    this.page = page;
+  }
+
   async navigate() {
     try {
       await this.page.waitForLoadState()

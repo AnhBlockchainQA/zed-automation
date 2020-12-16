@@ -63,6 +63,24 @@ class MetamaskFactory {
     return newPage;
   }
 
+  async clickNewPageWithRetry(page, selector, threshold, delay) {
+    const [newPage] = await Promise.all([
+      this.browserContext.waitForEvent("page"),
+      page.evaluate(
+        ([locator, threshold, delay]) => {
+          for (let i = 0; i < threshold; i++) {
+            setTimeout(function () {
+              document.querySelector(locator).click();
+              console.log(`${i} attempt to click on Confirm button`);
+            }, delay);
+          }
+        },
+        [selector, threshold, delay]
+      ),
+    ]);
+    return newPage;
+  }
+
   async newPage() {
     return await this.browserContext.newPage();
   }

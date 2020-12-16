@@ -18,7 +18,7 @@ beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("Login to ZedRUn with magic link", () => {
+describe("Withdraw to ETH balance by logging in with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     pageInstance = await pageFactory.newTab(false, 0);

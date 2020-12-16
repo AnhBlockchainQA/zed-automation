@@ -18,25 +18,25 @@ class MagicLinkPage {
     await this.page.waitForTimeout(timeout);
   }
 
-  async clickToTrustMe() {
-    try{
-      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 5000});
-      console.log(">>> Skip this step");
-    }catch(error){
-      await this.page.waitForSelector(zedRunConfig.TRUST_ME_BUTTON, {timeout: 0});
-      await this.page.click(zedRunConfig.TRUST_ME_BUTTON);
-    }  
-    this.page.waitForLoadState();
-  }
+  // async clickToTrustMe() {
+  //   try{
+  //     await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 5000});
+  //     console.log(">>> Skip this step");
+  //   }catch(error){
+  //     await this.page.waitForSelector(zedRunConfig.TRUST_ME_BUTTON, {timeout: 0});
+  //     await this.page.click(zedRunConfig.TRUST_ME_BUTTON);
+  //   }  
+  //   this.page.waitForLoadState();
+  // }
 
-  async waitForLoggedInMessage() {
-    try{
-      await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 0});
-      return true;
-    }catch(error){
-      return false;
-    }  
-  }
+  // async waitForLoggedInMessage() {
+  //   try{
+  //     await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 0});
+  //     return true;
+  //   }catch(error){
+  //     return false;
+  //   }  
+  // }
 
 }
 

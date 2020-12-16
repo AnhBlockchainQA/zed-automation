@@ -10,7 +10,8 @@
     "CONNECT_METAMASK": "//div[text()='Connect Metamask']",
     "ACCEPT_BUTTON": "text='Accept'",
     "MARKETPLACE_LINK": "//div[@class='header-desktop']/header/div[@class='header-content']/div[@class='left-part']//div[@data-tour='header-marketplace']//a[@href='/marketplace']",
-    "LOGIN_POPUP": "#login-steps form .section-content"
+    "LOGIN_POPUP": "#login-steps form .section-content",
+    "USER_AVATAR": ".header-desktop .header-content div.right-part  div.user-part div.icon-part img"
   },
   "marketPlace":{
     "FIRST_HORSE_PREVIEW": ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",

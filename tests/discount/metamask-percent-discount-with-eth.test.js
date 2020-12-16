@@ -4,7 +4,7 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME } = require("../../data/env");
 const { PERCENT_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const marketPlaceConfig = require("../../locators/MarketPlace");
@@ -29,7 +29,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Buy horse with credit card", () => {
+describe("Use percent discount voucher to buy horse with ETH while logging in with Metamask", () => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -82,7 +82,7 @@ describe("Buy horse with credit card", () => {
   test("Go to Market page and wait until horse list is loaded", async () => {
     await zedRunPage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
@@ -99,11 +99,11 @@ describe("Buy horse with credit card", () => {
 
   test("Process the checkout with ETH", async () => {
     await marketPlacePage.clickOnBuyWithETH();
-    await marketPlacePage.clickOnConfirmButton();
-
-    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
       newPageInstance,
-      marketPlaceConfig.CONFIRM_BUTTON
+      marketPlaceConfig.CONFIRM_BUTTON,
+      THRESHOLD,
+      WAIT_TIME
     );
     anotherMetamaskNotificationPage = new MetamaskNotificationPage(
       anotherMetamaskNotificationInstance

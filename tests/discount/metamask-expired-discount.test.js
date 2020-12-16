@@ -26,7 +26,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Buy horse with credit card", () => {
+describe("Use expired discount voucher when logging in with Metamask", () => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -79,7 +79,7 @@ describe("Buy horse with credit card", () => {
   test("Go to Market page and wait until horse list is loaded", async () => {
     await zedRunPage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : EXPIRED_COUPON", async () => {

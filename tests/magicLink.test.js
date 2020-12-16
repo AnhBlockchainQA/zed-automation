@@ -17,7 +17,7 @@ beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("Login to ZedRUn with magic link", () => {
+describe("Login to ZedRUu with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     email = await apiRequest.generateRandomEmail();
@@ -49,19 +49,17 @@ describe("Login to ZedRUn with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPage);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForTimeout();
-    await magicLinkPage.clickToTrustMe();
-    await magicLinkPage.waitForLoggedInMessage();
-    await magicLinkPage.waitForTimeout();
+    loginPage.setPageInstance(newPage);
+    loginPage.waitForLoginFormHidden();
   });
 
  
-  test("Switch back to ZedRun page and verify login successful", async () => {
-    await loginPage.bringToFront();
-    await loginPage.waitForLoginFormHidden();
-    await loginPage.checkIfWelcomeLabelPresent();
-    await loginPage.waitForTimeout(10000);
-  });
+  // test("Switch back to ZedRun page and verify login successful", async () => {
+  //   await loginPage.bringToFront();
+  //   await loginPage.waitForLoginFormHidden();
+  //   await loginPage.checkIfWelcomeLabelPresent();
+  //   await loginPage.waitForTimeout(10000);
+  // });
 });
 
 afterAll(async () => {

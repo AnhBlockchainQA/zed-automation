@@ -1,5 +1,5 @@
 const marketPlaceConfig = require("../locators/MarketPlace");
-const { HORSE_LIST_SIZE } = require("../data/env");
+const { HORSE_LIST_SIZE, THRESHOLD, WAIT_TIME } = require("../data/env");
 
 class MarketplacePage{
     constructor(page){
@@ -84,14 +84,6 @@ class MarketplacePage{
     async clickOnBuyWithETH(){
         await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_ETH_BUTTON, {timeout: 0});
         await this.page.click(marketPlaceConfig.BUY_WITH_ETH_BUTTON);
-    }
-
-    async clickOnConfirmButton(){
-        // await this.page.waitForSelector(marketPlaceConfig.CONFIRM_BUTTON, {timeout: 0});
-        // const el = await this.page.evaluate((locator) => {
-        //     return document.querySelector(locator).innerText;
-        //   }, marketPlaceConfig.CONFIRM_BUTTON, {timeout: 0});
-        // console.log(el.boundingBox());
     }
 
     async clickOnDownwardArrow(){
