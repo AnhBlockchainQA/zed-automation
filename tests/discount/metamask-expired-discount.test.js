@@ -79,7 +79,7 @@ describe("Buy horse with credit card", () => {
   test("Go to Market page and wait until horse list is loaded", async () => {
     await zedRunPage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : EXPIRED_COUPON", async () => {
