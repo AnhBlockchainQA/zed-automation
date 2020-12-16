@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1608092559320' stop='1608092581788'>
+    <name>Buy horse with credit card</name>
+    <title>Buy horse with credit card</title>
+    <test-cases>
+        <test-case start='1608092559320' status='passed' stop='1608092563434'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092563434' status='passed' stop='1608092578380'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092578380' status='passed' stop='1608092578708'>
+            <name>Go to Market page and wait until horse list is loaded</name>
+            <title>Go to Market page and wait until horse list is loaded</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092578708' status='passed' stop='1608092581788'>
+            <name>Apply the discount coupon : EXPIRED_COUPON</name>
+            <title>Apply the discount coupon : EXPIRED_COUPON</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

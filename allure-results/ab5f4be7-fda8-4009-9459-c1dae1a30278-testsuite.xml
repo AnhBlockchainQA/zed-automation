@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1608092414734' stop='1608092446187'>
+    <name>Buy horse with credit card</name>
+    <title>Buy horse with credit card</title>
+    <test-cases>
+        <test-case start='1608092414735' status='passed' stop='1608092418822'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092418823' status='passed' stop='1608092434171'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092434171' status='passed' stop='1608092434529'>
+            <name>Go to Market page and wait until horse list is loaded</name>
+            <title>Go to Market page and wait until horse list is loaded</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092434529' status='passed' stop='1608092437491'>
+            <name>Apply the discount coupon : ZED-15-DOLLARS</name>
+            <title>Apply the discount coupon : ZED-15-DOLLARS</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092437491' status='passed' stop='1608092446186'>
+            <name>Process the checkout with ETH</name>
+            <title>Process the checkout with ETH</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1608092144955' stop='1608092165374'>
+    <name>flow test generate child horse</name>
+    <title>flow test generate child horse</title>
+    <test-cases>
+        <test-case start='1608092144956' status='passed' stop='1608092149123'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092149123' status='passed' stop='1608092165052'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092165052' status='failed' stop='1608092165373'>
+            <name>dual horse</name>
+            <title>dual horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'innerText' of null</message>
+                <stack-trace>TypeError: Cannot read property 'innerText' of null
+                    at Object.test (/Users/davidle/qa-automationtest/tests/dual-horse.test.js:102:42)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

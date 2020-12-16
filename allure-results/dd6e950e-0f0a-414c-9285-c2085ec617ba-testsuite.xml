@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1608092449441' stop='1608092498697'>
+    <name>flow test generate child horse</name>
+    <title>flow test generate child horse</title>
+    <test-cases>
+        <test-case start='1608092449441' status='passed' stop='1608092453376'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092453376' status='passed' stop='1608092468471'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608092468471' status='failed' stop='1608092498696'>
+            <name>generate child horse</name>
+            <title>generate child horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".panel"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".panel"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:257:40)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:256:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:403:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:403:21)
+                    at Object.test (/Users/davidle/qa-automationtest/tests/generate-sub-horse.test.js:87:27)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

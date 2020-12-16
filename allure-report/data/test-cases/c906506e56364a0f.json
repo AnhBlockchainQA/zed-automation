@@ -1,12 +1,12 @@
 {
-  "uid" : "3b0b3459d8cf924a",
-  "name" : "Open new browser with magic link",
-  "fullName" : "Login to ZedRUn with magic link.Open new browser with magic link",
-  "historyId" : "b1793d1afe8c9357562f1ec33392daf7",
+  "uid" : "c906506e56364a0f",
+  "name" : "Go to Market page and wait until horse list is loaded",
+  "fullName" : "Buy horse with credit card.Go to Market page and wait until horse list is loaded",
+  "historyId" : "c03eabf99514a2c74e8cc501cd87ba6e",
   "time" : {
-    "start" : 1606749772474,
-    "stop" : 1606749775894,
-    "duration" : 3420
+    "start" : 1608011479534,
+    "stop" : 1608011479953,
+    "duration" : 419
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,16 +17,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "Login to ZedRUn with magic link"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "testClass",
-    "value" : "Login to ZedRUn with magic link"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "testMethod",
-    "value" : "Open new browser with magic link"
+    "value" : "Go to Market page and wait until horse list is loaded"
   }, {
     "name" : "package",
-    "value" : "Login to ZedRUn with magic link"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -41,6 +41,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "3b0b3459d8cf924a.json",
+  "source" : "c906506e56364a0f.json",
   "parameterValues" : [ ]
 }

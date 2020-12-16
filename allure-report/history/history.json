@@ -1,25 +1,5 @@
 {
-  "1e7a4e1ca788503517926cd0a77aaf40" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "f56a86d6c9b93ab3",
-      "status" : "failed",
-      "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
-      "time" : {
-        "start" : 1607334590167,
-        "stop" : 1607334655201,
-        "duration" : 65034
-      }
-    } ]
-  },
-  "a9726a38b743f3a1bfd2c5b6fdc56a9f" : {
+  "6e81dce5d86d90b8e76b654eaaed94fa" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -29,36 +9,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "8de3e39e91eb3112",
+      "uid" : "7baeea4fbc28c2a3",
       "status" : "passed",
       "time" : {
-        "start" : 1607334586117,
-        "stop" : 1607334590167,
-        "duration" : 4050
+        "start" : 1608011483563,
+        "stop" : 1608011495101,
+        "duration" : 11538
       }
     } ]
   },
-  "2051f03d5ea51b0d1e896c599c149203" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "fca5822f5341a9cb",
-      "status" : "failed",
-      "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
-      "time" : {
-        "start" : 1607334655201,
-        "stop" : 1607334685211,
-        "duration" : 30010
-      }
-    } ]
-  },
-  "eccf1fddfddd692b0ebe35cb4ae4e8c8" : {
+  "9e282ae29e3afeed92cd656bc2b4ae4c" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -68,16 +28,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "46e56231f3ab2c1b",
+      "uid" : "330e3cce4fd88016",
       "status" : "passed",
       "time" : {
-        "start" : 1606749770620,
-        "stop" : 1606749772474,
-        "duration" : 1854
+        "start" : 1608011479953,
+        "stop" : 1608011483563,
+        "duration" : 3610
       }
     } ]
   },
-  "1cfe2cb4ee5640e8b50f013d4ecdfab" : {
+  "c03eabf99514a2c74e8cc501cd87ba6e" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -87,16 +47,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "a95950db7d24474a",
+      "uid" : "c906506e56364a0f",
       "status" : "passed",
       "time" : {
-        "start" : 1606749745917,
-        "stop" : 1606749770620,
-        "duration" : 24703
+        "start" : 1608011479534,
+        "stop" : 1608011479953,
+        "duration" : 419
       }
     } ]
   },
-  "f8bfd48cc8019d52e378df897557ec02" : {
+  "e7046ae6ab695ba87c665b601cee7969" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -106,36 +66,16 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "52b690f1b79f1bed",
+      "uid" : "bc26d4e717557998",
       "status" : "passed",
       "time" : {
-        "start" : 1606749775894,
-        "stop" : 1606749783624,
-        "duration" : 7730
+        "start" : 1608011462668,
+        "stop" : 1608011479534,
+        "duration" : 16866
       }
     } ]
   },
-  "1f01e3d53adfcbe173a1a18355112735" : {
-    "statistic" : {
-      "failed" : 1,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "bde9e1298564c4df",
-      "status" : "failed",
-      "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='deposit-withdraw']//div[text()='Withdraw']\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
-      "time" : {
-        "start" : 1607334685211,
-        "stop" : 1607334715217,
-        "duration" : 30006
-      }
-    } ]
-  },
-  "b870b678101e5fba47279a56237bd4d3" : {
+  "572c0eb4919e20de857db98e36743d5d" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -145,31 +85,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "956b0fcf7854dc0b",
+      "uid" : "21ae58e2ff0c41c4",
       "status" : "passed",
       "time" : {
-        "start" : 1606749783624,
-        "stop" : 1606749834665,
-        "duration" : 51041
-      }
-    } ]
-  },
-  "b1793d1afe8c9357562f1ec33392daf7" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "3b0b3459d8cf924a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1606749772474,
-        "stop" : 1606749775894,
-        "duration" : 3420
+        "start" : 1608011458929,
+        "stop" : 1608011462668,
+        "duration" : 3739
       }
     } ]
   }

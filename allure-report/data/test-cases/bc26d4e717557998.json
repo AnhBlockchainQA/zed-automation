@@ -1,12 +1,12 @@
 {
-  "uid" : "8de3e39e91eb3112",
-  "name" : "Update metamask info",
-  "fullName" : "flow test generate child horse.Update metamask info",
-  "historyId" : "a9726a38b743f3a1bfd2c5b6fdc56a9f",
+  "uid" : "bc26d4e717557998",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Buy horse with credit card.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "e7046ae6ab695ba87c665b601cee7969",
   "time" : {
-    "start" : 1607334586117,
-    "stop" : 1607334590167,
-    "duration" : 4050
+    "start" : 1608011462668,
+    "stop" : 1608011479534,
+    "duration" : 16866
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,16 +17,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "flow test generate child horse"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "testClass",
-    "value" : "flow test generate child horse"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "testMethod",
-    "value" : "Update metamask info"
+    "value" : "Open ZedRun page and click Connnect Metamask"
   }, {
     "name" : "package",
-    "value" : "flow test generate child horse"
+    "value" : "Buy horse with credit card"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -41,6 +41,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "8de3e39e91eb3112.json",
+  "source" : "bc26d4e717557998.json",
   "parameterValues" : [ ]
 }
