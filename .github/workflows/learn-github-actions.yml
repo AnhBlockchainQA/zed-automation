@@ -18,7 +18,7 @@ jobs:
       run: |
         echo "action '${{ github.event.action }}' "
         echo "repository '${{ github.event.client_payload.repository }}' "
-        npm ci
-        npm test
-      env:
-        CI: true
+        npm run install
+        npm run test ./test/register.test.js
+      # env:
+      #   CI: true
