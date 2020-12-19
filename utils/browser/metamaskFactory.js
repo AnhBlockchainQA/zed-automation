@@ -31,6 +31,8 @@ class MetamaskFactory {
         `--start-maximized`,
       ],
       timeout: 0,
+      executablePath : 
+        '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
     });
 
     const [metamaskPage] = await Promise.all([

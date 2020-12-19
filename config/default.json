@@ -10,7 +10,7 @@
     "CONNECT_METAMASK": "//div[text()='Connect Metamask']",
     "ACCEPT_BUTTON": "text='Accept'",
     "MARKETPLACE_LINK": "//div[@class='header-desktop']/header/div[@class='header-content']/div[@class='left-part']//div[@data-tour='header-marketplace']//a[@href='/marketplace']",
-    "LOGIN_POPUP": "#login-steps form .section-content",
+    "LOGIN_POPUP": "#login-modal #login-steps .start-modal-content",
     "USER_AVATAR": ".header-desktop .header-content div.right-part  div.user-part div.icon-part img"
   },
   "marketPlace":{
@@ -63,7 +63,8 @@
     "WITHDRAW_AMOUNT_INPUT" : "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/div[contains(@class,'dw-price')]/input[not(@disabled)]",
     "WITHDRAW_FROM_ZED_BUTTON": "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/button[text()='Withdraw from ZED Balance']",
     "ZED_BALANCE": ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='zed'] .wallet-price div[class*='lg-text']",
-    "CLAIM_BUTTON": ".header-desktop header div.balance-sidebar.opened div.sidebar-content div.wallet button"
+    "CLAIM_BUTTON": ".header-desktop header div.balance-sidebar.opened div.sidebar-content div.wallet button",
+    "CONFIRM_DEPOSITE_BUTTON": "form > section > .section-footer > .d-flex > .primary-btn" 
   },
   "activity":{
     "ACTIVITY_HORSE_INFO_NAME" : "section.main-section > div.activity > .activity-content div.activity-row:nth-child(1) .activity-info div.horse-info span"

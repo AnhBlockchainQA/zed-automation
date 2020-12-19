@@ -18,6 +18,13 @@ class MagicLinkPage {
     await this.page.waitForTimeout(timeout);
   }
 
+  async waitForLoginFormHidden() {
+    await this.page.waitForSelector(zedRunConfig.LOGIN_POPUP, {
+      hidden: true,
+      timeout: 0,
+    });
+  }
+
   // async clickToTrustMe() {
   //   try{
   //     await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 5000});

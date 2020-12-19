@@ -1,9 +1,11 @@
-const { PageFactory } = require("../utils/browser/pageFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { WalletPage } = require('../pages/WalletPage');
-const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
+const { PageFactory } = require("../../utils/browser/pageFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const { WalletPage } = require('../../pages/WalletPage');
+const { HomePage } = require('../../pages/HomePage');
+
+const apiRequest = require("../../utils/api/api");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../../data/env");
 
 let pageFactory;
 let messageId;
@@ -12,6 +14,8 @@ let loginPage;
 let magicLinkPage;
 let walletPage;
 let pageInstance;
+let newPageInstance;
+let homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
@@ -41,31 +45,30 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
   });
 
   test("Open new browser with magic link", async () => {
-    let newPageInstance = await pageFactory.newTab(false, 0);
+    newPageInstance = await pageFactory.newTab(false, 0);
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.clickToTrustMe();
-    await magicLinkPage.waitForLoggedInMessage();
-    await magicLinkPage.waitForTimeout();
+    await magicLinkPage.waitForLoginFormHidden();
   });
 
-  test("Switch back to ZedRun page and verify login successful", async () => {
-    await loginPage.bringToFront();
-    await loginPage.waitForLoginFormHidden();
-    await loginPage.clickOnAcceptButton();
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnWalletIcon();
   });
 
   test ("Click on Deposit button and check if ETH balance is updated", async () => {
-    await loginPage.clickOnWalletIcon();
-    walletPage = new WalletPage(pageInstance);
-    await walletPage.clickOnDepositButton();
+    walletPage = new WalletPage(newPageInstance);
     let ethBalance = await walletPage.getETHBalance();
+    await walletPage.clickOnDepositButton();
     let newETHBalance = ethBalance - AMOUNT;
     console.log(">>> Old ETH Balance: ", ethBalance);
     console.log(">>> Expected ETH Balance: ", newETHBalance);
     await walletPage.typeDepositeAmount(AMOUNT);
     await walletPage.clickOnDepositeToZedWallet();
+    await walletPage.clickOnConfirmDepositeButton();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
   });
 });

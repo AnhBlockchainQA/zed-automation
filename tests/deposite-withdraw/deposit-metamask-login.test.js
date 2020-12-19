@@ -1,34 +1,13 @@
-const {
-  MetamaskPage
-} = require('../pages/MetamaskPage');
-const {
-  MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
-const {
-  LoginPage
-} = require('../pages/LoginPage');
-const {
-  MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
-const {
-  SEED_PHRASE,
-  PASSWORD,
-  CONFIRM_PASSWORD
-} = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
-
-const Wallet = require('../locators/Wallet')
-const MetamaskConfig = require('../locators/Metamask')
-const {
-  WalletPage
-} = require('../pages/WalletPage');
-const {
-  TEST_EMAIL,
-  TEST_LOGIN,
-  TEST_DOMAIN,
-  DEPOSITE_AMOUNT,
-  AMOUNT
-} = require("../data/env");
+const { MetamaskPage } = require('../../pages/MetamaskPage');
+const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
+const { LoginPage } = require('../../pages/LoginPage');
+const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require('../../data/env');
+const { WalletPage } = require('../../pages/WalletPage');
+const { AMOUNT } = require("../../data/env");
+const { HomePage } = require("../../pages/HomePage");
+const zedRunConfig = require('../../locators/ZedRun');
+const walletConfig = require("../../locators/Wallet");
 
 
 let metamaskFactory;
@@ -40,6 +19,10 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let homePage;
+let depositeMetamaskNotificationInstance;
+let depositeMetamaskNotificationPage;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
@@ -50,9 +33,7 @@ afterAll(async () => {
   await metamaskFactory.close();
 });
 
-describe("flow test generate child horse", () => {
-
-
+describe("Deposite to ZED balance by logging in with Metamask", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -75,7 +56,6 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -91,47 +71,29 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
+    
   });
 
-  let walletPage
-  test("Deposit", async () => {
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnWalletIcon();
+  });
+
+  test ("Click on Deposit button and check if ETH balance is updated", async () => {
     walletPage = new WalletPage(newPageInstance);
-    await newPageInstance.click(Wallet.WALLET_ICON)
-    await newPageInstance.click(Wallet.DEPOSITE_BUTTON)
     let ethBalance = await walletPage.getETHBalance();
-    const selector = Wallet.ETH_BALANCE;
-    const res = await newPageInstance.evaluate((locator) => {
-      return document.querySelector(locator).innerText
-    }, selector);
-    console.log('res:', res)
+    await walletPage.clickOnDepositButton();
     let newETHBalance = ethBalance - AMOUNT;
-    console.log('ethBalance:', ethBalance)
-    await newPageInstance.fill(Wallet.DEPOSITE_AMOUNT_INPUT, AMOUNT.toString())
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector(Wallet.DEPOSITE_TO_ZED_BUTTON, {
-      timeout: 0
-    })
-    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, Wallet.DEPOSITE_TO_ZED_BUTTON)
-    await metaMaskSign.click(MetamaskConfig.CLICK_CONFIRM_BUTTON)
-    await metaMaskSign.waitForEvent("close")
+    console.log(">>> Old ETH Balance: ", ethBalance);
+    console.log(">>> Expected ETH Balance: ", newETHBalance);
+    await walletPage.typeDepositeAmount(AMOUNT);
+    depositeMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, walletConfig.DEPOSITE_TO_ZED_BUTTON);
+    depositeMetamaskNotificationPage = new MetamaskNotificationPage(depositeMetamaskNotificationInstance);
+    await depositeMetamaskNotificationPage.waitForLoadState();
+    await depositeMetamaskNotificationPage.clickOnConfirmButton();
+    await depositeMetamaskNotificationPage.waitForCloseEvent();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
-  });
-
-  test("Withdraw", async () => {
-    // await newPageInstance.click(Wallet.WALLET_ICON)
-    console.log('KKKKKKKKKKKKKKKKKKKKKKKKKK')
-    await newPageInstance.click(Wallet.WITHDRAW_BUTTON)
-    let zedBalance = await walletPage.getZedBalance();
-    let newZedBalance = zedBalance - AMOUNT;
-    await newPageInstance.fill(Wallet.WITHDRAW_AMOUNT_INPUT, AMOUNT.toString())
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector(Wallet.WITHDRAW_FROM_ZED_BUTTON, {
-      timeout: 0
-    })
-    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, Wallet.WITHDRAW_FROM_ZED_BUTTON)
-    await metaMaskSign.click(MetamaskConfig.CLICK_SIGN_BUTTON)
-    await metaMaskSign.waitForEvent("close")
-    // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
   });
 });

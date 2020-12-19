@@ -16,6 +16,7 @@ const {
   CONFIRM_PASSWORD
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
+const { HomePage } = require('../pages/HomePage'); 
 
 
 let metamaskFactory;
@@ -37,9 +38,7 @@ afterAll(async () => {
   await metamaskFactory.close();
 });
 
-describe("flow test generate child horse", () => {
-
-
+describe("Generate stud horse", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -62,7 +61,6 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -78,7 +76,13 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
+  });
+
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnMarketplaceLink();
   });
 
   test("generate child horse", async () => {

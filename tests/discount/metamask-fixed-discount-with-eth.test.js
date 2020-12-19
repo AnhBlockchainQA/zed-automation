@@ -9,6 +9,8 @@ const { FIXED_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const marketPlaceConfig = require("../../locators/MarketPlace");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
+const { HomePage } = require("../../pages/HomePage");
+
 
 let metamaskFactory;
 let metamaskPage;
@@ -22,6 +24,7 @@ let otherMetamaskNotificationPage;
 let anotherMetamaskNotificationInstance;
 let anotherMetamaskNotificationPage;
 let marketPlacePage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -76,11 +79,13 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await zedRunPage.clickOnAcceptButton();
   });
 
-  test("Go to Market page and wait until horse list is loaded", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
   });
@@ -111,8 +116,8 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     );
     await anotherMetamaskNotificationPage.waitForLoadState();
     await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    await anotherMetamaskNotificationPage.waitForCloseEvent();
+    // await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    // await anotherMetamaskNotificationPage.waitForCloseEvent();
   });
 });
 

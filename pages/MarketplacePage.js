@@ -149,7 +149,7 @@ class MarketplacePage{
     async waitUntilHorseListLoaded(){
         await this.page.waitForFunction(
             ([locator,value]) => {
-              return document.querySelectorAll(locator).length == value;
+              return document.querySelectorAll(locator).length >= value;
             },
             [marketPlaceConfig.HORSE_LIST, HORSE_LIST_SIZE],
             { polling: 10000, timeout: 300000 }

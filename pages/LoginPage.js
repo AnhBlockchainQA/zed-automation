@@ -77,28 +77,6 @@ class LoginPage {
     await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
   }
 
-  async clickOnAcceptButton() {
-    await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {
-      visible: true, timeout: 0
-    });
-    await this.page.click(zedRunConfig.ACCEPT_BUTTON);
-  }
-
-  async clickOnMarketplaceLink() {
-    await this.page.click(zedRunConfig.MARKETPLACE_LINK);
-  }
-
-  async clickOnWalletIcon() {
-    await this.page.waitForSelector(depositeConfig.WALLET_ICON);
-    await this.page.click(depositeConfig.WALLET_ICON);
-  }
-
-  async waitForLoginFormHidden() {
-    await this.page.waitForSelector(zedRunConfig.LOGIN_POPUP, {
-      hidden: true,
-      timeout: 0,
-    });
-  }
 }
 
 module.exports = { LoginPage };

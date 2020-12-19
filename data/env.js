@@ -30,5 +30,5 @@ module.exports = {
     CODE: "INVALID_COUPON",
     ERROR: "Voucher Not Found"
   },
-  HORSE_LIST_SIZE: 30
+  HORSE_LIST_SIZE: 10
 }
