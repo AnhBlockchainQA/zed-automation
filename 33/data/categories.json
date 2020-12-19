@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.\n                =========================== logs ===========================\n                <launching> /home/runner/.cache/ms-playwright/chromium-823944/chrome-linux/chrome --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/home/runner/work/zed-automation/zed-automation/gh-pages/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/home/runner/work/zed-automation/zed-automation/gh-pages/utils/browser/metamask-chrome-8.1.3 --load-extension=/home/runner/work/zed-automation/zed-automation/gh-pages/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank\n                <launched> pid=4351\n                [err] [4351:4351:1219/090418.751894:ERROR:browser_main_loop.cc(1438)] Unable to open X display.\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Update metamask info",
+        "uid" : "dcb9f26b3044056",
+        "parentUid" : "9a42fc3d7889513282fa7ab3cd336124",
+        "status" : "failed",
+        "time" : {
+          "start" : 1608368658761,
+          "stop" : 1608368658764,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "8c87248ba7ef82c7",
+        "parentUid" : "9a42fc3d7889513282fa7ab3cd336124",
+        "status" : "failed",
+        "time" : {
+          "start" : 1608368658764,
+          "stop" : 1608368658765,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9a42fc3d7889513282fa7ab3cd336124"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
