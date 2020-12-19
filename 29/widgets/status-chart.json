@@ -1,0 +1,21 @@
+[ {
+  "uid" : "c1388601be11255f",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1608366241120,
+    "stop" : 1608366241121,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c6345abb0b684b75",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1608366241117,
+    "stop" : 1608366241120,
+    "duration" : 3
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
