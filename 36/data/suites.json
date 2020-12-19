@@ -1,0 +1,35 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "flow test generate child horse",
+    "children" : [ {
+      "name" : "Update metamask info",
+      "uid" : "440fd5d3a41510d8",
+      "parentUid" : "58159176d8e5e95ecb08f23ffa1057f1",
+      "status" : "failed",
+      "time" : {
+        "start" : 1608373356998,
+        "stop" : 1608373357002,
+        "duration" : 4
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Open ZedRun page and click Connnect Metamask",
+      "uid" : "13491654622cd5fa",
+      "parentUid" : "58159176d8e5e95ecb08f23ffa1057f1",
+      "status" : "failed",
+      "time" : {
+        "start" : 1608373357002,
+        "stop" : 1608373357003,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "58159176d8e5e95ecb08f23ffa1057f1"
+  } ],
+  "name" : "suites"
+}
