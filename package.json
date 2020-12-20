@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest ./tests/generate-sub-horse.test.js --runInBand  --testTimeout=30000",
-    "allure": "allure generate"
+    "allure": "allure generate --clean"
   },
   "jest": {
     "verbose": true
