@@ -3,7 +3,7 @@ const metamaskConfig = require("../locators/Metamask");
 class MetamaskNotificationPage{
 
     constructor(page){
-        console.log('page:', page)
+        // console.log('page:', page)
         this.page = page;
     }
 
