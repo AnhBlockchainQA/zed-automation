@@ -27,7 +27,7 @@ class MetamaskFactory {
 
   async init() {
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
-      headless: false,
+      headless: true,
       args: [
         `--disable-extensions-except=${pathToExtension}`,
         `--load-extension=${pathToExtension}`,
@@ -61,9 +61,9 @@ class MetamaskFactory {
   }
 
   clickNewPage = async (page, selector) => {
-      await page.screenshot({
-        path: `example2.png`
-      })
+      // await page.screenshot({
+      //   path: `example2.png`
+      // })
       // console.log('browserContext:', this.browserContext)
       // console.log('page:', page)
       // console.log('selector:', selector)
