@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-const { chromium } = require("playwright");
+
+const {
+  chromium
+} = require("playwright");
 const pathToExtension = require("path").join(
   __dirname,
   "metamask-chrome-8.1.3"
@@ -24,12 +27,14 @@ class MetamaskFactory {
 
   async init() {
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
-      headless: true,
+      headless: false,
       args: [
         `--disable-extensions-except=${pathToExtension}`,
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+      devtools: true,
+      chromiumSandbox: true,
       timeout: 0,
     });
 
@@ -55,12 +60,22 @@ class MetamaskFactory {
       .then(console.log("Page is loaded completely!"));
   }
 
-  async clickNewPage(page, selector) {
-    const [newPage] = await Promise.all([
-      this.browserContext.waitForEvent("page"),
-      page.click(selector, { timeout: 0 }),
-    ]);
-    return newPage;
+  clickNewPage = async (page, selector) => {
+      await page.screenshot({
+        path: `example2.png`
+      })
+      // console.log('browserContext:', this.browserContext)
+      // console.log('page:', page)
+      // console.log('selector:', selector)
+      // console.log('browserContext:', this.browserContext.co)
+      const [newPage] = await Promise.all([
+        this.browserContext.waitForEvent("page"),
+        page.click(selector, {
+          timeout: 3000
+        }),
+      ]);
+      return newPage;
+
   }
 
   async newPage() {
@@ -73,4 +88,6 @@ class MetamaskFactory {
   }
 }
 
-module.exports = { MetamaskFactory };
+module.exports = {
+  MetamaskFactory
+};
