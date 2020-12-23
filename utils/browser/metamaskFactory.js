@@ -24,7 +24,7 @@ class MetamaskFactory {
 
   async init() {
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
-      headless: false,
+      headless: true,
       args: [
         `--disable-extensions-except=${pathToExtension}`,
         `--load-extension=${pathToExtension}`,
