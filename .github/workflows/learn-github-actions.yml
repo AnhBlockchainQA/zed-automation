@@ -34,9 +34,8 @@ jobs:
 
     - name: Run test when have event ping
       run: |
-        echo "action '${{ github.event.action }}' "
-        echo "repository '${{ github.event.client_payload.repository }}' "
         npm ci
+        npm install
         npm run test 
       env:
         CI: true
