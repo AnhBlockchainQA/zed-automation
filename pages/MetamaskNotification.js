@@ -20,7 +20,7 @@ class MetamaskNotificationPage{
     }
 
     async waitForLoadState(){
-        console.log('this.page:', this.page)
+        // console.log('this.page:', this.page)
         await this.page.waitForLoadState();
     }
 

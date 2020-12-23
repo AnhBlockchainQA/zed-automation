@@ -75,7 +75,7 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    await newPageInstance.screenshot({ path: `example.png` });
+    // await newPageInstance.screenshot({ path: `example.png` });
     // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
