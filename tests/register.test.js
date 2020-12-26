@@ -46,9 +46,9 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-// afterAll(async () => {
-//   await metamaskFactory.close();
-// });
+afterAll(async () => {
+  await metamaskFactory.close();
+});
 
 describe("flow test generate child horse", () => {
 
@@ -72,6 +72,7 @@ describe("flow test generate child horse", () => {
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
+    console.log('>newPageInstance>>>', newPageInstance)
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
