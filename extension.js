@@ -34,12 +34,13 @@ try {
     await metamaskPage.click('[title="Close"]')
     await metamaskPage.click('.network-name')
     await metamaskPage.click('text="Goerli Test Network"')
-    
+    console.log('done metamask')
     const page = await browserContext.newPage()
+    console.log('new page')
     await page.goto('https://goerli-test.zed.run/', { timeout: 0 });
   
     // await metamaskPage.bringToFront();
-  
+    await page.waitForLoadState();
     await page.click('div.start-part');
   
     // const res = await page.click('.overline-text.bold', { timeout: 0 });

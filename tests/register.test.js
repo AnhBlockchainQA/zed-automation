@@ -47,9 +47,6 @@ beforeAll(async () => {
 });
 
 describe("flow test generate child horse", () => {
-
-
-
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -90,11 +87,12 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
     await newPageInstance.click('text="Accept"')
+    await metamaskFactory.close();
   });
 
   
 });
 
 afterAll(async () => {
-  await metamaskFactory.close();
+  
 });
