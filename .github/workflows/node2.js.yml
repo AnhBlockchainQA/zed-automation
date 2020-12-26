@@ -25,10 +25,8 @@ jobs:
         
     - name: Run test when have event ping
       run: |
-        rm -rf node_modules
-        npm ci
         npm install
-        npm run test 
+        npm run test tests/magicLink.test.js
       env:
         CI: true
 
