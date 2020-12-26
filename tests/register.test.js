@@ -46,10 +46,6 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
-});
-
 describe("flow test generate child horse", () => {
 
 
@@ -97,4 +93,8 @@ describe("flow test generate child horse", () => {
   });
 
   
+});
+
+afterAll(async () => {
+  await metamaskFactory.close();
 });
