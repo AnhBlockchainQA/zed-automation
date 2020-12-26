@@ -14,8 +14,8 @@ console.log("userDataDir:", userDataDir);
 
 class MetamaskFactory {
   constructor() {
-    this.metamask = null;
-    this.browserContext = null;
+    this.metamask;
+    this.browserContext;
   }
 
   async removeCache() {
