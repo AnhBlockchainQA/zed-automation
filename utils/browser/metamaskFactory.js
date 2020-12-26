@@ -71,7 +71,7 @@ class MetamaskFactory {
       const [newPage] = await Promise.all([
         this.browserContext.waitForEvent("page"),
         page.click(selector, {
-          timeout: 3000
+          timeout: 0
         }),
       ]);
       return newPage;
