@@ -9,24 +9,36 @@ on:
   pull_request:
     branches: [ master ]
 
-jobs:
-  build:
+# jobs:
+#   build:
  
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
   
-    steps:
-    - uses: actions/checkout@v2
-    - uses: microsoft/playwright-github-action@v1
+#     steps:
+#     - uses: actions/checkout@v2
+#     - uses: microsoft/playwright-github-action@v1
     
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+#     - name: Use Node.js
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: '12.x'
         
-    - name: Run test when have event ping
-      run: |
-        npm install
-        npm run test tests/magicLink.test.js
-      env:
-        CI: true
+#     - name: Run test when have event ping
+#       run: 
+#         npm install
+#         npm run test tests/magicLink.test.js
+#       env:
+#         CI: true
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest # or macos-latest, windows-latest
 
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+
+      - uses: microsoft/playwright-github-action@v1
+
+      - name: Install dependencies and run tests
+        run: npm install && npm test
