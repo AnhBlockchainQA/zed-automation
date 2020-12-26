@@ -1,6 +1,7 @@
 const {
   chromium
 } = require('playwright');
+process.env.DEBUG = 'pw:api,pw:browser*';
 try {
   (async () => {
     const pathToExtension = require('path').join(__dirname, './utils/browser/metamask-chrome-8.1.3');
@@ -42,12 +43,12 @@ try {
     await page.click('div.start-part');
   
     // const res = await page.click('.overline-text.bold', { timeout: 0 });
-    // console.log('res:', res)
+    console.log('res:', await page.title())
   
     const [metaMaskSign] = await Promise.all([
       browserContext.waitForEvent('page'),
       // page.click(`//div[text()='Connect Metamask']`, { timeout: 0 }) 
-      (await page.$(`//div[text()='Connect Metamask']`)).click(),
+      (await page.$(`//div[text()='Connect Metamask']`)).click({ timeout: 0 }),
     ])
     await metaMaskSign.waitForLoadState();
     console.log(await metaMaskSign.title());
