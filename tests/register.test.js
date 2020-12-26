@@ -91,11 +91,9 @@ describe("flow test generate child horse", () => {
       await otherMetamaskNotificationPage.waitForLoadState();
       await otherMetamaskNotificationPage.clickOnSignButton();
       await otherMetamaskNotificationPage.waitForCloseEvent();
-      // await newPageInstance.click('text="Accept"')
+      await newPageInstance.click('text="Accept"')
       console.log('done')
-      await setTimeout(() => {
-        console.log('finish')
-      }, 2000)
+      await newPageInstance.reload()
       await metamaskFactory.close();
     } catch (error) {
       console.log('err:', error)
