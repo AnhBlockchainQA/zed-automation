@@ -66,31 +66,37 @@ describe("flow test generate child horse", () => {
   })
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
-    newPageInstance = await metamaskFactory.newPage();
-    console.log('>newPageInstance>>>')
-    zedRunPage = new LoginPage(newPageInstance);
-    await zedRunPage.navigate();
-    await zedRunPage.clickOnStartButton();
-    console.log('authen with metamask')
-    // await newPageInstance.screenshot({ path: `example.png` });
-    // await zedRunPage.clickConnectMetamaskButton();
-
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
-
-    await metamaskNotificationPage.waitForLoadState();
-    await metamaskNotificationPage.clickOnNextButton();
-    await metamaskNotificationPage.clickOnConnectButton();
-    await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
-    await metamaskFactory.close();
+    try {
+      
+      newPageInstance = await metamaskFactory.newPage();
+      console.log('>newPageInstance>>>')
+      zedRunPage = new LoginPage(newPageInstance);
+      await zedRunPage.navigate();
+      await zedRunPage.clickOnStartButton();
+      console.log('authen with metamask')
+      // await newPageInstance.screenshot({ path: `example.png` });
+      // await zedRunPage.clickConnectMetamaskButton();
+      
+      metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
+      metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+      console.log('confirm 1')
+      await metamaskNotificationPage.waitForLoadState();
+      await metamaskNotificationPage.clickOnNextButton();
+      await metamaskNotificationPage.clickOnConnectButton();
+      await metamaskNotificationPage.waitForCloseEvent();
+      
+      otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
+      otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+      console.log('confirm 2')
+      await otherMetamaskNotificationPage.waitForLoadState();
+      await otherMetamaskNotificationPage.clickOnSignButton();
+      await otherMetamaskNotificationPage.waitForCloseEvent();
+      await newPageInstance.click('text="Accept"')
+      console.log('done')
+      await metamaskFactory.close();
+    } catch (error) {
+      console.log('err:', error)
+    }
   });
 
   
