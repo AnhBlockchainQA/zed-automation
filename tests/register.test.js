@@ -47,8 +47,8 @@ beforeAll(async () => {
   console.log('init done')
 });
 
-describe("flow test generate child horse", (done) => {
-  test("Update metamask info", async () => {
+describe("flow test generate child horse", () => {
+  test("Update metamask info", async (done) => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
