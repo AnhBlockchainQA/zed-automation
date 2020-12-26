@@ -47,7 +47,7 @@ beforeAll(async () => {
   console.log('init done')
 });
 
-describe("flow test generate child horse", () => {
+describe("flow test generate child horse", (done) => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -63,6 +63,7 @@ describe("flow test generate child horse", () => {
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
     console.log('metamask done')
+    done()
   })
 
   test("Open ZedRun page and click Connnect Metamask", async (done) => {
