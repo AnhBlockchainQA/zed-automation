@@ -65,7 +65,7 @@ describe("flow test generate child horse", () => {
     console.log('metamask done')
   })
 
-  test("Open ZedRun page and click Connnect Metamask", async () => {
+  test("Open ZedRun page and click Connnect Metamask", async (done) => {
     try {
       
       newPageInstance = await metamaskFactory.newPage();
@@ -95,6 +95,7 @@ describe("flow test generate child horse", () => {
       console.log('done')
       await newPageInstance.reload()
       await metamaskFactory.close();
+      done()
     } catch (error) {
       console.log('err:', error)
     }
