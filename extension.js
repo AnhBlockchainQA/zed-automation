@@ -46,7 +46,8 @@ try {
   
     const [metaMaskSign] = await Promise.all([
       browserContext.waitForEvent('page'),
-      page.click(`//div[text()='Connect Metamask']`, { timeout: 0 }) 
+      // page.click(`//div[text()='Connect Metamask']`, { timeout: 0 }) 
+      (await page.$(`//div[text()='Connect Metamask']`)).click(),
     ])
     await metaMaskSign.waitForLoadState();
     console.log(await metaMaskSign.title());
