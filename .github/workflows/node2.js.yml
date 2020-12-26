@@ -8,7 +8,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-    
+
 jobs:
   build:
  
@@ -25,6 +25,7 @@ jobs:
         
     - name: Run test when have event ping
       run: |
+        rm -rf node_modules
         npm ci
         npm install
         npm run test 
