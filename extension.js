@@ -41,12 +41,12 @@ try {
   
     await page.click('div.start-part');
   
-    const res = await page.click('.overline-text.bold', { timeout: 0 });
-    console.log('res:', res)
+    // const res = await page.click('.overline-text.bold', { timeout: 0 });
+    // console.log('res:', res)
   
     const [metaMaskSign] = await Promise.all([
       browserContext.waitForEvent('page'),
-      page.click('.overline-text.bold', { timeout: 0 }) 
+      page.click(`//div[text()='Connect Metamask']`, { timeout: 0 }) 
     ])
     await metaMaskSign.waitForLoadState();
     console.log(await metaMaskSign.title());
