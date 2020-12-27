@@ -19,6 +19,7 @@ jobs:
         echo "action '${{ github.event.action }}' "
         echo "repository '${{ github.event.client_payload.repository }}' "
         npm ci
-        npm run test
+        npm install
+        xvfb-run --auto-servernum -- npm test
       env:
         CI: true
