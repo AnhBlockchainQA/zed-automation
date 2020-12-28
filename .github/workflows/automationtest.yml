@@ -48,5 +48,12 @@ jobs:
         PERSONAL_TOKEN: 07a56d6a3c3b39cc83c0375fedf5070e4b60a4cf
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+    - name: Send message to Slack API
+      uses: archive/github-actions-slack@v1.0.3
+      id: notify
+      with:
+        slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        slack-channel: "automation-test-report"
+        slack-text: check your report here https://vhslab.github.io/qa-automationtest/ 
 
         
