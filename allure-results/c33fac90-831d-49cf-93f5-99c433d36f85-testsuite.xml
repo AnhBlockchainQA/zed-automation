@@ -1,0 +1,102 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609144897644' stop='1609144918586'>
+    <name>Login to ZedRUn with magic link</name>
+    <title>Login to ZedRUn with magic link</title>
+    <test-cases>
+        <test-case start='1609144897644' status='failed' stop='1609144907654'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/magicLink.test.js:22:3)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/magicLink.test.js:20:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609144907654' status='failed' stop='1609144908387'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'id' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'id' of undefined
+                    at APIRequest.getZedRunMessageId (/Users/davidle/qa-automationtest/utils/api/api.js:45:40)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609144908387' status='failed' stop='1609144908577'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.goto: url: expected string, got undefined</message>
+                <stack-trace>Error: page.goto: url: expected string, got undefined
+                    at Object.&lt;anonymous>.exports.tString (/Users/davidle/qa-automationtest/node_modules/playwright/lib/protocol/validatorPrimitives.js:42:11)
+                    at /Users/davidle/qa-automationtest/node_modules/playwright/lib/protocol/validatorPrimitives.js:81:27
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:93)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:80:71)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.goto (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:78:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:267:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.goto (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:267:21)
+                    at MagicLinkPage.navigate (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:14:21)
+                    at Object.test (/Users/davidle/qa-automationtest/tests/magicLink.test.js:51:25)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609144908577' status='failed' stop='1609144918585'>
+            <name>Switch back to ZedRun page and verify login successful</name>
+            <title>Switch back to ZedRun page and verify login successful</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/magicLink.test.js:59:3)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/magicLink.test.js:20:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
