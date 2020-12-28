@@ -1,0 +1,61 @@
+{
+  "uid" : "3e03e736f4bdd90f",
+  "name" : "Go to Market page and wait until horse list is loaded",
+  "fullName" : "Buy horse with credit card.Go to Market page and wait until horse list is loaded",
+  "historyId" : "c03eabf99514a2c74e8cc501cd87ba6e",
+  "time" : {
+    "start" : 1608971179398,
+    "stop" : 1608971209404,
+    "duration" : 30006
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at test (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at Suite.Object.<anonymous>.describe (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:79:3)\n                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:29:1)\n                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)\n                    at process._tickCallback (internal/process/next_tick.js:68:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Market page and wait until horse list is loaded"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "101e9544ec28cbcd",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1608969903882,
+        "stop" : 1608969933888,
+        "duration" : 30006
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3e03e736f4bdd90f.json",
+  "parameterValues" : [ ]
+}

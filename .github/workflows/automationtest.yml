@@ -53,7 +53,7 @@ jobs:
       uses: archive/github-actions-slack@v1.0.3
       id: notify
       with:
-        slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        slack-bot-user-oauth-access-token: erWty5nDbmvL2PSybwZbpFLp
         slack-channel: automation-test-report
         slack-text: check your report here https://vhslab.github.io/qa-automationtest/ 
 

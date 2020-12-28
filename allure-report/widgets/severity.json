@@ -1,0 +1,81 @@
+[ {
+  "uid" : "9162eeae1ecc6a98",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1608971156019,
+    "stop" : 1608971160114,
+    "duration" : 4095
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d619b9af2cb0e0ec",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1609144160843,
+    "stop" : 1609144162633,
+    "duration" : 1790
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3441f29c5f00e5",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1609144143107,
+    "stop" : 1609144160843,
+    "duration" : 17736
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8015c4f0e2ea881e",
+  "name" : "Apply the discount coupon : EXPIRED_COUPON",
+  "time" : {
+    "start" : 1608971209404,
+    "stop" : 1608971239408,
+    "duration" : 30004
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed84faece2ddac45",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "time" : {
+    "start" : 1609144222639,
+    "stop" : 1609144282653,
+    "duration" : 60014
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3720a69a211dff4e",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1609144162633,
+    "stop" : 1609144222639,
+    "duration" : 60006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba3390cfbf55b8d7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1608971160114,
+    "stop" : 1608971179398,
+    "duration" : 19284
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e03e736f4bdd90f",
+  "name" : "Go to Market page and wait until horse list is loaded",
+  "time" : {
+    "start" : 1608971179398,
+    "stop" : 1608971209404,
+    "duration" : 30006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
