@@ -33,8 +33,8 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-      devtools: true,
-      chromiumSandbox: true,
+      // devtools: true,
+      // chromiumSandbox: true,
       timeout: 0,
     });
 
