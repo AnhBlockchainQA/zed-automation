@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand --testTimeout=10000",
+    "test": "jest --runInBand ./tests/magicLink.test.js --testTimeout=10000",
     "allure": "allure generate --clean"
   },
   "jest": {
