@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-const { chromium } = require("playwright");
+
+const {
+  chromium
+} = require("playwright");
 const pathToExtension = require("path").join(
   __dirname,
   "metamask-chrome-8.1.3"
@@ -11,8 +14,8 @@ console.log("userDataDir:", userDataDir);
 
 class MetamaskFactory {
   constructor() {
-    this.metamask = null;
-    this.browserContext = null;
+    this.metamask;
+    this.browserContext;
   }
 
   async removeCache() {
@@ -30,6 +33,8 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+      // devtools: true,
+      // chromiumSandbox: true,
       timeout: 0,
     });
 
@@ -55,12 +60,23 @@ class MetamaskFactory {
       .then(console.log("Page is loaded completely!"));
   }
 
-  async clickNewPage(page, selector) {
-    const [newPage] = await Promise.all([
-      this.browserContext.waitForEvent("page"),
-      page.click(selector, { timeout: 0 }),
-    ]);
-    return newPage;
+  clickNewPage = async (page, selector) => {
+      // await page.screenshot({
+      //   path: `example2.png`
+      // })
+      // console.log('browserContext:', this.browserContext)
+      // console.log('page:', page)
+      // console.log('selector:', selector)
+      // console.log('browserContext:', this.browserContext.co)
+      const [newPage] = await Promise.all([
+        this.browserContext.waitForEvent("page"),
+        (await page.$(selector)).click({ timeout: 0 }),
+        // page.click(selector, {
+        //   timeout: 0
+        // }),
+      ]);
+      return newPage;
+
   }
 
   async newPage() {
@@ -68,9 +84,13 @@ class MetamaskFactory {
   }
 
   async close() {
-    await this.removeCache();
-    return await this.browserContext.close();
+    // await this.removeCache();
+    console.log('close browser')
+    await this.browserContext.close();
+    return
   }
 }
 
-module.exports = { MetamaskFactory };
+module.exports = {
+  MetamaskFactory
+};
