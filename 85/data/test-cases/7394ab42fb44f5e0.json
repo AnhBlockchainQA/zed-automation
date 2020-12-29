@@ -1,0 +1,73 @@
+{
+  "uid" : "7394ab42fb44f5e0",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Login to ZedRUn with magic link.Check mail inbox to get magic link",
+  "historyId" : "eccf1fddfddd692b0ebe35cb4ae4e8c8",
+  "time" : {
+    "start" : 1609247823047,
+    "stop" : 1609247823698,
+    "duration" : 651
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:45:40)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/magicLink.test.js:38:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "79de78f0a716bdf4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/84//#testresult/79de78f0a716bdf4",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1609247377910,
+          "stop" : 1609247378285,
+          "duration" : 375
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7394ab42fb44f5e0.json",
+  "parameterValues" : [ ]
+}
