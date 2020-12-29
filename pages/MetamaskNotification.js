@@ -3,6 +3,7 @@ const metamaskConfig = require("../locators/Metamask");
 class MetamaskNotificationPage{
 
     constructor(page){
+        // console.log('page:', page)
         this.page = page;
     }
 
@@ -19,6 +20,7 @@ class MetamaskNotificationPage{
     }
 
     async waitForLoadState(){
+        // console.log('this.page:', this.page)
         await this.page.waitForLoadState();
     }
 

@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1608958836167' stop='1608958870546'>
+    <name>Login to ZedRUn with magic link</name>
+    <title>Login to ZedRUn with magic link</title>
+    <test-cases>
+        <test-case start='1608958836167' status='passed' stop='1608958862464'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608958862464' status='passed' stop='1608958870216'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1608958870216' status='failed' stop='1608958870518'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+                =========================== logs ===========================
+                navigating to "https://auth.magic.link/confirm?tlt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im8zdnZ4bGtAMXNlY21haWwuY29tIiwidGVtcG9yYXJ5X2F1dGhfdG9rZW4iOiJGeUZkdi1hbHdMRzhDMzdlazBRR3dwaDBiRG90ZUQ4YUhveFpZU1JDMGsxUTczaFZLSFI3cDJ5MVdiYmxhc3RacDV6MW82NU5HQXNzb2R5LTM1eGoyZyIsImNsaWVudF9pZCI6ImR3c0VPcVN4b1FuZ1dyMWpCSjZrNzBVZGpRVUd6Mk1hWHN1dXdSZ200Y3c9IiwidXNlcl90eXBlIjoyLCJleHAiOjE2MDg5NTk0NjF9.uw9wo-eP9S8NpgB9_k6mguuiHleCVnhKS5tmFEJtrIs&amp;tpk=&amp;e=testnet&amp;ct=eyJidXR0b25fY29sb3IiOiAiIzI3QjE4QSIsICJhc3NldF91cmkiOiAiaHR0cHM6Ly9hc3NldHMuZm9ydG1hdGljLmNvbS9NYWdpY0xvZ29zLzZhODkxZGRmYzNlM2I2ZjljM2E4NmIwMzFjZDNjYTdlL2M4ZmFiNTdlNGVhMTllMTc1NWFjZmRjZGIyN2NkMDQ1LnBuZyIsICJhcHBfbmFtZSI6ICJaRUQgUnVuIiwgInRoZW1lX2NvbG9yIjogImRhcmsifQ==&amp;uid=IhOvjoookpWLB3T80ywqI6EJO0LGIIHv7bAjBGA9-i0=&amp;locale=en_us&amp;ak=pk_test_5A7BD4704ABE8EB7&amp;redirect_url=https://goerli-test.zed.run/magiccb/home/start&amp;location=VmlldCBOYW0sIEJhYyBOaW5oLCBCYWMgTmluaA==", waiting until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.goto: net::ERR_ABORTED; maybe frame was detached?
+                =========================== logs ===========================
+                navigating to "https://auth.magic.link/confirm?tlt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im8zdnZ4bGtAMXNlY21haWwuY29tIiwidGVtcG9yYXJ5X2F1dGhfdG9rZW4iOiJGeUZkdi1hbHdMRzhDMzdlazBRR3dwaDBiRG90ZUQ4YUhveFpZU1JDMGsxUTczaFZLSFI3cDJ5MVdiYmxhc3RacDV6MW82NU5HQXNzb2R5LTM1eGoyZyIsImNsaWVudF9pZCI6ImR3c0VPcVN4b1FuZ1dyMWpCSjZrNzBVZGpRVUd6Mk1hWHN1dXdSZ200Y3c9IiwidXNlcl90eXBlIjoyLCJleHAiOjE2MDg5NTk0NjF9.uw9wo-eP9S8NpgB9_k6mguuiHleCVnhKS5tmFEJtrIs&amp;tpk=&amp;e=testnet&amp;ct=eyJidXR0b25fY29sb3IiOiAiIzI3QjE4QSIsICJhc3NldF91cmkiOiAiaHR0cHM6Ly9hc3NldHMuZm9ydG1hdGljLmNvbS9NYWdpY0xvZ29zLzZhODkxZGRmYzNlM2I2ZjljM2E4NmIwMzFjZDNjYTdlL2M4ZmFiNTdlNGVhMTllMTc1NWFjZmRjZGIyN2NkMDQ1LnBuZyIsICJhcHBfbmFtZSI6ICJaRUQgUnVuIiwgInRoZW1lX2NvbG9yIjogImRhcmsifQ==&amp;uid=IhOvjoookpWLB3T80ywqI6EJO0LGIIHv7bAjBGA9-i0=&amp;locale=en_us&amp;ak=pk_test_5A7BD4704ABE8EB7&amp;redirect_url=https://goerli-test.zed.run/magiccb/home/start&amp;location=VmlldCBOYW0sIEJhYyBOaW5oLCBCYWMgTmluaA==", waiting until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:80:71)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.goto (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:78:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:267:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.goto (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:267:21)
+                    at MagicLinkPage.navigate (/Users/davidle/zed-automation/pages/MagicLinkPage.js:14:21)
+                    at Object.test (/Users/davidle/zed-automation/tests/magicLink.test.js:51:25)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1608958870518' status='failed' stop='1608958870546'>
+            <name>Switch back to ZedRun page and verify login successful</name>
+            <title>Switch back to ZedRun page and verify login successful</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.bringToFront: Protocol error (Page.bringToFront): Target closed.</message>
+                <stack-trace>page.bringToFront: Protocol error (Page.bringToFront): Target closed.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:382:33)
+                    at Page._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Page.bringToFront (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:381:21)
+                    at LoginPage.bringToFront (/Users/davidle/zed-automation/pages/LoginPage.js:45:21)
+                    at Object.test (/Users/davidle/zed-automation/tests/magicLink.test.js:60:21)
+                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

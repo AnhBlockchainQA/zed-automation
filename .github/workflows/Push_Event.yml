@@ -62,4 +62,4 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
-        slack-text: check your report here https://vhslab.github.io/qa-automationtest/
+        slack-text: Your test run is completed. Check your test report here https://vhslab.github.io/qa-automationtest/

@@ -1,0 +1,46 @@
+{
+  "uid" : "38021826ab746430",
+  "name" : "Apply the discount coupon : EXPIRED_COUPON",
+  "fullName" : "Buy horse with credit card.Apply the discount coupon : EXPIRED_COUPON",
+  "historyId" : "8a6bb3321423a573beb8b71cc9a93da6",
+  "time" : {
+    "start" : 1608007939103,
+    "stop" : 1608007942103,
+    "duration" : 3000
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : EXPIRED_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "38021826ab746430.json",
+  "parameterValues" : [ ]
+}
