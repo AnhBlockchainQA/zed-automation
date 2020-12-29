@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "Login to ZedRUn with magic link",
+    "children" : [ {
+      "name" : "Open ZedRun page and input valid email to generate magic link",
+      "uid" : "756b5c5ef0c96414",
+      "parentUid" : "5c87e0611c8eeb14309b427d2df9892f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1609247367906,
+        "stop" : 1609247377910,
+        "duration" : 10004
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Check mail inbox to get magic link",
+      "uid" : "79de78f0a716bdf4",
+      "parentUid" : "5c87e0611c8eeb14309b427d2df9892f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1609247377910,
+        "stop" : 1609247378285,
+        "duration" : 375
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Open new browser with magic link",
+      "uid" : "421fd24366fb2173",
+      "parentUid" : "5c87e0611c8eeb14309b427d2df9892f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1609247378285,
+        "stop" : 1609247378344,
+        "duration" : 59
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Switch back to ZedRun page and verify login successful",
+      "uid" : "892271fd11e397be",
+      "parentUid" : "5c87e0611c8eeb14309b427d2df9892f",
+      "status" : "failed",
+      "time" : {
+        "start" : 1609247378344,
+        "stop" : 1609247388350,
+        "duration" : 10006
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5c87e0611c8eeb14309b427d2df9892f"
+  } ],
+  "name" : "packages"
+}

@@ -1,0 +1,41 @@
+[ {
+  "uid" : "79de78f0a716bdf4",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1609247377910,
+    "stop" : 1609247378285,
+    "duration" : 375
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "421fd24366fb2173",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1609247378285,
+    "stop" : 1609247378344,
+    "duration" : 59
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "892271fd11e397be",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "time" : {
+    "start" : 1609247378344,
+    "stop" : 1609247388350,
+    "duration" : 10006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "756b5c5ef0c96414",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1609247367906,
+    "stop" : 1609247377910,
+    "duration" : 10004
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

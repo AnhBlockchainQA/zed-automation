@@ -1,0 +1,73 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "756b5c5ef0c96414",
+        "parentUid" : "5d34aa097be5324f1ce9b3524967ae51",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609247367906,
+          "stop" : 1609247377910,
+          "duration" : 10004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Switch back to ZedRun page and verify login successful",
+        "uid" : "892271fd11e397be",
+        "parentUid" : "5d34aa097be5324f1ce9b3524967ae51",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609247378344,
+          "stop" : 1609247388350,
+          "duration" : 10006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5d34aa097be5324f1ce9b3524967ae51"
+    }, {
+      "name" : "TypeError: Cannot read property 'id' of undefined",
+      "children" : [ {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "79de78f0a716bdf4",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609247377910,
+          "stop" : 1609247378285,
+          "duration" : 375
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "94c1cf348696e9c9a57e23231fb48630"
+    }, {
+      "name" : "Error: page.goto: url: expected string, got undefined",
+      "children" : [ {
+        "name" : "Open new browser with magic link",
+        "uid" : "421fd24366fb2173",
+        "parentUid" : "993d1eefdaf3aeb8a7b58bc3195e449f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1609247378285,
+          "stop" : 1609247378344,
+          "duration" : 59
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "993d1eefdaf3aeb8a7b58bc3195e449f"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

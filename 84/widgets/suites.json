@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "14b4ba7a23d71dfeb3e0deb32ea40968",
+    "name" : "Login to ZedRUn with magic link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    }
+  } ]
+}

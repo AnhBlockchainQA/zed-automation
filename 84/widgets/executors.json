@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://letuananhit1405.github.io/zed-automation",
+  "buildOrder" : 84,
+  "buildName" : "GitHub Actions Run #450784890",
+  "buildUrl" : "https://github.com/letuananhit1405/zed-automation/actions/runs/450784890",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://letuananhit1405.github.io/zed-automation/84/"
+} ]
