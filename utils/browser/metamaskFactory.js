@@ -30,9 +30,7 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-      timeout: 0,
-      executablePath : 
-        '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
+      timeout: 0
     });
 
     const [metamaskPage] = await Promise.all([

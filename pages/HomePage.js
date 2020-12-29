@@ -45,6 +45,23 @@ class HomePage {
     }
   }
 
+  async clickOnArrowIcon(){
+    console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
+    await this.page.waitForSelector(zedRunConfig.ARROW_ICON, {timeout: 0});
+    await this.page.click(zedRunConfig.ARROW_ICON);
+  }
+
+  async clickOnStudServiceLink(){
+    console.log("---- Zed Run Automation Framework: Click on Stud service ---");
+    await this.page.waitForSelector(zedRunConfig.STUD_SERVICE_LINK, {timeout: 0});
+    await this.page.click(zedRunConfig.STUD_SERVICE_LINK);
+  }
+
+  async clickOnRacingLink(){
+    console.log("---- Zed Run Automation Framework: Click on Racing link ---");
+    await this.page.waitForSelector(zedRunConfig.RACING_LINK, {timeout: 0});
+    await this.page.click(zedRunConfig.RACING_LINK);
+  }
 
 }
 

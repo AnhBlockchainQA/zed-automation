@@ -7,11 +7,13 @@ class MarketplacePage{
     }
 
     async clickFirstHorsePreview(){
+        console.log("--- Zed Run Automation Framework: Click on First horse preview ---");
         await this.page.waitForSelector(marketPlaceConfig.FIRST_HORSE_PREVIEW, {visible: true, timeout: 0, waitUntil: 'networkidle'});
         await this.page.click(marketPlaceConfig.FIRST_HORSE_PREVIEW);
     }
 
     async clickBuyWithCreditCard(){
+        console.log("--- Zed Run Automation Framework: Click on Buy with Credit card button---");
         await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_CREDIT_CARD_BUTTON, {visible: true, timeout: 0}).then(
             console.log('Buy with credit card is displayed!')
         );
@@ -20,11 +22,13 @@ class MarketplacePage{
     }
 
     async findFrameByMatchingUrl(url){
+        console.log("--- Zed Run Automation Framework: Find frame by matching url ---");
         let frames = await this.page.frames();
         return frames.find(f => f.url().includes(url))
     }
 
     async waitUntilPaymentFormPresent(){
+        console.log("--- Zed Run Automation Framework: Wait until payment form present ---");
         await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_CREDIT_CARD_LABEL, {visible: true, timeout: 0}).then(
             console.log('Payment form already shown up!')
         );
@@ -32,6 +36,7 @@ class MarketplacePage{
     }
 
     async typeCreditCardNumber(cardNumber){
+        console.log("--- Zed Run Automation Framework: Type credit card number ---");
         const cardNumberFrame = await this.findFrameByMatchingUrl("cardNumber");
         await cardNumberFrame.waitForSelector(marketPlaceConfig.CREDIT_CARD_NUMBER_INPUT, {visible: true, timeout: 0}).then(
             console.log('Credit card number input field is displayed!')
@@ -41,6 +46,7 @@ class MarketplacePage{
     }
 
     async typeCreditCardExpirationDate(expireDate){
+        console.log("--- Zed Run Automation Framework: Type credit card expiration date ---");
         const cardExpiryDateFrame = await this.findFrameByMatchingUrl("cardExpiry");
         await cardExpiryDateFrame.waitForSelector(marketPlaceConfig.CREDIT_CARD_EXPIRATION_DATE_INPUT, {timeout: 0, visible: true}).then(
             console.log('Credit card expiration date input field is displayed!')
@@ -50,6 +56,7 @@ class MarketplacePage{
     }
 
     async typeCreditCardCVC(cvc){
+        console.log("--- Zed Run Automation Framework: Type credit card cvc number ---");
         const cardCVCFrame = await this.findFrameByMatchingUrl("cardCvc");
         await cardCVCFrame.waitForSelector(marketPlaceConfig.CREDIT_CARD_CVC_INPUT, {visible: true, timeout: 0}).then(
             console.log('Credit card CVC input field is displayed!')
@@ -59,6 +66,7 @@ class MarketplacePage{
     }
 
     async clickPayButton(){
+        console.log("--- Zed Run Automation Framework: Click on Pay button ---");
         await this.page.waitForSelector(marketPlaceConfig.PAY_BUTTON, {visible : true, timeout: 0}).then(
             console.log('Pay button is displayed!')
         );
@@ -66,6 +74,7 @@ class MarketplacePage{
     }
 
     async checkPaySuccessfulLabelPresent(){
+        console.log("--- Zed Run Automation Framework: Check if Payment sucessful label is present ---");
         try{
             await this.page.waitForSelector(marketPlaceConfig.PAYMENT_SUCESSFUL_LABEL, {visible : true, timeout: 0});
             console.log(">>>> Element is present");
@@ -75,6 +84,7 @@ class MarketplacePage{
     }
 
     async clickDoneButton(){
+        console.log("--- Zed Run Automation Framework: Click Done button ---");
         await this.page.waitForSelector(marketPlaceConfig.DONE_BUTTON, {timeout: 0, visible: true}).then(
             console.log('Done button is present')
         )
@@ -82,27 +92,32 @@ class MarketplacePage{
     }
 
     async clickOnBuyWithETH(){
+        console.log("--- Zed Run Automation Framework: Click on Buy with ETH button ---");
         await this.page.waitForSelector(marketPlaceConfig.BUY_WITH_ETH_BUTTON, {timeout: 0});
         await this.page.click(marketPlaceConfig.BUY_WITH_ETH_BUTTON);
     }
 
     async clickOnDownwardArrow(){
+        console.log("--- Zed Run Automation Framework: Click on downward arrow ---");
         await this.page.waitForSelector(marketPlaceConfig.DOWNWARD_ARROW, {timeout: 0});
         await this.page.click(marketPlaceConfig.DOWNWARD_ARROW);
     }
 
     async typeCoupon(value){
+        console.log("--- Zed Run Automation Framework: Type discount coupon ---");
         await this.page.waitForSelector(marketPlaceConfig.COUPON_INPUT, {timeout: 0});
         console.log('Typing value is: ', value);
         await this.page.type(marketPlaceConfig.COUPON_INPUT, value);
     }
 
     async clickApplyButton(){
+        console.log("--- Zed Run Automation Framework: Click on Apply button ---");
         await this.page.waitForSelector(marketPlaceConfig.APPLY_BUTTON, {timeout: 0});
         await this.page.click(marketPlaceConfig.APPLY_BUTTON);
     }
 
     async verifyDiscountLabel(value){
+        console.log("--- Zed Run Automation Framework: Verify if discount label shown correctly ---");
         try{
             await this.page.waitForSelector(marketPlaceConfig.DISCOUNT_LABEL, {visible: true, timeout: 0});
             const discountText = await this.page.evaluate((locator) => {
@@ -115,6 +130,7 @@ class MarketplacePage{
     }
 
     async getHorsePrice(){
+        console.log("--- Zed Run Automation Framework: Get the horse price ---");
           await this.page.waitForSelector(marketPlaceConfig.HORSE_PRICE, {timeout:0});
           const value = await this.page.evaluate((locator) => {
             return document.querySelector(locator).innerText;
@@ -124,6 +140,7 @@ class MarketplacePage{
     }
 
     async getHorseName(){
+        console.log("--- Zed Run Automation Framework: Get horse name ---");
         await this.page.waitForSelector(marketPlaceConfig.HORSE_NAME, {timeout: 0});
         const horseName = await this.page.evaluate((locator) => {
             return document.querySelector(locator).innerText;
@@ -133,6 +150,7 @@ class MarketplacePage{
     }
 
     async verifyDiscountPrice(value){
+        console.log("--- Zed Run Automation Framework: Verify if discount price is correct ---");
         const actualValue = await this.getHorsePrice();
         if (Number(value).toFixed(2).trim() !== actualValue.toFixed(2).trim()) {
             console.log(
@@ -147,6 +165,7 @@ class MarketplacePage{
     }
 
     async waitUntilHorseListLoaded(){
+        console.log("--- Zed Run Automation Framework: Wait until horse list loaded ---");
         await this.page.waitForFunction(
             ([locator,value]) => {
               return document.querySelectorAll(locator).length >= value;
@@ -157,6 +176,7 @@ class MarketplacePage{
     }
 
     async verifyErrorMessage(message){
+        console.log("--- Zed Run Automation Framework: Check if error message is correct ---");
         await this.page.waitForSelector(marketPlaceConfig.ERROR_MESSAGE, {timeout : 0});
         const error = await this.page.evaluate((locator) => {
             return document.querySelector(locator).innerText;

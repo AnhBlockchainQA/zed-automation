@@ -16,8 +16,10 @@ const {
   CONFIRM_PASSWORD
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
+const studServiceConfig = require('../locators/StudService');
 const { HomePage } = require('../pages/HomePage'); 
-
+const { StudServicePage } = require('../pages/StudServicePage');
+const { ActivityPage } = require('../pages/ActivityPage');
 
 let metamaskFactory;
 let metamaskPage;
@@ -28,14 +30,18 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let confirmMetamaskNotificationInstance;
+let confirmMetamaskNotificationPage;
+let studServicePage;
+let malehorseName;
+let femalehorseName;
+let index;
+let activityPage;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
-});
-
-afterAll(async () => {
-  await metamaskFactory.close();
 });
 
 describe("Generate stud horse", () => {
@@ -82,56 +88,49 @@ describe("Generate stud horse", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
-    await homePage.clickOnMarketplaceLink();
   });
 
-  test("generate child horse", async () => {
-    await newPageInstance.click('.icon-arrow')
-    await newPageInstance.click('text="stud service"')
-    await newPageInstance.click('.panel')
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="select mate"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="select mate"')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('.female-content', {
-      timeout: 0
-    })
-    await newPageInstance.click('.female-content')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('.horse-card', {
-      timeout: 0
-    })
-    await newPageInstance.click('.horse-card')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="Select"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Select"')
-
-    await newPageInstance.waitForLoadState()
-    await newPageInstance.waitForSelector('text="Buy Cover"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Buy Cover"')
-
-    await newPageInstance.waitForLoadState()
-    const metaMaskSign = await metamaskFactory.clickNewPage(newPageInstance, 'text="Confirm"');
-    await metaMaskSign.click('text="Confirm"')
-    await metaMaskSign.waitForEvent("close")
-
-    await newPageInstance.waitForSelector('text="Check Activity"', {
-      timeout: 0
-    })
-    await newPageInstance.click('text="Check Activity"')
-    await newPageInstance.waitForLoadState()
-
-
+  test("Select mate horse", async () => {
+    await homePage.clickOnArrowIcon();
+    await homePage.clickOnStudServiceLink();
+    studServicePage = new StudServicePage(newPageInstance);
+    index = await studServicePage.getRandomIndexOfMaleHorseFromList();
+    await studServicePage.clickOnSelectedMaleHorseWithIndex(index);
+    malehorseName = await studServicePage.getHorseName(index);
+    await studServicePage.clickOnSelectMateButtonOfHorseWithIndex(index);
+    actualSelectHorse = await studServicePage.getSelectedMateHorseName();
+    await studServicePage.checkIfCorrectHorseNameSelected(malehorseName, actualSelectHorse);
   });
 
+  test("Select female horse", async() => {
+    await studServicePage.clickOnSelectFemaleButton();
+    await studServicePage.verifySelectFemalePopUpShown();
+    await studServicePage.getListOfFemaleHorse();
+    index = await studServicePage.getRandomIndexOfFemaleHorseFromList();
+    femalehorseName = await studServicePage.getFemaleHorseName(index);
+    await studServicePage.clickOnSelectedFemaleHorseWithIndex(index);
+    await studServicePage.clickOnSelectButtonOfFemaleHorseWithIndex(index);
+    actualSelectHorse = await studServicePage.getSelectedFemaleHorseName();
+    await studServicePage.checkIfCorrectHorseNameSelected(femalehorseName, actualSelectHorse);
+  });
 
-})
+  test("Proceed breeding steps", async() => {
+    await studServicePage.scrollToBuyCoverButton();
+    await studServicePage.clickOnBuyCoverButton();
+    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, studServiceConfig.CONFIRM_BUTTON);
+    confirmMetamaskNotificationPage = new MetamaskNotificationPage(confirmMetamaskNotificationInstance);
+    confirmMetamaskNotificationPage.clickOnConfirmButton();
+    confirmMetamaskNotificationPage.waitForCloseEvent();
+  });
+
+  test("Go to Activity page and check if we breed successfully", async() => {
+    await studServicePage.clickOnCheckActivityButton();
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.checkIfBreedingInfoCorrect(malehorseName, femalehorseName);
+  });
+
+});
+
+afterAll(async () => {
+  await metamaskFactory.close();
+});

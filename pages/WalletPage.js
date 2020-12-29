@@ -63,6 +63,7 @@ class WalletPage {
   }
 
   async getBalance(locator) {
+    console.log(" ---- Zed Run Automation Framework: Get the balance ---");
     await this.page.waitForFunction(
       (locator) => {
         return Number(document.querySelector(locator).innerText) > 0;
@@ -77,6 +78,7 @@ class WalletPage {
   }
 
   async checkIfBalanceUpdated(locator, oldValue, newValue) {
+    console.log(" ---- Zed Run Automation Framework: Check if balance updated ---");
     await this.page.waitForFunction(
       ([locator, oldValue]) => {
         return Number(document.querySelector(locator).innerText) < oldValue;

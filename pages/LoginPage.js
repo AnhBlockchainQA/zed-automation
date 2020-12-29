@@ -12,6 +12,7 @@ class LoginPage {
   }
 
   async navigate() {
+    console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
       await this.page.waitForLoadState()
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
@@ -70,10 +71,12 @@ class LoginPage {
   }
 
   async clickConnectMetamaskButton() {
+    console.log("--- Zed Run Automation Framework: Click on Connect Metamask button ---");
     await this.page.click(zedRunConfig.CONNECT_METAMASK);
   }
 
   async clickOnAuthenticateButton() {
+    console.log("--- Zed Run Automation Framework: Click on Authenticate Button ---");
     await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
   }
 

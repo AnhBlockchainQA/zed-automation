@@ -13,23 +13,11 @@ const {
 const {
   SEED_PHRASE,
   PASSWORD,
-  CONFIRM_PASSWORD
+  CONFIRM_PASSWORD,
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
-
-const Wallet = require('../locators/Wallet')
-const MetamaskConfig = require('../locators/Metamask')
-const {
-  WalletPage
-} = require('../pages/WalletPage');
-const {
-  TEST_EMAIL,
-  TEST_LOGIN,
-  TEST_DOMAIN,
-  DEPOSITE_AMOUNT,
-  AMOUNT
-} = require("../data/env");
-
+const { HomePage } = require('../pages/HomePage');
+const { RacingPage } = require('../pages/RacingPage');
 
 let metamaskFactory;
 let metamaskPage;
@@ -40,19 +28,19 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let racingPage;
+let index;
+let registeredHorseNo;
+let totalNo;
+let eventName;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
-afterAll(async () => {
-  // await metamaskFactory.close();
-});
-
-describe("flow test generate child horse", () => {
-
-
+describe("Pick horses to gate and process Next to Run event", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -75,7 +63,6 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -91,49 +78,74 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
   });
 
-  test("dual horse", async () => {
-    await newPageInstance.click('text="racing"')
-    await newPageInstance.click('.free-race-badge')
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnRacingLink();
+  });
 
-    const group = await newPageInstance.$(`//div[@class='other-content']/div[@class='gate-group']`)
-    console.log('innerText:',await group.innerText())
-    const texts = await group.innerText()
-    let listNumber = texts.split(`\n`)
-    listNumber = listNumber.map(number => {
-      const check = Number.isInteger(parseInt(number))
-      if (check) {
-        return number
-      }
-    }).filter(e => !!e)
-    for (let i = 0; i< listNumber.length; i++) {
-      await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
-      await newPageInstance.waitForLoadState();
-      await newPageInstance.hover(`.horse-infos`)
-      await newPageInstance.click('text="Free Entry"')
-      await newPageInstance.waitForLoadState();
-    }    
-    await newPageInstance.waitForLoadState();
-    // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
-    await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-    const eventDual = await newPageInstance.$(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-    console.log('eventDual', await eventDual.innerText())
-    let listText = await eventDual.innerText()
-    listText = listText.split('\n')
-    await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-    // console.log('innerText:',await eventDual.innerText())
-    // const eventText = await eventDual.innerText()
-    await newPageInstance.waitForSelector(`//div[@class='in-race-info']/div/div/h1`)
-    const newDiv = await newPageInstance.$(`//div[@class='in-race-info']/div/div/h1`)
-    console.log('new text:', await newDiv.innerText())
-    const listNewText = await newDiv.innerText()
-    console.log('listText[0]:', listText[0])
-    console.log('compare', listNewText.indexOf(listText[0]))
-    const check = listNewText.indexOf(listText[0])
-    if (check !== 0) {
-      throw new Error('check not is true')
-    }
-  })
+  test("Select event and check if size is correct", async () => {
+    racingPage = new RacingPage(newPageInstance);
+    index = await racingPage.getRandomIndexOfRacingEvent();
+    await racingPage.scrollToEventByIndexIfNeeded(index);
+    registeredHorseNo = await racingPage.getNumberOfRegisteredHorse(index);
+    totalNo = await racingPage.getTotalNumberOfHorses(index);
+    eventName = await racingPage.getRacingEventNameByIndex(index);
+    console.log(">>>>> Event name " + eventName + " : Registered [" + registeredHorseNo + "], Total [" + totalNo + "]")
+    await racingPage.clickOnRacingEventWithIndex(index);
+    await racingPage.scrollToOpenGatesBox();
+    let size = await racingPage.getSizeOfOpenGatesList(index);
+    await racingPage.validateOpenGatesListSizeCorrect(totalNo - registeredHorseNo, size);
+  });
+
+  test("Select horses from user stable to the open gate", async() => {
+    // await newPageInstance.click('text="racing"')
+    // await newPageInstance.click('.free-race-badge')
+
+    // const group = await newPageInstance.$(`//div[@class='other-content']/div[@class='gate-group']`)
+    // console.log('innerText:',await group.innerText())
+    // const texts = await group.innerText()
+    // let listNumber = texts.split(`\n`)
+    // listNumber = listNumber.map(number => {
+    //   const check = Number.isInteger(parseInt(number))
+    //   if (check) {
+    //     return number
+    //   }
+    // }).filter(e => !!e)
+    // for (let i = 0; i< listNumber.length; i++) {
+    //   await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
+    //   await newPageInstance.waitForLoadState();
+    //   await newPageInstance.hover(`.horse-infos`)
+    //   await newPageInstance.click('text="Free Entry"')
+    //   await newPageInstance.waitForLoadState();
+    // }    
+    // await newPageInstance.waitForLoadState();
+    // // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
+    // await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // const eventDual = await newPageInstance.$(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // console.log('eventDual', await eventDual.innerText())
+    // let listText = await eventDual.innerText()
+    // listText = listText.split('\n')
+    // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // // console.log('innerText:',await eventDual.innerText())
+    // // const eventText = await eventDual.innerText()
+    // await newPageInstance.waitForSelector(`//div[@class='in-race-info']/div/div/h1`)
+    // const newDiv = await newPageInstance.$(`//div[@class='in-race-info']/div/div/h1`)
+    // console.log('new text:', await newDiv.innerText())
+    // const listNewText = await newDiv.innerText()
+    // console.log('listText[0]:', listText[0])
+    // console.log('compare', listNewText.indexOf(listText[0]))
+    // const check = listNewText.indexOf(listText[0])
+    // if (check !== 0) {
+    //   throw new Error('check not is true')
+    // }
+  });
+});
+
+
+afterAll(async () => {
+  // await metamaskFactory.close();
 });

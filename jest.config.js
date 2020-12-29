@@ -1,3 +1,4 @@
 module.exports = {
-    setupFilesAfterEnv: ['jest-allure/dist/setup']
+    setupFilesAfterEnv: ['jest-allure/dist/setup'],
+    testMatch: ["**/tests/*.test.js", "**/tests/**/*.test.js"]
 };

@@ -7,10 +7,12 @@ class MagicLinkPage {
   }
 
   async bringToFront() {
+    console.log("--- Zed Run Automation Framework: Bring page to upfront ---");
     await this.page.bringToFront();
   }
 
   async navigate(url) {
+    console.log("--- Zed Run Automation Framework: Navigation to the url ---");
     await this.page.goto(url);
   }
 
@@ -19,6 +21,7 @@ class MagicLinkPage {
   }
 
   async waitForLoginFormHidden() {
+    console.log("--- Zed Run Automation Framework: Wait until login form hidden ---");
     await this.page.waitForSelector(zedRunConfig.LOGIN_POPUP, {
       hidden: true,
       timeout: 0,
