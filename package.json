@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand --testTimeout=300000"
+    "test": "jest --runInBand --testTimeout=50000"
   },
   "jest": {
     "verbose": true
