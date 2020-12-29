@@ -1,21 +1,13 @@
-const {
-  MetamaskPage
-} = require('../pages/MetamaskPage');
-const {
-  MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
-const {
-  LoginPage
-} = require('../pages/LoginPage');
-const {
-  MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
-const {
-  SEED_PHRASE,
-  PASSWORD,
-  CONFIRM_PASSWORD
-} = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
+const { MetamaskPage } = require('../../pages/MetamaskPage');
+const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
+const { LoginPage } = require('../../pages/LoginPage');
+const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require('../../data/env');
+const { WalletPage } = require('../../pages/WalletPage');
+const { AMOUNT } = require("../../data/env");
+const { HomePage } = require("../../pages/HomePage");
+const zedRunConfig = require('../../locators/ZedRun');
+const walletConfig = require("../../locators/Wallet");
 
 
 let metamaskFactory;
@@ -27,6 +19,10 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let homePage;
+let withdrawMetamaskNotificationInstance;
+let withdrawMetamaskNotificationPage;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
@@ -37,9 +33,7 @@ afterAll(async () => {
   await metamaskFactory.close();
 });
 
-describe("flow test generate child horse", () => {
-
-
+describe("Withdraw to ETH balance by logging in with Metamask", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -62,7 +56,6 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -78,19 +71,32 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
+    
   });
 
-  test("generate child horse", async () => {
-    await newPageInstance.click('text="Marketplace"')
-    await newPageInstance.click('.horse-sale-card')
-    await newPageInstance.waitForSelector('text="Buy with ETH"', { timeout: 0 })
-    await newPageInstance.click('text="Buy with ETH"')
-    await newPageInstance.hover('.confirm-btn')
-    await newPageInstance.waitForSelector('.confirm-btn', { timeout: 0 })  
-    await newPageInstance.dblclick('.confirm-btn', { button: "left", force: true })
-
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnWalletIcon();
   });
 
+  test ("Click on Withdraw button and check if ZED balance is updated", async () => {
+    walletPage = new WalletPage(newPageInstance);
+    await walletPage.clickOnWithdrawButton();
+    await walletPage.scrollToZedBalance();
+    let zedBalance = await walletPage.getZedBalance();
+    let newZedBalance = zedBalance - AMOUNT;
+    console.log(">>> Old Zed Balance: ", zedBalance);
+    console.log(">>> Expected Zed Balance: ", newZedBalance);
+    await walletPage.typeWithDrawAmount(AMOUNT);
 
-})
+    withdrawMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, walletConfig.WITHDRAW_FROM_ZED_BUTTON);
+    withdrawMetamaskNotificationPage = new MetamaskNotificationPage(withdrawMetamaskNotificationInstance);
+    await withdrawMetamaskNotificationPage.waitForLoadState();
+    await withdrawMetamaskNotificationPage.clickOnSignButton();
+    await withdrawMetamaskNotificationPage.waitForCloseEvent();
+    // await walletPage.scrollToZedBalance();
+    // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
+  });
+});

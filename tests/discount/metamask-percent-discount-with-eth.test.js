@@ -4,11 +4,12 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME } = require("../../data/env");
 const { PERCENT_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
-const marketPlaceConfig = require("../../locators/MarketPlace");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
+const  { HomePage } = require("../../pages/HomePage");
+const marketPlaceConfig = require("../../locators/MarketPlace");
 
 let metamaskFactory;
 let metamaskPage;
@@ -19,9 +20,10 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let marketPlacePage;
+let homePage;
 let anotherMetamaskNotificationInstance;
 let anotherMetamaskNotificationPage;
-let marketPlacePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -29,7 +31,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Buy horse with credit card", () => {
+describe("Use fixed discount voucher to buy horse with ETH while logging in with Metamask", () => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -52,37 +54,30 @@ describe("Buy horse with credit card", () => {
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
-    );
-    metamaskNotificationPage = new MetamaskNotificationPage(
-      metamaskNotificationInstance
-    );
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
+    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await zedRunPage.clickOnAcceptButton();
+    
   });
 
-  test("Go to Market page and wait until horse list is loaded", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
@@ -99,18 +94,19 @@ describe("Buy horse with credit card", () => {
 
   test("Process the checkout with ETH", async () => {
     await marketPlacePage.clickOnBuyWithETH();
-    await marketPlacePage.clickOnConfirmButton();
-
-    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
       newPageInstance,
-      marketPlaceConfig.CONFIRM_BUTTON
+      marketPlaceConfig.CONFIRM_BUTTON,
+      THRESHOLD,
+      WAIT_TIME
     );
     anotherMetamaskNotificationPage = new MetamaskNotificationPage(
       anotherMetamaskNotificationInstance
     );
     await anotherMetamaskNotificationPage.waitForLoadState();
     await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    await anotherMetamaskNotificationPage.waitForCloseEvent();
+    // await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    // await anotherMetamaskNotificationPage.waitForCloseEvent();
   });
 });
 

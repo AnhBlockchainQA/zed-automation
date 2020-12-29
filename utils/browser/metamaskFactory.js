@@ -30,7 +30,7 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-      timeout: 0,
+      timeout: 0
     });
 
     const [metamaskPage] = await Promise.all([
@@ -59,6 +59,24 @@ class MetamaskFactory {
     const [newPage] = await Promise.all([
       this.browserContext.waitForEvent("page"),
       page.click(selector, { timeout: 0 }),
+    ]);
+    return newPage;
+  }
+
+  async clickNewPageWithRetry(page, selector, threshold, delay) {
+    const [newPage] = await Promise.all([
+      this.browserContext.waitForEvent("page"),
+      page.evaluate(
+        ([locator, threshold, delay]) => {
+          for (let i = 0; i < threshold; i++) {
+            setTimeout(function () {
+              document.querySelector(locator).click();
+              console.log(`${i} attempt to click on Confirm button`);
+            }, delay);
+          }
+        },
+        [selector, threshold, delay]
+      ),
     ]);
     return newPage;
   }

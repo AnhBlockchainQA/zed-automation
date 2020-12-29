@@ -12,4 +12,8 @@ module.exports = {
     ACCEPT_BUTTON: zedRunConfig.ACCEPT_BUTTON,
     MARKETPLACE_LINK: zedRunConfig.MARKETPLACE_LINK,
     LOGIN_POPUP: zedRunConfig.LOGIN_POPUP,
+    USER_AVATAR: zedRunConfig.USER_AVATAR,
+    ARROW_ICON: zedRunConfig.ARROW_ICON,
+    STUD_SERVICE_LINK: zedRunConfig.STUD_SERVICE_LINK,
+    RACING_LINK: zedRunConfig.RACING_LINK,
 }

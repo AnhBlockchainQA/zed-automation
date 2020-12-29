@@ -8,6 +8,7 @@ const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { EXPIRED_CODE } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
+const  { HomePage } = require("../../pages/HomePage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -19,6 +20,7 @@ let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -26,7 +28,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Buy horse with credit card", () => {
+describe("Use expired discount voucher when logging in with Metamask", () => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -49,40 +51,32 @@ describe("Buy horse with credit card", () => {
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
-    );
-    metamaskNotificationPage = new MetamaskNotificationPage(
-      metamaskNotificationInstance
-    );
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
+    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await zedRunPage.clickOnAcceptButton();
+    
   });
 
-  test("Go to Market page and wait until horse list is loaded", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    marketPlacePage.waitUntilHorseListLoaded();
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnMarketplaceLink();
   });
 
   test("Apply the discount coupon : EXPIRED_COUPON", async () => {
+    marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();

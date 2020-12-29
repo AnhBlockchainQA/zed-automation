@@ -7,7 +7,12 @@ class LoginPage {
     this.page = page;
   }
 
+  async setPageInstance(page){
+    this.page = page;
+  }
+
   async navigate() {
+    console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
       await this.page.waitForLoadState()
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
@@ -66,35 +71,15 @@ class LoginPage {
   }
 
   async clickConnectMetamaskButton() {
+    console.log("--- Zed Run Automation Framework: Click on Connect Metamask button ---");
     await this.page.click(zedRunConfig.CONNECT_METAMASK);
   }
 
   async clickOnAuthenticateButton() {
+    console.log("--- Zed Run Automation Framework: Click on Authenticate Button ---");
     await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
   }
 
-  async clickOnAcceptButton() {
-    await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {
-      visible: true, timeout: 0
-    });
-    await this.page.click(zedRunConfig.ACCEPT_BUTTON);
-  }
-
-  async clickOnMarketplaceLink() {
-    await this.page.click(zedRunConfig.MARKETPLACE_LINK);
-  }
-
-  async clickOnWalletIcon() {
-    await this.page.waitForSelector(depositeConfig.WALLET_ICON);
-    await this.page.click(depositeConfig.WALLET_ICON);
-  }
-
-  async waitForLoginFormHidden() {
-    await this.page.waitForSelector(zedRunConfig.LOGIN_POPUP, {
-      hidden: true,
-      timeout: 0,
-    });
-  }
 }
 
 module.exports = { LoginPage };
