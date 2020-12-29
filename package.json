@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./tests/register.test.js",
-    "allure": "allure generate --clean"
+    "test": "jest --runInBand --testTimeout=30000",
+    "allure": "allure generate"
   },
   "jest": {
     "verbose": true

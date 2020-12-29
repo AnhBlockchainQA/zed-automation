@@ -7,9 +7,8 @@ on: [
   
 jobs:
   build:
- 
+
     runs-on: ubuntu-latest
-  
     steps:
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
@@ -36,25 +35,10 @@ jobs:
     - name: Run test when have event ping
       run: |
         npm ci
+        npm test
+        allure generate
         npm install
         npm run test 
+
       env:
         CI: true
-
-#     - name: Allure Report action from marketplace
-#       uses: simple-elf/allure-report-action@master
-#       if: always()
-#       #id: allure-report
-#       with:
-#         allure_results: allure-results
-#         #gh_pages: gh-pages
-#         #allure_report: allure-report
-#         allure_history: allure-history
-
-#     - name: Deploy report to Github Pages
-#       if: always()
-#       uses: peaceiris/actions-gh-pages@v2
-#       env:
-#         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         PUBLISH_BRANCH: gh-pages
-#         PUBLISH_DIR: allure-history
