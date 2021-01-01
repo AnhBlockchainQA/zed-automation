@@ -1,25 +1,22 @@
 const {
   MetamaskPage
-} = require('../pages/MetamaskPage');
+} = require('../../pages/MetamaskPage');
 const {
   MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
+} = require('../../utils/browser/metamaskFactory');
 const {
   LoginPage
-} = require('../pages/LoginPage');
+} = require('../../pages/LoginPage');
 const {
   MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
+} = require('../../pages/MetamaskNotification');
 const {
   SEED_PHRASE,
   PASSWORD,
   CONFIRM_PASSWORD
-} = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
+} = require('../../data/env');
+const zedRunConfig = require('../../locators/ZedRun');
 
-
-process.env.DEBUG = 'pw:api,pw:browser*';
-jest.setTimeout(60 * 1000)
 
 let metamaskFactory;
 let metamaskPage;
@@ -37,8 +34,11 @@ beforeAll(async () => {
   console.log('init done')
 });
 
-describe("flow test generate child horse", () => {
-  test("Update metamask info", async (done) => {
+
+describe("Login to ZedRun with Metamask", () => {
+
+  test("Update metamask info", async () => {
+
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -62,10 +62,6 @@ describe("flow test generate child horse", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    console.log('authen with metamask')
-    // await newPageInstance.screenshot({ path: `example.png` });
-    // await zedRunPage.clickConnectMetamaskButton();
-    
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
     console.log('confirm 1')
@@ -80,11 +76,9 @@ describe("flow test generate child horse", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await newPageInstance.click('text="Accept"')
-    console.log('done')
-    // await newPageInstance.reload()
-    await metamaskFactory.close();
-    done()
+    await zedRunPage.clickOnAcceptButton();
+    await zedRunPage.checkIfAvatarIconPresent();
+
   });
 
   

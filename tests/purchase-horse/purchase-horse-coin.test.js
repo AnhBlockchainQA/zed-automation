@@ -1,17 +1,19 @@
 const { MetamaskPage } = require("../../pages/MetamaskPage");
 const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
 const { LoginPage } = require("../../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
 const {
-  MetamaskNotificationPage,
-} = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../../data/env");
-const { FIXED_DISCOUNT } = require("../../data/env");
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  THRESHOLD,
+  WAIT_TIME,
+} = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
-const paymentConfig = require("../../locators/Payment");
+const marketPlaceConfig = require("../../locators/MarketPlace");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
-const { HomePage } = require("../../pages/HomePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
-
+const { HomePage } = require("../../pages/HomePage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -22,11 +24,11 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
-let anotherMetamaskNotificationInstance;
-let anotherMetamaskNotificationPage;
 let marketPlacePage;
-let homePage;
+let confirmMetamaskNotificationInstance;
+let confirmMetamaskNotificationPage;
 let paymentPage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -34,7 +36,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Use fixed discount voucher to buy horse with ETH while logging in with Metamask", () => {
+describe("Purchase horse with ETH", () => {
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -83,45 +85,33 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Go to Marketplace and buy horse by ETH", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
     await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-  });
-
-  test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
-    firstHorseName = await marketPlacePage.getHorseName();
-    originalPrice = await marketPlacePage.getHorsePrice();
-    discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.typeCoupon(FIXED_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.verifyDiscountLabel(FIXED_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPrice(discountPrice);
   });
-
-  test("Go to Marketplace and buy horse with discount - Payment with ETH", async () => {
+  
+  test("Purchase horse with ETH", async() => {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithETH();
-    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
+    await paymentPage.clickOnConfirmButton();
+    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
       newPageInstance,
       paymentConfig.CONFIRM_BUTTON,
       THRESHOLD,
       WAIT_TIME
     );
-
-    anotherMetamaskNotificationPage = new MetamaskNotificationPage(
-      anotherMetamaskNotificationInstance
+    confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+      confirmMetamaskNotificationInstance
     );
-    await anotherMetamaskNotificationPage.waitForLoadState();
-    await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    // await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    // await anotherMetamaskNotificationPage.waitForCloseEvent();
+    await confirmMetamaskNotificationPage.waitForLoadState();
+    await confirmMetamaskNotificationPage.clickOnConfirmButton();
+    await confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 });
 

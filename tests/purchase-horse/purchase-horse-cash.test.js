@@ -1,12 +1,12 @@
-const { MetamaskPage } = require('../pages/MetamaskPage');
-const { MetamaskFactory } = require('../utils/browser/metamaskFactory');
-const { LoginPage } = require('../pages/LoginPage');
-const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
-const marketPlaceConfig = require('../locators/MarketPlace');
-const { MarketplacePage } = require('../pages/MarketplacePage');
-
+const { MetamaskPage } = require('../../pages/MetamaskPage');
+const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
+const { LoginPage } = require('../../pages/LoginPage');
+const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../../data/env');
+const zedRunConfig = require('../../locators/ZedRun');
+const { MarketplacePage } = require('../../pages/MarketplacePage');
+const { PaymentPage } = require('../../pages/PaymentPage');
+const { HomePage } = require('../../pages/HomePage');
 
 
 let metamaskFactory;
@@ -19,8 +19,8 @@ let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
-let confirmMetamaskNotificationInstance;
-let confirmMetamaskNotificationPage;
+let paymentPage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -28,8 +28,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-
-describe("flow test", () => {  
+describe("Buy horse with credit card", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -45,14 +44,13 @@ describe("flow test", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -71,18 +69,29 @@ describe("flow test", () => {
 
  })
 
-  test ("Go to Marketplace and buy horse by ETH", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
+  test ("Go to Marketplace and select first horse", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
-    await marketPlacePage.clickOnBuyWithETH();
-    await marketPlacePage.clickOnConfirmButton();
-    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, marketPlaceConfig.CONFIRM_BUTTON);
-    confirmMetamaskNotificationPage = new MetamaskNotificationPage(confirmMetamaskNotificationInstance);
-    await confirmMetamaskNotificationPage.waitForLoadState();
-    await confirmMetamaskNotificationPage.clickOnConfirmButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
-  })
+  });
+  
+  test("Process payment by cash", async() => {
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithCreditCardButton();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+    await paymentPage.typeCreditCardCVC(CARD_CVC);
+    await paymentPage.clickPayButton();
+    await paymentPage.checkPaySuccessfulLabelPresent();
+    await paymentPage.clickDoneButton();
+  });
 })
 
 afterAll(async () => {

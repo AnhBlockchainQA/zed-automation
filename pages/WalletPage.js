@@ -1,6 +1,4 @@
 const walletConfig = require("../locators/Wallet");
-const { AMOUNT } = require("../data/env");
-const { ETH_BALANCE } = require("../locators/Wallet");
 
 class WalletPage {
   constructor(page) {
@@ -8,6 +6,7 @@ class WalletPage {
   }
 
   async clickOnDepositButton() {
+    console.log(" ---- Zed Run Automation Framework: Click on Deposit button ---");
     await this.page.waitForSelector(walletConfig.DEPOSITE_BUTTON, {
       visible: true,
       timeout: 0,
@@ -16,6 +15,7 @@ class WalletPage {
   }
 
   async typeDepositeAmount(amount) {
+    console.log(" ---- Zed Run Automation Framework: Type deposit amount ---");
     await this.page.waitForSelector(walletConfig.DEPOSITE_AMOUNT_INPUT, {
       visible: true,
       timeout: 0,
@@ -27,6 +27,7 @@ class WalletPage {
   }
 
   async clickOnDepositeToZedWallet() {
+    console.log(" ---- Zed Run Automation Framework: Click on Deposite to Zed Balance button ---");
     await this.page.waitForSelector(walletConfig.DEPOSITE_TO_ZED_BUTTON, {
       visible: true,
       timeout: 0,
@@ -35,21 +36,23 @@ class WalletPage {
   }
 
   async clickOnWithdrawButton() {
+    console.log(" ---- Zed Run Automation Framework: Click on Withdraw button ---");
+    await this.page.waitForSelector(walletConfig.WITHDRAW_BUTTON, {timeout: 0, visible: true});
     await this.page.click(walletConfig.WITHDRAW_BUTTON);
   }
 
   async typeWithDrawAmount(amount) {
+    console.log(" ---- Zed Run Automation Framework: Type withdraw amount ---");
     await this.page.waitForSelector(walletConfig.WITHDRAW_AMOUNT_INPUT, {
       visible: true,
       timeout: 0,
     });
     await this.page.fill(walletConfig.WITHDRAW_AMOUNT_INPUT, "");
-    await this.page.type(walletConfig.WITHDRAW_AMOUNT_INPUT, amount, {
-      delay: 50,
-    });
+    await this.page.type(walletConfig.WITHDRAW_AMOUNT_INPUT, amount, {delay: 50});
   }
 
   async clickOnWithdrawFromZedWallet() {
+    console.log(" ---- Zed Run Automation Framework: Click on Withdraw from Zed Balance ---");
     await this.page.waitForSelector(walletConfig.WITHDRAW_FROM_ZED_BUTTON, {
       visible: true,
       timeout: 0,
@@ -58,12 +61,13 @@ class WalletPage {
   }
 
   async getBalance(locator) {
+    console.log(" ---- Zed Run Automation Framework: Get the balance ---");
+    await this.page.waitForSelector(locator, {timeout: 0});
     await this.page.waitForFunction(
       (locator) => {
         return Number(document.querySelector(locator).innerText) > 0;
       },
-      locator,
-      { polling: 5000, timeout: 60000 }
+      locator, 4000, {timeout: 0 }
     );
     const value = await this.page.evaluate((locator) => {
       return document.querySelector(locator).innerText;
@@ -72,14 +76,15 @@ class WalletPage {
   }
 
   async checkIfBalanceUpdated(locator, oldValue, newValue) {
+    console.log(" ---- Zed Run Automation Framework: Check if balance updated ---");
+    await this.page.waitForSelector(locator, {timeout: 0});
     await this.page.waitForFunction(
       ([locator, oldValue]) => {
         return Number(document.querySelector(locator).innerText) < oldValue;
       },
-      [locator, oldValue],
-      { polling: 10000, timeout: 300000 }
-    );
+      [locator, oldValue], 5000, {timeout: 0 });
     const value = await this.page.evaluate((locator) => {
+      document.querySelector(locator).scrollIntoView(true);
       return document.querySelector(locator).innerText;
     }, locator);
     if (Number(value).toFixed(2).trim() !== newValue.toFixed(2).trim()) {
@@ -95,31 +100,45 @@ class WalletPage {
   }
 
   async getZedBalance() {
+    console.log(" ---- Zed Run Automation Framework: Get Zed Balance ---");
     return await this.getBalance(walletConfig.ZED_BALANCE);
   }
 
-  async getETHBalance() {
+  async getETHBalance() {    
+    console.log(" ---- Zed Run Automation Framework: Get ETH Balance ---");
     return await this.getBalance(walletConfig.ETH_BALANCE);
   }
 
   async checkIfZedBalanceUpdated(oldValue, newValue) {
+    console.log(" ---- Zed Run Automation Framework: Check if Zed balance is updated ---");
     return await this.checkIfBalanceUpdated(walletConfig.ZED_BALANCE, oldValue, newValue);
   }
 
   async checkIfETHBalanceUpdated(oldValue, newValue) {
+    console.log(" ---- Zed Run Automation Framework: Check if ETH balance is updated ---");
+    this.scrollToZedBalance();
     return await this.checkIfBalanceUpdated(walletConfig.ETH_BALANCE, oldValue, newValue);
   }
 
   async scrollToZedBalance() {
+    console.log(" ---- Zed Run Automation Framework: Scroll to Zed balance section ---");
     await this.page.waitForSelector(walletConfig.ZED_BALANCE, {
       visible: true,
       timeout: 0,
     });
-    await this.page.$eval(walletConfig.ZED_BALANCE, (element) => {
-      element.scrollIntoView(true);
-    });
+    await this.page.evaluate((locator) => {
+      document.querySelector(locator).scrollIntoView(true);
+    }, walletConfig.ZED_BALANCE);
   }
 
+  async clickOnConfirmDepositeButton() {
+    console.log(" ---- Zed Run Automation Framework: Click on Confirm deposite button ---");
+    await this.page.waitForSelector(walletConfig.CONFIRM_DEPOSITE_BUTTON, {
+      visible: true,
+      timeout: 0,
+    });
+    await this.page.click(walletConfig.CONFIRM_DEPOSITE_BUTTON, {timeout: 0});
+  }
 }
 
 module.exports = { WalletPage };

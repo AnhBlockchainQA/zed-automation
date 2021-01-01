@@ -1,9 +1,10 @@
-const { PageFactory } = require("../utils/browser/pageFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { WalletPage } = require('../pages/WalletPage');
-const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
+const { PageFactory } = require("../../utils/browser/pageFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const { WalletPage } = require('../../pages/WalletPage');
+const { HomePage } = require('../../pages/HomePage');
+const apiRequest = require("../../utils/api/api");
+const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../../data/env");
 
 let pageFactory;
 let messageId;
@@ -12,13 +13,15 @@ let loginPage;
 let magicLinkPage;
 let walletPage;
 let pageInstance;
+let newPageInstance;
+let homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("Login to ZedRUn with magic link", () => {
+describe("Withdraw from ZED balance by logging in with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     pageInstance = await pageFactory.newTab(false, 0);
@@ -38,41 +41,37 @@ describe("Login to ZedRUn with magic link", () => {
       messageId,
       pattern
     );
-    console.log(">>>>>", magicLink);
   });
 
   test("Open new browser with magic link", async () => {
-    let newPageInstance = await pageFactory.newTab(false, 0);
+    newPageInstance = await pageFactory.newTab(false, 0);
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForTimeout();
-    await magicLinkPage.clickToTrustMe();
-    await magicLinkPage.waitForLoggedInMessage();
-    await magicLinkPage.waitForTimeout();
+    await magicLinkPage.waitForLoginFormHidden();
   });
 
-  test("Switch back to ZedRun page and verify login successful", async () => {
-    await loginPage.bringToFront();
-    await loginPage.waitForLoginFormHidden();
-    await loginPage.clickOnAcceptButton();
+  test("Check that avatar is shown then click on Wallet", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnAcceptButton();
+    await homePage.clickOnWalletIcon();
   });
 
   test ("Click on Withdraw button and check if ZED balance is updated", async () => {
-    await loginPage.clickOnWalletIcon();
-    walletPage = new WalletPage(pageInstance);
+    walletPage = new WalletPage(newPageInstance);
     await walletPage.clickOnWithdrawButton();
     await walletPage.scrollToZedBalance();
     let zedBalance = await walletPage.getZedBalance();
     let newZedBalance = zedBalance - AMOUNT;
-    // console.log(">>> Old Zed Balance: ", zedBalance);
-    // console.log(">>> Expected Zed Balance: ", newZedBalance);
+    console.log(">>> Old Zed Balance: ", zedBalance);
+    console.log(">>> Expected Zed Balance: ", newZedBalance);
     await walletPage.typeWithDrawAmount(AMOUNT);
     await walletPage.clickOnWithdrawFromZedWallet();
     await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  
   });
 });
-
 
 afterAll(async () => {
   await pageFactory.endTest();
