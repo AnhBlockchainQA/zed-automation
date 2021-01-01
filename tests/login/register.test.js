@@ -17,6 +17,7 @@ const {
 } = require('../../data/env');
 const zedRunConfig = require('../../locators/ZedRun');
 
+
 let metamaskFactory;
 let metamaskPage;
 let metamaskInstance;
@@ -30,15 +31,14 @@ beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
+  console.log('init done')
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
-});
 
 describe("Login to ZedRun with Metamask", () => {
 
   test("Update metamask info", async () => {
+
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -52,31 +52,39 @@ describe("Login to ZedRun with Metamask", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
+    console.log('metamask done')
+    done()
   })
 
-  test("Open ZedRun page and click Connnect Metamask", async () => {
+  test("Open ZedRun page and click Connnect Metamask", async (done) => {
     newPageInstance = await metamaskFactory.newPage();
+    console.log('>newPageInstance>>>')
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
-
+    console.log('confirm 1')
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
+    
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
     otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
-
+    console.log('confirm 2')
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
     await zedRunPage.clickOnAcceptButton();
     await zedRunPage.checkIfAvatarIconPresent();
+
   });
 
   
+});
+
+afterAll(async (done) => {
+  console.log('finish all')
+  done()
 });

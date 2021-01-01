@@ -68,12 +68,14 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     
   });
 
+
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
     await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
+
   });
 
   test("Apply the discount coupon : EXPIRED_COUPON", async () => {

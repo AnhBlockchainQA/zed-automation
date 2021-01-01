@@ -40,9 +40,7 @@ beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
-
 describe("Pick horses to gate and process Next to Run event", () => {
-
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
