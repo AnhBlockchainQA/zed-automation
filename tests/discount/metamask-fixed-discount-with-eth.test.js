@@ -7,9 +7,10 @@ const {
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../../data/env");
 const { FIXED_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
-const marketPlaceConfig = require("../../locators/MarketPlace");
+const paymentConfig = require("../../locators/Payment");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
+const { PaymentPage } = require("../../pages/PaymentPage");
 
 
 let metamaskFactory;
@@ -25,6 +26,7 @@ let anotherMetamaskNotificationInstance;
 let anotherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
+let paymentPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -85,12 +87,13 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
@@ -103,10 +106,11 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
   });
 
   test("Go to Marketplace and buy horse with discount - Payment with ETH", async () => {
-    await marketPlacePage.clickOnBuyWithETH();
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithETH();
     anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
       newPageInstance,
-      marketPlaceConfig.CONFIRM_BUTTON,
+      paymentConfig.CONFIRM_BUTTON,
       THRESHOLD,
       WAIT_TIME
     );

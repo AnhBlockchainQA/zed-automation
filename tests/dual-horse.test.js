@@ -28,6 +28,7 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let homePage;
 let racingPage;
 let index;
 let registeredHorseNo;
@@ -84,7 +85,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
-    await homePage.clickOnRacingLink();
+    await homePage.waitUntilBalanceShown();
   });
 
   test("Select event and check if size is correct", async () => {
@@ -147,5 +148,5 @@ describe("Pick horses to gate and process Next to Run event", () => {
 
 
 afterAll(async () => {
-  // await metamaskFactory.close();
+  await metamaskFactory.close();
 });

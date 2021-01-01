@@ -3,7 +3,6 @@ const { LoginPage } = require("../../pages/LoginPage");
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const { WalletPage } = require('../../pages/WalletPage');
 const { HomePage } = require('../../pages/HomePage');
-
 const apiRequest = require("../../utils/api/api");
 const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../../data/env");
 
@@ -22,7 +21,7 @@ beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("Deposite to ZED balance by logging in with magic link", () => {
+describe("Withdraw from ZED balance by logging in with magic link", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     pageInstance = await pageFactory.newTab(false, 0);
@@ -55,6 +54,7 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnWalletIcon();
   });
@@ -72,7 +72,6 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  
   });
 });
-
 
 afterAll(async () => {
   await pageFactory.endTest();

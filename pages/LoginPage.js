@@ -34,7 +34,7 @@ class LoginPage {
       "--- Zed Run Automation Framework: Input value to email field ---"
     );
     await this.page.waitForSelector(zedRunConfig.EMAIL_INPUT, {visible: true, timeout: 0});
-    await this.page.type(zedRunConfig.EMAIL_INPUT, email);
+    await this.page.type(zedRunConfig.EMAIL_INPUT, email, {delay: 100});
   }
 
   async clickOnContinueButton() {

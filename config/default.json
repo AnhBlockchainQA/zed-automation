@@ -14,20 +14,13 @@
     "USER_AVATAR": ".header-desktop .header-content div.right-part  div.user-part div.icon-part img",
     "ARROW_ICON": ".icon-arrow",
     "STUD_SERVICE_LINK": "text='stud service'",
-    "RACING_LINK": "//div[@class='header-desktop']//div[@class='left-part']/div[@data-tour='header-racing']//a[descendant::text()='racing']"
+    "RACING_LINK": "//div[@class='header-desktop']//div[@class='left-part']/div[@data-tour='header-racing']//a[descendant::text()='racing']",
+    "BALANCE_LOADER_ICON": ".header-desktop .header .header-content .right-part .balance-part div.loader-container.stud-loader",
+    "ETH_BALANCE": ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(1)",
+    "ZED_BALANCE": ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)"
   },
   "marketPlace":{
     "FIRST_HORSE_PREVIEW": ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
-    "BUY_WITH_CREDIT_CARD_BUTTON": "//button[text()='Buy With Credit Card']",
-    "BUY_WITH_CREDIT_CARD_LABEL": "//h2[text()='Buy With Credit Card']",
-    "CREDIT_CARD_NUMBER_INPUT": "//input[@aria-label='Credit or debit card number']",
-    "CREDIT_CARD_EXPIRATION_DATE_INPUT" : "//input[@aria-label='Credit or debit card expiration date']",
-    "CREDIT_CARD_CVC_INPUT": "//input[@aria-label='Credit or debit card CVC/CVV']",
-    "PAY_BUTTON": "//button[descendant::text()='Pay']",
-    "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
-    "DONE_BUTTON": "//button[text()='Done']",
-    "BUY_WITH_ETH_BUTTON" : "//button[text()='Buy with ETH']",
-    "CONFIRM_BUTTON": ".method-options > .buy-confirm-form > section > .section-footer > .primary-btn",
     "DOWNWARD_ARROW": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
     "COUPON_INPUT": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
     "APPLY_BUTTON": ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .secondary-btn",
@@ -36,6 +29,19 @@
     "HORSE_NAME": "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
     "HORSE_LIST" : "div.marketplace div.marketplace-content .ifs ul > div.horse-sale-card",
     "ERROR_MESSAGE" : ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text"
+  },
+  "payment":{
+    "BUY_WITH_CREDIT_CARD_BUTTON": "//button[text()='Buy With Credit Card']",
+    "BUY_WITH_CREDIT_CARD_LABEL": "//h2[text()='Buy With Credit Card']",
+    "CREDIT_CARD_NUMBER_INPUT": "//input[@aria-label='Credit or debit card number']",
+    "CREDIT_CARD_EXPIRATION_DATE_INPUT" : "//input[@aria-label='Credit or debit card expiration date']",
+    "CREDIT_CARD_CVC_INPUT": "//input[@aria-label='Credit or debit card CVC/CVV']",
+    "PAY_BUTTON": "//button[descendant::text()='Pay']",
+    "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
+    "DONE_BUTTON": "//button[text()='Done']",
+    "USE_DIFFERENT_CARD_BUTTON": ".buy-modal-content > .buy-method-choice > .method-options > .cardform-container > .secondary-choice",
+    "BUY_WITH_ETH_BUTTON" : "//button[text()='Buy with ETH']",
+    "CONFIRM_BUTTON": ".method-options > .buy-confirm-form > section > .section-footer > .primary-btn"
   },
   "metamask": {
     "CLICK_GET_STARTED_BUTTON": "//button[text()='Get Started']",

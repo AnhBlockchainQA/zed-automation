@@ -1,11 +1,12 @@
-const { MetamaskPage } = require('../pages/MetamaskPage');
-const { MetamaskFactory } = require('../utils/browser/metamaskFactory');
-const { LoginPage } = require('../pages/LoginPage');
-const { MetamaskNotificationPage } = require('../pages/MetamaskNotification');
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
-const { MarketplacePage } = require('../pages/MarketplacePage');
-
+const { MetamaskPage } = require('../../pages/MetamaskPage');
+const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
+const { LoginPage } = require('../../pages/LoginPage');
+const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../../data/env');
+const zedRunConfig = require('../../locators/ZedRun');
+const { MarketplacePage } = require('../../pages/MarketplacePage');
+const { PaymentPage } = require('../../pages/PaymentPage');
+const { HomePage } = require('../../pages/HomePage');
 
 
 let metamaskFactory;
@@ -18,6 +19,8 @@ let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
+let paymentPage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -48,7 +51,6 @@ describe("Buy horse with credit card", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
@@ -67,18 +69,28 @@ describe("Buy horse with credit card", () => {
 
  })
 
-  test ("Go to Marketplace and buy horse by CC", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
+  test ("Go to Marketplace and select first horse", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
-    await marketPlacePage.clickBuyWithCreditCard();
-    await marketPlacePage.waitUntilPaymentFormPresent();
-    await marketPlacePage.typeCreditCardNumber(CARD_NUMBER);
-    await marketPlacePage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-    await marketPlacePage.typeCreditCardCVC(CARD_CVC);
-    await marketPlacePage.clickPayButton();
-    await marketPlacePage.checkPaySuccessfulLabelPresent();
-    await marketPlacePage.clickDoneButton();
+  });
+  
+  test("Process payment by cash", async() => {
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithCreditCardButton();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+    await paymentPage.typeCreditCardCVC(CARD_CVC);
+    await paymentPage.clickPayButton();
+    await paymentPage.checkPaySuccessfulLabelPresent();
+    await paymentPage.clickDoneButton();
   });
 })
 

@@ -1,17 +1,19 @@
-const { MetamaskPage } = require("../pages/MetamaskPage");
-const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
+const { MetamaskPage } = require("../../pages/MetamaskPage");
+const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
 const {
   SEED_PHRASE,
   PASSWORD,
   CONFIRM_PASSWORD,
   THRESHOLD,
   WAIT_TIME,
-} = require("../data/env");
-const zedRunConfig = require("../locators/ZedRun");
-const marketPlaceConfig = require("../locators/MarketPlace");
-const { MarketplacePage } = require("../pages/MarketplacePage");
+} = require("../../data/env");
+const zedRunConfig = require("../../locators/ZedRun");
+const marketPlaceConfig = require("../../locators/MarketPlace");
+const { MarketplacePage } = require("../../pages/MarketplacePage");
+const { PaymentPage } = require("../../pages/PaymentPage");
+const { HomePage } = require("../../pages/HomePage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -25,6 +27,8 @@ let otherMetamaskNotificationPage;
 let marketPlacePage;
 let confirmMetamaskNotificationInstance;
 let confirmMetamaskNotificationPage;
+let paymentPage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -54,7 +58,6 @@ describe("Purchase horse with ETH", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    // await zedRunPage.clickConnectMetamaskButton();
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
@@ -83,14 +86,23 @@ describe("Purchase horse with ETH", () => {
   });
 
   test("Go to Marketplace and buy horse by ETH", async () => {
-    await zedRunPage.clickOnMarketplaceLink();
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
-    await marketPlacePage.clickOnBuyWithETH();
-    await marketPlacePage.clickOnConfirmButton();
+  });
+  
+  test("Purchase horse with ETH", async() => {
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithETH();
+    await paymentPage.clickOnConfirmButton();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
       newPageInstance,
-      marketPlaceConfig.CONFIRM_BUTTON,
+      paymentConfig.CONFIRM_BUTTON,
       THRESHOLD,
       WAIT_TIME
     );
@@ -99,7 +111,7 @@ describe("Purchase horse with ETH", () => {
     );
     await confirmMetamaskNotificationPage.waitForLoadState();
     await confirmMetamaskNotificationPage.clickOnConfirmButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
+    await confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 });
 
