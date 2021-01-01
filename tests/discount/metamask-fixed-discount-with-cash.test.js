@@ -9,7 +9,7 @@ const { FIXED_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
-
+const { PaymentPage } = require("../../pages/PaymentPage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -20,10 +20,9 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
-let anotherMetamaskNotificationInstance;
-let anotherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
+let paymentPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -84,33 +83,37 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
-  test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
-    await marketPlacePage.clickFirstHorsePreview();
-    firstHorseName = await marketPlacePage.getHorseName();
-    originalPrice = await marketPlacePage.getHorsePrice();
-    discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.typeCoupon(FIXED_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.verifyDiscountLabel(FIXED_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPrice(discountPrice);
-  });
+  // test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
+  //   marketPlacePage = new MarketplacePage(newPageInstance);
+  //   await marketPlacePage.waitUntilHorseListLoaded();
+  //   await marketPlacePage.clickFirstHorsePreview();
+  //   firstHorseName = await marketPlacePage.getHorseName();
+  //   originalPrice = await marketPlacePage.getHorsePrice();
+  //   discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
+  //   await marketPlacePage.clickOnDownwardArrow();
+  //   await marketPlacePage.typeCoupon(FIXED_DISCOUNT.CODE);
+  //   await marketPlacePage.clickApplyButton();
+  //   await marketPlacePage.verifyDiscountLabel(FIXED_DISCOUNT.VALUE);
+  //   await marketPlacePage.verifyDiscountPrice(discountPrice);
+  // });
 
-    test("Process the checkout with banking account and check value", async () => {
-    await marketPlacePage.clickBuyWithCreditCard();
-    await marketPlacePage.waitUntilPaymentFormPresent();
-    await marketPlacePage.typeCreditCardNumber(CARD_NUMBER);
-    await marketPlacePage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-    await marketPlacePage.typeCreditCardCVC(CARD_CVC);
-    await marketPlacePage.clickPayButton();
-    await marketPlacePage.checkPaySuccessfulLabelPresent();
-    await marketPlacePage.clickDoneButton();
-  });
+  //   test("Process the checkout with banking account and check value", async () => {
+  //   paymentPage = new PaymentPage(newPageInstance);
+  //   await paymentPage.clickOnBuyWithCreditCardButton();
+  //   await paymentPage.waitUntilPaymentFormPresent();
+  //   await paymentPage.clickOnUseDifferentCardIfNeed();
+  //   await paymentPage.waitUntilPaymentFormPresent();
+  //   await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+  //   await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+  //   await paymentPage.typeCreditCardCVC(CARD_CVC);
+  //   await paymentPage.clickPayButton();
+  //   await paymentPage.checkPaySuccessfulLabelPresent();
+  //   await paymentPage.clickDoneButton();
+  // });
 
 });
 

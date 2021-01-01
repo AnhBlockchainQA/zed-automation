@@ -9,7 +9,6 @@ const { HomePage } = require("../../pages/HomePage");
 const zedRunConfig = require('../../locators/ZedRun');
 const walletConfig = require("../../locators/Wallet");
 
-
 let metamaskFactory;
 let metamaskPage;
 let metamaskInstance;
@@ -22,6 +21,7 @@ let otherMetamaskNotificationPage;
 let homePage;
 let withdrawMetamaskNotificationInstance;
 let withdrawMetamaskNotificationPage;
+let walletPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -29,11 +29,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
-});
-
-describe("Withdraw to ETH balance by logging in with Metamask", () => {
+describe("Withdraw from ETH balance by logging in with Metamask", () => {
 
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
@@ -77,6 +73,7 @@ describe("Withdraw to ETH balance by logging in with Metamask", () => {
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnWalletIcon();
   });
@@ -99,4 +96,8 @@ describe("Withdraw to ETH balance by logging in with Metamask", () => {
     // await walletPage.scrollToZedBalance();
     // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
   });
+});
+
+afterAll(async () => {
+  await metamaskFactory.close();
 });

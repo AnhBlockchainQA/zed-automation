@@ -9,7 +9,6 @@ const { HomePage } = require("../../pages/HomePage");
 const zedRunConfig = require('../../locators/ZedRun');
 const walletConfig = require("../../locators/Wallet");
 
-
 let metamaskFactory;
 let metamaskPage;
 let metamaskInstance;
@@ -22,15 +21,12 @@ let otherMetamaskNotificationPage;
 let homePage;
 let depositeMetamaskNotificationInstance;
 let depositeMetamaskNotificationPage;
+let walletPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
-});
-
-afterAll(async () => {
-  await metamaskFactory.close();
 });
 
 describe("Deposite to ZED balance by logging in with Metamask", () => {
@@ -77,13 +73,14 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnWalletIcon();
   });
 
   test ("Click on Deposit button and check if ETH balance is updated", async () => {
     walletPage = new WalletPage(newPageInstance);
-    let ethBalance = await walletPage.getETHBalance();
+    let ethBalance = await walletPage.getETHBalance(); 
     await walletPage.clickOnDepositButton();
     let newETHBalance = ethBalance - AMOUNT;
     console.log(">>> Old ETH Balance: ", ethBalance);
@@ -96,4 +93,8 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     await depositeMetamaskNotificationPage.waitForCloseEvent();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
   });
+});
+
+afterAll(async () => {
+  await metamaskFactory.close();
 });

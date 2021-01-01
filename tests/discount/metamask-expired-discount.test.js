@@ -72,6 +72,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
   });
 

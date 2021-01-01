@@ -37,6 +37,7 @@ let malehorseName;
 let femalehorseName;
 let index;
 let activityPage;
+let homePage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -88,6 +89,7 @@ describe("Generate stud horse", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
   });
 
   test("Select mate horse", async () => {

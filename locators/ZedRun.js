@@ -16,4 +16,7 @@ module.exports = {
     ARROW_ICON: zedRunConfig.ARROW_ICON,
     STUD_SERVICE_LINK: zedRunConfig.STUD_SERVICE_LINK,
     RACING_LINK: zedRunConfig.RACING_LINK,
+    BALANCE_LOADER_ICON : zedRunConfig.BALANCE_LOADER_ICON,
+    ETH_BALANCE: zedRunConfig.ETH_BALANCE,
+    ZED_BALANCE: zedRunConfig.ZED_BALANCE,
 }

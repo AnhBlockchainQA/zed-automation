@@ -30,7 +30,6 @@ describe("Login to ZedRun with magic link", () => {
     page = await pageFactory.newTab(false, 0);
     loginPage = new LoginPage(page);
     await loginPage.navigate();
-    await loginPage.clickOnAcceptButton();
     await loginPage.clickOnStartButton();
     await loginPage.typeEmail(email);
     await loginPage.clickOnContinueButton();
@@ -45,6 +44,7 @@ describe("Login to ZedRun with magic link", () => {
       messageId,
       pattern
     );
+    console.log('>>> URL ', magicLink);
   });
  
   test("Open new browser with magic link", async () => {

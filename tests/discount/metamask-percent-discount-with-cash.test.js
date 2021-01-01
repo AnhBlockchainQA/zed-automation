@@ -8,7 +8,8 @@ const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DA
 const { PERCENT_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
-const  { HomePage } = require("../../pages/HomePage");
+const { PaymentPage } = require("../../pages/PaymentPage");
+const { HomePage } = require("../../pages/HomePage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -21,6 +22,7 @@ let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
+let paymentPage;
 
 
 beforeAll(async () => {
@@ -73,12 +75,13 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
   });
 
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
@@ -91,14 +94,16 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   });
 
   test("Process the checkout with banking account and check value", async () => {
-    await marketPlacePage.clickBuyWithCreditCard();
-    await marketPlacePage.waitUntilPaymentFormPresent();
-    await marketPlacePage.typeCreditCardNumber(CARD_NUMBER);
-    await marketPlacePage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-    await marketPlacePage.typeCreditCardCVC(CARD_CVC);
-    await marketPlacePage.clickPayButton();
-    await marketPlacePage.checkPaySuccessfulLabelPresent();
-    await marketPlacePage.clickDoneButton();
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithCreditCardButton();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+    await paymentPage.typeCreditCardCVC(CARD_CVC);
+    await paymentPage.clickPayButton();
+    await paymentPage.checkPaySuccessfulLabelPresent();
+    await paymentPage.clickDoneButton();
   });
 });
 

@@ -48,9 +48,7 @@ class WalletPage {
       timeout: 0,
     });
     await this.page.fill(walletConfig.WITHDRAW_AMOUNT_INPUT, "");
-    await this.page.type(walletConfig.WITHDRAW_AMOUNT_INPUT, amount, {
-      delay: 50,
-    });
+    await this.page.type(walletConfig.WITHDRAW_AMOUNT_INPUT, amount, {delay: 50});
   }
 
   async clickOnWithdrawFromZedWallet() {
@@ -64,12 +62,12 @@ class WalletPage {
 
   async getBalance(locator) {
     console.log(" ---- Zed Run Automation Framework: Get the balance ---");
+    await this.page.waitForSelector(locator, {timeout: 0});
     await this.page.waitForFunction(
       (locator) => {
         return Number(document.querySelector(locator).innerText) > 0;
       },
-      locator,
-      { polling: 5000, timeout: 60000 }
+      locator, 4000, {timeout: 0 }
     );
     const value = await this.page.evaluate((locator) => {
       return document.querySelector(locator).innerText;
@@ -79,13 +77,12 @@ class WalletPage {
 
   async checkIfBalanceUpdated(locator, oldValue, newValue) {
     console.log(" ---- Zed Run Automation Framework: Check if balance updated ---");
+    await this.page.waitForSelector(locator, {timeout: 0});
     await this.page.waitForFunction(
       ([locator, oldValue]) => {
         return Number(document.querySelector(locator).innerText) < oldValue;
       },
-      [locator, oldValue],
-      { polling: 10000, timeout: 300000 }
-    );
+      [locator, oldValue], 5000, {timeout: 0 });
     const value = await this.page.evaluate((locator) => {
       document.querySelector(locator).scrollIntoView(true);
       return document.querySelector(locator).innerText;

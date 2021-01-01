@@ -1,4 +1,3 @@
-const { ZEDRUN_URL, WAIT_TIME } = require("../data/env");
 const zedRunConfig = require("../locators/ZedRun");
 const walletConfig = require("../locators/Wallet");
 
@@ -61,6 +60,11 @@ class HomePage {
     console.log("---- Zed Run Automation Framework: Click on Racing link ---");
     await this.page.waitForSelector(zedRunConfig.RACING_LINK, {timeout: 0});
     await this.page.click(zedRunConfig.RACING_LINK);
+  }
+
+  async waitUntilBalanceShown(){
+    console.log("---- Zed Run Automation Framework: Wait until the balance shown ---");
+    await this.page.waitForSelector(zedRunConfig.BALANCE_LOADER_ICON, {hidden: true, timeout: 0});
   }
 
 }

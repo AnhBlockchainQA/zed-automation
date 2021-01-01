@@ -72,11 +72,13 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
   });
 
   test("Apply the discount coupon : INVALID_COUPON", async () => {
     marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
