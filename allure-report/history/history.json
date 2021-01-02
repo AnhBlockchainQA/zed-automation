@@ -1,0 +1,139 @@
+{
+  "4044157bfaf7191a2e17247a6a8885" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "256b4b55e6be20cf",
+      "status" : "failed",
+      "statusDetails" : "TypeError: loginPage.click is not a function",
+      "time" : {
+        "start" : 1609259261697,
+        "stop" : 1609259261705,
+        "duration" : 8
+      }
+    } ]
+  },
+  "eccf1fddfddd692b0ebe35cb4ae4e8c8" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "97e4f2f3a12b2ca8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609259279445,
+        "stop" : 1609259281227,
+        "duration" : 1782
+      }
+    } ]
+  },
+  "1cfe2cb4ee5640e8b50f013d4ecdfab" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9fe8465389690414",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609259264305,
+        "stop" : 1609259279445,
+        "duration" : 15140
+      }
+    } ]
+  },
+  "f8bfd48cc8019d52e378df897557ec02" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aa826e382295be89",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 60000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1609259341233,
+        "stop" : 1609259401244,
+        "duration" : 60011
+      }
+    } ]
+  },
+  "b870b678101e5fba47279a56237bd4d3" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f93d8dbf2a3b8e40",
+      "status" : "failed",
+      "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "time" : {
+        "start" : 1609259093146,
+        "stop" : 1609259123151,
+        "duration" : 30005
+      }
+    } ]
+  },
+  "ed2b010b974ceda941dd0f9fff3ebdce" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c868d065d69819f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1609259401244,
+        "stop" : 1609259422300,
+        "duration" : 21056
+      }
+    } ]
+  },
+  "b1793d1afe8c9357562f1ec33392daf7" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3ba144ee13a31379",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 60000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1609259281227,
+        "stop" : 1609259341233,
+        "duration" : 60006
+      }
+    } ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Check mail inbox to get magic link",
+    "uid" : "e6f27d398b5cf2b4",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259000877,
+      "stop" : 1609259002646,
+      "duration" : 1769
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check mail inbox to get magic link",
+    "uid" : "9633683fedfdd651",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609258877432,
+      "stop" : 1609258879222,
+      "duration" : 1790
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check mail inbox to get magic link",
+    "uid" : "8827ed1fe1aace1d",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259139963,
+      "stop" : 1609259141691,
+      "duration" : 1728
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open new browser with magic link",
+    "uid" : "420cf207469bc5a7",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259002646,
+      "stop" : 1609259062648,
+      "duration" : 60002
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open ZedRun page and input valid email to generate magic link",
+    "uid" : "2c1b0b903860f328",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259124338,
+      "stop" : 1609259139963,
+      "duration" : 15625
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Click on Deposit button and check if ETH balance is updated",
+    "uid" : "f93d8dbf2a3b8e40",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259093146,
+      "stop" : 1609259123151,
+      "duration" : 30005
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open ZedRun page and input valid email to generate magic link",
+    "uid" : "cff9ddfe9426d605",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259000829,
+      "stop" : 1609259000876,
+      "duration" : 47
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open ZedRun page and input valid email to generate magic link",
+    "uid" : "7b004e4aef68dc2",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609258861375,
+      "stop" : 1609258877432,
+      "duration" : 16057
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open ZedRun page and input valid email to generate magic link",
+    "uid" : "9fe8465389690414",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259264305,
+      "stop" : 1609259279445,
+      "duration" : 15140
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open new browser with magic link",
+    "uid" : "d81bdaf74772fa8b",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259141691,
+      "stop" : 1609259201693,
+      "duration" : 60002
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open new browser with magic link",
+    "uid" : "3ba144ee13a31379",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259281227,
+      "stop" : 1609259341233,
+      "duration" : 60006
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Switch back to ZedRun page and verify login successful",
+    "uid" : "fc085711962aa37d",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259201693,
+      "stop" : 1609259261697,
+      "duration" : 60004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Click on Withdraw button and check if ZED balance is updated",
+    "uid" : "c868d065d69819f1",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259401244,
+      "stop" : 1609259422300,
+      "duration" : 21056
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Switch back to ZedRun page and verify login successful",
+    "uid" : "52cb601c9b2f6dd1",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259062648,
+      "stop" : 1609259093146,
+      "duration" : 30498
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "dual horse",
+    "uid" : "256b4b55e6be20cf",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259261697,
+      "stop" : 1609259261705,
+      "duration" : 8
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Switch back to ZedRun page and verify login successful",
+    "uid" : "aa826e382295be89",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609259341233,
+      "stop" : 1609259401244,
+      "duration" : 60011
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Open new browser with magic link",
+    "uid" : "2499b81892f8e865",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609258879222,
+      "stop" : 1609258939226,
+      "duration" : 60004
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check mail inbox to get magic link",
+    "uid" : "97e4f2f3a12b2ca8",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1609259279445,
+      "stop" : 1609259281227,
+      "duration" : 1782
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Switch back to ZedRun page and verify login successful",
+    "uid" : "ec613c54aff8f5ea",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "failed",
+    "time" : {
+      "start" : 1609258939226,
+      "stop" : 1609258999228,
+      "duration" : 60002
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

@@ -1,0 +1,44 @@
+{
+  "uid" : "e6f27d398b5cf2b4",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Login to ZedRUn with magic link.Check mail inbox to get magic link",
+  "historyId" : "eccf1fddfddd692b0ebe35cb4ae4e8c8",
+  "time" : {
+    "start" : 1609259000877,
+    "stop" : 1609259002646,
+    "duration" : 1769
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e6f27d398b5cf2b4.json",
+  "parameterValues" : [ ]
+}

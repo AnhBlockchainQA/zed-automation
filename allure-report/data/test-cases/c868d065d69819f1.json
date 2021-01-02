@@ -1,0 +1,46 @@
+{
+  "uid" : "c868d065d69819f1",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "fullName" : "Login to ZedRUn with magic link.Click on Withdraw button and check if ZED balance is updated",
+  "historyId" : "ed2b010b974ceda941dd0f9fff3ebdce",
+  "time" : {
+    "start" : 1609259401244,
+    "stop" : 1609259422300,
+    "duration" : 21056
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Withdraw button and check if ZED balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRUn with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c868d065d69819f1.json",
+  "parameterValues" : [ ]
+}
