@@ -1,15 +1,15 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "14b4ba7a23d71dfeb3e0deb32ea40968",
-    "name" : "Login to ZedRUn with magic link",
+    "uid" : "48f88cc4d26de55e3e755ef977b7c0ce",
+    "name" : "tests/anhle.test.js",
     "statistic" : {
-      "failed" : 4,
+      "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 1,
       "unknown" : 0,
-      "total" : 7
+      "total" : 1
     }
   } ]
 }

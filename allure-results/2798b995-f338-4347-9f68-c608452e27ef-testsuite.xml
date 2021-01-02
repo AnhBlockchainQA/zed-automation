@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609579320194' stop='1609579320197'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609579940359' stop='1609579940363'>
     <name>tests/anhle.test.js</name>
     <title>tests/anhle.test.js</title>
     <test-cases>
-        <test-case start='1609579320194' status='passed' stop='1609579320197'>
+        <test-case start='1609579940359' status='passed' stop='1609579940362'>
             <name>adds 1 + 2 to equal 3</name>
             <title>adds 1 + 2 to equal 3</title>
             <labels/>

@@ -1,71 +1,11 @@
 [ {
-  "uid" : "f93d8dbf2a3b8e40",
-  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "uid" : "bd46907f5c1adcb3",
+  "name" : "adds 1 + 2 to equal 3",
   "time" : {
-    "start" : 1609259093146,
-    "stop" : 1609259123151,
-    "duration" : 30005
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "aa826e382295be89",
-  "name" : "Switch back to ZedRun page and verify login successful",
-  "time" : {
-    "start" : 1609259341233,
-    "stop" : 1609259401244,
-    "duration" : 60011
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "9fe8465389690414",
-  "name" : "Open ZedRun page and input valid email to generate magic link",
-  "time" : {
-    "start" : 1609259264305,
-    "stop" : 1609259279445,
-    "duration" : 15140
+    "start" : 1609579940359,
+    "stop" : 1609579940362,
+    "duration" : 3
   },
   "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c868d065d69819f1",
-  "name" : "Click on Withdraw button and check if ZED balance is updated",
-  "time" : {
-    "start" : 1609259401244,
-    "stop" : 1609259422300,
-    "duration" : 21056
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "97e4f2f3a12b2ca8",
-  "name" : "Check mail inbox to get magic link",
-  "time" : {
-    "start" : 1609259279445,
-    "stop" : 1609259281227,
-    "duration" : 1782
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3ba144ee13a31379",
-  "name" : "Open new browser with magic link",
-  "time" : {
-    "start" : 1609259281227,
-    "stop" : 1609259341233,
-    "duration" : 60006
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "256b4b55e6be20cf",
-  "name" : "dual horse",
-  "time" : {
-    "start" : 1609259261697,
-    "stop" : 1609259261705,
-    "duration" : 8
-  },
-  "status" : "failed",
   "severity" : "normal"
 } ]
