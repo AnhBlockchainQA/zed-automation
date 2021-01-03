@@ -86,7 +86,7 @@ class MarketplacePage{
               return document.querySelectorAll(locator).length >= value;
             },
             [marketPlaceConfig.HORSE_LIST, HORSE_LIST_SIZE],
-            { polling: 10000, timeout: 300000 }
+            { polling: 1000, timeout: 15000 }
           );
     }
 
