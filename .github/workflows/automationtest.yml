@@ -5,7 +5,7 @@ on: [repository_dispatch,push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
         echo "repository '${{ github.event.client_payload.repository }}' "
         npm ci
         npm install
-        xvfb-run --auto-servernum -- npm test
+        npm test
       env:
         CI: true
     - name: Get Allure history
