@@ -63,6 +63,6 @@ describe("Login to ZedRun with magic link", () => {
 });
 
 afterAll(async (done) => {
-  pageFactory.endTest();
+  await pageFactory.endTest();
   done();
 });
