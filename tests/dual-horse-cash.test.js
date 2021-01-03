@@ -57,6 +57,7 @@ describe("Login to ZedRUn with magic link", () => {
   });
 
   test("dual horse", async () => {
+    console.log(" dual horse page ", loginPage);
     await loginPage.click('text="racing"')
     await loginPage.click('.free-race-badge')
 

@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609655443621' stop='1609655501458'>
+    <name>Withdraw from ZED balance by logging in with magic link</name>
+    <title>Withdraw from ZED balance by logging in with magic link</title>
+    <test-cases>
+        <test-case start='1609655443621' status='passed' stop='1609655459012'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655459012' status='passed' stop='1609655460979'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655460979' status='passed' stop='1609655471517'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655471517' status='passed' stop='1609655477950'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655477950' status='passed' stop='1609655501458'>
+            <name>Click on Withdraw button and check if ZED balance is updated</name>
+            <title>Click on Withdraw button and check if ZED balance is updated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

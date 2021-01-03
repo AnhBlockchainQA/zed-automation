@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609656465992' stop='1609656501557'>
+    <name>Use expired discount voucher when logging in with Metamask</name>
+    <title>Use expired discount voucher when logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1609656465993' status='passed' stop='1609656470913'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609656470913' status='passed' stop='1609656484547'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609656484547' status='passed' stop='1609656486515'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609656486515' status='failed' stop='1609656501557'>
+            <name>Apply the discount coupon : INVALID_COUPON</name>
+            <title>Apply the discount coupon : INVALID_COUPON</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForFunction: Timeout 15000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForFunction: Timeout 15000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:344:48)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.waitForFunction (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:341:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:454:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.waitForFunction (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:454:21)
+                    at MarketplacePage.waitUntilHorseListLoaded (/Users/davidle/qa-automationtest/pages/MarketplacePage.js:84:25)
+                    at Object.test (/Users/davidle/qa-automationtest/tests/discount/metamask-invalid-discount.test.js:81:27)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609655742399' stop='1609655780770'>
+    <name>Use percent discount voucher to buy horse with card while logging in with Metamask</name>
+    <title>Use percent discount voucher to buy horse with card while logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1609655742399' status='passed' stop='1609655747035'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655747035' status='passed' stop='1609655758858'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655758858' status='passed' stop='1609655760735'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609655760735' status='failed' stop='1609655775755'>
+            <name>Apply the discount coupon : ZED-10-PERCENT</name>
+            <title>Apply the discount coupon : ZED-10-PERCENT</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForFunction: Timeout 15000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForFunction: Timeout 15000ms exceeded.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:344:48)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.waitForFunction (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:341:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:454:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.waitForFunction (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:454:21)
+                    at MarketplacePage.waitUntilHorseListLoaded (/Users/davidle/qa-automationtest/pages/MarketplacePage.js:84:25)
+                    at Object.test (/Users/davidle/qa-automationtest/tests/discount/metamask-percent-discount-with-cash.test.js:84:27)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609655775755' status='failed' stop='1609655780770'>
+            <name>Process the checkout with banking account and check value</name>
+            <title>Process the checkout with banking account and check value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//button[text()='Buy With Credit Card']" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForSelector: Timeout 5000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//button[text()='Buy With Credit Card']" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:180:48)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.waitForSelector (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:175:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:212:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.waitForSelector (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:212:21)
+                    at PaymentPage.clickOnBuyWithCreditCardButton (/Users/davidle/qa-automationtest/pages/PaymentPage.js:18:23)
+                    at Object.test (/Users/davidle/qa-automationtest/tests/discount/metamask-percent-discount-with-cash.test.js:98:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
