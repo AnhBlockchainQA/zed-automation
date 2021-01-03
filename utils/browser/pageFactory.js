@@ -34,9 +34,9 @@ class PageFactory {
         return await this.context.newPage();
     }
 
-    endTest() {
-        this.context.close();
-        this.browser.close();
+    async endTest() {
+        await this.context.close();
+        await this.browser.close();
     }
 }
 

@@ -18,7 +18,6 @@ let homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
-  jest.setTimeout(5000)
   pageFactory = new PageFactory();
 });
 
