@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609671650741' stop='1609671677316'>
+    <name>Withdraw from ETH balance by logging in with Metamask</name>
+    <title>Withdraw from ETH balance by logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1609671650741' status='passed' stop='1609671655279'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609671655280' status='passed' stop='1609671667298'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609671667298' status='passed' stop='1609671668688'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609671668688' status='passed' stop='1609671677315'>
+            <name>Click on Withdraw button and check if ZED balance is updated</name>
+            <title>Click on Withdraw button and check if ZED balance is updated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
