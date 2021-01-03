@@ -76,7 +76,6 @@ describe("Login to ZedRun with Metamask", () => {
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
     await zedRunPage.clickOnAcceptButton();
-    await zedRunPage.checkIfAvatarIconPresent();
 
   });
 
@@ -85,6 +84,6 @@ describe("Login to ZedRun with Metamask", () => {
 
 afterAll(async (done) => {
   console.log('finish all')
-  await metamaskFactory.close()
+  await metamaskFactory.endTest()
   done()
 });

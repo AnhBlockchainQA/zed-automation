@@ -5,7 +5,7 @@ on: [repository_dispatch,push]
 jobs:
   build:
 
-    runs-on: macos-10.15
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
         echo "repository '${{ github.event.client_payload.repository }}' "
         npm ci
         npm install
-        npm run test tests/deposite-withdraw
+        xvfb-run --auto-servernum -- npm run test tests/deposite-withdraw
       env:
         CI: true
     - name: Get Allure history
