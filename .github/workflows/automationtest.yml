@@ -22,7 +22,7 @@ jobs:
         echo "repository '${{ github.event.client_payload.repository }}' "
         npm ci
         npm install
-        xvfb-run --auto-servernum -- npm run test tests/deposite-withdraw/deposite-mail-login.test.js
+        xvfb-run --auto-servernum -- npm run test tests/deposite-withdraw/deposite-mail-login.test.js tests/deposite-withdraw/deposite-mail-login.test.js
       env:
         CI: true
     - name: Get Allure history
