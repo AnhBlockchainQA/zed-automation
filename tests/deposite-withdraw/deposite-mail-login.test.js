@@ -18,6 +18,7 @@ let homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
+  jest.setTimeout(5000)
   pageFactory = new PageFactory();
 });
 
@@ -70,7 +71,7 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     await walletPage.clickOnDepositeToZedWallet();
     await walletPage.clickOnConfirmDepositeButton();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
-  });
+  },15000);
 });
 
 afterAll(async (done) => {

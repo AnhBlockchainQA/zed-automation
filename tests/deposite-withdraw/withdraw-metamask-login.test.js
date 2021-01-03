@@ -24,6 +24,7 @@ let withdrawMetamaskNotificationPage;
 let walletPage;
 
 beforeAll(async () => {
+  jest.setTimeout(5000)
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();

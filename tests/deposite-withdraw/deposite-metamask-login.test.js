@@ -78,7 +78,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     await homePage.clickOnWalletIcon();
   });
 
-  test ("Click on Deposit button and check if ETH balance is updated", async () => {
+  test ("Click on Deposit button and check if ETH balance is updated", async (done) => {
     walletPage = new WalletPage(newPageInstance);
     let ethBalance = await walletPage.getETHBalance(); 
     await walletPage.clickOnDepositButton();
@@ -92,7 +92,8 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     await depositeMetamaskNotificationPage.clickOnConfirmButton();
     await depositeMetamaskNotificationPage.waitForCloseEvent();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
-  });
+    done()
+  },5000);
 });
 
 afterAll(async (done) => {
