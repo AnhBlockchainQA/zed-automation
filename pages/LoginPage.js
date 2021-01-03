@@ -68,6 +68,7 @@ class LoginPage {
     } catch (error) {
       console.log(">>>> Element is not present");
     }
+    done();
   }
 
   async clickConnectMetamaskButton() {
