@@ -12,6 +12,12 @@ module.exports = {
   TEST_EMAIL: "zedrun@1secmail.net",
   TEST_LOGIN : "zedrun", 
   TEST_DOMAIN: "1secmail.net",
+  OTHER_TEST_EMAIL: "zedrun1@1secmail.org",
+  OTHER_TEST_LOGIN : "zedrun1", 
+  OTHER_TEST_DOMAIN: "1secmail.org",
+  ANOTHER_TEST_EMAIL: "zedrun2@1secmail.com",
+  ANOTHER_TEST_LOGIN : "zedrun2", 
+  ANOTHER_TEST_DOMAIN: "1secmail.com",
   AMOUNT : "0.01",
   FIXED_DISCOUNT: {
     CODE: "ZED-15-DOLLARS",
@@ -30,5 +36,10 @@ module.exports = {
     CODE: "INVALID_COUPON",
     ERROR: "Voucher Not Found"
   },
-  HORSE_LIST_SIZE: 30
+  HORSE_LIST_SIZE: 10,
+  EVENT_LIST_SIZE: 10,
+  REGEX: {
+    NUMBER: /\$\{i\}/g,
+    TEXT: /\$\{name\}/g,
+  }
 }

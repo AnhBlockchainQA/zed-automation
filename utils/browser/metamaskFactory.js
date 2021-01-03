@@ -26,6 +26,17 @@ class MetamaskFactory {
   }
 
   async init() {
+    // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
+    //   headless: false,
+    //   args: [
+    //     `--disable-extensions-except=${pathToExtension}`,
+    //     `--load-extension=${pathToExtension}`,
+    //     `--start-maximized`,
+    //   ],
+    //   executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+    //   timeout: 0
+    // });
+
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
       headless: false,
       args: [
@@ -33,9 +44,9 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-      // devtools: true,
-      // chromiumSandbox: true,
-      timeout: 0,
+
+      timeout: 0
+
     });
 
     const [metamaskPage] = await Promise.all([
@@ -77,6 +88,24 @@ class MetamaskFactory {
       ]);
       return newPage;
 
+  }
+
+  async clickNewPageWithRetry(page, selector, threshold, delay) {
+    const [newPage] = await Promise.all([
+      this.browserContext.waitForEvent("page"),
+      page.evaluate(
+        ([locator, threshold, delay]) => {
+          for (let i = 0; i < threshold; i++) {
+            setTimeout(function () {
+              document.querySelector(locator).click();
+              console.log(`${i} attempt to click on Confirm button`);
+            }, delay);
+          }
+        },
+        [selector, threshold, delay]
+      ),
+    ]);
+    return newPage;
   }
 
   async newPage() {
