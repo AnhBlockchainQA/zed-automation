@@ -99,6 +99,6 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
+  await metamaskFactory.endTest();
   done()
 });

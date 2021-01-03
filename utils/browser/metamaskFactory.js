@@ -106,7 +106,7 @@ class MetamaskFactory {
     return await this.browserContext.newPage();
   }
 
-  async close() {
+  async endTest() {
     // await this.removeCache();
     console.log('close browser')
     await this.browserContext.close();

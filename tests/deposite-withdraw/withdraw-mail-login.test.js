@@ -76,6 +76,7 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
 
 afterAll(async (done) => {
   await pageFactory.endTest();
+  await pageInstance.endTest();
   done();
 });
 
