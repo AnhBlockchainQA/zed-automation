@@ -71,14 +71,8 @@ class MetamaskFactory {
       .then(console.log("Page is loaded completely!"));
   }
 
-  clickNewPage = async (page, selector) => {
-      // await page.screenshot({
-      //   path: `example2.png`
-      // })
-      // console.log('browserContext:', this.browserContext)
-      // console.log('page:', page)
-      // console.log('selector:', selector)
-      // console.log('browserContext:', this.browserContext.co)
+  async clickNewPage(page, selector) {
+
       const [newPage] = await Promise.all([
         this.browserContext.waitForEvent("page"),
         (await page.$(selector)).click({ timeout: 0 }),
