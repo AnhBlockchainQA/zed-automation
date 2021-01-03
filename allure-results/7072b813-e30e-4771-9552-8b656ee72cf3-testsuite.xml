@@ -1,0 +1,67 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609661961561' stop='1609661979556'>
+    <name>Login to ZedRUn with magic link</name>
+    <title>Login to ZedRUn with magic link</title>
+    <test-cases>
+        <test-case start='1609661961561' status='passed' stop='1609661976239'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609661976239' status='passed' stop='1609661978041'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609661978041' status='failed' stop='1609661979520'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: magicLinkPage.clickToTrustMe is not a function</message>
+                <stack-trace>TypeError: magicLinkPage.clickToTrustMe is not a function
+                    at Object.test (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:48:25)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609661979520' status='failed' stop='1609661979534'>
+            <name>Switch back to ZedRun page and verify login successful</name>
+            <title>Switch back to ZedRun page and verify login successful</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: loginPage.waitForLoginFormHidden is not a function</message>
+                <stack-trace>TypeError: loginPage.waitForLoginFormHidden is not a function
+                    at Object.test (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:55:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609661979534' status='failed' stop='1609661979555'>
+            <name>dual horse</name>
+            <title>dual horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: loginPage.click is not a function</message>
+                <stack-trace>TypeError: loginPage.click is not a function
+                    at Object.test (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:61:21)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

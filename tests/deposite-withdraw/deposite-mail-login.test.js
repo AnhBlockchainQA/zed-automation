@@ -73,8 +73,9 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
   });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
  await pageFactory.endTest();
+ done();
 });
 
 

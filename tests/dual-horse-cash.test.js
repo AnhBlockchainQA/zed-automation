@@ -102,8 +102,9 @@ describe("Login to ZedRUn with magic link", () => {
 });
 
 
-afterAll(async () => {
+afterAll(async (done) => {
  await pageFactory.endTest();
+ done()
 });
 
 

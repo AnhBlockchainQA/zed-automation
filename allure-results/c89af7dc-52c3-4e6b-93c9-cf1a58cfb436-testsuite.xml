@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609661370928' stop='1609661398958'>
+    <name>Use expired discount voucher when logging in with Metamask</name>
+    <title>Use expired discount voucher when logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1609661370929' status='passed' stop='1609661375399'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609661375399' status='failed' stop='1609661385403'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:48:3)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:31:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609661385403' status='passed' stop='1609661388949'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609661388950' status='failed' stop='1609661398957'>
+            <name>Apply the discount coupon : EXPIRED_COUPON</name>
+            <title>Apply the discount coupon : EXPIRED_COUPON</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:81:3)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/discount/metamask-expired-discount.test.js:31:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
