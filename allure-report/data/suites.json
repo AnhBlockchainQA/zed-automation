@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "tests/anhle.test.js",
+    "children" : [ {
+      "name" : "adds 1 + 2 to equal 3",
+      "uid" : "a1c9cc18b72d5ac8",
+      "parentUid" : "48f88cc4d26de55e3e755ef977b7c0ce",
+      "status" : "failed",
+      "time" : {
+        "start" : 1609642702296,
+        "stop" : 1609642702302,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "48f88cc4d26de55e3e755ef977b7c0ce"
+  } ]
+}

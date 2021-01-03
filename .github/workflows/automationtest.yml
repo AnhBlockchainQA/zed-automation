@@ -51,6 +51,7 @@ jobs:
         PUBLISH_DIR: allure-history
         
     - name: Send message to Slack API
+      if: always()
       uses: archive/github-actions-slack@v1.0.3
       id: notify
       with:

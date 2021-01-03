@@ -1,0 +1,52 @@
+{
+  "uid" : "a1c9cc18b72d5ac8",
+  "name" : "adds 1 + 2 to equal 3",
+  "fullName" : "tests/anhle.test.js.adds 1 + 2 to equal 3",
+  "historyId" : "15a4e090f676e696efaf826510ee0c80",
+  "time" : {
+    "start" : 1609642702296,
+    "stop" : 1609642702302,
+    "duration" : 6
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toBe(expected) // Object.is equality\n                \n                Expected: 4\n                Received: 3",
+  "statusTrace" : "Error: expect(received).toBe(expected) // Object.is equality\n                \n                Expected: 4\n                Received: 3\n                    at Object.<anonymous>.test (/Users/davidle/qa-automationtest/tests/anhle.test.js:5:23)\n                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)\n                    at process._tickCallback (internal/process/next_tick.js:68:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "tests/anhle.test.js"
+  }, {
+    "name" : "testClass",
+    "value" : "tests/anhle.test.js"
+  }, {
+    "name" : "testMethod",
+    "value" : "adds 1 + 2 to equal 3"
+  }, {
+    "name" : "package",
+    "value" : "tests/anhle.test.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "a1c9cc18b72d5ac8.json",
+  "parameterValues" : [ ]
+}

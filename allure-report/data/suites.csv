@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Jan 03 09:58:22 ICT 2021","Sun Jan 03 09:58:22 ICT 2021","6","","tests/anhle.test.js","","tests/anhle.test.js","adds 1 + 2 to equal 3","adds 1 + 2 to equal 3",""
