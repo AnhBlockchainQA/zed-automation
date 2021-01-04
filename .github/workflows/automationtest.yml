@@ -2,9 +2,9 @@ name: Node.js CI
 
 on: 
   repository_dispatch:
-  push:
+  #push:
   schedule:
-    - cron: '30 11 * * *'  # every day at midnight
+    - cron: '35 04 * * *'  # every day at midnight
 
 jobs:
   run-test:
