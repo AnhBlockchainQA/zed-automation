@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   push:
   schedule:
-    - cron: '0 0 * * *'  # every day at midnight
+    - cron: '20 5 * * *'  # every day at midnight
 
 jobs:
   run-test:
