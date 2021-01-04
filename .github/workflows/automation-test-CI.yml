@@ -1,11 +1,8 @@
 name: automation test CI
 
 on:
-  #repository_dispatch:
-  #push:
   schedule:
-    - cron: '30 5 * * *'  # every day at midnight
-
+    - cron: '50 5 * * *'  # every day at midnight
 jobs:
   run-test:
 
