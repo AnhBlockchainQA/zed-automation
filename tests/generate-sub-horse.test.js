@@ -17,7 +17,7 @@ const {
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
 const studServiceConfig = require('../locators/StudService');
-const { HomePage } = require('../pages/HomePage'); 
+const { HomePage } = require('../pages/HomePage');
 const { StudServicePage } = require('../pages/StudServicePage');
 const { ActivityPage } = require('../pages/ActivityPage');
 
@@ -133,6 +133,7 @@ describe("Generate stud horse", () => {
 
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done()
 });

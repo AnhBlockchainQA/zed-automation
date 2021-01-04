@@ -95,7 +95,7 @@ describe("Purchase horse with ETH", () => {
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.clickFirstHorsePreview();
   });
-  
+
   test("Purchase horse with ETH", async() => {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithETH();
@@ -115,6 +115,7 @@ describe("Purchase horse with ETH", () => {
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

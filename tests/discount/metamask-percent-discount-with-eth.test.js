@@ -70,7 +70,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
+
   });
 
   test("Check that avatar is shown then click on Marketplace link", async () => {
@@ -114,6 +114,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

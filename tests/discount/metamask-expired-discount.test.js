@@ -65,7 +65,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
+
   });
 
 
@@ -90,6 +90,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });
