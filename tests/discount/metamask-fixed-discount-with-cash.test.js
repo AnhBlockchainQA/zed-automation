@@ -10,6 +10,7 @@ const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
+const { ActivityPage } = require('../../pages/ActivityPage');
 
 let metamaskFactory;
 let metamaskPage;
@@ -23,6 +24,8 @@ let otherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
 let paymentPage;
+let firstHorseName;
+let activityPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -79,41 +82,47 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Check that avatar is shown then click on Marketplace to select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
+    await marketPlacePage.clickFirstHorsePreview();
   });
 
-  // test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
-  //   marketPlacePage = new MarketplacePage(newPageInstance);
-  //   await marketPlacePage.waitUntilHorseListLoaded();
-  //   await marketPlacePage.clickFirstHorsePreview();
-  //   firstHorseName = await marketPlacePage.getHorseName();
-  //   originalPrice = await marketPlacePage.getHorsePrice();
-  //   discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
-  //   await marketPlacePage.clickOnDownwardArrow();
-  //   await marketPlacePage.typeCoupon(FIXED_DISCOUNT.CODE);
-  //   await marketPlacePage.clickApplyButton();
-  //   await marketPlacePage.verifyDiscountLabel(FIXED_DISCOUNT.VALUE);
-  //   await marketPlacePage.verifyDiscountPrice(discountPrice);
-  // });
+  test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
+    firstHorseName = await marketPlacePage.getHorseName();
+    originalPrice = await marketPlacePage.getHorsePrice();
+    discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
+    await marketPlacePage.clickOnDownwardArrow();
+    await marketPlacePage.typeCoupon(FIXED_DISCOUNT.CODE);
+    await marketPlacePage.clickApplyButton();
+    await marketPlacePage.verifyDiscountLabel(FIXED_DISCOUNT.VALUE);
+    await marketPlacePage.verifyDiscountPrice(discountPrice);
+  });
 
-  //   test("Process the checkout with banking account and check value", async () => {
-  //   paymentPage = new PaymentPage(newPageInstance);
-  //   await paymentPage.clickOnBuyWithCreditCardButton();
-  //   await paymentPage.waitUntilPaymentFormPresent();
-  //   await paymentPage.clickOnUseDifferentCardIfNeed();
-  //   await paymentPage.waitUntilPaymentFormPresent();
-  //   await paymentPage.typeCreditCardNumber(CARD_NUMBER);
-  //   await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-  //   await paymentPage.typeCreditCardCVC(CARD_CVC);
-  //   await paymentPage.clickPayButton();
-  //   await paymentPage.checkPaySuccessfulLabelPresent();
-  //   await paymentPage.clickDoneButton();
-  // });
+  test("Process payment by cash", async() => {
+    paymentPage = new PaymentPage(newPageInstance);
+    await paymentPage.clickOnBuyWithCreditCardButton();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+    await paymentPage.typeCreditCardCVC(CARD_CVC);
+    await paymentPage.clickPayButton();
+    await paymentPage.checkPaySuccessfulLabelPresent();
+    await paymentPage.clickDoneButton();
+  });
+
+  test("Verify that our order is performed", async() => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
+  });
 
 });
 

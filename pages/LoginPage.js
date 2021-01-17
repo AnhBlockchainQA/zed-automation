@@ -7,52 +7,82 @@ class LoginPage {
     this.page = page;
   }
 
-  async setPageInstance(page){
+  async setPageInstance(page) {
     this.page = page;
   }
 
   async navigate() {
     console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
-      await this.page.waitForLoadState()
+      await this.page.waitForLoadState();
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
-      await this.page.waitForLoadState()
+      await this.page.waitForLoadState();
     } catch (error) {
-      console.log('error:', error)
+      throw new Error(error);
     }
-   
   }
 
   async clickOnStartButton() {
-    console.log("--- Zed Run Automation Framework: Click on Start Button ---");
-    await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {visible: true, timeout: 0});
-    await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Click on Start Button ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async typeEmail(email) {
-    console.log(
-      "--- Zed Run Automation Framework: Input value to email field ---"
-    );
-    await this.page.waitForSelector(zedRunConfig.EMAIL_INPUT, {visible: true, timeout: 0});
-    await this.page.type(zedRunConfig.EMAIL_INPUT, email, {delay: 100});
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Input value to email field ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.EMAIL_INPUT, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.type(zedRunConfig.EMAIL_INPUT, email, { delay: 100 });
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async clickOnContinueButton() {
-    console.log(
-      "--- Zed Run Automation Framework: Click on Continue Button ---"
-    );
-    await this.page.waitForSelector(zedRunConfig.CONTINUE_BUTTON, {visible: true, timeout: 0});
-    await this.page.click(zedRunConfig.CONTINUE_BUTTON);
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Click on Continue Button ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.CONTINUE_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(zedRunConfig.CONTINUE_BUTTON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async bringToFront() {
-    console.log("---- Zed Run Automation Framework: Bring page upfront ---");
-    await this.page.bringToFront();
+    try {
+      console.log("---- Zed Run Automation Framework: Bring page upfront ---");
+      await this.page.bringToFront();
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async waitForTimeout() {
-    console.log("---- Zed Run Automation Framework: Wait for timeout ---");
-    await this.page.waitForTimeout(WAIT_TIME);
+    try {
+      console.log("---- Zed Run Automation Framework: Wait for timeout ---");
+      await this.page.waitForTimeout(WAIT_TIME);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async checkIfWelcomeLabelPresent() {
@@ -61,7 +91,7 @@ class LoginPage {
     );
     try {
       await this.page.waitForSelector(zedRunConfig.WELCOME_LABEL, {
-        visible: true,  
+        visible: true,
         timeout: 0,
       });
       console.log(">>>> Element is present");
@@ -71,15 +101,26 @@ class LoginPage {
   }
 
   async clickConnectMetamaskButton() {
-    console.log("--- Zed Run Automation Framework: Click on Connect Metamask button ---");
-    await this.page.click(zedRunConfig.CONNECT_METAMASK);
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Click on Connect Metamask button ---"
+      );
+      await this.page.click(zedRunConfig.CONNECT_METAMASK);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async clickOnAuthenticateButton() {
-    console.log("--- Zed Run Automation Framework: Click on Authenticate Button ---");
-    await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Click on Authenticate Button ---"
+      );
+      await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
-
 }
 
 module.exports = { LoginPage };

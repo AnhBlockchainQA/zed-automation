@@ -12,30 +12,55 @@ class HomePage {
   }
 
   async clickOnAcceptButton() {
-    console.log("---- Zed Run Automation Framework: Click on Accept button ---");
-    await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {
-      visible: true, timeout: 5000
-    });
-    await this.page.click(zedRunConfig.ACCEPT_BUTTON);
+    try {
+      console.log(
+        "---- Zed Run Automation Framework: Click on Accept button ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(zedRunConfig.ACCEPT_BUTTON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async clickOnWalletIcon() {
-    console.log("---- Zed Run Automation Framework: Click on Wallet icon ---");
-    await this.page.waitForSelector(walletConfig.WALLET_ICON, {timeout: 5000});
-    await this.page.click(walletConfig.WALLET_ICON);
+    try {
+      console.log(
+        "---- Zed Run Automation Framework: Click on Wallet icon ---"
+      );
+      await this.page.waitForSelector(walletConfig.WALLET_ICON, {
+        timeout: 5000,
+      });
+      await this.page.click(walletConfig.WALLET_ICON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async clickOnMarketplaceLink() {
-    console.log("---- Zed Run Automation Framework: Click on Marketplace link ---");
-    await this.page.waitForSelector(zedRunConfig.MARKETPLACE_LINK, {timeout: 5000});
-    await this.page.click(zedRunConfig.MARKETPLACE_LINK);
+    try {
+      console.log(
+        "---- Zed Run Automation Framework: Click on Marketplace link ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.MARKETPLACE_LINK, {
+        timeout: 5000,
+      });
+      await this.page.click(zedRunConfig.MARKETPLACE_LINK);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
-  async checkIfAvatarPresent(){
-    console.log("---- Zed Run Automation Framework: Check if user avatar is present ---");
+  async checkIfAvatarPresent() {
+    console.log(
+      "---- Zed Run Automation Framework: Check if user avatar is present ---"
+    );
     try {
       await this.page.waitForSelector(zedRunConfig.USER_AVATAR, {
-        visible: true,  
+        visible: true,
         timeout: 5000,
       });
       return true;
@@ -44,29 +69,50 @@ class HomePage {
     }
   }
 
-  async clickOnArrowIcon(){
-    console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
-    await this.page.waitForSelector(zedRunConfig.ARROW_ICON, {timeout: 0});
-    await this.page.click(zedRunConfig.ARROW_ICON);
+  async clickOnArrowIcon() {
+    try {
+      console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
+      await this.page.waitForSelector(zedRunConfig.ARROW_ICON, { timeout: 0 });
+      await this.page.click(zedRunConfig.ARROW_ICON);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
-  async clickOnStudServiceLink(){
-    console.log("---- Zed Run Automation Framework: Click on Stud service ---");
-    await this.page.waitForSelector(zedRunConfig.STUD_SERVICE_LINK, {timeout: 0});
-    await this.page.click(zedRunConfig.STUD_SERVICE_LINK);
+  async clickOnStudServiceLink() {
+    try {
+      console.log(
+        "---- Zed Run Automation Framework: Click on Stud service ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.STUD_SERVICE_LINK, {
+        timeout: 0,
+      });
+      await this.page.click(zedRunConfig.STUD_SERVICE_LINK);
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
-  async clickOnRacingLink(){
-    console.log("---- Zed Run Automation Framework: Click on Racing link ---");
-    await this.page.waitForSelector(zedRunConfig.RACING_LINK, {timeout: 0});
-    await this.page.click(zedRunConfig.RACING_LINK);
+  async clickOnRacingLink() {
+    try {
+      console.log(
+        "---- Zed Run Automation Framework: Click on Racing link ---"
+      );
+      await this.page.waitForSelector(zedRunConfig.RACING_LINK, { timeout: 0 });
+      await this.page.click(zedRunConfig.RACING_LINK);
+    } catch{
+      throw new Error(error);
+    }
   }
 
-  async waitUntilBalanceShown(){
-    console.log("---- Zed Run Automation Framework: Wait until the balance shown ---");
-    await this.page.waitForSelector(zedRunConfig.BALANCE_LOADER_ICON, {hidden: true, timeout: 0});
+  async waitForBalanceInfoToBeShown(){
+    try{
+      await this.page.waitForSelector(zedRunConfig.ETH_BALANCE, {visible: true, timeout: 300000});
+      await this.page.waitForSelector(zedRunConfig.ZED_BALANCE, {visible: true, timeout: 300000});
+    }catch{
+      throw new Error("Element is not present yet!");
+    }
   }
-
 }
 
 module.exports = { HomePage };

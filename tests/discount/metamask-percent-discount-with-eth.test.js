@@ -11,6 +11,7 @@ const { MarketplacePage } = require("../../pages/MarketplacePage");
 const  { HomePage } = require("../../pages/HomePage");
 const paymentConfig = require("../../locators/Payment");
 const { PaymentPage } = require("../../pages/PaymentPage");
+const { ActivityPage } = require("../../pages/ActivityPage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -26,6 +27,8 @@ let homePage;
 let anotherMetamaskNotificationInstance;
 let anotherMetamaskNotificationPage;
 let paymentPage;
+let firstHorseName;
+let activityPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -73,18 +76,19 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     
   });
 
-  test("Check that avatar is shown then click on Marketplace link", async () => {
+  test ("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
+    await marketPlacePage.clickFirstHorsePreview();
   });
 
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
     discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
@@ -111,6 +115,12 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await anotherMetamaskNotificationPage.clickOnConfirmButton();
     // await anotherMetamaskNotificationPage.clickOnConfirmButton();
     // await anotherMetamaskNotificationPage.waitForCloseEvent();
+  });
+
+  test("Verify that our order is performed", async() => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.bringToFront();
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
 });
 

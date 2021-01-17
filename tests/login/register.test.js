@@ -16,6 +16,7 @@ const {
   CONFIRM_PASSWORD
 } = require('../../data/env');
 const zedRunConfig = require('../../locators/ZedRun');
+const { HomePage } = require('../../pages/HomePage');
 
 let metamaskFactory;
 let metamaskPage;
@@ -26,6 +27,8 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let homePage;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
@@ -74,8 +77,12 @@ describe("Login to ZedRun with Metamask", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await zedRunPage.clickOnAcceptButton();
-    await zedRunPage.checkIfAvatarIconPresent();
+  });
+
+  test("Check that avatar is shown", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
   });
 
   

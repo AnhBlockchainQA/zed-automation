@@ -11,7 +11,6 @@ let magicLink;
 let email;
 let loginPage;
 let magicLinkPage;
-let zedRunPage;
 let newPageInstance;
 let page;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
@@ -53,11 +52,11 @@ describe("Login to ZedRun with magic link", () => {
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
     await magicLinkPage.waitForLoginFormHidden();
+    await magicLinkPage.waitForTimeout();
   });
 
   test("Switch back to ZedRun page and verify login successful", async () => {
-    zedRunPage = new LoginPage(newPageInstance);
-    await zedRunPage.bringToFront();
+    await loginPage.bringToFront();
     await loginPage.checkIfWelcomeLabelPresent();
   });
 });

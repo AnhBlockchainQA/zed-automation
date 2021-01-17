@@ -128,7 +128,7 @@ describe("Generate stud horse", () => {
   test("Go to Activity page and check if we breed successfully", async() => {
     await studServicePage.clickOnCheckActivityButton();
     activityPage = new ActivityPage(newPageInstance);
-    await activityPage.checkIfBreedingInfoCorrect(malehorseName, femalehorseName);
+    await activityPage.checkIfStatementInfoCorrect(malehorseName, femalehorseName);
   });
 
 });

@@ -10,6 +10,7 @@ const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
+const { ActivityPage } = require("../../pages/ActivityPage");
 
 let metamaskFactory;
 let metamaskPage;
@@ -23,7 +24,8 @@ let otherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
 let paymentPage;
-
+let activityPage;
+let firstHorseName;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -71,18 +73,19 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
+    await marketPlacePage.clickFirstHorsePreview();
   });
 
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.clickFirstHorsePreview();
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
     discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
@@ -105,6 +108,12 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     await paymentPage.checkPaySuccessfulLabelPresent();
     await paymentPage.clickDoneButton();
   });
+
+  test("Verify that our order is performed", async() => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
+  });
+
 });
 
 afterAll(async () => {

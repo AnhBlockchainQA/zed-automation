@@ -11,6 +11,7 @@ const paymentConfig = require("../../locators/Payment");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
+const { ActivityPage } = require("../../pages/ActivityPage");
 
 
 let metamaskFactory;
@@ -27,6 +28,8 @@ let anotherMetamaskNotificationPage;
 let marketPlacePage;
 let homePage;
 let paymentPage;
+let firstHorseName;
+let activityPage;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -83,18 +86,19 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-  });
-
-  test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
+  });
+  
+  test("Apply the discount coupon : ZED-15-DOLLARS", async () => {
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
     discountPrice = originalPrice - FIXED_DISCOUNT.VALUE;
@@ -122,6 +126,12 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await anotherMetamaskNotificationPage.clickOnConfirmButton();
     // await anotherMetamaskNotificationPage.clickOnConfirmButton();
     // await anotherMetamaskNotificationPage.waitForCloseEvent();
+  });
+
+  test("Verify that our order is performed", async() => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.bringToFront();
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
 });
 

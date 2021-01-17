@@ -3,11 +3,12 @@ const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
 const { LoginPage } = require('../../pages/LoginPage');
 const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../../data/env');
-const zedRunConfig = require('../../locators/ZedRun');
+// const zedRunConfig = require('../../locators/ZedRun');
 const { MarketplacePage } = require('../../pages/MarketplacePage');
 const { PaymentPage } = require('../../pages/PaymentPage');
 const { HomePage } = require('../../pages/HomePage');
-
+const { ActivityPage } = require('../../pages/ActivityPage');
+const zedRunConfig  = require('../../locators/ZedRun');
 
 let metamaskFactory;
 let metamaskPage;
@@ -21,6 +22,8 @@ let otherMetamaskNotificationPage;
 let marketPlacePage;
 let paymentPage;
 let homePage;
+let activityPage;
+let horseName;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -72,12 +75,14 @@ describe("Buy horse with credit card", () => {
   test ("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
+    horseName = await marketPlacePage.getHorseName();
   });
   
   test("Process payment by cash", async() => {
@@ -85,12 +90,18 @@ describe("Buy horse with credit card", () => {
     await paymentPage.clickOnBuyWithCreditCardButton();
     await paymentPage.waitUntilPaymentFormPresent();
     await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.waitUntilPaymentFormPresent();
     await paymentPage.typeCreditCardNumber(CARD_NUMBER);
     await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
     await paymentPage.typeCreditCardCVC(CARD_CVC);
     await paymentPage.clickPayButton();
     await paymentPage.checkPaySuccessfulLabelPresent();
     await paymentPage.clickDoneButton();
+  });
+
+  test("Verify that our order is performed", async() => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.checkIfStatementInfoCorrect(horseName);
   });
 })
 

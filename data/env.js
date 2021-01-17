@@ -36,7 +36,7 @@ module.exports = {
     CODE: "INVALID_COUPON",
     ERROR: "Voucher Not Found"
   },
-  HORSE_LIST_SIZE: 10,
+  HORSE_LIST_SIZE: 3,
   EVENT_LIST_SIZE: 10,
   REGEX: {
     NUMBER: /\$\{i\}/g,

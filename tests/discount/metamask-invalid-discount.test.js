@@ -68,20 +68,19 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Check that avatar is shown then click on Marketplace to select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
+    await marketPlacePage.clickFirstHorsePreview();
   });
 
   test("Apply the discount coupon : INVALID_COUPON", async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.clickFirstHorsePreview();
-    firstHorseName = await marketPlacePage.getHorseName();
-    originalPrice = await marketPlacePage.getHorsePrice();
     await marketPlacePage.clickOnDownwardArrow();
     await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
     await marketPlacePage.clickApplyButton();

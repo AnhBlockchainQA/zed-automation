@@ -23,17 +23,6 @@ class MetamaskFactory {
   }
 
   async init() {
-    // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
-    //   headless: false,
-    //   args: [
-    //     `--disable-extensions-except=${pathToExtension}`,
-    //     `--load-extension=${pathToExtension}`,
-    //     `--start-maximized`,
-    //   ],
-    //   executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
-    //   timeout: 0
-    // });
-
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
       headless: false,
       args: [
@@ -41,8 +30,19 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+      executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
       timeout: 0
     });
+
+    // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
+    //   headless: false,
+    //   args: [
+    //     `--disable-extensions-except=${pathToExtension}`,
+    //     `--load-extension=${pathToExtension}`,
+    //     `--start-maximized`,
+    //   ],
+    //   timeout: 0
+    // });
 
     const [metamaskPage] = await Promise.all([
       this.browserContext.waitForEvent("page"),
@@ -67,6 +67,7 @@ class MetamaskFactory {
   }
 
   async clickNewPage(page, selector) {
+    console.log(">>>>> Selector", selector);
     const [newPage] = await Promise.all([
       this.browserContext.waitForEvent("page"),
       page.click(selector, { timeout: 0 }),
