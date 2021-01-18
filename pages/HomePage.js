@@ -56,6 +56,13 @@ class HomePage {
     await this.page.click(zedRunConfig.STUD_SERVICE_LINK);
   }
 
+    async clickOnBreedingLink(){
+        console.log("---- Zed Run Automation Framework: Click on Breeding link ---");
+        await this.page.waitForSelector(zedRunConfig.BREEDING_LINK, {timeout: 0});
+        await this.page.click(zedRunConfig.BREEDING_LINK);
+    }
+
+
   async clickOnRacingLink(){
     console.log("---- Zed Run Automation Framework: Click on Racing link ---");
     await this.page.waitForSelector(zedRunConfig.RACING_LINK, {timeout: 0});
@@ -64,7 +71,7 @@ class HomePage {
 
   async waitUntilBalanceShown(){
     console.log("---- Zed Run Automation Framework: Wait until the balance shown ---");
-    await this.page.waitForSelector(zedRunConfig.BALANCE_LOADER_ICON, {hidden: true, timeout: 0});
+    await this.page.waitForSelector(zedRunConfig.BALANCE_INFO, {timeout: 0});
   }
 
 }
