@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-const { chromium } = require("playwright");
+
+const {
+  chromium
+} = require("playwright");
 const pathToExtension = require("path").join(
   __dirname,
   "metamask-chrome-8.1.3"
@@ -11,8 +14,8 @@ console.log("userDataDir:", userDataDir);
 
 class MetamaskFactory {
   constructor() {
-    this.metamask = null;
-    this.browserContext = null;
+    this.metamask;
+    this.browserContext;
   }
 
   async removeCache() {
@@ -30,8 +33,13 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+<<<<<<< HEAD
       executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+=======
+
+>>>>>>> develop
       timeout: 0
+
     });
 
     // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
@@ -66,6 +74,7 @@ class MetamaskFactory {
       .then(console.log("Page is loaded completely!"));
   }
 
+<<<<<<< HEAD
   async clickNewPage(page, selector) {
     console.log(">>>>> Selector", selector);
     const [newPage] = await Promise.all([
@@ -73,6 +82,25 @@ class MetamaskFactory {
       page.click(selector, { timeout: 0 }),
     ]);
     return newPage;
+=======
+  clickNewPage = async (page, selector) => {
+      // await page.screenshot({
+      //   path: `example2.png`
+      // })
+      // console.log('browserContext:', this.browserContext)
+      // console.log('page:', page)
+      // console.log('selector:', selector)
+      // console.log('browserContext:', this.browserContext.co)
+      const [newPage] = await Promise.all([
+        this.browserContext.waitForEvent("page"),
+        (await page.$(selector)).click({ timeout: 0 }),
+        // page.click(selector, {
+        //   timeout: 0
+        // }),
+      ]);
+      return newPage;
+
+>>>>>>> develop
   }
 
   async clickNewPageWithRetry(page, selector, threshold, delay) {
@@ -98,9 +126,13 @@ class MetamaskFactory {
   }
 
   async close() {
-    await this.removeCache();
-    return await this.browserContext.close();
+    // await this.removeCache();
+    console.log('close browser')
+    await this.browserContext.close();
+    return
   }
 }
 
-module.exports = { MetamaskFactory };
+module.exports = {
+  MetamaskFactory
+};
