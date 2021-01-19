@@ -72,23 +72,13 @@ class MetamaskFactory {
   }
 
   clickNewPage = async (page, selector) => {
-      // await page.screenshot({
-      //   path: `example2.png`
-      // })
-      // console.log('browserContext:', this.browserContext)
-      // console.log('page:', page)
-      // console.log('selector:', selector)
-      // console.log('browserContext:', this.browserContext.co)
       const [newPage] = await Promise.all([
         this.browserContext.waitForEvent("page"),
-        (await page.$(selector)).click({ timeout: 0 }),
-        // page.click(selector, {
-        //   timeout: 0
-        // }),
+        page.click(selector, { timeout: 0 }),
       ]);
       return newPage;
 
-  }
+  };
 
   async clickNewPageWithRetry(page, selector, threshold, delay) {
     const [newPage] = await Promise.all([
