@@ -14,7 +14,7 @@ class LoginPage {
   async navigate() {
     console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
-      await this.page.waitForLoadState()
+      await this.page.waitForLoadState();
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
       await this.page.waitForLoadState()
     } catch (error) {
@@ -24,7 +24,7 @@ class LoginPage {
   }
 
   async clickOnStartButton() {
-    console.log("--- Zed Run Automation Framework: Click on Start Button ---");
+    await console.log("--- Zed Run Automation Framework: Click on Start Button ---");
     await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {visible: true, timeout: 0});
     await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
   }
