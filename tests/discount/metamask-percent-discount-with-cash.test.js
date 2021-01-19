@@ -68,7 +68,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
+
   });
 
   test("Check that avatar is shown then click on Wallet", async () => {
@@ -107,6 +107,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });
