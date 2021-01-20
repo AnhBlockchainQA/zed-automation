@@ -1,6 +1,5 @@
 const { ZEDRUN_URL, WAIT_TIME } = require("../data/env");
 const zedRunConfig = require("../locators/ZedRun");
-const depositeConfig = require("../locators/Wallet");
 
 class LoginPage {
   constructor(page) {
@@ -17,8 +16,8 @@ class LoginPage {
       await this.page.waitForLoadState();
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
       await this.page.waitForLoadState();
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Unable to launch the url ", ZEDRUN_URL);
     }
   }
 
@@ -32,8 +31,8 @@ class LoginPage {
         timeout: 0,
       });
       await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
-    } catch (error) {
-      throw new Error(error);
+    } catch {
+      throw new Error("Start button is not present yet!");
     }
   }
 
@@ -47,8 +46,8 @@ class LoginPage {
         timeout: 0,
       });
       await this.page.type(zedRunConfig.EMAIL_INPUT, email, { delay: 100 });
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Email input field is not present yet!");
     }
   }
 
@@ -62,7 +61,7 @@ class LoginPage {
         timeout: 0,
       });
       await this.page.click(zedRunConfig.CONTINUE_BUTTON);
-    } catch (error) {
+    } catch {
       throw new Error(error);
     }
   }
@@ -71,18 +70,14 @@ class LoginPage {
     try {
       console.log("---- Zed Run Automation Framework: Bring page upfront ---");
       await this.page.bringToFront();
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Page instance is not ready or present!");
     }
   }
 
   async waitForTimeout() {
-    try {
       console.log("---- Zed Run Automation Framework: Wait for timeout ---");
       await this.page.waitForTimeout(WAIT_TIME);
-    } catch (error) {
-      throw new Error(error);
-    }
   }
 
   async checkIfWelcomeLabelPresent() {
@@ -94,9 +89,8 @@ class LoginPage {
         visible: true,
         timeout: 0,
       });
-      console.log(">>>> Element is present");
-    } catch (error) {
-      console.log(">>>> Element is not present");
+    } catch{
+      throw new Error("Welcome label is not present!")
     }
   }
 
@@ -106,8 +100,8 @@ class LoginPage {
         "--- Zed Run Automation Framework: Click on Connect Metamask button ---"
       );
       await this.page.click(zedRunConfig.CONNECT_METAMASK);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Connect Metamask button is not present or not clickable");
     }
   }
 
@@ -117,8 +111,8 @@ class LoginPage {
         "--- Zed Run Automation Framework: Click on Authenticate Button ---"
       );
       await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
-    } catch (error) {
-      throw new Error(error);
+    } catch {
+      throw new Error("Authenticate button is not present or not clickable");
     }
   }
 }

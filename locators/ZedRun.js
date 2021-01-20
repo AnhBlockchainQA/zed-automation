@@ -8,7 +8,7 @@ module.exports = {
     WELCOME_LABEL: zedRunConfig.WELCOME_LABEL,
     TRUST_ME_BUTTON: zedRunConfig.TRUST_ME_BUTTON,
     LOGIN_SUCESSFUL_MESSAGE: zedRunConfig.LOGIN_SUCESSFUL_MESSAGE,
-    CONNECT_METAMASK: "//div[text()='Connect Metamask']",
+    CONNECT_METAMASK: zedRunConfig.CONNECT_METAMASK,
     ACCEPT_BUTTON: zedRunConfig.ACCEPT_BUTTON,
     MARKETPLACE_LINK: zedRunConfig.MARKETPLACE_LINK,
     LOGIN_POPUP: zedRunConfig.LOGIN_POPUP,

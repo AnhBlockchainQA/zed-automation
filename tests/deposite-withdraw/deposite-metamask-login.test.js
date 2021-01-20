@@ -70,10 +70,10 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnWalletIcon();
   });

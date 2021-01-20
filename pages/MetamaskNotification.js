@@ -3,7 +3,6 @@ const metamaskConfig = require("../locators/Metamask");
 class MetamaskNotificationPage{
 
     constructor(page){
-        // console.log('page:', page)
         this.page = page;
     }
 
@@ -26,9 +25,7 @@ class MetamaskNotificationPage{
     }
 
     async waitForLoadState(){
-
         console.log("--- Zed Run Automation Framework: Wait for load state ---");
-
         await this.page.waitForLoadState();
     }
 

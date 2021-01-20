@@ -13,7 +13,11 @@ class MagicLinkPage {
 
   async navigate(url) {
     console.log("--- Zed Run Automation Framework: Navigation to the url ---");
+    try{
     await this.page.goto(url);
+    }catch{
+      throw new Error("Url is not valid or network timeout while loading ", url);
+    }
   }
 
   async waitForTimeout(timeout) {
@@ -27,26 +31,6 @@ class MagicLinkPage {
       timeout: 0,
     });
   }
-
-  // async clickToTrustMe() {
-  //   try{
-  //     await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 5000});
-  //     console.log(">>> Skip this step");
-  //   }catch(error){
-  //     await this.page.waitForSelector(zedRunConfig.TRUST_ME_BUTTON, {timeout: 0});
-  //     await this.page.click(zedRunConfig.TRUST_ME_BUTTON);
-  //   }  
-  //   this.page.waitForLoadState();
-  // }
-
-  // async waitForLoggedInMessage() {
-  //   try{
-  //     await this.page.waitForSelector(zedRunConfig.LOGIN_SUCESSFUL_MESSAGE, {visible: true, timeout: 0});
-  //     return true;
-  //   }catch(error){
-  //     return false;
-  //   }  
-  // }
 
 }
 

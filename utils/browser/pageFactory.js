@@ -11,7 +11,7 @@ class PageFactory{
         this.browser = await chromium.launch({headless: headlessStatus, timeout: timeout, 
         executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'});
         // this.browser = await chromium.launch({headless: headlessStatus, timeout: timeout});
-        // return this.browser;
+        return this.browser;
     }    
 
     async createContext(headlessStatus, timeout){

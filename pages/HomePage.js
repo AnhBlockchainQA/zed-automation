@@ -12,45 +12,45 @@ class HomePage {
   }
 
   async clickOnAcceptButton() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Accept button ---"
+    );
     try {
-      console.log(
-        "---- Zed Run Automation Framework: Click on Accept button ---"
-      );
       await this.page.waitForSelector(zedRunConfig.ACCEPT_BUTTON, {
         visible: true,
         timeout: 0,
       });
       await this.page.click(zedRunConfig.ACCEPT_BUTTON);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Accept button is not present or not clickable");
     }
   }
 
   async clickOnWalletIcon() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Wallet icon ---"
+    );
     try {
-      console.log(
-        "---- Zed Run Automation Framework: Click on Wallet icon ---"
-      );
       await this.page.waitForSelector(walletConfig.WALLET_ICON, {
         timeout: 5000,
       });
       await this.page.click(walletConfig.WALLET_ICON);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Wallet icon is not present or clickable");
     }
   }
 
   async clickOnMarketplaceLink() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Marketplace link ---"
+    );
     try {
-      console.log(
-        "---- Zed Run Automation Framework: Click on Marketplace link ---"
-      );
       await this.page.waitForSelector(zedRunConfig.MARKETPLACE_LINK, {
         timeout: 5000,
       });
       await this.page.click(zedRunConfig.MARKETPLACE_LINK);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Marketplace link is not presnet or clickable");
     }
   }
 
@@ -61,54 +61,53 @@ class HomePage {
     try {
       await this.page.waitForSelector(zedRunConfig.USER_AVATAR, {
         visible: true,
-        timeout: 5000,
+        timeout: 0,
       });
-      return true;
-    } catch (error) {
-      return false;
+    } catch{
+      throw new Error("User avatar is not present");
     }
   }
 
   async clickOnArrowIcon() {
+    console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
     try {
-      console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
       await this.page.waitForSelector(zedRunConfig.ARROW_ICON, { timeout: 0 });
       await this.page.click(zedRunConfig.ARROW_ICON);
-    } catch (error) {
-      throw new Error(error);
+    } catch {
+      throw new Error("Arrow icon is not present or clickable");
     }
   }
 
   async clickOnStudServiceLink() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Stud service ---"
+    );
     try {
-      console.log(
-        "---- Zed Run Automation Framework: Click on Stud service ---"
-      );
       await this.page.waitForSelector(zedRunConfig.STUD_SERVICE_LINK, {
         timeout: 0,
       });
       await this.page.click(zedRunConfig.STUD_SERVICE_LINK);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Stud service link is not present or clickable");
     }
   }
 
   async clickOnRacingLink() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Racing link ---"
+    );
     try {
-      console.log(
-        "---- Zed Run Automation Framework: Click on Racing link ---"
-      );
       await this.page.waitForSelector(zedRunConfig.RACING_LINK, { timeout: 0 });
       await this.page.click(zedRunConfig.RACING_LINK);
     } catch{
-      throw new Error(error);
+      throw new Error("Racing link is not present or clickable");
     }
   }
 
   async waitForBalanceInfoToBeShown(){
     try{
-      await this.page.waitForSelector(zedRunConfig.ETH_BALANCE, {visible: true, timeout: 300000});
-      await this.page.waitForSelector(zedRunConfig.ZED_BALANCE, {visible: true, timeout: 300000});
+      await this.page.waitForSelector(zedRunConfig.ETH_BALANCE, {visible: true, timeout: 420000});
+      await this.page.waitForSelector(zedRunConfig.ZED_BALANCE, {visible: true, timeout: 420000});
     }catch{
       throw new Error("Element is not present yet!");
     }

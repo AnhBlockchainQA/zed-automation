@@ -33,11 +33,7 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-<<<<<<< HEAD
       executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
-=======
-
->>>>>>> develop
       timeout: 0
 
     });
@@ -74,7 +70,6 @@ class MetamaskFactory {
       .then(console.log("Page is loaded completely!"));
   }
 
-<<<<<<< HEAD
   async clickNewPage(page, selector) {
     console.log(">>>>> Selector", selector);
     const [newPage] = await Promise.all([
@@ -82,25 +77,6 @@ class MetamaskFactory {
       page.click(selector, { timeout: 0 }),
     ]);
     return newPage;
-=======
-  clickNewPage = async (page, selector) => {
-      // await page.screenshot({
-      //   path: `example2.png`
-      // })
-      // console.log('browserContext:', this.browserContext)
-      // console.log('page:', page)
-      // console.log('selector:', selector)
-      // console.log('browserContext:', this.browserContext.co)
-      const [newPage] = await Promise.all([
-        this.browserContext.waitForEvent("page"),
-        (await page.$(selector)).click({ timeout: 0 }),
-        // page.click(selector, {
-        //   timeout: 0
-        // }),
-      ]);
-      return newPage;
-
->>>>>>> develop
   }
 
   async clickNewPageWithRetry(page, selector, threshold, delay) {

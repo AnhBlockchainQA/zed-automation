@@ -20,12 +20,12 @@ class PaymentPage {
         paymentConfig.BUY_WITH_CREDIT_CARD_BUTTON,
         {
           visible: true,
-          timeout: 5000,
+          timeout: 0,
         }
       );
       await this.page.click(paymentConfig.BUY_WITH_CREDIT_CARD_BUTTON);
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Buy with credit card button is not present or clickable");
     }
   }
 
@@ -36,8 +36,8 @@ class PaymentPage {
       );
       let frames = await this.page.frames();
       return frames.find((f) => f.url().includes(url));
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("No frame with matching url " + url + " is found!");
     }
   }
 
@@ -53,8 +53,8 @@ class PaymentPage {
         })
         .then(console.log("Payment form already shown up!"));
       await this.page.waitForLoadState();
-    } catch (error) {
-      throw new Error(error);
+    } catch {
+      throw new Error("Payment form is not present!");
     }
   }
 
@@ -76,8 +76,8 @@ class PaymentPage {
         cardNumber,
         { delay: 50 }
       );
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Credit card number input is not shown");
     }
   }
 
@@ -106,7 +106,7 @@ class PaymentPage {
         { delay: 50 }
       );
     } catch {
-      throw new Error("Element is not present or not enabled yet!");
+      throw new Error("Credit card expiration date input field is not present");
     }
   }
 
@@ -127,7 +127,7 @@ class PaymentPage {
         delay: 50,
       });
     } catch{
-      throw new Error("Element is not present or not enabled yet!");
+      throw new Error("Credit card CVC input field is not present!");
     }
   }
 
@@ -142,7 +142,7 @@ class PaymentPage {
         .then(console.log("Pay button is displayed!"));
       await this.page.click(paymentConfig.PAY_BUTTON);
     } catch{
-      throw new Error("Element is not present or not enabled yet!");
+      throw new Error("Pay button is not present or not clickable!");
     }
   }
 
@@ -155,7 +155,6 @@ class PaymentPage {
         visible: true,
         timeout: 0,
       });
-      console.log(">>>> Element is present");
     } catch{
       throw new Error("Element is not present or not enabled yet!");
     }

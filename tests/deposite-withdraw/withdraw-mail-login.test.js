@@ -51,13 +51,14 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     await magicLinkPage.waitForLoginFormHidden();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnWalletIcon();
   });
+
 
   test ("Click on Withdraw button and check if ZED balance is updated", async () => {
     walletPage = new WalletPage(newPageInstance);

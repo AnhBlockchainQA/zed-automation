@@ -5,7 +5,11 @@ class ActivityPage {
   }
 
   async bringToFront(){
+    try{
     await this.page.bringToFront();
+    }catch{
+      throw new Error("Page instance is not found or not ready");
+    }
   }
 
   async getStatementInfo() {
@@ -21,8 +25,8 @@ class ActivityPage {
       }, activityConfig.FIRST_STATEMENT_INFO);
       console.log(">>>>>> Statement  info ", info);
       return info;
-    } catch (error) {
-      throw new Error(error);
+    } catch{
+      throw new Error("Statement info is not found");
     }
   }
 

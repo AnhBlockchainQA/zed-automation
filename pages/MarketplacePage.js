@@ -177,7 +177,7 @@ class MarketplacePage {
           return document.querySelectorAll(locator).length >= value;
         },
         [marketPlaceConfig.HORSE_LIST, HORSE_LIST_SIZE],
-        5000, {timeout: 300000 }
+        10000, {timeout: 300000 }
       );
     } catch {
       throw new Error("Waiting time is over but size of horse list is still incorrect!");
