@@ -65,7 +65,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
+
   });
 
   test("Check that avatar is shown then click on Marketplace to select first horse", async () => {
@@ -88,6 +88,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

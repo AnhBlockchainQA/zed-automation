@@ -95,6 +95,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   });
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

@@ -18,7 +18,7 @@ beforeAll(async () => {
   pageFactory = new PageFactory();
 });
 
-describe("Login to ZedRUn with magic link", () => {
+describe("Dual horse cash", () => {
 
   test("Open ZedRun page and input valid email to generate magic link", async () => {
     pageInstance = await pageFactory.newTab(false, 0);
@@ -101,8 +101,9 @@ describe("Login to ZedRUn with magic link", () => {
 });
 
 
-afterAll(async () => {
+afterAll(async (done) => {
  await pageFactory.endTest();
+ done()
 });
 
 

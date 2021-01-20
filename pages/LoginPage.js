@@ -22,6 +22,7 @@ class LoginPage {
   }
 
   async clickOnStartButton() {
+<<<<<<< HEAD
     try {
       console.log(
         "--- Zed Run Automation Framework: Click on Start Button ---"
@@ -34,6 +35,11 @@ class LoginPage {
     } catch {
       throw new Error("Start button is not present yet!");
     }
+=======
+    await console.log("--- Zed Run Automation Framework: Click on Start Button ---");
+    await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {visible: true, timeout: 0});
+    await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
+>>>>>>> develop
   }
 
   async typeEmail(email) {

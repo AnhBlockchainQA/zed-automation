@@ -70,7 +70,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
+
   });
 
   test ("Go to Marketplace and select first horse", async () => {
@@ -116,6 +116,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
 
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

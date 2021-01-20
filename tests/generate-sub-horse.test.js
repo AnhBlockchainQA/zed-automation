@@ -17,7 +17,7 @@ const {
 } = require('../data/env');
 const zedRunConfig = require('../locators/ZedRun');
 const studServiceConfig = require('../locators/StudService');
-const { HomePage } = require('../pages/HomePage'); 
+const { HomePage } = require('../pages/HomePage');
 const { StudServicePage } = require('../pages/StudServicePage');
 const { ActivityPage } = require('../pages/ActivityPage');
 
@@ -61,7 +61,7 @@ describe("Generate stud horse", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
@@ -93,8 +93,7 @@ describe("Generate stud horse", () => {
   });
 
   test("Select mate horse", async () => {
-    await homePage.clickOnArrowIcon();
-    await homePage.clickOnStudServiceLink();
+    await homePage.clickOnBreedingLink();
     studServicePage = new StudServicePage(newPageInstance);
     index = await studServicePage.getRandomIndexOfMaleHorseFromList();
     await studServicePage.clickOnSelectedMaleHorseWithIndex(index);
@@ -130,9 +129,11 @@ describe("Generate stud horse", () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.checkIfStatementInfoCorrect(malehorseName, femalehorseName);
   });
-
 });
 
-afterAll(async () => {
-  await metamaskFactory.close();
+
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done()
 });
+

@@ -59,8 +59,12 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     await homePage.clickOnWalletIcon();
   });
 
+<<<<<<< HEAD
 
   test ("Click on Withdraw button and check if ZED balance is updated", async () => {
+=======
+  test ("Click on Withdraw button and check if ZED balance is updated", async (done) => {
+>>>>>>> develop
     walletPage = new WalletPage(newPageInstance);
     await walletPage.clickOnWithdrawButton();
     await walletPage.scrollToZedBalance();
@@ -70,12 +74,15 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     console.log(">>> Expected Zed Balance: ", newZedBalance);
     await walletPage.typeWithDrawAmount(AMOUNT);
     await walletPage.clickOnWithdrawFromZedWallet();
-    await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);  
+    await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);
+    done();
   });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await pageFactory.endTest();
+  await pageInstance.endTest();
+  done();
 });
 
 

@@ -70,11 +70,12 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     await walletPage.clickOnDepositeToZedWallet();
     await walletPage.clickOnConfirmDepositeButton();
     await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
-  });
+  },15000);
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
  await pageFactory.endTest();
+ done();
 });
 
 

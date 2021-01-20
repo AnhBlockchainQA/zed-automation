@@ -105,6 +105,7 @@ describe("Buy horse with credit card", () => {
   });
 })
 
-afterAll(async () => {
-  await metamaskFactory.close();
+afterAll(async (done) => {
+  await metamaskFactory.endTest();
+  done();
 });

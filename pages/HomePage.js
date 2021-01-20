@@ -112,6 +112,37 @@ class HomePage {
       throw new Error("Element is not present yet!");
     }
   }
+  
+  async clickOnBreedingLink(){
+        console.log("---- Zed Run Automation Framework: Click on Breeding link ---");
+        try{
+        await this.page.waitForSelector(zedRunConfig.BREEDING_LINK, {timeout: 0});
+        await this.page.click(zedRunConfig.BREEDING_LINK);
+        }catch{
+          throw new Error("Breeding link is not present yet!");
+        }
+    }
+
+
+  async clickOnRacingLink(){
+    console.log("---- Zed Run Automation Framework: Click on Racing link ---");
+    try{
+    await this.page.waitForSelector(zedRunConfig.RACING_LINK, {timeout: 0});
+    await this.page.click(zedRunConfig.RACING_LINK);
+    }catch{
+      throw new Error("Racing link is not shown!");
+    }
+  }
+
+  async waitUntilBalanceShown(){
+    try{
+    console.log("---- Zed Run Automation Framework: Wait until the balance shown ---");
+    await this.page.waitForSelector(zedRunConfig.ETH_BALANCE, {timeout: 0});
+    await this.page.waitForSelector(zedRunConfig.ZED_BALANCE, {timeout: 0});
+    }catch{
+      throw new Error("Balance info is not shown");
+    }
+  }
 }
 
 module.exports = { HomePage };

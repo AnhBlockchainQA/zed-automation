@@ -56,7 +56,6 @@ describe("Login to ZedRun with Metamask", () => {
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
     console.log('metamask done')
-    done()
   })
 
   test("Open ZedRun page and click Connnect Metamask", async (done) => {
@@ -88,7 +87,6 @@ describe("Login to ZedRun with Metamask", () => {
     await homePage.waitUntilBalanceShown();
 =======
     await zedRunPage.clickOnAcceptButton();
-    await zedRunPage.checkIfAvatarIconPresent();
 
 >>>>>>> develop
   });
@@ -98,5 +96,6 @@ describe("Login to ZedRun with Metamask", () => {
 
 afterAll(async (done) => {
   console.log('finish all')
+  await metamaskFactory.endTest()
   done()
 });
