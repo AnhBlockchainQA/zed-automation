@@ -55,7 +55,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  });
+  })
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
@@ -82,17 +82,65 @@ describe("Pick horses to gate and process Next to Run event", () => {
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
+    await homePage.waitUntilBalanceShown();
   });
 
-  test("Select a racehorses stable to the open gate", async() => {
-      await homePage.clickOnRacingLink();
-      racingPage = new RacingPage(newPageInstance);
-    await racingPage.selectEntryFreeEvent();
-    const eventName = await racingPage.addRaceHorseIntoRace();
-    await racingPage.validateRacingEventAfterInNextToRun(eventName);
+  test("Select event and check if size is correct", async () => {
+    // racingPage = new RacingPage(newPageInstance);
+    // index = await racingPage.getRandomIndexOfRacingEvent();
+    // await racingPage.scrollToEventByIndexIfNeeded(index);
+    // registeredHorseNo = await racingPage.getNumberOfRegisteredHorse(index);
+    // totalNo = await racingPage.getTotalNumberOfHorses(index);
+    // eventName = await racingPage.getRacingEventNameByIndex(index);
+    // console.log(">>>>> Event name " + eventName + " : Registered [" + registeredHorseNo + "], Total [" + totalNo + "]")
+    // await racingPage.clickOnRacingEventWithIndex(index);
+    // await racingPage.scrollToOpenGatesBox();
+    // let size = await racingPage.getSizeOfOpenGatesList(index);
+    // await racingPage.validateOpenGatesListSizeCorrect(totalNo - registeredHorseNo, size);
+  });
 
+  test("Select horses from user stable to the open gate", async() => {
+    // await newPageInstance.click('text="racing"')
+    // await newPageInstance.click('.free-race-badge')
+
+    // const group = await newPageInstance.$(`//div[@class='other-content']/div[@class='gate-group']`)
+    // console.log('innerText:',await group.innerText())
+    // const texts = await group.innerText()
+    // let listNumber = texts.split(`\n`)
+    // listNumber = listNumber.map(number => {
+    //   const check = Number.isInteger(parseInt(number))
+    //   if (check) {
+    //     return number
+    //   }
+    // }).filter(e => !!e)
+    // for (let i = 0; i< listNumber.length; i++) {
+    //   await newPageInstance.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
+    //   await newPageInstance.waitForLoadState();
+    //   await newPageInstance.hover(`.horse-infos`)
+    //   await newPageInstance.click('text="Free Entry"')
+    //   await newPageInstance.waitForLoadState();
+    // }    
+    // await newPageInstance.waitForLoadState();
+    // // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
+    // await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // const eventDual = await newPageInstance.$(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // console.log('eventDual', await eventDual.innerText())
+    // let listText = await eventDual.innerText()
+    // listText = listText.split('\n')
+    // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
+    // // console.log('innerText:',await eventDual.innerText())
+    // // const eventText = await eventDual.innerText()
+    // await newPageInstance.waitForSelector(`//div[@class='in-race-info']/div/div/h1`)
+    // const newDiv = await newPageInstance.$(`//div[@class='in-race-info']/div/div/h1`)
+    // console.log('new text:', await newDiv.innerText())
+    // const listNewText = await newDiv.innerText()
+    // console.log('listText[0]:', listText[0])
+    // console.log('compare', listNewText.indexOf(listText[0]))
+    // const check = listNewText.indexOf(listText[0])
+    // if (check !== 0) {
+    //   throw new Error('check not is true')
+    // }
   });
 });
 
