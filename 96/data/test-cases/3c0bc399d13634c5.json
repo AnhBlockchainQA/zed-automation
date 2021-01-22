@@ -1,0 +1,75 @@
+{
+  "uid" : "3c0bc399d13634c5",
+  "name" : "Update metamask info",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Update metamask info",
+  "historyId" : "987ba5c7865ce960681ea1edc6a81937",
+  "time" : {
+    "start" : 1611332459887,
+    "stop" : 1611332466538,
+    "duration" : 6651
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "1d32be411c097998",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/1d32be411c097998",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331571421,
+          "stop" : 1611331575344,
+          "duration" : 3923
+        }
+      }, {
+        "uid" : "eebffada0ed4154",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/eebffada0ed4154",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331963882,
+          "stop" : 1611331968912,
+          "duration" : 5030
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3c0bc399d13634c5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,75 @@
+{
+  "uid" : "6e281375a489c982",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Check that avatar is shown then click on Wallet",
+  "historyId" : "846aa581efceb97ca5d6db57fbc2a817",
+  "time" : {
+    "start" : 1611330497928,
+    "stop" : 1611330502411,
+    "duration" : 4483
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "a350988849e7953d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/a350988849e7953d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611329905348,
+          "stop" : 1611329909564,
+          "duration" : 4216
+        }
+      }, {
+        "uid" : "181fbd36ff941d87",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/181fbd36ff941d87",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611330280532,
+          "stop" : 1611330285044,
+          "duration" : 4512
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6e281375a489c982.json",
+  "parameterValues" : [ ]
+}

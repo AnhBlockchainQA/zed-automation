@@ -1,0 +1,75 @@
+{
+  "uid" : "694b1b2ba8aa3cf6",
+  "name" : "Go to Marketplace and buy horse by ETH",
+  "fullName" : "Purchase horse with ETH.Go to Marketplace and buy horse by ETH",
+  "historyId" : "2a40d7828b4faf9e5d957330f807de9e",
+  "time" : {
+    "start" : 1611332856284,
+    "stop" : 1611332880524,
+    "duration" : 24240
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and buy horse by ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "f964b7a488b2bb00",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/f964b7a488b2bb00",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331949419,
+          "stop" : 1611331967635,
+          "duration" : 18216
+        }
+      }, {
+        "uid" : "a45e68a448fecca0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/a45e68a448fecca0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611332355854,
+          "stop" : 1611332377269,
+          "duration" : 21415
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "694b1b2ba8aa3cf6.json",
+  "parameterValues" : [ ]
+}

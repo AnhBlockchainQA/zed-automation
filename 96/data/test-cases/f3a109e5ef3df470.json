@@ -1,0 +1,75 @@
+{
+  "uid" : "f3a109e5ef3df470",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Purchase horse with ETH.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "9d660e028acaf67e9a25c2d6baf2a3fc",
+  "time" : {
+    "start" : 1611332833537,
+    "stop" : 1611332856284,
+    "duration" : 22747
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "8ffc64f62c630b43",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/8ffc64f62c630b43",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331933300,
+          "stop" : 1611331949419,
+          "duration" : 16119
+        }
+      }, {
+        "uid" : "b363002df864bbbc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/b363002df864bbbc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611332333587,
+          "stop" : 1611332355854,
+          "duration" : 22267
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f3a109e5ef3df470.json",
+  "parameterValues" : [ ]
+}

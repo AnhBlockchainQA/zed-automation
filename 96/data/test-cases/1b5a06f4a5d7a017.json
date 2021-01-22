@@ -1,0 +1,92 @@
+{
+  "uid" : "1b5a06f4a5d7a017",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check that avatar is shown then click on Wallet",
+  "historyId" : "837c46df5729596df398e682b03baa8a",
+  "time" : {
+    "start" : 1611335293406,
+    "stop" : 1611335303432,
+    "duration" : 10026
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text='Accept'\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text='Accept'\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:180:48\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at Frame.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:212:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:202:20)\n                    at Page.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:212:21)\n                    at HomePage.clickOnAcceptButton (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:16:21)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-expired-discount.test.js:75:20)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "eb0d76d3b901392d",
+      "status" : "failed",
+      "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text='Accept'\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "time" : {
+        "start" : 1611334592239,
+        "stop" : 1611334607386,
+        "duration" : 15147
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "cd242444a1060c99",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/cd242444a1060c99",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text='Accept'\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611334449590,
+          "stop" : 1611334474221,
+          "duration" : 24631
+        }
+      }, {
+        "uid" : "b2d47cb4c5522e12",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/b2d47cb4c5522e12",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text='Accept'\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611334759274,
+          "stop" : 1611334769317,
+          "duration" : 10043
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1b5a06f4a5d7a017.json",
+  "parameterValues" : [ ]
+}

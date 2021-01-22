@@ -1,0 +1,83 @@
+{
+  "uid" : "a9298f510ce7c5f5",
+  "name" : "Update metamask info",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Update metamask info",
+  "historyId" : "93438059c14242999f9195b0bfec9f9b",
+  "time" : {
+    "start" : 1611335223278,
+    "stop" : 1611335237144,
+    "duration" : 13866
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "79bf17c75fab603a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611334526567,
+        "stop" : 1611334541833,
+        "duration" : 15266
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "188a731d9ab8c9cc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/188a731d9ab8c9cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611334350549,
+          "stop" : 1611334371207,
+          "duration" : 20658
+        }
+      }, {
+        "uid" : "684081aa53e4a25",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/684081aa53e4a25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611334700671,
+          "stop" : 1611334712175,
+          "duration" : 11504
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a9298f510ce7c5f5.json",
+  "parameterValues" : [ ]
+}
