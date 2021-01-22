@@ -1,0 +1,46 @@
+{
+  "uid" : "9e232c8edfc8c3ed",
+  "name" : "Process the checkout with banking account and check value",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Process the checkout with banking account and check value",
+  "historyId" : "f500b2e23222bc0eb4a2a22f8ee6c6dd",
+  "time" : {
+    "start" : 1611331643097,
+    "stop" : 1611331659989,
+    "duration" : 16892
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with banking account and check value"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9e232c8edfc8c3ed.json",
+  "parameterValues" : [ ]
+}

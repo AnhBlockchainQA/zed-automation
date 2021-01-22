@@ -1,0 +1,52 @@
+{
+  "uid" : "eb72199578027c7c",
+  "name" : "dual horse",
+  "fullName" : "Dual horse cash.dual horse",
+  "historyId" : "9568ec93ebbb4b248ce822929588f687",
+  "time" : {
+    "start" : 1611333632802,
+    "stop" : 1611333632813,
+    "duration" : 11
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: loginPage.click is not a function",
+  "statusTrace" : "TypeError: loginPage.click is not a function\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/dual-horse-cash.test.js:60:21)\n                    at Object.asyncJestTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12\n                    at new Promise (<anonymous>)\n                    at mapper (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "dual horse"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "eb72199578027c7c.json",
+  "parameterValues" : [ ]
+}

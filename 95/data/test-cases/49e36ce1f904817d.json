@@ -1,0 +1,46 @@
+{
+  "uid" : "49e36ce1f904817d",
+  "name" : "Apply the discount coupon : ZED-15-DOLLARS",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Apply the discount coupon : ZED-15-DOLLARS",
+  "historyId" : "7abd367280c3bd138bea62a4cd835c8c",
+  "time" : {
+    "start" : 1611330285045,
+    "stop" : 1611330297718,
+    "duration" : 12673
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ZED-15-DOLLARS"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "49e36ce1f904817d.json",
+  "parameterValues" : [ ]
+}

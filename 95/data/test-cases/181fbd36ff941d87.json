@@ -1,0 +1,46 @@
+{
+  "uid" : "181fbd36ff941d87",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Check that avatar is shown then click on Wallet",
+  "historyId" : "846aa581efceb97ca5d6db57fbc2a817",
+  "time" : {
+    "start" : 1611330280532,
+    "stop" : 1611330285044,
+    "duration" : 4512
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "181fbd36ff941d87.json",
+  "parameterValues" : [ ]
+}

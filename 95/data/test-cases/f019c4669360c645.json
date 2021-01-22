@@ -1,0 +1,52 @@
+{
+  "uid" : "f019c4669360c645",
+  "name" : "Purchase horse with ETH",
+  "fullName" : "Purchase horse with ETH.Purchase horse with ETH",
+  "historyId" : "cb595589750a1f6cea8be0142ab4f668",
+  "time" : {
+    "start" : 1611332377269,
+    "stop" : 1611332377427,
+    "duration" : 158
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: paymentPage.clickOnConfirmButton is not a function",
+  "statusTrace" : "TypeError: paymentPage.clickOnConfirmButton is not a function\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/purchase-horse/purchase-horse-ETH.test.js:102:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f019c4669360c645.json",
+  "parameterValues" : [ ]
+}

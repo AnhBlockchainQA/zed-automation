@@ -1,0 +1,44 @@
+{
+  "uid" : "d65050a6c55f234f",
+  "name" : "Update metamask info",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Update metamask info",
+  "historyId" : "93438059c14242999f9195b0bfec9f9b",
+  "time" : {
+    "start" : 1611334018672,
+    "stop" : 1611334028580,
+    "duration" : 9908
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d65050a6c55f234f.json",
+  "parameterValues" : [ ]
+}

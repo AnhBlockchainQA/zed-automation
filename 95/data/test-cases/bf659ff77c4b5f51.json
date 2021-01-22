@@ -1,0 +1,46 @@
+{
+  "uid" : "bf659ff77c4b5f51",
+  "name" : "Select event and check if size is correct",
+  "fullName" : "Pick horses to gate and process Next to Run event.Select event and check if size is correct",
+  "historyId" : "1048715dd30208a00c82990b78469126",
+  "time" : {
+    "start" : 1611329632207,
+    "stop" : 1611329632207,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select event and check if size is correct"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bf659ff77c4b5f51.json",
+  "parameterValues" : [ ]
+}
