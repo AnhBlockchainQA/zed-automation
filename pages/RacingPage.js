@@ -19,6 +19,99 @@ class RacingPage {
     );
   }
 
+  async selectEntryFreeEvent(){
+      console.log("--- Zed Run Automation Framework: Wait until free entry event shown then click on---");
+      await this.page.waitForSelector(racingConfig.RACING_ENTRY_FREE, {
+          timeout: 0,
+      });
+      await this.page.click(racingConfig.RACING_ENTRY_FREE);
+  }
+
+  async returnEventName () {
+      console.log("--- Zed Run Automation Framework: Get the Event Name---");
+      await this.page.waitForSelector(racingConfig.RACING_EVENT_SELECTED, {
+          timeout: 0,
+      });
+      const eventSelected = await this.page.evaluate((locator) => {
+          return document.querySelector(locator).innerText;
+      }, racingConfig.RACING_EVENT_SELECTED);
+      return eventSelected;
+  }
+
+  async getGateOpening(){
+      console.log("--- Zed Run Automation Framework: Wait until the open gates display---");
+      const listGateElement = ".buy-in-content .pick-gate .gate-group .gate-btn";
+      await this.page.waitForSelector(listGateElement, {timeout: 0,});
+      let listOfGate = [];
+
+      const size = await this.page.evaluate((locator) => {
+          return document.querySelectorAll(locator).length;
+      }, listGateElement);
+      console.log('Number of Gate are opening',size );
+
+      for(let i = 2; i <= size+1; i++){
+          let openingGates = `.buy-in-content .pick-gate .gate-group .gate-btn:nth-child(${i})`;
+          const openGates = await this.page.evaluate((locator) => {
+              return document.querySelector(locator).innerText;
+          }, openingGates);
+          listOfGate.push(openGates);
+      }
+      return listOfGate;
+  }
+
+  async addRaceHorseIntoRace(){
+      console.log("--- Zed Run Automation Framework: Add racehorse into a race---");
+      let listNumber = await this.getGateOpening();
+      listNumber = listNumber.map(number => {
+          const check = Number.isInteger(parseInt(number));
+          if (check) {
+              return number
+          }
+      }).filter(e => !!e);
+      console.log('List of gates: ', listNumber.toString());
+      console.log('Length of Gate: ', listNumber.length);
+      for (let i = 0; i< listNumber.length; i++) {
+          await this.page.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`);
+          await this.page.waitForLoadState();
+          await this.page.hover(`.horse-infos`);
+          await this.page.click('text="Free Entry"');
+          await this.page.waitForLoadState();
+      }
+      await this.page.waitForLoadState();
+      return await this.returnEventName();
+  }
+
+  async validateRacingEventAfterInNextToRun(expectedEvent){
+      console.log('Expected Event Name is: ', expectedEvent);
+      const listOfNextToRun = '.next-run-list .race-name';
+      await this.page.waitForSelector(listOfNextToRun, {
+          timeout: 0,
+      });
+      const totalNextToRun = await this.page.evaluate((locator) => {
+          return document.querySelectorAll(locator).length;
+      }, listOfNextToRun);
+      console.log('Total number of Event is: ', totalNextToRun);
+      for( let i = 1; i < totalNextToRun + 1; i++){
+          const nameOfEventEle = `.next-run-list a:nth-child(${i}) .race-name span`;
+          const nameOfEvent = await this.page.evaluate((locator) => {
+              return document.querySelector(locator).innerText;
+          }, nameOfEventEle);
+          if(expectedEvent.includes(nameOfEvent)){
+            await this.page.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']//span[text()='${nameOfEvent}']`);
+              break;
+          }
+      }
+      const raceEventNameEle = '.race-description .race-name';
+      await this.page.waitForSelector(raceEventNameEle, {
+          timeout: 0,
+      });
+      const actualEventName = await this.page.evaluate((locator) => {
+          return document.querySelector(locator).innerText;
+      }, raceEventNameEle);
+      console.log('Actual Event Name Detail is: ', actualEventName);
+      await expect(expectedEvent).toEqual(actualEventName);
+  }
+
   async getListOfRacingEvents(){
     console.log("--- Zed Run Automation Framework: Get list of racing event ---");
     await this.page.waitForSelector(racingConfig.RACING_EVENT_LIST, {
@@ -100,6 +193,7 @@ class RacingPage {
     await this.page.waitForSelector();
     await this.page.evaluate((selector) => {
         document.querySelector(selector).scrollIntoView(true);
+
     }, locator);
   }
 

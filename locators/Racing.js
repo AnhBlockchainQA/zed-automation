@@ -1,6 +1,6 @@
 
 module.exports = {
-    TOTAL_GATE: ".buy-in-content .pick-gate .gate-group",
+    RACING_EVENT_SELECTED: ".race-description .race-title .race-name",
     RACING_ENTRY_FREE: ".free-race-badge",
     RACING_EVENT_LIST: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel",
     SELECTED_RACING_EVENT: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i})",
