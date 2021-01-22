@@ -1,24 +1,55 @@
-const { chromium } = require('playwright');
+const fs = require("fs");
+  const path = require("path");
+const pathToExtension = path.join(
+    __dirname,
+    "/utils/browser"
+  );
+  const userDataDir = pathToExtension + "/test-user-data-dir";
+  console.log(userDataDir);
+  
+  const removeDir = function(path) {
+    if (fs.existsSync(path)) {
+      const files = fs.readdirSync(path)
+  
+      if (files.length > 0) {
+        files.forEach(function(filename) {
+          if (fs.statSync(path + "/" + filename).isDirectory()) {
+            removeDir(path + "/" + filename)
+          } else {
+            fs.unlinkSync(path + "/" + filename)
+          }
+        })
+      } else {
+        console.log("No files found in the directory.")
+      }
+    } else {
+      console.log("Directory path not found.")
+    }
+  }
 
-(async () => {
-  const browser = await chromium.launch({ headless: false, slowMo: 50 });
-  const context = await browser.newContext();
-    // Create a page.
-  const page = await context.newPage();
+  function cleanEmptyFoldersRecursively(folder) {
+    var isDir = fs.statSync(folder).isDirectory();
+    if (!isDir) {
+      return;
+    }
+    var files = fs.readdirSync(folder);
+    if (files.length > 0) {
+      files.forEach(function(file) {
+        var fullPath = path.join(folder, file);
+        cleanEmptyFoldersRecursively(fullPath);
+      });
 
-  // Navigate explicitly, similar to entering a URL in the browser.
-  await page.goto('https://zed-front-pr-333.herokuapp.com/stable/stable-48795285');
+      // re-evaluate files; after deleting subfolder
+      // we may have parent folder empty now
+      files = fs.readdirSync(folder);
+    }
 
-  // Navigate implicitly by clicking a link.
-  await page.click('div.start-part');
-  await page.click('.overline-text.bold');
-  // Expect a new url.
-  console.log(page.url());
-
-
-
-  // const page = await browser.newPage();
-  // await page.goto('https://zed-front-pr-333.herokuapp.com/stable/stable-48795285');
-  // await page.screenshot({ path: `example.png` });
-  // await browser.close();
-})();
+    if (files.length == 0) {
+      console.log("removing: ", folder);
+      fs.rmdirSync(folder);
+      return;
+    }
+  }
+    
+  removeDir(userDataDir);
+  cleanEmptyFoldersRecursively(userDataDir);

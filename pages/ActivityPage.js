@@ -2,6 +2,7 @@ const activityConfig = require("../locators/Activity");
 class ActivityPage {
   constructor(page) {
     this.page = page;
+    this.page.setDefaultTimeout(60000);
   }
 
   async bringToFront(){

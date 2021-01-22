@@ -2,6 +2,7 @@ const { PageFactory } = require("../../utils/browser/pageFactory");
 const { LoginPage } = require("../../pages/LoginPage");
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const apiRequest = require("../../utils/api/api");
+const test = require("jest-retries");
 
 let pageFactory;
 let login;
@@ -17,11 +18,12 @@ const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blan
 
 beforeAll(async () => {
   pageFactory = new PageFactory();
+  pageFactory.removeCache();
 });
 
 describe("Login to ZedRun with magic link", () => {
 
-  test("Open ZedRun page and input valid email to generate magic link", async () => {
+  test("Open ZedRun page and input valid email to generate magic link", 3, async () => {
     email = await apiRequest.generateRandomEmail();
     login = email.split("@")[0];
     domain = email.split("@")[1];
@@ -35,7 +37,7 @@ describe("Login to ZedRun with magic link", () => {
     await loginPage.waitForTimeout();
   });
 
-  test("Check mail inbox to get magic link", async () => {
+  test("Check mail inbox to get magic link", 3, async () => {
     messageId = await apiRequest.getZedRunMessageId(login, domain);
     magicLink = await apiRequest.getMagicLink(
       login,
@@ -46,7 +48,7 @@ describe("Login to ZedRun with magic link", () => {
     console.log('>>> URL ', magicLink);
   });
  
-  test("Open new browser with magic link", async () => {
+  test("Open new browser with magic link", 3, async () => {
     newPageInstance = await pageFactory.newTab(false, 0);
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
@@ -55,7 +57,7 @@ describe("Login to ZedRun with magic link", () => {
     await magicLinkPage.waitForTimeout();
   });
 
-  test("Switch back to ZedRun page and verify login successful", async () => {
+  test("Switch back to ZedRun page and verify login successful", 3, async () => {
     await loginPage.bringToFront();
     await loginPage.checkIfWelcomeLabelPresent();
   });

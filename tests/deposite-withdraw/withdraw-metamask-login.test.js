@@ -72,9 +72,9 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
 
   test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    // await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
+    await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();
   });
 
@@ -93,12 +93,12 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
     await withdrawMetamaskNotificationPage.waitForLoadState();
     await withdrawMetamaskNotificationPage.clickOnSignButton();
     await withdrawMetamaskNotificationPage.waitForCloseEvent();
-    // await walletPage.scrollToZedBalance();
-    // await walletPage.checkIfETHBalanceUpdated(zedBalance, newZedBalance);
+    await walletPage.bringToFront();
+    await walletPage.scrollToZedBalance();
+    await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest();
-  done()
+afterAll(async () => {
+  await metamaskFactory.close();
 });

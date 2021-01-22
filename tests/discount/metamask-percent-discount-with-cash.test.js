@@ -11,6 +11,7 @@ const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
+const test = require('jest-retries');
 
 let metamaskFactory;
 let metamaskPage;
@@ -75,7 +76,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
 
   test ("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    // await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnMarketplaceLink();
@@ -117,6 +118,6 @@ describe("Use percent discount voucher to buy horse with card while logging in w
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.endTest();
+  await metamaskFactory.close();
   done();
 });

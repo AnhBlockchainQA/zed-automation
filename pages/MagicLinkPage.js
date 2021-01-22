@@ -1,9 +1,10 @@
-const zedRunConfig = require("../locators/ZedRun");
+const {LOGIN_POPUP} = require("../locators/ZedRun");
 const { WAIT_TIME } = require("../data/env");
 
 class MagicLinkPage {
   constructor(page) {
     this.page = page;
+    this.page.setDefaultTimeout(90000);
   }
 
   async bringToFront() {
@@ -26,10 +27,14 @@ class MagicLinkPage {
 
   async waitForLoginFormHidden() {
     console.log("--- Zed Run Automation Framework: Wait until login form hidden ---");
-    await this.page.waitForSelector(zedRunConfig.LOGIN_POPUP, {
+    await this.page.waitForSelector(LOGIN_POPUP, {
       hidden: true,
       timeout: 0,
     });
+  }
+
+  async waitForNavigation(){
+    await this.page.waitForNavigation();
   }
 
 }

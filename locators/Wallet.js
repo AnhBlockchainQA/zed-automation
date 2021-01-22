@@ -1,14 +1,14 @@
 
 module.exports = {
     WALLET_ICON: "//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']",
-    DEPOSITE_BUTTON: "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='deposit-withdraw']//div[text()='Deposit']",
-    DEPOSITE_AMOUNT_INPUT: "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'dw-content')]/div[@class='matic-deposit']/div[contains(@class,'dw-price')]/input[1]",
-    DEPOSITE_TO_ZED_BUTTON: "//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'dw-content')]/div[@class='matic-deposit']/button[text()='Deposit to ZED Balance']",
-    ETH_BALANCE: ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='wallet'] .wallet-price div[class*='lg-text']",
-    WITHDRAW_BUTTON: "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='deposit-withdraw']//div[text()='Withdraw']",
-    WITHDRAW_AMOUNT_INPUT : "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/div[contains(@class,'dw-price')]/input[not(@disabled)]",
-    WITHDRAW_FROM_ZED_BUTTON: "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/button[text()='Withdraw from ZED Balance']",
-    ZED_BALANCE: ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='zed'] .wallet-price div[class*='lg-text']",
-    CLAIM_BUTTON: ".header-desktop header div.balance-sidebar.opened div.sidebar-content div.wallet button",
+    DEPOSITE_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .deposit-withdraw > .dw-option:nth-child(1) > .primary-text",
+    DEPOSITE_AMOUNT_INPUT: ".dw-content-container > .open > .matic-deposit > .dw-price > .z-input",
+    DEPOSITE_TO_ZED_BUTTON: ".sidebar-content > .dw-content-container > .open > .matic-deposit > .primary-btn",
+    ETH_BALANCE: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .top > .wallet-price > .lg-text",
+    WITHDRAW_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .deposit-withdraw > .dw-option:nth-child(2) > .primary-text",
+    WITHDRAW_AMOUNT_INPUT : ".dw-content-container > .open > .matic-withdraw > .dw-price > .z-input",
+    WITHDRAW_FROM_ZED_BUTTON: ".sidebar-content > .dw-content-container > .open > .matic-withdraw > .primary-btn",
+    ZED_BALANCE: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .zed > .top > .wallet-price > .lg-text",
+    CLAIM_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .down > .tr-item:nth-child(${i}) > .right > .primary-btn",
     CONFIRM_DEPOSITE_BUTTON: "form > section > .section-footer > .d-flex > .primary-btn"
 };

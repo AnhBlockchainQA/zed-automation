@@ -1,9 +1,17 @@
 const { ZEDRUN_URL, WAIT_TIME } = require("../data/env");
-const zedRunConfig = require("../locators/ZedRun");
+const {
+  LOGIN_START_BUTTON,
+  EMAIL_INPUT,
+  CONTINUE_BUTTON,
+  WELCOME_LABEL,
+  CONNECT_METAMASK,
+  AUTHENTICATE_BUTTON,
+} = require("../locators/ZedRun");
 
 class LoginPage {
   constructor(page) {
     this.page = page;
+    this.page.setDefaultTimeout(45000);
   }
 
   async setPageInstance(page) {
@@ -16,30 +24,24 @@ class LoginPage {
       await this.page.waitForLoadState();
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
       await this.page.waitForLoadState();
-    } catch{
+    } catch {
       throw new Error("Unable to launch the url ", ZEDRUN_URL);
     }
   }
 
   async clickOnStartButton() {
-<<<<<<< HEAD
     try {
       console.log(
         "--- Zed Run Automation Framework: Click on Start Button ---"
       );
-      await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {
+      await this.page.waitForSelector(LOGIN_START_BUTTON, {
         visible: true,
         timeout: 0,
       });
-      await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
+      await this.page.click(LOGIN_START_BUTTON);
     } catch {
       throw new Error("Start button is not present yet!");
     }
-=======
-    await console.log("--- Zed Run Automation Framework: Click on Start Button ---");
-    await this.page.waitForSelector(zedRunConfig.LOGIN_START_BUTTON, {visible: true, timeout: 0});
-    await this.page.click(zedRunConfig.LOGIN_START_BUTTON);
->>>>>>> develop
   }
 
   async typeEmail(email) {
@@ -47,12 +49,12 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Input value to email field ---"
       );
-      await this.page.waitForSelector(zedRunConfig.EMAIL_INPUT, {
+      await this.page.waitForSelector(EMAIL_INPUT, {
         visible: true,
         timeout: 0,
       });
-      await this.page.type(zedRunConfig.EMAIL_INPUT, email, { delay: 100 });
-    } catch{
+      await this.page.type(EMAIL_INPUT, email, { delay: 100 });
+    } catch {
       throw new Error("Email input field is not present yet!");
     }
   }
@@ -62,13 +64,13 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Continue Button ---"
       );
-      await this.page.waitForSelector(zedRunConfig.CONTINUE_BUTTON, {
+      await this.page.waitForSelector(CONTINUE_BUTTON, {
         visible: true,
         timeout: 0,
       });
-      await this.page.click(zedRunConfig.CONTINUE_BUTTON);
+      await this.page.click(CONTINUE_BUTTON);
     } catch {
-      throw new Error(error);
+      throw new Error("Continue button is not shown or clickable");
     }
   }
 
@@ -76,14 +78,14 @@ class LoginPage {
     try {
       console.log("---- Zed Run Automation Framework: Bring page upfront ---");
       await this.page.bringToFront();
-    } catch{
+    } catch {
       throw new Error("Page instance is not ready or present!");
     }
   }
 
   async waitForTimeout() {
-      console.log("---- Zed Run Automation Framework: Wait for timeout ---");
-      await this.page.waitForTimeout(WAIT_TIME);
+    console.log("---- Zed Run Automation Framework: Wait for timeout ---");
+    await this.page.waitForTimeout(WAIT_TIME);
   }
 
   async checkIfWelcomeLabelPresent() {
@@ -91,12 +93,12 @@ class LoginPage {
       "---- Zed Run Automation Framework: Check if welcome label is present ---"
     );
     try {
-      await this.page.waitForSelector(zedRunConfig.WELCOME_LABEL, {
+      await this.page.waitForSelector(WELCOME_LABEL, {
         visible: true,
         timeout: 0,
       });
-    } catch{
-      throw new Error("Welcome label is not present!")
+    } catch {
+      throw new Error("Welcome label is not present!");
     }
   }
 
@@ -105,9 +107,11 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Connect Metamask button ---"
       );
-      await this.page.click(zedRunConfig.CONNECT_METAMASK);
-    } catch{
-      throw new Error("Connect Metamask button is not present or not clickable");
+      await this.page.click(CONNECT_METAMASK);
+    } catch {
+      throw new Error(
+        "Connect Metamask button is not present or not clickable"
+      );
     }
   }
 
@@ -116,7 +120,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Authenticate Button ---"
       );
-      await this.page.click(zedRunConfig.AUTHENTICATE_BUTTON);
+      await this.page.click(AUTHENTICATE_BUTTON);
     } catch {
       throw new Error("Authenticate button is not present or not clickable");
     }
