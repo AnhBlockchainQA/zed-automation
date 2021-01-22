@@ -1,0 +1,66 @@
+{
+  "uid" : "7b443798c0c1fed0",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "949b33d360338d356a0d54e486cb070f",
+  "time" : {
+    "start" : 1611331575344,
+    "stop" : 1611331589891,
+    "duration" : 14547
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "16c1eaa6dcf92ece",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/16c1eaa6dcf92ece",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331968912,
+          "stop" : 1611331985601,
+          "duration" : 16689
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7b443798c0c1fed0.json",
+  "parameterValues" : [ ]
+}

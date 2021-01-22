@@ -1,0 +1,66 @@
+{
+  "uid" : "1475fcf8bf7597",
+  "name" : "Check that avatar is shown then click on Marketplace link",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Check that avatar is shown then click on Marketplace link",
+  "historyId" : "47ea5dadab8f35e43d6787c6b8d8fc7a",
+  "time" : {
+    "start" : 1611330266973,
+    "stop" : 1611330271393,
+    "duration" : 4420
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace link"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "1017972452db3e3c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/1017972452db3e3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611330647248,
+          "stop" : 1611330652653,
+          "duration" : 5405
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1475fcf8bf7597.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "f90281a42b8a2af3",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Pick horses to gate and process Next to Run event.Check that avatar is shown then click on Wallet",
+  "historyId" : "7c556e997ca0a83eedab03f07a2a163a",
+  "time" : {
+    "start" : 1611335138965,
+    "stop" : 1611335154364,
+    "duration" : 15399
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4ce08f053029a4a1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/4ce08f053029a4a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611329627860,
+          "stop" : 1611329632207,
+          "duration" : 4347
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f90281a42b8a2af3.json",
+  "parameterValues" : [ ]
+}

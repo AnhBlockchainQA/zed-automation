@@ -1,0 +1,66 @@
+{
+  "uid" : "951e0df9a7a88160",
+  "name" : "Update metamask info",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Update metamask info",
+  "historyId" : "cfcca9773992edaa19342648d19e1aa2",
+  "time" : {
+    "start" : 1611330904271,
+    "stop" : 1611330907726,
+    "duration" : 3455
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "c2121cc6416cb567",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/c2121cc6416cb567",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331286025,
+          "stop" : 1611331290119,
+          "duration" : 4094
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "951e0df9a7a88160.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "79408403b3e8961",
+  "name" : "Update metamask info",
+  "fullName" : "Login to ZedRun with Metamask.Update metamask info",
+  "historyId" : "a257a6f2f150982975a4ef84c2c82566",
+  "time" : {
+    "start" : 1611335510413,
+    "stop" : 1611335519600,
+    "duration" : 9187
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a7a901bf4002de30",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/a7a901bf4002de30",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611335386374,
+          "stop" : 1611335400717,
+          "duration" : 14343
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "79408403b3e8961.json",
+  "parameterValues" : [ ]
+}

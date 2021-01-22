@@ -1,0 +1,66 @@
+{
+  "uid" : "472fa0857e60425",
+  "name" : "Process the checkout with banking account and check value",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Process the checkout with banking account and check value",
+  "historyId" : "f500b2e23222bc0eb4a2a22f8ee6c6dd",
+  "time" : {
+    "start" : 1611331250478,
+    "stop" : 1611331268063,
+    "duration" : 17585
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with banking account and check value"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "9e232c8edfc8c3ed",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/9e232c8edfc8c3ed",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331643097,
+          "stop" : 1611331659989,
+          "duration" : 16892
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "472fa0857e60425.json",
+  "parameterValues" : [ ]
+}
