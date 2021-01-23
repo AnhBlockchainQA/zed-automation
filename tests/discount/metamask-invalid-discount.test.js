@@ -9,6 +9,7 @@ const { INVALID_CODE } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const  { HomePage } = require("../../pages/HomePage");
+const test = require('jest-retries');
 
 let metamaskFactory;
 let metamaskPage;
@@ -29,7 +30,7 @@ beforeAll(async () => {
 });
 
 describe("Use expired discount voucher when logging in with Metamask", () => {
-  test("Update metamask info", async () => {
+  test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -45,7 +46,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-  test("Open ZedRun page and click Connnect Metamask", async () => {
+  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
@@ -68,20 +69,19 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Check that avatar is shown then click on Marketplace to select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    // await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
     await homePage.clickOnMarketplaceLink();
-  });
-
-  test("Apply the discount coupon : INVALID_COUPON", async () => {
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
+    await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
-    firstHorseName = await marketPlacePage.getHorseName();
-    originalPrice = await marketPlacePage.getHorsePrice();
+  });
+
+  test("Apply the discount coupon : INVALID_COUPON", 3, async () => {
     await marketPlacePage.clickOnDownwardArrow();
     await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
     await marketPlacePage.clickApplyButton();
@@ -90,6 +90,6 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.endTest();
+  await metamaskFactory.close();
   done();
 });

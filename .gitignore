@@ -2,3 +2,4 @@ node_modules
 utils/browser/test-user-data-dir
 pages/test-user-data-dir
 allure-results/
+allure-report/

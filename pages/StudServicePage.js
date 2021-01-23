@@ -5,6 +5,7 @@ const { REGEX } = require("../data/env");
 class StudServicePage {
   constructor(page) {
     this.page = page;
+    this.page.setDefaultTimeout(30000);
   }
 
   async getListOfMaleHorses() {

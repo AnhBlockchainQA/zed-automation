@@ -20,6 +20,7 @@ const studServiceConfig = require('../locators/StudService');
 const { HomePage } = require('../pages/HomePage');
 const { StudServicePage } = require('../pages/StudServicePage');
 const { ActivityPage } = require('../pages/ActivityPage');
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -87,13 +88,12 @@ describe("Generate stud horse", () => {
 
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnBreedingLink();
   });
 
   test("Select mate horse", async () => {
-    await homePage.clickOnBreedingLink();
     studServicePage = new StudServicePage(newPageInstance);
     index = await studServicePage.getRandomIndexOfMaleHorseFromList();
     await studServicePage.clickOnSelectedMaleHorseWithIndex(index);
@@ -103,7 +103,7 @@ describe("Generate stud horse", () => {
     await studServicePage.checkIfCorrectHorseNameSelected(malehorseName, actualSelectHorse);
   });
 
-  test("Select female horse", async() => {
+  test("Select female horse", 3, async() => {
     await studServicePage.clickOnSelectFemaleButton();
     await studServicePage.verifySelectFemalePopUpShown();
     await studServicePage.getListOfFemaleHorse();
@@ -115,7 +115,7 @@ describe("Generate stud horse", () => {
     await studServicePage.checkIfCorrectHorseNameSelected(femalehorseName, actualSelectHorse);
   });
 
-  test("Proceed breeding steps", async() => {
+  test("Proceed breeding steps", 3, async() => {
     await studServicePage.scrollToBuyCoverButton();
     await studServicePage.clickOnBuyCoverButton();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, studServiceConfig.CONFIRM_BUTTON);
@@ -124,16 +124,16 @@ describe("Generate stud horse", () => {
     confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Go to Activity page and check if we breed successfully", async() => {
+  test("Go to Activity page and check if we breed successfully", 3, async() => {
     await studServicePage.clickOnCheckActivityButton();
     activityPage = new ActivityPage(newPageInstance);
-    await activityPage.checkIfBreedingInfoCorrect(malehorseName, femalehorseName);
+    await activityPage.checkIfStatementInfoCorrect(malehorseName, femalehorseName);
   });
 });
 
 
 afterAll(async (done) => {
-  await metamaskFactory.endTest();
+  await metamaskFactory.close();
   done()
 });
 
