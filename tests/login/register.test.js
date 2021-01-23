@@ -15,8 +15,9 @@ const {
   PASSWORD,
   CONFIRM_PASSWORD
 } = require('../../data/env');
-const zedRunConfig = require('../../locators/ZedRun');
-
+const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require('../../locators/ZedRun');
+const { HomePage } = require('../../pages/HomePage');
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -27,17 +28,18 @@ let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
+let homePage;
+
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
-  console.log('init done')
 });
 
 
 describe("Login to ZedRun with Metamask", () => {
 
-  test("Update metamask info", async () => {
+  test("Update metamask info", 3, async () => {
 
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -55,35 +57,35 @@ describe("Login to ZedRun with Metamask", () => {
     console.log('metamask done')
   })
 
-  test("Open ZedRun page and click Connnect Metamask", async (done) => {
+  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
     newPageInstance = await metamaskFactory.newPage();
     console.log('>newPageInstance>>>')
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, CONNECT_METAMASK);
     metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
-    console.log('confirm 1')
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
     
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, AUTHENTICATE_BUTTON);
     otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
-    console.log('confirm 2')
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    await zedRunPage.clickOnAcceptButton();
-
   });
 
-  
+  test("Check that avatar is shown", 3, async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
+    await zedRunPage.clickOnAcceptButton();
+  });
 });
 
 afterAll(async (done) => {
-  console.log('finish all')
   await metamaskFactory.endTest()
   done()
 });

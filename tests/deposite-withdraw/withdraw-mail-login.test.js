@@ -19,6 +19,7 @@ const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blan
 
 beforeAll(async () => {
   pageFactory = new PageFactory();
+  pageFactory.removeCache();
 });
 
 describe("Withdraw from ZED balance by logging in with magic link", () => {
@@ -48,19 +49,21 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForLoginFormHidden();
+    await magicLinkPage.waitForNavigation();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
-    homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
-    await homePage.clickOnAcceptButton();
+  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
+    homePage = new HomePage(pageInstance);
+    await homePage.bringToFront();
+    // await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
+    await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();
   });
 
+
   test ("Click on Withdraw button and check if ZED balance is updated", async (done) => {
-    walletPage = new WalletPage(newPageInstance);
+    walletPage = new WalletPage(pageInstance);
     await walletPage.clickOnWithdrawButton();
     await walletPage.scrollToZedBalance();
     let zedBalance = await walletPage.getZedBalance();
@@ -74,10 +77,8 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
   });
 });
 
-afterAll(async (done) => {
+afterAll(async () => {
   await pageFactory.endTest();
-  await pageInstance.endTest();
-  done();
 });
 
 

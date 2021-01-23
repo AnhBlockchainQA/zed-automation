@@ -4,7 +4,6 @@ module.exports = {
     CLICK_IMPORT_WALLET_BUTTON: "//button[text()='Import wallet']",
     CLICK_I_AGREE_BUTTON: "//button[text()='I Agree']",
     FILL_TEXT_AREA_FILL_PASSPHASE: "[placeholder='Paste seed phrase from clipboard']",
-    SEED_PHASE: "promote involve unaware today camera major net tail area rule manual humor",
     FILL_PASSWORD_INPUT: "#password",
     FILL_PASSWORD_CONFIRM_INPUT: "#confirm-password",
     CHECKBOX_AGREE: ".first-time-flow__terms",

@@ -70,11 +70,11 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
-    await homePage.clickOnAcceptButton();
+    // await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
+    await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();
   });
 
@@ -95,7 +95,6 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest();
-  done();
+afterAll(async () => {
+  await metamaskFactory.close();
 });
