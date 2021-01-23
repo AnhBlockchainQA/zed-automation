@@ -7,12 +7,6 @@
     "test": "jest --runInBand --testTimeout=300000",
     "allure": "allure generate --clean"
   },
-  "jest": {
-    "verbose": true,
-    "setupFilesAfterEnv": [
-      "./tests/afterTest.js"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
