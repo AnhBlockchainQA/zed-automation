@@ -92,9 +92,9 @@ describe("Purchase horse with ETH", () => {
   test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
     await homePage.clickOnMarketplaceLink();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.mouseOverFirstHorse();

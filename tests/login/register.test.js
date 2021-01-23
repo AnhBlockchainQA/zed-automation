@@ -80,6 +80,7 @@ describe("Login to ZedRun with Metamask", () => {
     homePage = new HomePage(newPageInstance);
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.checkIfAvatarPresent();
+    await homePage.clickOnAcceptButton();
   });
 });
 

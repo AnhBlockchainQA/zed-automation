@@ -93,6 +93,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   test("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.clickOnMarketplaceLink();
+    await homePage.clickOnAcceptButton();
     await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();

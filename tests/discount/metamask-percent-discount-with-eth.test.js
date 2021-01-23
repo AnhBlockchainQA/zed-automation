@@ -94,6 +94,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
   test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.clickOnMarketplaceLink();
+    await homePage.clickOnAcceptButton();
     await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();

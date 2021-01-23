@@ -95,6 +95,7 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     async () => {
       homePage = new HomePage(newPageInstance);
       await homePage.clickOnMarketplaceLink();
+      await homePage.clickOnAcceptButton();
       await homePage.waitForBalanceInfoToBeShown();
       marketPlacePage = new MarketplacePage(newPageInstance);
       await marketPlacePage.waitUntilHorseListLoaded();
