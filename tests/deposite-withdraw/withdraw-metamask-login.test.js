@@ -72,7 +72,6 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
 
   test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
-    // await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();

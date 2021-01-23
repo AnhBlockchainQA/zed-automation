@@ -4,14 +4,21 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require("../../data/env");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  CARD_NUMBER,
+  CARD_EXPIRATION_DATE,
+  CARD_CVC,
+} = require("../../data/env");
 const { PERCENT_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
-const test = require('jest-retries');
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -57,29 +64,36 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-
   });
 
-  test ("Go to Marketplace and select first horse", async () => {
+  test("Go to Marketplace and select first horse", async () => {
     homePage = new HomePage(newPageInstance);
-    // await homePage.checkIfAvatarPresent();
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
     await homePage.clickOnMarketplaceLink();
+    await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.mouseOverFirstHorse();
@@ -110,14 +124,12 @@ describe("Use percent discount voucher to buy horse with card while logging in w
     await paymentPage.clickDoneButton();
   });
 
-  test("Verify that our order is performed", async() => {
+  test("Verify that our order is performed", async () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
-
 });
 
-afterAll(async (done) => {
+afterAll(async () => {
   await metamaskFactory.close();
-  done();
 });

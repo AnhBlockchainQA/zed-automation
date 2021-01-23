@@ -7,9 +7,9 @@ const {
   HORSE_PRICE,
   HORSE_NAME,
   ERROR_MESSAGE,
-  HORSE_LIST
+  HORSE_LIST,
 } = require("../locators/MarketPlace");
-const { HORSE_LIST_SIZE, HORSE_LIST_PREDICATE } = require("../data/env");
+const { HORSE_LIST_SIZE, HORSE_LIST_ATTRIBUTE } = require("../data/env");
 
 class MarketplacePage {
   constructor(page) {
@@ -159,49 +159,18 @@ class MarketplacePage {
     }
   }
 
-  async waitUntilHorseListLoaded() {
-    console.log(
-      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
-    );
-    try {
-      await this.page.waitForFunction(
-        ([locator, value]) => {
-          return document.querySelectorAll(locator).length >= value;
-        },
-        [HORSE_LIST, HORSE_LIST_SIZE],
-        10000,
-        { timeout: 300000 }
-      );
-    } catch {
-      throw new Error(
-        "Waiting time is over but size of horse list is still incorrect!"
-      );
-    }
-  }
-
-  async clickOnDownwardArrow(){
-    console.log("--- Zed Run Automation Framework: Click on downward arrow ---");
-    try{
-      await this.page.waitForSelector(DOWNWARD_ARROW,{timeout: 0});
-      await this.page.click(DOWNWARD_ARROW);
-    }catch{
-      throw new Error("Downward arrow icon is not present");
-    }
-  }
-
-  //   async waitUntilHorseListLoaded() {
+  // async waitUntilHorseListLoaded() {
   //   console.log(
   //     "--- Zed Run Automation Framework: Wait until horse list loaded ---"
   //   );
   //   try {
   //     await this.page.waitForFunction(
-  //       ([locator, value, predicate]) => {
-  //         return Array.from(document.querySelectorAll(locator))
-  //                     .filter(predicate)
-  //                     .length == value;
+  //       ([locator, value]) => {
+  //         return document.querySelectorAll(locator).length >= value;
   //       },
-  //       [HORSE_LIST, HORSE_LIST_SIZE, HORSE_LIST_PREDICATE], 5000,
-  //       { timeout: 30000 }
+  //       [HORSE_LIST, HORSE_LIST_SIZE],
+  //       10000,
+  //       { timeout: 300000 }
   //     );
   //   } catch {
   //     throw new Error(
@@ -210,6 +179,51 @@ class MarketplacePage {
   //   }
   // }
 
+  async clickOnDownwardArrow() {
+    console.log(
+      "--- Zed Run Automation Framework: Click on downward arrow ---"
+    );
+    try {
+      await this.page.waitForSelector(DOWNWARD_ARROW, { timeout: 0 });
+      await this.page.click(DOWNWARD_ARROW);
+    } catch {
+      throw new Error("Downward arrow icon is not present");
+    }
+  }
+
+  async waitUntilHorseListLoaded() {
+    console.log(
+      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
+    );
+    try {
+      await this.page.waitForFunction(
+        ([locator, attribute]) => {
+          Array.from(document.querySelectorAll(locator))
+            .map(function (e) {
+              return e.getAttribute("class");
+            })
+            .every((v) => v.includes(attribute));
+        },
+        [HORSE_LIST, HORSE_LIST_ATTRIBUTE],
+        5000,
+        { timeout: 100000 }
+      );
+    } catch {
+      throw new Error(
+        "Waiting time is over but size of horse list is still incorrect!"
+      );
+    }
+  }
+
+  // async isHorsesListNotEmpty(){
+  //   console.log(
+  //     "--- Zed Run Automation Framework: Check if horses list is not empty ---"
+  //   );
+  //   const isHorseExisted = await this.page.evaluate(locator => {
+  //     return Array.from(document.querySelectorAll(locator)).length > 0
+  //   }, HORSE_LIST);
+  //   return isHorseExisted;
+  // }
 }
 
 module.exports = { MarketplacePage };

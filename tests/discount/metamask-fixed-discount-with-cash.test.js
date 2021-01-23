@@ -4,14 +4,21 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_CVC , CARD_EXPIRATION_DATE } = require("../../data/env");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  CARD_NUMBER,
+  CARD_CVC,
+  CARD_EXPIRATION_DATE,
+} = require("../../data/env");
 const { FIXED_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
-const { ActivityPage } = require('../../pages/ActivityPage');
-const test = require('jest-retries');
+const { ActivityPage } = require("../../pages/ActivityPage");
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -83,17 +90,19 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Marketplace to select first horse", 3, async () => {
-    homePage = new HomePage(newPageInstance);
-    // await homePage.checkIfAvatarPresent();
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
-    await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.mouseOverFirstHorse();
-    await marketPlacePage.clickFirstHorsePreview();
-  });
+  test(
+    "Check that avatar is shown then click on Marketplace to select first horse",
+    3,
+    async () => {
+      homePage = new HomePage(newPageInstance);
+      await homePage.clickOnMarketplaceLink();
+      await homePage.waitForBalanceInfoToBeShown();
+      marketPlacePage = new MarketplacePage(newPageInstance);
+      await marketPlacePage.waitUntilHorseListLoaded();
+      await marketPlacePage.mouseOverFirstHorse();
+      await marketPlacePage.clickFirstHorsePreview();
+    }
+  );
 
   test("Apply the discount coupon : ZED-15-DOLLARS", 3, async () => {
     firstHorseName = await marketPlacePage.getHorseName();
@@ -106,7 +115,7 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     await marketPlacePage.verifyDiscountPrice(discountPrice);
   });
 
-  test("Process payment by cash", 3, async() => {
+  test("Process payment by cash", 3, async () => {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithCreditCardButton();
     await paymentPage.waitUntilPaymentFormPresent();
@@ -120,18 +129,11 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
     await paymentPage.clickDoneButton();
   });
 
-  test("Verify that our order is performed", 3, async() => {
+  test("Verify that our order is performed", 3, async () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
-
 });
-
-afterEach(async(err) => {
-  if(err !== null){
-    await metamaskFactory.close();
-  }
-})
 
 afterAll(async () => {
   await metamaskFactory.close();

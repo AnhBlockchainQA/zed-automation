@@ -1,7 +1,9 @@
 const { MetamaskPage } = require("../../pages/MetamaskPage");
 const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
 const { LoginPage } = require("../../pages/LoginPage");
-const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
+const {
+  MetamaskNotificationPage,
+} = require("../../pages/MetamaskNotification");
 const {
   SEED_PHRASE,
   PASSWORD,
@@ -10,12 +12,12 @@ const {
   WAIT_TIME,
 } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
-const {CONFIRM_BUTTON}  = require("../../locators/Payment");
+const { CONFIRM_BUTTON } = require("../../locators/Payment");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
-const test = require('jest-retries');
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -32,6 +34,7 @@ let confirmMetamaskNotificationPage;
 let paymentPage;
 let homePage;
 let activityPage;
+let canPurchaseHorses;
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -40,7 +43,7 @@ beforeAll(async () => {
 });
 
 describe("Purchase horse with ETH", () => {
-  test("Update metamask info", 3,  async () => {
+  test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -88,7 +91,7 @@ describe("Purchase horse with ETH", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test ("Go to Marketplace and select first horse", 3, async () => {
+  test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
@@ -101,7 +104,7 @@ describe("Purchase horse with ETH", () => {
     horseName = await marketPlacePage.getHorseName();
   });
 
-  test("Purchase horse with ETH", 3, async() => {
+  test("Purchase horse with ETH", 3, async () => {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithETH();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
@@ -118,14 +121,13 @@ describe("Purchase horse with ETH", () => {
     // await confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Verify that our order is performed", 3, async() => {
+  test("Verify that our order is performed", 3, async () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.bringToFront();
     await activityPage.checkIfStatementInfoCorrect(horseName);
   });
 });
 
-afterAll(async (done) => {
+afterAll(async () => {
   await metamaskFactory.close();
-  done();
 });

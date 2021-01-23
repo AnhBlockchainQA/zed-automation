@@ -148,7 +148,6 @@ describe("Pick horses to gate and process Next to Run event", () => {
 });
 
 
-afterAll(async (done) => {
-  // await metamaskFactory.endTest();
-  // done()
+afterAll(async () => {
+  await metamaskFactory.close();
 });

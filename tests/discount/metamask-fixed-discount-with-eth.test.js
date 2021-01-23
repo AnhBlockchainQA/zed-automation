@@ -4,7 +4,13 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../../data/env");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  THRESHOLD,
+  WAIT_TIME,
+} = require("../../data/env");
 const { FIXED_DISCOUNT } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const paymentConfig = require("../../locators/Payment");
@@ -12,7 +18,7 @@ const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { ActivityPage } = require("../../pages/ActivityPage");
-const test = require('jest-retries');
+const test = require("jest-retries");
 
 let metamaskFactory;
 let metamaskPage;
@@ -86,18 +92,16 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test ("Go to Marketplace and select first horse", 3, async () => {
+  test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
-    // await homePage.checkIfAvatarPresent();
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
     await homePage.clickOnMarketplaceLink();
+    await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
   });
-  
+
   test("Apply the discount coupon : ZED-15-DOLLARS", 3, async () => {
     firstHorseName = await marketPlacePage.getHorseName();
     originalPrice = await marketPlacePage.getHorsePrice();
@@ -109,33 +113,34 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await marketPlacePage.verifyDiscountPrice(discountPrice);
   });
 
-  test("Go to Marketplace and buy horse with discount - Payment with ETH", 3, async () => {
-    paymentPage = new PaymentPage(newPageInstance);
-    await paymentPage.clickOnBuyWithETH();
-    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
-      newPageInstance,
-      paymentConfig.CONFIRM_BUTTON,
-      THRESHOLD,
-      WAIT_TIME
-    );
+  test(
+    "Go to Marketplace and buy horse with discount - Payment with ETH",
+    3,
+    async () => {
+      paymentPage = new PaymentPage(newPageInstance);
+      await paymentPage.clickOnBuyWithETH();
+      anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
+        newPageInstance,
+        paymentConfig.CONFIRM_BUTTON,
+        THRESHOLD,
+        WAIT_TIME
+      );
 
-    anotherMetamaskNotificationPage = new MetamaskNotificationPage(
-      anotherMetamaskNotificationInstance
-    );
-    await anotherMetamaskNotificationPage.waitForLoadState();
-    await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    // await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    // await anotherMetamaskNotificationPage.waitForCloseEvent();
-  });
+      anotherMetamaskNotificationPage = new MetamaskNotificationPage(
+        anotherMetamaskNotificationInstance
+      );
+      await anotherMetamaskNotificationPage.waitForLoadState();
+      await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    }
+  );
 
-  test("Verify that our order is performed", 3, async() => {
+  test("Verify that our order is performed", 3, async () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.bringToFront();
     await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
 });
 
-afterAll(async (done) => {
+afterAll(async () => {
   await metamaskFactory.close();
-  done();
 });

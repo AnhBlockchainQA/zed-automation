@@ -132,8 +132,7 @@ describe("Generate stud horse", () => {
 });
 
 
-afterAll(async (done) => {
+afterAll(async () => {
   await metamaskFactory.close();
-  done()
 });
 

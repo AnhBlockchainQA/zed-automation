@@ -79,13 +79,11 @@ describe("Login to ZedRun with Metamask", () => {
 
   test("Check that avatar is shown", 3, async () => {
     homePage = new HomePage(newPageInstance);
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
-    await zedRunPage.clickOnAcceptButton();
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest()
-  done()
+afterAll(async () => {
+  await metamaskFactory.close();
 });

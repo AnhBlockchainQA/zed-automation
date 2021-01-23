@@ -5,6 +5,7 @@ const { WalletPage } = require('../pages/WalletPage');
 const apiRequest = require("../utils/api/api");
 const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
 const test = require("jest-retries");
+const { HomePage } = require("../pages/HomePage");
 
 let pageFactory;
 let messageId;
