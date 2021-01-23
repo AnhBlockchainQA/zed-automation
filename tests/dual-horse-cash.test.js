@@ -5,20 +5,21 @@ const { WalletPage } = require('../pages/WalletPage');
 const apiRequest = require("../utils/api/api");
 const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
 const test = require("jest-retries");
+const { HomePage } = require("../pages/HomePage");
 
-let pageFactory;
-let messageId;
-let magicLink;
-let loginPage;
-let magicLinkPage;
-let walletPage;
-let pageInstance;
+var pageFactory = new PageFactory();
+var messageId;
+var magicLink;
+var loginPage;
+var magicLinkPage;
+var walletPage;
+var pageInstance;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
-let newPageInstance;
-let homePage;
+var newPageInstance;
+var homePage;
 
 beforeAll(async () => {
-  pageFactory = new PageFactory();
+  await pageFactory.removeCache();
 });
 
 describe("Dual horse cash", () => {

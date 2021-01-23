@@ -19,19 +19,18 @@ const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require('../../locators/ZedRun')
 const { HomePage } = require('../../pages/HomePage');
 const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let homePage;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var homePage;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
@@ -79,13 +78,12 @@ describe("Login to ZedRun with Metamask", () => {
 
   test("Check that avatar is shown", 3, async () => {
     homePage = new HomePage(newPageInstance);
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
-    await zedRunPage.clickOnAcceptButton();
+    await homePage.clickOnAcceptButton();
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest()
-  done()
+afterAll(async () => {
+  await metamaskFactory.close();
 });

@@ -1,38 +1,46 @@
-const { MetamaskPage } = require('../../pages/MetamaskPage');
-const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
-const { LoginPage } = require('../../pages/LoginPage');
-const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, CARD_NUMBER, CARD_EXPIRATION_DATE, CARD_CVC } = require('../../data/env');
-const { MarketplacePage } = require('../../pages/MarketplacePage');
-const { PaymentPage } = require('../../pages/PaymentPage');
-const { HomePage } = require('../../pages/HomePage');
-const { ActivityPage } = require('../../pages/ActivityPage');
-const zedRunConfig  = require('../../locators/ZedRun');
+const { MetamaskPage } = require("../../pages/MetamaskPage");
+const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const {
+  MetamaskNotificationPage,
+} = require("../../pages/MetamaskNotification");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  CARD_NUMBER,
+  CARD_EXPIRATION_DATE,
+  CARD_CVC,
+} = require("../../data/env");
+const { MarketplacePage } = require("../../pages/MarketplacePage");
+const { PaymentPage } = require("../../pages/PaymentPage");
+const { HomePage } = require("../../pages/HomePage");
+const { ActivityPage } = require("../../pages/ActivityPage");
+const zedRunConfig = require("../../locators/ZedRun");
 const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let marketPlacePage;
-let paymentPage;
-let homePage;
-let activityPage;
-let horseName;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var marketPlacePage;
+var paymentPage;
+var homePage;
+var activityPage;
+var horseName;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
+
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
 describe("Buy horse with credit card", () => {
-
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -55,37 +63,45 @@ describe("Buy horse with credit card", () => {
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
-    
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
+  });
 
- })
-
-  test ("Go to Marketplace and select first horse", 3, async () => {
+  test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnAcceptButton();
     await homePage.clickOnMarketplaceLink();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitForBalanceInfoToBeShown();
     marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
     horseName = await marketPlacePage.getHorseName();
   });
-  
-  test("Process payment by cash", 3, async() => {
+
+  test("Process payment by cash", 3, async () => {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithCreditCardButton();
     await paymentPage.waitUntilPaymentFormPresent();
@@ -99,11 +115,11 @@ describe("Buy horse with credit card", () => {
     await paymentPage.clickDoneButton();
   });
 
-  test("Verify that our order is performed",3, async() => {
+  test("Verify that our order is performed", 3, async () => {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.checkIfStatementInfoCorrect(horseName);
   });
-})
+});
 
 afterAll(async () => {
   await metamaskFactory.close();

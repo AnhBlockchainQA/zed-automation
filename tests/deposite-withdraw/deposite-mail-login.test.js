@@ -11,19 +11,18 @@ const {
   AMOUNT,
 } = require("../../data/env");
 
-let pageFactory;
-let messageId;
-let magicLink;
-let loginPage;
-let magicLinkPage;
-let walletPage;
-let pageInstance;
-let newPageInstance;
-let homePage;
+var pageFactory = new PageFactory();
+var messageId;
+var magicLink;
+var loginPage;
+var magicLinkPage;
+var walletPage;
+var pageInstance;
+var newPageInstance;
+var homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
-  pageFactory = new PageFactory();
   pageFactory.removeCache();
 });
 
@@ -62,7 +61,6 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
   test("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(pageInstance);
     await homePage.bringToFront();
-    // await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();

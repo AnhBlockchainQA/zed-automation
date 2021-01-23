@@ -20,24 +20,23 @@ const { HomePage } = require('../pages/HomePage');
 const { RacingPage } = require('../pages/RacingPage');
 const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let homePage;
-let racingPage;
-let index;
-let registeredHorseNo;
-let totalNo;
-let eventName;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var homePage;
+var racingPage;
+var index;
+var registeredHorseNo;
+var totalNo;
+var eventName;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
@@ -148,7 +147,6 @@ describe("Pick horses to gate and process Next to Run event", () => {
 });
 
 
-afterAll(async (done) => {
-  // await metamaskFactory.endTest();
-  // done()
+afterAll(async () => {
+  await metamaskFactory.close();
 });
