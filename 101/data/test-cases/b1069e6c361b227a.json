@@ -1,0 +1,103 @@
+{
+  "uid" : "b1069e6c361b227a",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "c464f31c6ebbf10200617f5ad890f74e",
+  "time" : {
+    "start" : 1611394949582,
+    "stop" : 1611394949585,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:61:73\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launch (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:52:21)\n                    at PageFactory.createBrowser (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:28:39)\n                    at PageFactory.createContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:36:24)\n                    at PageFactory.getContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:44:24)\n                    at PageFactory.newTab (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:50:20)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/withdraw-mail-login.test.js:47:41)\n                    at Object.asyncJestTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12\n                    at new Promise (<anonymous>)\n                    at mapper (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "6784544ded2792a5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/6784544ded2792a5",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394885498,
+          "stop" : 1611394885501,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "20768968c162fe19",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/20768968c162fe19",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611337246732,
+          "stop" : 1611337247714,
+          "duration" : 982
+        }
+      }, {
+        "uid" : "afe71530b9acb24b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/afe71530b9acb24b",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611336795168,
+          "stop" : 1611336795885,
+          "duration" : 717
+        }
+      }, {
+        "uid" : "263b8a54b1157789",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/263b8a54b1157789",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611336690763,
+          "stop" : 1611336691627,
+          "duration" : 864
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b1069e6c361b227a.json",
+  "parameterValues" : [ ]
+}
