@@ -1,0 +1,113 @@
+{
+  "uid" : "c5a006af83879594",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Login to ZedRun with magic link.Open new browser with magic link",
+  "historyId" : "23ca99c354162c48694cedb121ed2aff",
+  "time" : {
+    "start" : 1611395278527,
+    "stop" : 1611395278533,
+    "duration" : 6
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:61:73\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launch (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:52:21)\n                    at PageFactory.createBrowser (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:28:39)\n                    at PageFactory.createContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:36:24)\n                    at PageFactory.getContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:44:24)\n                    at PageFactory.newTab (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:50:20)\n                    at /home/runner/work/zed-automation/zed-automation/tests/login/magicLink.test.js:51:41\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "bf4b6f53b26d558f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/bf4b6f53b26d558f",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394951985,
+          "stop" : 1611394951989,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "2affccfbdf369489",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/2affccfbdf369489",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394888616,
+          "stop" : 1611394888621,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "387e234d21433df0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/387e234d21433df0",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611338451618,
+          "stop" : 1611338452383,
+          "duration" : 765
+        }
+      }, {
+        "uid" : "7e0198c0bdc3712",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/7e0198c0bdc3712",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611337999237,
+          "stop" : 1611337999684,
+          "duration" : 447
+        }
+      }, {
+        "uid" : "e71d2ee3380674f9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/e71d2ee3380674f9",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611337895244,
+          "stop" : 1611337895998,
+          "duration" : 754
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c5a006af83879594.json",
+  "parameterValues" : [ ]
+}
