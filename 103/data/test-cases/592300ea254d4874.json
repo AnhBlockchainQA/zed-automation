@@ -1,0 +1,123 @@
+{
+  "uid" : "592300ea254d4874",
+  "name" : "Go to Marketplace and buy horse with discount - Payment with ETH",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Go to Marketplace and buy horse with discount - Payment with ETH",
+  "historyId" : "e6bc74d8c2371b19fb170e0b2a207a8a",
+  "time" : {
+    "start" : 1611395481605,
+    "stop" : 1611395481617,
+    "duration" : 12
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launchPersistentContext (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)\n                    at MetamaskFactory.init (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:29:42)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-fixed-discount-with-eth.test.js:42:44)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and buy horse with discount - Payment with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "98a19d8779f38186",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/98a19d8779f38186",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395270727,
+          "stop" : 1611395270731,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "a117cfb4db080c55",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/a117cfb4db080c55",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394944433,
+          "stop" : 1611394944436,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "8377e86914b6adbe",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/8377e86914b6adbe",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394879584,
+          "stop" : 1611394879587,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "6da9c856c075718e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/6da9c856c075718e",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611330515284,
+          "stop" : 1611330545401,
+          "duration" : 30117
+        }
+      }, {
+        "uid" : "fd39fdb67d00e057",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/fd39fdb67d00e057",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611329922252,
+          "stop" : 1611329952358,
+          "duration" : 30106
+        }
+      }, {
+        "uid" : "10b6d7d798885a2f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/10b6d7d798885a2f",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611330297718,
+          "stop" : 1611330327855,
+          "duration" : 30137
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "592300ea254d4874.json",
+  "parameterValues" : [ ]
+}
