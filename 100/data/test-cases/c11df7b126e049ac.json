@@ -1,0 +1,93 @@
+{
+  "uid" : "c11df7b126e049ac",
+  "name" : "Apply the discount coupon : INVALID_COUPON",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Apply the discount coupon : INVALID_COUPON",
+  "historyId" : "86a75acab9461a2675f616be00201af4",
+  "time" : {
+    "start" : 1611394883216,
+    "stop" : 1611394883217,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launchPersistentContext (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)\n                    at MetamaskFactory.init (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:29:42)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-invalid-discount.test.js:28:44)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : INVALID_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "a9f7259fb6a63081",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/a9f7259fb6a63081",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611334607386,
+          "stop" : 1611334907395,
+          "duration" : 300009
+        }
+      }, {
+        "uid" : "2a4fc5b2e891c0ad",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/2a4fc5b2e891c0ad",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611333727236,
+          "stop" : 1611334027254,
+          "duration" : 300018
+        }
+      }, {
+        "uid" : "a18670461f4e8e3a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/a18670461f4e8e3a",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611334085335,
+          "stop" : 1611334385399,
+          "duration" : 300064
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c11df7b126e049ac.json",
+  "parameterValues" : [ ]
+}

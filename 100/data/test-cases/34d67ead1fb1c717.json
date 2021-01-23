@@ -1,0 +1,90 @@
+{
+  "uid" : "34d67ead1fb1c717",
+  "name" : "Update metamask info",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Update metamask info",
+  "historyId" : "987ba5c7865ce960681ea1edc6a81937",
+  "time" : {
+    "start" : 1611394882562,
+    "stop" : 1611394882565,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launchPersistentContext (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)\n                    at MetamaskFactory.init (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:29:42)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/withdraw-metamask-login.test.js:28:44)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "3c0bc399d13634c5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/3c0bc399d13634c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611332459887,
+          "stop" : 1611332466538,
+          "duration" : 6651
+        }
+      }, {
+        "uid" : "1d32be411c097998",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/1d32be411c097998",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331571421,
+          "stop" : 1611331575344,
+          "duration" : 3923
+        }
+      }, {
+        "uid" : "eebffada0ed4154",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/eebffada0ed4154",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611331963882,
+          "stop" : 1611331968912,
+          "duration" : 5030
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "34d67ead1fb1c717.json",
+  "parameterValues" : [ ]
+}

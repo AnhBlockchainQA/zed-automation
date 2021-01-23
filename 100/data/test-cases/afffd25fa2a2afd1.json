@@ -1,0 +1,93 @@
+{
+  "uid" : "afffd25fa2a2afd1",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Dual horse cash.Open new browser with magic link",
+  "historyId" : "dae65ed6dd76ce0f1f693b5d8d9b8546",
+  "time" : {
+    "start" : 1611394882313,
+    "stop" : 1611394882318,
+    "duration" : 5
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:61:73\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launch (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:52:21)\n                    at PageFactory.createBrowser (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:28:39)\n                    at PageFactory.createContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:36:24)\n                    at PageFactory.getContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:44:24)\n                    at PageFactory.newTab (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:50:20)\n                    at /home/runner/work/zed-automation/zed-automation/tests/dual-horse-cash.test.js:48:41\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "24d06469c4e56097",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/24d06469c4e56097",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611334140255,
+          "stop" : 1611334140640,
+          "duration" : 385
+        }
+      }, {
+        "uid" : "cb3e0c86453d92bd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/cb3e0c86453d92bd",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611333211029,
+          "stop" : 1611333211408,
+          "duration" : 379
+        }
+      }, {
+        "uid" : "977de007b42ffc18",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/977de007b42ffc18",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611333631932,
+          "stop" : 1611333632771,
+          "duration" : 839
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "afffd25fa2a2afd1.json",
+  "parameterValues" : [ ]
+}

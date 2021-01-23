@@ -1,0 +1,93 @@
+{
+  "uid" : "6324acae16ec74fa",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Login to ZedRun with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "19433122bf1e5a835866655ce2216ce9",
+  "time" : {
+    "start" : 1611394883405,
+    "stop" : 1611394883406,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launchPersistentContext (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)\n                    at MetamaskFactory.init (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:29:42)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/login/register.test.js:35:44)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "2e5926d02128469b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/2e5926d02128469b",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335939952,
+          "stop" : 1611336020501,
+          "duration" : 80549
+        }
+      }, {
+        "uid" : "cd8afd28a037b640",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/cd8afd28a037b640",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335519600,
+          "stop" : 1611335569414,
+          "duration" : 49814
+        }
+      }, {
+        "uid" : "60af8c9dcdc0e2e5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/60af8c9dcdc0e2e5",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335400717,
+          "stop" : 1611335463955,
+          "duration" : 63238
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6324acae16ec74fa.json",
+  "parameterValues" : [ ]
+}

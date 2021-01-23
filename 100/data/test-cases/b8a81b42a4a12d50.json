@@ -1,0 +1,93 @@
+{
+  "uid" : "b8a81b42a4a12d50",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Login to ZedRun with magic link.Check mail inbox to get magic link",
+  "historyId" : "cd0f6d76505163a3705987b739891292",
+  "time" : {
+    "start" : 1611394887182,
+    "stop" : 1611394888616,
+    "duration" : 1434
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:45:40)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/login/magicLink.test.js:40:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "6e6f45c131824f16",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/6e6f45c131824f16",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1611338451002,
+          "stop" : 1611338451617,
+          "duration" : 615
+        }
+      }, {
+        "uid" : "e49f68a13ec8a5cc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/e49f68a13ec8a5cc",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1611337998413,
+          "stop" : 1611337999237,
+          "duration" : 824
+        }
+      }, {
+        "uid" : "c4805c71c7728c7c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/c4805c71c7728c7c",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1611337894597,
+          "stop" : 1611337895244,
+          "duration" : 647
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b8a81b42a4a12d50.json",
+  "parameterValues" : [ ]
+}

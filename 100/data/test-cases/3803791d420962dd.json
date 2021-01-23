@@ -1,0 +1,93 @@
+{
+  "uid" : "3803791d420962dd",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "a80d9e2efdc26aee80b663fcb0077246",
+  "time" : {
+    "start" : 1611394884344,
+    "stop" : 1611394884351,
+    "duration" : 7
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:61:73\n                    at BrowserType._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at BrowserType.launch (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserType.js:52:21)\n                    at PageFactory.createBrowser (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:28:39)\n                    at PageFactory.createContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:36:24)\n                    at PageFactory.getContext (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:44:24)\n                    at PageFactory.newTab (/home/runner/work/zed-automation/zed-automation/utils/browser/pageFactory.js:50:20)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/withdraw-mail-login.test.js:27:38)\n                    at Object.asyncJestTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12\n                    at new Promise (<anonymous>)\n                    at mapper (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "5e6513b7e58ddca6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/5e6513b7e58ddca6",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611336946061,
+          "stop" : 1611337246103,
+          "duration" : 300042
+        }
+      }, {
+        "uid" : "c900fd4cd5113833",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/c900fd4cd5113833",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611336494309,
+          "stop" : 1611336794350,
+          "duration" : 300041
+        }
+      }, {
+        "uid" : "5595c6ca3ca32b23",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/5595c6ca3ca32b23",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611336390111,
+          "stop" : 1611336690158,
+          "duration" : 300047
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3803791d420962dd.json",
+  "parameterValues" : [ ]
+}
