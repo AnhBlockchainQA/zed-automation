@@ -159,25 +159,25 @@ class MarketplacePage {
     }
   }
 
-  // async waitUntilHorseListLoaded() {
-  //   console.log(
-  //     "--- Zed Run Automation Framework: Wait until horse list loaded ---"
-  //   );
-  //   try {
-  //     await this.page.waitForFunction(
-  //       ([locator, value]) => {
-  //         return document.querySelectorAll(locator).length >= value;
-  //       },
-  //       [HORSE_LIST, HORSE_LIST_SIZE],
-  //       10000,
-  //       { timeout: 300000 }
-  //     );
-  //   } catch {
-  //     throw new Error(
-  //       "Waiting time is over but size of horse list is still incorrect!"
-  //     );
-  //   }
-  // }
+  async waitUntilHorseListLoaded() {
+    console.log(
+      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
+    );
+    try {
+      await this.page.waitForFunction(
+        ([locator, value]) => {
+          return document.querySelectorAll(locator).length >= value;
+        },
+        [HORSE_LIST, HORSE_LIST_SIZE],
+        10000,
+        { timeout: 300000 }
+      );
+    } catch {
+      throw new Error(
+        "Waiting time is over but size of horse list is still incorrect!"
+      );
+    }
+  }
 
   async clickOnDownwardArrow() {
     console.log(
@@ -191,29 +191,29 @@ class MarketplacePage {
     }
   }
 
-  async waitUntilHorseListLoaded() {
-    console.log(
-      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
-    );
-    try {
-      await this.page.waitForFunction(
-        ([locator, attribute]) => {
-          Array.from(document.querySelectorAll(locator))
-            .map(function (e) {
-              return e.getAttribute("class");
-            })
-            .every((v) => v.includes(attribute));
-        },
-        [HORSE_LIST, HORSE_LIST_ATTRIBUTE],
-        5000,
-        { timeout: 100000 }
-      );
-    } catch {
-      throw new Error(
-        "Waiting time is over but size of horse list is still incorrect!"
-      );
-    }
-  }
+  // async waitUntilHorseListLoaded() {
+  //   console.log(
+  //     "--- Zed Run Automation Framework: Wait until horse list loaded ---"
+  //   );
+  //   try {
+  //     await this.page.waitForFunction(
+  //       ([locator, attribute]) => {
+  //         Array.from(document.querySelectorAll(locator))
+  //           .map(function (e) {
+  //             return e.getAttribute("class");
+  //           })
+  //           .every((v) => v.includes(attribute));
+  //       },
+  //       [HORSE_LIST, HORSE_LIST_ATTRIBUTE],
+  //       5000,
+  //       { timeout: 100000 }
+  //     );
+  //   } catch {
+  //     throw new Error(
+  //       "Waiting time is over but size of horse list is still incorrect!"
+  //     );
+  //   }
+  // }
 
   // async isHorsesListNotEmpty(){
   //   console.log(

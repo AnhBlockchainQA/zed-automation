@@ -4,20 +4,19 @@ const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const apiRequest = require("../../utils/api/api");
 const test = require("jest-retries");
 
-let pageFactory;
-let login;
-let domain;
-let messageId;
-let magicLink;
-let email;
-let loginPage;
-let magicLinkPage;
-let newPageInstance;
-let page;
+var pageFactory = new PageFactory();
+var login;
+var domain;
+var messageId;
+var magicLink;
+var email;
+var loginPage;
+var magicLinkPage;
+var newPageInstance;
+var page;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
-  pageFactory = new PageFactory();
   pageFactory.removeCache();
 });
 

@@ -19,24 +19,23 @@ const { ActivityPage } = require("../../pages/ActivityPage");
 const zedRunConfig = require("../../locators/ZedRun");
 const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let marketPlacePage;
-let paymentPage;
-let homePage;
-let activityPage;
-let horseName;
-let canPurchaseHorses;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var marketPlacePage;
+var paymentPage;
+var homePage;
+var activityPage;
+var horseName;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
+
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });

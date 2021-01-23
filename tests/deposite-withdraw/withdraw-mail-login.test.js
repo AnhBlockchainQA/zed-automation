@@ -6,19 +6,18 @@ const { HomePage } = require('../../pages/HomePage');
 const apiRequest = require("../../utils/api/api");
 const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../../data/env");
 
-let pageFactory;
-let messageId;
-let magicLink;
-let loginPage;
-let magicLinkPage;
-let walletPage;
-let pageInstance;
-let newPageInstance;
-let homePage;
+var pageFactory = new PageFactory();
+var messageId;
+var magicLink;
+var loginPage;
+var magicLinkPage;
+var walletPage;
+var pageInstance;
+var newPageInstance;
+var homePage;
 const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
-  pageFactory = new PageFactory();
   pageFactory.removeCache();
 });
 
