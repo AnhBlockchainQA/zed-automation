@@ -7,9 +7,15 @@ const {
   HORSE_PRICE,
   HORSE_NAME,
   ERROR_MESSAGE,
-  HORSE_LIST
+  HORSE_LIST,
 } = require("../locators/MarketPlace");
-const { HORSE_LIST_SIZE, HORSE_LIST_PREDICATE } = require("../data/env");
+const {
+  ACCEPT_BUTTON
+} = require("../locators/ZedRun");
+const {
+  HORSE_LIST_SIZE,
+  HORSE_LIST_PREDICATE,
+} = require("../data/env");
 
 class MarketplacePage {
   constructor(page) {
@@ -159,49 +165,83 @@ class MarketplacePage {
     }
   }
 
-  async waitUntilHorseListLoaded() {
+  async getNumberOfHorses() {
     console.log(
-      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
+      "--- Zed Run Automation Framework: Get number of horse in list ---"
     );
     try {
-      await this.page.waitForFunction(
-        ([locator, value]) => {
-          return document.querySelectorAll(locator).length >= value;
-        },
-        [HORSE_LIST, HORSE_LIST_SIZE],
-        10000,
-        { timeout: 300000 }
-      );
+      await this.page.waitForSelector(HORSE_LIST, { timeout: 0 });
+      const numberOfHorses = await this.page.evaluate((locator) => {
+        return document.querySelectorAll(locator).length;
+      }, HORSE_LIST);
+      console.log("Number of horses is [%s]", numberOfHorses);
+      return numberOfHorses;
     } catch {
-      throw new Error(
-        "Waiting time is over but size of horse list is still incorrect!"
-      );
+      return -1;
     }
   }
 
-  async clickOnDownwardArrow(){
-    console.log("--- Zed Run Automation Framework: Click on downward arrow ---");
-    try{
-      await this.page.waitForSelector(DOWNWARD_ARROW,{timeout: 0});
+  async waitUntilHorseListLoaded(value) {
+    console.log(
+      "--- Zed Run Automation Framework: Wait until horse list loaded ---"
+    );
+    await this.page.waitForFunction(
+      ([locator, val]) => {
+        return document.querySelectorAll(locator).length == val;
+      },
+      [HORSE_LIST,value],
+      10000,
+      { timeout: 300000 }
+    );
+  }
+
+  async waitForLoadState(){
+    await this.page.waitForLoadState();
+  }
+
+  async clickOnDownwardArrow() {
+    console.log(
+      "--- Zed Run Automation Framework: Click on downward arrow ---"
+    );
+    try {
+      await this.page.waitForSelector(DOWNWARD_ARROW, { timeout: 0 });
       await this.page.click(DOWNWARD_ARROW);
-    }catch{
+    } catch {
       throw new Error("Downward arrow icon is not present");
     }
   }
 
-  //   async waitUntilHorseListLoaded() {
+  async clickOnAcceptButton(){
+    console.log(
+      "---- Zed Run Automation Framework: Click on Accept button ---"
+    );
+    try {
+      await this.page.waitForSelector(ACCEPT_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(ACCEPT_BUTTON);
+    } catch {
+      throw new Error("Accept button is not present or not clickable");
+    }
+  }
+
+  // async waitUntilHorseListLoaded() {
   //   console.log(
   //     "--- Zed Run Automation Framework: Wait until horse list loaded ---"
   //   );
   //   try {
   //     await this.page.waitForFunction(
-  //       ([locator, value, predicate]) => {
-  //         return Array.from(document.querySelectorAll(locator))
-  //                     .filter(predicate)
-  //                     .length == value;
+  //       ([locator, attribute]) => {
+  //         Array.from(document.querySelectorAll(locator))
+  //           .map(function (e) {
+  //             return e.getAttribute("class");
+  //           })
+  //           .every((v) => v.includes(attribute));
   //       },
-  //       [HORSE_LIST, HORSE_LIST_SIZE, HORSE_LIST_PREDICATE], 5000,
-  //       { timeout: 30000 }
+  //       [HORSE_LIST, HORSE_LIST_ATTRIBUTE],
+  //       5000,
+  //       { timeout: 100000 }
   //     );
   //   } catch {
   //     throw new Error(
@@ -210,6 +250,15 @@ class MarketplacePage {
   //   }
   // }
 
+  // async isHorsesListNotEmpty(){
+  //   console.log(
+  //     "--- Zed Run Automation Framework: Check if horses list is not empty ---"
+  //   );
+  //   const isHorseExisted = await this.page.evaluate(locator => {
+  //     return Array.from(document.querySelectorAll(locator)).length > 0
+  //   }, HORSE_LIST);
+  //   return isHorseExisted;
+  // }
 }
 
 module.exports = { MarketplacePage };
