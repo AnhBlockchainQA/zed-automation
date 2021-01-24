@@ -1,0 +1,194 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "TypeError: loginPage.click is not a function",
+      "children" : [ {
+        "name" : "dual horse",
+        "uid" : "55a9c7f4abe7416e",
+        "parentUid" : "ba8706b5388e003568568665ce708004",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611372079598,
+          "stop" : 1611372079598,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ba8706b5388e003568568665ce708004"
+    }, {
+      "name" : ": Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Process the checkout with ETH",
+        "uid" : "c179b06a788552d1",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503612840,
+          "stop" : 1611503642849,
+          "duration" : 30009
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "64da6bdbf2b2e583",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503642849,
+          "stop" : 1611503672854,
+          "duration" : 30005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Purchase horse with ETH",
+        "uid" : "8f4573e6817cff67",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503767106,
+          "stop" : 1611503797114,
+          "duration" : 30008
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Switch back to ZedRun page and verify login successful",
+        "uid" : "3f98c554aa864426",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503876180,
+          "stop" : 1611503906186,
+          "duration" : 30006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "9c249cc61e85d613",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503942785,
+          "stop" : 1611503972795,
+          "duration" : 30010
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and check if ETH balance is updated",
+        "uid" : "3d3cd6c54bc69cf9",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503996320,
+          "stop" : 1611504026329,
+          "duration" : 30009
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "2a10e7892ce88f1f",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611504134733,
+          "stop" : 1611504164743,
+          "duration" : 30010
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and check if ETH balance is updated",
+        "uid" : "1a85455781bdea",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611504164743,
+          "stop" : 1611504194757,
+          "duration" : 30014
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "cec1c71be037c1c5",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611504225345,
+          "stop" : 1611504255352,
+          "duration" : 30007
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "509d479fea0ee8dd",
+        "parentUid" : "4e3ef4cae245766d09c9ea55ac332224",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611504255352,
+          "stop" : 1611504285364,
+          "duration" : 30012
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4e3ef4cae245766d09c9ea55ac332224"
+    }, {
+      "name" : "ReferenceError: horseName is not defined",
+      "children" : [ {
+        "name" : "Verify that our order is performed",
+        "uid" : "1c24ed7f0efe748e",
+        "parentUid" : "0b431f0dad0ca4c488621e6dc530646b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503797114,
+          "stop" : 1611503797129,
+          "duration" : 15
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0b431f0dad0ca4c488621e6dc530646b"
+    }, {
+      "name" : "Error: Statement is not present!",
+      "children" : [ {
+        "name" : "Verify that our order is performed",
+        "uid" : "4d765c8742cf69ba",
+        "parentUid" : "fd10f6117a532b817bf137d65422c8e4",
+        "status" : "failed",
+        "time" : {
+          "start" : 1611503843956,
+          "stop" : 1611503844317,
+          "duration" : 361
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fd10f6117a532b817bf137d65422c8e4"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

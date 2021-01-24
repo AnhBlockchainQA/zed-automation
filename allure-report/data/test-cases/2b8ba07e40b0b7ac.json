@@ -1,0 +1,44 @@
+{
+  "uid" : "2b8ba07e40b0b7ac",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Dual horse cash.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "49eb5a668e48e7df925755d2965a6cab",
+  "time" : {
+    "start" : 1611371659513,
+    "stop" : 1611371675001,
+    "duration" : 15488
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2b8ba07e40b0b7ac.json",
+  "parameterValues" : [ ]
+}

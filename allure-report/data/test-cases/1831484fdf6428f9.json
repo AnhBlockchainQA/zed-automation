@@ -1,0 +1,91 @@
+{
+  "uid" : "1831484fdf6428f9",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Dual horse cash.Open new browser with magic link",
+  "historyId" : "dae65ed6dd76ce0f1f693b5d8d9b8546",
+  "time" : {
+    "start" : 1611503864945,
+    "stop" : 1611503876180,
+    "duration" : 11235
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "89d6c12461e2c28b",
+      "status" : "failed",
+      "statusDetails" : "TypeError: magicLinkPage.clickToTrustMe is not a function",
+      "time" : {
+        "start" : 1611372078026,
+        "stop" : 1611372079586,
+        "duration" : 1560
+      }
+    }, {
+      "uid" : "2bbbbe65d3b372aa",
+      "status" : "failed",
+      "statusDetails" : "TypeError: magicLinkPage.clickToTrustMe is not a function",
+      "time" : {
+        "start" : 1611371676944,
+        "stop" : 1611371678622,
+        "duration" : 1678
+      }
+    }, {
+      "uid" : "67dd80261748c5a5",
+      "status" : "failed",
+      "statusDetails" : "TypeError: magicLinkPage.clickToTrustMe is not a function",
+      "time" : {
+        "start" : 1611369636583,
+        "stop" : 1611369638248,
+        "duration" : 1665
+      }
+    }, {
+      "uid" : "26ac3730501da58d",
+      "status" : "failed",
+      "statusDetails" : "TypeError: magicLinkPage.clickToTrustMe is not a function",
+      "time" : {
+        "start" : 1609766222526,
+        "stop" : 1609766224503,
+        "duration" : 1977
+      }
+    }, {
+      "uid" : "c59d284fed669168",
+      "status" : "failed",
+      "statusDetails" : "TypeError: magicLinkPage.clickToTrustMe is not a function",
+      "time" : {
+        "start" : 1609765561338,
+        "stop" : 1609765563011,
+        "duration" : 1673
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1831484fdf6428f9.json",
+  "parameterValues" : [ ]
+}

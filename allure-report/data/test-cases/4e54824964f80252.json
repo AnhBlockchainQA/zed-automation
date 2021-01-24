@@ -1,0 +1,55 @@
+{
+  "uid" : "4e54824964f80252",
+  "name" : "Select female horse",
+  "fullName" : "Generate stud horse.Select female horse",
+  "historyId" : "94a9decf7461bb9b67d9e3600b4810c8",
+  "time" : {
+    "start" : 1611503699637,
+    "stop" : 1611503704426,
+    "duration" : 4789
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select female horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1185ee8f320cfe1c",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611407226202,
+        "stop" : 1611407256204,
+        "duration" : 30002
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4e54824964f80252.json",
+  "parameterValues" : [ ]
+}

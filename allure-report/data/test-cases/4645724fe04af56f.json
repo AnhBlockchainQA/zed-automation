@@ -1,0 +1,72 @@
+{
+  "uid" : "4645724fe04af56f",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Login to ZedRun with magic link.Open new browser with magic link",
+  "historyId" : "23ca99c354162c48694cedb121ed2aff",
+  "time" : {
+    "start" : 1611504306871,
+    "stop" : 1611504319051,
+    "duration" : 12180
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c183eb32c4f53d6e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372205199,
+        "stop" : 1611372216733,
+        "duration" : 11534
+      }
+    }, {
+      "uid" : "db43cdadb14470c4",
+      "status" : "failed",
+      "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+      "time" : {
+        "start" : 1609765892222,
+        "stop" : 1609765892598,
+        "duration" : 376
+      }
+    }, {
+      "uid" : "3ae918b58d96bdf0",
+      "status" : "failed",
+      "statusDetails" : "Error: browserContext.newPage: Target page, context or browser has been closed",
+      "time" : {
+        "start" : 1609765540765,
+        "stop" : 1609765540766,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4645724fe04af56f.json",
+  "parameterValues" : [ ]
+}

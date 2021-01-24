@@ -1,0 +1,46 @@
+{
+  "uid" : "27c53395edf95a4",
+  "name" : "Apply the discount coupon : ZED-10-PERCENT",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Apply the discount coupon : ZED-10-PERCENT",
+  "historyId" : "3ba10496e4b95ef2d2b99dcb2f8e6de5",
+  "time" : {
+    "start" : 1611503737904,
+    "stop" : 1611503740453,
+    "duration" : 2549
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ZED-10-PERCENT"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "27c53395edf95a4.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,86 @@
+{
+  "uid" : "d2407c8487bbd35f",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "ffdfb652c48964057576bf6048c455cf",
+  "time" : {
+    "start" : 1611504123778,
+    "stop" : 1611504134733,
+    "duration" : 10955
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "baceb324a6c78f39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372744543,
+        "stop" : 1611372755689,
+        "duration" : 11146
+      }
+    }, {
+      "uid" : "89a4db3396703dc2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372344697,
+        "stop" : 1611372356288,
+        "duration" : 11591
+      }
+    }, {
+      "uid" : "c79e76b7227d2b31",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372099184,
+        "stop" : 1611372109426,
+        "duration" : 10242
+      }
+    }, {
+      "uid" : "4d8768ca1d313ee0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611371697721,
+        "stop" : 1611371707911,
+        "duration" : 10190
+      }
+    }, {
+      "uid" : "a6635c906833aafe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611369656611,
+        "stop" : 1611369667223,
+        "duration" : 10612
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d2407c8487bbd35f.json",
+  "parameterValues" : [ ]
+}

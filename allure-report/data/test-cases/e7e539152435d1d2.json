@@ -1,0 +1,46 @@
+{
+  "uid" : "e7e539152435d1d2",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Click on Withdraw button and check if ZED balance is updated",
+  "historyId" : "d49d66fb988d177a167fb698c05f9c5c",
+  "time" : {
+    "start" : 1611372530323,
+    "stop" : 1611372656072,
+    "duration" : 125749
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: page.waitForFunction: Protocol error (Runtime.callFunctionOn): Target closed.\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.waitForFunction: Protocol error (Runtime.callFunctionOn): Target closed.\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:344:48)\n                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)\n                    at Frame.waitForFunction (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:341:21)\n                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:454:60)\n                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:202:20)\n                    at Page.waitForFunction (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:454:21)\n                    at WalletPage.checkIfBalanceUpdated (/Users/davidle/zed-automation/pages/WalletPage.js:142:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Withdraw button and check if ZED balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e7e539152435d1d2.json",
+  "parameterValues" : [ ]
+}

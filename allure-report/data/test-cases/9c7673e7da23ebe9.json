@@ -1,0 +1,44 @@
+{
+  "uid" : "9c7673e7da23ebe9",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "a80d9e2efdc26aee80b663fcb0077246",
+  "time" : {
+    "start" : 1611369743829,
+    "stop" : 1611369759100,
+    "duration" : 15271
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9c7673e7da23ebe9.json",
+  "parameterValues" : [ ]
+}

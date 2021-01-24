@@ -1,0 +1,52 @@
+{
+  "uid" : "4d765c8742cf69ba",
+  "name" : "Verify that our order is performed",
+  "fullName" : "Buy horse with credit card.Verify that our order is performed",
+  "historyId" : "f36a3308483b4ecc1591b4a60dacb7e3",
+  "time" : {
+    "start" : 1611503843956,
+    "stop" : 1611503844317,
+    "duration" : 361
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Statement is not present!",
+  "statusTrace" : "Error: Statement is not present!\n                    at ActivityPage.checkIfStatementInfoCorrect (/Users/davidle/qa-automationtest/pages/ActivityPage.js:50:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is performed"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4d765c8742cf69ba.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,54 @@
+{
+  "uid" : "e212860bea72cbc4",
+  "name" : "Update metamask info",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Update metamask info",
+  "historyId" : "5275ca2eeb4ffdb319cfdbd22d007378",
+  "time" : {
+    "start" : 1611503975499,
+    "stop" : 1611503980588,
+    "duration" : 5089
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3dad1ee156fde8d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372909171,
+        "stop" : 1611372913215,
+        "duration" : 4044
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e212860bea72cbc4.json",
+  "parameterValues" : [ ]
+}

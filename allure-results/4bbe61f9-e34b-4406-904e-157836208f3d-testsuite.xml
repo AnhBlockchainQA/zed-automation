@@ -1,0 +1,63 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611503675844' stop='1611503715224'>
+    <name>Generate stud horse</name>
+    <title>Generate stud horse</title>
+    <test-cases>
+        <test-case start='1611503675845' status='passed' stop='1611503680438'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503680438' status='passed' stop='1611503692596'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503692597' status='passed' stop='1611503696776'>
+            <name>Check that avatar is shown then click on Wallet</name>
+            <title>Check that avatar is shown then click on Wallet</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503696776' status='passed' stop='1611503699637'>
+            <name>Select mate horse</name>
+            <title>Select mate horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503699637' status='passed' stop='1611503704426'>
+            <name>Select female horse</name>
+            <title>Select female horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503704426' status='passed' stop='1611503707678'>
+            <name>Proceed breeding steps</name>
+            <title>Proceed breeding steps</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611503707678' status='passed' stop='1611503715224'>
+            <name>Go to Activity page and check if we breed successfully</name>
+            <title>Go to Activity page and check if we breed successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

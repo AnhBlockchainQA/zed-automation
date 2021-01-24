@@ -1,0 +1,72 @@
+{
+  "uid" : "ec8f9cfac4f4431",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Login to ZedRun with magic link.Check mail inbox to get magic link",
+  "historyId" : "cd0f6d76505163a3705987b739891292",
+  "time" : {
+    "start" : 1611504305056,
+    "stop" : 1611504306871,
+    "duration" : 1815
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b1649821c9d69773",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372203301,
+        "stop" : 1611372205199,
+        "duration" : 1898
+      }
+    }, {
+      "uid" : "c84cb6270feaff29",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1609765891480,
+        "stop" : 1609765892222,
+        "duration" : 742
+      }
+    }, {
+      "uid" : "23db171a083157d5",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1609765539947,
+        "stop" : 1609765540765,
+        "duration" : 818
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ec8f9cfac4f4431.json",
+  "parameterValues" : [ ]
+}

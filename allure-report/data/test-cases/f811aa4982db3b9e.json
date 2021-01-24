@@ -1,0 +1,55 @@
+{
+  "uid" : "f811aa4982db3b9e",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Generate stud horse.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1470e4f03122ba9258a7852f20ebc7f4",
+  "time" : {
+    "start" : 1611503680438,
+    "stop" : 1611503692596,
+    "duration" : 12158
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9e45dc064a45a2d1",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 30000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611407136172,
+        "stop" : 1611407166174,
+        "duration" : 30002
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f811aa4982db3b9e.json",
+  "parameterValues" : [ ]
+}

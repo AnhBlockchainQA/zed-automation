@@ -1,0 +1,701 @@
+[ {
+  "uid" : "ee5f2b51b59f35fc",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1611504286266,
+    "stop" : 1611504305056,
+    "duration" : 18790
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cec1c71be037c1c5",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1611504225345,
+    "stop" : 1611504255352,
+    "duration" : 30007
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e39adaee16e2192",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503913870,
+    "stop" : 1611503937319,
+    "duration" : 23449
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d6c412dd409d4069",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1611504105156,
+    "stop" : 1611504121815,
+    "duration" : 16659
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fcafdcfe0e87d6d3",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1611504211598,
+    "stop" : 1611504213465,
+    "duration" : 1867
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4f83494fe62743b",
+  "name" : "Apply the discount coupon : ZED-10-PERCENT",
+  "time" : {
+    "start" : 1611503610217,
+    "stop" : 1611503612840,
+    "duration" : 2623
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4645724fe04af56f",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1611504306871,
+    "stop" : 1611504319051,
+    "duration" : 12180
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27c53395edf95a4",
+  "name" : "Apply the discount coupon : ZED-10-PERCENT",
+  "time" : {
+    "start" : 1611503737904,
+    "stop" : 1611503740453,
+    "duration" : 2549
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d3cd6c54bc69cf9",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "time" : {
+    "start" : 1611503996320,
+    "stop" : 1611504026329,
+    "duration" : 30009
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3353df20e72dd9c7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503591375,
+    "stop" : 1611503604212,
+    "duration" : 12837
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62fea3a2b76ddcd1",
+  "name" : "Apply the discount coupon : EXPIRED_COUPON",
+  "time" : {
+    "start" : 1611504076064,
+    "stop" : 1611504078555,
+    "duration" : 2491
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b740f312a3e83fb4",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503509853,
+    "stop" : 1611503514232,
+    "duration" : 4379
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb35105725b252a2",
+  "name" : "Select mate horse",
+  "time" : {
+    "start" : 1611503696776,
+    "stop" : 1611503699637,
+    "duration" : 2861
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "784be44e442c8bea",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503800234,
+    "stop" : 1611503805172,
+    "duration" : 4938
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d2407c8487bbd35f",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1611504123778,
+    "stop" : 1611504134733,
+    "duration" : 10955
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8d67c4ef8b5cf214",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1611504121815,
+    "stop" : 1611504123778,
+    "duration" : 1963
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ec8f9cfac4f4431",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1611504305056,
+    "stop" : 1611504306871,
+    "duration" : 1815
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1640b969cb43dbd",
+  "name" : "Process payment by cash",
+  "time" : {
+    "start" : 1611503825032,
+    "stop" : 1611503843956,
+    "duration" : 18924
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c508be5615709648",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1611503861338,
+    "stop" : 1611503864945,
+    "duration" : 3607
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f811aa4982db3b9e",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503680438,
+    "stop" : 1611503692596,
+    "duration" : 12158
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7906e9d42bd95f5d",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1611503845287,
+    "stop" : 1611503861338,
+    "duration" : 16051
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "da4ad4b76c06f14",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "time" : {
+    "start" : 1611504319051,
+    "stop" : 1611504325742,
+    "duration" : 6691
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c754e342a9f7a3d",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503587407,
+    "stop" : 1611503591375,
+    "duration" : 3968
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3036013c4658499",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1611503732428,
+    "stop" : 1611503737904,
+    "duration" : 5476
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b762a630f50c773",
+  "name" : "Go to Activity page and check if we breed successfully",
+  "time" : {
+    "start" : 1611503707678,
+    "stop" : 1611503715224,
+    "duration" : 7546
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9c19de8d6ae4242",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503567208,
+    "stop" : 1611503578902,
+    "duration" : 11694
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c179b06a788552d1",
+  "name" : "Process the checkout with ETH",
+  "time" : {
+    "start" : 1611503612840,
+    "stop" : 1611503642849,
+    "duration" : 30009
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2a10e7892ce88f1f",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1611504134733,
+    "stop" : 1611504164743,
+    "duration" : 30010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "313721266a6d626e",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "time" : {
+    "start" : 1611503692597,
+    "stop" : 1611503696776,
+    "duration" : 4179
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "590b7af7e2870ad7",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1611503992162,
+    "stop" : 1611503996320,
+    "duration" : 4158
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "effe678da5c503b0",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "time" : {
+    "start" : 1611371812493,
+    "stop" : 1611371872761,
+    "duration" : 60268
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d765c8742cf69ba",
+  "name" : "Verify that our order is performed",
+  "time" : {
+    "start" : 1611503843956,
+    "stop" : 1611503844317,
+    "duration" : 361
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8bb34a149d0d11ea",
+  "name" : "Apply the discount coupon : INVALID_COUPON",
+  "time" : {
+    "start" : 1611504050627,
+    "stop" : 1611504053038,
+    "duration" : 2411
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "179c509eb35f9ba8",
+  "name" : "Check that avatar is shown",
+  "time" : {
+    "start" : 1611504099651,
+    "stop" : 1611504103962,
+    "duration" : 4311
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b7e05bcd8b62822",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1611503761336,
+    "stop" : 1611503767106,
+    "duration" : 5770
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e7303cb3b2628e8b",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611504085341,
+    "stop" : 1611504099651,
+    "duration" : 14310
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "908a781c4c3a9fef",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611504081161,
+    "stop" : 1611504085341,
+    "duration" : 4180
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77cd4288a9c4d7af",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503721893,
+    "stop" : 1611503732427,
+    "duration" : 10534
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11bc1ff68263c2a7",
+  "name" : "Wait until wallet icon is shown",
+  "time" : {
+    "start" : 1611503530516,
+    "stop" : 1611503534446,
+    "duration" : 3930
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f3a734714ec8c073",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1611503819369,
+    "stop" : 1611503825032,
+    "duration" : 5663
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ec8f72a09093647",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1611503604212,
+    "stop" : 1611503610217,
+    "duration" : 6005
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f98c554aa864426",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "time" : {
+    "start" : 1611503876180,
+    "stop" : 1611503906186,
+    "duration" : 30006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "64da6bdbf2b2e583",
+  "name" : "Verify that our order is performed",
+  "time" : {
+    "start" : 1611503642849,
+    "stop" : 1611503672854,
+    "duration" : 30005
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "627624e2560e0be6",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503718136,
+    "stop" : 1611503721893,
+    "duration" : 3757
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e212860bea72cbc4",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503975499,
+    "stop" : 1611503980588,
+    "duration" : 5089
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "64c60f9c9d5ae7a2",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1611504195698,
+    "stop" : 1611504211598,
+    "duration" : 15900
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a85455781bdea",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "time" : {
+    "start" : 1611504164743,
+    "stop" : 1611504194757,
+    "duration" : 30014
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "55a9c7f4abe7416e",
+  "name" : "dual horse",
+  "time" : {
+    "start" : 1611372079598,
+    "stop" : 1611372079598,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed1aa5801093b024",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "time" : {
+    "start" : 1611372109426,
+    "stop" : 1611372169717,
+    "duration" : 60291
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f4573e6817cff67",
+  "name" : "Purchase horse with ETH",
+  "time" : {
+    "start" : 1611503767106,
+    "stop" : 1611503797114,
+    "duration" : 30008
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "10497ba34896eff9",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503562944,
+    "stop" : 1611503567208,
+    "duration" : 4264
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1831484fdf6428f9",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1611503864945,
+    "stop" : 1611503876180,
+    "duration" : 11235
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "509d479fea0ee8dd",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "time" : {
+    "start" : 1611504255352,
+    "stop" : 1611504285364,
+    "duration" : 30012
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c249cc61e85d613",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "time" : {
+    "start" : 1611503942785,
+    "stop" : 1611503972795,
+    "duration" : 30010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cc9d714ccf2a86f",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "time" : {
+    "start" : 1611504070568,
+    "stop" : 1611504076064,
+    "duration" : 5496
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7046abe96fd7f39e",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503805173,
+    "stop" : 1611503819369,
+    "duration" : 14196
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6cd38edb8cf3f9f1",
+  "name" : "Proceed breeding steps",
+  "time" : {
+    "start" : 1611503704426,
+    "stop" : 1611503707678,
+    "duration" : 3252
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a31b629899338a",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503909652,
+    "stop" : 1611503913870,
+    "duration" : 4218
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4e54824964f80252",
+  "name" : "Select female horse",
+  "time" : {
+    "start" : 1611503699637,
+    "stop" : 1611503704426,
+    "duration" : 4789
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b3ea850cf0d2c95",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503675845,
+    "stop" : 1611503680438,
+    "duration" : 4593
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ff84303376d257a",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "time" : {
+    "start" : 1611503578902,
+    "stop" : 1611503584599,
+    "duration" : 5697
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1cdacadf6f5b8712",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503514233,
+    "stop" : 1611503530516,
+    "duration" : 16283
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d0ff612b6d53c44",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503748606,
+    "stop" : 1611503761336,
+    "duration" : 12730
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c24ed7f0efe748e",
+  "name" : "Verify that our order is performed",
+  "time" : {
+    "start" : 1611503797114,
+    "stop" : 1611503797129,
+    "duration" : 15
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "10adc3a7455b5b99",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611503980588,
+    "stop" : 1611503992162,
+    "duration" : 11574
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a4e3a4ebcde3",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611503743230,
+    "stop" : 1611503748606,
+    "duration" : 5376
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a70a889934abbfd6",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1611504060040,
+    "stop" : 1611504070568,
+    "duration" : 10528
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5574bc4812ab81ce",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1611504213465,
+    "stop" : 1611504225345,
+    "duration" : 11880
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fbfe37f985934251",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1611504055843,
+    "stop" : 1611504060040,
+    "duration" : 4197
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c3323b5f5fd0921",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1611503937319,
+    "stop" : 1611503942785,
+    "duration" : 5466
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

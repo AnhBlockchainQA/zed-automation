@@ -1,0 +1,46 @@
+{
+  "uid" : "77cd4288a9c4d7af",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "4b19f0ba5019ec7a881a5fe07b8241d2",
+  "time" : {
+    "start" : 1611503721893,
+    "stop" : 1611503732427,
+    "duration" : 10534
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "77cd4288a9c4d7af.json",
+  "parameterValues" : [ ]
+}

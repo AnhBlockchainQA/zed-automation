@@ -1,0 +1,44 @@
+{
+  "uid" : "e9872c3e1f815b4d",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Dual horse cash.Check mail inbox to get magic link",
+  "historyId" : "dc10b75ea670ec43eaeb63e2041580f0",
+  "time" : {
+    "start" : 1609766220826,
+    "stop" : 1609766222526,
+    "duration" : 1700
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e9872c3e1f815b4d.json",
+  "parameterValues" : [ ]
+}

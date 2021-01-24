@@ -1,0 +1,46 @@
+{
+  "uid" : "653e3422ca75209",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "fullName" : "Login to ZedRun with magic link.Switch back to ZedRun page and verify login successful",
+  "historyId" : "89fd272cf748d697446171eeec1a3167",
+  "time" : {
+    "start" : 1609765540767,
+    "stop" : 1609765540769,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'bringToFront' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'bringToFront' of undefined\n                    at LoginPage.bringToFront (/Users/davidle/zed-automation/pages/LoginPage.js:50:21)\n                    at Object.test (/Users/davidle/zed-automation/tests/login/magicLink.test.js:60:22)\n                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Switch back to ZedRun page and verify login successful"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "653e3422ca75209.json",
+  "parameterValues" : [ ]
+}

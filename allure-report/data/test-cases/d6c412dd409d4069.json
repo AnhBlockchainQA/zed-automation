@@ -1,0 +1,86 @@
+{
+  "uid" : "d6c412dd409d4069",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "f5d4caca41e69a5057aeb68c4c47e4c9",
+  "time" : {
+    "start" : 1611504105156,
+    "stop" : 1611504121815,
+    "duration" : 16659
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "94968a867202f766",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372726569,
+        "stop" : 1611372742585,
+        "duration" : 16016
+      }
+    }, {
+      "uid" : "953686bd1b5f8434",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372327714,
+        "stop" : 1611372342816,
+        "duration" : 15102
+      }
+    }, {
+      "uid" : "576758782330c5e1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611372080964,
+        "stop" : 1611372097285,
+        "duration" : 16321
+      }
+    }, {
+      "uid" : "3084f5e38e73d761",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611371679753,
+        "stop" : 1611371695847,
+        "duration" : 16094
+      }
+    }, {
+      "uid" : "693c8fd2418cc43c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611369639629,
+        "stop" : 1611369654773,
+        "duration" : 15144
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d6c412dd409d4069.json",
+  "parameterValues" : [ ]
+}

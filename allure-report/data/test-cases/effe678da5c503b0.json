@@ -1,0 +1,55 @@
+{
+  "uid" : "effe678da5c503b0",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Check that avatar is shown then click on Wallet",
+  "historyId" : "9afd5c227dbb9bb94133139b4d5ba85e",
+  "time" : {
+    "start" : 1611371812493,
+    "stop" : 1611371872761,
+    "duration" : 60268
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "70ccef5e4ae37fa2",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611369771936,
+        "stop" : 1611370071944,
+        "duration" : 300008
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "effe678da5c503b0.json",
+  "parameterValues" : [ ]
+}
