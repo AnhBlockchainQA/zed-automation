@@ -1,0 +1,83 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1609765873071' stop='1609766192604'>
+    <name>Login to ZedRun with magic link</name>
+    <title>Login to ZedRun with magic link</title>
+    <test-cases>
+        <test-case start='1609765873071' status='passed' stop='1609765891480'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1609765891480' status='failed' stop='1609765892222'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'id' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'id' of undefined
+                    at APIRequest.getZedRunMessageId (/Users/davidle/zed-automation/utils/api/api.js:45:40)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609765892222' status='failed' stop='1609765892598'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.goto: url: expected string, got undefined</message>
+                <stack-trace>Error: page.goto: url: expected string, got undefined
+                    at Object.&lt;anonymous>.exports.tString (/Users/davidle/zed-automation/node_modules/playwright/lib/protocol/validatorPrimitives.js:42:11)
+                    at Object.FrameGotoParams (/Users/davidle/zed-automation/node_modules/playwright/lib/protocol/validatorPrimitives.js:81:27)
+                    at validateParams (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:249:24)
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:72:67)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:80:71)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.goto (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:78:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:267:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.goto (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:267:21)
+                    at MagicLinkPage.navigate (/Users/davidle/zed-automation/pages/MagicLinkPage.js:16:21)
+                    at Object.test (/Users/davidle/zed-automation/tests/login/magicLink.test.js:54:25)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1609765892598' status='failed' stop='1609766192604'>
+            <name>Switch back to ZedRun page and verify login successful</name>
+            <title>Switch back to ZedRun page and verify login successful</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at test (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/zed-automation/tests/login/magicLink.test.js:58:3)
+                    at addSpecsToSuite (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/zed-automation/tests/login/magicLink.test.js:23:1)
+                    at Runtime._execModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

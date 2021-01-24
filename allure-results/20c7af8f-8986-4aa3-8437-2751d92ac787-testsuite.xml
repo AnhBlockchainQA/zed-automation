@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611372464262' stop='1611372656072'>
+    <name>Withdraw from ZED balance by logging in with magic link</name>
+    <title>Withdraw from ZED balance by logging in with magic link</title>
+    <test-cases>
+        <test-case start='1611372464263' status='passed' stop='1611372479534'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611372479535' status='passed' stop='1611372481537'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611372481537' status='passed' stop='1611372492552'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611372492552' status='passed' stop='1611372530323'>
+            <name>Wait until wallet icon is shown then click on Wallet icon</name>
+            <title>Wait until wallet icon is shown then click on Wallet icon</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611372530323' status='failed' stop='1611372656072'>
+            <name>Click on Withdraw button and check if ZED balance is updated</name>
+            <title>Click on Withdraw button and check if ZED balance is updated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForFunction: Protocol error (Runtime.callFunctionOn): Target closed.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForFunction: Protocol error (Runtime.callFunctionOn): Target closed.
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:344:48)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at Frame.waitForFunction (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:341:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:454:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:202:20)
+                    at Page.waitForFunction (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:454:21)
+                    at WalletPage.checkIfBalanceUpdated (/Users/davidle/zed-automation/pages/WalletPage.js:142:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

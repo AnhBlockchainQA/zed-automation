@@ -1,14 +1,13 @@
 const config = require('config')
-const marketPlaceConfig = config.get("marketPlace")
 
 module.exports = {
-    FIRST_HORSE_PREVIEW: marketPlaceConfig.FIRST_HORSE_PREVIEW,
-    DOWNWARD_ARROW : marketPlaceConfig.DOWNWARD_ARROW,
-    COUPON_INPUT: marketPlaceConfig.COUPON_INPUT,
-    APPLY_BUTTON: marketPlaceConfig.APPLY_BUTTON,
-    DISCOUNT_LABEL: marketPlaceConfig.DISCOUNT_LABEL,
-    HORSE_PRICE: marketPlaceConfig.HORSE_PRICE,
-    HORSE_NAME: marketPlaceConfig.HORSE_NAME,
-    HORSE_LIST: marketPlaceConfig.HORSE_LIST,
-    ERROR_MESSAGE: marketPlaceConfig.ERROR_MESSAGE
+    FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
+    DOWNWARD_ARROW : "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
+    COUPON_INPUT: "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
+    APPLY_BUTTON: ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .secondary-btn",
+    DISCOUNT_LABEL: ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .m-input-content > p.normal-text",
+    HORSE_PRICE: "div.buy-method-choice > .method-options > .fiat-price > span",
+    HORSE_NAME: "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
+    HORSE_LIST: ".ifs .row div.horse-sale-card",
+    ERROR_MESSAGE: ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text"
 };    

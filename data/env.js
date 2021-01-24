@@ -24,9 +24,9 @@ module.exports = {
     VALUE: "15.0"
   },
   PERCENT_DISCOUNT: {
-    CODE: "ZED-10-PERCENT",
-    VALUE: "10.0%",
-    NET_VALUE : 0.1
+    CODE: "Z8_50PERCENT",
+    VALUE: "50.5%",
+    NET_VALUE : 0.505
   },
   EXPIRED_CODE: {
     CODE: "EXPIRED_COUPON",
@@ -36,10 +36,12 @@ module.exports = {
     CODE: "INVALID_COUPON",
     ERROR: "Voucher Not Found"
   },
-  HORSE_LIST_SIZE: 10,
+  HORSE_LIST_SIZE: 1,
   EVENT_LIST_SIZE: 10,
   REGEX: {
     NUMBER: /\$\{i\}/g,
     TEXT: /\$\{name\}/g,
-  }
+  },
+  HORSE_LIST_PREDICATE: v => v.includes("horse-details"),
+  HORSE_LIST_ATTRIBUTE: "horse-details"
 }

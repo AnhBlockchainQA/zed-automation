@@ -1,21 +1,19 @@
-const config = require('config')
-const metamaskConfig = config.get("metamask")
 
 module.exports = {
-    CLICK_GET_STARTED_BUTTON: metamaskConfig.CLICK_GET_STARTED_BUTTON,
-    CLICK_IMPORT_WALLET_BUTTON: metamaskConfig.CLICK_IMPORT_WALLET_BUTTON,
-    CLICK_I_AGREE_BUTTON: metamaskConfig.CLICK_I_AGREE_BUTTON,
-    FILL_TEXT_AREA_FILL_PASSPHASE: metamaskConfig.FILL_TEXT_AREA_FILL_PASSPHASE,
-    FILL_PASSWORD_INPUT: metamaskConfig.FILL_PASSWORD_INPUT,
-    FILL_PASSWORD_CONFIRM_INPUT: metamaskConfig.FILL_PASSWORD_CONFIRM_INPUT,
-    CHECKBOX_AGREE: metamaskConfig.CHECKBOX_AGREE,
-    CLICK_IMPORT_BUTTON: metamaskConfig.CLICK_IMPORT_BUTTON,
-    CLICK_ALL_DONE: metamaskConfig.CLICK_ALL_DONE,
-    CLICK_CLOSE: metamaskConfig.CLICK_CLOSE,
-    CLICK_NETWORK_NAME: metamaskConfig.CLICK_NETWORK_NAME,
-    CLICK_CHOOSE_NETWORK: metamaskConfig.CLICK_CHOOSE_NETWORK,
-    CLICK_NEXT_BUTTON: metamaskConfig.CLICK_NEXT_BUTTON,
-    CLICK_CONNECT_BUTTON: metamaskConfig.CLICK_CONNECT_BUTTON,
-    CLICK_SIGN_BUTTON: metamaskConfig.CLICK_SIGN_BUTTON,
-    CLICK_CONFIRM_BUTTON : metamaskConfig.CLICK_CONFIRM_BUTTON
-}
+    CLICK_GET_STARTED_BUTTON: "//button[text()='Get Started']",
+    CLICK_IMPORT_WALLET_BUTTON: "//button[text()='Import wallet']",
+    CLICK_I_AGREE_BUTTON: "//button[text()='I Agree']",
+    FILL_TEXT_AREA_FILL_PASSPHASE: "[placeholder='Paste seed phrase from clipboard']",
+    FILL_PASSWORD_INPUT: "#password",
+    FILL_PASSWORD_CONFIRM_INPUT: "#confirm-password",
+    CHECKBOX_AGREE: ".first-time-flow__terms",
+    CLICK_IMPORT_BUTTON: "//button[text()='Import']",
+    CLICK_ALL_DONE: "text='All Done'",
+    CLICK_CLOSE: "[title='Close']",
+    CLICK_NETWORK_NAME: ".network-name",
+    CLICK_CHOOSE_NETWORK: "text='Goerli Test Network'",
+    CLICK_NEXT_BUTTON: "text='Next'",
+    CLICK_CONNECT_BUTTON: "text='Connect'",
+    CLICK_SIGN_BUTTON: "text='Sign'",
+    CLICK_CONFIRM_BUTTON: "//button[text()='Confirm']"
+};

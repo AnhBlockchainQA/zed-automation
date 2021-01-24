@@ -1,0 +1,619 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611372976703' stop='1611372976721'>
+    <name>Withdraw from ETH balance by logging in with Metamask</name>
+    <title>Withdraw from ETH balance by logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1611372976704' status='failed' stop='1611372976709'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48)
+                    at BrowserType._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at BrowserType.launchPersistentContext (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)
+                    at MetamaskFactory.init (/Users/davidle/zed-automation/utils/browser/metamaskFactory.js:40:42)
+                    at Object.&lt;anonymous>.beforeAll (/Users/davidle/zed-automation/tests/deposite-withdraw/withdraw-metamask-login.test.js:29:44)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611372976709' status='failed' stop='1611372976709'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48)
+                    at BrowserType._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at BrowserType.launchPersistentContext (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)
+                    at MetamaskFactory.init (/Users/davidle/zed-automation/utils/browser/metamaskFactory.js:40:42)
+                    at Object.&lt;anonymous>.beforeAll (/Users/davidle/zed-automation/tests/deposite-withdraw/withdraw-metamask-login.test.js:29:44)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611372976709' status='failed' stop='1611372976713'>
+            <name>Wait until wallet icon is shown then click on Wallet icon</name>
+            <title>Wait until wallet icon is shown then click on Wallet icon</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48)
+                    at BrowserType._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at BrowserType.launchPersistentContext (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)
+                    at MetamaskFactory.init (/Users/davidle/zed-automation/utils/browser/metamaskFactory.js:40:42)
+                    at Object.&lt;anonymous>.beforeAll (/Users/davidle/zed-automation/tests/deposite-withdraw/withdraw-metamask-login.test.js:29:44)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611372976714' status='failed' stop='1611372976721'>
+            <name>Click on Withdraw button and check if ZED balance is updated</name>
+            <title>Click on Withdraw button and check if ZED balance is updated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Target closed.
+                =========================== logs ===========================
+                &lt;launching> /Users/davidle/Library/Caches/ms-playwright/chromium-823944/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/zed-automation/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/zed-automation/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=76075
+                [err] Received signal 11 SEGV_MAPERR 000000000000
+                [err]  [0x000111086cf9]
+                [err]  [0x000110fc1ca3]
+                [err]  [0x000111086c11]
+                [err]  [0x7fff6951e5fd]
+                [err]  [0xaaaaaaaaaaaaaaaa]
+                [err]  [0x000112cf54ff]
+                [err]  [0x0001114aaf15]
+                [err]  [0x0001114b9c32]
+                [err]  [0x0001114b96d5]
+                [err]  [0x0001114b832f]
+                [err]  [0x0001114cd586]
+                [err]  [0x0001114c75f0]
+                [err]  [0x0001114c70ad]
+                [err]  [0x0001116b1028]
+                [err]  [0x0001116b2006]
+                [err]  [0x7fff2c6d6c36]
+                [err]  [0x7fff2c6d6b53]
+                [err]  [0x7fff2c97d3a0]
+                [err]  [0x7fff2f2759ec]
+                [err]  [0x7fff2f275934]
+                [err]  [0x7fff2f27482b]
+                [err]  [0x7fff2f273e3e]
+                [err]  [0x7fff2dea0abd]
+                [err]  [0x7fff2dea07d5]
+                [err]  [0x7fff2dea0579]
+                [err]  [0x7fff2c4e6039]
+                [err]  [0x7fff2c4e4880]
+                [err]  [0x0001116b53e0]
+                [err]  [0x000111097072]
+                [err]  [0x0001116b5319]
+                [err]  [0x7fff2c7e6ef2]
+                [err]  [0x7fff2c7e5c85]
+                [err]  [0x7fff2c7e5c32]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c7e53a9]
+                [err]  [0x7fff2c96e7bc]
+                [err]  [0x7fff2c96e716]
+                [err]  [0x7fff2c7e54c4]
+                [err]  [0x7fff2c87fd87]
+                [err]  [0x000114f9f7e7]
+                [err]  [0x0001150a42d2]
+                [err]  [0x0001150a41d5]
+                [err]  [0x0001150a4b31]
+                [err]  [0x000114d7eff9]
+                [err]  [0x0001112bac4b]
+                [err]  [0x0001112baaf5]
+                [err]  [0x00010e946cc4]
+                [err]  [0x00010ee67e43]
+                [err]  [0x00010e9471a7]
+                [err]  [0x00010e94a1b8]
+                [err]  [0x00010e945898]
+                [err]  [0x000110dc6606]
+                [err]  [0x000110dc61f9]
+                [err]  [0x000110dc4896]
+                [err]  [0x000110dc50ac]
+                [err]  [0x00010cfce3c7]
+                [err]  [0x000100dab8cf]
+                [err]  [0x7fff69325cc9]
+                [err]  [0x00000000001f]
+                [err] [end of stack trace]
+                [err] [0123/103616.682291:WARNING:crash_report_exception_handler.cc(240)] UniversalExceptionRaise: (os/kern) failure (5)
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:82:48)
+                    at BrowserType._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:80:34)
+                    at BrowserType.launchPersistentContext (/Users/davidle/zed-automation/node_modules/playwright/lib/client/browserType.js:72:21)
+                    at MetamaskFactory.init (/Users/davidle/zed-automation/utils/browser/metamaskFactory.js:40:42)
+                    at Object.&lt;anonymous>.beforeAll (/Users/davidle/zed-automation/tests/deposite-withdraw/withdraw-metamask-login.test.js:29:44)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

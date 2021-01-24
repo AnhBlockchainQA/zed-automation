@@ -20,27 +20,27 @@ const studServiceConfig = require('../locators/StudService');
 const { HomePage } = require('../pages/HomePage');
 const { StudServicePage } = require('../pages/StudServicePage');
 const { ActivityPage } = require('../pages/ActivityPage');
+const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let confirmMetamaskNotificationInstance;
-let confirmMetamaskNotificationPage;
-let studServicePage;
-let malehorseName;
-let femalehorseName;
-let index;
-let activityPage;
-let homePage;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var confirmMetamaskNotificationInstance;
+var confirmMetamaskNotificationPage;
+var studServicePage;
+var malehorseName;
+var femalehorseName;
+var index;
+var activityPage;
+var homePage;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
@@ -61,7 +61,7 @@ describe("Generate stud horse", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
@@ -87,14 +87,12 @@ describe("Generate stud horse", () => {
 
   test("Check that avatar is shown then click on Wallet", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnBreedingLink();
   });
 
   test("Select mate horse", async () => {
-    await homePage.clickOnArrowIcon();
-    await homePage.clickOnStudServiceLink();
     studServicePage = new StudServicePage(newPageInstance);
     index = await studServicePage.getRandomIndexOfMaleHorseFromList();
     await studServicePage.clickOnSelectedMaleHorseWithIndex(index);
@@ -104,7 +102,7 @@ describe("Generate stud horse", () => {
     await studServicePage.checkIfCorrectHorseNameSelected(malehorseName, actualSelectHorse);
   });
 
-  test("Select female horse", async() => {
+  test("Select female horse", 3, async() => {
     await studServicePage.clickOnSelectFemaleButton();
     await studServicePage.verifySelectFemalePopUpShown();
     await studServicePage.getListOfFemaleHorse();
@@ -116,7 +114,7 @@ describe("Generate stud horse", () => {
     await studServicePage.checkIfCorrectHorseNameSelected(femalehorseName, actualSelectHorse);
   });
 
-  test("Proceed breeding steps", async() => {
+  test("Proceed breeding steps", 3, async() => {
     await studServicePage.scrollToBuyCoverButton();
     await studServicePage.clickOnBuyCoverButton();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, studServiceConfig.CONFIRM_BUTTON);
@@ -125,15 +123,15 @@ describe("Generate stud horse", () => {
     confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Go to Activity page and check if we breed successfully", async() => {
+  test("Go to Activity page and check if we breed successfully", 3, async() => {
     await studServicePage.clickOnCheckActivityButton();
     activityPage = new ActivityPage(newPageInstance);
-    await activityPage.checkIfBreedingInfoCorrect(malehorseName, femalehorseName);
+    await activityPage.checkIfStatementInfoCorrect(malehorseName, femalehorseName);
   });
-
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest();
-  done()
+
+afterAll(async () => {
+  await metamaskFactory.close();
 });
+

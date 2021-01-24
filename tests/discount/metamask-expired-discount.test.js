@@ -8,28 +8,29 @@ const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { EXPIRED_CODE } = require("../../data/env");
 const zedRunConfig = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
-const  { HomePage } = require("../../pages/HomePage");
+const { HomePage } = require("../../pages/HomePage");
+const test = require("jest-retries");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let marketPlacePage;
-let homePage;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var marketPlacePage;
+var homePage;
+var noOfHorses;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
 describe("Use expired discount voucher when logging in with Metamask", () => {
-  test("Update metamask info", async () => {
+  test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -45,52 +46,66 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-  test("Open ZedRun page and click Connnect Metamask", async () => {
+  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-
   });
 
+  test(
+    "Check that avatar is shown then click on Marketplace to select first horse",
+    3,
+    async () => {
+      homePage = new HomePage(newPageInstance);
+      await homePage.waitForBalanceInfoToBeShown();
+      await homePage.clickOnMarketplaceLink();
+      marketPlacePage = new MarketplacePage(newPageInstance);
+      await marketPlacePage.waitForLoadState();
+      await marketPlacePage.clickOnAcceptButton();
+      noOfHorses = await marketPlacePage.getNumberOfHorses();
+      if (noOfHorses > 0) {
+        await marketPlacePage.mouseOverFirstHorse();
+        await marketPlacePage.clickFirstHorsePreview();
+      }
+    }
+  );
 
-  test("Check that avatar is shown then click on Wallet", async () => {
-    homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.clickOnAcceptButton();
-    await homePage.waitUntilBalanceShown();
-    await homePage.clickOnMarketplaceLink();
-
-  });
-
-  test("Apply the discount coupon : EXPIRED_COUPON", async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.clickFirstHorsePreview();
-    firstHorseName = await marketPlacePage.getHorseName();
-    originalPrice = await marketPlacePage.getHorsePrice();
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.typeCoupon(EXPIRED_CODE.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.verifyErrorMessage(EXPIRED_CODE.ERROR);
+  test("Apply the discount coupon : EXPIRED_COUPON", 3, async () => {
+    if (noOfHorses > 0) {
+      await marketPlacePage.clickOnDownwardArrow();
+      await marketPlacePage.typeCoupon(EXPIRED_CODE.CODE);
+      await marketPlacePage.clickApplyButton();
+      await marketPlacePage.verifyErrorMessage(EXPIRED_CODE.ERROR);
+    }
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest();
-  done();
+afterAll(async () => {
+  await metamaskFactory.close();
 });

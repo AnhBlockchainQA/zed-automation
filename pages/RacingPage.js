@@ -6,17 +6,22 @@ const { REGEX } = require("../data/env");
 class RacingPage {
   constructor(page) {
     this.page = page;
+    this.page.setDefaultTimeout(30000);
   }
   
   async waitUntilRacingEventShown(){
     console.log("--- Zed Run Automation Framework: Wait until racing event shown ---");
+    try{
     await this.page.waitForFunction(
       ([locator,value]) => {
         return document.querySelectorAll(locator).length >= value;
       },
       [racingConfig.RACING_EVENT_LIST, EVENT_LIST_SIZE],
-      { polling: 10000, timeout: 300000 }
+      10000, {timeout: 300000 }
     );
+    }catch{
+      throw new Error("Racing button is not shown");
+    }
   }
 
   async getListOfRacingEvents(){

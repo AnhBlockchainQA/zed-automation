@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const {
   chromium
 } = require("playwright");
@@ -19,6 +18,7 @@ class MetamaskFactory {
   }
 
   async removeCache() {
+    console.log(">>>> User data dir", userDataDir);
     await fs.remove(userDataDir, (err) => {
       if (err) return console.error(err);
       console.log("success!");
@@ -44,9 +44,7 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-
       timeout: 0
-
     });
 
     const [metamaskPage] = await Promise.all([
@@ -72,16 +70,12 @@ class MetamaskFactory {
   }
 
   async clickNewPage(page, selector) {
-
-      const [newPage] = await Promise.all([
-        this.browserContext.waitForEvent("page"),
-        (await page.$(selector)).click({ timeout: 0 }),
-        // page.click(selector, {
-        //   timeout: 0
-        // }),
-      ]);
-      return newPage;
-
+    console.log(">>>>> Selector", selector);
+    const [newPage] = await Promise.all([
+      this.browserContext.waitForEvent("page"),
+      page.click(selector, { timeout: 0 }),
+    ]);
+    return newPage;
   }
 
   async clickNewPageWithRetry(page, selector, threshold, delay) {
@@ -106,7 +100,7 @@ class MetamaskFactory {
     return await this.browserContext.newPage();
   }
 
-  async endTest() {
+  async close() {
     // await this.removeCache();
     console.log('close browser')
     await this.browserContext.close();

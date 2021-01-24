@@ -9,22 +9,21 @@ const { HomePage } = require("../../pages/HomePage");
 const zedRunConfig = require('../../locators/ZedRun');
 const walletConfig = require("../../locators/Wallet");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let homePage;
-let depositeMetamaskNotificationInstance;
-let depositeMetamaskNotificationPage;
-let walletPage;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var homePage;
+var depositeMetamaskNotificationInstance;
+var depositeMetamaskNotificationPage;
+var walletPage;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
@@ -70,11 +69,10 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
-    await homePage.clickOnAcceptButton();
+    await homePage.waitForBalanceInfoToBeShown();
+    await homePage.waitForLoadState();
     await homePage.clickOnWalletIcon();
   });
 
@@ -95,7 +93,6 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   });
 });
 
-afterAll(async (done) => {
-  await metamaskFactory.endTest();
-  done();
+afterAll(async () => {
+  await metamaskFactory.close();
 });

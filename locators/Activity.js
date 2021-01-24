@@ -1,6 +1,4 @@
-const config = require('config')
-const activityConfig = config.get("activity")
 
 module.exports = {
-    FIRST_STATEMENT_INFO: activityConfig.FIRST_STATEMENT_INFO
+    FIRST_STATEMENT_INFO: ".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement"
 };    
