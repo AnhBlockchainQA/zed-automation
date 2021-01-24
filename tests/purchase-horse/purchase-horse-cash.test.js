@@ -91,17 +91,20 @@ describe("Buy horse with credit card", () => {
 
   test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.clickOnMarketplaceLink();
-    await homePage.clickOnAcceptButton();
     await homePage.waitForBalanceInfoToBeShown();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.mouseOverFirstHorse();
-    await marketPlacePage.clickFirstHorsePreview();
-    horseName = await marketPlacePage.getHorseName();
+    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.clickOnAcceptButton();
+    noOfHorses = await marketPlacePage.getNumberOfHorses();
+    if (noOfHorses > 0) {
+      await marketPlacePage.mouseOverFirstHorse();
+      await marketPlacePage.clickFirstHorsePreview();
+    }
   });
 
   test("Process payment by cash", 3, async () => {
+    if (noOfHorses > 0) {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithCreditCardButton();
     await paymentPage.waitUntilPaymentFormPresent();
@@ -113,11 +116,14 @@ describe("Buy horse with credit card", () => {
     await paymentPage.clickPayButton();
     await paymentPage.checkPaySuccessfulLabelPresent();
     await paymentPage.clickDoneButton();
+    }
   });
 
   test("Verify that our order is performed", 3, async () => {
+    if (noOfHorses > 0) {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.checkIfStatementInfoCorrect(horseName);
+    }
   });
 });
 
