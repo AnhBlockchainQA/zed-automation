@@ -9,7 +9,13 @@ const {
   ERROR_MESSAGE,
   HORSE_LIST,
 } = require("../locators/MarketPlace");
-const { HORSE_LIST_SIZE, HORSE_LIST_ATTRIBUTE } = require("../data/env");
+const {
+  ACCEPT_BUTTON
+} = require("../locators/ZedRun");
+const {
+  HORSE_LIST_SIZE,
+  HORSE_LIST_PREDICATE,
+} = require("../data/env");
 
 class MarketplacePage {
   constructor(page) {
@@ -159,24 +165,38 @@ class MarketplacePage {
     }
   }
 
-  async waitUntilHorseListLoaded() {
+  async getNumberOfHorses() {
+    console.log(
+      "--- Zed Run Automation Framework: Get number of horse in list ---"
+    );
+    try {
+      await this.page.waitForSelector(HORSE_LIST, { timeout: 0 });
+      const numberOfHorses = await this.page.evaluate((locator) => {
+        return document.querySelectorAll(locator).length;
+      }, HORSE_LIST);
+      console.log("Number of horses is [%s]", numberOfHorses);
+      return numberOfHorses;
+    } catch {
+      return -1;
+    }
+  }
+
+  async waitUntilHorseListLoaded(value) {
     console.log(
       "--- Zed Run Automation Framework: Wait until horse list loaded ---"
     );
-    try {
-      await this.page.waitForFunction(
-        ([locator, value]) => {
-          return document.querySelectorAll(locator).length >= value;
-        },
-        [HORSE_LIST, HORSE_LIST_SIZE],
-        10000,
-        { timeout: 300000 }
-      );
-    } catch {
-      throw new Error(
-        "Waiting time is over but size of horse list is still incorrect!"
-      );
-    }
+    await this.page.waitForFunction(
+      ([locator, val]) => {
+        return document.querySelectorAll(locator).length == val;
+      },
+      [HORSE_LIST,value],
+      10000,
+      { timeout: 300000 }
+    );
+  }
+
+  async waitForLoadState(){
+    await this.page.waitForLoadState();
   }
 
   async clickOnDownwardArrow() {
@@ -188,6 +208,21 @@ class MarketplacePage {
       await this.page.click(DOWNWARD_ARROW);
     } catch {
       throw new Error("Downward arrow icon is not present");
+    }
+  }
+
+  async clickOnAcceptButton(){
+    console.log(
+      "---- Zed Run Automation Framework: Click on Accept button ---"
+    );
+    try {
+      await this.page.waitForSelector(ACCEPT_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(ACCEPT_BUTTON);
+    } catch {
+      throw new Error("Accept button is not present or not clickable");
     }
   }
 

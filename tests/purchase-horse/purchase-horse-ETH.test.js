@@ -91,18 +91,20 @@ describe("Purchase horse with ETH", () => {
 
   test("Go to Marketplace and select first horse", 3, async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.clickOnMarketplaceLink();
-    await homePage.clickOnAcceptButton();
     await homePage.waitForBalanceInfoToBeShown();
+    await homePage.clickOnMarketplaceLink();
     marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitUntilHorseListLoaded();
-    await marketPlacePage.mouseOverFirstHorse();
-    await marketPlacePage.clickFirstHorsePreview();
-    horseName = await marketPlacePage.getHorseName();
+    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.clickOnAcceptButton();
+    noOfHorses = await marketPlacePage.getNumberOfHorses();
+    if (noOfHorses > 0) {
+      await marketPlacePage.mouseOverFirstHorse();
+      await marketPlacePage.clickFirstHorsePreview();
+    }
   });
 
   test("Purchase horse with ETH", 3, async () => {
+    if (noOfHorses > 0) {
     paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.clickOnBuyWithETH();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
@@ -117,12 +119,15 @@ describe("Purchase horse with ETH", () => {
     await confirmMetamaskNotificationPage.waitForLoadState();
     await confirmMetamaskNotificationPage.clickOnConfirmButton();
     // await confirmMetamaskNotificationPage.waitForCloseEvent();
+    }
   });
 
   test("Verify that our order is performed", 3, async () => {
+    if (noOfHorses > 0) {
     activityPage = new ActivityPage(newPageInstance);
     await activityPage.bringToFront();
     await activityPage.checkIfStatementInfoCorrect(horseName);
+    }
   });
 });
 
