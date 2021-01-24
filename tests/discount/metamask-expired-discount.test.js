@@ -22,6 +22,7 @@ var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
 var marketPlacePage;
 var homePage;
+var noOfHorses;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -82,21 +83,26 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     3,
     async () => {
       homePage = new HomePage(newPageInstance);
-      await homePage.clickOnMarketplaceLink();
-      await homePage.clickOnAcceptButton();
       await homePage.waitForBalanceInfoToBeShown();
+      await homePage.clickOnMarketplaceLink();
       marketPlacePage = new MarketplacePage(newPageInstance);
-      await marketPlacePage.waitUntilHorseListLoaded();
-      await marketPlacePage.mouseOverFirstHorse();
-      await marketPlacePage.clickFirstHorsePreview();
+      await marketPlacePage.waitForLoadState();
+      await marketPlacePage.clickOnAcceptButton();
+      noOfHorses = await marketPlacePage.getNumberOfHorses();
+      if (noOfHorses > 0) {
+        await marketPlacePage.mouseOverFirstHorse();
+        await marketPlacePage.clickFirstHorsePreview();
+      }
     }
   );
 
   test("Apply the discount coupon : EXPIRED_COUPON", 3, async () => {
+    if (noOfHorses > 0) {
       await marketPlacePage.clickOnDownwardArrow();
       await marketPlacePage.typeCoupon(EXPIRED_CODE.CODE);
       await marketPlacePage.clickApplyButton();
       await marketPlacePage.verifyErrorMessage(EXPIRED_CODE.ERROR);
+    }
   });
 });
 
