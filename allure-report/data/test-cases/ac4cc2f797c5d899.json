@@ -1,0 +1,46 @@
+{
+  "uid" : "ac4cc2f797c5d899",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Pick horses to gate and process Next to Run event.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1d491f0d980520378c7ecb9e52d14e6f",
+  "time" : {
+    "start" : 1611546880660,
+    "stop" : 1611546892269,
+    "duration" : 11609
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ac4cc2f797c5d899.json",
+  "parameterValues" : [ ]
+}

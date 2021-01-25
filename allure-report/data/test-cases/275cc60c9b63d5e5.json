@@ -1,0 +1,46 @@
+{
+  "uid" : "275cc60c9b63d5e5",
+  "name" : "Wait until wallet icon is shown",
+  "fullName" : "Pick horses to gate and process Next to Run event.Wait until wallet icon is shown",
+  "historyId" : "6ae69b45924a3d3f61396ddae93516a9",
+  "time" : {
+    "start" : 1611546892269,
+    "stop" : 1611546896216,
+    "duration" : 3947
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "275cc60c9b63d5e5.json",
+  "parameterValues" : [ ]
+}

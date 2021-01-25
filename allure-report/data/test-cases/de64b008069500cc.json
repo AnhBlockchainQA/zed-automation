@@ -1,0 +1,54 @@
+{
+  "uid" : "de64b008069500cc",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check that avatar is shown then click on Marketplace to select first horse",
+  "historyId" : "fbf61890b9d7fdaa16cfcb08b6bcaee5",
+  "time" : {
+    "start" : 1611546784361,
+    "stop" : 1611546790701,
+    "duration" : 6340
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace to select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7f41586f21e495a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611546724191,
+        "stop" : 1611546730129,
+        "duration" : 5938
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "de64b008069500cc.json",
+  "parameterValues" : [ ]
+}

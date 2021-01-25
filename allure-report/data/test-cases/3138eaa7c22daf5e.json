@@ -1,0 +1,52 @@
+{
+  "uid" : "3138eaa7c22daf5e",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "dab672cdc7c234cc79367912f0c8f441",
+  "time" : {
+    "start" : 1611547313214,
+    "stop" : 1611547343230,
+    "duration" : 30016
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.\n                    at _rejectOn.promise.then (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/waiter.js:40:51)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3138eaa7c22daf5e.json",
+  "parameterValues" : [ ]
+}

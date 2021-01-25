@@ -1,0 +1,46 @@
+{
+  "uid" : "bed86fb02c8e97a1",
+  "name" : "Update metamask info",
+  "fullName" : "Pick horses to gate and process Next to Run event.Update metamask info",
+  "historyId" : "291525fb82bf5deaca3a859fa1f59440",
+  "time" : {
+    "start" : 1611546876219,
+    "stop" : 1611546880660,
+    "duration" : 4441
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bed86fb02c8e97a1.json",
+  "parameterValues" : [ ]
+}

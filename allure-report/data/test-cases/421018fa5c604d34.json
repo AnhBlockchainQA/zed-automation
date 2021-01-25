@@ -1,0 +1,54 @@
+{
+  "uid" : "421018fa5c604d34",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "cf9370c9c36c61ce52119b26ddfc5550",
+  "time" : {
+    "start" : 1611546963710,
+    "stop" : 1611546975280,
+    "duration" : 11570
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c92f6bd2300e8afd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611546800479,
+        "stop" : 1611546817296,
+        "duration" : 16817
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "421018fa5c604d34.json",
+  "parameterValues" : [ ]
+}

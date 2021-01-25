@@ -1,0 +1,46 @@
+{
+  "uid" : "7eb9757f306bc2ca",
+  "name" : "Update metamask info",
+  "fullName" : "Login to ZedRun with Metamask.Update metamask info",
+  "historyId" : "a257a6f2f150982975a4ef84c2c82566",
+  "time" : {
+    "start" : 1611546853222,
+    "stop" : 1611546857327,
+    "duration" : 4105
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7eb9757f306bc2ca.json",
+  "parameterValues" : [ ]
+}
