@@ -1,7 +1,6 @@
 name: automation test CI
 
 on:
-<<<<<<< HEAD
   repository_dispatch:
   push:
   schedule:
