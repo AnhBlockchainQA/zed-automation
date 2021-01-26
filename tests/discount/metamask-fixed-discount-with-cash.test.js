@@ -145,6 +145,7 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
   // });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });

@@ -140,6 +140,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   // });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });

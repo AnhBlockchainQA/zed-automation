@@ -84,6 +84,7 @@ describe("Login to ZedRun with Metamask", () => {
   });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });

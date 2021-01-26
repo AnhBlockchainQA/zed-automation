@@ -103,7 +103,8 @@ class MetamaskFactory {
 
   async close() {
     // await this.removeCache();
-    console.log('close browser')
+    console.log('close browser');
+    await this.metamask.close();
     await this.browserContext.close();
   }
 }
