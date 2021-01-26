@@ -10,7 +10,6 @@ const {
   OTHER_TEST_DOMAIN,
   AMOUNT,
 } = require("../../data/env");
-const { DONE_BUTTON } = require("../../locators/Payment");
 
 var pageFactory = new PageFactory();
 var messageId;
