@@ -1,0 +1,46 @@
+{
+  "uid" : "110c0e23ef43f687",
+  "name" : "Update metamask info",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Update metamask info",
+  "historyId" : "f5a5b38c0c80385dd4265f32bccec5f4",
+  "time" : {
+    "start" : 1611597242888,
+    "stop" : 1611597247429,
+    "duration" : 4541
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "110c0e23ef43f687.json",
+  "parameterValues" : [ ]
+}

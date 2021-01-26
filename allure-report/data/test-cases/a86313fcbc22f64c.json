@@ -1,0 +1,46 @@
+{
+  "uid" : "a86313fcbc22f64c",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check that avatar is shown then click on Marketplace to select first horse",
+  "historyId" : "fbf61890b9d7fdaa16cfcb08b6bcaee5",
+  "time" : {
+    "start" : 1611597123639,
+    "stop" : 1611597239549,
+    "duration" : 115910
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Target page, context or browser has been closed",
+  "statusTrace" : "Target page, context or browser has been closed: \n                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:186:23)\n                    at new HomePage (/Users/davidle/qa-automationtest/pages/HomePage.js:17:15)\n                    at test (/Users/davidle/qa-automationtest/tests/discount/metamask-invalid-discount.test.js:85:18)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace to select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a86313fcbc22f64c.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "a2f4539fa22714d7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "7bbfbfa1398a1db08036d8b9ac75582",
+  "time" : {
+    "start" : 1611604153811,
+    "stop" : 1611604164780,
+    "duration" : 10969
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a2f4539fa22714d7.json",
+  "parameterValues" : [ ]
+}

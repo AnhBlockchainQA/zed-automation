@@ -1,0 +1,61 @@
+{
+  "uid" : "6e2d782f2db7491b",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Click on Withdraw button and check if ZED balance is updated",
+  "historyId" : "d49d66fb988d177a167fb698c05f9c5c",
+  "time" : {
+    "start" : 1611599470705,
+    "stop" : 1611599770722,
+    "duration" : 300017
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/Users/davidle/qa-automationtest/pages/HomePage.js:123:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Withdraw button and check if ZED balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "48f7144b981e3711",
+      "status" : "failed",
+      "statusDetails" : "Error: Target page, context or browser has been closed",
+      "time" : {
+        "start" : 1611596874886,
+        "stop" : 1611596874898,
+        "duration" : 12
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "6e2d782f2db7491b.json",
+  "parameterValues" : [ ]
+}

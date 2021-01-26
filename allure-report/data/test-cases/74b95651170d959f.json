@@ -1,0 +1,52 @@
+{
+  "uid" : "74b95651170d959f",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Click on Deposit button and check if ETH balance is updated",
+  "historyId" : "79538d6662470826e7ddfc0fb023b820",
+  "time" : {
+    "start" : 1611598842063,
+    "stop" : 1611599142082,
+    "duration" : 300019
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/Users/davidle/qa-automationtest/pages/HomePage.js:123:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Deposit button and check if ETH balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "74b95651170d959f.json",
+  "parameterValues" : [ ]
+}
