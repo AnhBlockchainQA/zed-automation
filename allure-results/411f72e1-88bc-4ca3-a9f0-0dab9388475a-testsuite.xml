@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611684269238' stop='1611684272680'>
+    <name>Dual horse cash</name>
+    <title>Dual horse cash</title>
+    <test-cases>
+        <test-case start='1611684269238' status='undefined' stop='1611684269239'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611684269240' status='undefined' stop='1611684269240'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611684269240' status='failed' stop='1611684272677'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Unknown scheme for BrowserContext.Symbol(nodejs.util.inspect.custom)</message>
+                <stack-trace>Error: Unknown scheme for BrowserContext.Symbol(nodejs.util.inspect.custom)
+                    at validateParams (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:248:15)
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:72:67)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at formatValue (internal/util/inspect.js:491:31)
+                    at formatProperty (internal/util/inspect.js:1071:11)
+                    at formatRaw (internal/util/inspect.js:727:11)
+                    at formatValue (internal/util/inspect.js:509:10)
+                    at formatProperty (internal/util/inspect.js:1071:11)
+                    at formatRaw (internal/util/inspect.js:727:11)
+                    at formatValue (internal/util/inspect.js:509:10)
+                    at formatProperty (internal/util/inspect.js:1071:11)
+                    at formatRaw (internal/util/inspect.js:727:11)
+                    at formatValue (internal/util/inspect.js:509:10)
+                    at inspect (internal/util/inspect.js:189:10)
+                    at formatWithOptions (util.js:84:12)
+                    at format (util.js:72:10)
+                    at CustomConsole.log (/Users/davidle/qa-automationtest/node_modules/@jest/console/build/CustomConsole.js:185:41)
+                    at test (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:52:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611684272679' status='undefined' stop='1611684272679'>
+            <name>Switch back to ZedRun page and verify login successful</name>
+            <title>Switch back to ZedRun page and verify login successful</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>This test was disabled</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

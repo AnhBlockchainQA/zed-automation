@@ -1,0 +1,46 @@
+{
+  "uid" : "c343ecc1dd5d0804",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "fullName" : "Login to ZedRun with magic link.Switch back to ZedRun page and verify login successful",
+  "historyId" : "89fd272cf748d697446171eeec1a3167",
+  "time" : {
+    "start" : 1611674389042,
+    "stop" : 1611674395388,
+    "duration" : 6346
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Switch back to ZedRun page and verify login successful"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c343ecc1dd5d0804.json",
+  "parameterValues" : [ ]
+}

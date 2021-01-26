@@ -1,0 +1,46 @@
+{
+  "uid" : "28eb3fbd4e67e542",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Dual horse cash.Open new browser with magic link",
+  "historyId" : "dae65ed6dd76ce0f1f693b5d8d9b8546",
+  "time" : {
+    "start" : 1611673953498,
+    "stop" : 1611673963853,
+    "duration" : 10355
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "28eb3fbd4e67e542.json",
+  "parameterValues" : [ ]
+}

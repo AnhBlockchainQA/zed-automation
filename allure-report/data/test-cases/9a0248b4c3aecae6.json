@@ -1,0 +1,46 @@
+{
+  "uid" : "9a0248b4c3aecae6",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "ffdfb652c48964057576bf6048c455cf",
+  "time" : {
+    "start" : 1611674201807,
+    "stop" : 1611674212022,
+    "duration" : 10215
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9a0248b4c3aecae6.json",
+  "parameterValues" : [ ]
+}

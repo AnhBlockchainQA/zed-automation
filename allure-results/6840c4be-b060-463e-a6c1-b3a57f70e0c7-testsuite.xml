@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611679413720' stop='1611679540317'>
+    <name>Deposite to ZED balance by logging in with magic link</name>
+    <title>Deposite to ZED balance by logging in with magic link</title>
+    <test-cases>
+        <test-case start='1611679413720' status='passed' stop='1611679430029'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611679430029' status='passed' stop='1611679431930'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611679431930' status='passed' stop='1611679444977'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611679444977' status='passed' stop='1611679480501'>
+            <name>Wait until wallet icon is shown then click on Wallet icon</name>
+            <title>Wait until wallet icon is shown then click on Wallet icon</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611679480501' status='passed' stop='1611679540317'>
+            <name>Click on Deposit button and check if ETH balance is updated</name>
+            <title>Click on Deposit button and check if ETH balance is updated</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,46 @@
+{
+  "uid" : "c63a5b9b0ee8ab93",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "949b33d360338d356a0d54e486cb070f",
+  "time" : {
+    "start" : 1611674001738,
+    "stop" : 1611674014183,
+    "duration" : 12445
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c63a5b9b0ee8ab93.json",
+  "parameterValues" : [ ]
+}

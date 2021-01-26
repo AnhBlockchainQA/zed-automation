@@ -1,0 +1,46 @@
+{
+  "uid" : "8859a800e4c496c4",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "dab672cdc7c234cc79367912f0c8f441",
+  "time" : {
+    "start" : 1611674014183,
+    "stop" : 1611674018435,
+    "duration" : 4252
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8859a800e4c496c4.json",
+  "parameterValues" : [ ]
+}

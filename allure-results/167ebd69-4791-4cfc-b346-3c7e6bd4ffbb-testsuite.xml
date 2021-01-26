@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611679983830' stop='1611680183454'>
+    <name>Use fixed discount voucher to buy horse with ETH while logging in with Metamask</name>
+    <title>Use fixed discount voucher to buy horse with ETH while logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1611679983830' status='passed' stop='1611679987913'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611679987913' status='passed' stop='1611680000571'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611680000571' status='passed' stop='1611680007210'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611680007210' status='failed' stop='1611680183429'>
+            <name>Apply the discount coupon : ZED-10-PERCENT</name>
+            <title>Apply the discount coupon : ZED-10-PERCENT</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+                =========================== logs ===========================
+                waiting for selector "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+                =========================== logs ===========================
+                waiting for selector "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at MarketplacePage.getHorseName (/Users/davidle/qa-automationtest/pages/MarketplacePage.js:115:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611680183429' status='failed' stop='1611680183443'>
+            <name>Process the checkout with ETH</name>
+            <title>Process the checkout with ETH</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:186:23)
+                    at new PaymentPage (/Users/davidle/qa-automationtest/pages/PaymentPage.js:17:15)
+                    at test (/Users/davidle/qa-automationtest/tests/discount/metamask-percent-discount-with-eth.test.js:124:21)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611680183443' status='failed' stop='1611680183453'>
+            <name>Verify that our order is performed</name>
+            <title>Verify that our order is performed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:54:53)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:186:23)
+                    at new PaymentPage (/Users/davidle/qa-automationtest/pages/PaymentPage.js:17:15)
+                    at test (/Users/davidle/qa-automationtest/tests/discount/metamask-percent-discount-with-eth.test.js:124:21)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

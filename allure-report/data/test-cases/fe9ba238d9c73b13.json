@@ -1,0 +1,46 @@
+{
+  "uid" : "fe9ba238d9c73b13",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card.Go to Marketplace and select first horse",
+  "historyId" : "f20a6a35428e9b6bd5f78f5b0a318e0b",
+  "time" : {
+    "start" : 1611673911585,
+    "stop" : 1611673918064,
+    "duration" : 6479
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fe9ba238d9c73b13.json",
+  "parameterValues" : [ ]
+}

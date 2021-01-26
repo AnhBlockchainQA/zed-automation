@@ -1,0 +1,44 @@
+{
+  "uid" : "ff5a3821ec4802d6",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Check that avatar is shown then click on Marketplace to select first horse",
+  "historyId" : "eee2166dc68d81d2af85791cdd48ef18",
+  "time" : {
+    "start" : 1611670256801,
+    "stop" : 1611670262629,
+    "duration" : 5828
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace to select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ff5a3821ec4802d6.json",
+  "parameterValues" : [ ]
+}

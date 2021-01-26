@@ -1,0 +1,46 @@
+{
+  "uid" : "cfd5b8c7d6932c82",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Login to ZedRun with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "19433122bf1e5a835866655ce2216ce9",
+  "time" : {
+    "start" : 1611674167625,
+    "stop" : 1611674178962,
+    "duration" : 11337
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cfd5b8c7d6932c82.json",
+  "parameterValues" : [ ]
+}
