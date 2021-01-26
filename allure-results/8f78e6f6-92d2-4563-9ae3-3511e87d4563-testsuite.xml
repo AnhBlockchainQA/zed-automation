@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611630246115' stop='1611630266746'>
+    <name>Pick horses to gate and process Next to Run event</name>
+    <title>Pick horses to gate and process Next to Run event</title>
+    <test-cases>
+        <test-case start='1611630246115' status='passed' stop='1611630250741'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611630250742' status='passed' stop='1611630262873'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611630262873' status='passed' stop='1611630266746'>
+            <name>Wait until wallet icon is shown</name>
+            <title>Wait until wallet icon is shown</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

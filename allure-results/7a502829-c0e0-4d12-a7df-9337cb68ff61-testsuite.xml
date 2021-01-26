@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611629945588' stop='1611629967035'>
+    <name>Login to ZedRun with Metamask</name>
+    <title>Login to ZedRun with Metamask</title>
+    <test-cases>
+        <test-case start='1611629945589' status='passed' stop='1611629949528'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611629949528' status='passed' stop='1611629962818'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611629962818' status='passed' stop='1611629967035'>
+            <name>Check that avatar is shown</name>
+            <title>Check that avatar is shown</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

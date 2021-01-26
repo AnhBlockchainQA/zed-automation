@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611630294903' stop='1611630323348'>
+    <name>Use expired discount voucher when logging in with Metamask</name>
+    <title>Use expired discount voucher when logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1611630294904' status='passed' stop='1611630299441'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611630299441' status='passed' stop='1611630312992'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611630312992' status='passed' stop='1611630320627'>
+            <name>Check that avatar is shown then click on Marketplace to select first horse</name>
+            <title>Check that avatar is shown then click on Marketplace to select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611630320627' status='passed' stop='1611630323348'>
+            <name>Apply the discount coupon : INVALID_COUPON</name>
+            <title>Apply the discount coupon : INVALID_COUPON</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
