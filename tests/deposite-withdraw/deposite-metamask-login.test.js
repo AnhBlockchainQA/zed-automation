@@ -93,6 +93,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });
