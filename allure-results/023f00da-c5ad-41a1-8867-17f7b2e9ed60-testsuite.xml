@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611673663105' stop='1611673685663'>
+    <name>Use fixed discount voucher to buy horse with card while logging in with Metamask</name>
+    <title>Use fixed discount voucher to buy horse with card while logging in with Metamask</title>
+    <test-cases>
+        <test-case start='1611673663105' status='passed' stop='1611673667404'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611673667404' status='passed' stop='1611673679432'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1611673679432' status='passed' stop='1611673685662'>
+            <name>Check that avatar is shown then click on Marketplace to select first horse</name>
+            <title>Check that avatar is shown then click on Marketplace to select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
