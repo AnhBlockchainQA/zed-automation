@@ -41,7 +41,5 @@ module.exports = {
   REGEX: {
     NUMBER: /\$\{i\}/g,
     TEXT: /\$\{name\}/g,
-  },
-  HORSE_LIST_PREDICATE: v => v.includes("horse-details"),
-  HORSE_LIST_ATTRIBUTE: "horse-details"
+  }
 }
