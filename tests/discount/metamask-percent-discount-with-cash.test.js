@@ -19,6 +19,7 @@ const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
 const test = require("jest-retries");
+const { DONE_BUTTON } = require("../../locators/Payment");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -140,6 +141,7 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   // });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });

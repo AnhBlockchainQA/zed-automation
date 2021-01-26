@@ -152,6 +152,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
   // });
 });
 
-afterAll(async () => {
+afterAll(async (done) => {
   await metamaskFactory.close();
+  done();
 });

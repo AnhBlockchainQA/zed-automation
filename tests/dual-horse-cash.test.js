@@ -104,8 +104,9 @@ describe("Dual horse cash", () => {
 });
 
 
-afterAll(async () => {
+afterAll(async (done) => {
  await pageFactory.endTest();
+ done();
 });
 
 
