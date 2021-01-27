@@ -71,13 +71,15 @@ class MarketplacePage {
       "--- Zed Run Automation Framework: Verify if discount label shown correctly ---"
     );
     try {
-      await this.page.waitForSelector(DISCOUNT_LABEL, {
-        visible: true,
-        timeout: 0,
-      });
+      // await this.page.waitForSelector(DISCOUNT_LABEL, {
+      //   visible: true,
+      //   timeout: 0,
+      // });
       const discountText = await this.page.evaluate((locator) => {
         return document.querySelector(locator).innerText;
       }, DISCOUNT_LABEL);
+      console.log(discountText);
+      console.log("---- return verifyDiscountLabel")
       return discountText.includes(value);
     } catch (error) {
       return false;
