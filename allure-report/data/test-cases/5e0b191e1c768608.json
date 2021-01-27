@@ -1,0 +1,44 @@
+{
+  "uid" : "5e0b191e1c768608",
+  "name" : "Select female horse",
+  "fullName" : "Generate stud horse.Select female horse",
+  "historyId" : "94a9decf7461bb9b67d9e3600b4810c8",
+  "time" : {
+    "start" : 1611685198183,
+    "stop" : 1611685204272,
+    "duration" : 6089
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select female horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5e0b191e1c768608.json",
+  "parameterValues" : [ ]
+}

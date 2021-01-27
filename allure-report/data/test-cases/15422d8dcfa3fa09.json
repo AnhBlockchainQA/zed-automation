@@ -1,0 +1,44 @@
+{
+  "uid" : "15422d8dcfa3fa09",
+  "name" : "Process the checkout with ETH",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Process the checkout with ETH",
+  "historyId" : "7cf55861f44893842ec602db33557fdf",
+  "time" : {
+    "start" : 1611682621473,
+    "stop" : 1611682621473,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "15422d8dcfa3fa09.json",
+  "parameterValues" : [ ]
+}

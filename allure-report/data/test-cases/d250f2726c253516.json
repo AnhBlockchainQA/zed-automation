@@ -1,0 +1,111 @@
+{
+  "uid" : "d250f2726c253516",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "728c37c81976432dd8a3c7eae7b6d5e1",
+  "time" : {
+    "start" : 1611721000951,
+    "stop" : 1611721010677,
+    "duration" : 9726
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6a2e642c1250cc03",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685773112,
+        "stop" : 1611685782490,
+        "duration" : 9378
+      }
+    }, {
+      "uid" : "84d67748f374612",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611682570320,
+        "stop" : 1611682580335,
+        "duration" : 10015
+      }
+    }, {
+      "uid" : "40bff94bc80c20f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611682294241,
+        "stop" : 1611682308432,
+        "duration" : 14191
+      }
+    }, {
+      "uid" : "f119d0f3eddb1ebb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611682166000,
+        "stop" : 1611682182485,
+        "duration" : 16485
+      }
+    }, {
+      "uid" : "6223be88241ecb67",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611682024572,
+        "stop" : 1611682039676,
+        "duration" : 15104
+      }
+    }, {
+      "uid" : "97fe1b2d0ef4d823",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611681800954,
+        "stop" : 1611681822623,
+        "duration" : 21669
+      }
+    }, {
+      "uid" : "f5e6b5c853d29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611680802960,
+        "stop" : 1611680809797,
+        "duration" : 6837
+      }
+    }, {
+      "uid" : "9d7d14699441694a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611680230719,
+        "stop" : 1611680236810,
+        "duration" : 6091
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d250f2726c253516.json",
+  "parameterValues" : [ ]
+}

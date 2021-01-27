@@ -1,0 +1,46 @@
+{
+  "uid" : "3ecf3f6850642142",
+  "name" : "Apply the discount coupon : ZED-10-PERCENT",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Apply the discount coupon : ZED-10-PERCENT",
+  "historyId" : "3ba10496e4b95ef2d2b99dcb2f8e6de5",
+  "time" : {
+    "start" : 1611680236810,
+    "stop" : 1611680282175,
+    "duration" : 45365
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.\n                =========================== logs ===========================\n                waiting for selector \"div.buy-method-choice > .method-options > .fiat-price > span\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "Error: Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.\n                =========================== logs ===========================\n                waiting for selector \"div.buy-method-choice > .method-options > .fiat-price > span\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.\n                    at MarketplacePage.getHorsePrice (/Users/davidle/qa-automationtest/pages/MarketplacePage.js:99:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ZED-10-PERCENT"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3ecf3f6850642142.json",
+  "parameterValues" : [ ]
+}

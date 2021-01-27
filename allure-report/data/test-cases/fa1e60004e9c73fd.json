@@ -1,0 +1,63 @@
+{
+  "uid" : "fa1e60004e9c73fd",
+  "name" : "Update metamask info",
+  "fullName" : "Purchase horse with ETH.Update metamask info",
+  "historyId" : "7ea5eab8e7f13e5513775c9670cfdceb",
+  "time" : {
+    "start" : 1611721148001,
+    "stop" : 1611721151977,
+    "duration" : 3976
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e23be173b5dc2950",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685700100,
+        "stop" : 1611685704132,
+        "duration" : 4032
+      }
+    }, {
+      "uid" : "7d0b22a0a742ec9b",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611682830449,
+        "stop" : 1611682840465,
+        "duration" : 10016
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fa1e60004e9c73fd.json",
+  "parameterValues" : [ ]
+}

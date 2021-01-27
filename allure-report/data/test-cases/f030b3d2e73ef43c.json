@@ -1,0 +1,69 @@
+{
+  "uid" : "f030b3d2e73ef43c",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "ffdfb652c48964057576bf6048c455cf",
+  "time" : {
+    "start" : 1611721363928,
+    "stop" : 1611721364045,
+    "duration" : 117
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:21:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e32f07989452cd56",
+      "status" : "failed",
+      "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+      "time" : {
+        "start" : 1611685328009,
+        "stop" : 1611685328070,
+        "duration" : 61
+      }
+    }, {
+      "uid" : "10f05034583e28c9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611679431930,
+        "stop" : 1611679444977,
+        "duration" : 13047
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f030b3d2e73ef43c.json",
+  "parameterValues" : [ ]
+}

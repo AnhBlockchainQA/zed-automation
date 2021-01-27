@@ -1,0 +1,46 @@
+{
+  "uid" : "1819325ed3659103",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Click on Withdraw button and check if ZED balance is updated",
+  "historyId" : "d49d66fb988d177a167fb698c05f9c5c",
+  "time" : {
+    "start" : 1611596874886,
+    "stop" : 1611596874898,
+    "duration" : 12
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Target page, context or browser has been closed",
+  "statusTrace" : "Target page, context or browser has been closed: \n                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:54:53)\n                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:186:23)\n                    at new HomePage (/Users/davidle/zed-automation/pages/HomePage.js:17:15)\n                    at Object.test (/Users/davidle/zed-automation/tests/deposite-withdraw/withdraw-mail-login.test.js:55:16)\n                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Withdraw button and check if ZED balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1819325ed3659103.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,151 @@
+{
+  "uid" : "466ed914ac589323",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Dual horse cash.Open new browser with magic link",
+  "historyId" : "dae65ed6dd76ce0f1f693b5d8d9b8546",
+  "time" : {
+    "start" : 1611721125022,
+    "stop" : 1611721135025,
+    "duration" : 10003
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.Object.<anonymous>.describe (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:47:3)\n                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/Users/davidle/qa-automationtest/tests/dual-horse-cash.test.js:25:1)\n                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c57ee0a5f928c675",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611685530866,
+        "stop" : 1611685540866,
+        "duration" : 10000
+      }
+    }, {
+      "uid" : "1653f4b7ab32515d",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611685068174,
+        "stop" : 1611685078176,
+        "duration" : 10002
+      }
+    }, {
+      "uid" : "eb86c9e21a94f265",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611684743110,
+        "stop" : 1611684748124,
+        "duration" : 5014
+      }
+    }, {
+      "uid" : "9120df1423450f00",
+      "status" : "failed",
+      "statusDetails" : "Error: Unknown scheme for BrowserContext.Symbol(nodejs.util.inspect.custom)",
+      "time" : {
+        "start" : 1611684698803,
+        "stop" : 1611684702049,
+        "duration" : 3246
+      }
+    }, {
+      "uid" : "fe8530f0d7f802a7",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611684507668,
+        "stop" : 1611684517673,
+        "duration" : 10005
+      }
+    }, {
+      "uid" : "8fc6a0c5a5a9964",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611684371747,
+        "stop" : 1611684376780,
+        "duration" : 5033
+      }
+    }, {
+      "uid" : "bb439d90d92df4b0",
+      "status" : "failed",
+      "statusDetails" : "Error: Unknown scheme for BrowserContext.Symbol(nodejs.util.inspect.custom)",
+      "time" : {
+        "start" : 1611684269240,
+        "stop" : 1611684272677,
+        "duration" : 3437
+      }
+    }, {
+      "uid" : "93eba8a6f34e635a",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611683836707,
+        "stop" : 1611683846709,
+        "duration" : 10002
+      }
+    }, {
+      "uid" : "2dd2450d35617cd9",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611683134854,
+        "stop" : 1611683144856,
+        "duration" : 10002
+      }
+    }, {
+      "uid" : "3a7b02bea0420267",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611683081528,
+        "stop" : 1611683091533,
+        "duration" : 10005
+      }
+    }, {
+      "uid" : "93884e34120ba39f",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611682904747,
+        "stop" : 1611682914753,
+        "duration" : 10006
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "466ed914ac589323.json",
+  "parameterValues" : [ ]
+}

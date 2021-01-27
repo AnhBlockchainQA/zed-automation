@@ -1,0 +1,71 @@
+{
+  "uid" : "66088e6c48f0c88e",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Check mail inbox to get magic link",
+  "historyId" : "b7529a6b4ccd13739be1266af7dca463",
+  "time" : {
+    "start" : 1611721233167,
+    "stop" : 1611721234985,
+    "duration" : 1818
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2cb4ae4606099c17",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685359051,
+        "stop" : 1611685360949,
+        "duration" : 1898
+      }
+    }, {
+      "uid" : "369e88050c8399d5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611679557025,
+        "stop" : 1611679559545,
+        "duration" : 2520
+      }
+    }, {
+      "uid" : "89c82e0fe744fc35",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1611596873762,
+        "stop" : 1611596874642,
+        "duration" : 880
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "66088e6c48f0c88e.json",
+  "parameterValues" : [ ]
+}

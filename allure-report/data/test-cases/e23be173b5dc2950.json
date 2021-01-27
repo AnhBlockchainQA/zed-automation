@@ -1,0 +1,44 @@
+{
+  "uid" : "e23be173b5dc2950",
+  "name" : "Update metamask info",
+  "fullName" : "Purchase horse with ETH.Update metamask info",
+  "historyId" : "7ea5eab8e7f13e5513775c9670cfdceb",
+  "time" : {
+    "start" : 1611685700100,
+    "stop" : 1611685704132,
+    "duration" : 4032
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e23be173b5dc2950.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "uid" : "d3e0a912801d5b4d",
+  "name" : "Go to Activity page and check if we breed successfully",
+  "fullName" : "Generate stud horse.Go to Activity page and check if we breed successfully",
+  "historyId" : "bc0d030743387005a88e81b3e37cad54",
+  "time" : {
+    "start" : 1611685282723,
+    "stop" : 1611685290665,
+    "duration" : 7942
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Activity page and check if we breed successfully"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d3e0a912801d5b4d.json",
+  "parameterValues" : [ ]
+}

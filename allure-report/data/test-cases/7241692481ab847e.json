@@ -1,0 +1,54 @@
+{
+  "uid" : "7241692481ab847e",
+  "name" : "Update metamask info",
+  "fullName" : "Pick horses to gate and process Next to Run event.Update metamask info",
+  "historyId" : "291525fb82bf5deaca3a859fa1f59440",
+  "time" : {
+    "start" : 1611721065571,
+    "stop" : 1611721069309,
+    "duration" : 3738
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "89dd554c0a93a64e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685293947,
+        "stop" : 1611685298358,
+        "duration" : 4411
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7241692481ab847e.json",
+  "parameterValues" : [ ]
+}

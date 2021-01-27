@@ -1,0 +1,62 @@
+{
+  "uid" : "54d4e1ff1e1cfd06",
+  "name" : "Select mate horse",
+  "fullName" : "Generate stud horse.Select mate horse",
+  "historyId" : "dbe757e6e1199f71c4969b8d5644c9fa",
+  "time" : {
+    "start" : 1611720864240,
+    "stop" : 1611720867461,
+    "duration" : 3221
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select mate horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "586f9087185c70d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685270654,
+        "stop" : 1611685275180,
+        "duration" : 4526
+      }
+    }, {
+      "uid" : "e243563ada7b11a2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685194378,
+        "stop" : 1611685198183,
+        "duration" : 3805
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "54d4e1ff1e1cfd06.json",
+  "parameterValues" : [ ]
+}

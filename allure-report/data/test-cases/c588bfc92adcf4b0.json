@@ -1,0 +1,63 @@
+{
+  "uid" : "c588bfc92adcf4b0",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Purchase horse with ETH.Go to Marketplace and select first horse",
+  "historyId" : "82392355cc74f1bf6827fdf107ab4955",
+  "time" : {
+    "start" : 1611721161979,
+    "stop" : 1611721169429,
+    "duration" : 7450
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4a69c202e55ac229",
+      "status" : "passed",
+      "time" : {
+        "start" : 1611685714140,
+        "stop" : 1611685722126,
+        "duration" : 7986
+      }
+    }, {
+      "uid" : "65dc023186e42f5c",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1611682850472,
+        "stop" : 1611682860493,
+        "duration" : 10021
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c588bfc92adcf4b0.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "uid" : "6223be88241ecb67",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "728c37c81976432dd8a3c7eae7b6d5e1",
+  "time" : {
+    "start" : 1611682024572,
+    "stop" : 1611682039676,
+    "duration" : 15104
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6223be88241ecb67.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,70 @@
+{
+  "uid" : "f0f6639e70bff552",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Login to ZedRun with magic link.Open new browser with magic link",
+  "historyId" : "23ca99c354162c48694cedb121ed2aff",
+  "time" : {
+    "start" : 1611721342037,
+    "stop" : 1611721342354,
+    "duration" : 317
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:21:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "33068f2ba3717bcb",
+      "status" : "failed",
+      "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+      "time" : {
+        "start" : 1611685745678,
+        "stop" : 1611685745921,
+        "duration" : 243
+      }
+    }, {
+      "uid" : "b316e6630b963c23",
+      "status" : "failed",
+      "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+      "time" : {
+        "start" : 1611682748498,
+        "stop" : 1611682749276,
+        "duration" : 778
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f0f6639e70bff552.json",
+  "parameterValues" : [ ]
+}

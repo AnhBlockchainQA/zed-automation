@@ -1,0 +1,44 @@
+{
+  "uid" : "ad2860073c8c3b16",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "12d52378ad58ac50790c7a008fd2c91f",
+  "time" : {
+    "start" : 1611679960071,
+    "stop" : 1611679973979,
+    "duration" : 13908
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ad2860073c8c3b16.json",
+  "parameterValues" : [ ]
+}

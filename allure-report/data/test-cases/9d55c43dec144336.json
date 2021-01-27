@@ -1,0 +1,44 @@
+{
+  "uid" : "9d55c43dec144336",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Generate stud horse.Check that avatar is shown then click on Wallet",
+  "historyId" : "c1bc849b32b01fa319068cdc4405e57a",
+  "time" : {
+    "start" : 1611685262686,
+    "stop" : 1611685270654,
+    "duration" : 7968
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9d55c43dec144336.json",
+  "parameterValues" : [ ]
+}
