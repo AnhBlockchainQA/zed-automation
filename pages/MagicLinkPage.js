@@ -16,6 +16,7 @@ class MagicLinkPage {
     console.log("--- Zed Run Automation Framework: Navigation to the url ---");
     try{
     await this.page.goto(url);
+
     }catch{
       throw new Error("Url is not valid or network timeout while loading ", url);
     }

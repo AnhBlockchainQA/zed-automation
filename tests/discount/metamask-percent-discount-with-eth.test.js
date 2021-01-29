@@ -109,8 +109,8 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
   test("Apply the discount coupon : ZED-10-PERCENT", 3, async () => {
     if (noOfHorses > 0) {
       firstHorseName = await marketPlacePage.getHorseName();
-      originalPrice = await marketPlacePage.getHorsePrice();
-      discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
+      const originalPrice = await marketPlacePage.getHorsePrice();
+      const discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
       await marketPlacePage.clickOnDownwardArrow();
       await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
       await marketPlacePage.clickApplyButton();
