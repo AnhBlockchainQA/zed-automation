@@ -1,5 +1,3 @@
-const config = require('config')
-
 module.exports = {
     FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
     DOWNWARD_ARROW : "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",

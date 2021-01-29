@@ -107,6 +107,13 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 });
 
 afterAll(async (done) => {
+  try{
   await metamaskFactory.close();
   done();
+  }catch(error){
+    console.log(error);
+    done();
+  }finally{
+    done();
+  }
 });

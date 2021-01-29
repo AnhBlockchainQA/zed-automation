@@ -1,4 +1,3 @@
-
 module.exports = {
     MALE_HORSE_LIST: ".page-content.stud .stud-content .accordion-content .panel",
     SELECTED_MALE_HORSE: ".page-content.stud .stud-content .accordion-content .panel:nth-child(${i}) button.panel__label",

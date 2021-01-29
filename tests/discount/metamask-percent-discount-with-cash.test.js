@@ -142,6 +142,13 @@ describe("Use percent discount voucher to buy horse with card while logging in w
 });
 
 afterAll(async (done) => {
+  try{
   await metamaskFactory.close();
   done();
+  }catch(error){
+    console.log(error);
+    done();
+  }finally{
+    done();
+  }
 });

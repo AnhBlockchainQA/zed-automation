@@ -1,4 +1,3 @@
-
 module.exports = {
     TOTAL_GATE: ".buy-in-content .pick-gate .gate-group",
     RACING_ENTRY_FREE: ".free-race-badge",

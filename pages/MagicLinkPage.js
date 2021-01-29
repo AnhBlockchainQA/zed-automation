@@ -37,6 +37,10 @@ class MagicLinkPage {
     await this.page.waitForNavigation();
   }
 
+  async waitForLoadState(){
+    await this.page.waitForLoadState();
+  }
+
 }
 
 module.exports = { MagicLinkPage };

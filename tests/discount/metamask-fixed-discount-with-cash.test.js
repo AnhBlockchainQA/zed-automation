@@ -107,7 +107,7 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
       }
     }
   );
-      //Comment this part since we already had issue with the discount voucher
+  //Comment this part since we already had issue with the discount voucher
   // test("Apply the discount coupon : ZED-15-DOLLARS", 3, async () => {
   //   if (noOfHorses > 0) {
   //   firstHorseName = await marketPlacePage.getHorseName();
@@ -146,6 +146,13 @@ describe("Use fixed discount voucher to buy horse with card while logging in wit
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

@@ -1,4 +1,3 @@
-
 module.exports = {
     WALLET_ICON: "//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']",
     DEPOSITE_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .deposit-withdraw > .dw-option:nth-child(1) > .primary-text",

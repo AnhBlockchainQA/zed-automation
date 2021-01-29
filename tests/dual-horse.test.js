@@ -1,23 +1,11 @@
-const {
-  MetamaskPage
-} = require('../pages/MetamaskPage');
-const {
-  MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
-const {
-  LoginPage
-} = require('../pages/LoginPage');
-const {
-  MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
-const {
-  SEED_PHRASE,
-  PASSWORD,
-  CONFIRM_PASSWORD,
-} = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
-const { HomePage } = require('../pages/HomePage');
-const { RacingPage } = require('../pages/RacingPage');
+const { MetamaskPage } = require("../pages/MetamaskPage");
+const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
+const { LoginPage } = require("../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
+const zedRunConfig = require("../locators/ZedRun");
+const { HomePage } = require("../pages/HomePage");
+const { RacingPage } = require("../pages/RacingPage");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -42,7 +30,6 @@ beforeAll(async () => {
 });
 
 describe("Pick horses to gate and process Next to Run event", () => {
-
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -59,29 +46,39 @@ describe("Pick horses to gate and process Next to Run event", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-    test("Open ZedRun page and click Connnect Metamask", 3, async () => {
+  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test ("Wait until wallet icon is shown", async () => {
+  test("Wait until wallet icon is shown", async () => {
     homePage = new HomePage(newPageInstance);
     // await homePage.checkIfAvatarPresent();
     await homePage.waitForBalanceInfoToBeShown();
@@ -122,7 +119,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
   //     await newPageInstance.hover(`.horse-infos`)
   //     await newPageInstance.click('text="Free Entry"')
   //     await newPageInstance.waitForLoadState();
-  //   }    
+  //   }
   //   await newPageInstance.waitForLoadState();
   //   // await newPageInstance.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
   //   await newPageInstance.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
@@ -146,8 +143,14 @@ describe("Pick horses to gate and process Next to Run event", () => {
   // });
 });
 
-
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

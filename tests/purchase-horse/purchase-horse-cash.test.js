@@ -128,6 +128,13 @@ describe("Buy horse with credit card", () => {
 });
 
 afterAll(async (done) => {
+  try{
   await metamaskFactory.close();
   done();
+  }catch(error){
+    console.log(error);
+    done();
+  }finally{
+    done();
+  }
 });

@@ -1,6 +1,7 @@
 const StudServiceConfig = require("../locators/StudService");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
+const { USER_AVATAR, MY_STABLE_LINK } = require("../locators/ZedRun");
 
 class StudServicePage {
   constructor(page) {
@@ -8,28 +9,40 @@ class StudServicePage {
     this.page.setDefaultTimeout(30000);
   }
 
-  async getListOfMaleHorses() {
-    console.log("--- Zed Run Automation Framework: Get list  of male horses ---");
-    await this.page.waitForSelector(StudServiceConfig.MALE_HORSE_LIST, {
-      timeout: 0,
-    });
-    const size = await this.page.evaluate((locator) => {
-      return document.querySelectorAll(locator).length;
-    }, StudServiceConfig.MALE_HORSE_LIST);
-    console.log(">>>>>> Size of male horse list: ", size);
-    return size;
+  async getSizeOfMaleHorses() {
+    console.log(
+      "--- Zed Run Automation Framework: Get list  of male horses ---"
+    );
+    try {
+      await this.page.waitForSelector(StudServiceConfig.MALE_HORSE_LIST, {
+        timeout: 0,
+      });
+      const size = await this.page.evaluate((locator) => {
+        return document.querySelectorAll(locator).length;
+      }, StudServiceConfig.MALE_HORSE_LIST);
+      console.log(">>>>>> Size of male horse list: ", size);
+      return size;
+    } catch {
+      return 0;
+    }
   }
 
   async getRandomIndexOfMaleHorseFromList() {
-    console.log("--- Zed Run Automation Framework: Get random index of male horse from list ---");
-    let size = await this.getListOfMaleHorses();
+    console.log(
+      "--- Zed Run Automation Framework: Get random index of male horse from list ---"
+    );
+    let size = await this.getSizeOfMaleHorses();
     const index = Math.floor(Math.random() * size + 1);
     console.log(">>>>>> Index: ", index);
     return index;
   }
 
   async clickOnSelectedMaleHorseWithIndex(i) {
-    console.log("--- Zed Run Automation Framework: Click on selected horse male with index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on selected horse male with index " +
+        i +
+        " ---"
+    );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_MALE_HORSE,
@@ -40,7 +53,11 @@ class StudServicePage {
   }
 
   async clickOnSelectMateButtonOfHorseWithIndex(i) {
-    console.log("--- Zed Run Automation Framework: Click on Select Mate button of male horse with index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on Select Mate button of male horse with index " +
+        i +
+        " ---"
+    );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_SELECT_MATE_BUTTON,
@@ -51,7 +68,11 @@ class StudServicePage {
   }
 
   async getHorseName(i) {
-    console.log("--- Zed Run Automation Framework: Get name of male horse by index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get name of male horse by index " +
+        i +
+        " ---"
+    );
     let selector = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_HORSE_NAME,
@@ -66,7 +87,9 @@ class StudServicePage {
   }
 
   async getSelectedMateHorseName() {
-    console.log("--- Zed Run Automation Framework: Get selected mate horse name ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get selected mate horse name ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.STUD_MALE_HORSE_NAME, {
       timeout: 0,
     });
@@ -78,7 +101,9 @@ class StudServicePage {
   }
 
   async checkIfCorrectHorseNameSelected(expectedValue, actualValue) {
-    console.log("--- Zed Run Automation Framework: Check if correct horse name is selected ---");
+    console.log(
+      "--- Zed Run Automation Framework: Check if correct horse name is selected ---"
+    );
     if (expectedValue == null) {
       throw new Error("Expected value is null! Please verify selector");
     }
@@ -97,7 +122,9 @@ class StudServicePage {
   }
 
   async clickOnSelectFemaleButton() {
-    console.log("--- Zed Run Automation Framework: Click on Select Female button ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on Select Female button ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.SELECT_FEMALE_BUTTON, {
       timeout: 0,
     });
@@ -105,7 +132,9 @@ class StudServicePage {
   }
 
   async verifySelectFemalePopUpShown() {
-    console.log("--- Zed Run Automation Framework: Verify select female popup shown ---");
+    console.log(
+      "--- Zed Run Automation Framework: Verify select female popup shown ---"
+    );
     try {
       await this.page.waitForSelector(
         StudServiceConfig.SELECT_FEMALE_POPUP_HEADER,
@@ -118,7 +147,9 @@ class StudServicePage {
   }
 
   async getListOfFemaleHorse() {
-    console.log("--- Zed Run Automation Framework: Get list of female horse ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get list of female horse ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.FEMALE_HORSE_LIST, {
       timeout: 0,
     });
@@ -130,7 +161,9 @@ class StudServicePage {
   }
 
   async getRandomIndexOfFemaleHorseFromList() {
-    console.log("--- Zed Run Automation Framework: Get random index of female horse from list ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get random index of female horse from list ---"
+    );
     let size = await this.getListOfFemaleHorse();
     const index = Math.floor(Math.random() * size + 1);
     console.log(">>>>>> Index: ", index);
@@ -138,7 +171,11 @@ class StudServicePage {
   }
 
   async getFemaleHorseName(i) {
-    console.log("--- Zed Run Automation Framework: Get female horse name by index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get female horse name by index " +
+        i +
+        " ---"
+    );
     let selector = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_FEMALE_NAME,
@@ -153,7 +190,11 @@ class StudServicePage {
   }
 
   async clickOnSelectedFemaleHorseWithIndex(i) {
-    console.log("--- Zed Run Automation Framework: Click on selecte female horse with index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on selecte female horse with index " +
+        i +
+        " ---"
+    );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_FEMALE_HORSE,
@@ -164,7 +205,11 @@ class StudServicePage {
   }
 
   async clickOnSelectButtonOfFemaleHorseWithIndex(i) {
-    console.log("--- Zed Run Automation Framework: Click on Select button of female horse with index " + i + " ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on Select button of female horse with index " +
+        i +
+        " ---"
+    );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
       StudServiceConfig.SELECTED_FEMALE_SELECT_BUTTON,
@@ -175,7 +220,9 @@ class StudServicePage {
   }
 
   async getSelectedFemaleHorseName() {
-    console.log("--- Zed Run Automation Framework: Get name of selected female horse ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get name of selected female horse ---"
+    );
     await this.page.waitForSelector(
       StudServiceConfig.SELECT_FEMALE_HORSE_NAME,
       { timeout: 0 }
@@ -188,7 +235,9 @@ class StudServicePage {
   }
 
   async scrollToBuyCoverButton() {
-    console.log("--- Zed Run Automation Framework: Scroll to Buy Cover button ---");
+    console.log(
+      "--- Zed Run Automation Framework: Scroll to Buy Cover button ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.BUY_COVER_BUTTON, {
       visible: true,
       timeout: 0,
@@ -199,7 +248,9 @@ class StudServicePage {
   }
 
   async clickOnBuyCoverButton() {
-    console.log("--- Zed Run Automation Framework: Click on Buy Cover button ---");
+    console.log(
+      "--- Zed Run Automation Framework: Click on Buy Cover button ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.BUY_COVER_BUTTON, {
       visible: true,
       timeout: 0,
@@ -207,14 +258,49 @@ class StudServicePage {
     await this.page.click(StudServiceConfig.BUY_COVER_BUTTON);
   }
 
-  async clickOnCheckActivityButton(){
-    console.log("--- Zed Run Automation Framework: Click on Check Activity button ---");
+  async clickOnCheckActivityButton() {
+    console.log(
+      "--- Zed Run Automation Framework: Click on Check Activity button ---"
+    );
     await this.page.waitForSelector(StudServiceConfig.CHECK_ACTIVITY_BUTTON, {
-        visible: true,
-        timeout: 0,
-      });
+      visible: true,
+      timeout: 0,
+    });
     await this.page.click(StudServiceConfig.CHECK_ACTIVITY_BUTTON);
   }
 
+  async waitForLoadState() {
+    await this.page.waitForLoadState();
+  }
+
+  async clickOnUserAvatar() {
+    console.log(
+      "--- Zed Run Automation Framework: Click on User Avatar icon ---"
+    );
+    try {
+      await this.page.waitForSelector(USER_AVATAR, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(USER_AVATAR);
+    } catch {
+      throw new Error("User avatar is not present or not clickable");
+    }
+  }
+
+  async clickOnMyStableLink(){
+    console.log(
+      "--- Zed Run Automation Framework: Click on My Stable link ---"
+    );
+    try {
+      await this.page.waitForSelector(MY_STABLE_LINK, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(MY_STABLE_LINK);
+    } catch {
+      throw new Error("My Stable is not present or not clickable");
+    }
+  }
 }
 module.exports = { StudServicePage };

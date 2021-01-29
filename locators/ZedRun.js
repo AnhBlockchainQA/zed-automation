@@ -18,5 +18,6 @@ module.exports = {
     BALANCE_LOADER_ICON: ".header-desktop .header .header-content .right-part .balance-part div.loader-container.stud-loader",
     BALANCE_INFO: "div[data-tour='header-profile'] .right .primary-caption",
     ETH_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(1)",
-    ZED_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)"
+    ZED_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)",
+    MY_STABLE_LINK: "//div[contains(@class,'user-menu')]/div[@role='menu']/div[@role='menuitem' and descendant::text()='My Stable']/a",
 };

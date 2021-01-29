@@ -1,13 +1,16 @@
-const { MetamaskPage } = require('../../pages/MetamaskPage');
-const { MetamaskFactory } = require('../../utils/browser/metamaskFactory');
-const { LoginPage } = require('../../pages/LoginPage');
-const { MetamaskNotificationPage } = require('../../pages/MetamaskNotification');
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require('../../data/env');
-const { WalletPage } = require('../../pages/WalletPage');
+const { MetamaskPage } = require("../../pages/MetamaskPage");
+const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const {
+  MetamaskNotificationPage,
+} = require("../../pages/MetamaskNotification");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
+const { WalletPage } = require("../../pages/WalletPage");
 const { AMOUNT } = require("../../data/env");
 const { HomePage } = require("../../pages/HomePage");
-const zedRunConfig = require('../../locators/ZedRun');
+const zedRunConfig = require("../../locators/ZedRun");
 const walletConfig = require("../../locators/Wallet");
+const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -29,8 +32,7 @@ beforeAll(async () => {
 });
 
 describe("Deposite to ZED balance by logging in with Metamask", () => {
-
-  test("Update metamask info", async () => {
+  test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -44,56 +46,85 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
     await metamaskPage.clickOnCloseButton();
     await metamaskPage.clickOnNetworkDropdown();
     await metamaskPage.clickOnGoerliNetwork();
-  })
+  });
 
-  test("Open ZedRun page and click Connnect Metamask", async () => {
+  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      zedRunConfig.AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
-    
   });
 
-  test ("Wait until wallet icon is shown then click on Wallet icon", async () => {
-    homePage = new HomePage(newPageInstance);
-    await homePage.waitForBalanceInfoToBeShown();
-    await homePage.waitForLoadState();
-    await homePage.clickOnWalletIcon();
-  });
+  test(
+    "Wait until wallet icon is shown then click on Wallet icon",
+    3,
+    async () => {
+      homePage = new HomePage(newPageInstance);
+      await homePage.waitForBalanceInfoToBeShown();
+      await homePage.waitForLoadState();
+      await homePage.clickOnWalletIcon();
+    }
+  );
 
-  test ("Click on Deposit button and check if ETH balance is updated", async () => {
-    walletPage = new WalletPage(newPageInstance);
-    let ethBalance = await walletPage.getETHBalance(); 
-    await walletPage.clickOnDepositButton();
-    let newETHBalance = ethBalance - AMOUNT;
-    console.log(">>> Old ETH Balance: ", ethBalance);
-    console.log(">>> Expected ETH Balance: ", newETHBalance);
-    await walletPage.typeDepositeAmount(AMOUNT);
-    depositeMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, walletConfig.DEPOSITE_TO_ZED_BUTTON);
-    depositeMetamaskNotificationPage = new MetamaskNotificationPage(depositeMetamaskNotificationInstance);
-    await depositeMetamaskNotificationPage.waitForLoadState();
-    await depositeMetamaskNotificationPage.clickOnConfirmButton();
-    await depositeMetamaskNotificationPage.waitForCloseEvent();
-    await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
-  });
+  test(
+    "Click on Deposit button and check if ETH balance is updated",
+    3,
+    async () => {
+      walletPage = new WalletPage(newPageInstance);
+      let ethBalance = await walletPage.getETHBalance();
+      await walletPage.clickOnDepositButton();
+      let newETHBalance = ethBalance - AMOUNT;
+      console.log(">>> Old ETH Balance: ", ethBalance);
+      console.log(">>> Expected ETH Balance: ", newETHBalance);
+      await walletPage.typeDepositeAmount(AMOUNT);
+      depositeMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+        newPageInstance,
+        walletConfig.DEPOSITE_TO_ZED_BUTTON
+      );
+      depositeMetamaskNotificationPage = new MetamaskNotificationPage(
+        depositeMetamaskNotificationInstance
+      );
+      await depositeMetamaskNotificationPage.waitForLoadState();
+      await depositeMetamaskNotificationPage.clickOnConfirmButton();
+      await depositeMetamaskNotificationPage.waitForCloseEvent();
+      await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
+    }
+  );
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

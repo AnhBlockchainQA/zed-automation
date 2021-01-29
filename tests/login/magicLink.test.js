@@ -21,20 +21,23 @@ beforeAll(async () => {
 });
 
 describe("Login to ZedRun with magic link", () => {
+  test(
+    "Open ZedRun page and input valid email to generate magic link",
+    3,
+    async () => {
+      email = await apiRequest.generateRandomEmail();
+      login = email.split("@")[0];
+      domain = email.split("@")[1];
 
-  test("Open ZedRun page and input valid email to generate magic link", 3, async () => {
-    email = await apiRequest.generateRandomEmail();
-    login = email.split("@")[0];
-    domain = email.split("@")[1];
-
-    page = await pageFactory.newTab(false, 0);
-    loginPage = new LoginPage(page);
-    await loginPage.navigate();
-    await loginPage.clickOnStartButton();
-    await loginPage.typeEmail(email);
-    await loginPage.clickOnContinueButton();
-    await loginPage.waitForTimeout();
-  });
+      page = await pageFactory.newTab(false, 0);
+      loginPage = new LoginPage(page);
+      await loginPage.navigate();
+      await loginPage.clickOnStartButton();
+      await loginPage.typeEmail(email);
+      await loginPage.clickOnContinueButton();
+      await loginPage.waitForTimeout();
+    }
+  );
 
   test("Check mail inbox to get magic link", 3, async () => {
     messageId = await apiRequest.getZedRunMessageId(login, domain);
@@ -44,9 +47,9 @@ describe("Login to ZedRun with magic link", () => {
       messageId,
       pattern
     );
-    console.log('>>> URL ', magicLink);
+    console.log(">>> URL ", magicLink);
   });
- 
+
   test("Open new browser with magic link", 3, async () => {
     newPageInstance = await pageFactory.newTab(false, 0);
     magicLinkPage = new MagicLinkPage(newPageInstance);
@@ -56,13 +59,24 @@ describe("Login to ZedRun with magic link", () => {
     await magicLinkPage.waitForTimeout();
   });
 
-  test("Switch back to ZedRun page and verify login successful", 3, async () => {
-    await loginPage.bringToFront();
-    await loginPage.checkIfWelcomeLabelPresent();
-  });
+  test(
+    "Switch back to ZedRun page and verify login successful",
+    3,
+    async () => {
+      await loginPage.bringToFront();
+      await loginPage.checkIfWelcomeLabelPresent();
+    }
+  );
 });
 
 afterAll(async (done) => {
-  await pageFactory.endTest();
-  done();
+  try {
+    await pageFactory.endTest();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

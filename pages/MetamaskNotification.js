@@ -45,8 +45,12 @@ class MetamaskNotificationPage {
     console.log(
       "--- Zed Run Automation Framework: Click on Confirm button  ---"
     );
+    try{
     await this.page.waitForSelector(CLICK_CONFIRM_BUTTON, { timeout: 0 });
     await this.page.click(CLICK_CONFIRM_BUTTON);
+    }catch{
+      throw new Error("Confirm button is not present or clickable!");
+    }
   }
 }
 
