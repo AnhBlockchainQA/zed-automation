@@ -19,6 +19,7 @@ const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
 const test = require("jest-retries");
+const { DONE_BUTTON } = require("../../locators/Payment");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -107,8 +108,8 @@ describe("Use percent discount voucher to buy horse with card while logging in w
   test("Apply the discount coupon : ZED-10-PERCENT", async () => {
     if (noOfHorses > 0) {
       firstHorseName = await marketPlacePage.getHorseName();
-      originalPrice = await marketPlacePage.getHorsePrice();
-      discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
+      const originalPrice = await marketPlacePage.getHorsePrice();
+      const discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
       await marketPlacePage.clickOnDownwardArrow();
       await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
       await marketPlacePage.clickApplyButton();
