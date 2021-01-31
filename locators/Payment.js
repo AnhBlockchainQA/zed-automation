@@ -1,6 +1,3 @@
-const config = require('config')
-const paymentConfig = config.get("payment")
-
 module.exports = {
     BUY_WITH_CREDIT_CARD_BUTTON: "//button[text()='Buy With Credit Card']",
     BUY_WITH_CREDIT_CARD_LABEL: "//h2[text()='Buy With Credit Card']",

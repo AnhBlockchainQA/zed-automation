@@ -26,18 +26,6 @@ class MetamaskFactory {
   }
 
   async init() {
-    
-    // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
-    //   headless: false,
-    //   args: [
-    //     `--disable-extensions-except=${pathToExtension}`,
-    //     `--load-extension=${pathToExtension}`,
-    //     `--start-maximized`,
-    //   ],
-    //   executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
-    //   timeout: 0
-    // });
-
     this.browserContext = await chromium.launchPersistentContext(userDataDir, {
       headless: false,
       args: [

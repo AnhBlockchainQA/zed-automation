@@ -11,7 +11,7 @@ const {
   THRESHOLD,
   WAIT_TIME,
 } = require("../../data/env");
-const zedRunConfig = require("../../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const { CONFIRM_BUTTON } = require("../../locators/Payment");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
@@ -34,6 +34,7 @@ var confirmMetamaskNotificationPage;
 var paymentPage;
 var homePage;
 var activityPage;
+var noOfHorses;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -65,7 +66,7 @@ describe("Purchase horse with ETH", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -78,7 +79,7 @@ describe("Purchase horse with ETH", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance
@@ -105,33 +106,40 @@ describe("Purchase horse with ETH", () => {
 
   test("Purchase horse with ETH", 3, async () => {
     if (noOfHorses > 0) {
-    paymentPage = new PaymentPage(newPageInstance);
-    await paymentPage.clickOnBuyWithETH();
-    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
-      newPageInstance,
-      CONFIRM_BUTTON,
-      THRESHOLD,
-      WAIT_TIME
-    );
-    confirmMetamaskNotificationPage = new MetamaskNotificationPage(
-      confirmMetamaskNotificationInstance
-    );
-    await confirmMetamaskNotificationPage.waitForLoadState();
-    await confirmMetamaskNotificationPage.clickOnConfirmButton();
-    // await confirmMetamaskNotificationPage.waitForCloseEvent();
+      paymentPage = new PaymentPage(newPageInstance);
+      await paymentPage.clickOnBuyWithETH();
+      confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
+        newPageInstance,
+        CONFIRM_BUTTON,
+        THRESHOLD,
+        WAIT_TIME
+      );
+      confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+        confirmMetamaskNotificationInstance
+      );
+      await confirmMetamaskNotificationPage.waitForLoadState();
+      await confirmMetamaskNotificationPage.clickOnConfirmButton();
+      // await confirmMetamaskNotificationPage.waitForCloseEvent();
     }
   });
 
   test("Verify that our order is performed", 3, async () => {
     if (noOfHorses > 0) {
-    activityPage = new ActivityPage(newPageInstance);
-    await activityPage.bringToFront();
-    await activityPage.checkIfStatementInfoCorrect(horseName);
+      activityPage = new ActivityPage(newPageInstance);
+      await activityPage.bringToFront();
+      await activityPage.checkIfStatementInfoCorrect(horseName);
     }
   });
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

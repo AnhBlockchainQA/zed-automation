@@ -1,4 +1,3 @@
-
 module.exports = {
     LIST_HORSE: ".marketplace-content .horse-sale-card.horse-details",
     FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",

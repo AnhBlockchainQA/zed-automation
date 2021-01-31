@@ -4,33 +4,36 @@ const { LoginPage } = require("../pages/LoginPage");
 const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
 const { HomePage } = require("../pages/HomePage");
-const { RacingPage } = require("../pages/RacingPage");
+const { MyStablePage } = require("../pages/MyStablePage");
+const { ActivityPage } = require("../pages/ActivityPage");
 const test = require("jest-retries");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
+const { PROCEED_BUTTON } = require("../locators/MyStable");
+const { CONNECT_METAMASK , AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
 
-let metamaskFactory;
-let metamaskPage;
-let metamaskInstance;
-let zedRunPage;
-let newPageInstance;
-let metamaskNotificationInstance;
-let metamaskNotificationPage;
-let otherMetamaskNotificationInstance;
-let otherMetamaskNotificationPage;
-let homePage;
-let racingPage;
-let index;
-let registeredHorseNo;
-let totalNo;
-let eventName;
+var metamaskFactory = new MetamaskFactory();
+var metamaskPage;
+var metamaskInstance;
+var zedRunPage;
+var newPageInstance;
+var metamaskNotificationInstance;
+var metamaskNotificationPage;
+var otherMetamaskNotificationInstance;
+var otherMetamaskNotificationPage;
+var confirmMetamaskNotificationInstance;
+var confirmMetamaskNotificationPage;
+var index;
+var homePage;
+var myStablePage;
+var activityPage;
+var horseName;
 
 beforeAll(async () => {
-  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
-describe("Pick horses to gate and process Next to Run event", () => {
-  test("Update metamask info", 3, async () => {
+
+describe("Generate stud horse", () => {
+  test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -78,20 +81,53 @@ describe("Pick horses to gate and process Next to Run event", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Click on Filter button in My Stable page", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
-    await homePage.waitUntilBalanceShown();
+    await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
+  
+  });
+  
+  test("Filter with male horse", async() => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.clickOnFilterButton();
+    await myStablePage.clickOnGenderLink();
+    await myStablePage.selectMaleHorseFilter();
+    await myStablePage.waitForLoadState();
   });
 
-  test("Select a racehorses stable to the open gate", async () => {
-    await homePage.clickOnRacingLink();
-    racingPage = new RacingPage(newPageInstance);
-    await racingPage.selectEntryFreeEvent();
-    const eventName = await racingPage.addRaceHorseIntoRace();
-    await racingPage.validateRacingEventAfterInNextToRun(eventName);
+  test("Select horse in My stable", 3, async () => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.clickOnCloseButtonOfFilterForm();
+    index = await myStablePage.getRandomIndexOfMaleHorsesInStable();
+    await myStablePage.clickOnMaleHorseInStableWithIndex(index);
+    await myStablePage.clickOnBreedingLinkOfHorseWithIndex(index);
+    horseName = await myStablePage.getSelectedMaleHorseWithIndex(index);
   });
+
+  // test("Proceed putting horse to stud service", 3, async () => {
+  //   myStablePage = new MyStablePage(newPageInstance);
+  //   await myStablePage.setStudDuration();
+  //   await myStablePage.clickOnNextButton();
+  //   confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+  //     newPageInstance,
+  //     PROCEED_BUTTON
+  //   );
+  //   confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+  //     confirmMetamaskNotificationInstance
+  //   );
+  //   await confirmMetamaskNotificationPage.waitForLoadState();
+  //   await confirmMetamaskNotificationPage.clickOnConfirmButton();
+  //   await confirmMetamaskNotificationPage.waitForCloseEvent();
+  // });
+
+  // test('Check activity page', 3, async() => {
+  //   activityPage = new ActivityPage(newPageInstance);
+  //   await activityPage.bringToFront();
+  //   await activityPage.waitForLoadState();
+  //   await activityPage.checkIfStatementInfoCorrect(horseName);
+  // });
+
 });
 
 afterAll(async (done) => {
