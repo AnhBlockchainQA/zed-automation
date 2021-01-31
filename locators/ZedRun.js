@@ -20,4 +20,5 @@ module.exports = {
     ETH_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(1)",
     ZED_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)",
     MY_STABLE_LINK: "//div[contains(@class,'user-menu')]/div[@role='menu']/div[@role='menuitem' and descendant::text()='My Stable']/a",
+    BALANCE_INFO: ".header-desktop .header .header-content .right-part .balance-part .right b",
 };

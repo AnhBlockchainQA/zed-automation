@@ -11,7 +11,7 @@ const {
   THRESHOLD,
   WAIT_TIME,
 } = require("../../data/env");
-const zedRunConfig = require("../../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const { CONFIRM_BUTTON } = require("../../locators/Payment");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
@@ -34,6 +34,7 @@ var confirmMetamaskNotificationPage;
 var paymentPage;
 var homePage;
 var activityPage;
+var noOfHorses;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -65,7 +66,7 @@ describe("Purchase horse with ETH", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -78,7 +79,7 @@ describe("Purchase horse with ETH", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance

@@ -9,12 +9,12 @@ const {
   STUD_DURATION,
   NEXT_BUTTON,
   CLOSE_BUTTON,
+  SEVEN_DAYS_OPTION,
+  ONE_DAY_OPTION,
+  THREE_DAYS_OPTION
 } = require("../locators/MyStable");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
-const {default: userEvent} = require('@testing-library/user-event')
-const { screen } = require('@testing-library/dom');
-
 
 class MyStablePage {
   constructor(page) {
@@ -36,7 +36,7 @@ class MyStablePage {
       "---- Zed Run Automation Framework: Click on Filter button ---"
     );
     try {
-      await this.page.waitForSelector(FILTER_BUTTON, { timeout: 0 });
+      await expect(this.page).toHaveSelector(FILTER_BUTTON, {timeout: 0});
       await this.page.click(FILTER_BUTTON);
     } catch {
       throw new Error("Filter button is not present or not clickable!");
@@ -46,7 +46,7 @@ class MyStablePage {
   async clickOnGenderLink() {
     console.log("---- Zed Run Automation Framework: Click on Gender link ---");
     try {
-      await this.page.waitForSelector(GENDER_SPAN, { timeout: 0 });
+      await expect(this.page).toHaveSelector(GENDER_SPAN, {timeout: 0});
       await this.page.click(GENDER_SPAN);
     } catch {
       throw new Error("Gender link is not present or clickable");
@@ -58,8 +58,8 @@ class MyStablePage {
       "---- Zed Run Automation Framework: Select Colt horse ---"
     );
     try {
-      await this.page.waitForSelector(COLT_CHECKBOX, {timeout: 0});
-      await this.page.click(COLT_CHECKBOX);
+      await expect(this.page).toHaveSelector(COLT_CHECKBOX, {timeout: 0});
+      await this.page.check(COLT_CHECKBOX);
     } catch {
       throw new Error("Colt checkbox is not present or clickable");
     }
@@ -71,8 +71,8 @@ class MyStablePage {
       "---- Zed Run Automation Framework: Select Stallion horse ---"
     );
     try {
-      await this.page.waitForSelector(STALLION_CHECKBOX, {timeout: 0});
-      await this.page.click(STALLION_CHECKBOX);
+      await expect(this.page).toHaveSelector(STALLION_CHECKBOX, {timeout: 0});
+      await this.page.check(STALLION_CHECKBOX);
     } catch {
       throw new Error("Stallion checkbox is not present or clickable");
     }
@@ -83,7 +83,7 @@ class MyStablePage {
       "---- Zed Run Automation Framework: Click on Close button of filter form ---"
     );
     try {
-      await this.page.waitForSelector(CLOSE_BUTTON, {timeout: 0});
+      await expect(this.page).toHaveSelector(CLOSE_BUTTON, {timeout: 0});
       await this.page.click(CLOSE_BUTTON);
     } catch {
       throw new Error("Close button is not present or clickable");
@@ -106,7 +106,7 @@ class MyStablePage {
     );
     try {
       await this.page.waitForLoadState();
-      await this.page.waitForSelector(MY_STABLE_MALE_HORSES, { timeout: 0 });
+      await expect(this.page).toHaveSelector(MY_STABLE_MALE_HORSES, { timeout: 0 });
       const size = await this.page.evaluate((locator) => {
         return document.querySelectorAll(locator).length;
       }, MY_STABLE_MALE_HORSES);
@@ -144,7 +144,7 @@ class MyStablePage {
       index
     );
     try {
-      await this.page.waitForSelector(locator, { timeout: 0 });
+      await expect(this.page).toHaveSelector(locator, { timeout: 0 });
       await this.page.click(locator);
     } catch {
       throw new Error("Element is not present or clickable");
@@ -162,58 +162,41 @@ class MyStablePage {
       index
     );
     try {
-      await this.page.waitForSelector(locator, { timeout: 0 });
+      await expect(this.page).toHaveSelector(locator, { timeout: 0 });
       await this.page.click(locator);
     } catch {
       throw new Error("Breeding link is not present or not clickable");
     }
   }
 
-  async setStudDuration(value) {
+  async setStudDuration() {
     console.log(
       "--- Zed Run Automation Framework: Set value of stud duration to [%s] ---",
       value
     );
     try {
-      await this.page.waitForSelector(STUD_DURATION, {timeout: 0});
-      await page.$(STUD_DURATION).dispatchEvent('mouseover');
-      await page.$(STUD_DURATION).dispatchEvent('mousedown');
-      await page.$(STUD_DURATION).dispatchEvent('mouseup');
-      await page.$(STUD_DURATION).dispatchEvent('dbclick');
-
+      const select = await this.page.waitForSelector(':text("Set duration")');
+      await select.click();
+      const option = await this.page.waitForSelector(':text("7 Days"):below(:text("Set duration"))', {state: 'attached'});
+      await option.scrollIntoViewIfNeeded();
+      await option.click();
     } catch {
-      throw new Error("Stud duration dropdown is not present");
-    }
-  }
-
-  async enableNextButton() {
-    console.log("--- Zed Run Automation Framework: Enable Next button ---");
-    try {
-      await this.page.waitForSelector(NEXT_BUTTON, { timeout: 0 });
-      await this.page.evaluate((locator) => {
-        document
-          .evaluate(
-            locator,
-            document,
-            null,
-            XPathResult.FIRST_ORDERED_NODE_TYPE,
-            null
-          )
-          .singleNodeValue.removeAttribute("disabled");
-      }, NEXT_BUTTON);
-    } catch {
-      throw new Error("Next button is not found");
+      throw new Error("Stud duration dropdown is not present or option did not exist");
     }
   }
 
   async clickOnNextButton() {
     console.log("--- Zed Run Automation Framework: Click on Next button ---");
     try {
-      await this.page.waitForSelector(NEXT_BUTTON, { timeout: 0 });
+      await expect(this.page).toHaveSelector(NEXT_BUTTON, { timeout: 0 });
       await this.page.click(NEXT_BUTTON);
     } catch {
       throw new Error("Next button is not found");
     }
+  }
+
+  async getSelectedMaleHorseWithIndex(index){
+
   }
 }
 

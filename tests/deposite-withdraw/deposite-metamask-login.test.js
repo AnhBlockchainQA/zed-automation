@@ -8,8 +8,8 @@ const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { WalletPage } = require("../../pages/WalletPage");
 const { AMOUNT } = require("../../data/env");
 const { HomePage } = require("../../pages/HomePage");
-const zedRunConfig = require("../../locators/ZedRun");
-const walletConfig = require("../../locators/Wallet");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
+const { DEPOSITE_TO_ZED_BUTTON } = require("../../locators/Wallet");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -56,7 +56,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -69,7 +69,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance
@@ -104,7 +104,7 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
       await walletPage.typeDepositeAmount(AMOUNT);
       depositeMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
         newPageInstance,
-        walletConfig.DEPOSITE_TO_ZED_BUTTON
+        DEPOSITE_TO_ZED_BUTTON
       );
       depositeMetamaskNotificationPage = new MetamaskNotificationPage(
         depositeMetamaskNotificationInstance

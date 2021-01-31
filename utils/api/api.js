@@ -1,16 +1,16 @@
 const superagent = require("superagent");
 require("superagent-retry-delay")(superagent);
 const request = require("supertest");
-const { EMAIL_API, WAIT_TIME, THRESHOLD } = require("../../data/env");
-const config = require("config");
-const apiConfig = config.get("apiConfig");
+const errorCode = require("../../data/errorCode");
+const { EMAIL_API, WAIT_TIME, THRESHOLD, GENERATE_RANDOM_EMAIL, GET_MESSAGES, READ_MESSAGE, PATTERN } = require("../../data/api");
 
 class APIRequest {
   constructor() {
     this.server = EMAIL_API;
     this.threshold = THRESHOLD;
     this.waitTime = WAIT_TIME;
-    this.errorCode = apiConfig.ERROR_CODES;
+    this.errorCode = errorCode.getErrorCodes();
+    this.pattern = PATTERN;
   }
 
   async callGetAPI(path, query) {
@@ -22,19 +22,21 @@ class APIRequest {
 
   async generateRandomEmail() {
     let randomEmail = await this.callGetAPI("/", {
-      action: apiConfig.GENERATE_RANDOM_EMAIL,
+      action: GENERATE_RANDOM_EMAIL,
       count: 10,
     });
-    console.log(">>> Random email is : " + randomEmail);
+    console.log(">>> Random email is : " + randomEmail.toString());
     let testEmail = randomEmail.body[
       Math.floor(Math.random() * randomEmail.body.length)
     ].toString();
+    console.log(">>>>>>> Test email: [%s]", testEmail);
     return testEmail;
   }
 
   async getZedRunMessageId(login, domain) {
+    console.log(" >> Login [%s], domain [%s]", login, domain);
     let checkInbox = await this.callGetAPI("/", {
-      action: apiConfig.GET_MESSAGES,
+      action: GET_MESSAGES,
       login: login,
       domain: domain,
     });
@@ -42,23 +44,24 @@ class APIRequest {
     console.log(">>> Get message from email : " + checkInbox.body);
 
     if (checkInbox.body !== []) {
+      console.log(">>>>>>>>> Test here: " + checkInbox.body[0].id);
       return Number(checkInbox.body[0].id);
     } else {
-      return -1;
+      throw new Error("Something went wrong!");
     }
   }
 
-  async getMagicLink(login, domain, messageId, pattern) {
+  async getMagicLink(login, domain, messageId) {
     let getMagicLink = await this.callGetAPI("/", {
-      action: apiConfig.READ_MESSAGE,
+      action: READ_MESSAGE,
       login: login,
       domain: domain,
       id: messageId,
     });
 
     let emailBody = getMagicLink.body.body;
-    // console.log(">>> Email body is: " + emailBody);
-    return emailBody.match(pattern)[1];
+    console.log(" >>>>>>> Email body: " + emailBody);
+    return emailBody.match(this.pattern)[1];
   }
 }
 

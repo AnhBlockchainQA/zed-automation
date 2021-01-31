@@ -1,7 +1,22 @@
-const StudServiceConfig = require("../locators/StudService");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
-const { USER_AVATAR, MY_STABLE_LINK } = require("../locators/ZedRun");
+const { USER_AVATAR } = require("../locators/ZedRun");
+const {
+  MALE_HORSE_LIST,
+  SELECTED_MALE_HORSE,
+  SELECTED_SELECT_MATE_BUTTON,
+  SELECTED_HORSE_NAME,
+  STUD_MALE_HORSE_NAME,
+  SELECT_FEMALE_BUTTON,
+  SELECT_FEMALE_POPUP_HEADER,
+  FEMALE_HORSE_LIST,
+  SELECTED_FEMALE_NAME,
+  SELECTED_FEMALE_HORSE,
+  CHECK_ACTIVITY_BUTTON,
+  BUY_COVER_BUTTON,
+  SELECT_FEMALE_HORSE_NAME,
+  SELECTED_FEMALE_SELECT_BUTTON
+} = require("../locators/StudService");
 
 class StudServicePage {
   constructor(page) {
@@ -14,12 +29,12 @@ class StudServicePage {
       "--- Zed Run Automation Framework: Get list  of male horses ---"
     );
     try {
-      await this.page.waitForSelector(StudServiceConfig.MALE_HORSE_LIST, {
+      await expect(this.page).toHaveSelector(MALE_HORSE_LIST, {
         timeout: 0,
       });
       const size = await this.page.evaluate((locator) => {
         return document.querySelectorAll(locator).length;
-      }, StudServiceConfig.MALE_HORSE_LIST);
+      }, MALE_HORSE_LIST);
       console.log(">>>>>> Size of male horse list: ", size);
       return size;
     } catch {
@@ -45,10 +60,10 @@ class StudServicePage {
     );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_MALE_HORSE,
+      SELECTED_MALE_HORSE,
       i
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     await this.page.click(locator);
   }
 
@@ -60,10 +75,10 @@ class StudServicePage {
     );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_SELECT_MATE_BUTTON,
+      SELECTED_SELECT_MATE_BUTTON,
       i
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     await this.page.click(locator);
   }
 
@@ -73,16 +88,14 @@ class StudServicePage {
         i +
         " ---"
     );
-    let selector = await stringUtils.replaceTemplateString(
+    let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_HORSE_NAME,
+      SELECTED_HORSE_NAME,
       i
     );
-    const name = await this.page.evaluate((locator) => {
-      return document.querySelector(locator).innerText;
-    }, selector);
+    await expect(this.page).toHaveSelector(locator, {timeout: 0});
+    const name = await this.page.innerText(locator);
     console.log(">>>>>> Horse name ", name);
-
     return name;
   }
 
@@ -90,12 +103,10 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Get selected mate horse name ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.STUD_MALE_HORSE_NAME, {
+    await expect(this.page).toHaveSelector(STUD_MALE_HORSE_NAME, {
       timeout: 0,
     });
-    const name = await this.page.evaluate((locator) => {
-      return document.querySelector(locator).innerText;
-    }, StudServiceConfig.STUD_MALE_HORSE_NAME);
+    const name = await this.page.innerText(STUD_MALE_HORSE_NAME);
     console.log(">>>>>> Selected mate horse name ", name);
     return name;
   }
@@ -125,10 +136,10 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Click on Select Female button ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.SELECT_FEMALE_BUTTON, {
+    await expect(this.page).toHaveSelector(SELECT_FEMALE_BUTTON, {
       timeout: 0,
     });
-    await this.page.click(StudServiceConfig.SELECT_FEMALE_BUTTON);
+    await this.page.click(SELECT_FEMALE_BUTTON);
   }
 
   async verifySelectFemalePopUpShown() {
@@ -136,10 +147,9 @@ class StudServicePage {
       "--- Zed Run Automation Framework: Verify select female popup shown ---"
     );
     try {
-      await this.page.waitForSelector(
-        StudServiceConfig.SELECT_FEMALE_POPUP_HEADER,
-        { timeout: 0 }
-      );
+      await expect(this.page).toHaveSelector(SELECT_FEMALE_POPUP_HEADER, {
+        timeout: 0,
+      });
       return true;
     } catch {
       return false;
@@ -150,12 +160,12 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Get list of female horse ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.FEMALE_HORSE_LIST, {
+    await expect(this.page).toHaveSelector(FEMALE_HORSE_LIST, {
       timeout: 0,
     });
     const size = await this.page.evaluate((locator) => {
       return document.querySelectorAll(locator).length;
-    }, StudServiceConfig.FEMALE_HORSE_LIST);
+    }, FEMALE_HORSE_LIST);
     console.log(">>>>>> Size of female horse list: ", size);
     return size;
   }
@@ -176,16 +186,14 @@ class StudServicePage {
         i +
         " ---"
     );
-    let selector = await stringUtils.replaceTemplateString(
+    let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_FEMALE_NAME,
+      SELECTED_FEMALE_NAME,
       i
     );
-    const name = await this.page.evaluate((locator) => {
-      return document.querySelector(locator).innerText;
-    }, selector);
+    await expect(this.page).toHaveSelector(locator, {timeout: 0});
+    const name = await this.page.innerText(locator);
     console.log(">>>>>> Female horse name ", name);
-
     return name;
   }
 
@@ -197,10 +205,10 @@ class StudServicePage {
     );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_FEMALE_HORSE,
+      SELECTED_FEMALE_HORSE,
       i
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     await this.page.click(locator);
   }
 
@@ -212,10 +220,10 @@ class StudServicePage {
     );
     let locator = await stringUtils.replaceTemplateString(
       REGEX.NUMBER,
-      StudServiceConfig.SELECTED_FEMALE_SELECT_BUTTON,
+      SELECTED_FEMALE_SELECT_BUTTON,
       i
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     await this.page.click(locator);
   }
 
@@ -223,13 +231,8 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Get name of selected female horse ---"
     );
-    await this.page.waitForSelector(
-      StudServiceConfig.SELECT_FEMALE_HORSE_NAME,
-      { timeout: 0 }
-    );
-    const name = await this.page.evaluate((locator) => {
-      return document.querySelector(locator).innerText;
-    }, StudServiceConfig.SELECT_FEMALE_HORSE_NAME);
+    await expect(this.page).toHaveSelector(SELECT_FEMALE_HORSE_NAME, { timeout: 0 });
+    const name = await this.page.innerText(SELECT_FEMALE_HORSE_NAME);
     console.log(">>>>>> Selected female horse name ", name);
     return name;
   }
@@ -238,35 +241,34 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Scroll to Buy Cover button ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.BUY_COVER_BUTTON, {
-      visible: true,
+    await expect(this.page).toHaveSelector(BUY_COVER_BUTTON, {
       timeout: 0,
     });
     await this.page.evaluate((locator) => {
       document.querySelector(locator).scrollIntoView(true);
-    }, StudServiceConfig.BUY_COVER_BUTTON);
+    }, BUY_COVER_BUTTON);
   }
 
   async clickOnBuyCoverButton() {
     console.log(
       "--- Zed Run Automation Framework: Click on Buy Cover button ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.BUY_COVER_BUTTON, {
+    await this.page.waitForSelector(BUY_COVER_BUTTON, {
       visible: true,
       timeout: 0,
     });
-    await this.page.click(StudServiceConfig.BUY_COVER_BUTTON);
+    await this.page.click(BUY_COVER_BUTTON);
   }
 
   async clickOnCheckActivityButton() {
     console.log(
       "--- Zed Run Automation Framework: Click on Check Activity button ---"
     );
-    await this.page.waitForSelector(StudServiceConfig.CHECK_ACTIVITY_BUTTON, {
+    await expect(this.page).toHaveSelector(CHECK_ACTIVITY_BUTTON, {
       visible: true,
       timeout: 0,
     });
-    await this.page.click(StudServiceConfig.CHECK_ACTIVITY_BUTTON);
+    await this.page.click(CHECK_ACTIVITY_BUTTON);
   }
 
   async waitForLoadState() {
@@ -278,28 +280,13 @@ class StudServicePage {
       "--- Zed Run Automation Framework: Click on User Avatar icon ---"
     );
     try {
-      await this.page.waitForSelector(USER_AVATAR, {
+      await expect(this.page).toHaveSelector(USER_AVATAR, {
         visible: true,
         timeout: 0,
       });
       await this.page.click(USER_AVATAR);
     } catch {
       throw new Error("User avatar is not present or not clickable");
-    }
-  }
-
-  async clickOnMyStableLink(){
-    console.log(
-      "--- Zed Run Automation Framework: Click on My Stable link ---"
-    );
-    try {
-      await this.page.waitForSelector(MY_STABLE_LINK, {
-        visible: true,
-        timeout: 0,
-      });
-      await this.page.click(MY_STABLE_LINK);
-    } catch {
-      throw new Error("My Stable is not present or not clickable");
     }
   }
 }

@@ -3,12 +3,12 @@ const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
-const { CONFIRM_BUTTON } = require("../locators/StudService");
 const { HomePage } = require("../pages/HomePage");
-const { StudServicePage } = require("../pages/StudServicePage");
+const { MyStablePage } = require("../pages/MyStablePage");
 const { ActivityPage } = require("../pages/ActivityPage");
 const test = require("jest-retries");
+const { PROCEED_BUTTON } = require("../locators/MyStable");
+const { CONNECT_METAMASK , AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -21,14 +21,11 @@ var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
 var confirmMetamaskNotificationInstance;
 var confirmMetamaskNotificationPage;
-var studServicePage;
-var malehorseName;
-var femalehorseName;
 var index;
-var activityPage;
 var homePage;
-var noOfHorses;
 var myStablePage;
+var activityPage;
+var horseName;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -84,68 +81,53 @@ describe("Generate stud horse", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Breeding link", async () => {
+  test("Click on Filter button in My Stable page", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
-    await homePage.clickOnBreedingLink();
-    await homePage.waitForLoadState();
+  
+  });
+  
+  test("Filter with male horse", async() => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.clickOnFilterButton();
+    await myStablePage.clickOnGenderLink();
+    await myStablePage.selectMaleHorseFilter();
+    await myStablePage.waitForLoadState();
   });
 
-  test("Select mate horse", async () => {
-    studServicePage = new StudServicePage(newPageInstance);
-    index = await studServicePage.getRandomIndexOfMaleHorseFromList();
-    await studServicePage.clickOnSelectedMaleHorseWithIndex(index);
-    malehorseName = await studServicePage.getHorseName(index);
-    await studServicePage.clickOnSelectMateButtonOfHorseWithIndex(index);
-    actualSelectHorse = await studServicePage.getSelectedMateHorseName();
-    await studServicePage.checkIfCorrectHorseNameSelected(
-      malehorseName,
-      actualSelectHorse
-    );
+  test("Select horse in My stable", 3, async () => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.clickOnCloseButtonOfFilterForm();
+    index = await myStablePage.getRandomIndexOfMaleHorsesInStable();
+    await myStablePage.clickOnMaleHorseInStableWithIndex(index);
+    await myStablePage.clickOnBreedingLinkOfHorseWithIndex(index);
+    horseName = await myStablePage.getSelectedMaleHorseWithIndex(index);
   });
 
-  test("Select female horse", 3, async () => {
-    await studServicePage.clickOnSelectFemaleButton();
-    await studServicePage.verifySelectFemalePopUpShown();
-    await studServicePage.getListOfFemaleHorse();
-    index = await studServicePage.getRandomIndexOfFemaleHorseFromList();
-    femalehorseName = await studServicePage.getFemaleHorseName(index);
-    await studServicePage.clickOnSelectedFemaleHorseWithIndex(index);
-    await studServicePage.clickOnSelectButtonOfFemaleHorseWithIndex(index);
-    actualSelectHorse = await studServicePage.getSelectedFemaleHorseName();
-    await studServicePage.checkIfCorrectHorseNameSelected(
-      femalehorseName,
-      actualSelectHorse
-    );
-  });
+  // test("Proceed putting horse to stud service", 3, async () => {
+  //   myStablePage = new MyStablePage(newPageInstance);
+  //   await myStablePage.setStudDuration();
+  //   await myStablePage.clickOnNextButton();
+  //   confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+  //     newPageInstance,
+  //     PROCEED_BUTTON
+  //   );
+  //   confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+  //     confirmMetamaskNotificationInstance
+  //   );
+  //   await confirmMetamaskNotificationPage.waitForLoadState();
+  //   await confirmMetamaskNotificationPage.clickOnConfirmButton();
+  //   await confirmMetamaskNotificationPage.waitForCloseEvent();
+  // });
 
-  test("Proceed breeding steps", 3, async () => {
-    await studServicePage.scrollToBuyCoverButton();
-    await studServicePage.clickOnBuyCoverButton();
-    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      CONFIRM_BUTTON
-    );
-    confirmMetamaskNotificationPage = new MetamaskNotificationPage(
-      confirmMetamaskNotificationInstance
-    );
-    confirmMetamaskNotificationPage.clickOnConfirmButton();
-    confirmMetamaskNotificationPage.waitForCloseEvent();
-  });
+  // test('Check activity page', 3, async() => {
+  //   activityPage = new ActivityPage(newPageInstance);
+  //   await activityPage.bringToFront();
+  //   await activityPage.waitForLoadState();
+  //   await activityPage.checkIfStatementInfoCorrect(horseName);
+  // });
 
-  test(
-    "Go to Activity page and check if we breed successfully",
-    3,
-    async () => {
-      await studServicePage.clickOnCheckActivityButton();
-      activityPage = new ActivityPage(newPageInstance);
-      await activityPage.checkIfStatementInfoCorrect(
-        malehorseName,
-        femalehorseName
-      );
-    }
-  );
 });
 
 afterAll(async (done) => {

@@ -14,7 +14,6 @@ var loginPage;
 var magicLinkPage;
 var newPageInstance;
 var page;
-const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 
 beforeAll(async () => {
   pageFactory.removeCache();
@@ -44,8 +43,7 @@ describe("Login to ZedRun with magic link", () => {
     magicLink = await apiRequest.getMagicLink(
       login,
       domain,
-      messageId,
-      pattern
+      messageId
     );
     console.log(">>> URL ", magicLink);
   });

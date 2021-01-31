@@ -3,10 +3,10 @@ const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
-const zedRunConfig = require("../locators/ZedRun");
 const { HomePage } = require("../pages/HomePage");
 const { RacingPage } = require("../pages/RacingPage");
 const test = require("jest-retries");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -54,7 +54,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -67,7 +67,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance

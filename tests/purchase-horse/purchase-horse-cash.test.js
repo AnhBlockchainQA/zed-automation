@@ -16,7 +16,7 @@ const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
-const zedRunConfig = require("../../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -33,6 +33,7 @@ var paymentPage;
 var homePage;
 var activityPage;
 var horseName;
+var noOfHorses;
 
 beforeAll(async () => {
 
@@ -65,7 +66,7 @@ describe("Buy horse with credit card", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -78,7 +79,7 @@ describe("Buy horse with credit card", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance

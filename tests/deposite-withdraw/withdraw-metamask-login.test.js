@@ -8,9 +8,9 @@ const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { WalletPage } = require("../../pages/WalletPage");
 const { AMOUNT } = require("../../data/env");
 const { HomePage } = require("../../pages/HomePage");
-const zedRunConfig = require("../../locators/ZedRun");
-const walletConfig = require("../../locators/Wallet");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const test = require("jest-retries");
+const { CONFIRM_WITHDRAW_BUTTON } = require("../../locators/Wallet");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -56,7 +56,7 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -69,7 +69,7 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance
@@ -103,10 +103,11 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
       console.log(">>> Old Zed Balance: ", zedBalance);
       console.log(">>> Expected Zed Balance: ", newZedBalance);
       await walletPage.typeWithDrawAmount(AMOUNT);
+      await walletPage.clickOnWithdrawFromZedWallet();
 
       withdrawMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
         newPageInstance,
-        walletConfig.WITHDRAW_FROM_ZED_BUTTON
+        CONFIRM_WITHDRAW_BUTTON
       );
       withdrawMetamaskNotificationPage = new MetamaskNotificationPage(
         withdrawMetamaskNotificationInstance

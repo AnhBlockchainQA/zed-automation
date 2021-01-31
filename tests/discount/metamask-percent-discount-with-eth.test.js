@@ -12,10 +12,10 @@ const {
   WAIT_TIME,
 } = require("../../data/env");
 const { PERCENT_DISCOUNT } = require("../../data/env");
-const zedRunConfig = require("../../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
-const paymentConfig = require("../../locators/Payment");
+const { CONFIRM_BUTTON } = require("../../locators/Payment");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { ActivityPage } = require("../../pages/ActivityPage");
 const test = require("jest-retries");
@@ -68,7 +68,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -81,7 +81,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance
@@ -125,7 +125,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
       await paymentPage.clickOnBuyWithETH();
       anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithRetry(
         newPageInstance,
-        paymentConfig.CONFIRM_BUTTON,
+        CONFIRM_BUTTON,
         THRESHOLD,
         WAIT_TIME
       );

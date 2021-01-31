@@ -16,7 +16,6 @@ var walletPage;
 var pageInstance;
 var newPageInstance;
 var homePage;
-const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 const EMAIL = ACCOUNT_LIST.FIRST_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.FIRST_ACCOUNT.LOGIN;
 const DOMAIN = ACCOUNT_LIST.FIRST_ACCOUNT.DOMAIN;
@@ -45,8 +44,7 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     magicLink = await apiRequest.getMagicLink(
       LOGIN,
       DOMAIN,
-      messageId,
-      pattern
+      messageId
     );
   });
 

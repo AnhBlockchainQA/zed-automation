@@ -1,5 +1,4 @@
-const {LOGIN_POPUP} = require("../locators/ZedRun");
-const { WAIT_TIME } = require("../data/env");
+const { LOGIN_POPUP } = require("../locators/ZedRun");
 
 class MagicLinkPage {
   constructor(page) {
@@ -14,11 +13,14 @@ class MagicLinkPage {
 
   async navigate(url) {
     console.log("--- Zed Run Automation Framework: Navigation to the url ---");
-    try{
-    await this.page.goto(url);
-
-    }catch{
-      throw new Error("Url is not valid or network timeout while loading ", url);
+    try {
+      await this.page.goto(url);
+      await this.page.waitForLoadState();
+    } catch {
+      throw new Error(
+        "Url is not valid or network timeout while loading ",
+        url
+      );
     }
   }
 
@@ -27,21 +29,19 @@ class MagicLinkPage {
   }
 
   async waitForLoginFormHidden() {
-    console.log("--- Zed Run Automation Framework: Wait until login form hidden ---");
-    await this.page.waitForSelector(LOGIN_POPUP, {
-      hidden: true,
-      timeout: 0,
-    });
+    console.log(
+      "--- Zed Run Automation Framework: Wait until login form hidden ---"
+    );
+    await this.page.waitForSelector(LOGIN_POPUP, { hidden: true, timeout: 0 });
   }
 
-  async waitForNavigation(){
+  async waitForNavigation() {
     await this.page.waitForNavigation();
   }
 
-  async waitForLoadState(){
+  async waitForLoadState() {
     await this.page.waitForLoadState();
   }
-
 }
 
 module.exports = { MagicLinkPage };

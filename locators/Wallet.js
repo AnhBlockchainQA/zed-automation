@@ -8,6 +8,9 @@ module.exports = {
     WITHDRAW_AMOUNT_INPUT : ".dw-content-container > .open > .matic-withdraw > .dw-price > .z-input",
     WITHDRAW_FROM_ZED_BUTTON: ".sidebar-content > .dw-content-container > .open > .matic-withdraw > .primary-btn",
     ZED_BALANCE: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .zed > .top > .wallet-price > .lg-text",
-    CLAIM_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .down > .tr-item:nth-child(${i}) > .right > .primary-btn",
-    CONFIRM_DEPOSITE_BUTTON: "form > section > .section-footer > .d-flex > .primary-btn"
+    CLAIM_BUTTON: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .down > .tr-item:nth-child(${i})> .right > button.primary-btn",
+    CONFIRM_DEPOSITE_BUTTON: "form > section > .section-footer > .d-flex > .primary-btn",
+    CONFIRM_WITHDRAW_BUTTON: "//button[text()='Confirm']",
+    CLAIM_AMOUNT_LIST: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .down > .tr-item > .right > button",
+    CASH_BALANCE : ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet .wallet-price > .secondary"
 };

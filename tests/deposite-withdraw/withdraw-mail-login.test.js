@@ -16,7 +16,6 @@ var walletPage;
 var pageInstance;
 var newPageInstance;
 var homePage;
-const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 const EMAIL = ACCOUNT_LIST.SECOND_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.SECOND_ACCOUNT.LOGIN;
 const DOMAIN = ACCOUNT_LIST.SECOND_ACCOUNT.DOMAIN;
@@ -46,7 +45,6 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
       LOGIN,
       DOMAIN,
       messageId,
-      pattern
     );
   });
 
@@ -83,6 +81,7 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
       console.log(">>> Expected Zed Balance: ", newZedBalance);
       await walletPage.typeWithDrawAmount(AMOUNT);
       await walletPage.clickOnWithdrawFromZedWallet();
+      await walletPage.clickOnConfirmWithDrawButton();
       await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);
       done();
     }

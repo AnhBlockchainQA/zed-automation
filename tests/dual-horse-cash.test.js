@@ -3,7 +3,7 @@ const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
 const { WalletPage } = require("../pages/WalletPage");
 const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
+const { ACCOUNT_LIST, AMOUNT } = require("../data/env");
 const test = require("jest-retries");
 const { HomePage } = require("../pages/HomePage");
 
@@ -14,9 +14,12 @@ var loginPage;
 var magicLinkPage;
 var walletPage;
 var pageInstance;
-const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 var newPageInstance;
 var homePage;
+
+const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FOURTH_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
   await pageFactory.removeCache();
@@ -31,19 +34,18 @@ describe("Dual horse cash", () => {
       loginPage = new LoginPage(pageInstance);
       await loginPage.navigate();
       await loginPage.clickOnStartButton();
-      await loginPage.typeEmail(TEST_EMAIL);
+      await loginPage.typeEmail(EMAIL);
       await loginPage.clickOnContinueButton();
       await loginPage.waitForTimeout();
     }
   );
 
   test("Check mail inbox to get magic link", 3, async () => {
-    messageId = await apiRequest.getZedRunMessageId(TEST_LOGIN, TEST_DOMAIN);
+    messageId = await apiRequest.getZedRunMessageId(LOGIN, DOMAIN);
     magicLink = await apiRequest.getMagicLink(
-      TEST_LOGIN,
-      TEST_DOMAIN,
-      messageId,
-      pattern
+      LOGIN,
+      DOMAIN,
+      messageId
     );
   });
 
