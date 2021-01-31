@@ -14,5 +14,6 @@ module.exports = {
     SELECT_FEMALE_HORSE_NAME: ".select-mate .select-mate-part .female-part .female-content div.overline-text",
     BUY_COVER_BUTTON: ".breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn",
     CONFIRM_BUTTON: ".transaction-confirmation-modal-content .section-footer button.primary-btn",
-    CHECK_ACTIVITY_BUTTON: ".breeding-modal-content .section-content .text-content button.primary-btn"
+    CHECK_ACTIVITY_BUTTON: ".breeding-modal-content .section-content .text-content button.primary-btn",
+    STUD_SERVICE_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Stud Service']"
 };    

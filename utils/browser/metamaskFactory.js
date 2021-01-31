@@ -26,6 +26,7 @@ class MetamaskFactory {
   }
 
   async init() {
+    
     // this.browserContext = await chromium.launchPersistentContext(userDataDir, {
     //   headless: false,
     //   args: [
