@@ -1,4 +1,3 @@
-
 module.exports = {
     EVENT_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Events']",
     RACING_EVENT_SELECTED: ".race-description .race-title .race-name",

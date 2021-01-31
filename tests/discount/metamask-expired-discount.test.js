@@ -6,7 +6,7 @@ const {
 } = require("../../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { EXPIRED_CODE } = require("../../data/env");
-const zedRunConfig = require("../../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const test = require("jest-retries");
@@ -54,7 +54,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -67,7 +67,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 
     otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      zedRunConfig.AUTHENTICATE_BUTTON
+      AUTHENTICATE_BUTTON
     );
     otherMetamaskNotificationPage = new MetamaskNotificationPage(
       otherMetamaskNotificationInstance
@@ -107,6 +107,13 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
 });
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });

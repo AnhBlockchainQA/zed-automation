@@ -8,7 +8,7 @@ const {
   PAYMENT_SUCESSFUL_LABEL,
   DONE_BUTTON,
   BUY_WITH_ETH_BUTTON,
-  USE_DIFFERENT_CARD_BUTTON
+  USE_DIFFERENT_CARD_BUTTON,
 } = require("../locators/Payment");
 
 class PaymentPage {
@@ -27,7 +27,7 @@ class PaymentPage {
       console.log(
         "---- Zed Run Automation Framework: Click on Accept button ---"
       );
-      await this.page.waitForSelector(BUY_WITH_CREDIT_CARD_BUTTON, {
+      await expect(this.page).toHaveSelector(BUY_WITH_CREDIT_CARD_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -56,12 +56,9 @@ class PaymentPage {
       console.log(
         "--- Zed Run Automation Framework: Wait until payment form present ---"
       );
-      await this.page
-        .waitForSelector(BUY_WITH_CREDIT_CARD_LABEL, {
-          visible: true,
-          timeout: 0,
-        })
-        .then(console.log("Payment form already shown up!"));
+      await expect(this.page).toHaveSelector(BUY_WITH_CREDIT_CARD_LABEL, {
+        timeout: 0,
+      });
       await this.page.waitForLoadState();
     } catch {
       throw new Error("Payment form is not present!");
@@ -74,18 +71,15 @@ class PaymentPage {
         "--- Zed Run Automation Framework: Type credit card number ---"
       );
       const cardNumberFrame = await this.findFrameByMatchingUrl("cardNumber");
-      await cardNumberFrame
-        .waitForSelector(CREDIT_CARD_NUMBER_INPUT, {
-          visible: true,
+      await expect(cardNumberFrame)
+        .toHaveSelector(CREDIT_CARD_NUMBER_INPUT, {
           timeout: 0,
         })
         .then(console.log("Credit card number input field is displayed!"));
       await cardNumberFrame.click(CREDIT_CARD_NUMBER_INPUT);
-      await cardNumberFrame.type(
-        CREDIT_CARD_NUMBER_INPUT,
-        cardNumber,
-        { delay: 50 }
-      );
+      await cardNumberFrame.type(CREDIT_CARD_NUMBER_INPUT, cardNumber, {
+        delay: 50,
+      });
     } catch {
       throw new Error("Credit card number input is not shown");
     }
@@ -99,16 +93,16 @@ class PaymentPage {
       const cardExpiryDateFrame = await this.findFrameByMatchingUrl(
         "cardExpiry"
       );
-      await cardExpiryDateFrame
-        .waitForSelector(CREDIT_CARD_EXPIRATION_DATE_INPUT, {
+      await expect(cardExpiryDateFrame)
+        .toHaveSelector(CREDIT_CARD_EXPIRATION_DATE_INPUT, {
           timeout: 0,
-          visible: true,
         })
         .then(
           console.log("Credit card expiration date input field is displayed!")
         );
       await cardExpiryDateFrame.click(CREDIT_CARD_EXPIRATION_DATE_INPUT);
-      await cardExpiryDateFrame.type(CREDIT_CARD_EXPIRATION_DATE_INPUT,
+      await cardExpiryDateFrame.type(
+        CREDIT_CARD_EXPIRATION_DATE_INPUT,
         expireDate,
         { delay: 50 }
       );
@@ -123,9 +117,8 @@ class PaymentPage {
         "--- Zed Run Automation Framework: Type credit card cvc number ---"
       );
       const cardCVCFrame = await this.findFrameByMatchingUrl("cardCvc");
-      await cardCVCFrame
-        .waitForSelector(CREDIT_CARD_CVC_INPUT, {
-          visible: true,
+      await expect(cardCVCFrame)
+        .toHaveSelector(CREDIT_CARD_CVC_INPUT, {
           timeout: 0,
         })
         .then(console.log("Credit card CVC input field is displayed!"));
@@ -141,9 +134,8 @@ class PaymentPage {
   async clickPayButton() {
     try {
       console.log("--- Zed Run Automation Framework: Click on Pay button ---");
-      await this.page
-        .waitForSelector(PAY_BUTTON, {
-          visible: true,
+      await expect(this.page)
+        .toHaveSelector(PAY_BUTTON, {
           timeout: 0,
         })
         .then(console.log("Pay button is displayed!"));
@@ -158,7 +150,7 @@ class PaymentPage {
       "--- Zed Run Automation Framework: Check if Payment sucessful label is present ---"
     );
     try {
-      await this.page.waitForSelector(PAYMENT_SUCESSFUL_LABEL, {
+      await expect(this.page).toHaveSelector(PAYMENT_SUCESSFUL_LABEL, {
         visible: true,
         timeout: 0,
       });
@@ -170,10 +162,9 @@ class PaymentPage {
   async clickDoneButton() {
     try {
       console.log("--- Zed Run Automation Framework: Click Done button ---");
-      await this.page
-        .waitForSelector(DONE_BUTTON, {
+      await expect(this.page)
+        .toHaveSelector(DONE_BUTTON, {
           timeout: 0,
-          visible: true,
         })
         .then(console.log("Done button is present"));
       await this.page.click(DONE_BUTTON);
@@ -187,9 +178,8 @@ class PaymentPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Buy with ETH button ---"
       );
-      await this.page.waitForSelector(BUY_WITH_ETH_BUTTON, {
-        visibile: true,
-        timeout: 40000,
+      await expect(this.page).toHaveSelector(BUY_WITH_ETH_BUTTON, {
+        timeout: 0,
       });
       await this.page.click(BUY_WITH_ETH_BUTTON, { timeout: 0 });
     } catch {
@@ -202,7 +192,7 @@ class PaymentPage {
       "--- Zed Run Automation Framework: Click on Use different card if needed ---"
     );
     try {
-      await this.page.waitForSelector(USE_DIFFERENT_CARD_BUTTON, {
+      await expect(this.page).toHaveSelector(USE_DIFFERENT_CARD_BUTTON, {
         timeout: 10000,
       });
       await this.page.click(USE_DIFFERENT_CARD_BUTTON);

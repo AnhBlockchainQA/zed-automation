@@ -1,3 +1,4 @@
+const { REGEX } = require("../data/env");
 const {
   DEPOSITE_BUTTON,
   DEPOSITE_AMOUNT_INPUT,
@@ -8,8 +9,12 @@ const {
   ZED_BALANCE,
   ETH_BALANCE,
   CONFIRM_DEPOSITE_BUTTON,
+  CONFIRM_WITHDRAW_BUTTON,
+  CLAIM_AMOUNT_LIST,
+  CLAIM_BUTTON,
+  CASH_BALANCE
 } = require("../locators/Wallet");
-const { threshold } = require("../utils/api/api");
+const stringUtils = require("../utils/api/stringUtils");
 
 class WalletPage {
   constructor(page) {
@@ -22,7 +27,7 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Deposit button ---"
       );
-      await this.page.waitForSelector(DEPOSITE_BUTTON, {
+      await expect(this.page).toHaveSelector(DEPOSITE_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -55,7 +60,7 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Deposite to Zed Balance button ---"
       );
-      await this.page.waitForSelector(DEPOSITE_TO_ZED_BUTTON, {
+      await expect(this.page).toHaveSelector(DEPOSITE_TO_ZED_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -70,7 +75,7 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Withdraw button ---"
       );
-      await this.page.waitForSelector(WITHDRAW_BUTTON, {
+      await expect(this.page).toHaveSelector(WITHDRAW_BUTTON, {
         timeout: 0,
         visible: true,
       });
@@ -85,7 +90,7 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Type withdraw amount ---"
       );
-      await this.page.waitForSelector(WITHDRAW_AMOUNT_INPUT, {
+      await expect(this.page).toHaveSelector(WITHDRAW_AMOUNT_INPUT, {
         visible: true,
         timeout: 0,
       });
@@ -103,7 +108,7 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Withdraw from Zed Balance ---"
       );
-      await this.page.waitForSelector(WITHDRAW_FROM_ZED_BUTTON, {
+      await expect(this.page).toHaveSelector(WITHDRAW_FROM_ZED_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -116,7 +121,7 @@ class WalletPage {
   async getBalance(locator) {
     try {
       console.log(" ---- Zed Run Automation Framework: Get the balance ---");
-      await this.page.waitForSelector(locator, { timeout: 0 });
+      await expect(this.page).toHaveSelector(locator, { timeout: 0 });
       await this.page.waitForFunction(
         (locator) => {
           return Number(document.querySelector(locator).innerText) > 0;
@@ -125,9 +130,7 @@ class WalletPage {
         4000,
         { timeout: 0 }
       );
-      const value = await this.page.evaluate((locator) => {
-        return document.querySelector(locator).innerText;
-      }, locator);
+      const value = await this.page.innerText(locator);
       return Number(value);
     } catch {
       throw new Error("Balance is not present!");
@@ -138,18 +141,16 @@ class WalletPage {
     console.log(
       " ---- Zed Run Automation Framework: Check if balance updated ---"
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     await this.page.waitForFunction(
       ([locator, oldValue]) => {
         return Number(document.querySelector(locator).innerText) < oldValue;
       },
       [locator, oldValue],
       5000,
-      { timeout: 120000 }
+      { timeout: 300000 }
     );
-    const value = await this.page.evaluate((locator) => {
-      return document.querySelector(locator).innerText;
-    }, locator);
+    const value = await this.page.innerText(locator);
     if (Number(value).toFixed(2).trim() !== newValue.toFixed(2).trim()) {
       console.log(
         "Assertion failed: Actual balance [%s] is different to expected value [%s]",
@@ -198,7 +199,7 @@ class WalletPage {
     console.log(
       " ---- Zed Run Automation Framework: Scroll to Zed balance section ---"
     );
-    await this.page.waitForSelector(ZED_BALANCE, {
+    await expect(this.page).toHaveSelector(ZED_BALANCE, {
       visible: true,
       timeout: 0,
     });
@@ -212,7 +213,7 @@ class WalletPage {
       " ---- Zed Run Automation Framework: Click on Confirm button to confirm deposite action ---"
     );
     try {
-      await this.page.waitForSelector(CONFIRM_DEPOSITE_BUTTON, {
+      await expect(this.page).toHaveSelector(CONFIRM_DEPOSITE_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -224,6 +225,78 @@ class WalletPage {
 
   async bringToFront() {
     await this.page.bringToFront();
+  }
+
+  async clickOnConfirmWithDrawButton(){
+    console.log(
+      " ---- Zed Run Automation Framework: Click on Confirm button to confirm withdraw action ---"
+    );
+    try {
+      await expect(this.page).toHaveSelector(CONFIRM_WITHDRAW_BUTTON, {
+        timeout: 0,
+      });
+      await this.page.click(CONFIRM_WITHDRAW_BUTTON);
+    } catch {
+      throw new Error("Confirm button is not present");
+    }
+  }
+
+  async getRandomIndexOfClaimingAmountList(){
+    try{
+      await expect(this.page).toHaveSelector(CLAIM_AMOUNT_LIST, {timeout: 0});
+      const size = await this.page.$$eval(CLAIM_AMOUNT_LIST, (items) => items.length);
+      return Math.floor(Math.random()*size);
+    }catch{
+      return -1;
+    }
+  }
+
+  async getClaimingAmountByIndex(index){
+    console.log(" ---- Zed Run Automation Framework: Get claiming amount by index ---")
+    let locator = stringUtils.replaceTemplateString(
+      REGEX.NUMBER,
+      CLAIM_BUTTON,
+      index + 1
+    );
+    try{
+      await expect(this.page).toHaveSelector(locator, {timeout: 0});
+      return await page.innerText(locator).match(REGEX.AMOUNT)[0].split(" ")[0];
+    }catch{
+      return null;
+    }
+  }
+
+  async getOriginalCashBalance(){
+    return Number((await this.getBalance(CASH_BALANCE)).toString().match(REGEX.AMOUNT)[0]);
+  }
+
+  async checkIfCashBalanceUpdated(originalValue, claimAmount){
+    console.log(
+      " ---- Zed Run Automation Framework: Check if cash balance is updated ---"
+    );
+    console.log(
+      " ---- Zed Run Automation Framework: Check if balance updated ---"
+    );
+    await expect(this.page).toHaveSelector(CASH_BALANCE, { timeout: 0 });
+    await this.page.waitForFunction(
+      ([locator, value]) => {
+        return Number(document.querySelector(locator).innerText) > value;
+      },
+      [CASH_BALANCE, originalValue],
+      5000,
+      { timeout: 300000 }
+    );
+    const actualValue = Number((await this.getBalance(CASH_BALANCE)).toString().match(REGEX.AMOUNT)[0]);
+    if (actualValue !== originalValue + claimAmount) {
+      console.log(
+        "Assertion failed: Actual balance [%s] is different to expected value [%s]",
+        actualValue,
+        originalValue + claimAmount
+      );
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 

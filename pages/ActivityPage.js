@@ -1,16 +1,22 @@
-const activityConfig = require("../locators/Activity");
+const { FIRST_STATEMENT_INFO } = require("../locators/Activity");
+const { BREEDING_LINK } = require("../locators/ZedRun");
+
 class ActivityPage {
   constructor(page) {
     this.page = page;
     this.page.setDefaultTimeout(60000);
   }
 
-  async bringToFront(){
-    try{
-    await this.page.bringToFront();
-    }catch{
+  async bringToFront() {
+    try {
+      await this.page.bringToFront();
+    } catch {
       throw new Error("Page instance is not found or not ready");
     }
+  }
+
+  async waitForLoadState() {
+    await this.page.waitForLoadState();
   }
 
   async getStatementInfo() {
@@ -18,15 +24,13 @@ class ActivityPage {
       console.log(
         "---- Zed Run Automation Framework: Get the statement info ---"
       );
-      await this.page.waitForSelector(activityConfig.FIRST_STATEMENT_INFO, {
+      await expect(this.page).toHaveSelector(FIRST_STATEMENT_INFO, {
         timeout: 0,
       });
-      const info = await this.page.evaluate((locator) => {
-        return document.querySelector(locator).innerText;
-      }, activityConfig.FIRST_STATEMENT_INFO);
+      const info = this.page.innerText(FIRST_STATEMENT_INFO);
       console.log(">>>>>> Statement  info ", info);
       return info;
-    } catch{
+    } catch {
       throw new Error("Statement info is not found");
     }
   }
@@ -36,7 +40,7 @@ class ActivityPage {
       console.log(
         "---- Zed Run Automation Framework: Validate statement info ---"
       );
-      await this.page.waitForSelector(activityConfig.FIRST_STATEMENT_INFO, {
+      await expect(this.page).toHaveSelector(FIRST_STATEMENT_INFO, {
         timeout: 0,
       });
       let info = await this.getStatementInfo();
@@ -48,6 +52,18 @@ class ActivityPage {
       }
     } catch {
       throw new Error("Statement is not present!");
+    }
+  }
+
+  async clickOnBreedingLink() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Breeding link ---"
+    );
+    try {
+      await expect(this.page).toHaveSelector(BREEDING_LINK, { timeout: 0 });
+      await this.page.click(BREEDING_LINK);
+    } catch {
+      throw new Error("Breeding link is not shown!");
     }
   }
 }

@@ -1,4 +1,5 @@
-const { ZEDRUN_URL, WAIT_TIME } = require("../data/env");
+const { ZEDRUN_URL } = require("../data/env");
+const { WAIT_TIME } = require("../data/api"); 
 const {
   LOGIN_START_BUTTON,
   EMAIL_INPUT,
@@ -21,7 +22,6 @@ class LoginPage {
   async navigate() {
     console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
-      await this.page.waitForLoadState();
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
       await this.page.waitForLoadState();
     } catch {
@@ -34,7 +34,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Start Button ---"
       );
-      await this.page.waitForSelector(LOGIN_START_BUTTON, {
+      await expect(this.page).toHaveSelector(LOGIN_START_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -49,7 +49,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Input value to email field ---"
       );
-      await this.page.waitForSelector(EMAIL_INPUT, {
+      await expect(this.page).toHaveSelector(EMAIL_INPUT, {
         visible: true,
         timeout: 0,
       });
@@ -64,7 +64,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Continue Button ---"
       );
-      await this.page.waitForSelector(CONTINUE_BUTTON, {
+      await expect(this.page).toHaveSelector(CONTINUE_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -93,7 +93,7 @@ class LoginPage {
       "---- Zed Run Automation Framework: Check if welcome label is present ---"
     );
     try {
-      await this.page.waitForSelector(WELCOME_LABEL, {
+      await expect(this.page).toHaveSelector(WELCOME_LABEL, {
         visible: true,
         timeout: 0,
       });
@@ -107,6 +107,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Connect Metamask button ---"
       );
+      await expect(this.page).toHaveSelector(CONNECT_METAMASK, { timeout: 0 });
       await this.page.click(CONNECT_METAMASK);
     } catch {
       throw new Error(
@@ -120,6 +121,9 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Authenticate Button ---"
       );
+      await expect(this.page).toHaveSelector(AUTHENTICATE_BUTTON, {
+        timeout: 0,
+      });
       await this.page.click(AUTHENTICATE_BUTTON);
     } catch {
       throw new Error("Authenticate button is not present or not clickable");
