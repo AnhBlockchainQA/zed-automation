@@ -1,25 +1,13 @@
-const {
-  MetamaskPage
-} = require('../pages/MetamaskPage');
-const {
-  MetamaskFactory
-} = require('../utils/browser/metamaskFactory');
-const {
-  LoginPage
-} = require('../pages/LoginPage');
-const {
-  MetamaskNotificationPage
-} = require('../pages/MetamaskNotification');
-const {
-  SEED_PHRASE,
-  PASSWORD,
-  CONFIRM_PASSWORD
-} = require('../data/env');
-const zedRunConfig = require('../locators/ZedRun');
-const studServiceConfig = require('../locators/StudService');
-const { HomePage } = require('../pages/HomePage');
-const { StudServicePage } = require('../pages/StudServicePage');
-const { ActivityPage } = require('../pages/ActivityPage');
+const { MetamaskPage } = require("../pages/MetamaskPage");
+const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
+const { LoginPage } = require("../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
+const { CONFIRM_BUTTON } = require("../locators/StudService");
+const { HomePage } = require("../pages/HomePage");
+const { StudServicePage } = require("../pages/StudServicePage");
+const { ActivityPage } = require("../pages/ActivityPage");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -39,6 +27,8 @@ var femalehorseName;
 var index;
 var activityPage;
 var homePage;
+var noOfHorses;
+var myStablePage;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -46,7 +36,6 @@ beforeAll(async () => {
 });
 
 describe("Generate stud horse", () => {
-
   test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -69,27 +58,38 @@ describe("Generate stud horse", () => {
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
 
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.CONNECT_METAMASK);
-    metamaskNotificationPage = new MetamaskNotificationPage(metamaskNotificationInstance);
+    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      CONNECT_METAMASK
+    );
+    metamaskNotificationPage = new MetamaskNotificationPage(
+      metamaskNotificationInstance
+    );
 
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.waitForCloseEvent();
 
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, zedRunConfig.AUTHENTICATE_BUTTON);
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(otherMetamaskNotificationInstance);
+    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      AUTHENTICATE_BUTTON
+    );
+    otherMetamaskNotificationPage = new MetamaskNotificationPage(
+      otherMetamaskNotificationInstance
+    );
 
     await otherMetamaskNotificationPage.waitForLoadState();
     await otherMetamaskNotificationPage.clickOnSignButton();
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Check that avatar is shown then click on Breeding link", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
     await homePage.clickOnBreedingLink();
+    await homePage.waitForLoadState();
   });
 
   test("Select mate horse", async () => {
@@ -99,10 +99,13 @@ describe("Generate stud horse", () => {
     malehorseName = await studServicePage.getHorseName(index);
     await studServicePage.clickOnSelectMateButtonOfHorseWithIndex(index);
     actualSelectHorse = await studServicePage.getSelectedMateHorseName();
-    await studServicePage.checkIfCorrectHorseNameSelected(malehorseName, actualSelectHorse);
+    await studServicePage.checkIfCorrectHorseNameSelected(
+      malehorseName,
+      actualSelectHorse
+    );
   });
 
-  test("Select female horse", 3, async() => {
+  test("Select female horse", 3, async () => {
     await studServicePage.clickOnSelectFemaleButton();
     await studServicePage.verifySelectFemalePopUpShown();
     await studServicePage.getListOfFemaleHorse();
@@ -111,28 +114,48 @@ describe("Generate stud horse", () => {
     await studServicePage.clickOnSelectedFemaleHorseWithIndex(index);
     await studServicePage.clickOnSelectButtonOfFemaleHorseWithIndex(index);
     actualSelectHorse = await studServicePage.getSelectedFemaleHorseName();
-    await studServicePage.checkIfCorrectHorseNameSelected(femalehorseName, actualSelectHorse);
+    await studServicePage.checkIfCorrectHorseNameSelected(
+      femalehorseName,
+      actualSelectHorse
+    );
   });
 
-  test("Proceed breeding steps", 3, async() => {
+  test("Proceed breeding steps", 3, async () => {
     await studServicePage.scrollToBuyCoverButton();
     await studServicePage.clickOnBuyCoverButton();
-    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(newPageInstance, studServiceConfig.CONFIRM_BUTTON);
-    confirmMetamaskNotificationPage = new MetamaskNotificationPage(confirmMetamaskNotificationInstance);
+    confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      CONFIRM_BUTTON
+    );
+    confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+      confirmMetamaskNotificationInstance
+    );
     confirmMetamaskNotificationPage.clickOnConfirmButton();
     confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Go to Activity page and check if we breed successfully", 3, async() => {
-    await studServicePage.clickOnCheckActivityButton();
-    activityPage = new ActivityPage(newPageInstance);
-    await activityPage.checkIfStatementInfoCorrect(malehorseName, femalehorseName);
-  });
+  test(
+    "Go to Activity page and check if we breed successfully",
+    3,
+    async () => {
+      await studServicePage.clickOnCheckActivityButton();
+      activityPage = new ActivityPage(newPageInstance);
+      await activityPage.checkIfStatementInfoCorrect(
+        malehorseName,
+        femalehorseName
+      );
+    }
+  );
 });
-
 
 afterAll(async (done) => {
-  await metamaskFactory.close();
-  done();
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });
-
