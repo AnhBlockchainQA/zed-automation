@@ -290,4 +290,4 @@ class StudServicePage {
     }
   }
 }
-module.exports = { StudServicePage };
+module.exports = {StudServicePage};

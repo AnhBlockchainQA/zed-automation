@@ -1,4 +1,5 @@
 module.exports = {
+    LIST_HORSE: ".marketplace-content .horse-sale-card.horse-details",
     FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
     DOWNWARD_ARROW : "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
     COUPON_INPUT: "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
@@ -7,5 +8,6 @@ module.exports = {
     HORSE_PRICE: "div.buy-method-choice > .method-options > .fiat-price > span",
     HORSE_NAME: "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
     HORSE_LIST: ".ifs .row div.horse-sale-card",
-    ERROR_MESSAGE: ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text"
+    ERROR_MESSAGE: ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text",
+    MARKET_PLACE_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Marketplace']"
 };    

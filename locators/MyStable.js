@@ -14,4 +14,6 @@ module.exports = {
     SELECTED_MALE_HORSE_NAME: ".breed-form .section-content .horse-part .horse-info .primary-text",
     NEXT_BUTTON: "//div[@class='section-footer']/div[@class='handle-btns']/button[text()='next']",
     PROCEED_BUTTON: "//button[text()='Proceed']",
-}
+    TOTAL_THOROUGHBREDS: ".stable-info .desc-part .stable-stat:nth-child(1) h3",
+    NUMBER_HORSE: ".accordion-content .panel"
+};

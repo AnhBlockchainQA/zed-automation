@@ -1,14 +1,16 @@
 const {
   ACCEPT_BUTTON,
+  STUD_SERVICE_LINK,
+  BALANCE_INFO,
   MARKETPLACE_LINK,
   USER_AVATAR,
   ARROW_ICON,
-  STUD_SERVICE_LINK,
   RACING_LINK,
   ETH_BALANCE,
   ZED_BALANCE,
   BREEDING_LINK,
-  BALANCE_INFO,
+  PROFILE_ICON,
+  MY_STABLE,
 } = require("../locators/ZedRun");
 const { WALLET_ICON } = require("../locators/Wallet");
 
@@ -135,6 +137,94 @@ class HomePage {
       await this.page.click(BREEDING_LINK);
     } catch {
       throw new Error("Breeding link is not shown!");
+    }
+  }
+
+  async checkIfAvatarPresent() {
+    console.log(
+      "---- Zed Run Automation Framework: Check if user avatar is present ---"
+    );
+    try {
+      await this.page.waitForSelector(USER_AVATAR, {
+        visible: true,
+        timeout: 0,
+      });
+    } catch {
+      throw new Error("User avatar is not present");
+    }
+  }
+
+  async clickOnArrowIcon() {
+    console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
+    try {
+      await this.page.waitForSelector(ARROW_ICON, { timeout: 0 });
+      await this.page.click(ARROW_ICON);
+    } catch {
+      throw new Error("Arrow icon is not present or clickable");
+    }
+  }
+
+  async clickOnStudServiceLink() {
+    console.log("---- Zed Run Automation Framework: Click on Stud service ---");
+    try {
+      await this.page.waitForSelector(STUD_SERVICE_LINK, {
+        timeout: 0,
+      });
+      await this.page.click(STUD_SERVICE_LINK);
+    } catch {
+      throw new Error("Stud service link is not present or clickable");
+    }
+  }
+
+  async clickOnRacingLink() {
+    console.log("---- Zed Run Automation Framework: Click on Racing link ---");
+    try {
+      await this.page.waitForSelector(RACING_LINK, { timeout: 0 });
+      await this.page.click(RACING_LINK);
+    } catch {
+      throw new Error("Racing link is not present or clickable");
+    }
+  }
+
+  async waitForLoadState() {
+    await this.page.waitForLoadState();
+  }
+
+  async clickOnBreedingLink() {
+    console.log(
+      "---- Zed Run Automation Framework: Click on Breeding link ---"
+    );
+    try {
+      await this.page.waitForSelector(BREEDING_LINK, { timeout: 0 });
+      await this.page.click(BREEDING_LINK);
+    } catch {
+      throw new Error("Breeding link is not shown!");
+    }
+  }
+
+  async waitUntilBalanceShown() {
+    console.log(
+      "---- Zed Run Automation Framework: Wait until the balance shown ---"
+    );
+    try {
+      await this.page.waitForSelector(BALANCE_INFO, { timeout: 0 });
+    } catch {
+      throw new Error("The Balance is not present");
+    }
+  }
+
+  async navigateToMyStablePage() {
+    console.log(
+      "---- Zed Run Automation Framework: Navigate to My Stable Page ---"
+    );
+    try {
+      await this.page.waitForSelector(PROFILE_ICON, { timeout: 0 });
+      await this.page.click(PROFILE_ICON);
+
+      await this.page.waitForSelector(MY_STABLE, { timeout: 0 });
+      await this.page.click(MY_STABLE);
+    } catch {
+      throw new Error("The Profile Icon or My Stable Page is not present");
     }
   }
 }

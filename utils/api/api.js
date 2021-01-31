@@ -25,11 +25,9 @@ class APIRequest {
       action: GENERATE_RANDOM_EMAIL,
       count: 10,
     });
-    console.log(">>> Random email is : " + randomEmail.toString());
     let testEmail = randomEmail.body[
       Math.floor(Math.random() * randomEmail.body.length)
     ].toString();
-    console.log(">>>>>>> Test email: [%s]", testEmail);
     return testEmail;
   }
 
@@ -40,11 +38,7 @@ class APIRequest {
       login: login,
       domain: domain,
     });
-
-    console.log(">>> Get message from email : " + checkInbox.body);
-
     if (checkInbox.body !== []) {
-      console.log(">>>>>>>>> Test here: " + checkInbox.body[0].id);
       return Number(checkInbox.body[0].id);
     } else {
       throw new Error("Something went wrong!");
@@ -58,9 +52,7 @@ class APIRequest {
       domain: domain,
       id: messageId,
     });
-
     let emailBody = getMagicLink.body.body;
-    console.log(" >>>>>>> Email body: " + emailBody);
     return emailBody.match(this.pattern)[1];
   }
 }

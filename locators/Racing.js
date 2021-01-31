@@ -1,6 +1,8 @@
 module.exports = {
-    TOTAL_GATE: ".buy-in-content .pick-gate .gate-group",
+    EVENT_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Events']",
+    RACING_EVENT_SELECTED: ".race-description .race-title .race-name",
     RACING_ENTRY_FREE: ".free-race-badge",
+    RACING_ENTRY_HAS_FEE: ".label-content .right .buy-in .primary-text",
     RACING_EVENT_LIST: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel",
     SELECTED_RACING_EVENT: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i})",
     SELECTED_RACING_EVENT_NAME : ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .panel__label .label-content .event > .primary-text",

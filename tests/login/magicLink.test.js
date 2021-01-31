@@ -3,6 +3,7 @@ const { LoginPage } = require("../../pages/LoginPage");
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const apiRequest = require("../../utils/api/api");
 const test = require("jest-retries");
+const { HomePage } = require("../../pages/HomePage");
 
 var pageFactory = new PageFactory();
 var login;
@@ -14,6 +15,7 @@ var loginPage;
 var magicLinkPage;
 var newPageInstance;
 var page;
+var homePage;
 
 beforeAll(async () => {
   pageFactory.removeCache();
@@ -40,11 +42,7 @@ describe("Login to ZedRun with magic link", () => {
 
   test("Check mail inbox to get magic link", 3, async () => {
     messageId = await apiRequest.getZedRunMessageId(login, domain);
-    magicLink = await apiRequest.getMagicLink(
-      login,
-      domain,
-      messageId
-    );
+    magicLink = await apiRequest.getMagicLink(login, domain, messageId);
     console.log(">>> URL ", magicLink);
   });
 
@@ -61,8 +59,9 @@ describe("Login to ZedRun with magic link", () => {
     "Switch back to ZedRun page and verify login successful",
     3,
     async () => {
-      await loginPage.bringToFront();
-      await loginPage.checkIfWelcomeLabelPresent();
+      homePage = new HomePage(page);
+      await homePage.bringToFront();
+      await homePage.checkIfAvatarPresent();
     }
   );
 });

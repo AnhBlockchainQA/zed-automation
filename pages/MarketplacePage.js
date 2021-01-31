@@ -8,6 +8,8 @@ const {
   HORSE_NAME,
   ERROR_MESSAGE,
   HORSE_LIST,
+    LIST_HORSE,
+    MARKET_PLACE_TAB
 } = require("../locators/MarketPlace");
 const { ACCEPT_BUTTON } = require("../locators/ZedRun");
 const { HORSE_LIST_SIZE, HORSE_LIST_PREDICATE } = require("../data/env");
@@ -101,25 +103,14 @@ class MarketplacePage {
     console.log(
       "--- Zed Run Automation Framework: Verify if discount price is correct ---"
     );
-    // const actualValue = await this.getHorsePrice();
     try {
       await expect(this.page).toHaveSelector(HORSE_PRICE, { timeout: 0 });
       await expect(this.page).toHaveText(HORSE_PRICE, value);
     } catch {
       throw new Error(
-        "Discount proce  message is not shown or assertion failed!"
+        "Discount price message is not shown or assertion failed!"
       );
     }
-    // if (Number(value).toFixed(2).trim() !== actualValue.toFixed(2).trim()) {
-    //   console.log(
-    //     "Assertion failed: Actual recalcutating price [%s] is different to expected price [%s]",
-    //     Number(actualValue).toFixed(2).trim(),
-    //     Number(value).toFixed(2).trim()
-    //   );
-    //   return false;
-    // } else {
-    //   return true;
-    // }
   }
 
   async verifyErrorMessage(message) {
