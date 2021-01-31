@@ -8,7 +8,7 @@ module.exports = {
     LOGIN_SUCESSFUL_MESSAGE: "//h1/p[contains(text(),'logged into ZED Run!')]",
     CONNECT_METAMASK: "//div[text()='Connect Metamask']",
     ACCEPT_BUTTON: "text='Accept'",
-    MARKETPLACE_LINK: "//div[@class='header-desktop']//div[@class='header-content']//div[@data-tour='header-marketplace']/div[@class='text-part']/a[descendant::text()='Marketplace']",
+    MARKETPLACE_LINK: "//div[@class='header-desktop']//div[@class='header-content']//div[text()='Marketplace']",
     LOGIN_POPUP: "#login-modal #login-steps .start-modal-content",
     USER_AVATAR: ".header-desktop .header-content div.right-part  div.user-part div.icon-part img",
     ARROW_ICON: ".icon-arrow",
@@ -18,5 +18,7 @@ module.exports = {
     BALANCE_LOADER_ICON: ".header-desktop .header .header-content .right-part .balance-part div.loader-container.stud-loader",
     BALANCE_INFO: "div[data-tour='header-profile'] .right .primary-caption",
     ETH_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(1)",
-    ZED_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)"
+    ZED_BALANCE: ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)",
+    PROFILE_ICON: ".right-part .menu-button .icon-arrow img",
+    MY_STABLE: "//div[contains(@class, 'menu-content')]//span[contains(text(), 'My Stable')]"
 };
