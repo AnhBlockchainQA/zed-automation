@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
+    
     "test": "jest --runInBand --testTimeout=10000 --forceExit --detectOpenHandles",
-=======
-    "test": "jest --runInBand --testTimeout=300000 --forceExit",
->>>>>>> c4c437e51b1ba6ecfa89ef6125c91306f8258d23
     "allure": "allure generate --clean"
   },
   "keywords": [],
