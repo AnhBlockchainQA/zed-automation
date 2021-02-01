@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
     "test": "jest --runInBand --testTimeout=10000 --forceExit --detectOpenHandles",
     "allure": "allure generate --clean"
   },
