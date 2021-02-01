@@ -1,0 +1,97 @@
+{
+  "uid" : "65a4920874402aae",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "dab672cdc7c234cc79367912f0c8f441",
+  "time" : {
+    "start" : 1612171714998,
+    "stop" : 1612171719949,
+    "duration" : 4951
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "1b207d492e330962",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/1b207d492e330962",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395484754,
+          "stop" : 1611395484760,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "cee87703d6806bc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/cee87703d6806bc",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395273499,
+          "stop" : 1611395273505,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "d6aa50fd8261992e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/d6aa50fd8261992e",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394947101,
+          "stop" : 1611394947112,
+          "duration" : 11
+        }
+      }, {
+        "uid" : "4f2b5012b619d3c1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/4f2b5012b619d3c1",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394882566,
+          "stop" : 1611394882572,
+          "duration" : 6
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "65a4920874402aae.json",
+  "parameterValues" : [ ]
+}

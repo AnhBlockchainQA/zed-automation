@@ -1,0 +1,124 @@
+{
+  "uid" : "c5ab2e0830e7a611",
+  "name" : "Proceed breeding steps",
+  "fullName" : "Generate stud horse.Proceed breeding steps",
+  "historyId" : "4191baed7966cd4302e93142fd491a64",
+  "time" : {
+    "start" : 1612171581567,
+    "stop" : 1612171583008,
+    "duration" : 1441
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Proceed breeding steps"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "7cee5d4fcf1b593e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/7cee5d4fcf1b593e",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395481272,
+          "stop" : 1611395481273,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "aa8c0caa82b174fa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/aa8c0caa82b174fa",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395270388,
+          "stop" : 1611395270389,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "368c3d435a975286",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/368c3d435a975286",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394944069,
+          "stop" : 1611394944070,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "dbb4f49a70058f5e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/dbb4f49a70058f5e",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394879194,
+          "stop" : 1611394879195,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "7057da65659d7b24",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/7057da65659d7b24",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611330176212,
+          "stop" : 1611330177168,
+          "duration" : 956
+        }
+      }, {
+        "uid" : "45cc30a44719f8ae",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/45cc30a44719f8ae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611329582085,
+          "stop" : 1611329583626,
+          "duration" : 1541
+        }
+      }, {
+        "uid" : "881aa4e62e477c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/881aa4e62e477c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611329955445,
+          "stop" : 1611329956503,
+          "duration" : 1058
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c5ab2e0830e7a611.json",
+  "parameterValues" : [ ]
+}

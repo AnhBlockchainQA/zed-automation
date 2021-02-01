@@ -1,0 +1,127 @@
+{
+  "uid" : "5d51043adc3c83a7",
+  "name" : "Apply the discount coupon : ZED-10-PERCENT",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Apply the discount coupon : ZED-10-PERCENT",
+  "historyId" : "91b1698e1a039f3152cf64893879444a",
+  "time" : {
+    "start" : 1612171644461,
+    "stop" : 1612171644462,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ZED-10-PERCENT"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "f1732610f93f71be",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/f1732610f93f71be",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395481834,
+          "stop" : 1611395481835,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "ee076d3eba8cd533",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/ee076d3eba8cd533",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395270974,
+          "stop" : 1611395270975,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "61409191ba9fc176",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/61409191ba9fc176",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394944692,
+          "stop" : 1611394944693,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5f5f54a899e49a25",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/5f5f54a899e49a25",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394879841,
+          "stop" : 1611394879842,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "fbd85038c1ca7344",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/fbd85038c1ca7344",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611330867487,
+          "stop" : 1611331167501,
+          "duration" : 300014
+        }
+      }, {
+        "uid" : "6df3aa353a82ea5f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/6df3aa353a82ea5f",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611330271393,
+          "stop" : 1611330571418,
+          "duration" : 300025
+        }
+      }, {
+        "uid" : "6f28320358aa6a1d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/6f28320358aa6a1d",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611330652653,
+          "stop" : 1611330952662,
+          "duration" : 300009
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5d51043adc3c83a7.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,133 @@
+{
+  "uid" : "c538ea98af54c769",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "fullName" : "Login to ZedRun with magic link.Switch back to ZedRun page and verify login successful",
+  "historyId" : "89fd272cf748d697446171eeec1a3167",
+  "time" : {
+    "start" : 1612172002699,
+    "stop" : 1612172012710,
+    "duration" : 10011
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/login/magicLink.test.js:58:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/login/magicLink.test.js:24:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Switch back to ZedRun page and verify login successful"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "fb8993473ea414c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/fb8993473ea414c8",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'bringToFront' of undefined",
+        "time" : {
+          "start" : 1611395491958,
+          "stop" : 1611395491959,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "8dca4f3eaa3f98da",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/8dca4f3eaa3f98da",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'bringToFront' of undefined",
+        "time" : {
+          "start" : 1611395278533,
+          "stop" : 1611395278534,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "bfe0e12ee0268a27",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/bfe0e12ee0268a27",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'bringToFront' of undefined",
+        "time" : {
+          "start" : 1611394951989,
+          "stop" : 1611394951990,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "a74a88ea266dd5c1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/a74a88ea266dd5c1",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'bringToFront' of undefined",
+        "time" : {
+          "start" : 1611394888621,
+          "stop" : 1611394888622,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "73de7090fcace204",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/73de7090fcace204",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611338452383,
+          "stop" : 1611338752409,
+          "duration" : 300026
+        }
+      }, {
+        "uid" : "47aab67884c6bab4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/47aab67884c6bab4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611337999684,
+          "stop" : 1611338299717,
+          "duration" : 300033
+        }
+      }, {
+        "uid" : "39038982577ea7be",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/39038982577ea7be",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611337895998,
+          "stop" : 1611338196012,
+          "duration" : 300014
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c538ea98af54c769.json",
+  "parameterValues" : [ ]
+}

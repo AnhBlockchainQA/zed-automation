@@ -1,0 +1,133 @@
+{
+  "uid" : "9ccde666669e328d",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "fullName" : "Dual horse cash.Switch back to ZedRun page and verify login successful",
+  "historyId" : "e221d87ef7f1163955e33e590809437a",
+  "time" : {
+    "start" : 1612171799620,
+    "stop" : 1612171809625,
+    "duration" : 10005
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/dual-horse-cash.test.js:60:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/dual-horse-cash.test.js:28:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Switch back to ZedRun page and verify login successful"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "fe4b0494dc6179",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/fe4b0494dc6179",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611395484536,
+          "stop" : 1611395484542,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "209a55fe55d033c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/209a55fe55d033c8",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611395273262,
+          "stop" : 1611395273267,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "4b17051069690414",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/4b17051069690414",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611394946887,
+          "stop" : 1611394946891,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "2eaf01d355278177",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/2eaf01d355278177",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611394882318,
+          "stop" : 1611394882323,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "1cb4674bb4d642c9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/1cb4674bb4d642c9",
+        "status" : "failed",
+        "statusDetails" : "TypeError: loginPage.waitForLoginFormHidden is not a function",
+        "time" : {
+          "start" : 1611334140640,
+          "stop" : 1611334140666,
+          "duration" : 26
+        }
+      }, {
+        "uid" : "a4126d82199ef142",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/a4126d82199ef142",
+        "status" : "failed",
+        "statusDetails" : "TypeError: loginPage.waitForLoginFormHidden is not a function",
+        "time" : {
+          "start" : 1611333211408,
+          "stop" : 1611333211445,
+          "duration" : 37
+        }
+      }, {
+        "uid" : "547853a5314bf02a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/547853a5314bf02a",
+        "status" : "failed",
+        "statusDetails" : "TypeError: loginPage.waitForLoginFormHidden is not a function",
+        "time" : {
+          "start" : 1611333632780,
+          "stop" : 1611333632802,
+          "duration" : 22
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9ccde666669e328d.json",
+  "parameterValues" : [ ]
+}

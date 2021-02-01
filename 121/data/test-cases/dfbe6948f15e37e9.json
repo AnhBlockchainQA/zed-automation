@@ -1,0 +1,103 @@
+{
+  "uid" : "dfbe6948f15e37e9",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "728c37c81976432dd8a3c7eae7b6d5e1",
+  "time" : {
+    "start" : 1612171661617,
+    "stop" : 1612171671629,
+    "duration" : 10012
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-percent-discount-with-cash.test.js:94:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-percent-discount-with-cash.test.js:45:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "ae5685325a3dfb8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/ae5685325a3dfb8",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395482248,
+          "stop" : 1611395482253,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "31a0b649bcf21856",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/31a0b649bcf21856",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395271454,
+          "stop" : 1611395271460,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "3ef977874ada76e5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/3ef977874ada76e5",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394945157,
+          "stop" : 1611394945162,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "88959c475d820c16",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/88959c475d820c16",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394880345,
+          "stop" : 1611394880351,
+          "duration" : 6
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "dfbe6948f15e37e9.json",
+  "parameterValues" : [ ]
+}

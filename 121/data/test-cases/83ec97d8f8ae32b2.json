@@ -1,0 +1,97 @@
+{
+  "uid" : "83ec97d8f8ae32b2",
+  "name" : "Verify that our order is performed",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Verify that our order is performed",
+  "historyId" : "4406bd682c3f6e1ed69ad38fde3996a9",
+  "time" : {
+    "start" : 1612171644463,
+    "stop" : 1612171644464,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is performed"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "72d5631961aee661",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/72d5631961aee661",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395481839,
+          "stop" : 1611395481841,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "9b06809f7e090d25",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/9b06809f7e090d25",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395270978,
+          "stop" : 1611395270979,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "6e6c0587b7595374",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/6e6c0587b7595374",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394944696,
+          "stop" : 1611394944697,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "16555cef1bcc59d0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/16555cef1bcc59d0",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394879847,
+          "stop" : 1611394879849,
+          "duration" : 2
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "83ec97d8f8ae32b2.json",
+  "parameterValues" : [ ]
+}

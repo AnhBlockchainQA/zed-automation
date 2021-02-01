@@ -1,0 +1,139 @@
+{
+  "uid" : "30c18764b8f590ca",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "b4e2737a8676fcfd94cf9663da62175",
+  "time" : {
+    "start" : 1612171843361,
+    "stop" : 1612171853372,
+    "duration" : 10011
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-invalid-discount.test.js:49:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/discount/metamask-invalid-discount.test.js:32:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "5663c1a66b00ccea",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1612171816812,
+        "stop" : 1612171826833,
+        "duration" : 10021
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "e097debe9eb22694",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/e097debe9eb22694",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395485325,
+          "stop" : 1611395485326,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "19b565910ac5183e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/19b565910ac5183e",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395274120,
+          "stop" : 1611395274120,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ac11621dc8f0aca9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/ac11621dc8f0aca9",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394947724,
+          "stop" : 1611394947724,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8330fdc182933736",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/8330fdc182933736",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394883208,
+          "stop" : 1611394883209,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "1abbb5e79b885265",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/1abbb5e79b885265",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611335237144,
+          "stop" : 1611335293406,
+          "duration" : 56262
+        }
+      }, {
+        "uid" : "487c66eea889eadc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/487c66eea889eadc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611334371207,
+          "stop" : 1611334449590,
+          "duration" : 78383
+        }
+      }, {
+        "uid" : "5474fe2ef66747c6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/5474fe2ef66747c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1611334712175,
+          "stop" : 1611334759274,
+          "duration" : 47099
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "30c18764b8f590ca.json",
+  "parameterValues" : [ ]
+}

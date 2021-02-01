@@ -1,0 +1,133 @@
+{
+  "uid" : "d462eaea1b27819b",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "ffdfb652c48964057576bf6048c455cf",
+  "time" : {
+    "start" : 1612171959966,
+    "stop" : 1612171960233,
+    "duration" : 267
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:20:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "8bfe4abb2a627f12",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/8bfe4abb2a627f12",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395486328,
+          "stop" : 1611395486330,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "68b6a78d7fbd2ff9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/68b6a78d7fbd2ff9",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395274902,
+          "stop" : 1611395274904,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "2e09d3505640e318",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/2e09d3505640e318",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394948481,
+          "stop" : 1611394948483,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "a7a8582c6ce315c7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/a7a8582c6ce315c7",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launch: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394884108,
+          "stop" : 1611394884110,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "fa6d32b1020c9c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/fa6d32b1020c9c8",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611336624403,
+          "stop" : 1611336625257,
+          "duration" : 854
+        }
+      }, {
+        "uid" : "ced5b5ba73a70878",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/ced5b5ba73a70878",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611336173807,
+          "stop" : 1611336174670,
+          "duration" : 863
+        }
+      }, {
+        "uid" : "fd86ee68d9a55f1b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/fd86ee68d9a55f1b",
+        "status" : "failed",
+        "statusDetails" : "Error: page.goto: url: expected string, got undefined",
+        "time" : {
+          "start" : 1611336068688,
+          "stop" : 1611336069627,
+          "duration" : 939
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d462eaea1b27819b.json",
+  "parameterValues" : [ ]
+}

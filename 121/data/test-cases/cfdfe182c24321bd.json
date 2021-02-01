@@ -1,0 +1,133 @@
+{
+  "uid" : "cfdfe182c24321bd",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Click on Deposit button and check if ETH balance is updated",
+  "historyId" : "abd459eb9db93800aa47ebdcb881fb8a",
+  "time" : {
+    "start" : 1612171776830,
+    "stop" : 1612171786846,
+    "duration" : 10016
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-metamask-login.test.js:94:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-metamask-login.test.js:34:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Deposit button and check if ETH balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "e096a6c8cea50af7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/e096a6c8cea50af7",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395484965,
+          "stop" : 1611395484969,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "83eb60fe75fa1919",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/83eb60fe75fa1919",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395273728,
+          "stop" : 1611395273732,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "947fefc405da90b6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/947fefc405da90b6",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394947342,
+          "stop" : 1611394947347,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "2d3b48aeaeb0d385",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/2d3b48aeaeb0d385",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394882801,
+          "stop" : 1611394882805,
+          "duration" : 4
+        }
+      }, {
+        "uid" : "ad3549ca84bc59f6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/ad3549ca84bc59f6",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611333235562,
+          "stop" : 1611333535575,
+          "duration" : 300013
+        }
+      }, {
+        "uid" : "abd13257bb8ff7bb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/abd13257bb8ff7bb",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611332307645,
+          "stop" : 1611332607660,
+          "duration" : 300015
+        }
+      }, {
+        "uid" : "184d8ca85e5d6f1d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/184d8ca85e5d6f1d",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1611332727588,
+          "stop" : 1611333027608,
+          "duration" : 300020
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "cfdfe182c24321bd.json",
+  "parameterValues" : [ ]
+}

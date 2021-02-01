@@ -1,0 +1,133 @@
+{
+  "uid" : "92e6f2d8cda43d2a",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Login to ZedRun with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "19433122bf1e5a835866655ce2216ce9",
+  "time" : {
+    "start" : 1612171899712,
+    "stop" : 1612171909723,
+    "duration" : 10011
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/login/register.test.js:49:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/login/register.test.js:31:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "7e3816c73a88f552",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/7e3816c73a88f552",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395485511,
+          "stop" : 1611395485511,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "bafea851c165d435",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/bafea851c165d435",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611395274310,
+          "stop" : 1611395274311,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "83f714a2d05a9a7f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/83f714a2d05a9a7f",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394947927,
+          "stop" : 1611394947928,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "6324acae16ec74fa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/6324acae16ec74fa",
+        "status" : "failed",
+        "statusDetails" : "Error: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1611394883405,
+          "stop" : 1611394883406,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "2e5926d02128469b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/96//#testresult/2e5926d02128469b",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335939952,
+          "stop" : 1611336020501,
+          "duration" : 80549
+        }
+      }, {
+        "uid" : "cd8afd28a037b640",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/94//#testresult/cd8afd28a037b640",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335519600,
+          "stop" : 1611335569414,
+          "duration" : 49814
+        }
+      }, {
+        "uid" : "60af8c9dcdc0e2e5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/95//#testresult/60af8c9dcdc0e2e5",
+        "status" : "failed",
+        "statusDetails" : "TypeError: zedRunPage.clickOnAcceptButton is not a function",
+        "time" : {
+          "start" : 1611335400717,
+          "stop" : 1611335463955,
+          "duration" : 63238
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "92e6f2d8cda43d2a.json",
+  "parameterValues" : [ ]
+}

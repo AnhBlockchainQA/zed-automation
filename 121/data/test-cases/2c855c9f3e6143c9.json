@@ -1,0 +1,103 @@
+{
+  "uid" : "2c855c9f3e6143c9",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "a153a83bb138451253867b823686b3f4",
+  "time" : {
+    "start" : 1612171960233,
+    "stop" : 1612171970244,
+    "duration" : 10011
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-mail-login.test.js:60:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-mail-login.test.js:27:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "a8207270266c26ab",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/103//#testresult/a8207270266c26ab",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611395486330,
+          "stop" : 1611395486335,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "a6a09fe4587c1276",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/102//#testresult/a6a09fe4587c1276",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611395274904,
+          "stop" : 1611395274910,
+          "duration" : 6
+        }
+      }, {
+        "uid" : "48fdcd9620e2832a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/101//#testresult/48fdcd9620e2832a",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611394948483,
+          "stop" : 1611394948488,
+          "duration" : 5
+        }
+      }, {
+        "uid" : "e60940e56079ec95",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/100//#testresult/e60940e56079ec95",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'setDefaultTimeout' of undefined",
+        "time" : {
+          "start" : 1611394884110,
+          "stop" : 1611394884114,
+          "duration" : 4
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2c855c9f3e6143c9.json",
+  "parameterValues" : [ ]
+}
