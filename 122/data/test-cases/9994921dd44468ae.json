@@ -1,0 +1,52 @@
+{
+  "uid" : "9994921dd44468ae",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Pick horses to gate and process Next to Run event.Check that avatar is shown then click on Wallet",
+  "historyId" : "7c556e997ca0a83eedab03f07a2a163a",
+  "time" : {
+    "start" : 1612172387773,
+    "stop" : 1612172393502,
+    "duration" : 5729
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at HomePage.checkIfAvatarPresent (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:153:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "9994921dd44468ae.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "faca781f3885606c",
+  "name" : "Process payment by cash",
+  "fullName" : "Buy horse with credit card.Process payment by cash",
+  "historyId" : "b1c4bda227e34a02fe014803cc534469",
+  "time" : {
+    "start" : 1612172246173,
+    "stop" : 1612172246174,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process payment by cash"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "faca781f3885606c.json",
+  "parameterValues" : [ ]
+}

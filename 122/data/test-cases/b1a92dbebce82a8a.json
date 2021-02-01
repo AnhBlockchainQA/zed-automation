@@ -1,0 +1,46 @@
+{
+  "uid" : "b1a92dbebce82a8a",
+  "name" : "Update metamask info",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Update metamask info",
+  "historyId" : "cfcca9773992edaa19342648d19e1aa2",
+  "time" : {
+    "start" : 1612172079686,
+    "stop" : 1612172083831,
+    "duration" : 4145
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b1a92dbebce82a8a.json",
+  "parameterValues" : [ ]
+}

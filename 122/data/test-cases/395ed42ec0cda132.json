@@ -1,0 +1,46 @@
+{
+  "uid" : "395ed42ec0cda132",
+  "name" : "Verify that our order is performed",
+  "fullName" : "Buy horse with credit card.Verify that our order is performed",
+  "historyId" : "f36a3308483b4ecc1591b4a60dacb7e3",
+  "time" : {
+    "start" : 1612172246174,
+    "stop" : 1612172246175,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is performed"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "395ed42ec0cda132.json",
+  "parameterValues" : [ ]
+}

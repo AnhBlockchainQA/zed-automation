@@ -1,0 +1,46 @@
+{
+  "uid" : "1deb0e6b3ec18c8a",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse.Check that avatar is shown then click on Breeding link",
+  "historyId" : "3c37c9dca4489cc2664aec444f71450",
+  "time" : {
+    "start" : 1612172055759,
+    "stop" : 1612172061618,
+    "duration" : 5859
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1deb0e6b3ec18c8a.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "d568ac0cd856d7e",
+  "name" : "Update metamask info",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Update metamask info",
+  "historyId" : "987ba5c7865ce960681ea1edc6a81937",
+  "time" : {
+    "start" : 1612172188649,
+    "stop" : 1612172192910,
+    "duration" : 4261
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d568ac0cd856d7e.json",
+  "parameterValues" : [ ]
+}

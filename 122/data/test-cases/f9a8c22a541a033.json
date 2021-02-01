@@ -1,0 +1,46 @@
+{
+  "uid" : "f9a8c22a541a033",
+  "name" : "Proceed breeding steps",
+  "fullName" : "Generate stud horse.Proceed breeding steps",
+  "historyId" : "4191baed7966cd4302e93142fd491a64",
+  "time" : {
+    "start" : 1612172067300,
+    "stop" : 1612172069279,
+    "duration" : 1979
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Proceed breeding steps"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f9a8c22a541a033.json",
+  "parameterValues" : [ ]
+}

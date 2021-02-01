@@ -1,0 +1,46 @@
+{
+  "uid" : "800c04be6b63c9c7",
+  "name" : "Purchase horse with ETH",
+  "fullName" : "Purchase horse with ETH.Purchase horse with ETH",
+  "historyId" : "cb595589750a1f6cea8be0142ab4f668",
+  "time" : {
+    "start" : 1612172185813,
+    "stop" : 1612172185814,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "800c04be6b63c9c7.json",
+  "parameterValues" : [ ]
+}

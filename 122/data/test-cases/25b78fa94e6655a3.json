@@ -1,0 +1,46 @@
+{
+  "uid" : "25b78fa94e6655a3",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "d7aa7d8b5c37caf0a6f022de9f790ca7",
+  "time" : {
+    "start" : 1612172263809,
+    "stop" : 1612172270362,
+    "duration" : 6553
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "25b78fa94e6655a3.json",
+  "parameterValues" : [ ]
+}

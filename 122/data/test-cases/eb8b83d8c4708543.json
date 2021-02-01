@@ -1,0 +1,46 @@
+{
+  "uid" : "eb8b83d8c4708543",
+  "name" : "Apply the discount coupon : INVALID_COUPON",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Apply the discount coupon : INVALID_COUPON",
+  "historyId" : "86a75acab9461a2675f616be00201af4",
+  "time" : {
+    "start" : 1612172369704,
+    "stop" : 1612172369705,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : INVALID_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "eb8b83d8c4708543.json",
+  "parameterValues" : [ ]
+}
