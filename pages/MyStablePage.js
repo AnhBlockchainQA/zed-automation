@@ -1,5 +1,4 @@
 const {
-<<<<<<< HEAD
   FILTER_BUTTON,
   GENDER_SPAN,
   COLT_CHECKBOX,
@@ -12,7 +11,8 @@ const {
   CLOSE_BUTTON,
   SEVEN_DAYS_OPTION,
   ONE_DAY_OPTION,
-  THREE_DAYS_OPTION
+  THREE_DAYS_OPTION,
+  TOTAL_THOROUGHBREDS
 } = require("../locators/MyStable");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
@@ -196,26 +196,9 @@ class MyStablePage {
     }
   }
 
-  async getSelectedMaleHorseWithIndex(index){
-
-  }
-}
-
-module.exports = { MyStablePage };
-=======
-    TOTAL_THOROUGHBREDS,
-    NUMBER_HORSE
-} = require("../locators/MyStable");
-class MyStablePage{
-
-    constructor(page){
-        this.page = page;
-    }
 
     async validateRaceHorseDisplayCorrectly(){
-        const getCurrentThoroughbreds = await this.page.evaluate((locator)=> {
-            return document.querySelector(locator).innerText;
-        }, TOTAL_THOROUGHBREDS);
+        const getCurrentThoroughbreds = await this.page.innerText(TOTAL_THOROUGHBREDS);
         console.log("Currently, the Thoroughbreds is: [%s]", getCurrentThoroughbreds);
 
         await this.page.waitForSelector(NUMBER_HORSE, {timeout : 20000});
@@ -232,4 +215,3 @@ class MyStablePage{
     }
 }
 module.exports = { MyStablePage};
->>>>>>> develop
