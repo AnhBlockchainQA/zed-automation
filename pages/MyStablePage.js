@@ -201,10 +201,9 @@ class MyStablePage {
 
     }
 
-    async validateRaceHorseDisplayCorrectly() {
-        const getCurrentThoroughbreds = await this.page.evaluate((locator) => {
-            return document.querySelector(locator).innerText;
-        }, TOTAL_THOROUGHBREDS);
+   async validateRaceHorseDisplayCorrectly(){
+        const getCurrentThoroughbreds = await this.page.innerText(TOTAL_THOROUGHBREDS);
+
         console.log("Currently, the Thoroughbreds is: [%s]", getCurrentThoroughbreds);
 
         await this.page.waitForSelector(NUMBER_HORSE, {timeout: 20000});
@@ -219,7 +218,9 @@ class MyStablePage {
             await expect(parseInt(getListOfRaceHorseDisplay)).toBeLessThanOrEqual(parseInt(getCurrentThoroughbreds));
         }
     }
+    
 }
 
 module.exports = {MyStablePage};
+
 

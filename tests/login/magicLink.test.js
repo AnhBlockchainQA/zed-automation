@@ -43,7 +43,6 @@ describe("Login to ZedRun with magic link", () => {
   test("Check mail inbox to get magic link", 3, async () => {
     messageId = await apiRequest.getZedRunMessageId(login, domain);
     magicLink = await apiRequest.getMagicLink(login, domain, messageId);
-    console.log(">>> URL ", magicLink);
   });
 
   test("Open new browser with magic link", 3, async () => {
