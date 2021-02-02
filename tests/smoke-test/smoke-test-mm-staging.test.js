@@ -75,7 +75,7 @@ describe("Validate the some pages on app work well", () => {
 
     test("Wait for the web is loading successfully", async () => {
         homePage = new HomePage(newPageInstance);
-        await homePage.checkIfAvatarPresent();
+        // await homePage.checkIfAvatarPresent();
         await homePage.waitUntilBalanceShown();
         await homePage.clickOnAcceptButton();
 

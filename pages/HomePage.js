@@ -74,6 +74,8 @@ class HomePage {
     }
   }
 
+
+
   async clickOnArrowIcon() {
     console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
     try {
@@ -137,20 +139,6 @@ class HomePage {
       await this.page.click(BREEDING_LINK);
     } catch {
       throw new Error("Breeding link is not shown!");
-    }
-  }
-
-  async checkIfAvatarPresent() {
-    console.log(
-      "---- Zed Run Automation Framework: Check if user avatar is present ---"
-    );
-    try {
-      await this.page.waitForSelector(USER_AVATAR, {
-        visible: true,
-        timeout: 0,
-      });
-    } catch {
-      throw new Error("User avatar is not present");
     }
   }
 

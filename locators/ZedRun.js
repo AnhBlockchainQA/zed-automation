@@ -10,7 +10,7 @@ module.exports = {
     ACCEPT_BUTTON: "text='Accept'",
     MARKETPLACE_LINK: "//div[@class='header-desktop']//div[@class='header-content']//div[text()='Marketplace']",
     LOGIN_POPUP: "#login-modal #login-steps .start-modal-content",
-    USER_AVATAR: ".header-desktop .header-content div.right-part  div.user-part > div.icon-part img",
+    USER_AVATAR: ".right-part .user-part .icon-sm img",
     ARROW_ICON: ".icon-arrow",
     BREEDING_LINK: "//div[@class='header-desktop']//div[@class='left-part']//a[descendant::text()='BREEDING']",
     STUD_SERVICE_LINK: "text='Stud Service'",
