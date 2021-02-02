@@ -3,871 +3,117 @@
   "name" : "behaviors",
   "children" : [ {
     "name" : "Update metamask info",
-    "uid" : "57687ac2a2ac4955",
+    "uid" : "41a53e523eb09dec",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1611720843219,
-      "stop" : 1611720847205,
-      "duration" : 3986
+      "start" : 1612274011231,
+      "stop" : 1612274018504,
+      "duration" : 7273
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
     "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "8793a9d5f17f65d6",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611720847205,
-      "stop" : 1611720857212,
-      "duration" : 10007
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check that avatar is shown then click on Wallet",
-    "uid" : "a99cc0490019189d",
+    "uid" : "65d401aa5939cc63",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1611720857212,
-      "stop" : 1611720864240,
-      "duration" : 7028
+      "start" : 1612274018504,
+      "stop" : 1612274040447,
+      "duration" : 21943
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "Select mate horse",
-    "uid" : "54d4e1ff1e1cfd06",
+    "name" : "Wait for the web is loading successfully",
+    "uid" : "a697b5c0da9b9fff",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1612274040447,
+      "stop" : 1612274042378,
+      "duration" : 1931
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate Marketplace Page has a racehorse",
+    "uid" : "97106368837a088d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1612274042378,
+      "stop" : 1612274047273,
+      "duration" : 4895
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate Stud Service Page has a racehorse In Stud",
+    "uid" : "7c00c690d62d32a6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1612274047273,
+      "stop" : 1612274049418,
+      "duration" : 2145
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate has a race open on Events page",
+    "uid" : "71709b7e016228db",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1611720864240,
-      "stop" : 1611720867461,
-      "duration" : 3221
+      "start" : 1612274049418,
+      "stop" : 1612274051076,
+      "duration" : 1658
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "Select female horse",
-    "uid" : "fac026519a1e4ace",
+    "name" : "Validate has a result on Result Page",
+    "uid" : "c93943bdfb6e01a7",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1611720867461,
-      "stop" : 1611720871757,
-      "duration" : 4296
+      "start" : 1612274051076,
+      "stop" : 1612274052389,
+      "duration" : 1313
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "Proceed breeding steps",
-    "uid" : "275cc783053f9aee",
+    "name" : "Validate has a Winning on Winning Page",
+    "uid" : "f03ab72cbfa4d18a",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1611720871757,
-      "stop" : 1611720874758,
-      "duration" : 3001
+      "start" : 1612274052389,
+      "stop" : 1612274054819,
+      "duration" : 2430
     },
     "flaky" : false,
     "newFailed" : false,
     "parameters" : [ ]
   }, {
-    "name" : "Go to Activity page and check if we breed successfully",
-    "uid" : "d49f0baca3224b0b",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720874758,
-      "stop" : 1611720882166,
-      "duration" : 7408
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Apply the discount coupon : ZED-10-PERCENT",
-    "uid" : "4dd2ea4bdd53ece2",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720908841,
-      "stop" : 1611720910880,
-      "duration" : 2039
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Process the checkout with ETH",
-    "uid" : "d09d66631bf14e46",
+    "name" : "Validate has a racehorse existing on Stable Page",
+    "uid" : "aba3b9b2a9eeba79",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "failed",
     "time" : {
-      "start" : 1611720910880,
-      "stop" : 1611720920891,
-      "duration" : 10011
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Verify that our order is performed",
-    "uid" : "ac466c76fb1e7616",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611720920891,
-      "stop" : 1611720930897,
-      "duration" : 10006
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Apply the discount coupon : EXPIRED_COUPON",
-    "uid" : "c865bc064266d4f7",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720955238,
-      "stop" : 1611720957932,
-      "duration" : 2694
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "7dfd089744879d66",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720960927,
-      "stop" : 1611720964810,
-      "duration" : 3883
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "f6aafc8dae6946ed",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611720964810,
-      "stop" : 1611720974815,
-      "duration" : 10005
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check that avatar is shown then click on Marketplace to select first horse",
-    "uid" : "c1901d4b05dfe1bf",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720974816,
-      "stop" : 1611720981392,
-      "duration" : 6576
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Apply the discount coupon : INVALID_COUPON",
-    "uid" : "852e0a21b8f67291",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720981392,
-      "stop" : 1611720983763,
-      "duration" : 2371
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "14ef02df6063b10",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611720986830,
-      "stop" : 1611720990947,
-      "duration" : 4117
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "7ea4275f031de08f",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611720990947,
-      "stop" : 1611721000951,
-      "duration" : 10004
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Go to Marketplace and select first horse",
-    "uid" : "d250f2726c253516",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721000951,
-      "stop" : 1611721010677,
-      "duration" : 9726
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Apply the discount coupon : ZED-10-PERCENT",
-    "uid" : "63d2ab2487ace3f9",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721010677,
-      "stop" : 1611721012392,
-      "duration" : 1715
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "8ba09f96af4a18d1",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721015433,
-      "stop" : 1611721019593,
-      "duration" : 4160
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "eaef65067bc743d",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721019593,
-      "stop" : 1611721029596,
-      "duration" : 10003
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Go to Marketplace and select first horse",
-    "uid" : "7a8294ad89e22c77",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721029596,
-      "stop" : 1611721036373,
-      "duration" : 6777
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "b9c95f6781842560",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721039333,
-      "stop" : 1611721043793,
-      "duration" : 4460
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "21660c155151eb39",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721043793,
-      "stop" : 1611721053799,
-      "duration" : 10006
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check that avatar is shown then click on Marketplace to select first horse",
-    "uid" : "85c7612df1e3529d",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721053800,
-      "stop" : 1611721062643,
-      "duration" : 8843
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "7241692481ab847e",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721065571,
-      "stop" : 1611721069309,
-      "duration" : 3738
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "4d567f799073ec4a",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721069309,
-      "stop" : 1611721079315,
-      "duration" : 10006
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Wait until wallet icon is shown",
-    "uid" : "84a8f7c25c2c03e3",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721079315,
-      "stop" : 1611721086579,
-      "duration" : 7264
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "59990b65f1f3199c",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721089398,
-      "stop" : 1611721093726,
-      "duration" : 4328
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "34cb42bb11e3d5c6",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721093726,
-      "stop" : 1611721103728,
-      "duration" : 10002
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check that avatar is shown",
-    "uid" : "93814c3dabbd1e5e",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721103728,
-      "stop" : 1611721110986,
-      "duration" : 7258
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and input valid email to generate magic link",
-    "uid" : "f64397a00ed02187",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721111604,
-      "stop" : 1611721121609,
-      "duration" : 10005
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check mail inbox to get magic link",
-    "uid" : "688000bc9666d571",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721121609,
-      "stop" : 1611721125022,
-      "duration" : 3413
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open new browser with magic link",
-    "uid" : "466ed914ac589323",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721125022,
-      "stop" : 1611721135025,
-      "duration" : 10003
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Switch back to ZedRun page and verify login successful",
-    "uid" : "9de5c4b2336e2340",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721135025,
-      "stop" : 1611721145032,
-      "duration" : 10007
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "fa1e60004e9c73fd",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721148001,
-      "stop" : 1611721151977,
-      "duration" : 3976
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "2e17cfd3c2cff0c7",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721151977,
-      "stop" : 1611721161979,
-      "duration" : 10002
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Go to Marketplace and select first horse",
-    "uid" : "c588bfc92adcf4b0",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721161979,
-      "stop" : 1611721169429,
-      "duration" : 7450
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Purchase horse with ETH",
-    "uid" : "ed3f07fbab667777",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721169429,
-      "stop" : 1611721179438,
-      "duration" : 10009
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Verify that our order is performed",
-    "uid" : "a445f4706b7ccdeb",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721179438,
-      "stop" : 1611721179449,
-      "duration" : 11
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "4c9853315eec109b",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721182425,
-      "stop" : 1611721186290,
-      "duration" : 3865
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "ab3cf872c96972f1",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721186290,
-      "stop" : 1611721196293,
-      "duration" : 10003
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Go to Marketplace and select first horse",
-    "uid" : "4313db3eb89fb64a",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721196293,
-      "stop" : 1611721204634,
-      "duration" : 8341
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Process payment by cash",
-    "uid" : "7d009bcf000c0a03",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721204634,
-      "stop" : 1611721214645,
-      "duration" : 10011
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Verify that our order is performed",
-    "uid" : "da015457fa68a086",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721214645,
-      "stop" : 1611721222282,
-      "duration" : 7637
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and input valid email to generate magic link",
-    "uid" : "4145491c45bc5ffc",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721223150,
-      "stop" : 1611721233167,
-      "duration" : 10017
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check mail inbox to get magic link",
-    "uid" : "66088e6c48f0c88e",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721233167,
-      "stop" : 1611721234985,
-      "duration" : 1818
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open new browser with magic link",
-    "uid" : "ba289ada8ede89d0",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721234985,
-      "stop" : 1611721244993,
-      "duration" : 10008
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Wait until wallet icon is shown then click on Wallet icon",
-    "uid" : "fe0b900f7f1391bd",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721244994,
-      "stop" : 1611721255011,
-      "duration" : 10017
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Click on Withdraw button and check if ZED balance is updated",
-    "uid" : "46be117fb78bcd8d",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721255011,
-      "stop" : 1611721265028,
-      "duration" : 10017
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "12adbc863559c154",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721267675,
-      "stop" : 1611721271555,
-      "duration" : 3880
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "c93a00d0f77307d3",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721271555,
-      "stop" : 1611721281557,
-      "duration" : 10002
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Wait until wallet icon is shown then click on Wallet icon",
-    "uid" : "d57f64761f9ac956",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721281557,
-      "stop" : 1611721286648,
-      "duration" : 5091
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Click on Deposit button and check if ETH balance is updated",
-    "uid" : "d3322d9b3b8767ea",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721286648,
-      "stop" : 1611721296655,
-      "duration" : 10007
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Update metamask info",
-    "uid" : "2fd84ac0b9b110d6",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721299518,
-      "stop" : 1611721303507,
-      "duration" : 3989
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and click Connnect Metamask",
-    "uid" : "6240e1e79f2f6ad",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721303507,
-      "stop" : 1611721313508,
-      "duration" : 10001
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Wait until wallet icon is shown then click on Wallet icon",
-    "uid" : "c5e690e0c2bf637",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1611721313508,
-      "stop" : 1611721318874,
-      "duration" : 5366
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Click on Withdraw button and check if ZED balance is updated",
-    "uid" : "38e57afbe55b602",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721318874,
-      "stop" : 1611721328889,
-      "duration" : 10015
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and input valid email to generate magic link",
-    "uid" : "2a6ef5db72805a16",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721329715,
-      "stop" : 1611721339729,
-      "duration" : 10014
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check mail inbox to get magic link",
-    "uid" : "ecc5e260e4ac9d7e",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721339729,
-      "stop" : 1611721342037,
-      "duration" : 2308
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open new browser with magic link",
-    "uid" : "f0f6639e70bff552",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721342037,
-      "stop" : 1611721342354,
-      "duration" : 317
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Switch back to ZedRun page and verify login successful",
-    "uid" : "83187e833c3fc93e",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721342354,
-      "stop" : 1611721352364,
-      "duration" : 10010
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open ZedRun page and input valid email to generate magic link",
-    "uid" : "740650b243ff6514",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721353178,
-      "stop" : 1611721363186,
-      "duration" : 10008
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Check mail inbox to get magic link",
-    "uid" : "3378c8cdfc7a2857",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721363186,
-      "stop" : 1611721363928,
-      "duration" : 742
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Open new browser with magic link",
-    "uid" : "f030b3d2e73ef43c",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721363928,
-      "stop" : 1611721364045,
-      "duration" : 117
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Wait until wallet icon is shown then click on Wallet icon",
-    "uid" : "7f54ef5bb0be0d9a",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721364045,
-      "stop" : 1611721374056,
-      "duration" : 10011
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Click on Deposit button and check if ETH balance is updated",
-    "uid" : "4a77deac14e55b13",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "failed",
-    "time" : {
-      "start" : 1611721374056,
-      "stop" : 1611721384069,
-      "duration" : 10013
+      "start" : 1612274054819,
+      "stop" : 1612274056460,
+      "duration" : 1641
     },
     "flaky" : false,
     "newFailed" : false,

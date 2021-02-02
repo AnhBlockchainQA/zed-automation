@@ -1,0 +1,46 @@
+{
+  "uid" : "41a53e523eb09dec",
+  "name" : "Update metamask info",
+  "fullName" : "Validate the some pages on app work well.Update metamask info",
+  "historyId" : "29b46ce984764fcddfb65974d1a8d934",
+  "time" : {
+    "start" : 1612274011231,
+    "stop" : 1612274018504,
+    "duration" : 7273
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "41a53e523eb09dec.json",
+  "parameterValues" : [ ]
+}

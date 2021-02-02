@@ -1,0 +1,46 @@
+{
+  "uid" : "f03ab72cbfa4d18a",
+  "name" : "Validate has a Winning on Winning Page",
+  "fullName" : "Validate the some pages on app work well.Validate has a Winning on Winning Page",
+  "historyId" : "69bf471bce83ed86edb1bb801d50c4d2",
+  "time" : {
+    "start" : 1612274052389,
+    "stop" : 1612274054819,
+    "duration" : 2430
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a Winning on Winning Page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f03ab72cbfa4d18a.json",
+  "parameterValues" : [ ]
+}

@@ -1,9 +1,9 @@
 const { PageFactory } = require("../utils/browser/pageFactory");
 const { LoginPage } = require("../pages/LoginPage");
 const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { WalletPage } = require('../pages/WalletPage');
+const { WalletPage } = require("../pages/WalletPage");
 const apiRequest = require("../utils/api/api");
-const { TEST_EMAIL, TEST_LOGIN, TEST_DOMAIN, AMOUNT } = require("../data/env");
+const { ACCOUNT_LIST, AMOUNT } = require("../data/env");
 const test = require("jest-retries");
 const { HomePage } = require("../pages/HomePage");
 
@@ -14,33 +14,38 @@ var loginPage;
 var magicLinkPage;
 var walletPage;
 var pageInstance;
-const pattern = /<a style="color: #27B18A; text-decoration: none;" target="_blank" href="(.*)">/;
 var newPageInstance;
 var homePage;
+
+const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FOURTH_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
   await pageFactory.removeCache();
 });
 
 describe("Dual horse cash", () => {
-
-  test("Open ZedRun page and input valid email to generate magic link", 3, async () => {
-    pageInstance = await pageFactory.newTab(false, 0);
-    loginPage = new LoginPage(pageInstance);
-    await loginPage.navigate();
-    await loginPage.clickOnStartButton();
-    await loginPage.typeEmail(TEST_EMAIL);
-    await loginPage.clickOnContinueButton();
-    await loginPage.waitForTimeout();
-  });
+  test(
+    "Open ZedRun page and input valid email to generate magic link",
+    3,
+    async () => {
+      pageInstance = await pageFactory.newTab(false, 0);
+      loginPage = new LoginPage(pageInstance);
+      await loginPage.navigate();
+      await loginPage.clickOnStartButton();
+      await loginPage.typeEmail(EMAIL);
+      await loginPage.clickOnContinueButton();
+      await loginPage.waitForTimeout();
+    }
+  );
 
   test("Check mail inbox to get magic link", 3, async () => {
-    messageId = await apiRequest.getZedRunMessageId(TEST_LOGIN, TEST_DOMAIN);
+    messageId = await apiRequest.getZedRunMessageId(LOGIN, DOMAIN);
     magicLink = await apiRequest.getMagicLink(
-      TEST_LOGIN,
-      TEST_DOMAIN,
-      messageId,
-      pattern
+      LOGIN,
+      DOMAIN,
+      messageId
     );
   });
 
@@ -52,12 +57,16 @@ describe("Dual horse cash", () => {
     await magicLinkPage.waitForNavigation();
   });
 
-  test("Switch back to ZedRun page and verify login successful", 3, async () => {
-    homePage = new HomePage(pageInstance);
-    await homePage.bringToFront();
-    await homePage.waitForBalanceInfoToBeShown();
-    // await homePage.waitForLoadState();
-  });
+  test(
+    "Switch back to ZedRun page and verify login successful",
+    3,
+    async () => {
+      homePage = new HomePage(pageInstance);
+      await homePage.bringToFront();
+      await homePage.waitForBalanceInfoToBeShown();
+      // await homePage.waitForLoadState();
+    }
+  );
 
   // test("dual horse", async () => {
   //   await loginPage.click('text="racing"')
@@ -79,7 +88,7 @@ describe("Dual horse cash", () => {
   //     await loginPage.hover(`.horse-infos`)
   //     await loginPage.click('text="Free Entry"')
   //     await loginPage.waitForLoadState();
-  //   }    
+  //   }
   //   await loginPage.waitForLoadState();
   //   // await loginPage.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
   //   await loginPage.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
@@ -103,10 +112,14 @@ describe("Dual horse cash", () => {
   // })
 });
 
-
 afterAll(async (done) => {
- await pageFactory.endTest();
- done();
+  try {
+    await pageFactory.endTest();
+    done();
+  } catch (error) {
+    console.log(error);
+    done();
+  } finally {
+    done();
+  }
 });
-
-

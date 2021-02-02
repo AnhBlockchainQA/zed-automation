@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1612274011230' stop='1612274056461'>
+    <name>Validate the some pages on app work well</name>
+    <title>Validate the some pages on app work well</title>
+    <test-cases>
+        <test-case start='1612274011231' status='passed' stop='1612274018504'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612274018504' status='passed' stop='1612274040447'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612274040447' status='failed' stop='1612274042378'>
+            <name>Wait for the web is loading successfully</name>
+            <title>Wait for the web is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: User avatar is not present</message>
+                <stack-trace>Error: User avatar is not present
+                    at HomePage.checkIfAvatarPresent (/Users/davidle/zed-automation/pages/HomePage.js:153:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1612274042378' status='failed' stop='1612274047273'>
+            <name>Validate Marketplace Page has a racehorse</name>
+            <title>Validate Marketplace Page has a racehorse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: marketPlacePage.selectMarketplaceTab is not a function</message>
+                <stack-trace>TypeError: marketPlacePage.selectMarketplaceTab is not a function
+                    at Object.test (/Users/davidle/zed-automation/tests/smoke-test/smoke-test.test.js:93:31)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1612274047273' status='failed' stop='1612274049418'>
+            <name>Validate Stud Service Page has a racehorse In Stud</name>
+            <title>Validate Stud Service Page has a racehorse In Stud</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: studServicePage.selectStudServiceTab is not a function</message>
+                <stack-trace>TypeError: studServicePage.selectStudServiceTab is not a function
+                    at Object.test (/Users/davidle/zed-automation/tests/smoke-test/smoke-test.test.js:100:31)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1612274049418' status='passed' stop='1612274051076'>
+            <name>Validate has a race open on Events page</name>
+            <title>Validate has a race open on Events page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612274051076' status='passed' stop='1612274052389'>
+            <name>Validate has a result on Result Page</name>
+            <title>Validate has a result on Result Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612274052389' status='passed' stop='1612274054819'>
+            <name>Validate has a Winning on Winning Page</name>
+            <title>Validate has a Winning on Winning Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612274054819' status='failed' stop='1612274056460'>
+            <name>Validate has a racehorse existing on Stable Page</name>
+            <title>Validate has a racehorse existing on Stable Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: NUMBER_HORSE is not defined</message>
+                <stack-trace>ReferenceError: NUMBER_HORSE is not defined
+                    at MyStablePage.validateRaceHorseDisplayCorrectly (/Users/davidle/zed-automation/pages/MyStablePage.js:206:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,4 +1,3 @@
-
 module.exports = {
     CLICK_GET_STARTED_BUTTON: "//button[text()='Get Started']",
     CLICK_IMPORT_WALLET_BUTTON: "//button[text()='Import wallet']",

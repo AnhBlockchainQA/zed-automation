@@ -1,0 +1,52 @@
+{
+  "uid" : "7c00c690d62d32a6",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "fullName" : "Validate the some pages on app work well.Validate Stud Service Page has a racehorse In Stud",
+  "historyId" : "ff48367798c8d158f2aad6b83c71cd1b",
+  "time" : {
+    "start" : 1612274047273,
+    "stop" : 1612274049418,
+    "duration" : 2145
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: studServicePage.selectStudServiceTab is not a function",
+  "statusTrace" : "TypeError: studServicePage.selectStudServiceTab is not a function\n                    at Object.test (/Users/davidle/zed-automation/tests/smoke-test/smoke-test.test.js:100:31)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Stud Service Page has a racehorse In Stud"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7c00c690d62d32a6.json",
+  "parameterValues" : [ ]
+}

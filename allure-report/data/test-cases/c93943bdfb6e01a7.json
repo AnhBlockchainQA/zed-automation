@@ -1,0 +1,46 @@
+{
+  "uid" : "c93943bdfb6e01a7",
+  "name" : "Validate has a result on Result Page",
+  "fullName" : "Validate the some pages on app work well.Validate has a result on Result Page",
+  "historyId" : "f23097f50a62b45c5fe4c02feb27333e",
+  "time" : {
+    "start" : 1612274051076,
+    "stop" : 1612274052389,
+    "duration" : 1313
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a result on Result Page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c93943bdfb6e01a7.json",
+  "parameterValues" : [ ]
+}
