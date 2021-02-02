@@ -109,7 +109,7 @@ class MyStablePage {
       await this.page.waitForLoadState();
       await expect(this.page).toHaveSelector(MY_STABLE_MALE_HORSES, { timeout: 0 });
       const size = await this.page.evaluate((locator) => {
-        return document.querySelectorAll(locator).length;
+        return document.document.evaluate(locator,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null).snapshotLength;
       }, MY_STABLE_MALE_HORSES);
       console.log(">>>>>> Size of free racing event list: ", size);
       return size;
@@ -146,7 +146,9 @@ class MyStablePage {
     );
     try {
       await expect(this.page).toHaveSelector(locator, { timeout: 0 });
-      await this.page.click(locator);
+      const element = await this.page.$(locator);
+      await element.scrollIntoViewIfNeeded();
+      await element.click();
     } catch {
       throw new Error("Element is not present or clickable");
     }
