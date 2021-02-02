@@ -1,0 +1,66 @@
+{
+  "uid" : "3874ec647fac0123",
+  "name" : "Update metamask info",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Update metamask info",
+  "historyId" : "5275ca2eeb4ffdb319cfdbd22d007378",
+  "time" : {
+    "start" : 1612273857377,
+    "stop" : 1612273860274,
+    "duration" : 2897
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "69eb1581dfd26e5a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/69eb1581dfd26e5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172249255,
+          "stop" : 1612172253799,
+          "duration" : 4544
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3874ec647fac0123.json",
+  "parameterValues" : [ ]
+}

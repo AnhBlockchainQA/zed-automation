@@ -1,0 +1,67 @@
+{
+  "uid" : "4414f4789ae5de1a",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Pick horses to gate and process Next to Run event.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1d491f0d980520378c7ecb9e52d14e6f",
+  "time" : {
+    "start" : 1612275234064,
+    "stop" : 1612275242842,
+    "duration" : 8778
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "d0b07fd8d2c094b9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/d0b07fd8d2c094b9",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172377751,
+          "stop" : 1612172387773,
+          "duration" : 10022
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4414f4789ae5de1a.json",
+  "parameterValues" : [ ]
+}

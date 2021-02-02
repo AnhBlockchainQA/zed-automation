@@ -1,0 +1,67 @@
+{
+  "uid" : "b0c70335a1d63ae0",
+  "name" : "Select a racehorses stable to the open gate",
+  "fullName" : "Pick horses to gate and process Next to Run event.Select a racehorses stable to the open gate",
+  "historyId" : "814f1dbe860246f748135fee7616f2f7",
+  "time" : {
+    "start" : 1612275244167,
+    "stop" : 1612275265553,
+    "duration" : 21386
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses stable to the open gate"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4d298de04b2478f4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/4d298de04b2478f4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172393502,
+          "stop" : 1612172403505,
+          "duration" : 10003
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b0c70335a1d63ae0.json",
+  "parameterValues" : [ ]
+}

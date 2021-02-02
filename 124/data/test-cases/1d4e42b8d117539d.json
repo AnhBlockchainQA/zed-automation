@@ -1,0 +1,67 @@
+{
+  "uid" : "1d4e42b8d117539d",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card.Go to Marketplace and select first horse",
+  "historyId" : "f20a6a35428e9b6bd5f78f5b0a318e0b",
+  "time" : {
+    "start" : 1612273250312,
+    "stop" : 1612273255004,
+    "duration" : 4692
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "863c1ddbef9a85ab",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/863c1ddbef9a85ab",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172236168,
+          "stop" : 1612172246173,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1d4e42b8d117539d.json",
+  "parameterValues" : [ ]
+}

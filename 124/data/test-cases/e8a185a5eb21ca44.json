@@ -1,0 +1,46 @@
+{
+  "uid" : "e8a185a5eb21ca44",
+  "name" : "Filter with male horse",
+  "fullName" : "Generate stud horse.Filter with male horse",
+  "historyId" : "dd8b530f299a6d136df365fa652ba4f6",
+  "time" : {
+    "start" : 1612272543341,
+    "stop" : 1612272544170,
+    "duration" : 829
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Filter with male horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e8a185a5eb21ca44.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "eb75dfbe939d1065",
+  "name" : "Check that avatar is shown",
+  "fullName" : "Login to ZedRun with Metamask.Check that avatar is shown",
+  "historyId" : "2ac84d8f97e9c0770bc8c995d3a45fb",
+  "time" : {
+    "start" : 1612275279601,
+    "stop" : 1612275282820,
+    "duration" : 3219
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "716b3cae32e8da",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/716b3cae32e8da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172421599,
+          "stop" : 1612172429008,
+          "duration" : 7409
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "eb75dfbe939d1065.json",
+  "parameterValues" : [ ]
+}

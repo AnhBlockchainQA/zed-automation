@@ -1,0 +1,44 @@
+{
+  "uid" : "ec494254d544db63",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Generate stud horse.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1470e4f03122ba9258a7852f20ebc7f4",
+  "time" : {
+    "start" : 1612271212184,
+    "stop" : 1612271221453,
+    "duration" : 9269
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ec494254d544db63.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "8adee8d6de01b0be",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "dab672cdc7c234cc79367912f0c8f441",
+  "time" : {
+    "start" : 1612273175482,
+    "stop" : 1612273178884,
+    "duration" : 3402
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "572187aa8150ea37",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/572187aa8150ea37",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172202924,
+          "stop" : 1612172209042,
+          "duration" : 6118
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8adee8d6de01b0be.json",
+  "parameterValues" : [ ]
+}

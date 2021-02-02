@@ -1,0 +1,74 @@
+{
+  "uid" : "4a6b0cd5030b5399",
+  "name" : "Update metamask info",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Update metamask info",
+  "historyId" : "3efe8a9e2714fabccd6a35b4053efcd5",
+  "time" : {
+    "start" : 1612271273401,
+    "stop" : 1612271276095,
+    "duration" : 2694
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "286c57692d9da985",
+      "status" : "passed",
+      "time" : {
+        "start" : 1612271237139,
+        "stop" : 1612271239864,
+        "duration" : 2725
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b3a0a5a44a0331bc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/b3a0a5a44a0331bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172106573,
+          "stop" : 1612172110722,
+          "duration" : 4149
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4a6b0cd5030b5399.json",
+  "parameterValues" : [ ]
+}

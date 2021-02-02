@@ -1,0 +1,74 @@
+{
+  "uid" : "e858ed92db9e32bb",
+  "name" : "Update metamask info",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Update metamask info",
+  "historyId" : "93438059c14242999f9195b0bfec9f9b",
+  "time" : {
+    "start" : 1612275207401,
+    "stop" : 1612275210359,
+    "duration" : 2958
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c33021b8d1b7689d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1612275183390,
+        "stop" : 1612275186330,
+        "duration" : 2940
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "89459ed00c58e063",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/89459ed00c58e063",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172344954,
+          "stop" : 1612172349680,
+          "duration" : 4726
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e858ed92db9e32bb.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "81165d2585677d12",
+  "name" : "Validate has a race open on Events page",
+  "fullName" : "Validate the some pages on app work well.Validate has a race open on Events page",
+  "historyId" : "218c2d5e8adc36404ee7567388b87130",
+  "time" : {
+    "start" : 1612272206878,
+    "stop" : 1612272207299,
+    "duration" : 421
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a race open on Events page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "81165d2585677d12.json",
+  "parameterValues" : [ ]
+}

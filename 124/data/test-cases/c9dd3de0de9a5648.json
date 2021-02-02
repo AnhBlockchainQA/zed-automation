@@ -1,0 +1,46 @@
+{
+  "uid" : "c9dd3de0de9a5648",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Validate the some pages on app work well.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "a01c05baf1a641624399ff64692be8fa",
+  "time" : {
+    "start" : 1612272194543,
+    "stop" : 1612272203548,
+    "duration" : 9005
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c9dd3de0de9a5648.json",
+  "parameterValues" : [ ]
+}

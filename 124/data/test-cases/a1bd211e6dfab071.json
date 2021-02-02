@@ -1,0 +1,52 @@
+{
+  "uid" : "a1bd211e6dfab071",
+  "name" : "Wait for the web is loading successfully",
+  "fullName" : "Validate the some pages on app work well.Wait for the web is loading successfully",
+  "historyId" : "f173cacea1f6e826ed7a7d346c0931e9",
+  "time" : {
+    "start" : 1612272203548,
+    "stop" : 1612272204757,
+    "duration" : 1209
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at HomePage.checkIfAvatarPresent (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:153:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait for the web is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "a1bd211e6dfab071.json",
+  "parameterValues" : [ ]
+}

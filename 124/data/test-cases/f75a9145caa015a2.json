@@ -1,0 +1,75 @@
+{
+  "uid" : "f75a9145caa015a2",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Generate stud horse.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1470e4f03122ba9258a7852f20ebc7f4",
+  "time" : {
+    "start" : 1612272531630,
+    "stop" : 1612272540003,
+    "duration" : 8373
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ec494254d544db63",
+      "status" : "passed",
+      "time" : {
+        "start" : 1612271212184,
+        "stop" : 1612271221453,
+        "duration" : 9269
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "530aa4e652689f92",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/530aa4e652689f92",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172045749,
+          "stop" : 1612172055759,
+          "duration" : 10010
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f75a9145caa015a2.json",
+  "parameterValues" : [ ]
+}

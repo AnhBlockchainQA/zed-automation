@@ -1,0 +1,44 @@
+{
+  "uid" : "9015bc0b84d9cd52",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "b4e2737a8676fcfd94cf9663da62175",
+  "time" : {
+    "start" : 1612275186330,
+    "stop" : 1612275194826,
+    "duration" : 8496
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9015bc0b84d9cd52.json",
+  "parameterValues" : [ ]
+}

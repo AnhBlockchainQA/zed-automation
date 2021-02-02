@@ -1,0 +1,52 @@
+{
+  "uid" : "5e4ced411cb1053f",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "fullName" : "Validate the some pages on app work well.Validate has a racehorse existing on Stable Page",
+  "historyId" : "2f991b9e2c77ae72f80b2c0dfe8b4e09",
+  "time" : {
+    "start" : 1612272208188,
+    "stop" : 1612272208892,
+    "duration" : 704
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: NUMBER_HORSE is not defined",
+  "statusTrace" : "ReferenceError: NUMBER_HORSE is not defined\n                    at MyStablePage.validateRaceHorseDisplayCorrectly (/home/runner/work/zed-automation/zed-automation/pages/MyStablePage.js:206:41)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test.test.js:131:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a racehorse existing on Stable Page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "5e4ced411cb1053f.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "699da32fac8c28b",
+  "name" : "Click on Filter button in My Stable page",
+  "fullName" : "Generate stud horse.Click on Filter button in My Stable page",
+  "historyId" : "f2612b26802f9c2e2e9b58bb1cd9aa7f",
+  "time" : {
+    "start" : 1612272540003,
+    "stop" : 1612272543341,
+    "duration" : 3338
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Filter button in My Stable page"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "699da32fac8c28b.json",
+  "parameterValues" : [ ]
+}

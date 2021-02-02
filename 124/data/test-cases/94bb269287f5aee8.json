@@ -1,0 +1,72 @@
+{
+  "uid" : "94bb269287f5aee8",
+  "name" : "Apply the discount coupon : EXPIRED_COUPON",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Apply the discount coupon : EXPIRED_COUPON",
+  "historyId" : "a2ad12488cc96f1e0d9ad7bd8e269ef3",
+  "time" : {
+    "start" : 1612275199827,
+    "stop" : 1612275205456,
+    "duration" : 5629
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Error message is not shown or assertion failed!",
+  "statusTrace" : "Error: Error message is not shown or assertion failed!\n                    at MarketplacePage.verifyErrorMessage (/home/runner/work/zed-automation/zed-automation/pages/MarketplacePage.js:126:13)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : EXPIRED_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "fe543737bd1df7ca",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/fe543737bd1df7ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172341292,
+          "stop" : 1612172341293,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "94bb269287f5aee8.json",
+  "parameterValues" : [ ]
+}
