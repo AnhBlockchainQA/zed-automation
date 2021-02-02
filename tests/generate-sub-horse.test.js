@@ -106,6 +106,7 @@ describe("Generate stud horse", () => {
   });
 
   test("Select female horse", 3, async () => {
+    studServicePage = new StudServicePage(newPageInstance);
     await studServicePage.clickOnSelectFemaleButton();
     await studServicePage.verifySelectFemalePopUpShown();
     await studServicePage.getListOfFemaleHorse();
@@ -121,6 +122,7 @@ describe("Generate stud horse", () => {
   });
 
   test("Proceed breeding steps", 3, async () => {
+    studServicePage = new StudServicePage(newPageInstance);
     await studServicePage.scrollToBuyCoverButton();
     await studServicePage.clickOnBuyCoverButton();
     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
@@ -138,6 +140,7 @@ describe("Generate stud horse", () => {
     "Go to Activity page and check if we breed successfully",
     3,
     async () => {
+      studServicePage = new StudServicePage(newPageInstance);
       await studServicePage.clickOnCheckActivityButton();
       activityPage = new ActivityPage(newPageInstance);
       await activityPage.checkIfStatementInfoCorrect(
