@@ -1,0 +1,66 @@
+{
+  "uid" : "318c0aeb805a3b16",
+  "name" : "Validate has a race open on Events page",
+  "fullName" : "Validate the some pages on app work well.Validate has a race open on Events page",
+  "historyId" : "218c2d5e8adc36404ee7567388b87130",
+  "time" : {
+    "start" : 1612272502576,
+    "stop" : 1612272503027,
+    "duration" : 451
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a race open on Events page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "81165d2585677d12",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/81165d2585677d12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272206878,
+          "stop" : 1612272207299,
+          "duration" : 421
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "318c0aeb805a3b16.json",
+  "parameterValues" : [ ]
+}

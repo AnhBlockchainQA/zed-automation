@@ -1,0 +1,76 @@
+{
+  "uid" : "e676eea30ece573f",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Check that avatar is shown then click on Marketplace to select first horse",
+  "historyId" : "eee2166dc68d81d2af85791cdd48ef18",
+  "time" : {
+    "start" : 1612271562323,
+    "stop" : 1612271567201,
+    "duration" : 4878
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace to select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "ff92a595deaafc68",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/ff92a595deaafc68",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612271266712,
+          "stop" : 1612271271498,
+          "duration" : 4786
+        }
+      }, {
+        "uid" : "55a9e4e99405e0e9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/55a9e4e99405e0e9",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172093840,
+          "stop" : 1612172103845,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e676eea30ece573f.json",
+  "parameterValues" : [ ]
+}

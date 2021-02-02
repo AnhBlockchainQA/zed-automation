@@ -1,0 +1,66 @@
+{
+  "uid" : "9edf5576e0204eb5",
+  "name" : "Filter with male horse",
+  "fullName" : "Generate stud horse.Filter with male horse",
+  "historyId" : "dd8b530f299a6d136df365fa652ba4f6",
+  "time" : {
+    "start" : 1612272839621,
+    "stop" : 1612272840529,
+    "duration" : 908
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Filter with male horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "e8a185a5eb21ca44",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/e8a185a5eb21ca44",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272543341,
+          "stop" : 1612272544170,
+          "duration" : 829
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9edf5576e0204eb5.json",
+  "parameterValues" : [ ]
+}

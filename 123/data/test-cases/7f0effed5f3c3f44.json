@@ -1,0 +1,75 @@
+{
+  "uid" : "7f0effed5f3c3f44",
+  "name" : "Update metamask info",
+  "fullName" : "Use fixed discount voucher to buy horse with card while logging in with Metamask.Update metamask info",
+  "historyId" : "cfcca9773992edaa19342648d19e1aa2",
+  "time" : {
+    "start" : 1612271551017,
+    "stop" : 1612271553849,
+    "duration" : 2832
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "55766ef0f9f03855",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/55766ef0f9f03855",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612271255215,
+          "stop" : 1612271257964,
+          "duration" : 2749
+        }
+      }, {
+        "uid" : "b1a92dbebce82a8a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/b1a92dbebce82a8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172079686,
+          "stop" : 1612172083831,
+          "duration" : 4145
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7f0effed5f3c3f44.json",
+  "parameterValues" : [ ]
+}

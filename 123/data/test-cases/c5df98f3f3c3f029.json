@@ -1,0 +1,82 @@
+{
+  "uid" : "c5df98f3f3c3f029",
+  "name" : "Apply the discount coupon : INVALID_COUPON",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Apply the discount coupon : INVALID_COUPON",
+  "historyId" : "86a75acab9461a2675f616be00201af4",
+  "time" : {
+    "start" : 1612275283068,
+    "stop" : 1612275288505,
+    "duration" : 5437
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Error message is not shown or assertion failed!",
+  "statusTrace" : "Error: Error message is not shown or assertion failed!\n                    at MarketplacePage.verifyErrorMessage (/home/runner/work/zed-automation/zed-automation/pages/MarketplacePage.js:126:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : INVALID_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "beb9c4953d2c6b4e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/beb9c4953d2c6b4e",
+        "status" : "failed",
+        "statusDetails" : "Error: Error message is not shown or assertion failed!",
+        "time" : {
+          "start" : 1612275223792,
+          "stop" : 1612275229138,
+          "duration" : 5346
+        }
+      }, {
+        "uid" : "eb8b83d8c4708543",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/eb8b83d8c4708543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172369704,
+          "stop" : 1612172369705,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c5df98f3f3c3f029.json",
+  "parameterValues" : [ ]
+}

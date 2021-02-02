@@ -1,0 +1,66 @@
+{
+  "uid" : "147a37a4c2f4c862",
+  "name" : "Validate has a result on Result Page",
+  "fullName" : "Validate the some pages on app work well.Validate has a result on Result Page",
+  "historyId" : "f23097f50a62b45c5fe4c02feb27333e",
+  "time" : {
+    "start" : 1612272503027,
+    "stop" : 1612272503431,
+    "duration" : 404
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a result on Result Page"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4d8df8d5371ed733",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/4d8df8d5371ed733",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272207299,
+          "stop" : 1612272207731,
+          "duration" : 432
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "147a37a4c2f4c862.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,83 @@
+{
+  "uid" : "3fa284b18175288c",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "fullName" : "Dual horse cash.Switch back to ZedRun page and verify login successful",
+  "historyId" : "e221d87ef7f1163955e33e590809437a",
+  "time" : {
+    "start" : 1612274803975,
+    "stop" : 1612274939009,
+    "duration" : 135034
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:113:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Switch back to ZedRun page and verify login successful"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "50d6ca6a767bedba",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/50d6ca6a767bedba",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1612274746456,
+          "stop" : 1612274881485,
+          "duration" : 135029
+        }
+      }, {
+        "uid" : "3c672964d6e060aa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/3c672964d6e060aa",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172293362,
+          "stop" : 1612172303373,
+          "duration" : 10011
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3fa284b18175288c.json",
+  "parameterValues" : [ ]
+}

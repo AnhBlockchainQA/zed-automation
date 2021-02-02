@@ -1,0 +1,73 @@
+{
+  "uid" : "8fb4d1453490c709",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "fullName" : "Validate the some pages on app work well.Validate Stud Service Page has a racehorse In Stud",
+  "historyId" : "ff48367798c8d158f2aad6b83c71cd1b",
+  "time" : {
+    "start" : 1612272501880,
+    "stop" : 1612272502576,
+    "duration" : 696
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: studServicePage.selectStudServiceTab is not a function",
+  "statusTrace" : "TypeError: studServicePage.selectStudServiceTab is not a function\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test.test.js:100:31)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Stud Service Page has a racehorse In Stud"
+  }, {
+    "name" : "package",
+    "value" : "Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "efea8c57e65b37d7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/efea8c57e65b37d7",
+        "status" : "failed",
+        "statusDetails" : "TypeError: studServicePage.selectStudServiceTab is not a function",
+        "time" : {
+          "start" : 1612272206149,
+          "stop" : 1612272206878,
+          "duration" : 729
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8fb4d1453490c709.json",
+  "parameterValues" : [ ]
+}
