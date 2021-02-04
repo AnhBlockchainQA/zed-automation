@@ -10,4 +10,5 @@ module.exports = {
     USE_DIFFERENT_CARD_BUTTON: ".buy-modal-content > .buy-method-choice > .method-options > .cardform-container > .secondary-choice",
     BUY_WITH_ETH_BUTTON: "//button[text()='Buy with ETH']",
     CONFIRM_BUTTON: ".method-options > .buy-confirm-form > section > .section-footer > .primary-btn",
+    ADD_RACE_CONFIRM_BUTTON: '.section-footer .primary-btn'
 };    

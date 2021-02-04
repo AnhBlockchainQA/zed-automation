@@ -1,125 +1,129 @@
-const { PageFactory } = require("../utils/browser/pageFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MagicLinkPage } = require("../pages/MagicLinkPage");
-const { WalletPage } = require("../pages/WalletPage");
-const apiRequest = require("../utils/api/api");
-const { ACCOUNT_LIST, AMOUNT } = require("../data/env");
+const {MetamaskPage} = require("../pages/MetamaskPage");
+const {MetamaskFactory} = require("../utils/browser/metamaskFactory");
+const {LoginPage} = require("../pages/LoginPage");
+const {MetamaskNotificationPage} = require("../pages/MetamaskNotification");
+const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../data/env");
+const {HomePage} = require("../pages/HomePage");
+const {RacingPage} = require("../pages/RacingPage");
+const {PaymentPage} = require("../pages/PaymentPage");
 const test = require("jest-retries");
-const { HomePage } = require("../pages/HomePage");
+const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require("../locators/ZedRun");
+const {ADD_RACE_CONFIRM_BUTTON} = require("../locators/Payment");
 
-var pageFactory = new PageFactory();
-var messageId;
-var magicLink;
-var loginPage;
-var magicLinkPage;
-var walletPage;
-var pageInstance;
-var newPageInstance;
-var homePage;
-
-const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
-const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
-const DOMAIN = ACCOUNT_LIST.FOURTH_ACCOUNT.DOMAIN;
+let metamaskFactory;
+let metamaskPage;
+let metamaskInstance;
+let zedRunPage;
+let newPageInstance;
+let metamaskNotificationInstance;
+let metamaskNotificationPage;
+let otherMetamaskNotificationInstance;
+let otherMetamaskNotificationPage;
+let homePage;
+let racingPage;
+let index;
+let registeredHorseNo;
+let totalNo;
+let eventName;
+var paymentPage;
+var confirmMetamaskNotificationInstance;
+var confirmMetamaskNotificationPage;
 
 beforeAll(async () => {
-  await pageFactory.removeCache();
+    metamaskFactory = new MetamaskFactory();
+    await metamaskFactory.removeCache();
+    metamaskInstance = await metamaskFactory.init();
 });
+describe("Pick horses to gate and process Next to Run event", () => {
+    test("Update metamask info", 3, async () => {
+        metamaskPage = new MetamaskPage(metamaskInstance);
+        await metamaskPage.clickOnGetStartedButton();
+        await metamaskPage.clickOnImportWalletButton();
+        await metamaskPage.clickOnIAgreeButton();
+        await metamaskPage.typeSeedPhase(SEED_PHRASE);
+        await metamaskPage.typeNewPassword(PASSWORD);
+        await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
+        await metamaskPage.checkTermsAndConditionCheckBox();
+        await metamaskPage.clickImportButton();
+        await metamaskPage.clickOnAllDoneButton();
+        await metamaskPage.clickOnCloseButton();
+        await metamaskPage.clickOnNetworkDropdown();
+        await metamaskPage.clickOnGoerliNetwork();
+    });
 
-describe("Dual horse cash", () => {
-  test(
-    "Open ZedRun page and input valid email to generate magic link",
-    3,
-    async () => {
-      pageInstance = await pageFactory.newTab(false, 0);
-      loginPage = new LoginPage(pageInstance);
-      await loginPage.navigate();
-      await loginPage.clickOnStartButton();
-      await loginPage.typeEmail(EMAIL);
-      await loginPage.clickOnContinueButton();
-      await loginPage.waitForTimeout();
-    }
-  );
+    test("Open ZedRun page and click Connect Metamask", async () => {
+        newPageInstance = await metamaskFactory.newPage();
+        zedRunPage = new LoginPage(newPageInstance);
+        await zedRunPage.navigate();
+        await zedRunPage.clickOnStartButton();
 
-  test("Check mail inbox to get magic link", 3, async () => {
-    messageId = await apiRequest.getZedRunMessageId(LOGIN, DOMAIN);
-    magicLink = await apiRequest.getMagicLink(
-      LOGIN,
-      DOMAIN,
-      messageId
-    );
-  });
+        metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+            newPageInstance,
+            CONNECT_METAMASK
+        );
+        metamaskNotificationPage = new MetamaskNotificationPage(
+            metamaskNotificationInstance
+        );
 
-  test("Open new browser with magic link", 3, async () => {
-    newPageInstance = await pageFactory.newTab(false, 0);
-    magicLinkPage = new MagicLinkPage(newPageInstance);
-    await magicLinkPage.bringToFront();
-    await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForNavigation();
-  });
+        await metamaskNotificationPage.waitForLoadState();
+        await metamaskNotificationPage.clickOnNextButton();
+        await metamaskNotificationPage.clickOnConnectButton();
+        await metamaskNotificationPage.waitForCloseEvent();
 
-  test(
-    "Switch back to ZedRun page and verify login successful",
-    3,
-    async () => {
-      homePage = new HomePage(pageInstance);
-      await homePage.bringToFront();
-      await homePage.waitForBalanceInfoToBeShown();
-      // await homePage.waitForLoadState();
-    }
-  );
+        otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+            newPageInstance,
+            AUTHENTICATE_BUTTON
+        );
+        otherMetamaskNotificationPage = new MetamaskNotificationPage(
+            otherMetamaskNotificationInstance
+        );
 
-  // test("dual horse", async () => {
-  //   await loginPage.click('text="racing"')
-  //   await loginPage.click('.free-race-badge')
+        await otherMetamaskNotificationPage.waitForLoadState();
+        await otherMetamaskNotificationPage.clickOnSignButton();
+        await otherMetamaskNotificationPage.waitForCloseEvent();
+    });
 
-  //   const group = await loginPage.$(`//div[@class='other-content']/div[@class='gate-group']`)
-  //   console.log('innerText:',await group.innerText())
-  //   const texts = await group.innerText()
-  //   let listNumber = texts.split(`\n`)
-  //   listNumber = listNumber.map(number => {
-  //     const check = Number.isInteger(parseInt(number))
-  //     if (check) {
-  //       return number
-  //     }
-  //   }).filter(e => !!e)
-  //   for (let i = 0; i< listNumber.length; i++) {
-  //     await loginPage.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`)
-  //     await loginPage.waitForLoadState();
-  //     await loginPage.hover(`.horse-infos`)
-  //     await loginPage.click('text="Free Entry"')
-  //     await loginPage.waitForLoadState();
-  //   }
-  //   await loginPage.waitForLoadState();
-  //   // await loginPage.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']/div/div/text()`)
-  //   await loginPage.waitForSelector(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-  //   const eventDual = await loginPage.$(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-  //   console.log('eventDual', await eventDual.innerText())
-  //   let listText = await eventDual.innerText()
-  //   listText = listText.split('\n')
-  //   await loginPage.click(`//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']`)
-  //   // console.log('innerText:',await eventDual.innerText())
-  //   // const eventText = await eventDual.innerText()
-  //   await loginPage.waitForSelector(`//div[@class='in-race-info']/div/div/h1`)
-  //   const newDiv = await loginPage.$(`//div[@class='in-race-info']/div/div/h1`)
-  //   console.log('new text:', await newDiv.innerText())
-  //   const listNewText = await newDiv.innerText()
-  //   console.log('listText[0]:', listText[0])
-  //   console.log('compare', listNewText.indexOf(listText[0]))
-  //   const check = listNewText.indexOf(listText[0])
-  //   if (check !== 0) {
-  //     throw new Error('check not is true')
-  //   }
-  // })
+    test("Check that the ZED app is loading successfully", async () => {
+        homePage = new HomePage(newPageInstance);
+        // await homePage.checkIfAvatarPresent();
+        await homePage.waitUntilBalanceShown();
+        await homePage.clickOnAcceptButton();
+    });
+
+    test("Select a racehorses stable to the open gate", async () => {
+        await homePage.clickOnRacingLink();
+        racingPage = new RacingPage(newPageInstance);
+        await racingPage.selectFirstEntryHasFeeEvent();
+        const numberGateOpening = await racingPage.getGateOpening();
+        const getEventName = await racingPage.returnEventName();
+        console.log('List of Gates are opening ', numberGateOpening);
+        for (let i = 0; i < numberGateOpening.length; i++) {
+            await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
+            let confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+                newPageInstance,
+                ADD_RACE_CONFIRM_BUTTON
+            );
+            confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+                confirmMetamaskNotificationInstance
+            );
+            await confirmMetamaskNotificationPage.waitForLoadState();
+            await confirmMetamaskNotificationPage.clickOnSignButton();
+            await confirmMetamaskNotificationPage.waitForCloseEvent();
+        }
+        await racingPage.waitForLoadState();
+        await racingPage.validateRacingEventAfterInNextToRun(getEventName);
+
+    });
 });
 
 afterAll(async (done) => {
-  try {
-    await pageFactory.endTest();
-    done();
-  } catch (error) {
-    console.log(error);
-    done();
-  } finally {
-    done();
-  }
+    try {
+        await metamaskFactory.close();
+        done();
+    } catch (error) {
+        console.log(error);
+        done();
+    } finally {
+        done();
+    }
 });

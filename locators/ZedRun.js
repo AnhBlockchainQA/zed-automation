@@ -21,5 +21,16 @@ module.exports = {
     MY_STABLE_LINK: "//div[contains(@class,'user-menu')]/div[@role='menu']/div[@role='menuitem' and descendant::text()='My Stable']/a",
     BALANCE_INFO: ".header-desktop .header .header-content .right-part .balance-part .right b",
     PROFILE_ICON: ".right-part .menu-button .icon-arrow img",
-    MY_STABLE: "//div[contains(@class, 'menu-content')]//span[contains(text(), 'My Stable')]"
+    MY_STABLE: "//div[contains(@class, 'menu-content')]//span[contains(text(), 'My Stable')]",
+    HOMEPAGE_ICON: ".header-desktop .left-part .logo-part img",
+    STREAMING_NOW: ".page-content .widgets-section .streaming-now iframe",
+    DISCORD_CHAT: ".page-content .widgets-section .discord-chat iframe",
+    UP_AND_COMING: ".race-section .up-and-coming .races .race-card",
+    MORE_RACES_BUTTON: "//section[@class='race-section']//div[@class='actions']//a[contains(text(),'More Races')]",
+    LIST_HORSE_ON_SALE: ".horse-section .on-sale .horses .horse-sale-card.horse-details",
+    EXPLORE_MARKET_BUTTON: "//section[@class='horse-section']//div[@class='on-sale']//div[@class='actions']//a[contains(text(),'Explore Market')]",
+    LIST_HORSE_IN_STUD: ".horse-section .in-stud .horses .horse .label-horse",
+    MORE_BREEDING_BUTTON: "//section[@class='horse-section']//div[@class='in-stud']//div[@class='actions']//a[contains(text(),'More Breeding')]",
+    SHOW_HORSE_BUTTON: "//section[@class='zed-section']//div[@class='details']//button"
+
 };

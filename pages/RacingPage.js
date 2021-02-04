@@ -98,17 +98,22 @@ class RacingPage {
     await this.page.waitForLoadState();
   }
 
+
+    async clickGateNumberAndSelectHorse(index) {
+        await this.page.click(
+            `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${index}]`
+        );
+        await this.page.waitForLoadState();
+        await this.page.hover(`.horse-infos`);
+        await this.page.click('text="Enter"');
+        await this.page.waitForLoadState();
+    }
+
   async addRaceHorseIntoRace() {
     console.log(
       "--- Zed Run Automation Framework: Add racehorse into a race---"
     );
     let listNumber = await this.getGateOpening();
-    /* listNumber = listNumber.map(number => {
-            const check = Number.isInteger(parseInt(number));
-            if (check) {
-                return number
-            }
-        }).filter(e => !!e);*/
     console.log("List of gates: ", listNumber.toString());
     console.log("Length of Gate: ", listNumber.length);
     for (let i = 0; i < listNumber.length; i++) {
@@ -124,35 +129,17 @@ class RacingPage {
     return await this.returnEventName();
   }
 
-  /*async addRaceHorseIntoRaceHasEntryFee(){
-        console.log("--- Zed Run Automation Framework: Add racehorse into a race which has an entry fee---");
-        let listNumber = await this.getGateOpening();
-        listNumber = listNumber.map(number => {
-            const check = Number.isInteger(parseInt(number));
-            if (check) {
-                return number
-            }
-        }).filter(e => !!e);
-        console.log('List of gates: ', listNumber.toString());
-        console.log('Length of Gate: ', listNumber.length);
-        for (let i = 0; i< listNumber.length; i++) {
-            await this.page.click(`//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${listNumber[i]}]`);
-            await this.page.waitForLoadState();
-            await this.page.hover(`.horse-infos`);
-            await this.page.click('text="Enter"');
-            await this.page.waitForLoadState();
-
-        }
-        await this.page.waitForLoadState();
-        return await this.returnEventName();
-    }*/
 
   async validateRacingEventAfterInNextToRun(expectedEvent) {
     console.log("Expected Event Name is: ", expectedEvent);
     const listOfNextToRun = ".next-run-list .race-name";
-    await this.page.waitForSelector(listOfNextToRun, {
-      timeout: 0,
-    });
+      try {
+          await this.page.waitForSelector(listOfNextToRun, {
+              timeout: 10000,
+          });
+      } catch (e) {
+          throw new Error(`The Event name ${expectedEvent} do not display on Next To Run`);
+      }
     const totalNextToRun = await this.page.evaluate((locator) => {
       return document.querySelectorAll(locator).length;
     }, listOfNextToRun);

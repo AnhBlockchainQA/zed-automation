@@ -289,5 +289,25 @@ class StudServicePage {
       throw new Error("User avatar is not present or not clickable");
     }
   }
+
+    async selectStudServiceTab() {
+        console.log("--- Zed Run Automation Framework: Select the Stub Service tab on Breeding page ---");
+        try {
+            await this.page.waitForSelector(STUD_SERVICE_TAB, {timeout: 0});
+            await this.page.click(STUD_SERVICE_TAB);
+        }
+        catch {
+            throw new Error("Marketplace Tab is not present or not clickable");
+        }
+    }
+
+    async validateDefaultValueOnStubServicePage() {
+        const listOfInStud = ".accordion-content .panel";
+        const numberOfHorseInStud = await this.page.evaluate((locator) => {
+            return document.querySelectorAll(locator).length;
+        }, listOfInStud);
+        console.log("Currently, The number of Horse In Stud: [%s]", listOfInStud);
+        await expect(numberOfHorseInStud).toBeGreaterThanOrEqual(0);
+    }
 }
 module.exports = {StudServicePage};

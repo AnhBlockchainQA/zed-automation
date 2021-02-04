@@ -202,6 +202,30 @@ class MarketplacePage {
       throw new Error("Accept button is not present or not clickable");
     }
   }
+
+    async validateRaceHorseExisting() {
+        console.log("--- Zed Run Automation Framework: Validate the Marketplace to see a racehorse existing ---");
+        try {
+            await this.page.waitForSelector(LIST_HORSE, {timeout: 20000});
+            const totalHorse = await this.page.evaluate((locator) => {
+                return document.querySelectorAll(locator).length;
+            }, LIST_HORSE);
+            await expect(totalHorse).toBeGreaterThan(0);
+        } catch {
+            throw new Error("There is no racehorse display on Marketplace Page")
+        }
+    }
+
+    async selectMarketplaceTab() {
+        console.log("--- Zed Run Automation Framework: Select the Marketplace tab on Marketplace page ---");
+        try {
+            await this.page.waitForSelector(MARKET_PLACE_TAB, {timeout: 0});
+            await this.page.click(MARKET_PLACE_TAB);
+        }
+        catch {
+            throw new Error("Marketplace Tab is not present or not clickable");
+        }
+    }
 }
 
 module.exports = { MarketplacePage };
