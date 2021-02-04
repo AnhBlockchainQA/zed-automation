@@ -1,0 +1,112 @@
+{
+  "zedRun": {
+    "LOGIN_START_BUTTON": "div.start-part",
+    "EMAIL_INPUT": "div.m-input-content > input[placeholder='Email']",
+    "CONTINUE_BUTTON": "button[type='Submit']",
+    "AUTHENTICATE_BUTTON": "//button[text()='authenticate']",
+    "WELCOME_LABEL": "//h1[text()='Welcome To Zed!']",
+    "TRUST_ME_BUTTON": "//div[contains(@class,'auth-anomaly-detected__actionRack')]/span[@role='button' and descendant::text()='Yes, this is me']",
+    "LOGIN_SUCESSFUL_MESSAGE": "//h1/p[contains(text(),'logged into ZED Run!')]",
+    "CONNECT_METAMASK": "//div[text()='Connect Metamask']",
+    "ACCEPT_BUTTON": "text='Accept'",
+    "MARKETPLACE_LINK": "//div[@class='header-desktop']/header/div[@class='header-content']/div[@class='left-part']//div[@data-tour='header-marketplace']//a[@href='/marketplace']",
+    "LOGIN_POPUP": "#login-modal #login-steps .start-modal-content",
+    "USER_AVATAR": ".header-desktop .header-content div.right-part  div.user-part div.icon-part img",
+    "ARROW_ICON": ".icon-arrow",
+    "STUD_SERVICE_LINK": "text='stud service'",
+    "RACING_LINK": "//div[@class='header-desktop']//div[@class='left-part']/div[@data-tour='header-racing']//a[descendant::text()='racing']",
+    "BALANCE_LOADER_ICON": ".header-desktop .header .header-content .right-part .balance-part div.loader-container.stud-loader",
+    "ETH_BALANCE": ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(1)",
+    "ZED_BALANCE": ".header-desktop .header .header-content .right-part .balance-part .right b:nth-child(2)"
+  },
+  "marketPlace":{
+    "FIRST_HORSE_PREVIEW": ".ifs > .row > .horse-sale-card:nth-child(2) > .preview > .preview-horse",
+    "DOWNWARD_ARROW": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
+    "COUPON_INPUT": "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
+    "APPLY_BUTTON": ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .secondary-btn",
+    "DISCOUNT_LABEL": ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .m-input-content > p.normal-text",
+    "HORSE_PRICE": "div.buy-method-choice > .method-options > .fiat-price > span",
+    "HORSE_NAME": "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
+    "HORSE_LIST" : "div.marketplace div.marketplace-content .ifs ul > div.horse-sale-card",
+    "ERROR_MESSAGE" : ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text"
+  },
+  "payment":{
+    "BUY_WITH_CREDIT_CARD_BUTTON": "//button[text()='Buy With Credit Card']",
+    "BUY_WITH_CREDIT_CARD_LABEL": "//h2[text()='Buy With Credit Card']",
+    "CREDIT_CARD_NUMBER_INPUT": "//input[@aria-label='Credit or debit card number']",
+    "CREDIT_CARD_EXPIRATION_DATE_INPUT" : "//input[@aria-label='Credit or debit card expiration date']",
+    "CREDIT_CARD_CVC_INPUT": "//input[@aria-label='Credit or debit card CVC/CVV']",
+    "PAY_BUTTON": "//button[descendant::text()='Pay']",
+    "PAYMENT_SUCESSFUL_LABEL": "//h3[text()='Your payment was successful']",
+    "DONE_BUTTON": "//button[text()='Done']",
+    "USE_DIFFERENT_CARD_BUTTON": ".buy-modal-content > .buy-method-choice > .method-options > .cardform-container > .secondary-choice",
+    "BUY_WITH_ETH_BUTTON" : "//button[text()='Buy with ETH']",
+    "CONFIRM_BUTTON": ".method-options > .buy-confirm-form > section > .section-footer > .primary-btn"
+  },
+  "metamask": {
+    "CLICK_GET_STARTED_BUTTON": "//button[text()='Get Started']",
+    "CLICK_IMPORT_WALLET_BUTTON": "//button[text()='Import wallet']",
+    "CLICK_I_AGREE_BUTTON": "//button[text()='I Agree']",
+    "FILL_TEXT_AREA_FILL_PASSPHASE": "[placeholder='Paste seed phrase from clipboard']",
+    "SEED_PHASE": "promote involve unaware today camera major net tail area rule manual humor",
+    "FILL_PASSWORD_INPUT": "#password",
+    "FILL_PASSWORD_CONFIRM_INPUT": "#confirm-password",
+    "CHECKBOX_AGREE": ".first-time-flow__terms",
+    "CLICK_IMPORT_BUTTON": "//button[text()='Import']",
+    "CLICK_ALL_DONE": "text='All Done'",
+    "CLICK_CLOSE": "[title='Close']",
+    "CLICK_NETWORK_NAME": ".network-name",
+    "CLICK_CHOOSE_NETWORK": "text='Goerli Test Network'",
+    "CLICK_NEXT_BUTTON" : "text='Next'",
+    "CLICK_CONNECT_BUTTON" : "text='Connect'",
+    "CLICK_SIGN_BUTTON" : "text='Sign'",
+    "CLICK_CONFIRM_BUTTON": "//button[text()='Confirm']"
+  },
+  "wallet":{
+    "WALLET_ICON": "//header/div[@class='header-content']//div[@class='right-part']/div[@class='balance-part']/img[@class='icon']",
+    "DEPOSITE_BUTTON": ".header-desktop > .header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .deposit-withdraw > .dw-option:nth-child(1) > .primary-text",
+    "DEPOSITE_AMOUNT_INPUT": ".dw-content-container > .open > .matic-deposit > .dw-price > .z-input'",
+    "DEPOSITE_TO_ZED_BUTTON": ".sidebar-content > .dw-content-container > .open > .matic-deposit > .primary-btn",
+    "ETH_BALANCE": ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='wallet'] .wallet-price div[class*='lg-text']",
+    "WITHDRAW_BUTTON": "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='deposit-withdraw']//div[text()='Withdraw']",
+    "WITHDRAW_AMOUNT_INPUT" : "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/div[contains(@class,'dw-price')]/input[not(@disabled)]",
+    "WITHDRAW_FROM_ZED_BUTTON": "//div[@class='header-desktop']//div[contains(@class,'balance-sidebar') and contains(@class,'opened')]/div[@class='sidebar-content']/div[@class='dw-content-container']/div[contains(@class,'open') and contains(@class,'dw-content')]/div[@class='matic-withdraw']/button[text()='Withdraw from ZED Balance']",
+    "ZED_BALANCE": ".header-desktop .header > div[class*='balance-sidebar'] .sidebar-content > div[class*='zed'] .wallet-price div[class*='lg-text']",
+    "CLAIM_BUTTON": ".header-desktop header div.balance-sidebar.opened div.sidebar-content div.wallet button",
+    "CONFIRM_DEPOSITE_BUTTON": "form > section > .section-footer > .d-flex > .primary-btn" 
+  },
+  "activity":{
+    "FIRST_STATEMENT_INFO" : ".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement"
+  },
+  "studService":{
+    "MALE_HORSE_LIST": ".page-content.stud .stud-content .accordion-content .panel",
+    "SELECTED_MALE_HORSE": ".page-content.stud .stud-content .accordion-content .panel:nth-child(${i}) button.panel__label",
+    "SELECTED_SELECT_MATE_BUTTON" : ".page-content.stud .stud-content .accordion-content .panel:nth-child(${i}) .panel__content .other-infos button.primary-btn",
+    "SELECTED_HORSE_NAME": ".page-content.stud .stud-content .accordion-content .panel:nth-child(${i}) .panel__label .label-content .name",
+    "STUD_MALE_HORSE_NAME": ".select-mate section .select-mate-part .stud-part .stud-content div.overline-text",
+    "SELECT_FEMALE_BUTTON": ".select-mate  .select-mate-part .female-part .female-content",
+    "SELECT_FEMALE_POPUP_HEADER": ".female-select-content form .section-header",
+    "FEMALE_HORSE_LIST": ".female-select-content form .section-content .z-auto__menu  .z-auto__menu-list .horse-card",
+    "SELECTED_FEMALE_HORSE": ".female-select-content form .section-content .z-auto__menu  .z-auto__menu-list .horse-card:nth-child(${i}) .left-panel .horse-image",
+    "SELECTED_FEMALE_NAME": ".female-select-content form .section-content .z-auto__menu  .z-auto__menu-list .horse-card:nth-child(${i}) .left-panel .name-and-types span.name",
+    "SELECTED_FEMALE_SELECT_BUTTON" : ".female-select-content form .section-content .z-auto__menu  .z-auto__menu-list .horse-card:nth-child(${i}).active .details .actions button",
+    "SELECT_FEMALE_HORSE_NAME" : ".select-mate .select-mate-part .female-part .female-content div.overline-text",
+    "BUY_COVER_BUTTON": ".breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn",
+    "CONFIRM_BUTTON": ".transaction-confirmation-modal-content .section-footer button.primary-btn",
+    "CHECK_ACTIVITY_BUTTON": ".breeding-modal-content .section-content .text-content button.primary-btn"
+  },
+  "racing":{
+    "RACING_EVENT_LIST": ".page-content.buy-in .accordion-container .accordion-content .accordion .panel",
+    "SELECTED_RACING_EVENT": ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i})",
+    "SELECTED_RACING_EVENT_NAME" : ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .panel__label .label-content .event > .primary-text",
+    "SELECTED_GATE_REGISTERED_INFO": ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .in-race-info .horses-registered span",
+    "SELECTED_RACING_EVENT_GATE_HEADER": ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .pick-gate .h3-text",
+    "SELECTED_RACING_EVENT_OPEN_GATES_LIST": ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .pick-gate .gate-group .gate-btn"
+  },
+  "apiConfig":{
+    "GENERATE_RANDOM_EMAIL": "genRandomMailbox",
+    "GET_MESSAGES": "getMessages",
+    "READ_MESSAGE": "readMessage",
+    "ERROR_CODES": [400, 401, 500]
+  }
+}

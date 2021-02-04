@@ -32,7 +32,7 @@ beforeAll(async () => {
     metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Validate the some pages on app work well", () => {
+describe("[Smoke Test] Validate the some pages on app work well", () => {
 
     test("Update metamask info", async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
