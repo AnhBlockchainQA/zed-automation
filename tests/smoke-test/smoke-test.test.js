@@ -75,7 +75,7 @@ describe("Validate the some pages on app work well", () => {
 
     test("Wait for the web is loading successfully", async () => {
         homePage = new HomePage(newPageInstance);
-        await homePage.checkIfAvatarPresent();
+        // await homePage.checkIfAvatarPresent();
         await homePage.waitUntilBalanceShown();
         await homePage.clickOnAcceptButton();
 
@@ -87,6 +87,17 @@ describe("Validate the some pages on app work well", () => {
     let resultsPage;
     let winningsPage;
     let myStablePage;
+    test("Validate the component displays on Home Page", async () => {
+        await homePage.navigateToHomePage();
+        await homePage.waitForLoadState();
+        await homePage.validateStreamingWidgetSection();
+        await homePage.validateDiscordWidgetSection();
+        await homePage.validateRaceSection();
+        await homePage.validateHorseOnSaleSection();
+        await homePage.validateInStudSection();
+        await homePage.validateZEDSection();
+    });
+
     test("Validate Marketplace Page has a racehorse", async () => {
         await homePage.clickOnMarketplaceLink();
         marketPlacePage = new MarketplacePage(newPageInstance);
