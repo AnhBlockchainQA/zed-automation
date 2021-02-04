@@ -1,0 +1,85 @@
+{
+  "uid" : "c0f77d2b13978a9f",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Login to ZedRun with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "19433122bf1e5a835866655ce2216ce9",
+  "time" : {
+    "start" : 1612408165836,
+    "stop" : 1612408177769,
+    "duration" : 11933
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "6cd46ebf4938dfd4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6cd46ebf4938dfd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275328259,
+          "stop" : 1612275336960,
+          "duration" : 8701
+        }
+      }, {
+        "uid" : "c3f617ed07f1afe8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/c3f617ed07f1afe8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275270545,
+          "stop" : 1612275279600,
+          "duration" : 9055
+        }
+      }, {
+        "uid" : "9102d7add02f57c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/9102d7add02f57c8",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172411587,
+          "stop" : 1612172421598,
+          "duration" : 10011
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c0f77d2b13978a9f.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "b58a97212c240956",
+  "name" : "Validate has a race open on Events page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a race open on Events page",
+  "historyId" : "6891ebf92fbe91eb3c0a55c0e30fd537",
+  "time" : {
+    "start" : 1612406955217,
+    "stop" : 1612406955926,
+    "duration" : 709
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a race open on Events page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b58a97212c240956.json",
+  "parameterValues" : [ ]
+}

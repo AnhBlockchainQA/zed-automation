@@ -1,0 +1,52 @@
+{
+  "uid" : "7f5577ea785afc94",
+  "name" : "Validate Marketplace Page has a racehorse",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate Marketplace Page has a racehorse",
+  "historyId" : "f5dea56ea6fa15b009a4cb3f2d7feac1",
+  "time" : {
+    "start" : 1612406952597,
+    "stop" : 1612406954151,
+    "duration" : 1554
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: marketPlacePage.selectMarketplaceTab is not a function",
+  "statusTrace" : "TypeError: marketPlacePage.selectMarketplaceTab is not a function\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test.test.js:93:31)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Marketplace Page has a racehorse"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7f5577ea785afc94.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,93 @@
+{
+  "uid" : "57888a283f88b599",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Click on Withdraw button and check if ZED balance is updated",
+  "historyId" : "d49d66fb988d177a167fb698c05f9c5c",
+  "time" : {
+    "start" : 1612408424443,
+    "stop" : 1612408544451,
+    "duration" : 120008
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:113:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Withdraw button and check if ZED balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "f1740fed7521a99",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/f1740fed7521a99",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612276049079,
+          "stop" : 1612276349089,
+          "duration" : 300010
+        }
+      }, {
+        "uid" : "33d0ddbbee1758ee",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/33d0ddbbee1758ee",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612275991467,
+          "stop" : 1612276291481,
+          "duration" : 300014
+        }
+      }, {
+        "uid" : "fdc6b31579c7686a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/fdc6b31579c7686a",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172451757,
+          "stop" : 1612172461763,
+          "duration" : 10006
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "57888a283f88b599.json",
+  "parameterValues" : [ ]
+}

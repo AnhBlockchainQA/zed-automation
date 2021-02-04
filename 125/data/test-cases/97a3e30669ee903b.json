@@ -1,0 +1,91 @@
+{
+  "uid" : "97a3e30669ee903b",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Dual horse cash.Check mail inbox to get magic link",
+  "historyId" : "dc10b75ea670ec43eaeb63e2041580f0",
+  "time" : {
+    "start" : 1612407787595,
+    "stop" : 1612407788911,
+    "duration" : 1316
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:42:40)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/dual-horse-cash.test.js:44:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testClass",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Dual horse cash"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "8b50b723449d7df2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/8b50b723449d7df2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274530701,
+          "stop" : 1612274531754,
+          "duration" : 1053
+        }
+      }, {
+        "uid" : "5809505cbfbbf7b7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/5809505cbfbbf7b7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274473263,
+          "stop" : 1612274474280,
+          "duration" : 1017
+        }
+      }, {
+        "uid" : "397bb82107e84031",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/397bb82107e84031",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612172291087,
+          "stop" : 1612172293092,
+          "duration" : 2005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "97a3e30669ee903b.json",
+  "parameterValues" : [ ]
+}

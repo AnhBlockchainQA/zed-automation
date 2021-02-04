@@ -1,0 +1,46 @@
+{
+  "uid" : "5702af28489f79b5",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "91a2a16407e041e3fbe43aee91ea85ac",
+  "time" : {
+    "start" : 1612406939408,
+    "stop" : 1612406950426,
+    "duration" : 11018
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5702af28489f79b5.json",
+  "parameterValues" : [ ]
+}

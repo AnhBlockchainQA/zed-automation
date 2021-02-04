@@ -1,0 +1,93 @@
+{
+  "uid" : "f56bb8df7efba85d",
+  "name" : "Check that avatar is shown then click on Wallet",
+  "fullName" : "Pick horses to gate and process Next to Run event.Check that avatar is shown then click on Wallet",
+  "historyId" : "7c556e997ca0a83eedab03f07a2a163a",
+  "time" : {
+    "start" : 1612408110901,
+    "stop" : 1612408113025,
+    "duration" : 2124
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at HomePage.checkIfAvatarPresent (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:153:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Wallet"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "e7a95b9b818a84f1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/e7a95b9b818a84f1",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1612275302308,
+          "stop" : 1612275303663,
+          "duration" : 1355
+        }
+      }, {
+        "uid" : "d6cff85355ade771",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/d6cff85355ade771",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1612275242842,
+          "stop" : 1612275244167,
+          "duration" : 1325
+        }
+      }, {
+        "uid" : "9994921dd44468ae",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/9994921dd44468ae",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1612172387773,
+          "stop" : 1612172393502,
+          "duration" : 5729
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f56bb8df7efba85d.json",
+  "parameterValues" : [ ]
+}

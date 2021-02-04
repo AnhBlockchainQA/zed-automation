@@ -1,0 +1,84 @@
+{
+  "uid" : "63b16ffcebeeae3b",
+  "name" : "Update metamask info",
+  "fullName" : "Buy horse with credit card.Update metamask info",
+  "historyId" : "572c0eb4919e20de857db98e36743d5d",
+  "time" : {
+    "start" : 1612407326511,
+    "stop" : 1612407330408,
+    "duration" : 3897
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "9672b97797a73563",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/9672b97797a73563",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273537318,
+          "stop" : 1612273540019,
+          "duration" : 2701
+        }
+      }, {
+        "uid" : "277e1b2117b4d982",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/277e1b2117b4d982",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273238911,
+          "stop" : 1612273241662,
+          "duration" : 2751
+        }
+      }, {
+        "uid" : "b84fdde5b9a795b1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/b84fdde5b9a795b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172221973,
+          "stop" : 1612172226161,
+          "duration" : 4188
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "63b16ffcebeeae3b.json",
+  "parameterValues" : [ ]
+}

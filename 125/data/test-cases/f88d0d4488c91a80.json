@@ -1,0 +1,44 @@
+{
+  "uid" : "f88d0d4488c91a80",
+  "name" : "Update metamask info",
+  "fullName" : "Generate stud horse.Update metamask info",
+  "historyId" : "404789388ec7762f3f3f679212ac79ea",
+  "time" : {
+    "start" : 1612406900860,
+    "stop" : 1612406904658,
+    "duration" : 3798
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f88d0d4488c91a80.json",
+  "parameterValues" : [ ]
+}

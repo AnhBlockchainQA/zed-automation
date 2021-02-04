@@ -1,0 +1,46 @@
+{
+  "uid" : "5b3d0e83f25455da",
+  "name" : "Validate has a Winning on Winning Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a Winning on Winning Page",
+  "historyId" : "d53e9bf1e6afcca2524f36ce435e690c",
+  "time" : {
+    "start" : 1612406956513,
+    "stop" : 1612406957288,
+    "duration" : 775
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a Winning on Winning Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5b3d0e83f25455da.json",
+  "parameterValues" : [ ]
+}

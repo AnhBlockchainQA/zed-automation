@@ -1,0 +1,46 @@
+{
+  "uid" : "5b19ef842d0551d5",
+  "name" : "Validate has a result on Result Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a result on Result Page",
+  "historyId" : "99138ba073f0c3b67f87d438fab66e5f",
+  "time" : {
+    "start" : 1612406955926,
+    "stop" : 1612406956513,
+    "duration" : 587
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a result on Result Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5b19ef842d0551d5.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,84 @@
+{
+  "uid" : "932a851fd2f8f23c",
+  "name" : "Select mate horse",
+  "fullName" : "Generate stud horse.Select mate horse",
+  "historyId" : "dbe757e6e1199f71c4969b8d5644c9fa",
+  "time" : {
+    "start" : 1612406921213,
+    "stop" : 1612406922193,
+    "duration" : 980
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select mate horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "6f684ddd82e0fb4e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6f684ddd82e0fb4e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612271226457,
+          "stop" : 1612271227413,
+          "duration" : 956
+        }
+      }, {
+        "uid" : "30df6259e8985b88",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/30df6259e8985b88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612271225267,
+          "stop" : 1612271226160,
+          "duration" : 893
+        }
+      }, {
+        "uid" : "2473d505086f0231",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/2473d505086f0231",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172061618,
+          "stop" : 1612172064226,
+          "duration" : 2608
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "932a851fd2f8f23c.json",
+  "parameterValues" : [ ]
+}

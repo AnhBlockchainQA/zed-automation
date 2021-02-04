@@ -1,0 +1,91 @@
+{
+  "uid" : "98a080990e4de0af",
+  "name" : "Select a racehorses stable to the open gate",
+  "fullName" : "Pick horses to gate and process Next to Run event.Select a racehorses stable to the open gate",
+  "historyId" : "814f1dbe860246f748135fee7616f2f7",
+  "time" : {
+    "start" : 1612408113025,
+    "stop" : 1612408158389,
+    "duration" : 45364
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.hover: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".horse-infos\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.hover: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".horse-infos\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:334:33\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)\n                    at Frame.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:333:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:451:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:205:20)\n                    at Page.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:451:21)\n                    at RacingPage.addRaceHorseIntoRace (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:119:23)\n                    at /home/runner/work/zed-automation/zed-automation/tests/dual-horse.test.js:92:23\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses stable to the open gate"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "316fcccef5e90392",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/316fcccef5e90392",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275303663,
+          "stop" : 1612275323263,
+          "duration" : 19600
+        }
+      }, {
+        "uid" : "b0c70335a1d63ae0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/b0c70335a1d63ae0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275244167,
+          "stop" : 1612275265553,
+          "duration" : 21386
+        }
+      }, {
+        "uid" : "4d298de04b2478f4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/4d298de04b2478f4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172393502,
+          "stop" : 1612172403505,
+          "duration" : 10003
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "98a080990e4de0af.json",
+  "parameterValues" : [ ]
+}
