@@ -1,12 +1,12 @@
-const { MetamaskPage } = require("../pages/MetamaskPage");
-const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
-const { HomePage } = require("../pages/HomePage");
-const { RacingPage } = require("../pages/RacingPage");
+const { MetamaskPage } = require("../../pages/MetamaskPage");
+const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
+const { HomePage } = require("../../pages/HomePage");
+const { RacingPage } = require("../../pages/RacingPage");
 const test = require("jest-retries");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 
 let metamaskFactory;
 let metamaskPage;
@@ -18,11 +18,8 @@ let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let homePage;
-let racingPage;
-let index;
-let registeredHorseNo;
-let totalNo;
-let eventName;
+var racingPage;
+
 
 beforeAll(async () => {
   metamaskFactory = new MetamaskFactory();
@@ -78,14 +75,14 @@ describe("Pick horses to gate and process Next to Run event", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that avatar is shown then click on Wallet", async () => {
+  test("Check that the ZED app is loading successfully", async () => {
     homePage = new HomePage(newPageInstance);
-    await homePage.checkIfAvatarPresent();
+    // await homePage.checkIfAvatarPresent();
     await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
   });
 
-  test("Select a racehorses stable to the open gate", async () => {
+  test("Select a racehorses and add into the free racing", async () => {
     await homePage.clickOnRacingLink();
     racingPage = new RacingPage(newPageInstance);
     await racingPage.selectEntryFreeEvent();

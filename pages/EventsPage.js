@@ -1,6 +1,4 @@
-const {
-    EVENT_TAB
-} = require("../locators/Racing");
+
 class EventsPage{
 
     constructor(page){
@@ -26,18 +24,6 @@ class EventsPage{
 
 
     }
-
-    async selectEventsTab() {
-        console.log("--- Zed Run Automation Framework: Select the Events tab on Racing page ---");
-        try {
-            await this.page.waitForSelector(EVENT_TAB, {timeout : 0});
-            await this.page.click(EVENT_TAB);
-        }
-        catch {
-            throw new Error("Marketplace Tab is not present or not clickable");
-        }
-    }
-
 
 
 

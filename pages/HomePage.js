@@ -22,6 +22,9 @@ const {
     MORE_BREEDING_BUTTON,
     SHOW_HORSE_BUTTON
 } = require("../locators/ZedRun");
+const {
+    EVENT_TAB
+} = require("../locators/Racing");
 const {WALLET_ICON} = require("../locators/Wallet");
 
 class HomePage {
@@ -116,6 +119,7 @@ class HomePage {
         }
     }
 
+
     async waitForBalanceInfoToBeShown() {
         try {
             await expect(this.page).toHaveSelectorCount(BALANCE_INFO, 2);
@@ -124,15 +128,17 @@ class HomePage {
         }
     }
 
-    async clickOnRacingLink() {
-        console.log("---- Zed Run Automation Framework: Click on Racing link ---");
+    async selectEventsTab() {
+        console.log("--- Zed Run Automation Framework: Select the Events tab on Racing page ---");
         try {
-            await expect(this.page).toHaveSelector(RACING_LINK, {timeout: 0});
-            await this.page.click(RACING_LINK);
-        } catch {
-            throw new Error("Racing link is not shown!");
+            await this.page.waitForSelector(EVENT_TAB, {timeout : 0});
+            await this.page.click(EVENT_TAB);
+        }
+        catch {
+            throw new Error("Events Tab is not present or not clickable");
         }
     }
+
 
     async waitForLoadState() {
         await this.page.waitForLoadState();
@@ -184,20 +190,6 @@ class HomePage {
         } catch {
             throw new Error("Stud service link is not present or clickable");
         }
-    }
-
-    async clickOnRacingLink() {
-        console.log("---- Zed Run Automation Framework: Click on Racing link ---");
-        try {
-            await this.page.waitForSelector(RACING_LINK, {timeout: 0});
-            await this.page.click(RACING_LINK);
-        } catch {
-            throw new Error("Racing link is not present or clickable");
-        }
-    }
-
-    async waitForLoadState() {
-        await this.page.waitForLoadState();
     }
 
     async clickOnBreedingLink() {

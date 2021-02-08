@@ -1,14 +1,14 @@
-const {MetamaskPage} = require("../pages/MetamaskPage");
-const {MetamaskFactory} = require("../utils/browser/metamaskFactory");
-const {LoginPage} = require("../pages/LoginPage");
-const {MetamaskNotificationPage} = require("../pages/MetamaskNotification");
-const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../data/env");
-const {HomePage} = require("../pages/HomePage");
-const {RacingPage} = require("../pages/RacingPage");
-const {PaymentPage} = require("../pages/PaymentPage");
+const {MetamaskPage} = require("../../pages/MetamaskPage");
+const {MetamaskFactory} = require("../../utils/browser/metamaskFactory");
+const {LoginPage} = require("../../pages/LoginPage");
+const {MetamaskNotificationPage} = require("../../pages/MetamaskNotification");
+const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../../data/env");
+const {HomePage} = require("../../pages/HomePage");
+const {RacingPage} = require("../../pages/RacingPage");
+const {PaymentPage} = require("../../pages/PaymentPage");
 const test = require("jest-retries");
-const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require("../locators/ZedRun");
-const {ADD_RACE_CONFIRM_BUTTON} = require("../locators/Payment");
+const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require("../../locators/ZedRun");
+const {ADD_RACE_CONFIRM_BUTTON} = require("../../locators/Payment");
 
 let metamaskFactory;
 let metamaskPage;
@@ -90,7 +90,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
         await homePage.clickOnAcceptButton();
     });
 
-    test("Select a racehorses stable to the open gate", async () => {
+    test("Select a racehorses to add into the paid entry racing", async () => {
         await homePage.clickOnRacingLink();
         racingPage = new RacingPage(newPageInstance);
         await racingPage.selectFirstEntryHasFeeEvent();
@@ -99,6 +99,7 @@ describe("Pick horses to gate and process Next to Run event", () => {
         console.log('List of Gates are opening ', numberGateOpening);
         for (let i = 0; i < numberGateOpening.length; i++) {
             await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
+            await racingPage.waitForLoadState();
             let confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
                 newPageInstance,
                 ADD_RACE_CONFIRM_BUTTON
@@ -112,7 +113,6 @@ describe("Pick horses to gate and process Next to Run event", () => {
         }
         await racingPage.waitForLoadState();
         await racingPage.validateRacingEventAfterInNextToRun(getEventName);
-
     });
 });
 
