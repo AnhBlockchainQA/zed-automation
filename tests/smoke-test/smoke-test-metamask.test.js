@@ -32,7 +32,7 @@ beforeAll(async () => {
     metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Do the smoke test to validate the Zed Run works well", () => {
+describe("Do the smoke test to validate the Zed Run works well when logged by Metamask", () => {
 
     test("Update metamask info", async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
