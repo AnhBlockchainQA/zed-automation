@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-const {
-  chromium
-} = require("playwright");
+const { chromium } = require("playwright");
 const pathToExtension = require("path").join(
   __dirname,
   "metamask-chrome-8.1.3"
@@ -33,7 +31,7 @@ class MetamaskFactory {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
-      timeout: 0
+      timeout: 0,
     });
 
     const [metamaskPage] = await Promise.all([
@@ -67,20 +65,14 @@ class MetamaskFactory {
     return newPage;
   }
 
-  async clickNewPageWithRetry(page, selector, threshold, delay) {
+  async clickNewPageWithJs(page, selector) {
     const [newPage] = await Promise.all([
       this.browserContext.waitForEvent("page"),
-      page.evaluate(
-        ([locator, threshold, delay]) => {
-          for (let i = 0; i < threshold; i++) {
-            setTimeout(function () {
-              document.querySelector(locator).click();
-              console.log(`${i} attempt to click on Confirm button`);
-            }, delay);
-          }
-        },
-        [selector, threshold, delay]
-      ),
+      page.evaluate((locator) => {
+        document.querySelector(locator).click();
+      }, selector),
+      page.waitForLoadState(),
+      page.waitForTimeout(5000)
     ]);
     return newPage;
   }
@@ -91,12 +83,12 @@ class MetamaskFactory {
 
   async close() {
     // await this.removeCache();
-    console.log('close browser');
+    console.log("close browser");
     await this.metamask.close();
     await this.browserContext.close();
   }
 }
 
 module.exports = {
-  MetamaskFactory
+  MetamaskFactory,
 };

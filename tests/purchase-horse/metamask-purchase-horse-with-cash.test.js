@@ -90,41 +90,68 @@ describe("Buy horse with credit card", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Go to Marketplace and select first horse", 3, async () => {
-    homePage = new HomePage(newPageInstance);
+  test("Go to Marketplace and select first horse", 1, async () => {
+    homePage = new HomePage(pageInstance);
+    await homePage.bringToFront();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitForLoadState();
+    marketPlacePage = new MarketplacePage(pageInstance);
     await marketPlacePage.clickOnAcceptButton();
-    noOfHorses = await marketPlacePage.getNumberOfHorses();
-    if (noOfHorses > 0) {
-      await marketPlacePage.mouseOverFirstHorse();
-      await marketPlacePage.clickFirstHorsePreview();
-    }
+    // noOfHorses = await marketPlacePage.getNumberOfHorses();
+    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.mouseOverFirstHorse();
+    await marketPlacePage.clickFirstHorsePreview();
+    await marketPlacePage.waitForLoadState();
   });
 
-  test("Process payment by cash", 3, async () => {
-    if (noOfHorses > 0) {
-    paymentPage = new PaymentPage(newPageInstance);
-    await paymentPage.clickOnBuyWithCreditCardButton();
-    await paymentPage.waitUntilPaymentFormPresent();
-    await paymentPage.clickOnUseDifferentCardIfNeed();
-    await paymentPage.waitUntilPaymentFormPresent();
-    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
-    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
-    await paymentPage.typeCreditCardCVC(CARD_CVC);
-    await paymentPage.clickPayButton();
-    await paymentPage.checkPaySuccessfulLabelPresent();
-    await paymentPage.clickDoneButton();
-    }
+  test("Apply the discount coupon : ANH_TEST", 1, async () => {
+    await marketPlacePage.waitForLoadState();
+    firstHorseName = await marketPlacePage.getHorseName();
+    let originalPrice = await marketPlacePage.getHorsePrice();
+    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
+    await marketPlacePage.clickOnDownwardArrow();    
+    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
+    await marketPlacePage.clickApplyButton();
+    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
+    await marketPlacePage.verifyDiscountPrice(discountPrice.toString());
   });
 
-  test("Verify that our order is performed", 3, async () => {
-    if (noOfHorses > 0) {
-    activityPage = new ActivityPage(newPageInstance);
-    await activityPage.checkIfStatementInfoCorrect(horseName);
+  test(
+    "Process the checkout with banking account and check value",
+    1,
+    async () => {
+      paymentPage = new PaymentPage(pageInstance);
+      await paymentPage.clickOnBuyWithCreditCardButton();
+      await paymentPage.waitUntilPaymentFormPresent();
+      await paymentPage.clickOnUseDifferentCardIfNeed();
+      await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+      await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+      await paymentPage.typeCreditCardCVC(CARD_CVC);
+      await paymentPage.clickPayButton();
+      await paymentPage.checkPaySuccessfulLabelPresent();
+      await paymentPage.clickDoneButton();
     }
+  );
+
+  test("Verify that our order is processing", 3, async () => {
+    activityPage = new ActivityPage(pageInstance);
+    await activityPage.waitForLoadState();
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
+  });
+
+  test("Check the detail payment", 3, async () => {
+    activityPage = new ActivityPage(pageInstance);
+    await activityPage.mouseOverFirstStatementInfo();
+    otherPageInstance = await pageFactory.clickNewPage(
+      pageInstance,
+      VIEW_DETAILS_BUTTON
+    );
+    detailPage = new DetailPage(otherPageInstance);
+    await detailPage.bringToFront();
+    await detailPage.verifyTransactionInfo(firstHorseName);
+    await detailPage.verifyChargeAmount(discountPrice.toString());
   });
 });
 

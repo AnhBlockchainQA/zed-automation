@@ -15,13 +15,18 @@ const {
   CHECK_ACTIVITY_BUTTON,
   BUY_COVER_BUTTON,
   SELECT_FEMALE_HORSE_NAME,
-  SELECTED_FEMALE_SELECT_BUTTON
+  SELECTED_FEMALE_SELECT_BUTTON,
+  CONFIRM_BUTTON
 } = require("../locators/StudService");
 
 class StudServicePage {
   constructor(page) {
     this.page = page;
     this.page.setDefaultTimeout(30000);
+  }
+
+  async bringToFront(){
+    await this.page.bringToFront();
   }
 
   async getSizeOfMaleHorses() {
@@ -287,6 +292,18 @@ class StudServicePage {
       await this.page.click(USER_AVATAR);
     } catch {
       throw new Error("User avatar is not present or not clickable");
+    }
+  }
+
+  async clickOnConfirmButton(){
+    console.log(
+      "--- Zed Run Automation Framework: Click on Confirm button ---"
+    );
+    try{
+      await this.page.waitForSelector(CONFIRM_BUTTON, {timeout: 0});
+      await this.page.click(CONFIRM_BUTTON);
+    }catch{
+      throw new Error("Confirm button is not present or not clickable");
     }
   }
 }

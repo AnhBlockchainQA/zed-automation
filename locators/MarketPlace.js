@@ -9,5 +9,6 @@ module.exports = {
     HORSE_NAME: "div.buy-method-choice > .horse-preview > .horse > .horse-details > .horse-name",
     HORSE_LIST: ".ifs .row div.horse-sale-card",
     ERROR_MESSAGE: ".buy-method-choice .method-options .have-a-zed-coupon .collapsible__content .xs-text",
-    MARKET_PLACE_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Marketplace']"
+    MARKET_PLACE_TAB: "//div[@class='sub-headers']//div[@class='item-content']//div[text()='Marketplace']",
+    HORSE_PRICE_ETH: ".buy-method-choice .method-options p.grey-text"
 };    
