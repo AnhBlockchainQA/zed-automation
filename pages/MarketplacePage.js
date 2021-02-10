@@ -10,7 +10,7 @@ const {
   HORSE_LIST,
   LIST_HORSE,
   MARKET_PLACE_TAB,
-  HORSE_PRICE_ETH
+  HORSE_PRICE_ETH,
 } = require("../locators/MarketPlace");
 const { ACCEPT_BUTTON } = require("../locators/ZedRun");
 const { HORSE_LIST_SIZE, HORSE_LIST_PREDICATE, REGEX } = require("../data/env");
@@ -82,9 +82,16 @@ class MarketplacePage {
     try {
       await expect(this.page).toHaveSelector(HORSE_PRICE, { timeout: 0 });
       const value = await this.page.innerText(HORSE_PRICE);
-      const amount = await stringUtils.splitStringByRegEx(REGEX.AMOUNT, value, 1);
-      console.log(" >>>>>>>>>> Horse price ", Number(amount.split(',').join('')).toFixed(2));
-      return Number(amount.split(',').join('')).toFixed(2);
+      const amount = await stringUtils.splitStringByRegEx(
+        REGEX.AMOUNT,
+        value,
+        1
+      );
+      console.log(
+        " >>>>>>>>>> Horse price ",
+        Number(amount.split(",").join("")).toFixed(2)
+      );
+      return Number(amount.split(",").join("")).toFixed(2);
     } catch {
       throw new Error("Horse price is not present");
     }
@@ -107,11 +114,13 @@ class MarketplacePage {
     console.log(
       "--- Zed Run Automation Framework: Verify if discount price is correct ---"
     );
-      const actualPrice = await this.getHorsePrice();
-      console.log(" >>> Expected value: ", Number(value).toFixed(2));
-      if(actualPrice !== Number(value).toFixed(2)){
-        throw new Error(`Assertion failed: Discount amount ${discountPrice} is different to expected price ${value}`);
-      }
+    const actualPrice = await this.getHorsePrice();
+    console.log(" >>> Expected value: ", Number(value).toFixed(2));
+    if (actualPrice !== Number(value).toFixed(2)) {
+      throw new Error(
+        `Assertion failed: Discount amount ${discountPrice} is different to expected price ${value}`
+      );
+    }
   }
 
   async verifyErrorMessage(message) {
@@ -205,7 +214,9 @@ class MarketplacePage {
   }
 
   async getHorsePriceInETH() {
-    console.log("--- Zed Run Automation Framework: Get the horse price in ETH ---");
+    console.log(
+      "--- Zed Run Automation Framework: Get the horse price in ETH ---"
+    );
     try {
       await expect(this.page).toHaveSelector(HORSE_PRICE_ETH, { timeout: 0 });
       const value = await this.page.innerText(HORSE_PRICE_ETH);
@@ -221,11 +232,39 @@ class MarketplacePage {
     console.log(
       "--- Zed Run Automation Framework: Verify if discount price is correct ---"
     );
-      const actualPrice = await this.getHorsePriceInETH();
-      console.log(" >>> Expected value: ", Number(value).toFixed(4));
-      if(actualPrice !== Number(value).toFixed(4)){
-        throw new Error(`Assertion failed: Discount amount ${discountPrice} is different to expected price ${value}`);
-      }
+    const actualPrice = await this.getHorsePriceInETH();
+    console.log(" >>> Expected value: ", Number(value).toFixed(4));
+    if (actualPrice !== Number(value).toFixed(4)) {
+      throw new Error(
+        `Assertion failed: Discount amount ${discountPrice} is different to expected price ${value}`
+      );
+    }
+  }
+  async validateRaceHorseExisting() {
+    console.log(
+      "--- Zed Run Automation Framework: Validate the Marketplace to see a racehorse existing ---"
+    );
+    try {
+      await this.page.waitForSelector(LIST_HORSE, { timeout: 20000 });
+      const totalHorse = await this.page.evaluate((locator) => {
+        return document.querySelectorAll(locator).length;
+      }, LIST_HORSE);
+      await expect(totalHorse).toBeGreaterThan(0);
+    } catch {
+      throw new Error("There is no racehorse display on Marketplace Page");
+    }
+  }
+
+  async selectMarketplaceTab() {
+    console.log(
+      "--- Zed Run Automation Framework: Select the Marketplace tab on Marketplace page ---"
+    );
+    try {
+      await this.page.waitForSelector(MARKET_PLACE_TAB, { timeout: 0 });
+      await this.page.click(MARKET_PLACE_TAB);
+    } catch {
+      throw new Error("Marketplace Tab is not present or not clickable");
+    }
   }
 }
 

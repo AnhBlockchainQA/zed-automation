@@ -27,6 +27,22 @@ const {
   SEARCH_INPUT,
   MY_STABLE_HORSE_LIST,
   CUSTOM_HORSE,
+
+  FILTER_BUTTON,
+  GENDER_SPAN,
+  COLT_CHECKBOX,
+  STALLION_CHECKBOX,
+  MY_STABLE_MALE_HORSES,
+  SELECTED_MALE_HORSE,
+  CUSTOM_BREED_BUTTON,
+  STUD_DURATION,
+  NEXT_BUTTON,
+  CLOSE_BUTTON,
+  SEVEN_DAYS_OPTION,
+  ONE_DAY_OPTION,
+  THREE_DAYS_OPTION,
+  TOTAL_THOROUGHBREDS,
+  NUMBER_HORSE,
 } = require("../locators/MyStable");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
@@ -300,23 +316,6 @@ class MyStablePage {
     return visible;
   }
 
-  // async scrollToBottomOfThePage() {
-  //   await this.page.waitForLoadState();
-  //   await this.page.evaluate(() => {
-  //     window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
-
-  //   });
-  //   await this.page.waitForLoadState("networkidle");
-  // }
-
-  // async scrollToBottomOfThePage(isVisible) {
-  //   if (!isVisible) {
-  //     await this.page.waitForLoadState();
-  //     await this.scrollToBottomOfThePage();
-  //     await this.page.waitForLoadState("networkidle");
-  //   }
-  // }
-
   async scrollToLastHorseInStable() {
     await this.page.waitForLoadState();
     await this.page.evaluate(() => {
@@ -383,19 +382,18 @@ class MyStablePage {
   async waitUntilEditFormLoaded() {
     console.log(
       "--- Zed Run Automation Framework: Wait until horse name edit form loaded ---"
-    );   
+    );
     let isHidden = true;
     let i = 0;
-    do{
-       isHidden = await page.isHidden(NEWBORN_EDIT_FORM, {timeout: 5000});
-       if(isHidden === true){
-         break;
-       }else{
-         i++;
-         await this.page.waitForLoadState();
-       }
-    }while(isHidden === false && i < THRESHOLD)
-
+    do {
+      isHidden = await page.isHidden(NEWBORN_EDIT_FORM, { timeout: 5000 });
+      if (isHidden === true) {
+        break;
+      } else {
+        i++;
+        await this.page.waitForLoadState();
+      }
+    } while (isHidden === false && i < THRESHOLD);
   }
 
   async clickOnOkayButton() {
@@ -405,10 +403,9 @@ class MyStablePage {
       await this.page.waitForSelector(OKAY_BUTTON, {
         timeout: 0,
       });
-      await this.page.evaluate(locator => {
-       document.querySelector(locator).click(); 
-      }, OKAY_BUTTON)
-      // await this.page.click(OKAY_BUTTON);
+      await this.page.evaluate((locator) => {
+        document.querySelector(locator).click();
+      }, OKAY_BUTTON);
       await this.page.waitForLoadState();
     } catch {
       throw new Error("Okay button is not present or not clickable");
@@ -468,59 +465,6 @@ class MyStablePage {
     }
   }
 
-  async scrollToHorseWithName(name) {
-    let locator = await stringUtils.replaceTemplateString(
-      REGEX.TEXT,
-      NEWBORN_UPDATE_HORSENAME,
-      name
-    );
-    let isVisible = false;
-    try {
-      do {
-        isVisible = await this.isElementVisible(locator);
-        if (isVisible === true) {
-          break;
-        } else {
-          await this.scrollToLastHorseInStable();
-          await this.page.waitForLoadState();
-          i++;
-        }
-      } while (i < threshold && isVisible === false);
-      if (isVisible) {
-        await this.page.evaluate((selector) => {
-          document
-            .evaluate(
-              selector,
-              document,
-              null,
-              XPathResult.FIRST_ORDERED_NODE_TYPE,
-              null
-            )
-            .singleNodeValue.scrollIntoView(true, { behavior: "smooth" });
-        }, locator);
-      }
-    } catch {
-      throw new Error("Selector is invalid or no matching element found");
-    }
-  }
-
-  async verifyNewbornHorseNameUpdate(name) {
-    console.log(
-      "--- Zed Run Automation Framework: Verify name of newborn horse is [%s] ---",
-      name
-    );
-    let locator = await stringUtils.replaceTemplateString(
-      REGEX.NUMBER,
-      NEWBORN_UPDATE_HORSENAME,
-      name
-    );
-    await this.page.waitForLoadState();
-    await this.page.waitForSelector(locator, { timeout: 0 });
-    if (!(await this.page.isVisible(locator))) {
-      throw new Error("Horse name is invalid!");
-    }
-  }
-
   async searchForHorse(horse) {
     console.log(
       "--- Zed Run Automation Framework: Search horse with name [%s] ---",
@@ -545,10 +489,10 @@ class MyStablePage {
       CUSTOM_HORSE,
       name
     );
-    await this.page.waitForSelector(locator, {timeout: 0});
+    await this.page.waitForSelector(locator, { timeout: 0 });
     const actualName = await this.page.innerText(locator);
-    if(!actualName.includes(name)){
-       throw new Error(`Horse with name ${name} not found!`);
+    if (!actualName.includes(name)) {
+      throw new Error(`Horse with name ${name} not found!`);
     }
   }
 }
