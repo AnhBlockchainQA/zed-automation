@@ -32,7 +32,7 @@ beforeAll(async () => {
     metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Validate the some pages on app work well", () => {
+describe("Do the smoke test to validate the Zed Run works well when logged by Metamask", () => {
 
     test("Update metamask info", async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
@@ -75,7 +75,6 @@ describe("Validate the some pages on app work well", () => {
 
     test("Wait for the web is loading successfully", async () => {
         homePage = new HomePage(newPageInstance);
-        // await homePage.checkIfAvatarPresent();
         await homePage.waitUntilBalanceShown();
         await homePage.clickOnAcceptButton();
 
@@ -115,8 +114,8 @@ describe("Validate the some pages on app work well", () => {
 
     test("Validate has a race open on Events page", async () => {
         await homePage.clickOnRacingLink();
+        await homePage.selectEventsTab();
         eventsPage = new EventsPage(newPageInstance);
-        await eventsPage.selectEventsTab();
         await eventsPage.validateRacesOpenAndListEvents();
 
     });
