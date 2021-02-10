@@ -32,11 +32,8 @@ var marketPlacePage;
 var paymentPage;
 var homePage;
 var activityPage;
-var horseName;
-var noOfHorses;
 
 beforeAll(async () => {
-
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });

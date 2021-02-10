@@ -23,7 +23,7 @@ const LOGIN = ACCOUNT_LIST.THIRD_ACCOUNT.LOGIN;
 const DOMAIN = ACCOUNT_LIST.THIRD_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
-  await pageFactory.removeCache();
+  pageFactory.removeCache();
 });
 
 describe("Use expired discount voucher when logging in with Metamask", () => {

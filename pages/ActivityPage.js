@@ -44,6 +44,7 @@ class ActivityPage {
         timeout: 0,
       });
       let info = await this.getStatementInfo();
+      console.log(" >>>>>>>>> Info: ", info);
       const isCorrect = args.every((item) => info.includes(item));
       if (!isCorrect) {
         throw new Error(
