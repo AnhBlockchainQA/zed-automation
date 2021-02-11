@@ -6,7 +6,10 @@ const {
 } = require("../../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const { INVALID_CODE } = require("../../data/env");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
+const {
+  CONNECT_METAMASK,
+  AUTHENTICATE_BUTTON,
+} = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const test = require("jest-retries");
@@ -22,7 +25,6 @@ var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
 var marketPlacePage;
 var homePage;
-var noOfHorses;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -88,32 +90,29 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
       marketPlacePage = new MarketplacePage(newPageInstance);
       await marketPlacePage.waitForLoadState();
       await marketPlacePage.clickOnAcceptButton();
-      noOfHorses = await marketPlacePage.getNumberOfHorses();
-      if (noOfHorses > 0) {
-        await marketPlacePage.mouseOverFirstHorse();
-        await marketPlacePage.clickFirstHorsePreview();
-      }
+      await marketPlacePage.waitForLoadState();
+      await marketPlacePage.mouseOverFirstHorse();
+      await marketPlacePage.clickFirstHorsePreview();
     }
   );
 
   test("Apply the discount coupon : INVALID_COUPON", 3, async () => {
-    if (noOfHorses > 0) {
-      await marketPlacePage.clickOnDownwardArrow();
-      await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
-      await marketPlacePage.clickApplyButton();
-      await marketPlacePage.verifyErrorMessage(INVALID_CODE.ERROR);
-    }
+    marketPlacePage = new MarketplacePage(newPageInstance);
+    await marketPlacePage.clickOnDownwardArrow();
+    await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
+    await marketPlacePage.clickApplyButton();
+    await marketPlacePage.verifyErrorMessage(INVALID_CODE.ERROR);
   });
 });
 
 afterAll(async (done) => {
-  try{
-  await metamaskFactory.close();
-  done();
-  }catch(error){
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
     console.log(error);
     done();
-  }finally{
+  } finally {
     done();
   }
 });

@@ -39,6 +39,8 @@ class APIRequest {
       domain: domain,
     });
     if (checkInbox.body !== []) {
+      console.log(" >>> Body : ", checkInbox.body[0]);
+      console.log(" >>> Id : ", checkInbox.body[0].id);
       return Number(checkInbox.body[0].id);
     } else {
       throw new Error("Something went wrong!");
@@ -53,6 +55,7 @@ class APIRequest {
       id: messageId,
     });
     let emailBody = getMagicLink.body.body;
+    console.log(" >>>>> Magic link url : ", emailBody.match(this.pattern)[1]);
     return emailBody.match(this.pattern)[1];
   }
 }

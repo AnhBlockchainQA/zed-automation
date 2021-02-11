@@ -9,6 +9,7 @@ const {
   DONE_BUTTON,
   BUY_WITH_ETH_BUTTON,
   USE_DIFFERENT_CARD_BUTTON,
+  CONFIRM_BUTTON,
 } = require("../locators/Payment");
 
 class PaymentPage {
@@ -154,6 +155,7 @@ class PaymentPage {
         visible: true,
         timeout: 0,
       });
+      await this.page.waitForLoadState();
     } catch {
       throw new Error("Element is not present or not enabled yet!");
     }
@@ -162,11 +164,7 @@ class PaymentPage {
   async clickDoneButton() {
     try {
       console.log("--- Zed Run Automation Framework: Click Done button ---");
-      await expect(this.page)
-        .toHaveSelector(DONE_BUTTON, {
-          timeout: 0,
-        })
-        .then(console.log("Done button is present"));
+      await expect(this.page).toHaveSelector(DONE_BUTTON, { timeout: 0 });
       await this.page.click(DONE_BUTTON);
     } catch {
       throw new Error("Element is not present or not enabled yet!");
@@ -187,6 +185,10 @@ class PaymentPage {
     }
   }
 
+  async waitForLoadState(){
+    await this.page.waitForLoadState();
+  }
+
   async clickOnUseDifferentCardIfNeed() {
     console.log(
       "--- Zed Run Automation Framework: Click on Use different card if needed ---"
@@ -197,7 +199,22 @@ class PaymentPage {
       });
       await this.page.click(USE_DIFFERENT_CARD_BUTTON);
     } catch {
-      console.log("Element is not present! We did not have saved card yet!");
+      throw new Error("Element is not present! We did not have saved card yet!");
+    }
+  }
+
+  async clickOnConfirmButton(){
+    console.log(
+      "--- Zed Run Automation Framework: Click on Confirm button to process ETH checkout process ---"
+    );
+    try{
+      await this.page.waitForSelector(CONFIRM_BUTTON , {timeput: 0});
+      await this.page.evaluate(locator => {
+        document.querySelector(locator).click();
+      }, CONFIRM_BUTTON);
+      await this.page.waitForLoadState();
+    }catch{
+      throw new Error("Button Confirm is not present or not clickable");
     }
   }
 }

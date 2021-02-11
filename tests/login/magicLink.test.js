@@ -18,7 +18,7 @@ var page;
 var homePage;
 
 beforeAll(async () => {
-  pageFactory.removeCache();
+  await pageFactory.removeCache();
 });
 
 describe("Login to ZedRun with magic link", () => {
