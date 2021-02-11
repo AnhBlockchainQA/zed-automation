@@ -1,12 +1,12 @@
 {
-  "uid" : "71709b7e016228db",
-  "name" : "Validate has a race open on Events page",
-  "fullName" : "Validate the some pages on app work well.Validate has a race open on Events page",
-  "historyId" : "218c2d5e8adc36404ee7567388b87130",
+  "uid" : "abc210591fb8bd20",
+  "name" : "Update metamask info",
+  "fullName" : "Withdraw from ETH balance by logging in with Metamask.Update metamask info",
+  "historyId" : "987ba5c7865ce960681ea1edc6a81937",
   "time" : {
-    "start" : 1612274049418,
-    "stop" : 1612274051076,
-    "duration" : 1658
+    "start" : 1612337486412,
+    "stop" : 1612337494179,
+    "duration" : 7767
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,16 +17,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
   }, {
     "name" : "testClass",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
   }, {
     "name" : "testMethod",
-    "value" : "Validate has a race open on Events page"
+    "value" : "Update metamask info"
   }, {
     "name" : "package",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Withdraw from ETH balance by logging in with Metamask"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -41,6 +41,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "71709b7e016228db.json",
+  "source" : "abc210591fb8bd20.json",
   "parameterValues" : [ ]
 }

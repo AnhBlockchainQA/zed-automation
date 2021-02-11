@@ -1,35 +1,32 @@
 const { MetamaskPage } = require("../../pages/MetamaskPage");
 const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
 const { LoginPage } = require("../../pages/LoginPage");
-const {
-  MetamaskNotificationPage,
-} = require("../../pages/MetamaskNotification");
+const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
-const { EXPIRED_CODE } = require("../../data/env");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
-const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
+const { RacingPage } = require("../../pages/RacingPage");
 const test = require("jest-retries");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
 
-var metamaskFactory = new MetamaskFactory();
-var metamaskPage;
-var metamaskInstance;
-var zedRunPage;
-var newPageInstance;
-var metamaskNotificationInstance;
-var metamaskNotificationPage;
-var otherMetamaskNotificationInstance;
-var otherMetamaskNotificationPage;
-var marketPlacePage;
-var homePage;
-var noOfHorses;
+let metamaskFactory;
+let metamaskPage;
+let metamaskInstance;
+let zedRunPage;
+let newPageInstance;
+let metamaskNotificationInstance;
+let metamaskNotificationPage;
+let otherMetamaskNotificationInstance;
+let otherMetamaskNotificationPage;
+let homePage;
+var racingPage;
+
 
 beforeAll(async () => {
+  metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
-
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Pick horses to gate and process Next to Run event", () => {
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -46,7 +43,7 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
+  test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
@@ -78,31 +75,19 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test(
-    "Check that avatar is shown then click on Marketplace to select first horse",
-    3,
-    async () => {
-      homePage = new HomePage(newPageInstance);
-      await homePage.waitForBalanceInfoToBeShown();
-      await homePage.clickOnMarketplaceLink();
-      marketPlacePage = new MarketplacePage(newPageInstance);
-      await marketPlacePage.waitForLoadState();
-      await marketPlacePage.clickOnAcceptButton();
-      noOfHorses = await marketPlacePage.getNumberOfHorses();
-      if (noOfHorses > 0) {
-        await marketPlacePage.mouseOverFirstHorse();
-        await marketPlacePage.clickFirstHorsePreview();
-      }
-    }
-  );
+  test("Check that the ZED app is loading successfully", async () => {
+    homePage = new HomePage(newPageInstance);
+    // await homePage.checkIfAvatarPresent();
+    await homePage.waitUntilBalanceShown();
+    await homePage.clickOnAcceptButton();
+  });
 
-  test("Apply the discount coupon : EXPIRED_COUPON", 3, async () => {
-    if (noOfHorses > 0) {
-      await marketPlacePage.clickOnDownwardArrow();
-      await marketPlacePage.typeCoupon(EXPIRED_CODE.CODE);
-      await marketPlacePage.clickApplyButton();
-      await marketPlacePage.verifyErrorMessage(EXPIRED_CODE.ERROR);
-    }
+  test("Select a racehorses and add into the free racing", async () => {
+    await homePage.clickOnRacingLink();
+    racingPage = new RacingPage(newPageInstance);
+    await racingPage.selectEntryFreeEvent();
+    const eventName = await racingPage.addRaceHorseIntoRace();
+    await racingPage.validateRacingEventAfterInNextToRun(eventName);
   });
 });
 

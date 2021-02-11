@@ -32,7 +32,7 @@ beforeAll(async () => {
     metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Validate the some pages on app work well", () => {
+describe("[Smoke Test] Validate the some pages on app work well", () => {
 
     test("Update metamask info", async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
@@ -75,7 +75,6 @@ describe("Validate the some pages on app work well", () => {
 
     test("Wait for the web is loading successfully", async () => {
         homePage = new HomePage(newPageInstance);
-        await homePage.checkIfAvatarPresent();
         await homePage.waitUntilBalanceShown();
         await homePage.clickOnAcceptButton();
 
@@ -87,6 +86,17 @@ describe("Validate the some pages on app work well", () => {
     let resultsPage;
     let winningsPage;
     let myStablePage;
+    test("Validate the component displays on Home Page", async () => {
+        await homePage.navigateToHomePage();
+        await homePage.waitForLoadState();
+        await homePage.validateStreamingWidgetSection();
+        await homePage.validateDiscordWidgetSection();
+        await homePage.validateRaceSection();
+        await homePage.validateHorseOnSaleSection();
+        await homePage.validateInStudSection();
+        await homePage.validateZEDSection();
+    });
+
     test("Validate Marketplace Page has a racehorse", async () => {
         await homePage.clickOnMarketplaceLink();
         marketPlacePage = new MarketplacePage(newPageInstance);
@@ -104,8 +114,8 @@ describe("Validate the some pages on app work well", () => {
 
     test("Validate has a race open on Events page", async () => {
         await homePage.clickOnRacingLink();
+        await homePage.selectEventsTab();
         eventsPage = new EventsPage(newPageInstance);
-        await eventsPage.selectEventsTab();
         await eventsPage.validateRacesOpenAndListEvents();
 
     });

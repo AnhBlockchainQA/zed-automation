@@ -52,7 +52,7 @@ class MetamaskNotificationPage {
       "--- Zed Run Automation Framework: Click on Confirm button  ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_CONFIRM_BUTTON, {
+      await this.page.waitForSelector(CLICK_CONFIRM_BUTTON, {
         timeout: 0,
       });
       await this.page.click(CLICK_CONFIRM_BUTTON);

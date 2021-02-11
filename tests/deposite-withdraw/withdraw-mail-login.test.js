@@ -21,7 +21,7 @@ const LOGIN = ACCOUNT_LIST.SECOND_ACCOUNT.LOGIN;
 const DOMAIN = ACCOUNT_LIST.SECOND_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
-  pageFactory.removeCache();
+   pageFactory.removeCache();
 });
 
 describe("Withdraw from ZED balance by logging in with magic link", () => {

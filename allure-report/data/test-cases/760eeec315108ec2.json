@@ -1,12 +1,12 @@
 {
-  "uid" : "41a53e523eb09dec",
+  "uid" : "760eeec315108ec2",
   "name" : "Update metamask info",
-  "fullName" : "Validate the some pages on app work well.Update metamask info",
-  "historyId" : "29b46ce984764fcddfb65974d1a8d934",
+  "fullName" : "Purchase horse with ETH.Update metamask info",
+  "historyId" : "7ea5eab8e7f13e5513775c9670cfdceb",
   "time" : {
-    "start" : 1612274011231,
-    "stop" : 1612274018504,
-    "duration" : 7273
+    "start" : 1612347406698,
+    "stop" : 1612347411102,
+    "duration" : 4404
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,16 +17,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Purchase horse with ETH"
   }, {
     "name" : "testClass",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Purchase horse with ETH"
   }, {
     "name" : "testMethod",
     "value" : "Update metamask info"
   }, {
     "name" : "package",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Purchase horse with ETH"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -41,6 +41,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "41a53e523eb09dec.json",
+  "source" : "760eeec315108ec2.json",
   "parameterValues" : [ ]
 }

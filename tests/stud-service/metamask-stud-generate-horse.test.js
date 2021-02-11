@@ -1,13 +1,13 @@
-const { MetamaskPage } = require("../pages/MetamaskPage");
-const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
-const { LoginPage } = require("../pages/LoginPage");
-const { MetamaskNotificationPage } = require("../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../data/env");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../locators/ZedRun");
-const { CONFIRM_BUTTON } = require("../locators/StudService");
-const { HomePage } = require("../pages/HomePage");
-const { StudServicePage } = require("../pages/StudServicePage");
-const { ActivityPage } = require("../pages/ActivityPage");
+const { MetamaskPage } = require("../../pages/MetamaskPage");
+const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MetamaskNotificationPage } = require("../../pages/MetamaskNotification");
+const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
+const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
+const { CONFIRM_BUTTON } = require("../../locators/StudService");
+const { HomePage } = require("../../pages/HomePage");
+const { StudServicePage } = require("../../pages/StudServicePage");
+const { ActivityPage } = require("../../pages/ActivityPage");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -132,8 +132,8 @@ describe("Generate stud horse", () => {
     confirmMetamaskNotificationPage = new MetamaskNotificationPage(
       confirmMetamaskNotificationInstance
     );
-    confirmMetamaskNotificationPage.clickOnConfirmButton();
-    confirmMetamaskNotificationPage.waitForCloseEvent();
+    await confirmMetamaskNotificationPage.clickOnConfirmButton();
+    await confirmMetamaskNotificationPage.waitForCloseEvent();
   });
 
   test(

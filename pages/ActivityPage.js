@@ -1,10 +1,10 @@
-const { FIRST_STATEMENT_INFO } = require("../locators/Activity");
+const { FIRST_STATEMENT_INFO, VIEW_DETAILS_BUTTON } = require("../locators/Activity");
 const { BREEDING_LINK } = require("../locators/ZedRun");
 
 class ActivityPage {
   constructor(page) {
     this.page = page;
-    this.page.setDefaultTimeout(60000);
+    // this.page.setDefaultTimeout(30000);
   }
 
   async bringToFront() {
@@ -27,7 +27,7 @@ class ActivityPage {
       await expect(this.page).toHaveSelector(FIRST_STATEMENT_INFO, {
         timeout: 0,
       });
-      const info = this.page.innerText(FIRST_STATEMENT_INFO);
+      const info = await this.page.innerText(FIRST_STATEMENT_INFO);
       console.log(">>>>>> Statement  info ", info);
       return info;
     } catch {
@@ -44,6 +44,7 @@ class ActivityPage {
         timeout: 0,
       });
       let info = await this.getStatementInfo();
+      console.log(" >>>>>>>>> Info: ", info);
       const isCorrect = args.every((item) => info.includes(item));
       if (!isCorrect) {
         throw new Error(
@@ -55,17 +56,39 @@ class ActivityPage {
     }
   }
 
-  async clickOnBreedingLink() {
+  async mouseOverFirstStatementInfo() {
     console.log(
-      "---- Zed Run Automation Framework: Click on Breeding link ---"
+      "---- Zed Run Automation Framework: Mouse over first statement info ---"
     );
-    try {
-      await expect(this.page).toHaveSelector(BREEDING_LINK, { timeout: 0 });
-      await this.page.click(BREEDING_LINK);
-    } catch {
-      throw new Error("Breeding link is not shown!");
+    await this.page.waitForLoadState();
+    await this.page.waitForSelector(FIRST_STATEMENT_INFO, {
+      timeout: 5000,
+    });
+    const isVisible = await this.page.isVisible(FIRST_STATEMENT_INFO);
+    if (isVisible) {
+      await this.page.evaluate(locator => {
+         document.querySelector(locator).scrollIntoView(true, {behavior: 'smooth'});
+      }, FIRST_STATEMENT_INFO);
+      await this.page.hover(FIRST_STATEMENT_INFO, {timeout: 2000});
+    } else {
+      throw new Error("Statement is not present");
     }
   }
+
+  async clickOnViewDetailsButton(){
+    console.log(
+      "---- Zed Run Automation Framework: Mouse over first statement info ---"
+    );
+    try{
+    await this.page.waitForSelector(VIEW_DETAILS_BUTTON, {
+      timeout: 0,
+    });
+    await this.page.click(VIEW_DETAILS_BUTTON);
+  }catch{
+    throw new Error('View details button is not present');
+  }
+}
+ 
 }
 
 module.exports = { ActivityPage };

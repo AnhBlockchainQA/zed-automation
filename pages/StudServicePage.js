@@ -15,13 +15,21 @@ const {
   CHECK_ACTIVITY_BUTTON,
   BUY_COVER_BUTTON,
   SELECT_FEMALE_HORSE_NAME,
-  SELECTED_FEMALE_SELECT_BUTTON
+  SELECTED_FEMALE_SELECT_BUTTON,
+  CONFIRM_BUTTON,
+  SELECT_FEMALE_HORSE_NAME,
+  SELECTED_FEMALE_SELECT_BUTTON,
+  STUD_SERVICE_TAB,
 } = require("../locators/StudService");
 
 class StudServicePage {
   constructor(page) {
     this.page = page;
     this.page.setDefaultTimeout(30000);
+  }
+
+  async bringToFront() {
+    await this.page.bringToFront();
   }
 
   async getSizeOfMaleHorses() {
@@ -93,7 +101,7 @@ class StudServicePage {
       SELECTED_HORSE_NAME,
       i
     );
-    await expect(this.page).toHaveSelector(locator, {timeout: 0});
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     const name = await this.page.innerText(locator);
     console.log(">>>>>> Horse name ", name);
     return name;
@@ -191,7 +199,7 @@ class StudServicePage {
       SELECTED_FEMALE_NAME,
       i
     );
-    await expect(this.page).toHaveSelector(locator, {timeout: 0});
+    await expect(this.page).toHaveSelector(locator, { timeout: 0 });
     const name = await this.page.innerText(locator);
     console.log(">>>>>> Female horse name ", name);
     return name;
@@ -199,7 +207,7 @@ class StudServicePage {
 
   async clickOnSelectedFemaleHorseWithIndex(i) {
     console.log(
-      "--- Zed Run Automation Framework: Click on selecte female horse with index " +
+      "--- Zed Run Automation Framework: Click on select female horse with index " +
         i +
         " ---"
     );
@@ -231,7 +239,9 @@ class StudServicePage {
     console.log(
       "--- Zed Run Automation Framework: Get name of selected female horse ---"
     );
-    await expect(this.page).toHaveSelector(SELECT_FEMALE_HORSE_NAME, { timeout: 0 });
+    await expect(this.page).toHaveSelector(SELECT_FEMALE_HORSE_NAME, {
+      timeout: 0,
+    });
     const name = await this.page.innerText(SELECT_FEMALE_HORSE_NAME);
     console.log(">>>>>> Selected female horse name ", name);
     return name;
@@ -289,5 +299,39 @@ class StudServicePage {
       throw new Error("User avatar is not present or not clickable");
     }
   }
+
+  async selectStudServiceTab() {
+    console.log(
+      "--- Zed Run Automation Framework: Select the Stub Service tab on Breeding page ---"
+    );
+    try {
+      await this.page.waitForSelector(STUD_SERVICE_TAB, { timeout: 0 });
+      await this.page.click(STUD_SERVICE_TAB);
+    } catch {
+      throw new Error("Stub Service is not present or not clickable");
+    }
+  }
+
+  async validateDefaultValueOnStubServicePage() {
+    const listOfInStud = ".accordion-content .panel";
+    const numberOfHorseInStud = await this.page.evaluate((locator) => {
+      return document.querySelectorAll(locator).length;
+    }, listOfInStud);
+    console.log("Currently, The number of Horse In Stud: [%s]", listOfInStud);
+    await expect(numberOfHorseInStud).toBeGreaterThanOrEqual(0);
+  }
+
+  async clickOnConfirmButton() {
+    console.log(
+      "--- Zed Run Automation Framework: Click on Confirm button ---"
+    );
+    try {
+      await this.page.waitForSelector(CONFIRM_BUTTON, { timeout: 0 });
+      await this.page.click(CONFIRM_BUTTON);
+    } catch {
+      throw new Error("Confirm button is not present or not clickable");
+    }
+  }
 }
-module.exports = {StudServicePage};
+
+module.exports = { StudServicePage };

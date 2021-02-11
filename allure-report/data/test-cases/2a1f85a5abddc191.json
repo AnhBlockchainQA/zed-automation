@@ -1,12 +1,12 @@
 {
-  "uid" : "65d401aa5939cc63",
+  "uid" : "2a1f85a5abddc191",
   "name" : "Open ZedRun page and click Connnect Metamask",
-  "fullName" : "Validate the some pages on app work well.Open ZedRun page and click Connnect Metamask",
-  "historyId" : "a01c05baf1a641624399ff64692be8fa",
+  "fullName" : "Pick horses to gate and process Next to Run event.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "1d491f0d980520378c7ecb9e52d14e6f",
   "time" : {
-    "start" : 1612274018504,
-    "stop" : 1612274040447,
-    "duration" : 21943
+    "start" : 1612341948881,
+    "stop" : 1612341962770,
+    "duration" : 13889
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -17,16 +17,16 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Pick horses to gate and process Next to Run event"
   }, {
     "name" : "testClass",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Pick horses to gate and process Next to Run event"
   }, {
     "name" : "testMethod",
     "value" : "Open ZedRun page and click Connnect Metamask"
   }, {
     "name" : "package",
-    "value" : "Validate the some pages on app work well"
+    "value" : "Pick horses to gate and process Next to Run event"
   }, {
     "name" : "resultFormat",
     "value" : "allure1"
@@ -41,6 +41,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "65d401aa5939cc63.json",
+  "source" : "2a1f85a5abddc191.json",
   "parameterValues" : [ ]
 }
