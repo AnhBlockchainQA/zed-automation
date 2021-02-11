@@ -1,0 +1,94 @@
+{
+  "uid" : "b504c4b1b0c0e9b2",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Purchase horse with ETH.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "9d660e028acaf67e9a25c2d6baf2a3fc",
+  "time" : {
+    "start" : 1613029279649,
+    "stop" : 1613029290302,
+    "duration" : 10653
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "db3a5f446649f09d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/db3a5f446649f09d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407107684,
+          "stop" : 1612407118073,
+          "duration" : 10389
+        }
+      }, {
+        "uid" : "92c50a2d5981db85",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/92c50a2d5981db85",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273145661,
+          "stop" : 1612273155063,
+          "duration" : 9402
+        }
+      }, {
+        "uid" : "392cb70e369a9a09",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/392cb70e369a9a09",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272848896,
+          "stop" : 1612272857573,
+          "duration" : 8677
+        }
+      }, {
+        "uid" : "3b94d2f4656f1f85",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/3b94d2f4656f1f85",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172165781,
+          "stop" : 1612172175808,
+          "duration" : 10027
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b504c4b1b0c0e9b2.json",
+  "parameterValues" : [ ]
+}

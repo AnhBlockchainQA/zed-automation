@@ -1,0 +1,61 @@
+{
+  "uid" : "572b707ec8c77296",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Pick horses to gate and process Next to Run event by logging in with magic link.Check mail inbox to get magic link",
+  "historyId" : "a0f0a8fa9ddd3fd3b80d48da9f1e71dc",
+  "time" : {
+    "start" : 1613032143145,
+    "stop" : 1613032144386,
+    "duration" : 1241
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/dual-horse-free-email.test.js:43:21\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "71240505bb815d1e",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1613029735352,
+        "stop" : 1613029736624,
+        "duration" : 1272
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "572b707ec8c77296.json",
+  "parameterValues" : [ ]
+}

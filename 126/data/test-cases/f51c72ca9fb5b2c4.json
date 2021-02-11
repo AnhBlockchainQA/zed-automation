@@ -1,0 +1,46 @@
+{
+  "uid" : "f51c72ca9fb5b2c4",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Pick horses to gate and process Next to Run event.Select a racehorses and add into the free racing",
+  "historyId" : "84afb6ab5198bb4e65d5961ac3448c1c",
+  "time" : {
+    "start" : 1613030118833,
+    "stop" : 1613030138856,
+    "duration" : 20023
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f51c72ca9fb5b2c4.json",
+  "parameterValues" : [ ]
+}

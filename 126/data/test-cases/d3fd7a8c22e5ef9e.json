@@ -1,0 +1,61 @@
+{
+  "uid" : "d3fd7a8c22e5ef9e",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Pick horses to gate and process Next to Run event by logging in with magic link.Open new browser with magic link",
+  "historyId" : "f06ef9ac0b446466c06b265e36d5eefc",
+  "time" : {
+    "start" : 1613032144386,
+    "stop" : 1613032144678,
+    "duration" : 292
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:20:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses to gate and process Next to Run event by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "83103da725b86b78",
+      "status" : "failed",
+      "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+      "time" : {
+        "start" : 1613029736624,
+        "stop" : 1613029736883,
+        "duration" : 259
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "d3fd7a8c22e5ef9e.json",
+  "parameterValues" : [ ]
+}

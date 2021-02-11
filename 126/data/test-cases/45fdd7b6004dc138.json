@@ -1,0 +1,70 @@
+{
+  "uid" : "45fdd7b6004dc138",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check mail inbox to get magic link",
+  "historyId" : "f96669c38e6a9f394e418e809da2a9b5",
+  "time" : {
+    "start" : 1613030935072,
+    "stop" : 1613030936373,
+    "duration" : 1301
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/discount/mail-invalid-discount.test.js:44:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cdf138e14261c960",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1613030621639,
+        "stop" : 1613030622933,
+        "duration" : 1294
+      }
+    }, {
+      "uid" : "304401be157cfa0",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+      "time" : {
+        "start" : 1613030259746,
+        "stop" : 1613030260944,
+        "duration" : 1198
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "45fdd7b6004dc138.json",
+  "parameterValues" : [ ]
+}

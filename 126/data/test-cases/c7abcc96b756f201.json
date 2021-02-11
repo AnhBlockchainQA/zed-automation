@@ -1,0 +1,61 @@
+{
+  "uid" : "c7abcc96b756f201",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "c5479839e2b94f0d662cda715129f79",
+  "time" : {
+    "start" : 1613030623169,
+    "stop" : 1613030668195,
+    "duration" : 45026
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:127:19)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "53ba29dc7b4607e1",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1613030261151,
+        "stop" : 1613030381161,
+        "duration" : 120010
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c7abcc96b756f201.json",
+  "parameterValues" : [ ]
+}

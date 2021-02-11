@@ -1,0 +1,86 @@
+{
+  "uid" : "efd13cdaba72ef08",
+  "name" : "Verify that our order is performed",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Verify that our order is performed",
+  "historyId" : "4406bd682c3f6e1ed69ad38fde3996a9",
+  "time" : {
+    "start" : 1613029229248,
+    "stop" : 1613029229941,
+    "duration" : 693
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is performed"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "808e55f7522acf5a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/808e55f7522acf5a",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612272185047,
+          "stop" : 1612272485051,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "c74cff4616449a1c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/c74cff4616449a1c",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612271889402,
+          "stop" : 1612272189406,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "92cf55c188eeca20",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/92cf55c188eeca20",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172130745,
+          "stop" : 1612172130745,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "efd13cdaba72ef08.json",
+  "parameterValues" : [ ]
+}
