@@ -1,30 +1,31 @@
-const { PageFactory } = require("../../utils/browser/pageFactory");
 const { LoginPage } = require("../../pages/LoginPage");
-const { MagicLinkPage } = require("../../pages/MagicLinkPage");
-const { WalletPage } = require("../../pages/WalletPage");
+const { INVALID_CODE } = require("../../data/env");
+const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
-const apiRequest = require("../../utils/api/api");
-const { ACCOUNT_LIST, AMOUNT } = require("../../data/env");
 const test = require("jest-retries");
+const { ACCOUNT_LIST } = require("../../data/env");
+const { PageFactory } = require("../../utils/browser/pageFactory");
+const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const apiRequest = require("../../utils/api/api");
 
 var pageFactory = new PageFactory();
 var messageId;
 var magicLink;
 var loginPage;
 var magicLinkPage;
-var walletPage;
 var pageInstance;
 var newPageInstance;
 var homePage;
-const EMAIL = ACCOUNT_LIST.SECOND_ACCOUNT.EMAIL;
-const LOGIN = ACCOUNT_LIST.SECOND_ACCOUNT.LOGIN;
-const DOMAIN = ACCOUNT_LIST.SECOND_ACCOUNT.DOMAIN;
+var marketPlacePage;
+const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FOURTH_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
-   pageFactory.removeCache();
+  pageFactory.removeCache();
 });
 
-describe("Withdraw from ZED balance by logging in with magic link", () => {
+describe("Use expired discount voucher when logging in with Metamask", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,
@@ -41,11 +42,7 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
 
   test("Check mail inbox to get magic link", 3, async () => {
     messageId = await apiRequest.getZedRunMessageId(LOGIN, DOMAIN);
-    magicLink = await apiRequest.getMagicLink(
-      LOGIN,
-      DOMAIN,
-      messageId,
-    );
+    magicLink = await apiRequest.getMagicLink(LOGIN, DOMAIN, messageId);
   });
 
   test("Open new browser with magic link", 3, async () => {
@@ -54,38 +51,35 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
     await magicLinkPage.waitForNavigation();
+    await magicLinkPage.waitForLoadState();
   });
 
   test(
-    "Wait until wallet icon is shown then click on Wallet icon",
+    "Check that avatar is shown then click on Marketplace to select first horse",
     3,
     async () => {
       homePage = new HomePage(pageInstance);
       await homePage.bringToFront();
       await homePage.waitForBalanceInfoToBeShown();
       await homePage.waitForLoadState();
-      await homePage.clickOnWalletIcon();
+      await homePage.clickOnMarketplaceLink();
+      marketPlacePage = new MarketplacePage(pageInstance);
+      await marketPlacePage.waitForLoadState();
+      await marketPlacePage.clickOnAcceptButton();
+      await marketPlacePage.waitForLoadState();
+      await marketPlacePage.mouseOverFirstHorse();
+      await marketPlacePage.clickFirstHorsePreview();
+      await marketPlacePage.waitForLoadState();
     }
   );
 
-  test(
-    "Click on Withdraw button and check if ZED balance is updated",
-    3,
-    async (done) => {
-      walletPage = new WalletPage(pageInstance);
-      await walletPage.clickOnWithdrawButton();
-      await walletPage.scrollToZedBalance();
-      let zedBalance = await walletPage.getZedBalance();
-      let newZedBalance = zedBalance - AMOUNT;
-      console.log(">>> Old Zed Balance: ", zedBalance);
-      console.log(">>> Expected Zed Balance: ", newZedBalance);
-      await walletPage.typeWithDrawAmount(AMOUNT);
-      await walletPage.clickOnWithdrawFromZedWallet();
-      await walletPage.clickOnConfirmWithDrawButton();
-      await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);
-      done();
-    }
-  );
+  test("Apply the discount coupon : INVALID_COUPON", 3, async () => {
+    marketPlacePage = new MarketplacePage(pageInstance);
+    await marketPlacePage.clickOnDownwardArrow();
+    await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
+    await marketPlacePage.clickApplyButton();
+    await marketPlacePage.verifyErrorMessage(INVALID_CODE.ERROR);
+  });
 });
 
 afterAll(async (done) => {

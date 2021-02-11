@@ -5,14 +5,15 @@ const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
-const { INVALID_CODE } = require("../../data/env");
+const { HomePage } = require("../../pages/HomePage");
+const { MyStablePage } = require("../../pages/MyStablePage");
+const test = require("jest-retries");
 const {
   CONNECT_METAMASK,
   AUTHENTICATE_BUTTON,
 } = require("../../locators/ZedRun");
-const { MarketplacePage } = require("../../pages/MarketplacePage");
-const { HomePage } = require("../../pages/HomePage");
-const test = require("jest-retries");
+const faker = require("faker");
+const { THRESHOLD } = require("../../data/api");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -23,15 +24,17 @@ var metamaskNotificationInstance;
 var metamaskNotificationPage;
 var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
-var marketPlacePage;
+var index;
 var homePage;
+var myStablePage;
+const horseName = faker.name.firstName();
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Generate stud horse", () => {
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -80,28 +83,38 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test(
-    "Check that avatar is shown then click on Marketplace to select first horse",
-    3,
-    async () => {
-      homePage = new HomePage(newPageInstance);
-      await homePage.waitForBalanceInfoToBeShown();
-      await homePage.clickOnMarketplaceLink();
-      marketPlacePage = new MarketplacePage(newPageInstance);
-      await marketPlacePage.waitForLoadState();
-      await marketPlacePage.clickOnAcceptButton();
-      await marketPlacePage.waitForLoadState();
-      await marketPlacePage.mouseOverFirstHorse();
-      await marketPlacePage.clickFirstHorsePreview();
-    }
-  );
+  test("Click on Accept button to close the cookie popup", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.waitForBalanceInfoToBeShown();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitForLoadState();
+  });
 
-  test("Apply the discount coupon : INVALID_COUPON", 3, async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.typeCoupon(INVALID_CODE.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.verifyErrorMessage(INVALID_CODE.ERROR);
+  test("Scroll to horse with index", async () => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    index = await myStablePage.getRandomIndexOfNewBornHorse();
+    await myStablePage.scrollToNewbornHorseWithIndex(index, THRESHOLD);
+  });
+
+  test("Complete the horse nomination process", async () => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    await myStablePage.clickOnNewbornHorseWithIndex(index);
+    await myStablePage.clickOnOkayButton();
+    await myStablePage.enterNewbornHorseName(horseName);
+    await myStablePage.checkOnCheckbox();
+    await myStablePage.clickOnConfirmButton();
+    await myStablePage.waitUntilLoadingIconHidden();
+    await myStablePage.waitForLoadState();
+  });
+
+  test("Verify if the newborn horse name is updated", async () => {
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    await myStablePage.searchForHorse(horseName);
+    await myStablePage.waitForLoadState();
+    await myStablePage.verifySearchResultContainHorse(horseName);
   });
 });
 

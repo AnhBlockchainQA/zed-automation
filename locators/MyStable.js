@@ -15,5 +15,19 @@ module.exports = {
     NEXT_BUTTON: "//div[@class='section-footer']/div[@class='handle-btns']/button[text()='next']",
     PROCEED_BUTTON: "//button[text()='Proceed']",
     TOTAL_THOROUGHBREDS: ".stable-info .desc-part .stable-stat:nth-child(1) h3",
-    NUMBER_HORSE: ".accordion-content .panel"
+    NUMBER_HORSE: ".accordion-content .panel",
+    NEWBORN_LIST: "//section[@id='stable-main']//div[@class='row']//div[@class='panel'][not(.//span[contains(@class,'stud')])]//div[contains(@class,'name') and text()='Newborn']",
+    SELECTED_NEWBORN: "(//section[@id='stable-main']//div[@class='row']//div[@class='panel'][not(.//span[contains(@class,'stud')])]//div[contains(@class,'name') and text()='Newborn'])[${i}]",
+    NEWBORN_EDIT_FORM: ".offspring-name-edit-form section .video-content video",
+    OKAY_BUTTON: ".offspring-naming-modal-content > .offspring-name-edit-form > section > .section-footer > .primary-btn",
+    NEWBORN_HORSE_NAME_INPUT : 'css=[placeholder="Choose Name"]',
+    NEWBORN_NAME_CHECKBOX : '.offspring-name-edit-form > section > .section-footer > .z-checkbox > .primary-text',
+    HORSE_NOMINATION_CONFIRM_BUTTON: '.offspring-naming-modal-content > .offspring-name-edit-form > section > .section-footer > .primary-btn',
+    LOADING_ICON: ".offspring-naming-modal section .loader-container img",
+    NEWBORN_UPDATE_HORSENAME: "(//section[@id='stable-main']//div[@class='row']//div[@class='panel'][not(.//span[contains(@class,'stud')])]//div[contains(@class,'name') and contains(text(),'${name}')]",
+    MY_STABLE_LOADING_ICON: "#stable-main .stable-content .accordion-content .accordion .loader-container img",
+    MY_STABLE_LAST_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel'][last()]",
+    SEARCH_INPUT: "#stable-filters-left input.search",
+    MY_STABLE_HORSE_LIST : "#stable-main .row .accordion-content .accordion .panel",
+    CUSTOM_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='${name}']"
 };
