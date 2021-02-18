@@ -1,12 +1,12 @@
-const { PageFactory } = require("../../utils/browser/pageFactory");
-const { LoginPage } = require("../../pages/LoginPage");
-const { MagicLinkPage } = require("../../pages/MagicLinkPage");
-const { HomePage } = require("../../pages/HomePage");
-const { RacingPage } = require("../../pages/RacingPage");
+const {PageFactory} = require("../../utils/browser/pageFactory");
+const {LoginPage} = require("../../pages/LoginPage");
+const {MagicLinkPage} = require("../../pages/MagicLinkPage");
+const {HomePage} = require("../../pages/HomePage");
+const {RacingPage} = require("../../pages/RacingPage");
 const apiRequest = require("../../utils/api/api");
-const { ACCOUNT_LIST, AMOUNT } = require("../../data/env");
+const {ACCOUNT_LIST } = require("../../data/env");
 const test = require("jest-retries");
-const {ADD_RACE_CONFIRM_BUTTON} = require("../../locators/Payment");
+
 
 var pageFactory = new PageFactory();
 var messageId;
@@ -25,7 +25,7 @@ beforeAll(async () => {
     pageFactory.removeCache();
 });
 
-describe("Pick horses to gate and process Next to Run event by logging in with magic link", () => {
+describe("Pick horses and add into the entry with fee racing when logged by Magic Link", () => {
     test(
         "Open ZedRun page and input valid email to generate magic link",
         3,
@@ -78,14 +78,16 @@ describe("Pick horses to gate and process Next to Run event by logging in with m
         const numberGateOpening = await racingPage.getGateOpening();
         const getEventName = await racingPage.returnEventName();
         console.log('List of Gates are opening ', numberGateOpening);
+        const totalGate = numberGateOpening.length;
+        console.log('The number of gate ', totalGate);
         // for (let i = 0; i < numberGateOpening.length; i++) {
-        for (let i = numberGateOpening.length; i = 0; i--) {
-            await racingPage.waitForLoadState();
+        for (let i = totalGate - 1; i >= 0; i--) {
             await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
             await racingPage.waitForLoadState();
             await racingPage.clickConfirmButton();
             await racingPage.waitForLoadState();
         }
+
         await racingPage.waitForLoadState();
         await racingPage.validateRacingEventAfterInNextToRun(getEventName);
     });

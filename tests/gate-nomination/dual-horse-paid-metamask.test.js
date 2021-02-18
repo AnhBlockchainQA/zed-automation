@@ -2,10 +2,10 @@ const {MetamaskPage} = require("../../pages/MetamaskPage");
 const {MetamaskFactory} = require("../../utils/browser/metamaskFactory");
 const {LoginPage} = require("../../pages/LoginPage");
 const {MetamaskNotificationPage} = require("../../pages/MetamaskNotification");
-const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD, THRESHOLD, WAIT_TIME} = require("../../data/env");
+const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD} = require("../../data/env");
 const {HomePage} = require("../../pages/HomePage");
 const {RacingPage} = require("../../pages/RacingPage");
-const {PaymentPage} = require("../../pages/PaymentPage");
+
 const test = require("jest-retries");
 const {CONNECT_METAMASK, AUTHENTICATE_BUTTON} = require("../../locators/ZedRun");
 const {ADD_RACE_CONFIRM_BUTTON} = require("../../locators/Payment");
@@ -21,12 +21,6 @@ let otherMetamaskNotificationInstance;
 let otherMetamaskNotificationPage;
 let homePage;
 let racingPage;
-let index;
-let registeredHorseNo;
-let totalNo;
-let eventName;
-var paymentPage;
-var confirmMetamaskNotificationInstance;
 var confirmMetamaskNotificationPage;
 
 beforeAll(async () => {
@@ -34,7 +28,7 @@ beforeAll(async () => {
     await metamaskFactory.removeCache();
     metamaskInstance = await metamaskFactory.init();
 });
-describe("Pick horses to gate and process Next to Run event", () => {
+describe("Pick horses and add into the entry with fee racing when logged by Meta Mask", () => {
     test("Update metamask info", 3, async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
         await metamaskPage.clickOnGetStartedButton();
@@ -85,7 +79,6 @@ describe("Pick horses to gate and process Next to Run event", () => {
 
     test("Check that the ZED app is loading successfully", async () => {
         homePage = new HomePage(newPageInstance);
-        // await homePage.checkIfAvatarPresent();
         await homePage.waitUntilBalanceShown();
         await homePage.clickOnAcceptButton();
     });
