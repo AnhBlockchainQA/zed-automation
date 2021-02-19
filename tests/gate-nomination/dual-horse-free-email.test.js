@@ -4,7 +4,7 @@ const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const { HomePage } = require("../../pages/HomePage");
 const { RacingPage } = require("../../pages/RacingPage");
 const apiRequest = require("../../utils/api/api");
-const { ACCOUNT_LIST, AMOUNT } = require("../../data/env");
+const { ACCOUNT_LIST } = require("../../data/env");
 const test = require("jest-retries");
 
 var pageFactory = new PageFactory();
@@ -24,7 +24,7 @@ beforeAll(async () => {
     pageFactory.removeCache();
 });
 
-describe("Pick horses to gate and process Next to Run event by logging in with magic link", () => {
+describe("Pick horses and add into the free racing when logged by Magic Link", () => {
     test(
         "Open ZedRun page and input valid email to generate magic link",
         3,
