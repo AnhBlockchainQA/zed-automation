@@ -4,15 +4,22 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
-const { PERCENT_DISCOUNT } = require("../../data/env");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  HORSE_LIST_SIZE,
+  SECOND_WALLET_ADDRESS
+} = require("../../data/env");
 const {
   CONNECT_METAMASK,
   AUTHENTICATE_BUTTON,
 } = require("../../locators/ZedRun");
-const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
 const test = require("jest-retries");
+const { TransferHorsePage } = require("../../pages/TransferHorsePage");
+const { CONFIRM_BUTTON } = require("../../locators/TransferHorse"); 
+const { MyStablePage } = require("../../pages/MyStablePage");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -23,17 +30,20 @@ var metamaskNotificationInstance;
 var metamaskNotificationPage;
 var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
-var marketPlacePage;
 var homePage;
-var discountPrice;
+var transferHorsePage;
+var anotherMetamaskNotificationInstance;
+var anotherMetamaskNotificationPage;
+var horseName;
+var myStablePage;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Use valid discount voucher when logging in with Metamask", () => {
-  test("Update metamask info", 1, async () => {
+describe("Transfer horse to other wallet address - Logging with Metamask", () => {
+  test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -49,7 +59,7 @@ describe("Use valid discount voucher when logging in with Metamask", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-  test("Open ZedRun page and click Connnect Metamask", 1, async () => {
+  test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
@@ -81,33 +91,59 @@ describe("Use valid discount voucher when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Go to Marketplace and select first horse", 1, async () => {
+  test("Wait until homepage is loading", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.waitForBalanceInfoToBeShown();
-    await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.clickOnAcceptButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.mouseOverFirstHorse();
-    await marketPlacePage.clickFirstHorsePreview();
-    await marketPlacePage.waitForLoadState();
+    await homePage.clickOnAcceptButton();
+    await homePage.waitForLoadState();
   });
 
-  test("Apply the discount coupon : ANH_TEST", 1, async () => {
-    await marketPlacePage.waitForLoadState();
-    firstHorseName = await marketPlacePage.getHorseName();
-    let originalPrice = await marketPlacePage.getHorsePrice();
-    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPrice(discountPrice.toString());
+  test("Go to My Settings page then click on Select Racehorse", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.clickOnUserMenuArrow();
+    await homePage.waitForLoadState();
+    await homePage.clickOnMySettingsLink();
+    await homePage.waitForLoadState();
+    await homePage.clickOnSelectRaceHorseButton();
+    await homePage.waitForLoadState();
   });
+
+  test("Select horse then click on Transfer button", async () => {
+    transferHorsePage = new TransferHorsePage(newPageInstance);
+    await transferHorsePage.checkIfTransferHorseListShown(HORSE_LIST_SIZE);
+    horseName = await transferHorsePage.getNameOfFirstHorse();
+    await transferHorsePage.hoverOnFirstHorseToBeTransfered();
+    await transferHorsePage.clickOnSelectButtonOfFirstHorse();
+    await transferHorsePage.typeAddress(SECOND_WALLET_ADDRESS);
+    await transferHorsePage.clickOnTransactionFee();
+    await transferHorsePage.clickOnTransferButton();
+  });
+
+  test("Confirm the transfer", async () => {
+    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      CONFIRM_BUTTON
+    );
+    anotherMetamaskNotificationPage = new MetamaskNotificationPage(
+      anotherMetamaskNotificationInstance
+    );
+    await anotherMetamaskNotificationPage.waitForLoadState();
+    await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    await anotherMetamaskNotificationPage.waitForCloseEvent();
+    await anotherMetamaskNotificationPage.waitForLoadState();
+  });
+
+  test("Check that we can not search this horse anymore", async() => {
+    await homePage.bringToFront();
+    await homePage.clickOnUserAvatar();
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    await myStablePage.searchForHorse(horseName);
+    await myStablePage.verifySearchResultDidNotContainHorse(horseName);
+
+  })
+
+
 });
 
 afterAll(async (done) => {

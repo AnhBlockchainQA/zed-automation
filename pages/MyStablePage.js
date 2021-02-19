@@ -27,26 +27,10 @@ const {
   SEARCH_INPUT,
   MY_STABLE_HORSE_LIST,
   CUSTOM_HORSE,
-
-  FILTER_BUTTON,
-  GENDER_SPAN,
-  COLT_CHECKBOX,
-  STALLION_CHECKBOX,
-  MY_STABLE_MALE_HORSES,
-  SELECTED_MALE_HORSE,
-  CUSTOM_BREED_BUTTON,
-  STUD_DURATION,
-  NEXT_BUTTON,
-  CLOSE_BUTTON,
-  SEVEN_DAYS_OPTION,
-  ONE_DAY_OPTION,
-  THREE_DAYS_OPTION,
-  TOTAL_THOROUGHBREDS,
   NUMBER_HORSE,
 } = require("../locators/MyStable");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
-const { HORSE_LIST } = require("../locators/MarketPlace");
 const { THRESHOLD } = require("../data/api");
 
 class MyStablePage {
@@ -494,6 +478,16 @@ class MyStablePage {
     if (!actualName.includes(name)) {
       throw new Error(`Horse with name ${name} not found!`);
     }
+  }
+
+  async verifySearchResultDidNotContainHorse(name){
+    console.log(
+      "--- Zed Run Automation Framework: Verify that search result contains horse with name [%s] ---",
+      name
+    );
+    await this.page.waitForSelector(MY_STABLE_HORSE_LIST, { timeout: 0 });
+    const length = await this.page.$$eval(MY_STABLE_HORSE_LIST, (divs) => divs.length);
+    expect(length >= 2).toBeTruthy();
   }
 }
 

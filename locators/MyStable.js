@@ -29,5 +29,5 @@ module.exports = {
     MY_STABLE_LAST_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel'][last()]",
     SEARCH_INPUT: "#stable-filters-left input.search",
     MY_STABLE_HORSE_LIST : "#stable-main .row .accordion-content .accordion .panel",
-    CUSTOM_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='${name}']"
+    CUSTOM_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='${name}']",
 };

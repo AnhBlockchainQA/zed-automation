@@ -56,4 +56,7 @@ module.exports = {
     TEXT: /\$\{name\}/g,
     AMOUNT: /([0-9].*)/g,
   },
+  FIRST_WALLET_ADDRESS: "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
+  SECOND_WALLET_ADDRESS: "0x48205801D243fd53cfB10c4edb441C5d2f6EA7e1",
+
 };

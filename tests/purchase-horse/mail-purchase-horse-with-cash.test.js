@@ -1,122 +1,72 @@
-const { MetamaskPage } = require("../../pages/MetamaskPage");
-const { MetamaskFactory } = require("../../utils/browser/metamaskFactory");
 const { LoginPage } = require("../../pages/LoginPage");
-const {
-  MetamaskNotificationPage,
-} = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
-const { PERCENT_DISCOUNT } = require("../../data/env");
-const {
-  CONNECT_METAMASK,
-  AUTHENTICATE_BUTTON,
-} = require("../../locators/ZedRun");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { HomePage } = require("../../pages/HomePage");
-const { CONFIRM_BUTTON } = require("../../locators/Payment");
-const { PaymentPage } = require("../../pages/PaymentPage");
-const { ActivityPage } = require("../../pages/ActivityPage");
 const test = require("jest-retries");
-const { DetailPage } = require("../../pages/DetailPage");
-const { VIEW_DETAILS_BUTTON } = require("../../locators/Activity");
+const { ACCOUNT_LIST } = require("../../data/env");
+const { PageFactory } = require("../../utils/browser/pageFactory");
+const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const apiRequest = require("../../utils/api/api");
 
-var metamaskFactory = new MetamaskFactory();
-var metamaskPage;
-var metamaskInstance;
-var zedRunPage;
+var pageFactory = new PageFactory();
+var messageId;
+var magicLink;
+var loginPage;
+var magicLinkPage;
+var pageInstance;
 var newPageInstance;
-var metamaskNotificationInstance;
-var metamaskNotificationPage;
-var otherMetamaskNotificationInstance;
-var otherMetamaskNotificationPage;
-var marketPlacePage;
 var homePage;
-var anotherMetamaskNotificationInstance;
-var anotherMetamaskNotificationPage;
-var paymentPage;
-var firstHorseName;
-var activityPage;
-var detailPage;
+var marketPlacePage;
 var discountPrice;
 
+const EMAIL = ACCOUNT_LIST.FIFTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FIFTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FIFTH_ACCOUNT.DOMAIN;
+
 beforeAll(async () => {
-  await metamaskFactory.removeCache();
-  metamaskInstance = await metamaskFactory.init();
+  pageFactory.removeCache();
 });
 
-describe("Use fixed discount voucher to buy horse with ETH while logging in with Metamask", () => {
-  test("Update metamask info", 3, async () => {
-    metamaskPage = new MetamaskPage(metamaskInstance);
-    await metamaskPage.clickOnGetStartedButton();
-    await metamaskPage.clickOnImportWalletButton();
-    await metamaskPage.clickOnIAgreeButton();
-    await metamaskPage.typeSeedPhase(SEED_PHRASE);
-    await metamaskPage.typeNewPassword(PASSWORD);
-    await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
-    await metamaskPage.checkTermsAndConditionCheckBox();
-    await metamaskPage.clickImportButton();
-    await metamaskPage.clickOnAllDoneButton();
-    await metamaskPage.clickOnCloseButton();
-    await metamaskPage.clickOnNetworkDropdown();
-    await metamaskPage.clickOnGoerliNetwork();
+describe("Buy horse with credit card when logging in with magic link", () => {
+  test(
+    "Open ZedRun page and input valid email to generate magic link",
+    3,
+    async () => {
+      pageInstance = await pageFactory.newTab(false, 0);
+      loginPage = new LoginPage(pageInstance);
+      await loginPage.navigate();
+      await loginPage.clickOnStartButton();
+      await loginPage.typeEmail(EMAIL);
+      await loginPage.clickOnContinueButton();
+      await loginPage.waitForTimeout();
+    }
+  );
+
+  test("Check mail inbox to get magic link", 3, async () => {
+    messageId = await apiRequest.getZedRunMessageId(LOGIN, DOMAIN);
+    magicLink = await apiRequest.getMagicLink(LOGIN, DOMAIN, messageId);
   });
 
-  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
-    newPageInstance = await metamaskFactory.newPage();
-    zedRunPage = new LoginPage(newPageInstance);
-    await zedRunPage.navigate();
-    await zedRunPage.clickOnStartButton();
-
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      CONNECT_METAMASK
-    );
-    metamaskNotificationPage = new MetamaskNotificationPage(
-      metamaskNotificationInstance
-    );
-
-    await metamaskNotificationPage.waitForLoadState();
-    await metamaskNotificationPage.clickOnNextButton();
-    await metamaskNotificationPage.clickOnConnectButton();
-    await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
+  test("Open new browser with magic link", 3, async () => {
+    newPageInstance = await pageFactory.newTab(false, 0);
+    magicLinkPage = new MagicLinkPage(newPageInstance);
+    await magicLinkPage.bringToFront();
+    await magicLinkPage.navigate(magicLink);
+    await magicLinkPage.waitForNavigation();
+    await magicLinkPage.waitForLoadState();
   });
 
   test("Go to Marketplace and select first horse", 3, async () => {
-    homePage = new HomePage(newPageInstance);
+    homePage = new HomePage(pageInstance);
+    await homePage.bringToFront();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(newPageInstance);
+    marketPlacePage = new MarketplacePage(pageInstance);
     await marketPlacePage.waitForLoadState();
     await marketPlacePage.clickOnAcceptButton();
     noOfHorses = await marketPlacePage.getNumberOfHorses();
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
-  });
-
-  test("Apply the discount coupon : ANH_TEST", 3, async () => {
-    marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitForLoadState();
-    firstHorseName = await marketPlacePage.getHorseName();
-    let originalPrice = await marketPlacePage.getHorsePriceInETH();
-    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPriceInETH(discountPrice);
   });
 
   test("Process the checkout with ETH", 3, async () => {
@@ -125,9 +75,7 @@ describe("Use fixed discount voucher to buy horse with ETH while logging in with
     await paymentPage.waitForLoadState();
     anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithJs(
       newPageInstance,
-      CONFIRM_BUTTON,
-      // THRESHOLD,
-      // WAIT_TIME
+      CONFIRM_BUTTON
     );
     anotherMetamaskNotificationPage = new MetamaskNotificationPage(
       anotherMetamaskNotificationInstance

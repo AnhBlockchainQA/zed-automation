@@ -31,7 +31,7 @@ beforeAll(async () => {
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Check result with invalid discount voucher when logging in with Metamask", () => {
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();

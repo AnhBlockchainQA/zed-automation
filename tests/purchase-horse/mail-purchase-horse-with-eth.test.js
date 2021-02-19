@@ -19,15 +19,15 @@ var homePage;
 var marketPlacePage;
 var discountPrice;
 
-const EMAIL = ACCOUNT_LIST.FIFTH_ACCOUNT.EMAIL;
-const LOGIN = ACCOUNT_LIST.FIFTH_ACCOUNT.LOGIN;
-const DOMAIN = ACCOUNT_LIST.FIFTH_ACCOUNT.DOMAIN;
+const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FOURTH_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
   pageFactory.removeCache();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Use expired discount voucher when logging in with magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,

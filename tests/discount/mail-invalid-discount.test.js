@@ -25,7 +25,7 @@ beforeAll(async () => {
   pageFactory.removeCache();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Check result with invalid discount voucher when logging by magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,

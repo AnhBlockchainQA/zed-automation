@@ -31,7 +31,7 @@ beforeAll(async () => {
   pageFactory.removeCache();
 });
 
-describe("Generate stud horse", () => {
+describe("Generate stud horse when logging in with magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,

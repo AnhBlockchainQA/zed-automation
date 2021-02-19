@@ -28,7 +28,7 @@ beforeAll(async () => {
   await pageFactory.removeCache();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Give a name to newborn horse when logging in with magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,
