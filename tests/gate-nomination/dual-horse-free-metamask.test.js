@@ -26,7 +26,7 @@ beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
-describe("Pick horses to gate and process Next to Run event", () => {
+describe("Pick horses and add into the free racing when logged by Meta Mask", () => {
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -77,7 +77,6 @@ describe("Pick horses to gate and process Next to Run event", () => {
 
   test("Check that the ZED app is loading successfully", async () => {
     homePage = new HomePage(newPageInstance);
-    // await homePage.checkIfAvatarPresent();
     await homePage.waitUntilBalanceShown();
     await homePage.clickOnAcceptButton();
   });
