@@ -11,7 +11,7 @@ const {StudServicePage} = require('../../pages/StudServicePage');
 const {EventsPage} = require('../../pages/EventsPage');
 const {ResultsPage} = require('../../pages/ResultsPage');
 const {WinningsPage} = require('../../pages/WinningsPage');
-const {MyStablePage} = require('../../pages/MyStablePage');;
+const {MyStablePage} = require('../../pages/MyStablePage');
 
 var pageFactory = new PageFactory();
 var messageId;
