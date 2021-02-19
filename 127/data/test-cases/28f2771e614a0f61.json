@@ -1,0 +1,72 @@
+{
+  "uid" : "28f2771e614a0f61",
+  "name" : "Check the detail payment",
+  "fullName" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask.Check the detail payment",
+  "historyId" : "fc6273e5b37eed058aa700709602382a",
+  "time" : {
+    "start" : 1613711809108,
+    "stop" : 1613711809111,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/mail-purchase-horse-with-cash.test.js:150:24\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "2a2d4bba1aa101bb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/2a2d4bba1aa101bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029229941,
+          "stop" : 1613029231573,
+          "duration" : 1632
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "28f2771e614a0f61.json",
+  "parameterValues" : [ ]
+}

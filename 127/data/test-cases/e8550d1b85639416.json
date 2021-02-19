@@ -1,0 +1,120 @@
+{
+  "uid" : "e8550d1b85639416",
+  "name" : "Apply the discount coupon : INVALID_COUPON",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Apply the discount coupon : INVALID_COUPON",
+  "historyId" : "86a75acab9461a2675f616be00201af4",
+  "time" : {
+    "start" : 1613713655750,
+    "stop" : 1613713775764,
+    "duration" : 120014
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:127:19)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : INVALID_COUPON"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "90fed9234b20961d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613712214248,
+        "stop" : 1613712216173,
+        "duration" : 1925
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "66a26b2c83ff7dcf",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/66a26b2c83ff7dcf",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1613031056684,
+          "stop" : 1613031176708,
+          "duration" : 120024
+        }
+      }, {
+        "uid" : "2a70e5864ef6ec",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/2a70e5864ef6ec",
+        "status" : "failed",
+        "statusDetails" : "Error: Error message is not shown or assertion failed!",
+        "time" : {
+          "start" : 1612408085507,
+          "stop" : 1612408091783,
+          "duration" : 6276
+        }
+      }, {
+        "uid" : "c5df98f3f3c3f029",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/c5df98f3f3c3f029",
+        "status" : "failed",
+        "statusDetails" : "Error: Error message is not shown or assertion failed!",
+        "time" : {
+          "start" : 1612275283068,
+          "stop" : 1612275288505,
+          "duration" : 5437
+        }
+      }, {
+        "uid" : "beb9c4953d2c6b4e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/beb9c4953d2c6b4e",
+        "status" : "failed",
+        "statusDetails" : "Error: Error message is not shown or assertion failed!",
+        "time" : {
+          "start" : 1612275223792,
+          "stop" : 1612275229138,
+          "duration" : 5346
+        }
+      }, {
+        "uid" : "eb8b83d8c4708543",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/eb8b83d8c4708543",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172369704,
+          "stop" : 1612172369705,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e8550d1b85639416.json",
+  "parameterValues" : [ ]
+}

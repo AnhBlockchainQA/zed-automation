@@ -1,0 +1,44 @@
+{
+  "uid" : "d8ee5438631fe9f1",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check mail inbox to get magic link",
+  "historyId" : "f96669c38e6a9f394e418e809da2a9b5",
+  "time" : {
+    "start" : 1613713209743,
+    "stop" : 1613713210903,
+    "duration" : 1160
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d8ee5438631fe9f1.json",
+  "parameterValues" : [ ]
+}

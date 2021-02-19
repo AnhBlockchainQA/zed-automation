@@ -1,0 +1,46 @@
+{
+  "uid" : "ab6119283589c0a",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Pick horses and add into the free racing when logged by Meta Mask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "ae7aaa7d6b5e6df5c7993ab67f1f5f5f",
+  "time" : {
+    "start" : 1613712222297,
+    "stop" : 1613712231850,
+    "duration" : 9553
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ab6119283589c0a.json",
+  "parameterValues" : [ ]
+}

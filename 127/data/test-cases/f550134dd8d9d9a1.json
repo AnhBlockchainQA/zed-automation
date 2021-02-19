@@ -1,0 +1,83 @@
+{
+  "uid" : "f550134dd8d9d9a1",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check mail inbox to get magic link",
+  "historyId" : "f96669c38e6a9f394e418e809da2a9b5",
+  "time" : {
+    "start" : 1613713527418,
+    "stop" : 1613713528480,
+    "duration" : 1062
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d8ee5438631fe9f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613713209743,
+        "stop" : 1613713210903,
+        "duration" : 1160
+      }
+    }, {
+      "uid" : "4e2193aa186ee9c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613712840906,
+        "stop" : 1613712841925,
+        "duration" : 1019
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "45fdd7b6004dc138",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/45fdd7b6004dc138",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1613030935072,
+          "stop" : 1613030936373,
+          "duration" : 1301
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f550134dd8d9d9a1.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,104 @@
+{
+  "uid" : "357c2645946fe7cc",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Click on Deposit button and check if ETH balance is updated",
+  "historyId" : "abd459eb9db93800aa47ebdcb881fb8a",
+  "time" : {
+    "start" : 1613712135029,
+    "stop" : 1613712192821,
+    "duration" : 57792
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Deposit button and check if ETH balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "332e6900811907e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/332e6900811907e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029531620,
+          "stop" : 1613029589268,
+          "duration" : 57648
+        }
+      }, {
+        "uid" : "1779b135c0dda90d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/1779b135c0dda90d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407609457,
+          "stop" : 1612407666910,
+          "duration" : 57453
+        }
+      }, {
+        "uid" : "c5f8dd0ef3782ae2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/c5f8dd0ef3782ae2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274172029,
+          "stop" : 1612274229891,
+          "duration" : 57862
+        }
+      }, {
+        "uid" : "46f9a5d6b02fad35",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/46f9a5d6b02fad35",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612273872323,
+          "stop" : 1612274172363,
+          "duration" : 300040
+        }
+      }, {
+        "uid" : "d71a26a1cd5001e8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/d71a26a1cd5001e8",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172270362,
+          "stop" : 1612172280372,
+          "duration" : 10010
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "357c2645946fe7cc.json",
+  "parameterValues" : [ ]
+}

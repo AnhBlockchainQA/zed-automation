@@ -1,0 +1,46 @@
+{
+  "uid" : "430c85a53c09884e",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Meta Mask.Check that the ZED app is loading successfully",
+  "historyId" : "84d3a9d7791444c4dfe6fc320844185f",
+  "time" : {
+    "start" : 1613712001471,
+    "stop" : 1613712005084,
+    "duration" : 3613
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "430c85a53c09884e.json",
+  "parameterValues" : [ ]
+}

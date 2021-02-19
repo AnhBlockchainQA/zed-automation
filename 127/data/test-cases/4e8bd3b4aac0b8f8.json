@@ -1,0 +1,110 @@
+{
+  "uid" : "4e8bd3b4aac0b8f8",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Purchase horse with ETH.Go to Marketplace and select first horse",
+  "historyId" : "82392355cc74f1bf6827fdf107ab4955",
+  "time" : {
+    "start" : 1613711984946,
+    "stop" : 1613711984950,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: pageInstance is not defined",
+  "statusTrace" : "ReferenceError: pageInstance is not defined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:94:29\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "90be6f9bab165f7a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/90be6f9bab165f7a",
+        "status" : "failed",
+        "statusDetails" : "ReferenceError: pageInstance is not defined",
+        "time" : {
+          "start" : 1613029290302,
+          "stop" : 1613029290305,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "42e7fb3246a411e8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/42e7fb3246a411e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407118073,
+          "stop" : 1612407124210,
+          "duration" : 6137
+        }
+      }, {
+        "uid" : "6e6fe59755d3da2a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6e6fe59755d3da2a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273155063,
+          "stop" : 1612273159882,
+          "duration" : 4819
+        }
+      }, {
+        "uid" : "1c640328d075527b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/1c640328d075527b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272857573,
+          "stop" : 1612272862151,
+          "duration" : 4578
+        }
+      }, {
+        "uid" : "32e54d5bca0bf190",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/32e54d5bca0bf190",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172175808,
+          "stop" : 1612172185813,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4e8bd3b4aac0b8f8.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,114 @@
+{
+  "total" : 15,
+  "items" : [ {
+    "uid" : "7467bfe6e847b44512fe6da9985739c9",
+    "name" : "Use expired discount voucher when logging in with Metamask",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "c6dacab8af1d585aed85ab63134c8e63",
+    "name" : "Buy horse with credit card",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "320a5c249c400eb3f1d989c1ce23d60f",
+    "name" : "Purchase horse with ETH",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "210be3302cd9afc9b2f9f5aa8a06f97e",
+    "name" : "Pick horses and add into the entry with fee racing when logged by Magic Link",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "98f25b7d76f5c3b5b6af95458353917f",
+    "name" : "Use fixed discount voucher to buy horse with ETH while logging in with Metamask",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "060d36920a9dbf733f1c484922467ed5",
+    "name" : "Withdraw from ZED balance by logging in with magic link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "c8e90b01a8cfd94b38c4b9ce00566e3f",
+    "name" : "Deposite to ZED balance by logging in with magic link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "1ba5cdd3303c3bb574b2bad9cf0ac981",
+    "name" : "Pick horses and add into the free racing when logged by Magic Link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "1fe66c06dfdb9a9ed22b1d0229609080",
+    "name" : "Login to ZedRun with magic link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
+    "uid" : "cd9edd7426ad708e66929e27cee31029",
+    "name" : "Use percent discount voucher to buy horse with card while logging in with Metamask",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 4
+    }
+  } ]
+}

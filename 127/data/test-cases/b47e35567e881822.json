@@ -1,0 +1,46 @@
+{
+  "uid" : "b47e35567e881822",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the free racing when logged by Meta Mask.Check that the ZED app is loading successfully",
+  "historyId" : "fe8c9671e2dfb92daac52f1f417f64db",
+  "time" : {
+    "start" : 1613712231856,
+    "stop" : 1613712235599,
+    "duration" : 3743
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b47e35567e881822.json",
+  "parameterValues" : [ ]
+}

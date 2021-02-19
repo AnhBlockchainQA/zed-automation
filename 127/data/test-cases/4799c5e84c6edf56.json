@@ -1,0 +1,83 @@
+{
+  "uid" : "4799c5e84c6edf56",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open new browser with magic link",
+  "historyId" : "7fb3acdd8bf83acf8238a6b8e4bd7799",
+  "time" : {
+    "start" : 1613713528480,
+    "stop" : 1613713535729,
+    "duration" : 7249
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "704251afdb3727e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613713210903,
+        "stop" : 1613713218339,
+        "duration" : 7436
+      }
+    }, {
+      "uid" : "acf2db1defbc4d43",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613712841925,
+        "stop" : 1613712849018,
+        "duration" : 7093
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "be3b9b6ac5c1c73b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/be3b9b6ac5c1c73b",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613030936373,
+          "stop" : 1613030936635,
+          "duration" : 262
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4799c5e84c6edf56.json",
+  "parameterValues" : [ ]
+}

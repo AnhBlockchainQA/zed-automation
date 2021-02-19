@@ -1,0 +1,46 @@
+{
+  "uid" : "5ed727a57f1b964",
+  "name" : "Update metamask info",
+  "fullName" : "Pick horses and add into the free racing when logged by Meta Mask.Update metamask info",
+  "historyId" : "a948fbb03ab182f78a6461a879eee049",
+  "time" : {
+    "start" : 1613712218701,
+    "stop" : 1613712222297,
+    "duration" : 3596
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5ed727a57f1b964.json",
+  "parameterValues" : [ ]
+}

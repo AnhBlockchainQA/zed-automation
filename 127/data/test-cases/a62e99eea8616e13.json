@@ -1,0 +1,113 @@
+{
+  "uid" : "a62e99eea8616e13",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Login to ZedRun with magic link.Check mail inbox to get magic link",
+  "historyId" : "cd0f6d76505163a3705987b739891292",
+  "time" : {
+    "start" : 1613715821784,
+    "stop" : 1613715822973,
+    "duration" : 1189
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/login/magicLink.test.js:44:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "94bf744036753735",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/94bf744036753735",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1613032625565,
+          "stop" : 1613032626783,
+          "duration" : 1218
+        }
+      }, {
+        "uid" : "58d0041a38599b94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/58d0041a38599b94",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612409267612,
+          "stop" : 1612409268767,
+          "duration" : 1155
+        }
+      }, {
+        "uid" : "398ec3af499f60a1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/398ec3af499f60a1",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612278258684,
+          "stop" : 1612278259939,
+          "duration" : 1255
+        }
+      }, {
+        "uid" : "c31224bb978635a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/c31224bb978635a",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612278200860,
+          "stop" : 1612278202120,
+          "duration" : 1260
+        }
+      }, {
+        "uid" : "6cdbcda31341abb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/6cdbcda31341abb",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612172514996,
+          "stop" : 1612172516983,
+          "duration" : 1987
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a62e99eea8616e13.json",
+  "parameterValues" : [ ]
+}

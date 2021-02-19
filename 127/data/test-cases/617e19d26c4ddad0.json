@@ -1,0 +1,46 @@
+{
+  "uid" : "617e19d26c4ddad0",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Check mail inbox to get magic link",
+  "historyId" : "af6fc71f0d59d09912631a0c62447784",
+  "time" : {
+    "start" : 1613715219960,
+    "stop" : 1613715220918,
+    "duration" : 958
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "617e19d26c4ddad0.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,94 @@
+{
+  "uid" : "b2b79ad7f117362d",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "728c37c81976432dd8a3c7eae7b6d5e1",
+  "time" : {
+    "start" : 1613711825735,
+    "stop" : 1613711830881,
+    "duration" : 5146
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "6fb8acc98ed0f6dc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/6fb8acc98ed0f6dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029249150,
+          "stop" : 1613029254699,
+          "duration" : 5549
+        }
+      }, {
+        "uid" : "6b24a221f92dd9cd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6b24a221f92dd9cd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272517696,
+          "stop" : 1612272522306,
+          "duration" : 4610
+        }
+      }, {
+        "uid" : "b8ef2a7d943a78f4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/b8ef2a7d943a78f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272222085,
+          "stop" : 1612272226658,
+          "duration" : 4573
+        }
+      }, {
+        "uid" : "3ac1d6da206b8b74",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/3ac1d6da206b8b74",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172148548,
+          "stop" : 1612172158553,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b2b79ad7f117362d.json",
+  "parameterValues" : [ ]
+}
