@@ -63,7 +63,7 @@ class RacingPage {
             "--- Zed Run Automation Framework: Wait until the open gates display---"
         );
         const listGateElement = ".buy-in-content .pick-gate .gate-group .gate-btn";
-        await this.page.waitForSelector(listGateElement, {timeout: 0});
+        await this.page.waitForSelector(listGateElement, {timeout: 20000});
         let listOfGate = [];
 
         const size = await this.page.evaluate((locator) => {
@@ -324,6 +324,8 @@ class RacingPage {
     async waitForLoadState() {
         await this.page.waitForLoadState();
     }
+
+
     async validateOpenGatesListSizeCorrect(expectedValue, actualValue) {
         console.log(
             "--- Zed Run Automation Framework: Check if open gates list size is correct ---"

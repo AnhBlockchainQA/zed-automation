@@ -27,22 +27,15 @@ const {
   SEARCH_INPUT,
   MY_STABLE_HORSE_LIST,
   CUSTOM_HORSE,
-
-  FILTER_BUTTON,
-  GENDER_SPAN,
-  COLT_CHECKBOX,
-  STALLION_CHECKBOX,
-  MY_STABLE_MALE_HORSES,
-  SELECTED_MALE_HORSE,
-  CUSTOM_BREED_BUTTON,
   STUD_DURATION,
-  NEXT_BUTTON,
-  CLOSE_BUTTON,
   SEVEN_DAYS_OPTION,
   ONE_DAY_OPTION,
   THREE_DAYS_OPTION,
-  TOTAL_THOROUGHBREDS,
-  NUMBER_HORSE,
+    NUMBER_HORSE,
+    NEW_BORN_HORSE,
+    BUTTON_NAME,
+    REFER_EMAIL_INPUT,
+    SEND_REFER_BUTTON
 } = require("../locators/MyStable");
 const stringUtils = require("../utils/api/stringUtils");
 const { REGEX } = require("../data/env");
@@ -239,6 +232,21 @@ class MyStablePage {
     } catch {
       throw new Error("Next button is not found");
     }
+  }
+
+  async validateNewBornHorseDisplaysOnStablePage() {
+      console.log("--- Zed Run Automation Framework: Validate the New Born Horse displays on Stable page ---");
+      await this.page.waitForLoadState();
+      await this.page.waitForSelector(NUMBER_HORSE, { timeout: 10000 });
+
+      const getFirstHorseName = await this.page.innerText(NEW_BORN_HORSE);
+      const checkNameButton = await this.page.isVisible(BUTTON_NAME);
+      if(getFirstHorseName === 'Newborn' && checkNameButton === true){
+        console.log('The new born horse displays on the Stable page');
+      }
+      else {
+        throw new Error('The new born horse did not display on Stable page');
+      }
   }
 
   async validateRaceHorseDisplayCorrectly() {
@@ -438,16 +446,16 @@ class MyStablePage {
 
   async clickOnConfirmButton() {
     console.log(
-      "--- Zed Run Automation Framework: Click on Confirm button ---"
-    );
-    try {
-      await this.page.waitForSelector(HORSE_NOMINATION_CONFIRM_BUTTON, {
-        timeout: 0,
-      });
-      await this.page.click(HORSE_NOMINATION_CONFIRM_BUTTON);
-    } catch {
-      throw new Error("Confirm button is not present or not clickable");
-    }
+          "--- Zed Run Automation Framework: Click on Confirm button ---"
+      );
+      try {
+          await this.page.waitForSelector(HORSE_NOMINATION_CONFIRM_BUTTON, {
+              timeout: 0,
+          });
+          await this.page.click(HORSE_NOMINATION_CONFIRM_BUTTON);
+      } catch {
+          throw new Error("Confirm button is not present or not clickable");
+      }
   }
 
   async waitUntilLoadingIconHidden() {
@@ -489,12 +497,44 @@ class MyStablePage {
       CUSTOM_HORSE,
       name
     );
-    await this.page.waitForSelector(locator, { timeout: 0 });
+    await this.page.waitForSelector(locator, { timeout: 10000 });
     const actualName = await this.page.innerText(locator);
     if (!actualName.includes(name)) {
       throw new Error(`Horse with name ${name} not found!`);
     }
   }
+
+    async enterEmail(email) {
+        try {
+            console.log(
+                "--- Zed Run Automation Framework: Enter an friend's email into email field ---"
+            );
+            await expect(this.page).toHaveSelector(REFER_EMAIL_INPUT, {
+                visible: true,
+                timeout: 10000,
+            });
+            await this.page.type(REFER_EMAIL_INPUT, email, { delay: 100 });
+        } catch {
+            throw new Error("Email input field is not present yet!");
+        }
+    }
+
+    async clickSendButton() {
+        console.log(
+            "--- Zed Run Automation Framework: Click on Send button to send a coupon to refer friend---"
+        );
+        try {
+            await this.page.waitForSelector(SEND_REFER_BUTTON, { timeout: 10000 });
+            const checkVisible = await this.page.isVisible(SEND_REFER_BUTTON);
+            if(checkVisible){
+                await this.page.click(SEND_REFER_BUTTON);
+            }
+
+        } catch {
+            throw new Error("Send button is not present or not clickable");
+        }
+    }
+
 }
 
 module.exports = { MyStablePage };

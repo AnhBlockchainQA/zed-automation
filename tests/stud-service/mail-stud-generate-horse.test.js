@@ -2,6 +2,7 @@ const { LoginPage } = require("../../pages/LoginPage");
 const { HomePage } = require("../../pages/HomePage");
 const { StudServicePage } = require("../../pages/StudServicePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
+const {MyStablePage} = require('../../pages/MyStablePage');
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const { ACCOUNT_LIST } = require("../../data/env");
 const apiRequest = require("../../utils/api/api");
@@ -22,6 +23,7 @@ var index;
 var malehorseName;
 var actualSelectHorse;
 var femalehorseName;
+var stablePage;
 
 const EMAIL = ACCOUNT_LIST.SIXTH_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.SIXTH_ACCOUNT.LOGIN;
@@ -108,20 +110,30 @@ describe("Generate stud horse", () => {
     await studServicePage.waitForLoadState();
   });
 
-  // test(
-  //   "Go to Activity page and check if we breed successfully",
-  //   3,
-  //   async () => {
-  //     studServicePage = new StudServicePage(pageInstance);
-  //     await studServicePage.waitForLoadState();
-  //     await studServicePage.clickOnCheckActivityButton();
-  //     activityPage = new ActivityPage(newPageInstance);
-  //     await activityPage.checkIfStatementInfoCorrect(
-  //       malehorseName,
-  //       femalehorseName
-  //     );
-  //   }
-  // );
+  test(
+    "Go to Activity page and check if we breed successfully",
+    3,
+    async () => {
+      studServicePage = new StudServicePage(pageInstance);
+      await studServicePage.waitForLoadState();
+      await studServicePage.clickOnCheckActivityButton();
+      activityPage = new ActivityPage(newPageInstance);
+      await activityPage.checkIfStatementInfoCorrect(
+        malehorseName,
+        femalehorseName
+      );
+    }
+  );
+
+    test(
+        "Go to Stable page and verify there is a new horse",
+        3,
+        async () => {
+            await homePage.navigateToMyStablePage();
+            stablePage = new MyStablePage(pageInstance);
+            await stablePage.validateNewBornHorseDisplaysOnStablePage();
+        }
+    );
 });
 
 afterAll(async (done) => {

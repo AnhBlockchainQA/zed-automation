@@ -21,8 +21,6 @@ class EventsPage{
 
         await expect(numberRacesOpen).toBeGreaterThan(0);
         await expect(numberOfEvents).toBeGreaterThan(0);
-
-
     }
 
 
