@@ -17,7 +17,6 @@ var pageInstance;
 var newPageInstance;
 var homePage;
 var marketPlacePage;
-var discountPrice;
 
 const EMAIL = ACCOUNT_LIST.FOURTH_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.FOURTH_ACCOUNT.LOGIN;
@@ -27,7 +26,7 @@ beforeAll(async () => {
   pageFactory.removeCache();
 });
 
-describe("Use expired discount voucher when logging in with magic link", () => {
+describe("Buy horse with ETH when logging in with magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,
@@ -68,21 +67,13 @@ describe("Use expired discount voucher when logging in with magic link", () => {
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
     await marketPlacePage.waitForLoadState();
+    firstHorseName = await marketPlacePage.getHorseName();
+    originalPrice = await marketPlacePage.getHorsePrice();
   });
 
-  test("Apply the discount coupon : ANH_TEST", 3, async () => {
-    await marketPlacePage.waitForLoadState();
-    firstHorseName = await marketPlacePage.getHorseName();
-    let originalPrice = await marketPlacePage.getHorsePriceInETH();
-    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPriceInETH(discountPrice);
-  });
+  
+
+ 
 });
 
 afterAll(async (done) => {

@@ -1,6 +1,6 @@
 module.exports = {
     LIST_HORSE: ".marketplace-content .horse-sale-card.horse-details",
-    FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(1) > .preview > .preview-horse",
+    FIRST_HORSE_PREVIEW: ".ifs > .row > .horse-sale-card:nth-child(6) > .preview > .preview-horse",
     DOWNWARD_ARROW : "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__toggle']/img",
     COUPON_INPUT: "//div[contains(@class,'buy-modal-content')]/div[@class='buy-method-choice']/div[@class='method-options']/div[@class='have-a-zed-coupon']//div[@class='collapsible__content']//input[@placeholder='Coupon code']",
     APPLY_BUTTON: ".method-options > .have-a-zed-coupon > .collapsible > .collapsible__content > .secondary-btn",

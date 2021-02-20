@@ -1,5 +1,5 @@
 const { REGEX } = require("../data/env");
-const { TRANSACTION_ACTION, CHARGE_AMOUNT, ETH_CHARGE_AMOUNT, SPINNER_ICON } = require("../locators/Detail");
+const { TRANSACTION_ACTION, CHARGE_AMOUNT, ETH_CHARGE_AMOUNT, TRANSACTION_STATUS } = require("../locators/Detail");
 const stringUtils = require("../utils/api/stringUtils");
 class DetailPage {
   constructor(page) {
@@ -71,6 +71,19 @@ class DetailPage {
           `Assertion failed: Charge amount ${chargeAmount} is different to expected amount ${amount}`
         );
       }
+    }
+  }
+
+  async verifyTransactionStatus(){
+    console.log(
+      "---- Zed Run Automation Framework: Check if the transaction is processed succesfully ---",
+      amount
+    );
+    await this.page.waitForLoadState();
+    await this.page.waitForSelector(TRANSACTION_STATUS, {timeout: 0});
+    const status = await this.page.innerText(TRANSACTION_STATUS);
+    if(status !== "Success"){
+      throw new Error(`Assertion failed: Transaction status ${status} is different to expected status 'Success'`);
     }
   }
 }

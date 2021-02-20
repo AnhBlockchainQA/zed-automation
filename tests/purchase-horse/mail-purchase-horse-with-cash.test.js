@@ -5,6 +5,16 @@ const test = require("jest-retries");
 const { ACCOUNT_LIST } = require("../../data/env");
 const { PageFactory } = require("../../utils/browser/pageFactory");
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const { ActivityPage } = require("../../pages/ActivityPage");
+const { DetailPage } = require("../../pages/DetailPage"); 
+const { MyStablePage } = require("../../pages/MyStablePage"); 
+const { PaymentPage } = require("../../pages/PaymentPage");
+const { VIEW_DETAILS_BUTTON } = require("../../locators/Activity");
+const {
+  CARD_NUMBER,
+  CARD_EXPIRATION_DATE,
+  CARD_CVC,
+} = require("../../data/env");
 const apiRequest = require("../../utils/api/api");
 
 var pageFactory = new PageFactory();
@@ -17,6 +27,12 @@ var newPageInstance;
 var homePage;
 var marketPlacePage;
 var discountPrice;
+var myStablePage;
+var activityPage;
+var detailPage;
+var paymentPage;
+var firstHorseName;
+var originalPrice;
 
 const EMAIL = ACCOUNT_LIST.FIFTH_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.FIFTH_ACCOUNT.LOGIN;
@@ -63,47 +79,54 @@ describe("Buy horse with credit card when logging in with magic link", () => {
     marketPlacePage = new MarketplacePage(pageInstance);
     await marketPlacePage.waitForLoadState();
     await marketPlacePage.clickOnAcceptButton();
-    noOfHorses = await marketPlacePage.getNumberOfHorses();
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
     await marketPlacePage.waitForLoadState();
+    firstHorseName = await marketPlacePage.getHorseName();
+    originalPrice = await marketPlacePage.getHorsePrice();
   });
 
-  test("Process the checkout with ETH", 3, async () => {
-    paymentPage = new PaymentPage(newPageInstance);
-    await paymentPage.clickOnBuyWithETH();
-    await paymentPage.waitForLoadState();
-    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPageWithJs(
-      newPageInstance,
-      CONFIRM_BUTTON
-    );
-    anotherMetamaskNotificationPage = new MetamaskNotificationPage(
-      anotherMetamaskNotificationInstance
-    );
-    await anotherMetamaskNotificationPage.waitForLoadState();
-    await anotherMetamaskNotificationPage.clickOnConfirmButton();
-    await anotherMetamaskNotificationPage.waitForCloseEvent();
-  });
-
-  test("Verify that our order is performed", 3, async () => {
-    await paymentPage.bringToFront();
+  test("Process the checkout with banking account and check value", 1, async () => {
+    paymentPage = new PaymentPage(pageInstance);
+    await paymentPage.clickOnBuyWithCreditCardButton();
+    await paymentPage.waitUntilPaymentFormPresent();
+    await paymentPage.clickOnUseDifferentCardIfNeed();
+    await paymentPage.typeCreditCardNumber(CARD_NUMBER);
+    await paymentPage.typeCreditCardExpirationDate(CARD_EXPIRATION_DATE);
+    await paymentPage.typeCreditCardCVC(CARD_CVC);
+    await paymentPage.clickPayButton();
     await paymentPage.checkPaySuccessfulLabelPresent();
     await paymentPage.clickDoneButton();
-    activityPage = new ActivityPage(newPageInstance);
+  }
+);
+
+  test("Verify that our order is processing", 3, async () => {
+    activityPage = new ActivityPage(pageInstance);
     await activityPage.bringToFront();
     await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
 
   test("Check the detail payment", 3, async () => {
+    activityPage = new ActivityPage(pageInstance);
     await activityPage.mouseOverFirstStatementInfo();
-    otherPageInstance = await metamaskFactory.clickNewPage(
+    otherPageInstance = await pageFactory.clickNewPage(
       newPageInstance,
       VIEW_DETAILS_BUTTON
     );
     detailPage = new DetailPage(otherPageInstance);
     await detailPage.bringToFront();
     await detailPage.waitForLoadState();
-    await detailPage.verifyChargeAmountInETH(discountPrice.toString());
+    await detailPage.verifyTransactionInfo(firstHorseName);
+    await detailPage.verifyChargeAmount(originalPrice);
+    });
+
+  test("Go back to user stable and check if horse is transferred", async() => {
+    activityPage = new ActivityPage(pageInstance);
+    await activityPage.bringToFront();
+    await activityPage.clickOnUserAvatar();
+    myStablePage = new MyStablePage(pageInstance);
+    await myStablePage.searchForHorse(firstHorseName);
+    await myStablePage.verifySearchResultContainHorse(firstHorseName);
   });
 });
 

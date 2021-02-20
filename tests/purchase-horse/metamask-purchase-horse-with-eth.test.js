@@ -17,6 +17,8 @@ const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
+const { DetailPage } = require("../../pages/DetailPage");
+const { MyStablePage } = require("../../pages/MyStablePage");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -35,6 +37,10 @@ var paymentPage;
 var homePage;
 var activityPage;
 var noOfHorses;
+var detailPage;
+var myStablePage;
+var firstHorseName;
+var originalPrice;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -91,35 +97,23 @@ describe("Purchase horse with ETH", () => {
   });
 
   test("Go to Marketplace and select first horse", 3, async () => {
-    homePage = new HomePage(pageInstance);
+    homePage = new HomePage(newPageInstance);
     await homePage.bringToFront();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(pageInstance);
+    marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.waitForLoadState();
     await marketPlacePage.clickOnAcceptButton();
     noOfHorses = await marketPlacePage.getNumberOfHorses();
     await marketPlacePage.mouseOverFirstHorse();
     await marketPlacePage.clickFirstHorsePreview();
     await marketPlacePage.waitForLoadState();
-  });
-
-  test("Apply the discount coupon : ANH_TEST", 3, async () => {
-    await marketPlacePage.waitForLoadState();
     firstHorseName = await marketPlacePage.getHorseName();
-    let originalPrice = await marketPlacePage.getHorsePriceInETH();
-    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
-    await marketPlacePage.clickOnDownwardArrow();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPriceInETH(discountPrice);
+    originalPrice = await marketPlacePage.getHorsePriceInETH();
   });
 
   test("Process the checkout with ETH", 3, async () => {
-    paymentPage = new PaymentPage(pageInstance);
+    paymentPage = new PaymentPage(newPageInstance);
     await paymentPage.waitForLoadState();
     await paymentPage.clickOnBuyWithETH();
     await paymentPage.waitForLoadState();
@@ -138,13 +132,23 @@ describe("Purchase horse with ETH", () => {
   test("Check the detail payment", 3, async () => {
     await activityPage.mouseOverFirstStatementInfo();
     otherPageInstance = await pageFactory.clickNewPage(
-      pageInstance,
+      newPageInstance,
       VIEW_DETAILS_BUTTON
     );
     detailPage = new DetailPage(otherPageInstance);
     await detailPage.bringToFront();
     await detailPage.waitForLoadState();
-    await detailPage.verifyChargeAmountInETH(discountPrice.toString());
+    await detailPage.verifyChargeAmountInETH(originalPrice);
+    await detailPage.verifyTransactionStatus();
+  });
+
+  test("Go back to user stable and check if horse is transferred", 3, async () => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.bringToFront();
+    await activityPage.clickOnUserAvatar();
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.searchForHorse(firstHorseName);
+    await myStablePage.verifySearchResultContainHorse(firstHorseName);
   });
 });
 

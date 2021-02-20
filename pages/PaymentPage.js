@@ -185,7 +185,7 @@ class PaymentPage {
     }
   }
 
-  async waitForLoadState(){
+  async waitForLoadState() {
     await this.page.waitForLoadState();
   }
 
@@ -194,26 +194,26 @@ class PaymentPage {
       "--- Zed Run Automation Framework: Click on Use different card if needed ---"
     );
     try {
-      await expect(this.page).toHaveSelector(USE_DIFFERENT_CARD_BUTTON, {
-        timeout: 10000,
+      await this.page.waitForSelector(USE_DIFFERENT_CARD_BUTTON, {
+        timeout: 15000,
       });
       await this.page.click(USE_DIFFERENT_CARD_BUTTON);
     } catch {
-      throw new Error("Element is not present! We did not have saved card yet!");
+      console.log("No credit card is saved! Skip this step");
     }
   }
 
-  async clickOnConfirmButton(){
+  async clickOnConfirmButton() {
     console.log(
       "--- Zed Run Automation Framework: Click on Confirm button to process ETH checkout process ---"
     );
-    try{
-      await this.page.waitForSelector(CONFIRM_BUTTON , {timeput: 0});
-      await this.page.evaluate(locator => {
+    try {
+      await this.page.waitForSelector(CONFIRM_BUTTON, { timeput: 0 });
+      await this.page.evaluate((locator) => {
         document.querySelector(locator).click();
       }, CONFIRM_BUTTON);
       await this.page.waitForLoadState();
-    }catch{
+    } catch {
       throw new Error("Button Confirm is not present or not clickable");
     }
   }
