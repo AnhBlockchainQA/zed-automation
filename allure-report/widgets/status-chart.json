@@ -1,1 +1,71 @@
-[ ]
+[ {
+  "uid" : "1bfe06b6258b6be7",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1615185651166,
+    "stop" : 1615185771217,
+    "duration" : 120051
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8011a4c29369cf4",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1615185771217,
+    "stop" : 1615185883191,
+    "duration" : 111974
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b73fb808cff18eb8",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1615185883191,
+    "stop" : 1615185883193,
+    "duration" : 2
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1d6fe63b1ff459d8",
+  "name" : "Apply the discount coupon : ANH_TEST",
+  "time" : {
+    "start" : 1615185883193,
+    "stop" : 1615185883194,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb0d49a16a0743bc",
+  "name" : "Process the checkout with banking account and check value",
+  "time" : {
+    "start" : 1615185883194,
+    "stop" : 1615185883196,
+    "duration" : 2
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1bd31f4f23f746b1",
+  "name" : "Verify that our order is processing",
+  "time" : {
+    "start" : 1615185883196,
+    "stop" : 1615185883197,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b609003b70d92eb8",
+  "name" : "Check the detail payment",
+  "time" : {
+    "start" : 1615185883197,
+    "stop" : 1615185883198,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

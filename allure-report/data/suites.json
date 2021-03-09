@@ -1,5 +1,100 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "name" : "suites",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Buy horse with credit card",
+    "children" : [ {
+      "name" : "Update metamask info",
+      "uid" : "1bfe06b6258b6be7",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185651166,
+        "stop" : 1615185771217,
+        "duration" : 120051
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Open ZedRun page and click Connnect Metamask",
+      "uid" : "e8011a4c29369cf4",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185771217,
+        "stop" : 1615185883191,
+        "duration" : 111974
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Go to Marketplace and select first horse",
+      "uid" : "b73fb808cff18eb8",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185883191,
+        "stop" : 1615185883193,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Apply the discount coupon : ANH_TEST",
+      "uid" : "1d6fe63b1ff459d8",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185883193,
+        "stop" : 1615185883194,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Process the checkout with banking account and check value",
+      "uid" : "bb0d49a16a0743bc",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185883194,
+        "stop" : 1615185883196,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Verify that our order is processing",
+      "uid" : "1bd31f4f23f746b1",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185883196,
+        "stop" : 1615185883197,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Check the detail payment",
+      "uid" : "b609003b70d92eb8",
+      "parentUid" : "c6dacab8af1d585aed85ab63134c8e63",
+      "status" : "failed",
+      "time" : {
+        "start" : 1615185883197,
+        "stop" : 1615185883198,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c6dacab8af1d585aed85ab63134c8e63"
+  } ]
 }

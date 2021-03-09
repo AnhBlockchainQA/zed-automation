@@ -1,0 +1,46 @@
+{
+  "uid" : "85a51ae854a3eca7",
+  "name" : "Process the checkout with banking account and check value",
+  "fullName" : "Buy horse with credit card.Process the checkout with banking account and check value",
+  "historyId" : "e1151f41d0af22772ce1791ec8768869",
+  "time" : {
+    "start" : 1615185834717,
+    "stop" : 1615185834718,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: pageInstance is not defined",
+  "statusTrace" : "ReferenceError: pageInstance is not defined\n                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:122:37)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)\n                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with banking account and check value"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85a51ae854a3eca7.json",
+  "parameterValues" : [ ]
+}

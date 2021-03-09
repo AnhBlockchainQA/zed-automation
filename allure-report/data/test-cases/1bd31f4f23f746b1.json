@@ -1,0 +1,142 @@
+{
+  "uid" : "1bd31f4f23f746b1",
+  "name" : "Verify that our order is processing",
+  "fullName" : "Buy horse with credit card.Verify that our order is processing",
+  "historyId" : "464f80f6d0a3b2ebda4faba567d40c3d",
+  "time" : {
+    "start" : 1615185883196,
+    "stop" : 1615185883197,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: pageInstance is not defined",
+  "statusTrace" : "ReferenceError: pageInstance is not defined\n                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:136:37)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is processing"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "dd61b90a9bfc8e6a",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185845666,
+        "stop" : 1615185845668,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "41f4afc0ba4cb9d4",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185834718,
+        "stop" : 1615185834719,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "82590dc825bd3c29",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185830419,
+        "stop" : 1615185830421,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "2f3c16370985612c",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185711110,
+        "stop" : 1615185711111,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "22c22b4cfd75f3ce",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185708829,
+        "stop" : 1615185708832,
+        "duration" : 3
+      }
+    }, {
+      "uid" : "ec2321b278c98a61",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185701987,
+        "stop" : 1615185701989,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "432914bc72a6b929",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185694208,
+        "stop" : 1615185694210,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "bbcc099ae0083e98",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185690732,
+        "stop" : 1615185690734,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "9a49a84a7e3e472c",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185646494,
+        "stop" : 1615185646496,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "e672f3f5b9358329",
+      "status" : "failed",
+      "statusDetails" : "Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.\n                ==================== Browser output: ====================\n                <launching> /Users/davidle/Library/Caches/ms-playwright/chromium-844399/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank\n                <launched> pid=75851\n                [out] Opening in existing browser session.\n                =========================== logs ===========================\n                <launching> /Users/davidle/Library/Caches/ms-playwright/chromium-844399/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank\n                <launched> pid=75851\n                [out] Opening in existing browser session.\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "time" : {
+        "start" : 1615185593229,
+        "stop" : 1615185593231,
+        "duration" : 2
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1bd31f4f23f746b1.json",
+  "parameterValues" : [ ]
+}

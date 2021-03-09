@@ -1,0 +1,46 @@
+{
+  "uid" : "e9264ec4f9aa7fe0",
+  "name" : "Check the detail payment",
+  "fullName" : "Buy horse with credit card.Check the detail payment",
+  "historyId" : "71c18f2903cfa7b04843638346b63fd",
+  "time" : {
+    "start" : 1615185711111,
+    "stop" : 1615185711113,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: pageInstance is not defined",
+  "statusTrace" : "ReferenceError: pageInstance is not defined\n                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:142:37)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e9264ec4f9aa7fe0.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,142 @@
+{
+  "uid" : "1d6fe63b1ff459d8",
+  "name" : "Apply the discount coupon : ANH_TEST",
+  "fullName" : "Buy horse with credit card.Apply the discount coupon : ANH_TEST",
+  "historyId" : "5c7a558abd9e570b4cc0951e1b0edbc6",
+  "time" : {
+    "start" : 1615185883193,
+    "stop" : 1615185883194,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'waitForLoadState' of undefined\n                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:105:27)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)\n                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ANH_TEST"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "10f43d1d6bc2e286",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185845663,
+        "stop" : 1615185845665,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "42d03329ab8f43e6",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185834715,
+        "stop" : 1615185834717,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "31045ad8b8c2a842",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185830416,
+        "stop" : 1615185830417,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "444ab81a16373b5d",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185711107,
+        "stop" : 1615185711109,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "d79e355f2e703a3e",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185708825,
+        "stop" : 1615185708827,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "bd29d61af13d1ae7",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185701980,
+        "stop" : 1615185701985,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "f14ce405cb2c2994",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185694204,
+        "stop" : 1615185694206,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "ff5cf65c5e6b76d2",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185690728,
+        "stop" : 1615185690730,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "5f1855d185cc0f14",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185646486,
+        "stop" : 1615185646491,
+        "duration" : 5
+      }
+    }, {
+      "uid" : "36a598f957f3b0d8",
+      "status" : "failed",
+      "statusDetails" : "Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.\n                ==================== Browser output: ====================\n                <launching> /Users/davidle/Library/Caches/ms-playwright/chromium-844399/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank\n                <launched> pid=75851\n                [out] Opening in existing browser session.\n                =========================== logs ===========================\n                <launching> /Users/davidle/Library/Caches/ms-playwright/chromium-844399/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/davidle/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/davidle/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank\n                <launched> pid=75851\n                [out] Opening in existing browser session.\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "time" : {
+        "start" : 1615185593225,
+        "stop" : 1615185593228,
+        "duration" : 3
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1d6fe63b1ff459d8.json",
+  "parameterValues" : [ ]
+}

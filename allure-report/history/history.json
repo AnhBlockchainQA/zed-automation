@@ -1,1 +1,142 @@
-{ }
+{
+  "5c7a558abd9e570b4cc0951e1b0edbc6" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1d6fe63b1ff459d8",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "time" : {
+        "start" : 1615185883193,
+        "stop" : 1615185883194,
+        "duration" : 1
+      }
+    } ]
+  },
+  "71c18f2903cfa7b04843638346b63fd" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b609003b70d92eb8",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185883197,
+        "stop" : 1615185883198,
+        "duration" : 1
+      }
+    } ]
+  },
+  "f20a6a35428e9b6bd5f78f5b0a318e0b" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b73fb808cff18eb8",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185883191,
+        "stop" : 1615185883193,
+        "duration" : 2
+      }
+    } ]
+  },
+  "e7046ae6ab695ba87c665b601cee7969" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e8011a4c29369cf4",
+      "status" : "failed",
+      "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "time" : {
+        "start" : 1615185771217,
+        "stop" : 1615185883191,
+        "duration" : 111974
+      }
+    } ]
+  },
+  "464f80f6d0a3b2ebda4faba567d40c3d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1bd31f4f23f746b1",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185883196,
+        "stop" : 1615185883197,
+        "duration" : 1
+      }
+    } ]
+  },
+  "572c0eb4919e20de857db98e36743d5d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1bfe06b6258b6be7",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1615185651166,
+        "stop" : 1615185771217,
+        "duration" : 120051
+      }
+    } ]
+  },
+  "e1151f41d0af22772ce1791ec8768869" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bb0d49a16a0743bc",
+      "status" : "failed",
+      "statusDetails" : "ReferenceError: pageInstance is not defined",
+      "time" : {
+        "start" : 1615185883194,
+        "stop" : 1615185883196,
+        "duration" : 2
+      }
+    } ]
+  }
+}

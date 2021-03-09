@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Mon Mar 08 13:40:51 ICT 2021","Mon Mar 08 13:42:51 ICT 2021","120051","","Buy horse with credit card","","Buy horse with credit card","Update metamask info","Update metamask info",""
+"failed","Mon Mar 08 13:42:51 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","111974","","Buy horse with credit card","","Buy horse with credit card","Open ZedRun page and click Connnect Metamask","Open ZedRun page and click Connnect Metamask",""
+"failed","Mon Mar 08 13:44:43 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","2","","Buy horse with credit card","","Buy horse with credit card","Go to Marketplace and select first horse","Go to Marketplace and select first horse",""
+"failed","Mon Mar 08 13:44:43 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","1","","Buy horse with credit card","","Buy horse with credit card","Apply the discount coupon : ANH_TEST","Apply the discount coupon : ANH_TEST",""
+"failed","Mon Mar 08 13:44:43 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","2","","Buy horse with credit card","","Buy horse with credit card","Process the checkout with banking account and check value","Process the checkout with banking account and check value",""
+"failed","Mon Mar 08 13:44:43 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","1","","Buy horse with credit card","","Buy horse with credit card","Verify that our order is processing","Verify that our order is processing",""
+"failed","Mon Mar 08 13:44:43 ICT 2021","Mon Mar 08 13:44:43 ICT 2021","1","","Buy horse with credit card","","Buy horse with credit card","Check the detail payment","Check the detail payment",""

@@ -1,5 +1,116 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Update metamask info",
+        "uid" : "1bfe06b6258b6be7",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185651166,
+          "stop" : 1615185771217,
+          "duration" : 120051
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "371beaf38fd0ea16fc522f9773bb38e9"
+    }, {
+      "name" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "e8011a4c29369cf4",
+        "parentUid" : "38a72788e955bc8f07c6ca699b6cdd39",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185771217,
+          "stop" : 1615185883191,
+          "duration" : 111974
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "38a72788e955bc8f07c6ca699b6cdd39"
+    }, {
+      "name" : "ReferenceError: pageInstance is not defined",
+      "children" : [ {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "b73fb808cff18eb8",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185883191,
+          "stop" : 1615185883193,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with banking account and check value",
+        "uid" : "bb0d49a16a0743bc",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185883194,
+          "stop" : 1615185883196,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is processing",
+        "uid" : "1bd31f4f23f746b1",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185883196,
+          "stop" : 1615185883197,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check the detail payment",
+        "uid" : "b609003b70d92eb8",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185883197,
+          "stop" : 1615185883198,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1c9cc76a85cb9d6525037847abb868e0"
+    }, {
+      "name" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "children" : [ {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "1d6fe63b1ff459d8",
+        "parentUid" : "c7b19248795c474bceb53082c7299ec9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615185883193,
+          "stop" : 1615185883194,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c7b19248795c474bceb53082c7299ec9"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

@@ -1,0 +1,46 @@
+{
+  "uid" : "31045ad8b8c2a842",
+  "name" : "Apply the discount coupon : ANH_TEST",
+  "fullName" : "Buy horse with credit card.Apply the discount coupon : ANH_TEST",
+  "historyId" : "5c7a558abd9e570b4cc0951e1b0edbc6",
+  "time" : {
+    "start" : 1615185830416,
+    "stop" : 1615185830417,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'waitForLoadState' of undefined\n                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:105:27)\n                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)\n                    at new Promise (<anonymous>)\n                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)\n                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)\n                    at new Promise (<anonymous>)\n                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ANH_TEST"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "31045ad8b8c2a842.json",
+  "parameterValues" : [ ]
+}
