@@ -123,5 +123,19 @@ class TransferHorsePage {
       throw new Error("Horse is not shown or not clickable");
     }
   }
+
+  async clickOnConfirmButton(){
+    console.log(
+      "--- Zed Run Automation Framework: Click on Confirm button --- "
+    );
+    try {
+      await this.page.waitForSelector(CONFIRM_BUTTON, {
+        timeout: 0,
+      });
+      return await this.page.click(CONFIRM_BUTTON);
+    } catch {
+      throw new Error("Horse is not shown or not clickable");
+    }
+  }
 }
 module.exports = { TransferHorsePage };

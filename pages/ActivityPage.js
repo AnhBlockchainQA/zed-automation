@@ -19,6 +19,11 @@ class ActivityPage {
     await this.page.waitForLoadState();
   }
 
+  async reloadPage(){
+    console.log("---- Zed Run Automation Framework: Reload the page ---")
+    await this.page.reload();
+  }
+
   async getStatementInfo() {
     try {
       console.log(
