@@ -46,7 +46,7 @@ class ActivityPage {
         "---- Zed Run Automation Framework: Validate statement info ---"
       );
       await expect(this.page).toHaveSelector(FIRST_STATEMENT_INFO, {
-        timeout: 0,
+        timeout: 10000,
       });
       let info = await this.getStatementInfo();
       console.log(" >>>>>>>>> Info: ", info);
