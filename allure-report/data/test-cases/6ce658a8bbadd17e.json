@@ -1,0 +1,46 @@
+{
+  "uid" : "6ce658a8bbadd17e",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Purchase horse with ETH.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "9d660e028acaf67e9a25c2d6baf2a3fc",
+  "time" : {
+    "start" : 1612347411103,
+    "stop" : 1612347424119,
+    "duration" : 13016
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6ce658a8bbadd17e.json",
+  "parameterValues" : [ ]
+}

@@ -29,5 +29,9 @@ module.exports = {
     MY_STABLE_LAST_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel'][last()]",
     SEARCH_INPUT: "#stable-filters-left input.search",
     MY_STABLE_HORSE_LIST : "#stable-main .row .accordion-content .accordion .panel",
-    CUSTOM_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='${name}']"
+    CUSTOM_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='${name}']",
+    NEW_BORN_HORSE: ".accordion-content .accordion .panel:nth-child(1) .label-content .left .primary-text.name",
+    BUTTON_NAME: ".accordion-content .accordion .panel:nth-child(1) .label-content .right button",
+    REFER_EMAIL_INPUT: ".top-part input[type='email']",
+    SEND_REFER_BUTTON: ".top-part button"
 };

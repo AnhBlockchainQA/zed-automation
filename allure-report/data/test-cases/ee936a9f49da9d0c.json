@@ -1,0 +1,46 @@
+{
+  "uid" : "ee936a9f49da9d0c",
+  "name" : "Update metamask info",
+  "fullName" : "Buy horse with credit card.Update metamask info",
+  "historyId" : "572c0eb4919e20de857db98e36743d5d",
+  "time" : {
+    "start" : 1612347137506,
+    "stop" : 1612347142210,
+    "duration" : 4704
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ee936a9f49da9d0c.json",
+  "parameterValues" : [ ]
+}
