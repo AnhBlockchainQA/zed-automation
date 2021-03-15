@@ -4,16 +4,22 @@ const { LoginPage } = require("../../pages/LoginPage");
 const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
-const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
-const { HomePage } = require("../../pages/HomePage");
-const { MyStablePage } = require("../../pages/MyStablePage");
-const test = require("jest-retries");
+const {
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
+  HORSE_LIST_SIZE,
+  SECOND_WALLET_ADDRESS
+} = require("../../data/env");
 const {
   CONNECT_METAMASK,
   AUTHENTICATE_BUTTON,
 } = require("../../locators/ZedRun");
-const faker = require("faker");
-const { THRESHOLD } = require("../../data/api");
+const { HomePage } = require("../../pages/HomePage");
+const test = require("jest-retries");
+const { TransferHorsePage } = require("../../pages/TransferHorsePage");
+const { CONFIRM_BUTTON } = require("../../locators/TransferHorse"); 
+const { MyStablePage } = require("../../pages/MyStablePage");
 
 var metamaskFactory = new MetamaskFactory();
 var metamaskPage;
@@ -24,18 +30,20 @@ var metamaskNotificationInstance;
 var metamaskNotificationPage;
 var otherMetamaskNotificationInstance;
 var otherMetamaskNotificationPage;
-var index;
 var homePage;
+var transferHorsePage;
+var anotherMetamaskNotificationInstance;
+var anotherMetamaskNotificationPage;
+var horseName;
 var myStablePage;
-const horseName = faker.name.firstName();
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Give a name to newborn horse when logging in with Metamask", () => {
-  test("Update metamask info", 3, async () => {
+describe("Transfer horse to other wallet address - Logging with Metamask", () => {
+  test("Update metamask info", async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -51,7 +59,7 @@ describe("Give a name to newborn horse when logging in with Metamask", () => {
     await metamaskPage.clickOnGoerliNetwork();
   });
 
-  test("Open ZedRun page and click Connnect Metamask", 3, async () => {
+  test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
@@ -83,40 +91,59 @@ describe("Give a name to newborn horse when logging in with Metamask", () => {
     await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Click on Accept button to close the cookie popup", async () => {
+  test("Wait until homepage is loading", async () => {
     homePage = new HomePage(newPageInstance);
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnAcceptButton();
     await homePage.waitForLoadState();
   });
 
-  /** Stud service : Temporaly closed **/
-  // test("Scroll to horse with index", async () => {
-  //   myStablePage = new MyStablePage(newPageInstance);
-  //   await myStablePage.waitForLoadState();
-  //   index = await myStablePage.getRandomIndexOfNewBornHorse();
-  //   await myStablePage.scrollToNewbornHorseWithIndex(index, THRESHOLD);
-  // });
+  test("Go to My Settings page then click on Select Racehorse", async () => {
+    homePage = new HomePage(newPageInstance);
+    await homePage.clickOnUserMenuArrow();
+    await homePage.waitForLoadState();
+    await homePage.clickOnMySettingsLink();
+    await homePage.waitForLoadState();
+    await homePage.clickOnSelectRaceHorseButton();
+    await homePage.waitForLoadState();
+  });
 
-  // test("Complete the horse nomination process", async () => {
-  //   myStablePage = new MyStablePage(newPageInstance);
-  //   await myStablePage.waitForLoadState();
-  //   await myStablePage.clickOnNewbornHorseWithIndex(index);
-  //   await myStablePage.clickOnOkayButton();
-  //   await myStablePage.enterNewbornHorseName(horseName);
-  //   await myStablePage.checkOnCheckbox();
-  //   await myStablePage.clickOnConfirmButton();
-  //   await myStablePage.waitUntilLoadingIconHidden();
-  //   await myStablePage.waitForLoadState();
-  // });
+  test("Select horse then click on Transfer button", async () => {
+    transferHorsePage = new TransferHorsePage(newPageInstance);
+    await transferHorsePage.checkIfTransferHorseListShown(HORSE_LIST_SIZE);
+    horseName = await transferHorsePage.getNameOfFirstHorse();
+    await transferHorsePage.hoverOnFirstHorseToBeTransfered();
+    await transferHorsePage.clickOnSelectButtonOfFirstHorse();
+    await transferHorsePage.typeAddress(SECOND_WALLET_ADDRESS);
+    await transferHorsePage.clickOnTransactionFee();
+    await transferHorsePage.clickOnTransferButton();
+  });
 
-  // test("Verify if the newborn horse name is updated", async () => {
-  //   myStablePage = new MyStablePage(newPageInstance);
-  //   await myStablePage.waitForLoadState();
-  //   await myStablePage.searchForHorse(horseName);
-  //   await myStablePage.waitForLoadState();
-  //   await myStablePage.verifySearchResultContainHorse(horseName);
-  // });
+  test("Confirm the transfer", async () => {
+    anotherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      CONFIRM_BUTTON
+    );
+    anotherMetamaskNotificationPage = new MetamaskNotificationPage(
+      anotherMetamaskNotificationInstance
+    );
+    await anotherMetamaskNotificationPage.waitForLoadState();
+    await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    await anotherMetamaskNotificationPage.waitForCloseEvent();
+    await anotherMetamaskNotificationPage.waitForLoadState();
+  });
+
+  test("Check that we can not search this horse anymore", async() => {
+    await homePage.bringToFront();
+    await homePage.clickOnUserAvatar();
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    await myStablePage.searchForHorse(horseName);
+    await myStablePage.verifySearchResultDidNotContainHorse(horseName);
+
+  })
+
+
 });
 
 afterAll(async (done) => {

@@ -1,5 +1,5 @@
 const { FIRST_STATEMENT_INFO, VIEW_DETAILS_BUTTON } = require("../locators/Activity");
-const { BREEDING_LINK } = require("../locators/ZedRun");
+const { BREEDING_LINK, USER_AVATAR } = require("../locators/ZedRun");
 
 class ActivityPage {
   constructor(page) {
@@ -17,6 +17,11 @@ class ActivityPage {
 
   async waitForLoadState() {
     await this.page.waitForLoadState();
+  }
+
+  async reloadPage(){
+    console.log("---- Zed Run Automation Framework: Reload the page ---")
+    await this.page.reload();
   }
 
   async getStatementInfo() {
@@ -88,6 +93,18 @@ class ActivityPage {
     throw new Error('View details button is not present');
   }
 }
+
+  async clickOnUserAvatar(){
+    console.log(
+      "---- Zed Run Automation Framework: Click on User Avatar to go to my stable ---"
+    );
+    try{
+      await this.page.waitForSelector(USER_AVATAR, {timeout: 0});
+      await this.page.click(USER_AVATAR);
+    }catch{
+      throw new Error('User avatar is not present');
+    }
+  }
  
 }
 

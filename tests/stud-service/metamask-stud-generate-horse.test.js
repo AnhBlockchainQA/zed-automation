@@ -36,6 +36,24 @@ beforeAll(async () => {
     metamaskInstance = await metamaskFactory.init();
 });
 
+<<<<<<< HEAD
+describe("Generate stud horse when logging in Metamask", () => {
+  test("Update metamask info", async () => {
+    metamaskPage = new MetamaskPage(metamaskInstance);
+    await metamaskPage.clickOnGetStartedButton();
+    await metamaskPage.clickOnImportWalletButton();
+    await metamaskPage.clickOnIAgreeButton();
+    await metamaskPage.typeSeedPhase(SEED_PHRASE);
+    await metamaskPage.typeNewPassword(PASSWORD);
+    await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
+    await metamaskPage.checkTermsAndConditionCheckBox();
+    await metamaskPage.clickImportButton();
+    await metamaskPage.clickOnAllDoneButton();
+    await metamaskPage.clickOnCloseButton();
+    await metamaskPage.clickOnNetworkDropdown();
+    await metamaskPage.clickOnGoerliNetwork();
+  });
+=======
 describe("Generate stud horse", () => {
     test("Update metamask info", async () => {
         metamaskPage = new MetamaskPage(metamaskInstance);
@@ -52,6 +70,7 @@ describe("Generate stud horse", () => {
         await metamaskPage.clickOnNetworkDropdown();
         await metamaskPage.clickOnGoerliNetwork();
     });
+>>>>>>> develop
 
     test("Open ZedRun page and click Connnect Metamask", async () => {
         newPageInstance = await metamaskFactory.newPage();

@@ -12,11 +12,18 @@ const {
   CARD_EXPIRATION_DATE,
   CARD_CVC,
 } = require("../../data/env");
+const { VIEW_DETAILS_BUTTON } = require("../../locators/Activity");
 const { MarketplacePage } = require("../../pages/MarketplacePage");
 const { PaymentPage } = require("../../pages/PaymentPage");
 const { HomePage } = require("../../pages/HomePage");
 const { ActivityPage } = require("../../pages/ActivityPage");
-const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
+const {
+  CONNECT_METAMASK,
+  AUTHENTICATE_BUTTON,
+} = require("../../locators/ZedRun");
+const { MyStablePage } = require("../../pages/MyStablePage");
+const { DetailPage } = require("../../pages/DetailPage");
+
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -32,14 +39,18 @@ var marketPlacePage;
 var paymentPage;
 var homePage;
 var activityPage;
+var myStablePage;
+var firstHorseName;
+var originalPrice;
+var detailPage;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
-describe("Buy horse with credit card", () => {
-  test("Update metamask info", 3, async () => {
+describe("Buy horse with credit card - Logging with Metamask", () => {
+  test("Update metamask info", 1, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
@@ -88,38 +99,26 @@ describe("Buy horse with credit card", () => {
   });
 
   test("Go to Marketplace and select first horse", 1, async () => {
-    homePage = new HomePage(pageInstance);
+    homePage = new HomePage(newPageInstance);
     await homePage.bringToFront();
     await homePage.waitForBalanceInfoToBeShown();
     await homePage.clickOnMarketplaceLink();
-    marketPlacePage = new MarketplacePage(pageInstance);
+    marketPlacePage = new MarketplacePage(newPageInstance);
     await marketPlacePage.clickOnAcceptButton();
-    // noOfHorses = await marketPlacePage.getNumberOfHorses();
     await marketPlacePage.waitForLoadState();
+    await marketPlacePage.waitUntilHorseListLoaded();
     await marketPlacePage.mouseOverFirstHorse();
-    await marketPlacePage.clickFirstHorsePreview();
     await marketPlacePage.waitForLoadState();
-  });
-
-  test("Apply the discount coupon : ANH_TEST", 1, async () => {
-    await marketPlacePage.waitForLoadState();
+    await marketPlacePage.clickOnBuyHorseButton();
     firstHorseName = await marketPlacePage.getHorseName();
-    let originalPrice = await marketPlacePage.getHorsePrice();
-    discountPrice = originalPrice * (1 - PERCENT_DISCOUNT.NET_VALUE);
-    await marketPlacePage.clickOnDownwardArrow();    
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.typeCoupon(PERCENT_DISCOUNT.CODE);
-    await marketPlacePage.clickApplyButton();
-    await marketPlacePage.waitForLoadState();
-    await marketPlacePage.verifyDiscountLabel(PERCENT_DISCOUNT.VALUE);
-    await marketPlacePage.verifyDiscountPrice(discountPrice.toString());
+    originalPrice = await marketPlacePage.getHorsePrice();
   });
 
   test(
     "Process the checkout with banking account and check value",
     1,
     async () => {
-      paymentPage = new PaymentPage(pageInstance);
+      paymentPage = new PaymentPage(newPageInstance);
       await paymentPage.clickOnBuyWithCreditCardButton();
       await paymentPage.waitUntilPaymentFormPresent();
       await paymentPage.clickOnUseDifferentCardIfNeed();
@@ -133,33 +132,44 @@ describe("Buy horse with credit card", () => {
   );
 
   test("Verify that our order is processing", 3, async () => {
-    activityPage = new ActivityPage(pageInstance);
+    activityPage = new ActivityPage(newPageInstance);
     await activityPage.waitForLoadState();
     await activityPage.checkIfStatementInfoCorrect(firstHorseName);
   });
 
   test("Check the detail payment", 3, async () => {
-    activityPage = new ActivityPage(pageInstance);
+    activityPage = new ActivityPage(newPageInstance);
     await activityPage.mouseOverFirstStatementInfo();
-    otherPageInstance = await pageFactory.clickNewPage(
-      pageInstance,
+    otherPageInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
       VIEW_DETAILS_BUTTON
     );
     detailPage = new DetailPage(otherPageInstance);
     await detailPage.bringToFront();
     await detailPage.verifyTransactionInfo(firstHorseName);
-    await detailPage.verifyChargeAmount(discountPrice.toString());
+    await detailPage.verifyChargeAmount(originalPrice);
+  });
+
+  test("Go back to user stable and check if horse is transferred", async () => {
+    activityPage = new ActivityPage(newPageInstance);
+    await activityPage.bringToFront();
+    await activityPage.clickOnUserAvatar();
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.waitForLoadState();
+    await myStablePage.searchForHorse(firstHorseName);
+    await myStablePage.waitForLoadState();
+    await myStablePage.verifySearchResultContainHorse(firstHorseName);
   });
 });
 
 afterAll(async (done) => {
-  try{
-  await metamaskFactory.close();
-  done();
-  }catch(error){
+  try {
+    await metamaskFactory.close();
+    done();
+  } catch (error) {
     console.log(error);
     done();
-  }finally{
+  } finally {
     done();
   }
 });

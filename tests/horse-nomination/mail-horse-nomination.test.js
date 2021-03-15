@@ -28,7 +28,7 @@ beforeAll(async () => {
   await pageFactory.removeCache();
 });
 
-describe("Use expired discount voucher when logging in with Metamask", () => {
+describe("Give a name to newborn horse when logging in with magic link", () => {
   test(
     "Open ZedRun page and input valid email to generate magic link",
     3,
@@ -66,31 +66,32 @@ describe("Use expired discount voucher when logging in with Metamask", () => {
     await homePage.waitForLoadState();
   });
 
-  test("Scroll to horse with index", async () => {
-    myStablePage = new MyStablePage(pageInstance);
-    await myStablePage.waitForLoadState();
-    index = await myStablePage.getRandomIndexOfNewBornHorse();
-    await myStablePage.scrollToNewbornHorseWithIndex(index, THRESHOLD);
-  });
+  /** Stud service : Temporaly closed **/
+  // test("Scroll to horse with index", async () => {
+  //   myStablePage = new MyStablePage(pageInstance);
+  //   await myStablePage.waitForLoadState();
+  //   index = await myStablePage.getRandomIndexOfNewBornHorse();
+  //   await myStablePage.scrollToNewbornHorseWithIndex(index, THRESHOLD);
+  // });
 
-  test("Complete the horse nomination process", async () => {
-    myStablePage = new MyStablePage(pageInstance);
-    await myStablePage.waitForLoadState();
-    await myStablePage.clickOnNewbornHorseWithIndex(index);
-    await myStablePage.clickOnOkayButton();
-    await myStablePage.enterNewbornHorseName(horseName);
-    await myStablePage.checkOnCheckbox();
-    await myStablePage.clickOnConfirmButton();
-    await myStablePage.waitUntilLoadingIconHidden();
-    await myStablePage.waitForLoadState();
-  });
+  // test("Complete the horse nomination process", async () => {
+  //   myStablePage = new MyStablePage(pageInstance);
+  //   await myStablePage.waitForLoadState();
+  //   await myStablePage.clickOnNewbornHorseWithIndex(index);
+  //   await myStablePage.clickOnOkayButton();
+  //   await myStablePage.enterNewbornHorseName(horseName);
+  //   await myStablePage.checkOnCheckbox();
+  //   await myStablePage.clickOnConfirmButton();
+  //   await myStablePage.waitUntilLoadingIconHidden();
+  //   await myStablePage.waitForLoadState();
+  // });
 
-  test("Verify if the newborn horse name is updated", async () => {
-    await myStablePage.waitForLoadState();
-    await myStablePage.searchForHorse(horseName);
-    await myStablePage.waitForLoadState();
-    await myStablePage.verifySearchResultContainHorse(horseName);
-  });
+  // test("Verify if the newborn horse name is updated", async () => {
+  //   await myStablePage.waitForLoadState();
+  //   await myStablePage.searchForHorse(horseName);
+  //   await myStablePage.waitForLoadState();
+  //   await myStablePage.verifySearchResultContainHorse(horseName);
+  // });
 });
 
 afterAll(async (done) => {
