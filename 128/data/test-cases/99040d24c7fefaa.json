@@ -1,0 +1,46 @@
+{
+  "uid" : "99040d24c7fefaa",
+  "name" : "Validate has a result on Result Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate has a result on Result Page",
+  "historyId" : "78d744d6cb9c3579c364637ae11b000b",
+  "time" : {
+    "start" : 1615783908098,
+    "stop" : 1615783909049,
+    "duration" : 951
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a result on Result Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "99040d24c7fefaa.json",
+  "parameterValues" : [ ]
+}

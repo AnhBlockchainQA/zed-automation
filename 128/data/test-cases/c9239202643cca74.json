@@ -1,0 +1,46 @@
+{
+  "uid" : "c9239202643cca74",
+  "name" : "Click on Accept button to close the cookie popup",
+  "fullName" : "Generate stud horse.Click on Accept button to close the cookie popup",
+  "historyId" : "e51a0af20032ce7de47d7eed2977bc53",
+  "time" : {
+    "start" : 1615785003382,
+    "stop" : 1615785010846,
+    "duration" : 7464
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Accept button to close the cookie popup"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c9239202643cca74.json",
+  "parameterValues" : [ ]
+}

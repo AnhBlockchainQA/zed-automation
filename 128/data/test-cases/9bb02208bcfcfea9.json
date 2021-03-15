@@ -1,0 +1,67 @@
+{
+  "uid" : "9bb02208bcfcfea9",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Magic Link.Select a racehorses to add into the paid entry racing",
+  "historyId" : "3154996c3125f98a61342966db2c72b1",
+  "time" : {
+    "start" : 1615785549799,
+    "stop" : 1615785559594,
+    "duration" : 9795
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses to add into the paid entry racing"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4815264f04d8b1d2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/4815264f04d8b1d2",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613712480155,
+          "stop" : 1613712600159,
+          "duration" : 120004
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9bb02208bcfcfea9.json",
+  "parameterValues" : [ ]
+}

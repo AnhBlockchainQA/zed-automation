@@ -1,0 +1,101 @@
+{
+  "uid" : "ebd324ab84becb9d",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "214e7a0b6022b1aa1670c8485d45f7f",
+  "time" : {
+    "start" : 1615786179171,
+    "stop" : 1615786197395,
+    "duration" : 18224
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f9959aa52b8a3a1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785951685,
+        "stop" : 1615785970973,
+        "duration" : 19288
+      }
+    }, {
+      "uid" : "c4e11fdd9c97ada0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785759335,
+        "stop" : 1615785777443,
+        "duration" : 18108
+      }
+    }, {
+      "uid" : "d4c8a5430faaaad2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785561202,
+        "stop" : 1615785579544,
+        "duration" : 18342
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "11457d55f4535a65",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/11457d55f4535a65",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613713407410,
+          "stop" : 1613713527418,
+          "duration" : 120008
+        }
+      }, {
+        "uid" : "5359df809e984467",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/5359df809e984467",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613030815064,
+          "stop" : 1613030935071,
+          "duration" : 120007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ebd324ab84becb9d.json",
+  "parameterValues" : [ ]
+}

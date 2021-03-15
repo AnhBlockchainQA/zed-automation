@@ -1,0 +1,122 @@
+{
+  "uid" : "5ed9041eadc1c524",
+  "name" : "Check that avatar is shown then click on Marketplace to select first horse",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Check that avatar is shown then click on Marketplace to select first horse",
+  "historyId" : "fbf61890b9d7fdaa16cfcb08b6bcaee5",
+  "time" : {
+    "start" : 1615786208310,
+    "stop" : 1615786249888,
+    "duration" : 41578
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Marketplace to select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d73ce01db8243896",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785288551,
+        "stop" : 1615785300440,
+        "duration" : 11889
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "daa01c6225716614",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/daa01c6225716614",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613713535729,
+          "stop" : 1613713655749,
+          "duration" : 120020
+        }
+      }, {
+        "uid" : "d21b0e5f3df3518b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/d21b0e5f3df3518b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613030936635,
+          "stop" : 1613031056684,
+          "duration" : 120049
+        }
+      }, {
+        "uid" : "d4892f575d81c537",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/d4892f575d81c537",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612408079326,
+          "stop" : 1612408085507,
+          "duration" : 6181
+        }
+      }, {
+        "uid" : "9a9db453e423ba9a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/9a9db453e423ba9a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275278268,
+          "stop" : 1612275283068,
+          "duration" : 4800
+        }
+      }, {
+        "uid" : "f9d008fabd1b0fb7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/f9d008fabd1b0fb7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275219052,
+          "stop" : 1612275223792,
+          "duration" : 4740
+        }
+      }, {
+        "uid" : "25b82b6038ee2c91",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/25b82b6038ee2c91",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172359699,
+          "stop" : 1612172369704,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5ed9041eadc1c524.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,111 @@
+{
+  "uid" : "911a76cb0045746a",
+  "name" : "Update metamask info",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Update metamask info",
+  "historyId" : "93438059c14242999f9195b0bfec9f9b",
+  "time" : {
+    "start" : 1615785265182,
+    "stop" : 1615785270748,
+    "duration" : 5566
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "21c6135794d65ac8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/21c6135794d65ac8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712195567,
+          "stop" : 1613712199106,
+          "duration" : 3539
+        }
+      }, {
+        "uid" : "47184d78da05260f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/47184d78da05260f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029592226,
+          "stop" : 1613029596010,
+          "duration" : 3784
+        }
+      }, {
+        "uid" : "f349a609432aa054",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/f349a609432aa054",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612408063577,
+          "stop" : 1612408067656,
+          "duration" : 4079
+        }
+      }, {
+        "uid" : "6c080ab2047ed817",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6c080ab2047ed817",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275265731,
+          "stop" : 1612275268767,
+          "duration" : 3036
+        }
+      }, {
+        "uid" : "e858ed92db9e32bb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/e858ed92db9e32bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275207401,
+          "stop" : 1612275210359,
+          "duration" : 2958
+        }
+      }, {
+        "uid" : "89459ed00c58e063",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/89459ed00c58e063",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172344954,
+          "stop" : 1612172349680,
+          "duration" : 4726
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "911a76cb0045746a.json",
+  "parameterValues" : [ ]
+}

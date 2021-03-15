@@ -1,0 +1,44 @@
+{
+  "uid" : "36e4cb9366c045ba",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open new browser with magic link",
+  "historyId" : "7fb3acdd8bf83acf8238a6b8e4bd7799",
+  "time" : {
+    "start" : 1615785778444,
+    "stop" : 1615785788248,
+    "duration" : 9804
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "36e4cb9366c045ba.json",
+  "parameterValues" : [ ]
+}

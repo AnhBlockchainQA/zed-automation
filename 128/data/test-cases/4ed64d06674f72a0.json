@@ -1,0 +1,67 @@
+{
+  "uid" : "4ed64d06674f72a0",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Open new browser with magic link",
+  "historyId" : "c82f9659ede936fe6fd469caa0b35c15",
+  "time" : {
+    "start" : 1615786644834,
+    "stop" : 1615786654552,
+    "duration" : 9718
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "be2a8cfbf096db94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/be2a8cfbf096db94",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613715220918,
+          "stop" : 1613715340920,
+          "duration" : 120002
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4ed64d06674f72a0.json",
+  "parameterValues" : [ ]
+}

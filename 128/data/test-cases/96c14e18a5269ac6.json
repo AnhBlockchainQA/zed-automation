@@ -1,0 +1,66 @@
+{
+  "uid" : "96c14e18a5269ac6",
+  "name" : "Update metamask info",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Update metamask info",
+  "historyId" : "796e5012d60ff7e8a39cde5d64279345",
+  "time" : {
+    "start" : 1615783608970,
+    "stop" : 1615783613526,
+    "duration" : 4556
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "23a14e26b4931e6c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/23a14e26b4931e6c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612406935564,
+          "stop" : 1612406939408,
+          "duration" : 3844
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "96c14e18a5269ac6.json",
+  "parameterValues" : [ ]
+}

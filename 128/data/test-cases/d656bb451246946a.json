@@ -1,0 +1,100 @@
+{
+  "uid" : "d656bb451246946a",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open new browser with magic link",
+  "historyId" : "7fb3acdd8bf83acf8238a6b8e4bd7799",
+  "time" : {
+    "start" : 1615786198413,
+    "stop" : 1615786208310,
+    "duration" : 9897
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "db4c4bb37bf9f9c5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785972041,
+        "stop" : 1615785982677,
+        "duration" : 10636
+      }
+    }, {
+      "uid" : "36e4cb9366c045ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785778444,
+        "stop" : 1615785788248,
+        "duration" : 9804
+      }
+    }, {
+      "uid" : "e888c2d0cbf8c1ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615785580641,
+        "stop" : 1615785591214,
+        "duration" : 10573
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "4799c5e84c6edf56",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/4799c5e84c6edf56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613713528480,
+          "stop" : 1613713535729,
+          "duration" : 7249
+        }
+      }, {
+        "uid" : "be3b9b6ac5c1c73b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/be3b9b6ac5c1c73b",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613030936373,
+          "stop" : 1613030936635,
+          "duration" : 262
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d656bb451246946a.json",
+  "parameterValues" : [ ]
+}

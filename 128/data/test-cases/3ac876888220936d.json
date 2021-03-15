@@ -1,0 +1,67 @@
+{
+  "uid" : "3ac876888220936d",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Check that the ZED app is loading successfully",
+  "historyId" : "6be1ea3e05bfe97ef54c91b379352763",
+  "time" : {
+    "start" : 1615786654552,
+    "stop" : 1615786690075,
+    "duration" : 35523
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "5f2e035d7eb215f0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/5f2e035d7eb215f0",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613715340920,
+          "stop" : 1613715460933,
+          "duration" : 120013
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3ac876888220936d.json",
+  "parameterValues" : [ ]
+}

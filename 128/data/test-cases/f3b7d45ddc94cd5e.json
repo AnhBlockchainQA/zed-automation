@@ -1,0 +1,46 @@
+{
+  "uid" : "f3b7d45ddc94cd5e",
+  "name" : "Scroll to horse with index",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Scroll to horse with index",
+  "historyId" : "c610c1ce04d3d614a736af013c77f9c9",
+  "time" : {
+    "start" : 1615785626765,
+    "stop" : 1615785626875,
+    "duration" : 110
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Scroll to horse with index"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f3b7d45ddc94cd5e.json",
+  "parameterValues" : [ ]
+}

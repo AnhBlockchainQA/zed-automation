@@ -1,0 +1,46 @@
+{
+  "uid" : "4d44bd471740d248",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate Stud Service Page has a racehorse In Stud",
+  "historyId" : "dce486491f900ea05ab31a531a2f6240",
+  "time" : {
+    "start" : 1615783906627,
+    "stop" : 1615783907327,
+    "duration" : 700
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Stud Service Page has a racehorse In Stud"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4d44bd471740d248.json",
+  "parameterValues" : [ ]
+}

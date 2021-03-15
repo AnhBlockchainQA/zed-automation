@@ -1,0 +1,46 @@
+{
+  "uid" : "cddbb8c146464cf8",
+  "name" : "Wait until wallet icon is shown",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Wait until wallet icon is shown",
+  "historyId" : "aa2ad81c03bf19ed5339ebc38b26997",
+  "time" : {
+    "start" : 1615785591214,
+    "stop" : 1615785626765,
+    "duration" : 35551
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cddbb8c146464cf8.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "674a97c56772e214",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "e136499c4dd9b24d732fc18a363d1de4",
+  "time" : {
+    "start" : 1615783838116,
+    "stop" : 1615783854886,
+    "duration" : 16770
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "674a97c56772e214.json",
+  "parameterValues" : [ ]
+}

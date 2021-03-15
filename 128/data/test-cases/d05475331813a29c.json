@@ -1,0 +1,46 @@
+{
+  "uid" : "d05475331813a29c",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate has a racehorse existing on Stable Page",
+  "historyId" : "2fa9b5e35146dfc3acffa5153ad5d605",
+  "time" : {
+    "start" : 1615783910090,
+    "stop" : 1615783912055,
+    "duration" : 1965
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a racehorse existing on Stable Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d05475331813a29c.json",
+  "parameterValues" : [ ]
+}

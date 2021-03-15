@@ -1,0 +1,504 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "ac0928f8247fc291",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783091954,
+          "stop" : 1615783211963,
+          "duration" : 120009
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with ETH",
+        "uid" : "9488e7e5675c3a68",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783211963,
+          "stop" : 1615783331985,
+          "duration" : 120022
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "388aa6f64122f874",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783331985,
+          "stop" : 1615783451988,
+          "duration" : 120003
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "29fdfa693272cca8",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783485539,
+          "stop" : 1615783605541,
+          "duration" : 120002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select horse in My stable",
+        "uid" : "407c09955725c655",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783717080,
+          "stop" : 1615783837083,
+          "duration" : 120003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select mate horse",
+        "uid" : "1b428e803ca81b7b",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783978206,
+          "stop" : 1615784098235,
+          "duration" : 120029
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select female horse",
+        "uid" : "cde2fe8c5a2c5101",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784098235,
+          "stop" : 1615784218239,
+          "duration" : 120004
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Proceed breeding steps",
+        "uid" : "da9a0a4e611b86b9",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784218240,
+          "stop" : 1615784338246,
+          "duration" : 120006
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Activity page and check if we breed successfully",
+        "uid" : "a95916ab90c63422",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784338246,
+          "stop" : 1615784458248,
+          "duration" : 120002
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Stable page and verify there is a new horse",
+        "uid" : "76fa7d5f580fb851",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784458248,
+          "stop" : 1615784578251,
+          "duration" : 120003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "4585c18a5079ce55",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784701143,
+          "stop" : 1615784821165,
+          "duration" : 120022
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and check if ETH balance is updated",
+        "uid" : "b828ea7b2b18b313",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784855813,
+          "stop" : 1615784975843,
+          "duration" : 120030
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Scroll to horse with index",
+        "uid" : "ea3fa077d72b958c",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615785010846,
+          "stop" : 1615785130907,
+          "duration" : 120061
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Complete the horse nomination process",
+        "uid" : "522f5ac1d07ce617",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615785130907,
+          "stop" : 1615785250909,
+          "duration" : 120002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Complete the horse nomination process",
+        "uid" : "b499132e3cc95597",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615785626875,
+          "stop" : 1615785746879,
+          "duration" : 120004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "ffa2d78e36b381a4",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615786022691,
+          "stop" : 1615786142693,
+          "duration" : 120002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Apply the discount coupon : INVALID_COUPON",
+        "uid" : "83932bf08d050a29",
+        "parentUid" : "371beaf38fd0ea16fc522f9773bb38e9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615786249888,
+          "stop" : 1615786369894,
+          "duration" : 120006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "371beaf38fd0ea16fc522f9773bb38e9"
+    }, {
+      "name" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+      "children" : [ {
+        "name" : "Check the detail payment",
+        "uid" : "4aae3897dcde7722",
+        "parentUid" : "107b62ed9e29f2a9c15d99d4b2e092a1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783451988,
+          "stop" : 1615783451990,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check the detail payment",
+        "uid" : "b420f72e2b892bff",
+        "parentUid" : "107b62ed9e29f2a9c15d99d4b2e092a1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783688084,
+          "stop" : 1615783688086,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "107b62ed9e29f2a9c15d99d4b2e092a1"
+    }, {
+      "name" : "Error: There is no Discord widget section display",
+      "children" : [ {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "64e2c601576b83a6",
+        "parentUid" : "7ed727dd5f2a3231d9ff9d42405cd122",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783635244,
+          "stop" : 1615783636125,
+          "duration" : 881
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "268ba21b0b8f2b17",
+        "parentUid" : "7ed727dd5f2a3231d9ff9d42405cd122",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783902781,
+          "stop" : 1615783903876,
+          "duration" : 1095
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ed727dd5f2a3231d9ff9d42405cd122"
+    }, {
+      "name" : "ReferenceError: pageInstance is not defined",
+      "children" : [ {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "682c6ffc36e53125",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783665679,
+          "stop" : 1615783665682,
+          "duration" : 3
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with banking account and check value",
+        "uid" : "6dfdd252807923f4",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783665683,
+          "stop" : 1615783665694,
+          "duration" : 11
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is processing",
+        "uid" : "599014418eafb2bc",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783665695,
+          "stop" : 1615783665696,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check the detail payment",
+        "uid" : "8bdf84ca908a1060",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783665696,
+          "stop" : 1615783665698,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "9face3773b531c47",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783688065,
+          "stop" : 1615783688067,
+          "duration" : 2
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with ETH",
+        "uid" : "a208598b387ae4ed",
+        "parentUid" : "1c9cc76a85cb9d6525037847abb868e0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783688069,
+          "stop" : 1615783688078,
+          "duration" : 9
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1c9cc76a85cb9d6525037847abb868e0"
+    }, {
+      "name" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "children" : [ {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "19fbd9cf40a2e594",
+        "parentUid" : "c7b19248795c474bceb53082c7299ec9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783665682,
+          "stop" : 1615783665683,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Apply the discount coupon : ANH_TEST",
+        "uid" : "d6aa19399da10a4a",
+        "parentUid" : "c7b19248795c474bceb53082c7299ec9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783688067,
+          "stop" : 1615783688069,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "b4ce8326754d0774",
+        "parentUid" : "c7b19248795c474bceb53082c7299ec9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783688078,
+          "stop" : 1615783688079,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c7b19248795c474bceb53082c7299ec9"
+    }, {
+      "name" : "ReferenceError: value is not defined",
+      "children" : [ {
+        "name" : "Proceed putting horse to stud service",
+        "uid" : "3bc72caefbb7eb42",
+        "parentUid" : "361926cb9731ea35cdd1b53a31e61c70",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615783837083,
+          "stop" : 1615783837087,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "361926cb9731ea35cdd1b53a31e61c70"
+    }, {
+      "name" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=10]\"\n                  selector resolved to visible <div class=\"gate-btn\">…</div>\n                attempting click action\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <img src=\"/a19f02aeb5c4dce35b553cf41b30ef25.svg\"/> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #1\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #2\n                  waiting 20ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <img src=\"/a19f02aeb5c4dce35b553cf41b30ef25.svg\"/> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #3\n                  waiting 100ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div tabindex=\"-1\" role=\"dialog\" aria-modal=\"true\" cl…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #4\n                  waiting 100ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #5\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #6\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #7\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #8\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #9\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #10\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #11\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #12\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #13\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #14\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #15\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #16\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #17\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #18\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #19\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #20\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #21\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #22\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #23\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #24\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #25\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #26\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #27\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #28\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #29\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #30\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #31\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #32\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #33\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #34\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #35\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #36\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #37\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #38\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #39\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #40\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #41\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #42\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #43\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #44\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #45\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #46\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #47\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #48\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #49\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #50\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #51\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #52\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #53\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,702.85)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #54\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,360.9)\n                  <div class=\"horse-infos\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #55\n                  waiting 500ms\n                  waiting for element to be visible, enabled and not moving\n                  element is visible, enabled and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (683.42,204.9)\n                  <div class=\"section-content\">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #56\n                  waiting 500ms\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Select a racehorses to add into the paid entry racing",
+        "uid" : "2e0a93abb986f781",
+        "parentUid" : "12b6ed3bd96b685d139c0ec7b7ce3990",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615784614324,
+          "stop" : 1615784665689,
+          "duration" : 51365
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "12b6ed3bd96b685d139c0ec7b7ce3990"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Craig']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Verify if the newborn horse name is updated",
+        "uid" : "ed23154d608eb7a6",
+        "parentUid" : "a68220e9ef6df8771fd91c99fc779fc6",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615785250909,
+          "stop" : 1615785261308,
+          "duration" : 10399
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a68220e9ef6df8771fd91c99fc779fc6"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Elinore']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Verify if the newborn horse name is updated",
+        "uid" : "1d09ae38e162ea3a",
+        "parentUid" : "cf13b8abf1bcb48064ce8b5015f2c2bc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615785746879,
+          "stop" : 1615785757389,
+          "duration" : 10510
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cf13b8abf1bcb48064ce8b5015f2c2bc"
+    }, {
+      "name" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Select a racehorses and add into the free racing",
+        "uid" : "cc3e37244c400f10",
+        "parentUid" : "15da586358a9a0ba433c0943075a1fee",
+        "status" : "failed",
+        "time" : {
+          "start" : 1615786690075,
+          "stop" : 1615786722951,
+          "duration" : 32876
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "15da586358a9a0ba433c0943075a1fee"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

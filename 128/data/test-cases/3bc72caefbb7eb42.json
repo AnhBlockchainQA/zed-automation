@@ -1,0 +1,52 @@
+{
+  "uid" : "3bc72caefbb7eb42",
+  "name" : "Proceed putting horse to stud service",
+  "fullName" : "Generate stud horse.Proceed putting horse to stud service",
+  "historyId" : "679e01cabbde55e8d79c3628032937a9",
+  "time" : {
+    "start" : 1615783837083,
+    "stop" : 1615783837087,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: value is not defined",
+  "statusTrace" : "ReferenceError: value is not defined\n                    at MyStablePage.setStudDuration (/home/runner/work/zed-automation/zed-automation/pages/MyStablePage.js:209:7)\n                    at /home/runner/work/zed-automation/zed-automation/tests/add-horse-to-stud.test.js:110:28\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Proceed putting horse to stud service"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3bc72caefbb7eb42.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,67 @@
+{
+  "uid" : "337a42b0eb24b25",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Magic Link.Check that the ZED app is loading successfully",
+  "historyId" : "bf21f64dd91ec775f526fe8d88d6ed4",
+  "time" : {
+    "start" : 1615785515791,
+    "stop" : 1615785549799,
+    "duration" : 34008
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "1bf54820be55a955",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/1bf54820be55a955",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613712360139,
+          "stop" : 1613712480154,
+          "duration" : 120015
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "337a42b0eb24b25.json",
+  "parameterValues" : [ ]
+}

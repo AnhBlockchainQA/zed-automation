@@ -1,0 +1,44 @@
+{
+  "uid" : "d4c8a5430faaaad2",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Use expired discount voucher when logging in with Metamask.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "214e7a0b6022b1aa1670c8485d45f7f",
+  "time" : {
+    "start" : 1615785561202,
+    "stop" : 1615785579544,
+    "duration" : 18342
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Use expired discount voucher when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d4c8a5430faaaad2.json",
+  "parameterValues" : [ ]
+}

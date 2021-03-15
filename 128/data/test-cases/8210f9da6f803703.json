@@ -1,0 +1,84 @@
+{
+  "uid" : "8210f9da6f803703",
+  "name" : "Click on Filter button in My Stable page",
+  "fullName" : "Generate stud horse.Click on Filter button in My Stable page",
+  "historyId" : "f2612b26802f9c2e2e9b58bb1cd9aa7f",
+  "time" : {
+    "start" : 1615783710523,
+    "stop" : 1615783715810,
+    "duration" : 5287
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Filter button in My Stable page"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "469ab72eac5a2e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/469ab72eac5a2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612406975875,
+          "stop" : 1612406979789,
+          "duration" : 3914
+        }
+      }, {
+        "uid" : "23618993a3c8cb48",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/23618993a3c8cb48",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272836308,
+          "stop" : 1612272839621,
+          "duration" : 3313
+        }
+      }, {
+        "uid" : "699da32fac8c28b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/699da32fac8c28b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272540003,
+          "stop" : 1612272543341,
+          "duration" : 3338
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8210f9da6f803703.json",
+  "parameterValues" : [ ]
+}

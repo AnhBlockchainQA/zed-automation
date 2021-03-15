@@ -1,0 +1,46 @@
+{
+  "uid" : "77d6bc2aca83761e",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Generate stud horse.Open new browser with magic link",
+  "historyId" : "ce869396ca02e02986d5d34f293ed7c3",
+  "time" : {
+    "start" : 1615783931133,
+    "stop" : 1615783940747,
+    "duration" : 9614
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "77d6bc2aca83761e.json",
+  "parameterValues" : [ ]
+}

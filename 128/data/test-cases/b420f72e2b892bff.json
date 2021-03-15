@@ -1,0 +1,83 @@
+{
+  "uid" : "b420f72e2b892bff",
+  "name" : "Check the detail payment",
+  "fullName" : "Purchase horse with ETH.Check the detail payment",
+  "historyId" : "95cece92842335f4bcd1e01ca38e42f7",
+  "time" : {
+    "start" : 1615783688084,
+    "stop" : 1615783688086,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:139:24\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3d7158af4cff35dc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/3d7158af4cff35dc",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1613711984969,
+          "stop" : 1613711984971,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "76d8ab63bca4263a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/76d8ab63bca4263a",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1613029290313,
+          "stop" : 1613029290342,
+          "duration" : 29
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b420f72e2b892bff.json",
+  "parameterValues" : [ ]
+}

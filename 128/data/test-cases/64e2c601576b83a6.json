@@ -1,0 +1,52 @@
+{
+  "uid" : "64e2c601576b83a6",
+  "name" : "Validate the component displays on Home Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate the component displays on Home Page",
+  "historyId" : "35c5c101ecfc6a597f73938bf60ad9ab",
+  "time" : {
+    "start" : 1615783635244,
+    "stop" : 1615783636125,
+    "duration" : 881
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: There is no Discord widget section display",
+  "statusTrace" : "Error: There is no Discord widget section display\n                    at HomePage.validateDiscordWidgetSection (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:266:19)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test-metamask.test.js:93:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate the component displays on Home Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "64e2c601576b83a6.json",
+  "parameterValues" : [ ]
+}

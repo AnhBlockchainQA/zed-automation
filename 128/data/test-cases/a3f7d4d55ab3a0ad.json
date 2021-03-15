@@ -1,0 +1,102 @@
+{
+  "uid" : "a3f7d4d55ab3a0ad",
+  "name" : "Update metamask info",
+  "fullName" : "Use percent discount voucher to buy horse with card while logging in with Metamask.Update metamask info",
+  "historyId" : "f5a5b38c0c80385dd4265f32bccec5f4",
+  "time" : {
+    "start" : 1615783455655,
+    "stop" : 1615783460443,
+    "duration" : 4788
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Use percent discount voucher to buy horse with card while logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "a2a4289383144235",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/a2a4289383144235",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613711812359,
+          "stop" : 1613711815855,
+          "duration" : 3496
+        }
+      }, {
+        "uid" : "ffbbdbebc6b6f2e1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/ffbbdbebc6b6f2e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029234534,
+          "stop" : 1613029238233,
+          "duration" : 3699
+        }
+      }, {
+        "uid" : "91156c5ae92627f0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/91156c5ae92627f0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272506548,
+          "stop" : 1612272509354,
+          "duration" : 2806
+        }
+      }, {
+        "uid" : "b0b82ab4ffd82dbf",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/b0b82ab4ffd82dbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612272210839,
+          "stop" : 1612272213558,
+          "duration" : 2719
+        }
+      }, {
+        "uid" : "91992cb7cca225b4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/91992cb7cca225b4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172134404,
+          "stop" : 1612172138524,
+          "duration" : 4120
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a3f7d4d55ab3a0ad.json",
+  "parameterValues" : [ ]
+}

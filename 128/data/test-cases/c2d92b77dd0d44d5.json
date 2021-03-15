@@ -1,0 +1,46 @@
+{
+  "uid" : "c2d92b77dd0d44d5",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Check that the ZED app is loading successfully",
+  "historyId" : "a7f7c692a3378a498d2d72f05e943faf",
+  "time" : {
+    "start" : 1615783864872,
+    "stop" : 1615783902781,
+    "duration" : 37909
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c2d92b77dd0d44d5.json",
+  "parameterValues" : [ ]
+}

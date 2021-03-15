@@ -1,0 +1,83 @@
+{
+  "uid" : "19fbd9cf40a2e594",
+  "name" : "Apply the discount coupon : ANH_TEST",
+  "fullName" : "Buy horse with credit card.Apply the discount coupon : ANH_TEST",
+  "historyId" : "5c7a558abd9e570b4cc0951e1b0edbc6",
+  "time" : {
+    "start" : 1615783665682,
+    "stop" : 1615783665683,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'waitForLoadState' of undefined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:105:27\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)\n                    at Object.asyncJestTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12\n                    at new Promise (<anonymous>)\n                    at mapper (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply the discount coupon : ANH_TEST"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "bd143d92033cd77c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/bd143d92033cd77c",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+        "time" : {
+          "start" : 1613711968548,
+          "stop" : 1613711968573,
+          "duration" : 25
+        }
+      }, {
+        "uid" : "731c1cfe0e0e9ee2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/731c1cfe0e0e9ee2",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+        "time" : {
+          "start" : 1613029273513,
+          "stop" : 1613029273514,
+          "duration" : 1
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "19fbd9cf40a2e594.json",
+  "parameterValues" : [ ]
+}
