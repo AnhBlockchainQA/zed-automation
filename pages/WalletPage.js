@@ -60,11 +60,13 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Deposite to Zed Balance button ---"
       );
-      await expect(this.page).toHaveSelector(DEPOSITE_TO_ZED_BUTTON, {
+      await this.page.waitForLoadState();
+      await this.page.waitForSelector(DEPOSITE_TO_ZED_BUTTON, {
         visible: true,
         timeout: 0,
       });
       await this.page.click(DEPOSITE_TO_ZED_BUTTON);
+      await this.page.waitForLoadState();
     } catch {
       throw new Error("Deposite to Zed Balance button is not present!");
     }
@@ -75,7 +77,8 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Withdraw button ---"
       );
-      await expect(this.page).toHaveSelector(WITHDRAW_BUTTON, {
+      await this.page.waitForLoadState();
+      await this.page.waitForSelector(WITHDRAW_BUTTON, {
         timeout: 0,
         visible: true,
       });
@@ -213,7 +216,7 @@ class WalletPage {
       " ---- Zed Run Automation Framework: Click on Confirm button to confirm deposite action ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CONFIRM_DEPOSITE_BUTTON, {
+      await this.page.waitForSelector(CONFIRM_DEPOSITE_BUTTON, {
         visible: true,
         timeout: 0,
       });

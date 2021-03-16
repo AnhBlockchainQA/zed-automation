@@ -11,6 +11,7 @@ const {
   LIST_HORSE,
   MARKET_PLACE_TAB,
   HORSE_PRICE_ETH,
+  BUY_HORSE_BUTTON,
 } = require("../locators/MarketPlace");
 const { ACCEPT_BUTTON } = require("../locators/ZedRun");
 const { HORSE_LIST_SIZE, HORSE_LIST_PREDICATE, REGEX } = require("../data/env");
@@ -28,7 +29,7 @@ class MarketplacePage {
         "--- Zed Run Automation Framework: Click on First horse preview ---"
       );
       await this.page.waitForSelector(FIRST_HORSE_PREVIEW, {
-        timeout: 0,
+        timeout: 0, state: 'attached'
       });
       await this.page.click(FIRST_HORSE_PREVIEW);
     } catch {
@@ -80,18 +81,10 @@ class MarketplacePage {
   async getHorsePrice() {
     console.log("--- Zed Run Automation Framework: Get the horse price ---");
     try {
-      await expect(this.page).toHaveSelector(HORSE_PRICE, { timeout: 0 });
+      await this.page.waitForSelector(HORSE_PRICE, { timeout: 0, state : 'attached'});
       const value = await this.page.innerText(HORSE_PRICE);
-      const amount = await stringUtils.splitStringByRegEx(
-        REGEX.AMOUNT,
-        value,
-        1
-      );
-      console.log(
-        " >>>>>>>>>> Horse price ",
-        Number(amount.split(",").join("")).toFixed(2)
-      );
-      return Number(amount.split(",").join("")).toFixed(2);
+      console.log(">>>> Horse price is", value.split(" ")[0]);
+      return value.split(" ")[0];
     } catch {
       throw new Error("Horse price is not present");
     }
@@ -100,10 +93,11 @@ class MarketplacePage {
   async getHorseName() {
     console.log("--- Zed Run Automation Framework: Get horse name ---");
     try {
-      await expect(this.page).toHaveSelector(HORSE_NAME, {
-        timeout: 0,
+      await this.page.waitForSelector(HORSE_NAME, {
+        timeout: 0, state : 'attached'
       });
       const horseName = await this.page.innerText(HORSE_NAME);
+      console.log(">>>>>> Horse name is ", horseName);
       return horseName;
     } catch {
       throw new Error("Horse name is not present");
@@ -142,10 +136,10 @@ class MarketplacePage {
       console.log(
         "--- Zed Run Automation Framework: Mouse over first horse ---"
       );
-      await expect(this.page).toHaveSelector(FIRST_HORSE_PREVIEW, {
-        timeout: 0,
+      await this.page.waitForSelector(HORSE_NAME, {
+        timeout: 0, state: 'attached'
       });
-      await this.page.hover(FIRST_HORSE_PREVIEW);
+      await this.page.hover(HORSE_NAME);
     } catch {
       throw new Error("Waiting time is over but element is not present yet!");
     }
@@ -176,7 +170,7 @@ class MarketplacePage {
       ([locator, val]) => {
         return document.querySelectorAll(locator).length >= val;
       },
-      [HORSE_LIST, value],
+      [HORSE_LIST, HORSE_LIST_SIZE],
       10000,
       { timeout: 300000 }
     );
@@ -264,6 +258,17 @@ class MarketplacePage {
       await this.page.click(MARKET_PLACE_TAB);
     } catch {
       throw new Error("Marketplace Tab is not present or not clickable");
+    }
+  }
+  async clickOnBuyHorseButton(){
+    console.log(
+      "--- Zed Run Automation Framework: Click on Buy Horse button ---"
+    );
+    try {
+      await this.page.waitForSelector(BUY_HORSE_BUTTON, {timeout: 0});
+      await this.page.click(BUY_HORSE_BUTTON);
+    } catch {
+      throw new Error("Buy Horse is not present or not clickable");
     }
   }
 }

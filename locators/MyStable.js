@@ -24,7 +24,6 @@ module.exports = {
     NEWBORN_NAME_CHECKBOX : '.offspring-name-edit-form > section > .section-footer > .z-checkbox > .primary-text',
     HORSE_NOMINATION_CONFIRM_BUTTON: '.offspring-naming-modal-content > .offspring-name-edit-form > section > .section-footer > .primary-btn',
     LOADING_ICON: ".offspring-naming-modal section .loader-container img",
-    NEWBORN_UPDATE_HORSENAME: "(//section[@id='stable-main']//div[@class='row']//div[@class='panel'][not(.//span[contains(@class,'stud')])]//div[contains(@class,'name') and contains(text(),'${name}')]",
     MY_STABLE_LOADING_ICON: "#stable-main .stable-content .accordion-content .accordion .loader-container img",
     MY_STABLE_LAST_HORSE: "//section[@id='stable-main']//div[@class='row']//div[@class='panel'][last()]",
     SEARCH_INPUT: "#stable-filters-left input.search",
