@@ -1,0 +1,66 @@
+{
+  "uid" : "8363d79b53b92cb9",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Open new browser with magic link",
+  "historyId" : "fbbc1ed27e8b38ba0daa1b2d8dca2596",
+  "time" : {
+    "start" : 1615903532403,
+    "stop" : 1615903541745,
+    "duration" : 9342
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "1c786dca56ff27ad",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/1c786dca56ff27ad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783855929,
+          "stop" : 1615783864872,
+          "duration" : 8943
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8363d79b53b92cb9.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "568ed74a98718a4b",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "8f6b4d5ab3f08bfa688cbc76c6f3f9a7",
+  "time" : {
+    "start" : 1615903045675,
+    "stop" : 1615903060072,
+    "duration" : 14397
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "568ed74a98718a4b.json",
+  "parameterValues" : [ ]
+}

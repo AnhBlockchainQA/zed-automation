@@ -1,0 +1,46 @@
+{
+  "uid" : "74e7180ba0f64c60",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "6873ad6b0366804cde27a9106f9f0ff3",
+  "time" : {
+    "start" : 1615903152965,
+    "stop" : 1615903167849,
+    "duration" : 14884
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "74e7180ba0f64c60.json",
+  "parameterValues" : [ ]
+}

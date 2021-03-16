@@ -1,0 +1,52 @@
+{
+  "uid" : "149278af1326e6de",
+  "name" : "Check the detail payment",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Check the detail payment",
+  "historyId" : "93f137b87df664e9d09242c51ec90834",
+  "time" : {
+    "start" : 1615903808287,
+    "stop" : 1615903823322,
+    "duration" : 15035
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:180:48\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)\n                    at Frame.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:205:20)\n                    at Page.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:21)\n                    at ActivityPage.mouseOverFirstStatementInfo (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:69:21)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/mail-purchase-horse-with-cash.test.js:115:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "149278af1326e6de.json",
+  "parameterValues" : [ ]
+}

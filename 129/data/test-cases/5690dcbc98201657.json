@@ -1,0 +1,46 @@
+{
+  "uid" : "5690dcbc98201657",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Give a name to newborn horse when logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "afcc5bd69663a99bb60de7c208d02e6c",
+  "time" : {
+    "start" : 1615904948236,
+    "stop" : 1615904974242,
+    "duration" : 26006
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5690dcbc98201657.json",
+  "parameterValues" : [ ]
+}

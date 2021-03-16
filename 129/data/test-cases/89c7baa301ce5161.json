@@ -1,0 +1,54 @@
+{
+  "uid" : "89c7baa301ce5161",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "b08fd24170746b12400f72a3e28a0cdd",
+  "time" : {
+    "start" : 1615905278890,
+    "stop" : 1615905314394,
+    "duration" : 35504
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "27c8de633163a3ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615903060073,
+        "stop" : 1615903070078,
+        "duration" : 10005
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "89c7baa301ce5161.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,75 @@
+{
+  "uid" : "d709d33c1ae5b405",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Meta Mask.Check that the ZED app is loading successfully",
+  "historyId" : "84d3a9d7791444c4dfe6fc320844185f",
+  "time" : {
+    "start" : 1615904531738,
+    "stop" : 1615904540455,
+    "duration" : 8717
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "111c8d61360f7aba",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/111c8d61360f7aba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615784606764,
+          "stop" : 1615784614323,
+          "duration" : 7559
+        }
+      }, {
+        "uid" : "430c85a53c09884e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/430c85a53c09884e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712001471,
+          "stop" : 1613712005084,
+          "duration" : 3613
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d709d33c1ae5b405.json",
+  "parameterValues" : [ ]
+}

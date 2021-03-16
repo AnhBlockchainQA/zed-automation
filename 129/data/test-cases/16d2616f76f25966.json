@@ -1,0 +1,52 @@
+{
+  "uid" : "16d2616f76f25966",
+  "name" : "Check the detail payment",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Check the detail payment",
+  "historyId" : "54f70a16c2db280e99294df2517cf4c3",
+  "time" : {
+    "start" : 1615902369755,
+    "stop" : 1615902402464,
+    "duration" : 32709
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.hover: Timeout 2000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\"\n                  selector resolved to visible <div class=\"primary-text statement false\">…</div>\n                attempting hover action\n                  waiting for element to be visible and not moving\n                  element is visible and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (490.51,16.92)\n                  <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> intercepts pointer events\n                retrying hover action, attempt #1\n                  waiting for element to be visible and not moving\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.hover: Timeout 2000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\"\n                  selector resolved to visible <div class=\"primary-text statement false\">…</div>\n                attempting hover action\n                  waiting for element to be visible and not moving\n                  element is visible and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (490.51,16.92)\n                  <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> intercepts pointer events\n                retrying hover action, attempt #1\n                  waiting for element to be visible and not moving\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:334:33\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)\n                    at Frame.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:333:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:451:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:205:20)\n                    at Page.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:451:21)\n                    at ActivityPage.mouseOverFirstStatementInfo (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:77:23)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:142:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "16d2616f76f25966.json",
+  "parameterValues" : [ ]
+}

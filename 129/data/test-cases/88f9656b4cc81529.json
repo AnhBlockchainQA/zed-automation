@@ -1,0 +1,66 @@
+{
+  "uid" : "88f9656b4cc81529",
+  "name" : "Validate has a race open on Events page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate has a race open on Events page",
+  "historyId" : "ad88fb0950e1ffd7d2f5da3534cb6e2",
+  "time" : {
+    "start" : 1615903583699,
+    "stop" : 1615903584398,
+    "duration" : 699
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a race open on Events page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "4bcb874e2b58ec9e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/4bcb874e2b58ec9e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783907327,
+          "stop" : 1615783908098,
+          "duration" : 771
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "88f9656b4cc81529.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "6015ebc9c71a77bd",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check mail inbox to get magic link",
+  "historyId" : "f98c92654596fac8f05deaa46981bc4f",
+  "time" : {
+    "start" : 1615903853275,
+    "stop" : 1615903854282,
+    "duration" : 1007
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6015ebc9c71a77bd.json",
+  "parameterValues" : [ ]
+}

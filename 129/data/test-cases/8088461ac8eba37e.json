@@ -1,0 +1,46 @@
+{
+  "uid" : "8088461ac8eba37e",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check that avatar is shown then click on Breeding link",
+  "historyId" : "c47c7e071ce634abe00ba264146490b5",
+  "time" : {
+    "start" : 1615903864884,
+    "stop" : 1615903901072,
+    "duration" : 36188
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8088461ac8eba37e.json",
+  "parameterValues" : [ ]
+}

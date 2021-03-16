@@ -1,0 +1,52 @@
+{
+  "uid" : "7c8ba38582454bcb",
+  "name" : "Go back to user stable and check if horse is transferred",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Go back to user stable and check if horse is transferred",
+  "historyId" : "dc4ce1d641f970e342d577d50e767156",
+  "time" : {
+    "start" : 1615903095442,
+    "stop" : 1615903107417,
+    "duration" : 11975
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Z10_TESTS7307E009']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Z10_TESTS7307E009']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:180:48\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)\n                    at Frame.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:205:20)\n                    at Page.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:21)\n                    at MyStablePage.verifySearchResultContainHorse (/home/runner/work/zed-automation/zed-automation/pages/MyStablePage.js:499:21)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:161:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go back to user stable and check if horse is transferred"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "7c8ba38582454bcb.json",
+  "parameterValues" : [ ]
+}

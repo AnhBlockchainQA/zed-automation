@@ -1,0 +1,46 @@
+{
+  "uid" : "7ac087ef085bf9f4",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Check mail inbox to get magic link",
+  "historyId" : "bdccf39773556963041bff11e3411b5b",
+  "time" : {
+    "start" : 1615904912515,
+    "stop" : 1615904913638,
+    "duration" : 1123
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7ac087ef085bf9f4.json",
+  "parameterValues" : [ ]
+}

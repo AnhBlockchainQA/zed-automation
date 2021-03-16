@@ -1,0 +1,46 @@
+{
+  "uid" : "86d210440634d9a7",
+  "name" : "Go back to user stable and check if horse is transferred",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Go back to user stable and check if horse is transferred",
+  "historyId" : "a908611948e43d55754d44152db913c1",
+  "time" : {
+    "start" : 1615902402464,
+    "stop" : 1615902410239,
+    "duration" : 7775
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go back to user stable and check if horse is transferred"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "86d210440634d9a7.json",
+  "parameterValues" : [ ]
+}

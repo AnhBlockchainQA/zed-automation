@@ -1,0 +1,46 @@
+{
+  "uid" : "62ff0cc9811ff5cc",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "89a648ac2f92b1f59d623601023a31e3",
+  "time" : {
+    "start" : 1615904766143,
+    "stop" : 1615904786483,
+    "duration" : 20340
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "62ff0cc9811ff5cc.json",
+  "parameterValues" : [ ]
+}

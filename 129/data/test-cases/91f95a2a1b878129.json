@@ -1,0 +1,76 @@
+{
+  "uid" : "91f95a2a1b878129",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Magic Link.Open new browser with magic link",
+  "historyId" : "f5da159182a239502547462ef918fa8d",
+  "time" : {
+    "start" : 1615905113669,
+    "stop" : 1615905125688,
+    "duration" : 12019
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "92e4bc8a770c06da",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/92e4bc8a770c06da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615785504511,
+          "stop" : 1615785515791,
+          "duration" : 11280
+        }
+      }, {
+        "uid" : "be26c3e055a14125",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/be26c3e055a14125",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613712359939,
+          "stop" : 1613712360139,
+          "duration" : 200
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "91f95a2a1b878129.json",
+  "parameterValues" : [ ]
+}

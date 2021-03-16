@@ -1,0 +1,46 @@
+{
+  "uid" : "c277390ef18c647f",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Go to Marketplace and select first horse",
+  "historyId" : "17f055ba572679dc118770e0526a2191",
+  "time" : {
+    "start" : 1615903616967,
+    "stop" : 1615903658220,
+    "duration" : 41253
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c277390ef18c647f.json",
+  "parameterValues" : [ ]
+}

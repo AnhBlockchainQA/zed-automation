@@ -1,0 +1,46 @@
+{
+  "uid" : "50e5ce77b0e8eef",
+  "name" : "Update metamask info",
+  "fullName" : "Generate stud horse when logging in Metamask.Update metamask info",
+  "historyId" : "77d58a822b6ec71b615a6a22d6e436fb",
+  "time" : {
+    "start" : 1615902413521,
+    "stop" : 1615902418072,
+    "duration" : 4551
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "50e5ce77b0e8eef.json",
+  "parameterValues" : [ ]
+}

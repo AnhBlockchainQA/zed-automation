@@ -1,0 +1,66 @@
+{
+  "uid" : "1b21aa54005f3666",
+  "name" : "Validate Marketplace Page has a racehorse",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate Marketplace Page has a racehorse",
+  "historyId" : "fd55bb93613a98b7ed66a022939455ec",
+  "time" : {
+    "start" : 1615903580289,
+    "stop" : 1615903582891,
+    "duration" : 2602
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Marketplace Page has a racehorse"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "6240cce8f1a7f8f1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/6240cce8f1a7f8f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783903876,
+          "stop" : 1615783906627,
+          "duration" : 2751
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1b21aa54005f3666.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,46 @@
+{
+  "uid" : "b5e1fbc95a742328",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Give a name to newborn horse when logging in with magic link.Open new browser with magic link",
+  "historyId" : "ab89a798e16431bdf05e9261e6ae1b60",
+  "time" : {
+    "start" : 1615904975223,
+    "stop" : 1615904987788,
+    "duration" : 12565
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b5e1fbc95a742328.json",
+  "parameterValues" : [ ]
+}

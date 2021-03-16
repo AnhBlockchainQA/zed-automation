@@ -1,0 +1,46 @@
+{
+  "uid" : "46516f2c77c7273f",
+  "name" : "Process the checkout with ETH",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Process the checkout with ETH",
+  "historyId" : "351d79ab95d29b77fd1e3b9b0b14bcf",
+  "time" : {
+    "start" : 1615905314394,
+    "stop" : 1615905314955,
+    "duration" : 561
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "46516f2c77c7273f.json",
+  "parameterValues" : [ ]
+}

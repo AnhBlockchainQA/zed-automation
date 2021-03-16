@@ -1,0 +1,46 @@
+{
+  "uid" : "d01900a548b8edf3",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "3feaa9a7313339f3599368f6a7647f4e",
+  "time" : {
+    "start" : 1615902355567,
+    "stop" : 1615902365245,
+    "duration" : 9678
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d01900a548b8edf3.json",
+  "parameterValues" : [ ]
+}

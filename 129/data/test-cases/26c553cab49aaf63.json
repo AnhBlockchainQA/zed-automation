@@ -1,0 +1,46 @@
+{
+  "uid" : "26c553cab49aaf63",
+  "name" : "Update metamask info",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Update metamask info",
+  "historyId" : "57d175a1774a6c0fb30fe771aa0fbef3",
+  "time" : {
+    "start" : 1615903148234,
+    "stop" : 1615903152965,
+    "duration" : 4731
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "26c553cab49aaf63.json",
+  "parameterValues" : [ ]
+}

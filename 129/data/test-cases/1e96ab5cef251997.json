@@ -1,0 +1,46 @@
+{
+  "uid" : "1e96ab5cef251997",
+  "name" : "Select horse then click on Transfer button",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Select horse then click on Transfer button",
+  "historyId" : "548ed09a70077883c6e250f822008a66",
+  "time" : {
+    "start" : 1615904937629,
+    "stop" : 1615904945775,
+    "duration" : 8146
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select horse then click on Transfer button"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1e96ab5cef251997.json",
+  "parameterValues" : [ ]
+}

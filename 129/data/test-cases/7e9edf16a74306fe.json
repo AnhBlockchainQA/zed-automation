@@ -1,0 +1,46 @@
+{
+  "uid" : "7e9edf16a74306fe",
+  "name" : "Update metamask info",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Update metamask info",
+  "historyId" : "5994f34d887e0f843a7794cda69153d1",
+  "time" : {
+    "start" : 1615904759188,
+    "stop" : 1615904766143,
+    "duration" : 6955
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7e9edf16a74306fe.json",
+  "parameterValues" : [ ]
+}

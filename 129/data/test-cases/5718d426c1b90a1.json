@@ -1,0 +1,66 @@
+{
+  "uid" : "5718d426c1b90a1",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Check that the ZED app is loading successfully",
+  "historyId" : "a7f7c692a3378a498d2d72f05e943faf",
+  "time" : {
+    "start" : 1615903541745,
+    "stop" : 1615903579201,
+    "duration" : 37456
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "c2d92b77dd0d44d5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/c2d92b77dd0d44d5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783864872,
+          "stop" : 1615783902781,
+          "duration" : 37909
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5718d426c1b90a1.json",
+  "parameterValues" : [ ]
+}

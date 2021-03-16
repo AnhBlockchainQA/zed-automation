@@ -1,0 +1,46 @@
+{
+  "uid" : "94e9b32e5d833459",
+  "name" : "Wait until homepage is loading",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Wait until homepage is loading",
+  "historyId" : "a9951309ef25865a1a0a2830e6e40b85",
+  "time" : {
+    "start" : 1615903167849,
+    "stop" : 1615903173278,
+    "duration" : 5429
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until homepage is loading"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "94e9b32e5d833459.json",
+  "parameterValues" : [ ]
+}

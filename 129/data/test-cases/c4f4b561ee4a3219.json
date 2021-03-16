@@ -1,0 +1,120 @@
+{
+  "uid" : "c4f4b561ee4a3219",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "d7aa7d8b5c37caf0a6f022de9f790ca7",
+  "time" : {
+    "start" : 1615904827281,
+    "stop" : 1615904835816,
+    "duration" : 8535
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "c7d4fcf29d03f00a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/c7d4fcf29d03f00a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615784848724,
+          "stop" : 1615784855813,
+          "duration" : 7089
+        }
+      }, {
+        "uid" : "9142aab88969ca74",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/9142aab88969ca74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712131459,
+          "stop" : 1613712135029,
+          "duration" : 3570
+        }
+      }, {
+        "uid" : "8c65f46d62fc1ad0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/8c65f46d62fc1ad0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029527815,
+          "stop" : 1613029531620,
+          "duration" : 3805
+        }
+      }, {
+        "uid" : "7443c7d8785551a6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/7443c7d8785551a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407605391,
+          "stop" : 1612407609457,
+          "duration" : 4066
+        }
+      }, {
+        "uid" : "7a2740ab57c3f8c5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/7a2740ab57c3f8c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274168458,
+          "stop" : 1612274172029,
+          "duration" : 3571
+        }
+      }, {
+        "uid" : "1f58009cd6cc7c57",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/1f58009cd6cc7c57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273868908,
+          "stop" : 1612273872323,
+          "duration" : 3415
+        }
+      }, {
+        "uid" : "25b78fa94e6655a3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/25b78fa94e6655a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172263809,
+          "stop" : 1612172270362,
+          "duration" : 6553
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c4f4b561ee4a3219.json",
+  "parameterValues" : [ ]
+}

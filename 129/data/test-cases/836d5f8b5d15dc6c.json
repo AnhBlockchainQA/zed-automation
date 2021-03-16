@@ -1,0 +1,46 @@
+{
+  "uid" : "836d5f8b5d15dc6c",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Generate stud horse when logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "8867177c200970f8a2ad697b57e1f090",
+  "time" : {
+    "start" : 1615903836147,
+    "stop" : 1615903853274,
+    "duration" : 17127
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "836d5f8b5d15dc6c.json",
+  "parameterValues" : [ ]
+}

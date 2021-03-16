@@ -1,0 +1,46 @@
+{
+  "uid" : "f4ca44c1c1f2dd15",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Check mail inbox to get magic link",
+  "historyId" : "2eb3cbec2604ecee46edb23670d632a3",
+  "time" : {
+    "start" : 1615903606340,
+    "stop" : 1615903607377,
+    "duration" : 1037
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f4ca44c1c1f2dd15.json",
+  "parameterValues" : [ ]
+}

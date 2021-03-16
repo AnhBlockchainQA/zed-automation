@@ -1,0 +1,46 @@
+{
+  "uid" : "9d692cebd3a3cc9b",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "a3c6801726ccdf746412a898faf3dca6",
+  "time" : {
+    "start" : 1615903590171,
+    "stop" : 1615903606340,
+    "duration" : 16169
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9d692cebd3a3cc9b.json",
+  "parameterValues" : [ ]
+}

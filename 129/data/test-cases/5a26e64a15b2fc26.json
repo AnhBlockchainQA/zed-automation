@@ -1,0 +1,46 @@
+{
+  "uid" : "5a26e64a15b2fc26",
+  "name" : "Process the checkout with banking account and check value",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Process the checkout with banking account and check value",
+  "historyId" : "80c91508b589c9dc7e0e9614a4494c25",
+  "time" : {
+    "start" : 1615903070078,
+    "stop" : 1615903093867,
+    "duration" : 23789
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with banking account and check value"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5a26e64a15b2fc26.json",
+  "parameterValues" : [ ]
+}

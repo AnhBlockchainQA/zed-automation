@@ -1,0 +1,52 @@
+{
+  "uid" : "d4bc7ac3b8211efd",
+  "name" : "Confirm the transfer",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Confirm the transfer",
+  "historyId" : "f82789c89a562a99e4dec04792dc28b",
+  "time" : {
+    "start" : 1615903294162,
+    "stop" : 1615903324165,
+    "duration" : 30003
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:40:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:48:28)\n                    at ChromiumBrowserContext.waitForEvent (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserContext.js:190:24)\n                    at async Promise.all (index 0)\n                    at MetamaskFactory.clickNewPage (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:61:23)\n                    at /home/runner/work/zed-automation/zed-automation/tests/transfer-horse/metamask-transfer-horse.test.js:123:43\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Confirm the transfer"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "d4bc7ac3b8211efd.json",
+  "parameterValues" : [ ]
+}

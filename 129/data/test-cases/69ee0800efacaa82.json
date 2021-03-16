@@ -1,0 +1,46 @@
+{
+  "uid" : "69ee0800efacaa82",
+  "name" : "Verify that our order is processing",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Verify that our order is processing",
+  "historyId" : "e4dab28d64bd21568a3fec7e140e953d",
+  "time" : {
+    "start" : 1615903093867,
+    "stop" : 1615903093997,
+    "duration" : 130
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is processing"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "69ee0800efacaa82.json",
+  "parameterValues" : [ ]
+}

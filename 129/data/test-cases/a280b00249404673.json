@@ -1,0 +1,46 @@
+{
+  "uid" : "a280b00249404673",
+  "name" : "Process the checkout with ETH",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Process the checkout with ETH",
+  "historyId" : "b00027c82f267fd468e721b63518c227",
+  "time" : {
+    "start" : 1615902365245,
+    "stop" : 1615902368681,
+    "duration" : 3436
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a280b00249404673.json",
+  "parameterValues" : [ ]
+}

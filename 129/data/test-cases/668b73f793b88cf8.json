@@ -1,0 +1,46 @@
+{
+  "uid" : "668b73f793b88cf8",
+  "name" : "Wait until wallet icon is shown",
+  "fullName" : "Give a name to newborn horse when logging in with magic link.Wait until wallet icon is shown",
+  "historyId" : "5195e629883b8a88cebea58eb0494867",
+  "time" : {
+    "start" : 1615904987788,
+    "stop" : 1615905019266,
+    "duration" : 31478
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "668b73f793b88cf8.json",
+  "parameterValues" : [ ]
+}

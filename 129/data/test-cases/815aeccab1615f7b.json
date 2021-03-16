@@ -1,0 +1,46 @@
+{
+  "uid" : "815aeccab1615f7b",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Open new browser with magic link",
+  "historyId" : "8002179957d3f81e5c0f9454cb231059",
+  "time" : {
+    "start" : 1615905266799,
+    "stop" : 1615905278890,
+    "duration" : 12091
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "815aeccab1615f7b.json",
+  "parameterValues" : [ ]
+}

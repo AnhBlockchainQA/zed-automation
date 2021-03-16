@@ -1,0 +1,46 @@
+{
+  "uid" : "90e4e24f432ae6c3",
+  "name" : "Click on Accept button to close the cookie popup",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Click on Accept button to close the cookie popup",
+  "historyId" : "ffb59a5dbf104d1d93daf79a01925ef6",
+  "time" : {
+    "start" : 1615904786483,
+    "stop" : 1615904795089,
+    "duration" : 8606
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Accept button to close the cookie popup"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "90e4e24f432ae6c3.json",
+  "parameterValues" : [ ]
+}

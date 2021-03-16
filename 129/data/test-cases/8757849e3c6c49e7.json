@@ -1,0 +1,123 @@
+{
+  "uid" : "8757849e3c6c49e7",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Check mail inbox to get magic link",
+  "historyId" : "b7529a6b4ccd13739be1266af7dca463",
+  "time" : {
+    "start" : 1615905338968,
+    "stop" : 1615905340012,
+    "duration" : 1044
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "ad580b6a5a0d9b2b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/ad580b6a5a0d9b2b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786390799,
+          "stop" : 1615786391826,
+          "duration" : 1027
+        }
+      }, {
+        "uid" : "25d50915f51c4de9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/25d50915f51c4de9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613714016491,
+          "stop" : 1613714017647,
+          "duration" : 1156
+        }
+      }, {
+        "uid" : "9fcaac38390aaf61",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/9fcaac38390aaf61",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1613031298090,
+          "stop" : 1613031299342,
+          "duration" : 1252
+        }
+      }, {
+        "uid" : "8e5d24cf7a2639a4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/8e5d24cf7a2639a4",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612408302904,
+          "stop" : 1612408304187,
+          "duration" : 1283
+        }
+      }, {
+        "uid" : "22852d3489d427b3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/22852d3489d427b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275640818,
+          "stop" : 1612275641810,
+          "duration" : 992
+        }
+      }, {
+        "uid" : "9c7125c49f0bce08",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/9c7125c49f0bce08",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275583240,
+          "stop" : 1612275584181,
+          "duration" : 941
+        }
+      }, {
+        "uid" : "4e313d45e4be7bef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/4e313d45e4be7bef",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1612172439575,
+          "stop" : 1612172441474,
+          "duration" : 1899
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8757849e3c6c49e7.json",
+  "parameterValues" : [ ]
+}

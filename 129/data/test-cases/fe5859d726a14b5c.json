@@ -1,0 +1,46 @@
+{
+  "uid" : "fe5859d726a14b5c",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Check mail inbox to get magic link",
+  "historyId" : "a52479724c47d534b7a297206760b1b6",
+  "time" : {
+    "start" : 1615905265776,
+    "stop" : 1615905266799,
+    "duration" : 1023
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fe5859d726a14b5c.json",
+  "parameterValues" : [ ]
+}
