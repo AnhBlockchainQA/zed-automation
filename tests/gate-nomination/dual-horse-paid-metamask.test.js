@@ -2,7 +2,7 @@ const {MetamaskPage} = require("../../pages/MetamaskPage");
 const {MetamaskFactory} = require("../../utils/browser/metamaskFactory");
 const {LoginPage} = require("../../pages/LoginPage");
 const {MetamaskNotificationPage} = require("../../pages/MetamaskNotification");
-const {SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD} = require("../../data/env");
+const {FIRST_SEED_PHRASE, FIRST_PASSWORD, FIRST_CONFIRM_PASSWORD} = require("../../data/env");
 const {HomePage} = require("../../pages/HomePage");
 const {RacingPage} = require("../../pages/RacingPage");
 
@@ -34,9 +34,9 @@ describe("Pick horses and add into the entry with fee racing when logged by Meta
         await metamaskPage.clickOnGetStartedButton();
         await metamaskPage.clickOnImportWalletButton();
         await metamaskPage.clickOnIAgreeButton();
-        await metamaskPage.typeSeedPhase(SEED_PHRASE);
-        await metamaskPage.typeNewPassword(PASSWORD);
-        await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
+        await metamaskPage.typeSeedPhase(FIRST_SEED_PHRASE);
+        await metamaskPage.typeNewPassword(FIRST_PASSWORD);
+        await metamaskPage.typeConfirmPassword(FIRST_CONFIRM_PASSWORD);
         await metamaskPage.checkTermsAndConditionCheckBox();
         await metamaskPage.clickImportButton();
         await metamaskPage.clickOnAllDoneButton();

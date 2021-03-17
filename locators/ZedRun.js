@@ -30,7 +30,7 @@ module.exports = {
     LIST_HORSE_ON_SALE: ".horse-section .on-sale .horses .horse-sale-card.horse-details",
     EXPLORE_MARKET_BUTTON: "//section[@class='horse-section']//div[@class='on-sale']//div[@class='actions']//a[contains(text(),'Explore Market')]",
     LIST_HORSE_IN_STUD: ".horse-section .in-stud .horses .horse .label-horse",
-    MORE_BREEDING_BUTTON: "//section[@class='horse-section']//div[@class='in-stud']//div[@class='actions']//a[contains(text(),'More Breeding')]",
+    MORE_BREEDING_BUTTON: "//section[@class='horse-section']//div[@class='in-stud']//div[@class='actions']//a[contains(text(),'Open Stable')]",
     SHOW_HORSE_BUTTON: "//section[@class='zed-section']//div[@class='details']//button",
     USER_MENU_ARROW: ".user-part > .menu-button > .icon-part > .icon-arrow > .icon",
     MY_SETTINGS_LINK : "div > div:nth-child(3) > .primary-text > .icon-part > span",
