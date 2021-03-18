@@ -274,15 +274,18 @@ class HomePage {
         }, UP_AND_COMING);
         await expect(totalUpAndComing).toBeGreaterThan(0);
       }
-      console.log(
-        "---- Zed Run Automation Framework: Validate the More Races Button on Home Page ---"
-      );
-      const checkMoreRacesButton = await this.page.isVisible(MORE_RACES_BUTTON);
-      if (!checkMoreRacesButton) {
-        throw new Error("The More Races button does not display as expected");
-      }
+
     } catch {
-      throw new Error("The Race Section does not display as expected");
+        console.log(
+            "---- Zed Run Automation Framework: Validate the More Races Button on Home Page ---"
+        );
+        const checkMoreRacesButton = await this.page.isVisible(MORE_RACES_BUTTON);
+        if (checkMoreRacesButton) {
+
+        } else {
+            throw new Error("The Race Section does not display as expected");
+        }
+
     }
   }
 
@@ -291,7 +294,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Validate the Horse On Sale Section on Home Page ---"
     );
     try {
-      /*await this.page.waitForSelector(LIST_HORSE_ON_SALE, { timeout: 10000 });
+      await this.page.waitForSelector(LIST_HORSE_ON_SALE, { timeout: 10000 });
       const checkHorseOnSaleVisible = await this.page.isVisible(
         LIST_HORSE_ON_SALE
       );
@@ -300,21 +303,22 @@ class HomePage {
           return document.querySelectorAll(locator).length;
         }, LIST_HORSE_ON_SALE);
         await expect(totalHorseOnSale).toBeGreaterThan(0);
-      }*/
-
-      console.log(
-        "---- Zed Run Automation Framework: Validate the Explore Market Button on Home Page ---"
-      );
-      const checkExploreMarketButton = await this.page.isVisible(
-        EXPLORE_MARKET_BUTTON
-      );
-      if (!checkExploreMarketButton) {
-        throw new Error(
-          "The Explore Market button does not display as expected"
-        );
       }
+
+
     } catch {
-      throw new Error("The Horse On Sale does not display as expected");
+        console.log(
+            "---- Zed Run Automation Framework: Validate the Explore Market Button on Home Page ---"
+        );
+        const checkExploreMarketButton = await this.page.isVisible(
+            EXPLORE_MARKET_BUTTON
+        );
+        if (checkExploreMarketButton) {
+
+        } else {
+            throw new Error("The Horse On Sale does not display as expected");
+        }
+
     }
   }
 
@@ -323,7 +327,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Validate the In Stub Section on Home Page ---"
     );
     try {
-      /*await this.page.waitForSelector(LIST_HORSE_IN_STUD, { timeout: 10000 });
+      await this.page.waitForSelector(LIST_HORSE_IN_STUD, { timeout: 10000 });
       const checkListHorseInStudVisible = await this.page.isVisible(
         LIST_HORSE_IN_STUD
       );
@@ -333,20 +337,20 @@ class HomePage {
         }, LIST_HORSE_IN_STUD);
         await expect(totalHorseInStud).toBeGreaterThan(0);
       }
-*/
-      console.log(
-        "---- Zed Run Automation Framework: Validate the More Breeding Button on Home Page ---"
-      );
-      const checkMoreBreedingButton = await this.page.isVisible(
-        MORE_BREEDING_BUTTON
-      );
-      if (!checkMoreBreedingButton) {
-        throw new Error(
-          "The More Breeding button does not display as expected"
-        );
-      }
+
     } catch {
-      throw new Error("The Horse In Stud does not display as expected");
+        console.log(
+            "---- Zed Run Automation Framework: Validate the More Breeding Button on Home Page ---"
+        );
+        const checkMoreBreedingButton = await this.page.isVisible(
+            MORE_BREEDING_BUTTON
+        );
+        if (checkMoreBreedingButton) {
+
+        } else {
+            throw new Error("The Horse In Stud section does not display as expected");
+        }
+
     }
   }
 
