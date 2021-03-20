@@ -80,8 +80,7 @@ describe("Pick horses and add into the entry with fee racing when logged by Magi
         console.log('List of Gates are opening ', numberGateOpening);
         const totalGate = numberGateOpening.length;
         console.log('The number of gate ', totalGate);
-        // for (let i = 0; i < numberGateOpening.length; i++) {
-        for (let i = totalGate - 1; i >= 0; i--) {
+        for (let i = 0; i < numberGateOpening.length; i++) {
             await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
             await racingPage.waitForLoadState();
             await racingPage.clickConfirmButton();
