@@ -1,0 +1,72 @@
+{
+  "uid" : "d324e9435788fb29",
+  "name" : "Check the detail payment",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Check the detail payment",
+  "historyId" : "9cf7fcea441d4404c138f9184af51387",
+  "time" : {
+    "start" : 1616247331332,
+    "stop" : 1616247346359,
+    "duration" : 15027
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+  "statusTrace" : "page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: \n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:180:48\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)\n                    at Frame.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:205:20)\n                    at Page.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:215:21)\n                    at ActivityPage.mouseOverFirstStatementInfo (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:69:21)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:142:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "44805256967c4ee6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/44805256967c4ee6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903093997,
+          "stop" : 1615903095442,
+          "duration" : 1445
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d324e9435788fb29.json",
+  "parameterValues" : [ ]
+}

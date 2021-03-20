@@ -1,0 +1,85 @@
+{
+  "uid" : "b978fb016e61edac",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a racehorse existing on Stable Page",
+  "historyId" : "f05f7200ea523e5ab9f1cf149d616974",
+  "time" : {
+    "start" : 1616247453574,
+    "stop" : 1616247455782,
+    "duration" : 2208
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a racehorse existing on Stable Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "ce95cc77d74eeebc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/ce95cc77d74eeebc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903143753,
+          "stop" : 1615903145462,
+          "duration" : 1709
+        }
+      }, {
+        "uid" : "42f3eae2b290c04b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/42f3eae2b290c04b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783641830,
+          "stop" : 1615783643875,
+          "duration" : 2045
+        }
+      }, {
+        "uid" : "343a235b29821daa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/343a235b29821daa",
+        "status" : "failed",
+        "statusDetails" : "ReferenceError: NUMBER_HORSE is not defined",
+        "time" : {
+          "start" : 1612406957289,
+          "stop" : 1612406958247,
+          "duration" : 958
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b978fb016e61edac.json",
+  "parameterValues" : [ ]
+}

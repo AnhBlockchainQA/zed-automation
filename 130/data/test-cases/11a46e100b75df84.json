@@ -1,0 +1,66 @@
+{
+  "uid" : "11a46e100b75df84",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "f363831270f3ecf84f58ba99f6df4684",
+  "time" : {
+    "start" : 1616249332603,
+    "stop" : 1616249366694,
+    "duration" : 34091
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "8ebb44b8e4012c94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8ebb44b8e4012c94",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904891385,
+          "stop" : 1615904912515,
+          "duration" : 21130
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "11a46e100b75df84.json",
+  "parameterValues" : [ ]
+}

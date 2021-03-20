@@ -1,0 +1,66 @@
+{
+  "uid" : "48132e779a25ada0",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "89a648ac2f92b1f59d623601023a31e3",
+  "time" : {
+    "start" : 1616249172333,
+    "stop" : 1616249204243,
+    "duration" : 31910
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "62ff0cc9811ff5cc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/62ff0cc9811ff5cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904766143,
+          "stop" : 1615904786483,
+          "duration" : 20340
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "48132e779a25ada0.json",
+  "parameterValues" : [ ]
+}

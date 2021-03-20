@@ -1,0 +1,73 @@
+{
+  "uid" : "59cc45061bb13277",
+  "name" : "Go back to user stable and check if horse is transferred",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Go back to user stable and check if horse is transferred",
+  "historyId" : "dc4ce1d641f970e342d577d50e767156",
+  "time" : {
+    "start" : 1616247346359,
+    "stop" : 1616247406421,
+    "duration" : 60062
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at ActivityPage.clickOnUserAvatar (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:105:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go back to user stable and check if horse is transferred"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "7c8ba38582454bcb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/7c8ba38582454bcb",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Z10_TESTS7307E009']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615903095442,
+          "stop" : 1615903107417,
+          "duration" : 11975
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "59cc45061bb13277.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,75 @@
+{
+  "uid" : "ff5bf006da346e65",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate has a racehorse existing on Stable Page",
+  "historyId" : "2fa9b5e35146dfc3acffa5153ad5d605",
+  "time" : {
+    "start" : 1616247909919,
+    "stop" : 1616247912194,
+    "duration" : 2275
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a racehorse existing on Stable Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5e46d314d8610bec",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/5e46d314d8610bec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903587151,
+          "stop" : 1615903589148,
+          "duration" : 1997
+        }
+      }, {
+        "uid" : "d05475331813a29c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/d05475331813a29c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783910090,
+          "stop" : 1615783912055,
+          "duration" : 1965
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ff5bf006da346e65.json",
+  "parameterValues" : [ ]
+}

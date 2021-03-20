@@ -1,0 +1,72 @@
+{
+  "uid" : "e679b26caed2ff1b",
+  "name" : "Verify that our order is processing",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Verify that our order is processing",
+  "historyId" : "e4dab28d64bd21568a3fec7e140e953d",
+  "time" : {
+    "start" : 1616247301286,
+    "stop" : 1616247331332,
+    "duration" : 30046
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Statement is not present!",
+  "statusTrace" : "Error: Statement is not present!\n                    at ActivityPage.checkIfStatementInfoCorrect (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:60:13)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is processing"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "69ee0800efacaa82",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/69ee0800efacaa82",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903093867,
+          "stop" : 1615903093997,
+          "duration" : 130
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e679b26caed2ff1b.json",
+  "parameterValues" : [ ]
+}

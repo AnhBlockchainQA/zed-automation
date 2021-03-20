@@ -1,0 +1,66 @@
+{
+  "uid" : "42ba4e235d2410fe",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Give a name to newborn horse when logging in with magic link.Open new browser with magic link",
+  "historyId" : "ab89a798e16431bdf05e9261e6ae1b60",
+  "time" : {
+    "start" : 1616249450618,
+    "stop" : 1616249469412,
+    "duration" : 18794
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b5e1fbc95a742328",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/b5e1fbc95a742328",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904975223,
+          "stop" : 1615904987788,
+          "duration" : 12565
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "42ba4e235d2410fe.json",
+  "parameterValues" : [ ]
+}

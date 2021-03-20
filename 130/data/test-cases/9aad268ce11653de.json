@@ -1,0 +1,66 @@
+{
+  "uid" : "9aad268ce11653de",
+  "name" : "Process the checkout with ETH",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Process the checkout with ETH",
+  "historyId" : "b00027c82f267fd468e721b63518c227",
+  "time" : {
+    "start" : 1616246376430,
+    "stop" : 1616246379725,
+    "duration" : 3295
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "a280b00249404673",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/a280b00249404673",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902365245,
+          "stop" : 1615902368681,
+          "duration" : 3436
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9aad268ce11653de.json",
+  "parameterValues" : [ ]
+}

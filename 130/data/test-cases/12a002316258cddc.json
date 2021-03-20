@@ -1,0 +1,73 @@
+{
+  "uid" : "12a002316258cddc",
+  "name" : "Verify that our order is processing",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Verify that our order is processing",
+  "historyId" : "86d493a3511c3062ba8975c91226ec99",
+  "time" : {
+    "start" : 1616248100713,
+    "stop" : 1616248130742,
+    "duration" : 30029
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Statement is not present!",
+  "statusTrace" : "Error: Statement is not present!\n                    at ActivityPage.checkIfStatementInfoCorrect (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:60:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Verify that our order is processing"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "29d4eeccc5142f63",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/29d4eeccc5142f63",
+        "status" : "failed",
+        "statusDetails" : "Error: Statement is not present!",
+        "time" : {
+          "start" : 1615903778234,
+          "stop" : 1615903808287,
+          "duration" : 30053
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "12a002316258cddc.json",
+  "parameterValues" : [ ]
+}

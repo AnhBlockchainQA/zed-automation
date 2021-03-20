@@ -1,0 +1,66 @@
+{
+  "uid" : "8c87c795388926b3",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Generate stud horse when logging in with magic link.Open new browser with magic link",
+  "historyId" : "94d059e570175ef3eeaf3adbad994447",
+  "time" : {
+    "start" : 1616248230025,
+    "stop" : 1616248246611,
+    "duration" : 16586
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "96acaf69a83e3a76",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/96acaf69a83e3a76",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903854282,
+          "stop" : 1615903864884,
+          "duration" : 10602
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8c87c795388926b3.json",
+  "parameterValues" : [ ]
+}

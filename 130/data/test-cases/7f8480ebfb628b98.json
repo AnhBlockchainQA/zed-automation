@@ -1,0 +1,73 @@
+{
+  "uid" : "7f8480ebfb628b98",
+  "name" : "Check that we can not search this horse anymore",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Check that we can not search this horse anymore",
+  "historyId" : "237a78daccdf5f668d3e05dba73514c",
+  "time" : {
+    "start" : 1616247635389,
+    "stop" : 1616247675441,
+    "duration" : 40052
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at HomePage.clickOnUserAvatar (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:430:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that we can not search this horse anymore"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "66c38c756a29a6e7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/66c38c756a29a6e7",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1615903324166,
+          "stop" : 1615903364218,
+          "duration" : 40052
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7f8480ebfb628b98.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "ee97736c19914e30",
+  "name" : "Update metamask info",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Update metamask info",
+  "historyId" : "5994f34d887e0f843a7794cda69153d1",
+  "time" : {
+    "start" : 1616249161875,
+    "stop" : 1616249172333,
+    "duration" : 10458
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "7e9edf16a74306fe",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/7e9edf16a74306fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904759188,
+          "stop" : 1615904766143,
+          "duration" : 6955
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ee97736c19914e30.json",
+  "parameterValues" : [ ]
+}

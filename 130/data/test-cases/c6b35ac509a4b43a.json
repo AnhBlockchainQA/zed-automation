@@ -1,0 +1,66 @@
+{
+  "uid" : "c6b35ac509a4b43a",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Open new browser with magic link",
+  "historyId" : "8002179957d3f81e5c0f9454cb231059",
+  "time" : {
+    "start" : 1616249781114,
+    "stop" : 1616249807015,
+    "duration" : 25901
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "815aeccab1615f7b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/815aeccab1615f7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905266799,
+          "stop" : 1615905278890,
+          "duration" : 12091
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c6b35ac509a4b43a.json",
+  "parameterValues" : [ ]
+}

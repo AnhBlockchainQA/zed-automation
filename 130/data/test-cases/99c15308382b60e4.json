@@ -1,0 +1,66 @@
+{
+  "uid" : "99c15308382b60e4",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check that avatar is shown then click on Breeding link",
+  "historyId" : "c47c7e071ce634abe00ba264146490b5",
+  "time" : {
+    "start" : 1616248246611,
+    "stop" : 1616248275990,
+    "duration" : 29379
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "8088461ac8eba37e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8088461ac8eba37e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903864884,
+          "stop" : 1615903901072,
+          "duration" : 36188
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "99c15308382b60e4.json",
+  "parameterValues" : [ ]
+}

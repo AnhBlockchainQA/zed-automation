@@ -1,0 +1,66 @@
+{
+  "uid" : "218c7278d24ae4d5",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "a3c6801726ccdf746412a898faf3dca6",
+  "time" : {
+    "start" : 1616247913098,
+    "stop" : 1616247929006,
+    "duration" : 15908
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "9d692cebd3a3cc9b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/9d692cebd3a3cc9b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903590171,
+          "stop" : 1615903606340,
+          "duration" : 16169
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "218c7278d24ae4d5.json",
+  "parameterValues" : [ ]
+}

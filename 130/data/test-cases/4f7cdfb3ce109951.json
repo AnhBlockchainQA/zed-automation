@@ -1,0 +1,77 @@
+{
+  "uid" : "4f7cdfb3ce109951",
+  "name" : "Validate the component displays on Home Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate the component displays on Home Page",
+  "historyId" : "8d08013babc7ff9800914e2aab91c10c",
+  "time" : {
+    "start" : 1616247892044,
+    "stop" : 1616247903522,
+    "duration" : 11478
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate the component displays on Home Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "9ae2da0336058b13",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/9ae2da0336058b13",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615903579201,
+          "stop" : 1615903580289,
+          "duration" : 1088
+        }
+      }, {
+        "uid" : "268ba21b0b8f2b17",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/268ba21b0b8f2b17",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615783902781,
+          "stop" : 1615783903876,
+          "duration" : 1095
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4f7cdfb3ce109951.json",
+  "parameterValues" : [ ]
+}

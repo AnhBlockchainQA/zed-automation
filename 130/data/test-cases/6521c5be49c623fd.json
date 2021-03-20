@@ -1,0 +1,66 @@
+{
+  "uid" : "6521c5be49c623fd",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Check mail inbox to get magic link",
+  "historyId" : "bdccf39773556963041bff11e3411b5b",
+  "time" : {
+    "start" : 1616249366695,
+    "stop" : 1616249367766,
+    "duration" : 1071
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "7ac087ef085bf9f4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/7ac087ef085bf9f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904912515,
+          "stop" : 1615904913638,
+          "duration" : 1123
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6521c5be49c623fd.json",
+  "parameterValues" : [ ]
+}

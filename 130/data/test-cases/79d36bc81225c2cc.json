@@ -1,0 +1,74 @@
+{
+  "uid" : "79d36bc81225c2cc",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "b08fd24170746b12400f72a3e28a0cdd",
+  "time" : {
+    "start" : 1616249807015,
+    "stop" : 1616249832282,
+    "duration" : 25267
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3363050371a61981",
+      "status" : "passed",
+      "time" : {
+        "start" : 1616247172571,
+        "stop" : 1616247181262,
+        "duration" : 8691
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "89c7baa301ce5161",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/89c7baa301ce5161",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905278890,
+          "stop" : 1615905314394,
+          "duration" : 35504
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "79d36bc81225c2cc.json",
+  "parameterValues" : [ ]
+}

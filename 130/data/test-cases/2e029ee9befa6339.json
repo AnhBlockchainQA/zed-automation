@@ -1,0 +1,66 @@
+{
+  "uid" : "2e029ee9befa6339",
+  "name" : "Update metamask info",
+  "fullName" : "Generate stud horse when logging in Metamask.Update metamask info",
+  "historyId" : "77d58a822b6ec71b615a6a22d6e436fb",
+  "time" : {
+    "start" : 1616246522435,
+    "stop" : 1616246527467,
+    "duration" : 5032
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "50e5ce77b0e8eef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/50e5ce77b0e8eef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902413521,
+          "stop" : 1615902418072,
+          "duration" : 4551
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2e029ee9befa6339.json",
+  "parameterValues" : [ ]
+}

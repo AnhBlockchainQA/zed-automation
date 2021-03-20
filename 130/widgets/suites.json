@@ -1,0 +1,114 @@
+{
+  "total" : 22,
+  "items" : [ {
+    "uid" : "c441c1d6e4e159aae86258e24fba5f2d",
+    "name" : "Generate stud horse when logging in with magic link",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "419385d731d8ed7a4e425838385beda1",
+    "name" : "Generate stud horse when logging in Metamask",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 8
+    }
+  }, {
+    "uid" : "c451552aaa03fcedab3bd8b5b6721185",
+    "name" : "Buy horse with credit card - Logging with Metamask",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 7,
+      "unknown" : 0,
+      "total" : 11
+    }
+  }, {
+    "uid" : "454326cb1962c692bbf8da41b093dfb3",
+    "name" : "Buy horse with credit card - Logging with magic link",
+    "statistic" : {
+      "failed" : 4,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 8
+    }
+  }, {
+    "uid" : "67cd873afbe18f810912e98f59a391ff",
+    "name" : "Transfer horse to other wallet address - Logging with Metamask",
+    "statistic" : {
+      "failed" : 3,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "6f58c29788f9f4f756d13dda6f436ce7",
+    "name" : "Purchase horse with ETH - Logging with Metamask",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "79fb66ddc7614a61d91bdcfb1bdf847e",
+    "name" : "Generate stud horse",
+    "statistic" : {
+      "failed" : 2,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 6
+    }
+  }, {
+    "uid" : "210be3302cd9afc9b2f9f5aa8a06f97e",
+    "name" : "Pick horses and add into the entry with fee racing when logged by Magic Link",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 4,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "c5613464016acf19d81609d42236f559",
+    "name" : "Pick horses and add into the entry with fee racing when logged by Meta Mask",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 3,
+      "unknown" : 0,
+      "total" : 4
+    }
+  }, {
+    "uid" : "fff0b95b2d23410ae11ccf7b2c7d177f",
+    "name" : "Do the smoke test to validate the Zed Run works well when logged by Email",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 11,
+      "unknown" : 0,
+      "total" : 11
+    }
+  } ]
+}

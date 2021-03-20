@@ -1,0 +1,66 @@
+{
+  "uid" : "266e5c65200217e6",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card - Logging with magic link.Go to Marketplace and select first horse",
+  "historyId" : "17f055ba572679dc118770e0526a2191",
+  "time" : {
+    "start" : 1616247940004,
+    "stop" : 1616247980672,
+    "duration" : 40668
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "c277390ef18c647f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/c277390ef18c647f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903616967,
+          "stop" : 1615903658220,
+          "duration" : 41253
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "266e5c65200217e6.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,66 @@
+{
+  "uid" : "571c560702ba31fa",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in Metamask.Check that avatar is shown then click on Breeding link",
+  "historyId" : "f7b53cbd22ebc235808a645fdfdf69aa",
+  "time" : {
+    "start" : 1616246542712,
+    "stop" : 1616246548417,
+    "duration" : 5705
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "e6880089083bd170",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/e6880089083bd170",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902432157,
+          "stop" : 1615902437742,
+          "duration" : 5585
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "571c560702ba31fa.json",
+  "parameterValues" : [ ]
+}

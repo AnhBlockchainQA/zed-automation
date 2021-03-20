@@ -1,0 +1,75 @@
+{
+  "uid" : "ef9a55ae69473aa",
+  "name" : "Validate has a result on Result Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate has a result on Result Page",
+  "historyId" : "78d744d6cb9c3579c364637ae11b000b",
+  "time" : {
+    "start" : 1616247907233,
+    "stop" : 1616247908947,
+    "duration" : 1714
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a result on Result Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "71b22c3bc2971210",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/71b22c3bc2971210",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903584398,
+          "stop" : 1615903585154,
+          "duration" : 756
+        }
+      }, {
+        "uid" : "99040d24c7fefaa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/99040d24c7fefaa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783908098,
+          "stop" : 1615783909049,
+          "duration" : 951
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ef9a55ae69473aa.json",
+  "parameterValues" : [ ]
+}

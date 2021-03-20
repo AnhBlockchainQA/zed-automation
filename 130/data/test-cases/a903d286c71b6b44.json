@@ -1,0 +1,87 @@
+{
+  "uid" : "a903d286c71b6b44",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Select a racehorses and add into the free racing",
+  "historyId" : "6b3086bc590de9dc2fcd702fa864bdf3",
+  "time" : {
+    "start" : 1616250177746,
+    "stop" : 1616250222365,
+    "duration" : 44619
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "f24257b58ea1d1f6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/f24257b58ea1d1f6",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615905697275,
+          "stop" : 1615905730941,
+          "duration" : 33666
+        }
+      }, {
+        "uid" : "cc3e37244c400f10",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/cc3e37244c400f10",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615786690075,
+          "stop" : 1615786722951,
+          "duration" : 32876
+        }
+      }, {
+        "uid" : "112aa32e34084f69",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/112aa32e34084f69",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1613715460933,
+          "stop" : 1613715580940,
+          "duration" : 120007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a903d286c71b6b44.json",
+  "parameterValues" : [ ]
+}

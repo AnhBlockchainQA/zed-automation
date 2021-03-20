@@ -1,0 +1,66 @@
+{
+  "uid" : "52934e4490c815dc",
+  "name" : "Update metamask info",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Update metamask info",
+  "historyId" : "57d175a1774a6c0fb30fe771aa0fbef3",
+  "time" : {
+    "start" : 1616247458790,
+    "stop" : 1616247463865,
+    "duration" : 5075
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "26c553cab49aaf63",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/26c553cab49aaf63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903148234,
+          "stop" : 1615903152965,
+          "duration" : 4731
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "52934e4490c815dc.json",
+  "parameterValues" : [ ]
+}

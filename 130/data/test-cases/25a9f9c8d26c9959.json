@@ -1,0 +1,77 @@
+{
+  "uid" : "25a9f9c8d26c9959",
+  "name" : "Validate the component displays on Home Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate the component displays on Home Page",
+  "historyId" : "35c5c101ecfc6a597f73938bf60ad9ab",
+  "time" : {
+    "start" : 1616247436212,
+    "stop" : 1616247447558,
+    "duration" : 11346
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate the component displays on Home Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "c114374568ee9ae3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/c114374568ee9ae3",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615903136231,
+          "stop" : 1615903137437,
+          "duration" : 1206
+        }
+      }, {
+        "uid" : "64e2c601576b83a6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/64e2c601576b83a6",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615783635244,
+          "stop" : 1615783636125,
+          "duration" : 881
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "25a9f9c8d26c9959.json",
+  "parameterValues" : [ ]
+}
