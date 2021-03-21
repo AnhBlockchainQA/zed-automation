@@ -74,8 +74,8 @@ jobs:
         slack-text: check your report here https://vhslab.github.io/qa-automationtest/
     - name: Send image test report to Slack
         uses: actions/checkout@v1
-      - run: echo "Test file " > screenshot.png
-      - name: Upload to slack step
+    - run: echo "Test file " > screenshot.png
+    - name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
         with:
           token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
