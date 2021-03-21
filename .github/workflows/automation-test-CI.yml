@@ -74,6 +74,7 @@ jobs:
     #     slack-text: check your report detial here https://vhslab.github.io/qa-automationtest/
     - name: Send image test report to Slack
       uses: actions/checkout@v2
+      if: always()
     - run: echo "Test file " > screenshot.png
     - name: Slack File Upload
       uses: adrey/slack-file-upload-action@1.0.5
