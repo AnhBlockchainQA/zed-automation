@@ -61,7 +61,7 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         source: https://vhslab.github.io/qa-automationtest/
-        destination: /home/runner/work/qa-automationtest/qa-automationtest/screenshot.png
+        destination: screenshot.png
         full-page: true
         
     # - name: Send url test report to Slack
@@ -79,5 +79,5 @@ jobs:
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/qa-automationtest/qa-automationtest/screenshot.png
+        path: screenshot.png
         channel: automation-test-report
