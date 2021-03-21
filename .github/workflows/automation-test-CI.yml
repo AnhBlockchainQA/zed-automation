@@ -56,8 +56,15 @@ jobs:
         PERSONAL_TOKEN: 07a56d6a3c3b39cc83c0375fedf5070e4b60a4cf
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+
+    - name: Screenshot Test Report
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: https://vhslab.github.io/qa-automationtest/
+        destination: screenshot.png
+        full-page: true
         
-    - name: Send message to Slack API
+    - name: Send url test report to Slack
       if: always()
       uses: archive/github-actions-slack@v1.0.3
       id: notify
@@ -65,3 +72,12 @@ jobs:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
         slack-text: check your report here https://vhslab.github.io/qa-automationtest/
+    - name: Send image test report to Slack
+        uses: actions/checkout@v1
+      - run: echo "Test file " > screenshot.png
+      - name: Upload to slack step
+        uses: adrey/slack-file-upload-action@master
+        with:
+          token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+          path: screenshot.png
+          channel: automation-test-report

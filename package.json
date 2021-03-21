@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand --testTimeout=120000 --forceExit --detectOpenHandles",
+    "test": "jest --runInBand --testTimeout=120000 --forceExit --detectOpenHandles tests/login/magicLink.test.js ",
     "allure": "allure generate --clean"
   },
   "keywords": [],
