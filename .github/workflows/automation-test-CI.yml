@@ -61,7 +61,7 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         source: https://vhslab.github.io/qa-automationtest/
-        destination: /automationtest/screenshot.png
+        destination: screenshot.png
         full-page: true
         
     # - name: Send url test report to Slack
