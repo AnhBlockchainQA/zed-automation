@@ -74,10 +74,9 @@ jobs:
     #     slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
     - name: Send image test report to Slack
       uses: actions/checkout@v2
-    - run: echo "Test file " > screenshot.png
-    - name: cleanup #https://github.com/actions/checkout/issues/211
-        run: |
-          sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+    - run: | 
+        echo "Test file " > screenshot.png
+        sudo chown -R $USER:$USER $GITHUB_WORKSPACE
     - name: Slack File Upload
       uses: adrey/slack-file-upload-action@1.0.5
       with:
