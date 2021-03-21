@@ -64,20 +64,20 @@ jobs:
         destination: /automationtest/screenshot.png
         full-page: true
         
-    # - name: Send url test report to Slack
-    #   if: always()
-    #   uses: archive/github-actions-slack@v1.0.3
-    #   id: notify
-    #   with:
-    #     slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-    #     slack-channel: "automation-test-report"
-    #     slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
-    # - name: Send image test report to Slack
-    #   uses: actions/checkout@v2
-    # - run: echo "Test file " > screenshot.png
+    - name: Send url test report to Slack
+      if: always()
+      uses: archive/github-actions-slack@v1.0.3
+      id: notify
+      with:
+        slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        slack-channel: "automation-test-report"
+        slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
+    - name: Send image test report to Slack
+      uses: actions/checkout@v2
+    - run: echo "Test file " > screenshot.png
     - name: Slack File Upload
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /automationtest/screenshot.png
+        path: /home/runner/work/_temp/automationtest/screenshot.png
         channel: automation-test-report
