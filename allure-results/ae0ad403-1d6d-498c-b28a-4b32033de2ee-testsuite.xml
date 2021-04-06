@@ -1,0 +1,1072 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1616814130701' stop='1616817291205'>
+    <name>Generate stud horse when logging in with magic link</name>
+    <title>Generate stud horse when logging in with magic link</title>
+    <test-cases>
+        <test-case start='1616814130702' status='passed' stop='1616814148051'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814148051' status='passed' stop='1616814149908'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814149908' status='passed' stop='1616814159800'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814159800' status='passed' stop='1616814198142'>
+            <name>Check that avatar is shown then click on Breeding link</name>
+            <title>Check that avatar is shown then click on Breeding link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814198142' status='passed' stop='1616814202029'>
+            <name>Select mate horse</name>
+            <title>Select mate horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814202029' status='passed' stop='1616814205376'>
+            <name>Select female horse</name>
+            <title>Select female horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1616814205376' status='failed' stop='1616814295661'>
+            <name>Proceed breeding steps</name>
+            <title>Proceed breeding steps</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn"
+                  selector resolved to visible &lt;button class="primary-btn buy-cover-btn text-uppercase">Buy Cover&lt;/button>
+                attempting click action
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #1
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #22
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #23
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #24
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #25
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #26
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #27
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #28
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #29
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #30
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #31
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #32
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #33
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #34
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #35
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #36
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #37
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #38
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #39
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #40
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #41
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #42
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #43
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #44
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #45
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #46
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #47
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #48
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #49
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #50
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #51
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #52
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #53
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #54
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #55
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #56
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #57
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #58
+                  waiting 500ms
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn"
+                  selector resolved to visible &lt;button class="primary-btn buy-cover-btn text-uppercase">Buy Cover&lt;/button>
+                attempting click action
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #1
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #22
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #23
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #24
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #25
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #26
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #27
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #28
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #29
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #30
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #31
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #32
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #33
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #34
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #35
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #36
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #37
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #38
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #39
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #40
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #41
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #42
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #43
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #44
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #45
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #46
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #47
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #48
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #49
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #50
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #51
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #52
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #53
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #54
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #55
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #56
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,703.2)
+                  &lt;div tabindex="-1" role="dialog" aria-modal="true" cl…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #57
+                  waiting 500ms
+                  waiting for element to be visible, enabled and not moving
+                  element is visible, enabled and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (689.21,907.07)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying click action, attempt #58
+                  waiting 500ms
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:257:40)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:256:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:21)
+                    at StudServicePage.clickOnBuyCoverButton (/Users/davidle/qa-automationtest/pages/StudServicePage.js:268:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1616814295662' status='failed' stop='1616814680139'>
+            <name>Go to Activity page and check if we breed successfully</name>
+            <title>Go to Activity page and check if we breed successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:28:5)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:113:3)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:36:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1616814680139' status='failed' stop='1616817291205'>
+            <name>Go to Stable page and verify there is a new horse</name>
+            <title>Go to Stable page and verify there is a new horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:28:5)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:128:5)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:36:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
