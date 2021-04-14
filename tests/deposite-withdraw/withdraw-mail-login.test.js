@@ -53,7 +53,7 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForNavigation();
+    await magicLinkPage.waitForLoadState();
   });
 
   test(

@@ -96,30 +96,30 @@ describe("Generate stud horse", () => {
         await myStablePage.waitForLoadState();
     });
 
-    test("Select horse in My stable", 3, async () => {
-        myStablePage = new MyStablePage(newPageInstance);
-        await myStablePage.clickOnCloseButtonOfFilterForm();
-        index = await myStablePage.getRandomIndexOfMaleHorsesInStable();
-        await myStablePage.clickOnMaleHorseInStableWithIndex(index);
-        await myStablePage.clickOnBreedingLinkOfHorseWithIndex(index);
-        // horseName = await myStablePage.getSelectedMaleHorseWithIndex(index);
-    });
+    // test("Select horse in My stable", 3, async () => {
+    //     myStablePage = new MyStablePage(newPageInstance);
+    //     await myStablePage.clickOnCloseButtonOfFilterForm();
+    //     index = await myStablePage.getRandomIndexOfMaleHorsesInStable();
+    //     await myStablePage.clickOnMaleHorseInStableWithIndex(index);
+    //     await myStablePage.clickOnBreedingLinkOfHorseWithIndex(index);
+    //     horseName = await myStablePage.getSelectedMaleHorseWithIndex(index);
+    // });
 
-    test("Proceed putting horse to stud service", 3, async () => {
-        myStablePage = new MyStablePage(newPageInstance);
-        await myStablePage.setStudDuration();
-        await myStablePage.clickOnNextButton();
-        confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-            newPageInstance,
-            PROCEED_BUTTON
-        );
-        confirmMetamaskNotificationPage = new MetamaskNotificationPage(
-            confirmMetamaskNotificationInstance
-        );
-        await confirmMetamaskNotificationPage.waitForLoadState();
-        await confirmMetamaskNotificationPage.clickOnConfirmButton();
-        await confirmMetamaskNotificationPage.waitForCloseEvent();
-    });
+    // test("Proceed putting horse to stud service", 3, async () => {
+    //     myStablePage = new MyStablePage(newPageInstance);
+    //     await myStablePage.setStudDuration();
+    //     await myStablePage.clickOnNextButton();
+    //     confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+    //         newPageInstance,
+    //         PROCEED_BUTTON
+    //     );
+    //     confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+    //         confirmMetamaskNotificationInstance
+    //     );
+    //     await confirmMetamaskNotificationPage.waitForLoadState();
+    //     await confirmMetamaskNotificationPage.clickOnConfirmButton();
+    //     await confirmMetamaskNotificationPage.waitForCloseEvent();
+    // });
 
     // test('Check activity page', 3, async() => {
     //   activityPage = new ActivityPage(newPageInstance);

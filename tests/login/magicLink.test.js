@@ -50,7 +50,7 @@ describe("Login to ZedRun with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForLoginFormHidden();
+    // await magicLinkPage.waitForLoginFormHidden();
     await magicLinkPage.waitForTimeout();
   });
 
@@ -58,6 +58,7 @@ describe("Login to ZedRun with magic link", () => {
     "Switch back to ZedRun page and verify login successful",
     3,
     async () => {
+      // await page.bringToFront();
       homePage = new HomePage(page);
       await homePage.bringToFront();
       await homePage.checkIfAvatarPresent();

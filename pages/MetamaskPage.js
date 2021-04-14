@@ -30,7 +30,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on Get started button ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_GET_STARTED_BUTTON, {
+      await this.page.waitForSelector(CLICK_GET_STARTED_BUTTON, {
         timeout: 0,
       });
       await this.page.click(CLICK_GET_STARTED_BUTTON);
@@ -44,7 +44,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on Import wallet button ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_IMPORT_WALLET_BUTTON, {
+      await this.page.waitForSelector(CLICK_IMPORT_WALLET_BUTTON, {
         timeout: 0,
       });
       await this.page.click(CLICK_IMPORT_WALLET_BUTTON);
@@ -58,7 +58,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on I Agree button ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_I_AGREE_BUTTON, {
+      await this.page.waitForSelector(CLICK_I_AGREE_BUTTON, {
         timeout: 0,
       });
       await this.page.click(CLICK_I_AGREE_BUTTON);
@@ -69,24 +69,34 @@ class MetamaskPage {
 
   async typeSeedPhase(seedPhase) {
     console.log("--- Zed Run Automation Framework: Type seed phase ---");
-    await expect(this.page).toHaveSelector(FILL_TEXT_AREA_FILL_PASSPHASE, {
+    try{
+       await this.page.waitForSelector(FILL_TEXT_AREA_FILL_PASSPHASE, {
       timeout: 0,
     });
-    await this.page.type(FILL_TEXT_AREA_FILL_PASSPHASE, seedPhase);
+       await this.page.type(FILL_TEXT_AREA_FILL_PASSPHASE, seedPhase);
+    }catch{
+       throw new Error("Seed phase field is not found or detached!");
+    }
   }
 
   async typeNewPassword(newPassword) {
     console.log("--- Zed Run Automation Framework: Type new password ---");
-    await expect(this.page).toHaveSelector(FILL_PASSWORD_INPUT, { timeout: 0 });
-    await this.page.type(FILL_PASSWORD_INPUT, newPassword);
+    try{
+       await this.page.waitForSelector(FILL_PASSWORD_INPUT, { timeout: 0 });
+       await this.page.type(FILL_PASSWORD_INPUT, newPassword);
+    }catch{
+       throw new Error("New password field is not found or detached!");
+    }
   }
 
   async typeConfirmPassword(confirmPassword) {
     console.log("--- Zed Run Automation Framework: Type confirm password ---");
-    await expect(this.page).toHaveSelector(FILL_PASSWORD_CONFIRM_INPUT, {
-      timeout: 0,
-    });
-    await this.page.type(FILL_PASSWORD_CONFIRM_INPUT, confirmPassword);
+    try{
+       await this.page.waitForSelector(FILL_PASSWORD_CONFIRM_INPUT, { timeout: 0 });
+       await this.page.type(FILL_PASSWORD_CONFIRM_INPUT, confirmPassword); 
+    }catch{
+      throw new Error("Confirmation password field is not found or detached!");
+    }
   }
 
   async checkTermsAndConditionCheckBox() {
@@ -94,10 +104,10 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Check terms and condition checkbox ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CHECKBOX_AGREE, { timeout: 0 });
-      await this.page.check(CHECKBOX_AGREE, true);
+       await this.page.waitForSelector(CHECKBOX_AGREE, { timeout: 0 });
+       await this.page.check(CHECKBOX_AGREE, true);
     } catch {
-      throw new Error(
+       throw new Error(
         "Terms and condition checkbox is not present or clickable!"
       );
     }
@@ -106,7 +116,7 @@ class MetamaskPage {
   async clickImportButton() {
     console.log("--- Zed Run Automation Framework: Click on Import button ---");
     try {
-      await expect(this.page).toHaveSelector(CLICK_IMPORT_BUTTON, {
+      await this.page.waitForSelector(CLICK_IMPORT_BUTTON, {
         timeout: 0,
       });
       await this.page.click(CLICK_IMPORT_BUTTON);
@@ -120,7 +130,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on All Done button ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_ALL_DONE, { timeout: 0 });
+      await this.page.waitForSelector(CLICK_ALL_DONE, { timeout: 0 });
       await this.page.click(CLICK_ALL_DONE);
     } catch {
       throw new Error("All done button is not present or clickable!");
@@ -130,7 +140,7 @@ class MetamaskPage {
   async clickOnCloseButton() {
     console.log("--- Zed Run Automation Framework: Click on Close button ---");
     try {
-      await expect(this.page).toHaveSelector(CLICK_CLOSE, { timeout: 0 });
+      await this.page.waitForSelector(CLICK_CLOSE, { timeout: 0 });
       await this.page.click(CLICK_CLOSE);
     } catch {
       throw new Error("Close button is not present or clickable!");
@@ -142,7 +152,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on Network dropdown ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_NETWORK_NAME, {
+      await this.page.waitForSelector(CLICK_NETWORK_NAME, {
         timeout: 0,
       });
       await this.page.click(CLICK_NETWORK_NAME);
@@ -156,7 +166,7 @@ class MetamaskPage {
       "--- Zed Run Automation Framework: Click on Goerli netword ---"
     );
     try {
-      await expect(this.page).toHaveSelector(CLICK_CHOOSE_NETWORK, {
+      await this.page.waitForSelector(CLICK_CHOOSE_NETWORK, {
         timeout: 0,
       });
       await this.page.click(CLICK_CHOOSE_NETWORK);

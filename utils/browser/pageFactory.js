@@ -5,13 +5,12 @@ const pathToExtension = require("path").join(
 );
 const userDataDir = __dirname + "/test-user-data-dir";
 const fs = require("fs-extra");
-
 console.log("userDataDir:", userDataDir);
 
 class PageFactory {
   constructor() {
-    this.context = null;
     this.browser = null;
+    this.context = null
   }
 
   async removeCache() {
@@ -22,31 +21,23 @@ class PageFactory {
     });
   }
 
-  async createBrowser(headlessStatus, timeout) {
-    this.browser = await chromium.launch({
-      headless: headlessStatus,
-      timeout: timeout,
-    });
+  async createBrowser(headless, timeout){
+    this.browser = await chromium.launch({headless: headless, timeout: timeout});
     return this.browser;
   }
 
-  async createContext(headlessStatus, timeout) {
-    if (this.browser === null) {
-      await this.createBrowser(headlessStatus, timeout);
+  async createContext(headless, timeout){
+    if(this.browser === null || this.browser === undefined){
+      this.browser = await this.createBrowser(headless, timeout);
     }
-    this.context = await this.browser.newContext({ viewport: null });
+    this.context = await this.browser.newContext({viewport: null});
     return this.context;
   }
 
-  async getContext(headlessStatus, timeout) {
-    if (this.context === null) {
-      await this.createContext(headlessStatus, timeout);
+  async newTab(headless, timeout) {
+    if(this.context === null || this.context === undefined){
+      this.context = await this.createContext(headless, timeout);
     }
-    return this.context;
-  }
-
-  async newTab(headlessStatus, timeout) {
-    await this.getContext(headlessStatus, timeout);
     return await this.context.newPage();
   }
 

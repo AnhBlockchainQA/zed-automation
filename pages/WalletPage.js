@@ -2,7 +2,7 @@ const { REGEX } = require("../data/env");
 const {
   DEPOSITE_BUTTON,
   DEPOSITE_AMOUNT_INPUT,
-  DEPOSITE_TO_ZED_BUTTON,
+  DEPOSITE_TO_WETH_BUTTON,
   WITHDRAW_BUTTON,
   WITHDRAW_AMOUNT_INPUT,
   WITHDRAW_FROM_ZED_BUTTON,
@@ -27,9 +27,9 @@ class WalletPage {
       console.log(
         " ---- Zed Run Automation Framework: Click on Deposit button ---"
       );
-      await expect(this.page).toHaveSelector(DEPOSITE_BUTTON, {
-        visible: true,
+      await this.page.waitForSelector(DEPOSITE_BUTTON, {
         timeout: 0,
+        state: 'attached'
       });
       await this.page.click(DEPOSITE_BUTTON);
     } catch {
@@ -55,17 +55,17 @@ class WalletPage {
     }
   }
 
-  async clickOnDepositeToZedWallet() {
+  async clickOnDepositeToWETHWallet() {
     try {
       console.log(
         " ---- Zed Run Automation Framework: Click on Deposite to Zed Balance button ---"
       );
       await this.page.waitForLoadState();
-      await this.page.waitForSelector(DEPOSITE_TO_ZED_BUTTON, {
+      await this.page.waitForSelector(DEPOSITE_TO_WETH_BUTTON, {
         visible: true,
         timeout: 0,
       });
-      await this.page.click(DEPOSITE_TO_ZED_BUTTON);
+      await this.page.click(DEPOSITE_TO_WETH_BUTTON);
       await this.page.waitForLoadState();
     } catch {
       throw new Error("Deposite to Zed Balance button is not present!");
@@ -196,6 +196,19 @@ class WalletPage {
       " ---- Zed Run Automation Framework: Check if ETH balance is updated ---"
     );
     return await this.checkIfBalanceUpdated(ETH_BALANCE, oldValue, newValue);
+  }
+
+  async scrollToETHBalance() {
+    console.log(
+      " ---- Zed Run Automation Framework: Scroll to ETH balance section ---"
+    );
+    await expect(this.page).toHaveSelector(ETH_BALANCE, {
+      visible: true,
+      timeout: 0,
+    });
+    await this.page.evaluate((locator) => {
+      document.querySelector(locator).scrollIntoView(true);
+    }, ETH_BALANCE);
   }
 
   async scrollToZedBalance() {
