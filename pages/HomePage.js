@@ -44,7 +44,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Click on Accept button ---"
     );
     try {
-      await expect(this.page).toHaveSelector(ACCEPT_BUTTON, { timeout: 0 });
+      await this.page.waitForSelector(ACCEPT_BUTTON, { timeout: 0 });
       await this.page.click(ACCEPT_BUTTON);
     } catch {
       throw new Error("Accept button is not present or not clickable");
@@ -54,7 +54,7 @@ class HomePage {
   async clickOnWalletIcon() {
     console.log("---- Zed Run Automation Framework: Click on Wallet icon ---");
     try {
-      await expect(this.page).toHaveSelector(WALLET_ICON, { timeout: 0 });
+      await this.page.waitForSelector(WALLET_ICON, { timeout: 0 });
       await this.page.click(WALLET_ICON);
     } catch {
       throw new Error("Wallet icon is not present or clickable");
@@ -66,7 +66,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Click on Marketplace link ---"
     );
     try {
-      await expect(this.page).toHaveSelector(MARKETPLACE_LINK, {
+      await this.page.waitForSelector(MARKETPLACE_LINK, {
         timeout: 0,
       });
       await this.page.click(MARKETPLACE_LINK);
@@ -80,7 +80,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Check if user avatar is present ---"
     );
     try {
-      await expect(this.page).toHaveSelector(USER_AVATAR, {
+      await this.page.waitForSelector(USER_AVATAR, {
         timeout: 0,
       });
       if (await this.page.isVisible(USER_AVATAR)) {
@@ -94,7 +94,7 @@ class HomePage {
   async clickOnArrowIcon() {
     console.log("---- Zed Run Automation Framework: Click on arrow icon ---");
     try {
-      await expect(this.page).toHaveSelector(ARROW_ICON, { timeout: 0 });
+      await this.page.waitForSelector(ARROW_ICON, { timeout: 0 });
       await this.page.click(ARROW_ICON);
     } catch {
       throw new Error("Arrow icon is not present or clickable");
@@ -104,7 +104,7 @@ class HomePage {
   async clickOnStudServiceLink() {
     console.log("---- Zed Run Automation Framework: Click on Stud service ---");
     try {
-      await expect(this.page).toHaveSelector(STUD_SERVICE_LINK, {
+      await this.page.waitForSelector(STUD_SERVICE_LINK, {
         timeout: 0,
       });
       await this.page.click(STUD_SERVICE_LINK);
@@ -116,7 +116,7 @@ class HomePage {
   async clickOnRacingLink() {
     console.log("---- Zed Run Automation Framework: Click on Racing link ---");
     try {
-      await expect(this.page).toHaveSelector(RACING_LINK, { timeout: 0 });
+      await this.page.waitForSelector(RACING_LINK, { timeout: 0 });
       await this.page.click(RACING_LINK);
     } catch {
       throw new Error("Racing link is not present or clickable");
@@ -152,7 +152,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Click on Breeding link ---"
     );
     try {
-      await expect(this.page).toHaveSelector(BREEDING_LINK, { timeout: 0 });
+      await this.page.waitForSelector(BREEDING_LINK, { timeout: 0 });
       await this.page.click(BREEDING_LINK);
     } catch {
       throw new Error("Breeding link is not shown!");
@@ -422,7 +422,7 @@ class HomePage {
       "---- Zed Run Automation Framework: Click on user avatar ---"
     );
     try {
-      await expect(this.page).toHaveSelector(USER_AVATAR, {
+      await this.page.waitForSelector(USER_AVATAR, {
         timeout: 0,
       });
       await this.page.click(USER_AVATAR);

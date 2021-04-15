@@ -7,6 +7,9 @@ const { PageFactory } = require("../../utils/browser/pageFactory");
 const { MagicLinkPage } = require("../../pages/MagicLinkPage");
 const apiRequest = require("../../utils/api/api");
 const { PaymentPage } = require("../../pages/PaymentPage");
+const { ActivityPage } = require("../../pages/ActivityPage");
+const { DetailPage } = require("../../pages/DetailPage");
+const { VIEW_DETAILS_BUTTON } = require("../../locators/Activity");
 
 var pageFactory = new PageFactory();
 var messageId;
@@ -18,6 +21,8 @@ var newPageInstance;
 var homePage;
 var marketPlacePage;
 var paymentPage;
+var activityPage;
+var detailPage;
 
 const EMAIL = ACCOUNT_LIST.SECOND_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.SECOND_ACCOUNT.LOGIN;
@@ -52,7 +57,6 @@ describe("Buy horse with credit card - Logging with Metamask", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForNavigation();
     await magicLinkPage.waitForLoadState();
   });
 
@@ -81,7 +85,39 @@ describe("Buy horse with credit card - Logging with Metamask", () => {
   });
 
   //TODO : Missing session after login with magic link
+  test("Verify that our order is performed", 3, async () => {
+    await paymentPage.waitForLoadState();
+    await paymentPage.checkPaySuccessfulLabelPresent();
+    await paymentPage.clickDoneButton();
+    activityPage = new ActivityPage(pageInstance);
+    await activityPage.bringToFront();
+    await activityPage.waitForLoadState();
+    await activityPage.checkIfStatementInfoCorrect(firstHorseName);
+  });
 
+  test("Check the detail payment", 3, async () => {
+    await activityPage.mouseOverFirstStatementInfo();
+    otherPageInstance = await metamaskFactory.clickNewPage(
+      newPageInstance,
+      VIEW_DETAILS_BUTTON
+    );
+    detailPage = new DetailPage(otherPageInstance);
+    await detailPage.bringToFront();
+    await detailPage.waitForLoadState();
+    // await detailPage.
+  });
+
+  // test("Go back to user stable and check if horse is transferred", async () => {
+  //   activityPage = new ActivityPage(newPageInstance);
+  //   await activityPage.bringToFront();
+  //   await activityPage.reloadPage();
+  //   await activityPage.clickOnUserAvatar();
+  //   myStablePage = new MyStablePage(newPageInstance);
+  //   await myStablePage.waitForLoadState();
+  //   await myStablePage.searchForHorse(firstHorseName);
+  //   await myStablePage.waitForLoadState();
+  //   await myStablePage.verifySearchResultContainHorse(firstHorseName);
+  // });
  
 });
 

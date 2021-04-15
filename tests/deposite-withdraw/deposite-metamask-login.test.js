@@ -9,7 +9,7 @@ const { WalletPage } = require("../../pages/WalletPage");
 const { AMOUNT } = require("../../data/env");
 const { HomePage } = require("../../pages/HomePage");
 const { CONNECT_METAMASK, AUTHENTICATE_BUTTON } = require("../../locators/ZedRun");
-const { DEPOSITE_TO_ZED_BUTTON } = require("../../locators/Wallet");
+const { CONFIRM_DEPOSITE_BUTTON } = require("../../locators/Wallet");
 const test = require("jest-retries");
 
 var metamaskFactory = new MetamaskFactory();
@@ -25,6 +25,8 @@ var homePage;
 var depositeMetamaskNotificationInstance;
 var depositeMetamaskNotificationPage;
 var walletPage;
+var ethBalance;
+var newETHBalance;
 
 beforeAll(async () => {
   await metamaskFactory.removeCache();
@@ -92,19 +94,21 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
   );
 
   test(
-    "Click on Deposit button and check if ETH balance is updated",
+    "Click on Deposit button and type amount to deposit",
     3,
     async () => {
       walletPage = new WalletPage(newPageInstance);
-      let ethBalance = await walletPage.getETHBalance();
+      ethBalance = await walletPage.getETHBalance();
       await walletPage.clickOnDepositButton();
-      let newETHBalance = ethBalance - AMOUNT;
+      newETHBalance = ethBalance - AMOUNT;
       console.log(">>> Old ETH Balance: ", ethBalance);
       console.log(">>> Expected ETH Balance: ", newETHBalance);
+      await walletPage.scrollToZedBalance();
       await walletPage.typeDepositeAmount(AMOUNT);
+      await walletPage.clickOnDepositeToWETHWallet();
       depositeMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
         newPageInstance,
-        DEPOSITE_TO_ZED_BUTTON
+        CONFIRM_DEPOSITE_BUTTON
       );
       depositeMetamaskNotificationPage = new MetamaskNotificationPage(
         depositeMetamaskNotificationInstance
@@ -112,6 +116,12 @@ describe("Deposite to ZED balance by logging in with Metamask", () => {
       await depositeMetamaskNotificationPage.waitForLoadState();
       await depositeMetamaskNotificationPage.clickOnConfirmButton();
       await depositeMetamaskNotificationPage.waitForCloseEvent();
+      });
+  test(
+    "Check if ETH balance is updated", 3,
+    async() => {
+      walletPage = new WalletPage(newPageInstance);
+      await walletPage.scrollToETHBalance();
       await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
     }
   );

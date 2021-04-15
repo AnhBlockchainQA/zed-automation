@@ -19,6 +19,8 @@ var homePage;
 const EMAIL = ACCOUNT_LIST.FIRST_ACCOUNT.EMAIL;
 const LOGIN = ACCOUNT_LIST.FIRST_ACCOUNT.LOGIN;
 const DOMAIN = ACCOUNT_LIST.FIRST_ACCOUNT.DOMAIN;
+var ethBalance;
+var newETHBalance;
 
 beforeAll(async () => {
   pageFactory.removeCache();
@@ -53,7 +55,6 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForNavigation();
     await magicLinkPage.waitForLoadState();
   });
 
@@ -74,14 +75,15 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
     3,
     async () => {
       walletPage = new WalletPage(pageInstance);
-      let ethBalance = await walletPage.getETHBalance();
+      ethBalance = await walletPage.getETHBalance();
       await walletPage.clickOnDepositButton();
-      let newETHBalance = ethBalance - AMOUNT;
+      newETHBalance = ethBalance - AMOUNT;
       console.log(">>> Old ETH Balance: ", ethBalance);
       console.log(">>> Expected ETH Balance: ", newETHBalance);
+      await walletPage.scrollToZedBalance();
       await walletPage.typeDepositeAmount(AMOUNT);
-      await walletPage.clickOnDepositeToZedWallet();
-      await walletPage.clickOnConfirmDepositeButton();
+      await walletPage.clickOnDepositeToWETHWallet();
+      await walletPage.clickOnConfirmButton();
       await walletPage.checkIfETHBalanceUpdated(ethBalance, newETHBalance);
     }
   );
