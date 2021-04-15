@@ -12,5 +12,6 @@ module.exports = {
     CONFIRM_DEPOSITE_BUTTON: ".ReactModalPortal > .ReactModal__Overlay > .ReactModal__Content > .buttons-row > .primary-btn",
     CONFIRM_WITHDRAW_BUTTON: "//button[text()='Confirm']",
     CLAIM_AMOUNT_LIST: ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet > .down > .tr-item > .right > button",
-    CASH_BALANCE : ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet .wallet-price > .secondary"
+    CASH_BALANCE : ".header > .sidebar-wrapper:nth-child(3) > .sidebar-content > .wallet .wallet-price > .secondary",
+    CONFIRM_BUTTON: "//button[text()='Confirm']"
 };

@@ -92,18 +92,21 @@ class DetailPage {
     try {
       let i = 0;
       let updated = false;
-      await this.page.waitForSelector(TRANSACTION_STATUS, { timeout: 0 });
-      do{
-         await this.page.waitForLoadState();
-         const status = await this.page.innerText(TRANSACTION_STATUS);
-         if(status !== 'Pending'){
-           updated = true;
-         }else {
-           i++;
-           await this.page.reload();
-         }
-      }while(i < THRESHOLD && !updated);
+      var status;
+      for (i = 0; i < THRESHOLD; i++) {
+        await this.page.waitForSelector(TRANSACTION_STATUS, { timeout: 0 });
+        status = await this.page.innerText(TRANSACTION_STATUS);
+        if (status !== "Pending") {
+          updated = true;
+          break;
+        } else {
+          await this.page.reload();
+        }
+      }
 
+      if (i >= THRESHOLD && updated === false) {
+        throw new Error("Transaction status is not processed correctly!");
+      }
     } catch {
       throw new Error("Transaction status is not present or detached!");
     }
@@ -111,8 +114,7 @@ class DetailPage {
 
   async verifyTransactionStatus() {
     console.log(
-      "---- Zed Run Automation Framework: Check if the transaction is processed succesfully ---",
-      amount
+      "---- Zed Run Automation Framework: Verify transaction status ---"
     );
     await this.page.waitForLoadState();
     await this.page.waitForSelector(TRANSACTION_STATUS, { timeout: 0 });

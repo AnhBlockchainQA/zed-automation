@@ -12,7 +12,8 @@ const {
   CONFIRM_WITHDRAW_BUTTON,
   CLAIM_AMOUNT_LIST,
   CLAIM_BUTTON,
-  CASH_BALANCE
+  CASH_BALANCE,
+  CONFIRM_BUTTON
 } = require("../locators/Wallet");
 const stringUtils = require("../utils/api/stringUtils");
 
@@ -234,6 +235,21 @@ class WalletPage {
         timeout: 0,
       });
       await this.page.click(CONFIRM_DEPOSITE_BUTTON);
+    } catch {
+      throw new Error("Confirm button is not present");
+    }
+  }
+
+  async clickOnConfirmButton(){
+    console.log(
+      " ---- Zed Run Automation Framework: Click on Confirm button ---"
+    );
+    try {
+      await this.page.waitForSelector(CONFIRM_BUTTON, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(CONFIRM_BUTTON);
     } catch {
       throw new Error("Confirm button is not present");
     }
