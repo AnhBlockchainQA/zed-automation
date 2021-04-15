@@ -1,0 +1,81 @@
+{
+  "uid" : "b8108fdd91ee885",
+  "name" : "Go to My Settings page then click on Select Racehorse",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Go to My Settings page then click on Select Racehorse",
+  "historyId" : "234bb03c8923c7574584c63a39ff49c7",
+  "time" : {
+    "start" : 1618496865201,
+    "stop" : 1618496910281,
+    "duration" : 45080
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User menu arrow is not present!",
+  "statusTrace" : "Error: User menu arrow is not present!\n                    at HomePage.clickOnUserMenuArrow (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:390:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to My Settings page then click on Select Racehorse"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "a50a5c0aa48049d9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/a50a5c0aa48049d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249391245,
+          "stop" : 1616249394937,
+          "duration" : 3692
+        }
+      }, {
+        "uid" : "bcd4e9ed3fa7c56c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/bcd4e9ed3fa7c56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904925436,
+          "stop" : 1615904937629,
+          "duration" : 12193
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "b8108fdd91ee885.json",
+  "parameterValues" : [ ]
+}

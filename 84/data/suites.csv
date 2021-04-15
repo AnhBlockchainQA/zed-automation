@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Tue Dec 29 13:09:38 GMT 2020","Tue Dec 29 13:09:48 GMT 2020","10006","","Login to ZedRUn with magic link","","Login to ZedRUn with magic link","Switch back to ZedRun page and verify login successful","Switch back to ZedRun page and verify login successful",""
-"failed","Tue Dec 29 13:09:38 GMT 2020","Tue Dec 29 13:09:38 GMT 2020","59","","Login to ZedRUn with magic link","","Login to ZedRUn with magic link","Open new browser with magic link","Open new browser with magic link",""
-"failed","Tue Dec 29 13:09:27 GMT 2020","Tue Dec 29 13:09:37 GMT 2020","10004","","Login to ZedRUn with magic link","","Login to ZedRUn with magic link","Open ZedRun page and input valid email to generate magic link","Open ZedRun page and input valid email to generate magic link",""
-"failed","Tue Dec 29 13:09:37 GMT 2020","Tue Dec 29 13:09:38 GMT 2020","375","","Login to ZedRUn with magic link","","Login to ZedRUn with magic link","Check mail inbox to get magic link","Check mail inbox to get magic link",""

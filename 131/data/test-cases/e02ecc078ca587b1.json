@@ -1,0 +1,93 @@
+{
+  "uid" : "e02ecc078ca587b1",
+  "name" : "Open ZedRun page and click Connect Metamask",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Meta Mask.Open ZedRun page and click Connect Metamask",
+  "historyId" : "9641fd3a960127906d957110a6bf7668",
+  "time" : {
+    "start" : 1618495869498,
+    "stop" : 1618495885699,
+    "duration" : 16201
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "49653f5e5440717d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/49653f5e5440717d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616248894262,
+          "stop" : 1616248929511,
+          "duration" : 35249
+        }
+      }, {
+        "uid" : "26f575e2b9dd8f07",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/26f575e2b9dd8f07",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904511293,
+          "stop" : 1615904531738,
+          "duration" : 20445
+        }
+      }, {
+        "uid" : "193ef90028c3078a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/193ef90028c3078a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615784587263,
+          "stop" : 1615784606764,
+          "duration" : 19501
+        }
+      }, {
+        "uid" : "28f06035a13b4dd3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/28f06035a13b4dd3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613711991547,
+          "stop" : 1613712001471,
+          "duration" : 9924
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e02ecc078ca587b1.json",
+  "parameterValues" : [ ]
+}

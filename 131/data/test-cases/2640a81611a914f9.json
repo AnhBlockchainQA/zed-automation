@@ -1,0 +1,94 @@
+{
+  "uid" : "2640a81611a914f9",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Magic Link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "78ae5612e9f90f373d68a0f1885600f7",
+  "time" : {
+    "start" : 1618497342557,
+    "stop" : 1618497361775,
+    "duration" : 19218
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "b89ede0a13027fe2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/b89ede0a13027fe2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249567067,
+          "stop" : 1616249597455,
+          "duration" : 30388
+        }
+      }, {
+        "uid" : "64cb510f2ce458",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/64cb510f2ce458",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905092302,
+          "stop" : 1615905112605,
+          "duration" : 20303
+        }
+      }, {
+        "uid" : "1bc612e42c760208",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/1bc612e42c760208",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615785483879,
+          "stop" : 1615785503305,
+          "duration" : 19426
+        }
+      }, {
+        "uid" : "306322bfbc9f9f81",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/306322bfbc9f9f81",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613712238504,
+          "stop" : 1613712358511,
+          "duration" : 120007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2640a81611a914f9.json",
+  "parameterValues" : [ ]
+}

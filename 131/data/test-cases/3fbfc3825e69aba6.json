@@ -1,0 +1,83 @@
+{
+  "uid" : "3fbfc3825e69aba6",
+  "name" : "Go to Activity page and check if we breed successfully",
+  "fullName" : "Generate stud horse when logging in Metamask.Go to Activity page and check if we breed successfully",
+  "historyId" : "1bb23c6ac38c92d9d0b7e840f341e500",
+  "time" : {
+    "start" : 1618494324196,
+    "stop" : 1618494444202,
+    "duration" : 120006
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Start button is not present yet!",
+  "statusTrace" : "Error: Start button is not present yet!\n                    at LoginPage.clickOnStartButton (/home/runner/work/zed-automation/zed-automation/pages/LoginPage.js:43:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Activity page and check if we breed successfully"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "1d727587bfb56b14",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/1d727587bfb56b14",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616246908478,
+          "stop" : 1616247028482,
+          "duration" : 120004
+        }
+      }, {
+        "uid" : "dae2298e493ad8ea",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/dae2298e493ad8ea",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1615902797768,
+          "stop" : 1615902917773,
+          "duration" : 120005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3fbfc3825e69aba6.json",
+  "parameterValues" : [ ]
+}

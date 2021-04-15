@@ -1,0 +1,75 @@
+{
+  "uid" : "2d19b56c12b588e7",
+  "name" : "Process the checkout with ETH",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Process the checkout with ETH",
+  "historyId" : "b00027c82f267fd468e721b63518c227",
+  "time" : {
+    "start" : 1618493573029,
+    "stop" : 1618493577204,
+    "duration" : 4175
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Process the checkout with ETH"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "9aad268ce11653de",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/9aad268ce11653de",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246376430,
+          "stop" : 1616246379725,
+          "duration" : 3295
+        }
+      }, {
+        "uid" : "a280b00249404673",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/a280b00249404673",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902365245,
+          "stop" : 1615902368681,
+          "duration" : 3436
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2d19b56c12b588e7.json",
+  "parameterValues" : [ ]
+}

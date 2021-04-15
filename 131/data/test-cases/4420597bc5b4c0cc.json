@@ -1,0 +1,82 @@
+{
+  "uid" : "4420597bc5b4c0cc",
+  "name" : "Go back to user stable and check if horse is transferred",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Go back to user stable and check if horse is transferred",
+  "historyId" : "a908611948e43d55754d44152db913c1",
+  "time" : {
+    "start" : 1618493698820,
+    "stop" : 1618493716120,
+    "duration" : 17300
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='New Horse4']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='New Horse4']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                Error: \n                    at Object.captureStackTrace (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/utils/stackTrace.js:48:19)\n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:48)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:64:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:202:42\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:34)\n                    at Frame.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:197:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:241:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:231:20)\n                    at Page.waitForSelector (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:241:21)\n                    at MyStablePage.verifySearchResultContainHorse (/home/runner/work/zed-automation/zed-automation/pages/MyStablePage.js:499:21)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:163:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go back to user stable and check if horse is transferred"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5b8bc0cd8b16919d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/5b8bc0cd8b16919d",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Sprite Nightmare']\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1616246500705,
+          "stop" : 1616246518698,
+          "duration" : 17993
+        }
+      }, {
+        "uid" : "86d210440634d9a7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/86d210440634d9a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902402464,
+          "stop" : 1615902410239,
+          "duration" : 7775
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4420597bc5b4c0cc.json",
+  "parameterValues" : [ ]
+}

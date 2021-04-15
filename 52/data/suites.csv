@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Wed Dec 23 14:43:06 GMT 2020","Wed Dec 23 14:43:06 GMT 2020","4","","flow test generate child horse","","flow test generate child horse","Update metamask info","Update metamask info",""
-"failed","Wed Dec 23 14:43:06 GMT 2020","Wed Dec 23 14:43:06 GMT 2020","0","","flow test generate child horse","","flow test generate child horse","Open ZedRun page and click Connnect Metamask","Open ZedRun page and click Connnect Metamask",""

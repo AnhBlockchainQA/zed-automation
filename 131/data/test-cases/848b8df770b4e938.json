@@ -1,0 +1,82 @@
+{
+  "uid" : "848b8df770b4e938",
+  "name" : "Check the detail payment",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Check the detail payment",
+  "historyId" : "9cf7fcea441d4404c138f9184af51387",
+  "time" : {
+    "start" : 1618496726242,
+    "stop" : 1618496726245,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:99:24\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "d324e9435788fb29",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/d324e9435788fb29",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1616247331332,
+          "stop" : 1616247346359,
+          "duration" : 15027
+        }
+      }, {
+        "uid" : "44805256967c4ee6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/44805256967c4ee6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903093997,
+          "stop" : 1615903095442,
+          "duration" : 1445
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "848b8df770b4e938.json",
+  "parameterValues" : [ ]
+}

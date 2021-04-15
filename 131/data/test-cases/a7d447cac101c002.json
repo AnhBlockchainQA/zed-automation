@@ -1,0 +1,138 @@
+{
+  "uid" : "a7d447cac101c002",
+  "name" : "Update metamask info",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Update metamask info",
+  "historyId" : "5275ca2eeb4ffdb319cfdbd22d007378",
+  "time" : {
+    "start" : 1618495939441,
+    "stop" : 1618495944568,
+    "duration" : 5127
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 10,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "f33a1e0501667b18",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/f33a1e0501667b18",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249222943,
+          "stop" : 1616249233149,
+          "duration" : 10206
+        }
+      }, {
+        "uid" : "151eb19e6a0d4443",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/151eb19e6a0d4443",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904798470,
+          "stop" : 1615904805111,
+          "duration" : 6641
+        }
+      }, {
+        "uid" : "e8b1186aa2d22bb3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/e8b1186aa2d22bb3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615784824807,
+          "stop" : 1615784830390,
+          "duration" : 5583
+        }
+      }, {
+        "uid" : "15b4fb105863f1c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/15b4fb105863f1c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712119057,
+          "stop" : 1613712122482,
+          "duration" : 3425
+        }
+      }, {
+        "uid" : "e7e0dd74778f116d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/e7e0dd74778f116d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029513437,
+          "stop" : 1613029517086,
+          "duration" : 3649
+        }
+      }, {
+        "uid" : "1662e188ff5bfa27",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/1662e188ff5bfa27",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407591215,
+          "stop" : 1612407595148,
+          "duration" : 3933
+        }
+      }, {
+        "uid" : "a79c923fc3c47c2b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/a79c923fc3c47c2b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274156345,
+          "stop" : 1612274159141,
+          "duration" : 2796
+        }
+      }, {
+        "uid" : "3874ec647fac0123",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/3874ec647fac0123",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273857377,
+          "stop" : 1612273860274,
+          "duration" : 2897
+        }
+      }, {
+        "uid" : "69eb1581dfd26e5a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/69eb1581dfd26e5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172249255,
+          "stop" : 1612172253799,
+          "duration" : 4544
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a7d447cac101c002.json",
+  "parameterValues" : [ ]
+}

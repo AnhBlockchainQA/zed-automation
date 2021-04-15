@@ -1,0 +1,83 @@
+{
+  "uid" : "e9342ee92cf3167e",
+  "name" : "Select mate horse",
+  "fullName" : "Generate stud horse when logging in with magic link.Select mate horse",
+  "historyId" : "ce352d99a98962e7b0c92b7a4d8a0ae4",
+  "time" : {
+    "start" : 1618495290422,
+    "stop" : 1618495410430,
+    "duration" : 120008
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:120:36\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:28)\n                    at MagicLinkPage.waitForNavigation (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:39:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/stud-service/mail-stud-generate-horse.test.js:61:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select mate horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "37703bc9fceb5481",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/37703bc9fceb5481",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616248275991,
+          "stop" : 1616248396017,
+          "duration" : 120026
+        }
+      }, {
+        "uid" : "28c19a4f7177117c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/28c19a4f7177117c",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1615903901072,
+          "stop" : 1615904021097,
+          "duration" : 120025
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e9342ee92cf3167e.json",
+  "parameterValues" : [ ]
+}

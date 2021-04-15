@@ -1,0 +1,102 @@
+{
+  "uid" : "ad7923f53794a124",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Select a racehorses and add into the free racing",
+  "historyId" : "6b3086bc590de9dc2fcd702fa864bdf3",
+  "time" : {
+    "start" : 1618498136007,
+    "stop" : 1618498176440,
+    "duration" : 40433
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.hover: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".horse-infos\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "page.hover: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".horse-infos\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                Error: \n                    at Object.captureStackTrace (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/utils/stackTrace.js:48:19)\n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:48)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:64:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:356:27\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:34)\n                    at Frame.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:355:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:492:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:231:20)\n                    at Page.hover (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:492:21)\n                    at RacingPage.addRaceHorseIntoRace (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:117:29)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/dual-horse-free-email.test.js:77:23\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "a903d286c71b6b44",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/a903d286c71b6b44",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616250177746,
+          "stop" : 1616250222365,
+          "duration" : 44619
+        }
+      }, {
+        "uid" : "f24257b58ea1d1f6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/f24257b58ea1d1f6",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615905697275,
+          "stop" : 1615905730941,
+          "duration" : 33666
+        }
+      }, {
+        "uid" : "cc3e37244c400f10",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/cc3e37244c400f10",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615786690075,
+          "stop" : 1615786722951,
+          "duration" : 32876
+        }
+      }, {
+        "uid" : "112aa32e34084f69",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/112aa32e34084f69",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1613715460933,
+          "stop" : 1613715580940,
+          "duration" : 120007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ad7923f53794a124.json",
+  "parameterValues" : [ ]
+}

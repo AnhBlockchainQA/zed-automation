@@ -1,0 +1,75 @@
+{
+  "uid" : "64fd44175989ba3c",
+  "name" : "Wait until homepage is loading",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Wait until homepage is loading",
+  "historyId" : "a9951309ef25865a1a0a2830e6e40b85",
+  "time" : {
+    "start" : 1618494618046,
+    "stop" : 1618494622223,
+    "duration" : 4177
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until homepage is loading"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3c0c8c88faf70d4f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/3c0c8c88faf70d4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247478907,
+          "stop" : 1616247484549,
+          "duration" : 5642
+        }
+      }, {
+        "uid" : "94e9b32e5d833459",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/94e9b32e5d833459",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903167849,
+          "stop" : 1615903173278,
+          "duration" : 5429
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "64fd44175989ba3c.json",
+  "parameterValues" : [ ]
+}

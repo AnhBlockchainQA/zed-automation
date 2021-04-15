@@ -1,0 +1,75 @@
+{
+  "uid" : "15407e6a656752b9",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "5182dfb5d00945f449be69d3d0c9eca1",
+  "time" : {
+    "start" : 1618493551732,
+    "stop" : 1618493565777,
+    "duration" : 14045
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "e3227df180f2573e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/e3227df180f2573e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246350425,
+          "stop" : 1616246366823,
+          "duration" : 16398
+        }
+      }, {
+        "uid" : "891cc9f4141e913e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/891cc9f4141e913e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902336019,
+          "stop" : 1615902355567,
+          "duration" : 19548
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "15407e6a656752b9.json",
+  "parameterValues" : [ ]
+}

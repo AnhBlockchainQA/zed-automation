@@ -1,0 +1,81 @@
+{
+  "uid" : "94a57b9a895ddbe9",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "b08fd24170746b12400f72a3e28a0cdd",
+  "time" : {
+    "start" : 1618496441130,
+    "stop" : 1618496486229,
+    "duration" : 45099
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "79d36bc81225c2cc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/79d36bc81225c2cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249807015,
+          "stop" : 1616249832282,
+          "duration" : 25267
+        }
+      }, {
+        "uid" : "89c7baa301ce5161",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/89c7baa301ce5161",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905278890,
+          "stop" : 1615905314394,
+          "duration" : 35504
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "94a57b9a895ddbe9.json",
+  "parameterValues" : [ ]
+}
