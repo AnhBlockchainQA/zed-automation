@@ -71,7 +71,7 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
   test(
     "Click on Withdraw button and check if ZED balance is updated",
     3,
-    async (done) => {
+    async () => {
       walletPage = new WalletPage(pageInstance);
       await walletPage.clickOnWithdrawButton();
       await walletPage.scrollToZedBalance();
@@ -83,7 +83,6 @@ describe("Withdraw from ZED balance by logging in with magic link", () => {
       await walletPage.clickOnWithdrawFromZedWallet();
       await walletPage.clickOnConfirmWithDrawButton();
       await walletPage.checkIfZedBalanceUpdated(zedBalance, newZedBalance);
-      done();
     }
   );
 });

@@ -5,6 +5,7 @@ const {
   CHARGE_AMOUNT,
   ETH_CHARGE_AMOUNT,
   TRANSACTION_STATUS,
+  MATIC_TRANSACTION_STATUS
 } = require("../locators/Detail");
 const stringUtils = require("../utils/api/stringUtils");
 class DetailPage {
@@ -119,6 +120,20 @@ class DetailPage {
     await this.page.waitForLoadState();
     await this.page.waitForSelector(TRANSACTION_STATUS, { timeout: 0 });
     const status = await this.page.innerText(TRANSACTION_STATUS);
+    if (status !== "Success") {
+      throw new Error(
+        `Assertion failed: Transaction status ${status} is different to expected status 'Success'`
+      );
+    }
+  }
+
+  async verifyMaticTransactionStatus(){
+    console.log(
+      "---- Zed Run Automation Framework: Verify Matic transaction status ---"
+    );
+    await this.page.waitForLoadState();
+    await this.page.waitForSelector(MATIC_TRANSACTION_STATUS, { timeout: 0 });
+    const status = await this.page.innerText(MATIC_TRANSACTION_STATUS);
     if (status !== "Success") {
       throw new Error(
         `Assertion failed: Transaction status ${status} is different to expected status 'Success'`

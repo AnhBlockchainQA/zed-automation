@@ -115,7 +115,6 @@ describe("Transfer horse to other wallet address - Logging with Metamask", () =>
     await transferHorsePage.hoverOnFirstHorseToBeTransfered();
     await transferHorsePage.clickOnSelectButtonOfFirstHorse();
     await transferHorsePage.typeAddress(SECOND_WALLET_ADDRESS);
-    await transferHorsePage.clickOnTransactionFee();
     await transferHorsePage.clickOnTransferButton();
   });
 
@@ -128,22 +127,20 @@ describe("Transfer horse to other wallet address - Logging with Metamask", () =>
       anotherMetamaskNotificationInstance
     );
     await anotherMetamaskNotificationPage.waitForLoadState();
-    await anotherMetamaskNotificationPage.clickOnConfirmButton();
+    // Update: Click on Sign button instead of Confirm button
+    await anotherMetamaskNotificationPage.clickOnSignButton();
     await anotherMetamaskNotificationPage.waitForCloseEvent();
     await anotherMetamaskNotificationPage.waitForLoadState();
   });
 
   test("Check that we can not search this horse anymore", async() => {
-    await homePage.bringToFront();
+    homePage = new HomePage(newPageInstance);
     await homePage.clickOnUserAvatar();
     myStablePage = new MyStablePage(newPageInstance);
     await myStablePage.waitForLoadState();
     await myStablePage.searchForHorse(horseName);
     await myStablePage.verifySearchResultDidNotContainHorse(horseName);
-
-  })
-
-
+  });
 });
 
 afterAll(async (done) => {
