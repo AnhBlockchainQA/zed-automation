@@ -43,7 +43,7 @@ const { THRESHOLD } = require("../data/api");
 class MyStablePage {
   constructor(page) {
     this.page = page;
-    this.page.setDefaultTimeout(60000);
+    this.page.setDefaultTimeout(300000);
   }
 
   async bringToFront() {

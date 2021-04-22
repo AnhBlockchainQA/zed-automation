@@ -58,13 +58,13 @@ describe("Transfer horse to other wallet address - Logging with magic link", () 
     magicLinkPage = new MagicLinkPage(newPageInstance);
     await magicLinkPage.bringToFront();
     await magicLinkPage.navigate(magicLink);
-    await magicLinkPage.waitForNavigation();
     await magicLinkPage.waitForLoadState();
   });
 
   test("Go to My Settings page then click on Select Racehorse", async () => {
     homePage = new HomePage(pageInstance);
     await homePage.bringToFront();
+    await homePage.waitForLoadState();
     await homePage.clickOnUserMenuArrow();
     await homePage.waitForLoadState();
     await homePage.clickOnMySettingsLink();
@@ -81,21 +81,20 @@ describe("Transfer horse to other wallet address - Logging with magic link", () 
     await transferHorsePage.clickOnSelectButtonOfFirstHorse();
     await transferHorsePage.typeAddress(FIRST_WALLET_ADDRESS);
     await transferHorsePage.clickOnTransferButton();
+    await transferHorsePage.waitForLoadState();
+    await transferHorsePage.clickOnConfirmButton();
+    await transferHorsePage.waitForLoadState();
   });
 
-  //TODO: Retest when missing session after login with magic link
-//   test("Confirm the transfer", async () => {
-//     await transferHorsePage.clickOnConfirmButton();
-//     await transferHorsePage.waitForLoadState();
-//   });
-
-//   test("Check that we can not search this horse anymore", async() => {
-//     await homePage.clickOnUserAvatar();
-//     myStablePage = new MyStablePage(newPageInstance);
-//     await myStablePage.waitForLoadState();
-//     await myStablePage.searchForHorse(horseName);
-//     await myStablePage.verifySearchResultDidNotContainHorse(horseName);
-//   });
+  test("Check that we can not search this horse anymore", async() => {
+    homePage = new HomePage(pageInstance);
+    await homePage.clickOnUserAvatar();
+    await homePage.waitForLoadState();
+    myStablePage = new MyStablePage(newPageInstance);
+    await myStablePage.searchForHorse(horseName);
+    await myStablePage.waitForLoadState();
+    await myStablePage.verifySearchResultDidNotContainHorse(horseName);
+  });
 
 });
 

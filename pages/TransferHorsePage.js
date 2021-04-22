@@ -18,6 +18,10 @@ class TransferHorsePage {
     await this.page.waitForLoadState();
   }
 
+  async bringToFront(){
+    await this.page.bringToFront();
+  }
+
   async checkIfTransferHorseListShown(value) {
     console.log(
       "--- Zed Run Automation Framework: Check if transfer horse list shown with size bigger than [%s]--- ",
@@ -82,18 +86,18 @@ class TransferHorsePage {
     }
   }
 
-  async clickOnTransactionFee(){
-    console.log("--- Zed Run Automation Framework: Click on Transaction Fee --- ");
-    try {
-      await this.page.waitForLoadState();
-      await this.page.waitForSelector(TRANSACTION_FEE, {
-        timeout: 0,
-      });
-      await this.page.click(TRANSACTION_FEE);
-    } catch {
-      throw new Error("Transfor fee is not present");
-    }
-  }
+  // async clickOnTransactionFee(){
+  //   console.log("--- Zed Run Automation Framework: Click on Transaction Fee --- ");
+  //   try {
+  //     await this.page.waitForLoadState();
+  //     await this.page.waitForSelector(TRANSACTION_FEE, {
+  //       timeout: 0,
+  //     });
+  //     await this.page.click(TRANSACTION_FEE);
+  //   } catch {
+  //     throw new Error("Transfor fee is not present");
+  //   }
+  // }
 
   async clickOnTransferButton() {
     console.log(
