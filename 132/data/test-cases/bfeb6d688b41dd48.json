@@ -1,0 +1,85 @@
+{
+  "uid" : "bfeb6d688b41dd48",
+  "name" : "Select horse then click on Transfer button",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Select horse then click on Transfer button",
+  "historyId" : "548ed09a70077883c6e250f822008a66",
+  "time" : {
+    "start" : 1619098269725,
+    "stop" : 1619098275569,
+    "duration" : 5844
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select horse then click on Transfer button"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "328aff1836fa9654",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/328aff1836fa9654",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1618496910281,
+          "stop" : 1618497030289,
+          "duration" : 120008
+        }
+      }, {
+        "uid" : "f4edd3eebae1df12",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/f4edd3eebae1df12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249394937,
+          "stop" : 1616249405879,
+          "duration" : 10942
+        }
+      }, {
+        "uid" : "1e96ab5cef251997",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/1e96ab5cef251997",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904937629,
+          "stop" : 1615904945775,
+          "duration" : 8146
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "bfeb6d688b41dd48.json",
+  "parameterValues" : [ ]
+}

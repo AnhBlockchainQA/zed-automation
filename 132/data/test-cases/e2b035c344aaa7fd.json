@@ -1,0 +1,67 @@
+{
+  "uid" : "e2b035c344aaa7fd",
+  "name" : "Check if ETH balance is updated",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Check if ETH balance is updated",
+  "historyId" : "2d0cb966d7f086f94cb58baf629a781f",
+  "time" : {
+    "start" : 1619097435154,
+    "stop" : 1619097489208,
+    "duration" : 54054
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check if ETH balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "ddc7e67231e32a49",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/ddc7e67231e32a49",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618496185110,
+          "stop" : 1618496305120,
+          "duration" : 120010
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e2b035c344aaa7fd.json",
+  "parameterValues" : [ ]
+}

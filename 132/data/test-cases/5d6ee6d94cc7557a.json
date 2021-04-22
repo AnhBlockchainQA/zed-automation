@@ -1,0 +1,93 @@
+{
+  "uid" : "5d6ee6d94cc7557a",
+  "name" : "Go to Stable page and verify there is a new horse",
+  "fullName" : "Generate stud horse when logging in Metamask.Go to Stable page and verify there is a new horse",
+  "historyId" : "c528db265a11f8129f280ba9f483e890",
+  "time" : {
+    "start" : 1619095441692,
+    "stop" : 1619095443184,
+    "duration" : 1492
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: The new born horse did not display on Stable page",
+  "statusTrace" : "Error: The new born horse did not display on Stable page\n                    at MyStablePage.validateNewBornHorseDisplaysOnStablePage (/home/runner/work/zed-automation/zed-automation/pages/MyStablePage.js:247:13)\n                    at /home/runner/work/zed-automation/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:162:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Stable page and verify there is a new horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "7f1f978fa0d4e565",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/7f1f978fa0d4e565",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618494444202,
+          "stop" : 1618494564207,
+          "duration" : 120005
+        }
+      }, {
+        "uid" : "5f5366bc970e13e1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/5f5366bc970e13e1",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616247028482,
+          "stop" : 1616247148486,
+          "duration" : 120004
+        }
+      }, {
+        "uid" : "98950e24fbc69824",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/98950e24fbc69824",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1615902917773,
+          "stop" : 1615903037776,
+          "duration" : 120003
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5d6ee6d94cc7557a.json",
+  "parameterValues" : [ ]
+}

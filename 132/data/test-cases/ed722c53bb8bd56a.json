@@ -1,0 +1,110 @@
+{
+  "uid" : "ed722c53bb8bd56a",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Pick horses and add into the free racing when logged by Magic Link.Open new browser with magic link",
+  "historyId" : "c82f9659ede936fe6fd469caa0b35c15",
+  "time" : {
+    "start" : 1619099833488,
+    "stop" : 1619100106536,
+    "duration" : 273048
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:120:36\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:28)\n                    at MagicLinkPage.waitForNavigation (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:39:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/dual-horse-free-email.test.js:56:9\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "6b9b1cb6ce039905",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/6b9b1cb6ce039905",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618498015419,
+          "stop" : 1618498135436,
+          "duration" : 120017
+        }
+      }, {
+        "uid" : "ae499e4009ad5b58",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/ae499e4009ad5b58",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616250136095,
+          "stop" : 1616250161038,
+          "duration" : 24943
+        }
+      }, {
+        "uid" : "f6a739799ee57176",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/f6a739799ee57176",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905654916,
+          "stop" : 1615905669523,
+          "duration" : 14607
+        }
+      }, {
+        "uid" : "4ed64d06674f72a0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/4ed64d06674f72a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786644834,
+          "stop" : 1615786654552,
+          "duration" : 9718
+        }
+      }, {
+        "uid" : "be2a8cfbf096db94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/be2a8cfbf096db94",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613715220918,
+          "stop" : 1613715340920,
+          "duration" : 120002
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ed722c53bb8bd56a.json",
+  "parameterValues" : [ ]
+}

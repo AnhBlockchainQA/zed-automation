@@ -1,0 +1,84 @@
+{
+  "uid" : "f82dc0647e8f7e4f",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "6873ad6b0366804cde27a9106f9f0ff3",
+  "time" : {
+    "start" : 1619095471968,
+    "stop" : 1619095479727,
+    "duration" : 7759
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "583a449650e6caec",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/583a449650e6caec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494605462,
+          "stop" : 1618494618046,
+          "duration" : 12584
+        }
+      }, {
+        "uid" : "97f3035c0c50db80",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/97f3035c0c50db80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247463865,
+          "stop" : 1616247478907,
+          "duration" : 15042
+        }
+      }, {
+        "uid" : "74e7180ba0f64c60",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/74e7180ba0f64c60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903152965,
+          "stop" : 1615903167849,
+          "duration" : 14884
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f82dc0647e8f7e4f.json",
+  "parameterValues" : [ ]
+}

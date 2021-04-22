@@ -1,0 +1,93 @@
+{
+  "uid" : "d0c131575e2b3e10",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "e136499c4dd9b24d732fc18a363d1de4",
+  "time" : {
+    "start" : 1619095514698,
+    "stop" : 1619095525506,
+    "duration" : 10808
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "5e693fa184d9cfb8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/5e693fa184d9cfb8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494839847,
+          "stop" : 1618494855754,
+          "duration" : 15907
+        }
+      }, {
+        "uid" : "e12e724e20fe93dc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/e12e724e20fe93dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247826483,
+          "stop" : 1616247843559,
+          "duration" : 17076
+        }
+      }, {
+        "uid" : "7d213b0429d6f87d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/7d213b0429d6f87d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903514540,
+          "stop" : 1615903531254,
+          "duration" : 16714
+        }
+      }, {
+        "uid" : "674a97c56772e214",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/674a97c56772e214",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783838116,
+          "stop" : 1615783854886,
+          "duration" : 16770
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d0c131575e2b3e10.json",
+  "parameterValues" : [ ]
+}

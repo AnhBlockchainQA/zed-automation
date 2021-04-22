@@ -1,0 +1,84 @@
+{
+  "uid" : "f33cc174135c0164",
+  "name" : "Update metamask info",
+  "fullName" : "Generate stud horse when logging in Metamask.Update metamask info",
+  "historyId" : "77d58a822b6ec71b615a6a22d6e436fb",
+  "time" : {
+    "start" : 1619094226214,
+    "stop" : 1619094229789,
+    "duration" : 3575
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "9903e767440c8971",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/9903e767440c8971",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618493719631,
+          "stop" : 1618493724138,
+          "duration" : 4507
+        }
+      }, {
+        "uid" : "2e029ee9befa6339",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/2e029ee9befa6339",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246522435,
+          "stop" : 1616246527467,
+          "duration" : 5032
+        }
+      }, {
+        "uid" : "50e5ce77b0e8eef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/50e5ce77b0e8eef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902413521,
+          "stop" : 1615902418072,
+          "duration" : 4551
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f33cc174135c0164.json",
+  "parameterValues" : [ ]
+}

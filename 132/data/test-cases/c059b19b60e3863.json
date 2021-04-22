@@ -1,0 +1,84 @@
+{
+  "uid" : "c059b19b60e3863",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "80c37486468f9214962ff9d2147aa0c8",
+  "time" : {
+    "start" : 1619097589820,
+    "stop" : 1619097601657,
+    "duration" : 11837
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "1fdca3e1302696b6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/1fdca3e1302696b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496421508,
+          "stop" : 1618496438757,
+          "duration" : 17249
+        }
+      }, {
+        "uid" : "c4287d16407e366f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/c4287d16407e366f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249748763,
+          "stop" : 1616249780063,
+          "duration" : 31300
+        }
+      }, {
+        "uid" : "63bfa9fe36e5fa3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/63bfa9fe36e5fa3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905243380,
+          "stop" : 1615905265776,
+          "duration" : 22396
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c059b19b60e3863.json",
+  "parameterValues" : [ ]
+}
