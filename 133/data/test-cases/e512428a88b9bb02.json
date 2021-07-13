@@ -1,0 +1,118 @@
+{
+  "uid" : "e512428a88b9bb02",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a racehorse existing on Stable Page",
+  "historyId" : "f05f7200ea523e5ab9f1cf149d616974",
+  "time" : {
+    "start" : 1626194800947,
+    "stop" : 1626195100950,
+    "duration" : 300003
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test-metamask.test.js:138:5)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test-metamask.test.js:35:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a racehorse existing on Stable Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "80efc1447c845496",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/80efc1447c845496",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095464960,
+          "stop" : 1619095466353,
+          "duration" : 1393
+        }
+      }, {
+        "uid" : "ebeb02fa17ce3753",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/ebeb02fa17ce3753",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494596295,
+          "stop" : 1618494598164,
+          "duration" : 1869
+        }
+      }, {
+        "uid" : "b978fb016e61edac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/b978fb016e61edac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247453574,
+          "stop" : 1616247455782,
+          "duration" : 2208
+        }
+      }, {
+        "uid" : "ce95cc77d74eeebc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/ce95cc77d74eeebc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903143753,
+          "stop" : 1615903145462,
+          "duration" : 1709
+        }
+      }, {
+        "uid" : "42f3eae2b290c04b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/42f3eae2b290c04b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783641830,
+          "stop" : 1615783643875,
+          "duration" : 2045
+        }
+      }, {
+        "uid" : "343a235b29821daa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/343a235b29821daa",
+        "status" : "failed",
+        "statusDetails" : "ReferenceError: NUMBER_HORSE is not defined",
+        "time" : {
+          "start" : 1612406957289,
+          "stop" : 1612406958247,
+          "duration" : 958
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e512428a88b9bb02.json",
+  "parameterValues" : [ ]
+}

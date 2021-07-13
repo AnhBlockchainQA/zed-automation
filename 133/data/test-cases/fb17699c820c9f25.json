@@ -1,0 +1,119 @@
+{
+  "uid" : "fb17699c820c9f25",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Pick horses and add into the free racing when logged by Meta Mask.Select a racehorses and add into the free racing",
+  "historyId" : "48b9e25aa5ba74306058b1f1633297de",
+  "time" : {
+    "start" : 1626204702430,
+    "stop" : 1626204747476,
+    "duration" : 45046
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Racing link is not present or clickable",
+  "statusTrace" : "Error: Racing link is not present or clickable\n                    at HomePage.clickOnRacingLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:122:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "37424209e26b0dfd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/37424209e26b0dfd",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".free-race-badge\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1619098884799,
+          "stop" : 1619098895194,
+          "duration" : 10395
+        }
+      }, {
+        "uid" : "8de113f8ed4a9c60",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/8de113f8ed4a9c60",
+        "status" : "failed",
+        "statusDetails" : "Error: page.click: Evaluation failed: DOMException: Failed to execute 'evaluate' on 'Document': The string './/div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']//span[text()='The Xi'an National']' is not a valid XPath expression.\n                    at Object.query (<anonymous>:2868:29)\n                    at InjectedScript._queryEngine (<anonymous>:1591:47)\n                    at InjectedScript._querySelectorRecursively (<anonymous>:1547:25)\n                    at InjectedScript.querySelector (<anonymous>:1538:25)\n                    at eval (eval at evaluate (:303:29), <anonymous>:4:38)\n                    at onRaf (<anonymous>:1667:37)\n                    at <anonymous>:1677:13\n                    at Object.run (<anonymous>:1735:28)\n                    at eval (eval at evaluate (:303:29), <anonymous>:1:14)\n                    at UtilityScript.evaluate (<anonymous>:305:22)\n                =========================== logs ===========================\n                waiting for selector \"//div[@class='race-list']/div[@class='next-run-list']/a[@class='race-tile ']//span[text()='The Xi'an National']\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1618497327695,
+          "stop" : 1618497341712,
+          "duration" : 14017
+        }
+      }, {
+        "uid" : "5876c002ac238a0c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/5876c002ac238a0c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249552496,
+          "stop" : 1616249565823,
+          "duration" : 13327
+        }
+      }, {
+        "uid" : "3e69f35b60b4dbb1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/3e69f35b60b4dbb1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905055992,
+          "stop" : 1615905091268,
+          "duration" : 35276
+        }
+      }, {
+        "uid" : "1589823c45bcf762",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/1589823c45bcf762",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615785454205,
+          "stop" : 1615785483063,
+          "duration" : 28858
+        }
+      }, {
+        "uid" : "63d579846a7b831f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/63d579846a7b831f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712235599,
+          "stop" : 1613712237820,
+          "duration" : 2221
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fb17699c820c9f25.json",
+  "parameterValues" : [ ]
+}

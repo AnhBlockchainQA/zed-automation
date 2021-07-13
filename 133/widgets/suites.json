@@ -1,0 +1,114 @@
+{
+  "total" : 21,
+  "items" : [ {
+    "uid" : "fff0b95b2d23410ae11ccf7b2c7d177f",
+    "name" : "Do the smoke test to validate the Zed Run works well when logged by Email",
+    "statistic" : {
+      "failed" : 11,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 11
+    }
+  }, {
+    "uid" : "1ddbf6b4d46f47ee0a7d747f8ffe9bbd",
+    "name" : "[Smoke Test] Validate the some pages on app work well",
+    "statistic" : {
+      "failed" : 9,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 10
+    }
+  }, {
+    "uid" : "c441c1d6e4e159aae86258e24fba5f2d",
+    "name" : "Generate stud horse when logging in with magic link",
+    "statistic" : {
+      "failed" : 9,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 9
+    }
+  }, {
+    "uid" : "419385d731d8ed7a4e425838385beda1",
+    "name" : "Generate stud horse when logging in Metamask",
+    "statistic" : {
+      "failed" : 7,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 8
+    }
+  }, {
+    "uid" : "c451552aaa03fcedab3bd8b5b6721185",
+    "name" : "Buy horse with credit card - Logging with Metamask",
+    "statistic" : {
+      "failed" : 7,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "6f58c29788f9f4f756d13dda6f436ce7",
+    "name" : "Purchase horse with ETH - Logging with Metamask",
+    "statistic" : {
+      "failed" : 6,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "67cd873afbe18f810912e98f59a391ff",
+    "name" : "Transfer horse to other wallet address - Logging with Metamask",
+    "statistic" : {
+      "failed" : 6,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
+    "uid" : "2f94f922b4af5715534830269a7b8aa8",
+    "name" : "Transfer horse to other wallet address - Logging with magic link",
+    "statistic" : {
+      "failed" : 6,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 6
+    }
+  }, {
+    "uid" : "210be3302cd9afc9b2f9f5aa8a06f97e",
+    "name" : "Pick horses and add into the entry with fee racing when logged by Magic Link",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "c8e90b01a8cfd94b38c4b9ce00566e3f",
+    "name" : "Deposite to ZED balance by logging in with magic link",
+    "statistic" : {
+      "failed" : 5,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 5
+    }
+  } ]
+}

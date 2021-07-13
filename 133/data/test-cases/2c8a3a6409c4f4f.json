@@ -1,0 +1,117 @@
+{
+  "uid" : "2c8a3a6409c4f4f",
+  "name" : "Validate has a Winning on Winning Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate has a Winning on Winning Page",
+  "historyId" : "d53e9bf1e6afcca2524f36ce435e690c",
+  "time" : {
+    "start" : 1626194755927,
+    "stop" : 1626194800947,
+    "duration" : 45020
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Racing link is not present or clickable",
+  "statusTrace" : "Error: Racing link is not present or clickable\n                    at HomePage.clickOnRacingLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:122:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate has a Winning on Winning Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "e206917c659d001d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/e206917c659d001d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095464363,
+          "stop" : 1619095464960,
+          "duration" : 597
+        }
+      }, {
+        "uid" : "f8537ac2643fe444",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/f8537ac2643fe444",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494595515,
+          "stop" : 1618494596295,
+          "duration" : 780
+        }
+      }, {
+        "uid" : "ca756a27c8cf74a2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/ca756a27c8cf74a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247452051,
+          "stop" : 1616247453574,
+          "duration" : 1523
+        }
+      }, {
+        "uid" : "3e708fa25db7057",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/3e708fa25db7057",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903142514,
+          "stop" : 1615903143753,
+          "duration" : 1239
+        }
+      }, {
+        "uid" : "d7580a3d70650ded",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/d7580a3d70650ded",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783640704,
+          "stop" : 1615783641830,
+          "duration" : 1126
+        }
+      }, {
+        "uid" : "5b3d0e83f25455da",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/5b3d0e83f25455da",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612406956513,
+          "stop" : 1612406957288,
+          "duration" : 775
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2c8a3a6409c4f4f.json",
+  "parameterValues" : [ ]
+}

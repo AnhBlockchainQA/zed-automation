@@ -1,0 +1,99 @@
+{
+  "uid" : "602f355a9386e60c",
+  "name" : "Click on Accept button to close the cookie popup",
+  "fullName" : "Give a name to newborn horse when logging in with Metamask.Click on Accept button to close the cookie popup",
+  "historyId" : "ffb59a5dbf104d1d93daf79a01925ef6",
+  "time" : {
+    "start" : 1626201721355,
+    "stop" : 1626201766383,
+    "duration" : 45028
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Accept button to close the cookie popup"
+  }, {
+    "name" : "package",
+    "value" : "Give a name to newborn horse when logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "6d57ac88deeb71b5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/6d57ac88deeb71b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619097585668,
+          "stop" : 1619097589301,
+          "duration" : 3633
+        }
+      }, {
+        "uid" : "22b28475a233af39",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/22b28475a233af39",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496415825,
+          "stop" : 1618496420847,
+          "duration" : 5022
+        }
+      }, {
+        "uid" : "42f698aef3fae6a0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/42f698aef3fae6a0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249204244,
+          "stop" : 1616249216861,
+          "duration" : 12617
+        }
+      }, {
+        "uid" : "90e4e24f432ae6c3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/90e4e24f432ae6c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904786483,
+          "stop" : 1615904795089,
+          "duration" : 8606
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "602f355a9386e60c.json",
+  "parameterValues" : [ ]
+}

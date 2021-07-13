@@ -1,0 +1,99 @@
+{
+  "uid" : "4413a4b3172e60cf",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Check mail inbox to get magic link",
+  "historyId" : "a52479724c47d534b7a297206760b1b6",
+  "time" : {
+    "start" : 1626202067528,
+    "stop" : 1626202069422,
+    "duration" : 1894
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:51:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "2895a5744368d834",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/2895a5744368d834",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619097601657,
+          "stop" : 1619097602822,
+          "duration" : 1165
+        }
+      }, {
+        "uid" : "a317317f1169ceda",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/a317317f1169ceda",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496438757,
+          "stop" : 1618496440010,
+          "duration" : 1253
+        }
+      }, {
+        "uid" : "ef7f1a1367179dcb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/ef7f1a1367179dcb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249780064,
+          "stop" : 1616249781114,
+          "duration" : 1050
+        }
+      }, {
+        "uid" : "fe5859d726a14b5c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/fe5859d726a14b5c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905265776,
+          "stop" : 1615905266799,
+          "duration" : 1023
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4413a4b3172e60cf.json",
+  "parameterValues" : [ ]
+}
