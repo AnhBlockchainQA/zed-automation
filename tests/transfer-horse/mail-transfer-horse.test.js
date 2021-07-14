@@ -42,6 +42,7 @@ describe("Transfer horse to other wallet address - Logging with magic link", () 
       loginPage = new LoginPage(pageInstance);
       await loginPage.navigate();
       await loginPage.clickOnStartButton();
+      await loginPage.clickOnEmailOption();
       await loginPage.typeEmail(EMAIL);
       await loginPage.clickOnContinueButton();
       await loginPage.waitForTimeout();
@@ -64,13 +65,13 @@ describe("Transfer horse to other wallet address - Logging with magic link", () 
   test("Go to My Settings page then click on Select Racehorse", async () => {
     homePage = new HomePage(pageInstance);
     await homePage.bringToFront();
-    await homePage.waitForLoadState();
+    // await homePage.waitForLoadState();
     await homePage.clickOnUserMenuArrow();
-    await homePage.waitForLoadState();
+    // await homePage.waitForLoadState();
     await homePage.clickOnMySettingsLink();
-    await homePage.waitForLoadState();
+    // await homePage.waitForLoadState();
     await homePage.clickOnSelectRaceHorseButton();
-    await homePage.waitForLoadState();
+    // await homePage.waitForLoadState();
   });
 
   test("Select horse then click on Transfer button", async () => {
@@ -81,18 +82,18 @@ describe("Transfer horse to other wallet address - Logging with magic link", () 
     await transferHorsePage.clickOnSelectButtonOfFirstHorse();
     await transferHorsePage.typeAddress(FIRST_WALLET_ADDRESS);
     await transferHorsePage.clickOnTransferButton();
-    await transferHorsePage.waitForLoadState();
+    // await transferHorsePage.waitForLoadState();
     await transferHorsePage.clickOnConfirmButton();
-    await transferHorsePage.waitForLoadState();
+    // await transferHorsePage.waitForLoadState();
   });
 
   test("Check that we can not search this horse anymore", async() => {
     homePage = new HomePage(pageInstance);
     await homePage.clickOnUserAvatar();
-    await homePage.waitForLoadState();
+    // await homePage.waitForLoadState();
     myStablePage = new MyStablePage(newPageInstance);
     await myStablePage.searchForHorse(horseName);
-    await myStablePage.waitForLoadState();
+    // await myStablePage.waitForLoadState();
     await myStablePage.verifySearchResultDidNotContainHorse(horseName);
   });
 

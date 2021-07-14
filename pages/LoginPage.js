@@ -7,6 +7,8 @@ const {
   WELCOME_LABEL,
   CONNECT_METAMASK,
   AUTHENTICATE_BUTTON,
+    EMAIL_LOGGIN_OPTION,
+    METAMASK_LOGGIN_OPTION
 } = require("../locators/ZedRun");
 
 class LoginPage {
@@ -43,6 +45,21 @@ class LoginPage {
       throw new Error("Start button is not present yet!");
     }
   }
+
+    async clickOnEmailOption() {
+        try {
+            console.log(
+                "--- Zed Run Automation Framework: Select Email Option to log in ---"
+            );
+            await expect(this.page).toHaveSelector(EMAIL_LOGGIN_OPTION, {
+                visible: true,
+                timeout: 0,
+            });
+            await this.page.click(EMAIL_LOGGIN_OPTION);
+        } catch {
+            throw new Error("Email Option is not present yet!");
+        }
+    }
 
   async typeEmail(email) {
     try {
