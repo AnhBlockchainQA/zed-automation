@@ -34,6 +34,7 @@ describe("Pick horses and add into the entry with fee racing when logged by Magi
             loginPage = new LoginPage(pageInstance);
             await loginPage.navigate();
             await loginPage.clickOnStartButton();
+            await loginPage.clickOnEmailOption();
             await loginPage.typeEmail(EMAIL);
             await loginPage.clickOnContinueButton();
             await loginPage.waitForTimeout();

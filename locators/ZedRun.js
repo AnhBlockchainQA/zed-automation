@@ -1,6 +1,7 @@
 module.exports = {
     LOGIN_START_BUTTON: "div.start-part",
     EMAIL_INPUT: "div.m-input-content > input[placeholder='Email']",
+    EMAIL_LOGGIN_OPTION: ".login-options .login-option.magic-login",
     CONTINUE_BUTTON: "button[type='Submit']",
     AUTHENTICATE_BUTTON: "//button[text()='authenticate']",
     WELCOME_LABEL: "//h1[text()='Welcome To Zed!']",
