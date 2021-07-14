@@ -1,0 +1,180 @@
+{
+  "uid" : "c4861499b190b0dc",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "fullName" : "Deposite to ZED balance by logging in with magic link.Click on Deposit button and check if ETH balance is updated",
+  "historyId" : "79538d6662470826e7ddfc0fb023b820",
+  "time" : {
+    "start" : 1626242850140,
+    "stop" : 1626243150158,
+    "duration" : 300018
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-mail-login.test.js:73:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/deposite-withdraw/deposite-mail-login.test.js:29:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Click on Deposit button and check if ETH balance is updated"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 13
+      },
+      "items" : [ {
+        "uid" : "2b39fc62269a4696",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/2b39fc62269a4696",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626206155638,
+          "stop" : 1626206455654,
+          "duration" : 300016
+        }
+      }, {
+        "uid" : "e306ca4ac6024780",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/e306ca4ac6024780",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1619099395476,
+          "stop" : 1619099695484,
+          "duration" : 300008
+        }
+      }, {
+        "uid" : "42277fa37d43ddef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/42277fa37d43ddef",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618497873800,
+          "stop" : 1618497993845,
+          "duration" : 120045
+        }
+      }, {
+        "uid" : "df2cedc0099eb0e3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/df2cedc0099eb0e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616250044808,
+          "stop" : 1616250102186,
+          "duration" : 57378
+        }
+      }, {
+        "uid" : "40de411bb75b78e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/40de411bb75b78e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905510633,
+          "stop" : 1615905630293,
+          "duration" : 119660
+        }
+      }, {
+        "uid" : "b05b5615857c5a44",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/b05b5615857c5a44",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786564327,
+          "stop" : 1615786623798,
+          "duration" : 59471
+        }
+      }, {
+        "uid" : "e0b0410452dcac23",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/e0b0410452dcac23",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1613714859571,
+          "stop" : 1613714979586,
+          "duration" : 120015
+        }
+      }, {
+        "uid" : "30f545d3ae0cc86d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/30f545d3ae0cc86d",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1613031782631,
+          "stop" : 1613031902644,
+          "duration" : 120013
+        }
+      }, {
+        "uid" : "4e6262d3b418a12c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/4e6262d3b418a12c",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1612408906675,
+          "stop" : 1612409026692,
+          "duration" : 120017
+        }
+      }, {
+        "uid" : "7109ee4525571988",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/7109ee4525571988",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612277358038,
+          "stop" : 1612277658046,
+          "duration" : 300008
+        }
+      }, {
+        "uid" : "73901243740a2c6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/73901243740a2c6",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612277300552,
+          "stop" : 1612277600560,
+          "duration" : 300008
+        }
+      }, {
+        "uid" : "90657c9cc69be5f9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/90657c9cc69be5f9",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172484555,
+          "stop" : 1612172494563,
+          "duration" : 10008
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c4861499b190b0dc.json",
+  "parameterValues" : [ ]
+}

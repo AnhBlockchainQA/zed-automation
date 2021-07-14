@@ -1,0 +1,110 @@
+{
+  "uid" : "e01296951d37cc0a",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in Metamask.Check that avatar is shown then click on Breeding link",
+  "historyId" : "f7b53cbd22ebc235808a645fdfdf69aa",
+  "time" : {
+    "start" : 1626229052613,
+    "stop" : 1626229097626,
+    "duration" : 45013
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "a4b379dcfd88ffef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/a4b379dcfd88ffef",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626192644778,
+          "stop" : 1626192689792,
+          "duration" : 45014
+        }
+      }, {
+        "uid" : "c8ab741ffd72f8c6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/c8ab741ffd72f8c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619094237933,
+          "stop" : 1619094241659,
+          "duration" : 3726
+        }
+      }, {
+        "uid" : "da92db35f6218371",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/da92db35f6218371",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618493844141,
+          "stop" : 1618493964158,
+          "duration" : 120017
+        }
+      }, {
+        "uid" : "571c560702ba31fa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/571c560702ba31fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246542712,
+          "stop" : 1616246548417,
+          "duration" : 5705
+        }
+      }, {
+        "uid" : "e6880089083bd170",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/e6880089083bd170",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902432157,
+          "stop" : 1615902437742,
+          "duration" : 5585
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e01296951d37cc0a.json",
+  "parameterValues" : [ ]
+}

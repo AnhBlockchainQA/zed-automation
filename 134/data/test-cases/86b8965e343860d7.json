@@ -1,0 +1,109 @@
+{
+  "uid" : "86b8965e343860d7",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check mail inbox to get magic link",
+  "historyId" : "f98c92654596fac8f05deaa46981bc4f",
+  "time" : {
+    "start" : 1626234981017,
+    "stop" : 1626234982955,
+    "duration" : 1938
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/stud-service/mail-stud-generate-horse.test.js:52:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "66cfc1a8a9b7a43c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/66cfc1a8a9b7a43c",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1626198277072,
+          "stop" : 1626198279006,
+          "duration" : 1934
+        }
+      }, {
+        "uid" : "b81678dd786e891a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/b81678dd786e891a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095817607,
+          "stop" : 1619095818622,
+          "duration" : 1015
+        }
+      }, {
+        "uid" : "9f273befefb53d6f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/9f273befefb53d6f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618495124043,
+          "stop" : 1618495125261,
+          "duration" : 1218
+        }
+      }, {
+        "uid" : "ca8fa37e64869106",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/ca8fa37e64869106",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616248228983,
+          "stop" : 1616248230025,
+          "duration" : 1042
+        }
+      }, {
+        "uid" : "6015ebc9c71a77bd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/6015ebc9c71a77bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903853275,
+          "stop" : 1615903854282,
+          "duration" : 1007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "86b8965e343860d7.json",
+  "parameterValues" : [ ]
+}

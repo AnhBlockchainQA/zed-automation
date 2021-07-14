@@ -1,0 +1,109 @@
+{
+  "uid" : "f4dcae6e49d0f166",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "5182dfb5d00945f449be69d3d0c9eca1",
+  "time" : {
+    "start" : 1626227949811,
+    "stop" : 1626228051556,
+    "duration" : 101745
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at ChromiumBrowserContext.waitForEvent (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserContext.js:214:24)\n                    at async Promise.all (index 0)\n                    at MetamaskFactory.clickNewPage (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:61:23)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:71:36\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "7db2bbd48cae8ea7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/7db2bbd48cae8ea7",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626191540324,
+          "stop" : 1626191642139,
+          "duration" : 101815
+        }
+      }, {
+        "uid" : "814ab137c3198eba",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/814ab137c3198eba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619093578931,
+          "stop" : 1619093586870,
+          "duration" : 7939
+        }
+      }, {
+        "uid" : "15407e6a656752b9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/15407e6a656752b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618493551732,
+          "stop" : 1618493565777,
+          "duration" : 14045
+        }
+      }, {
+        "uid" : "e3227df180f2573e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/e3227df180f2573e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246350425,
+          "stop" : 1616246366823,
+          "duration" : 16398
+        }
+      }, {
+        "uid" : "891cc9f4141e913e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/891cc9f4141e913e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902336019,
+          "stop" : 1615902355567,
+          "duration" : 19548
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f4dcae6e49d0f166.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,178 @@
+{
+  "uid" : "bae8069c1b4fbb0b",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Login to ZedRun with magic link.Open new browser with magic link",
+  "historyId" : "23ca99c354162c48694cedb121ed2aff",
+  "time" : {
+    "start" : 1626245739477,
+    "stop" : 1626245739926,
+    "duration" : 449
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:20:13)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 13
+      },
+      "items" : [ {
+        "uid" : "660c3aa2b843070f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/660c3aa2b843070f",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626209045427,
+          "stop" : 1626209046079,
+          "duration" : 652
+        }
+      }, {
+        "uid" : "646f1a41e240690c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/646f1a41e240690c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619100132315,
+          "stop" : 1619100133313,
+          "duration" : 998
+        }
+      }, {
+        "uid" : "faf0e80a9603bdaf",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/faf0e80a9603bdaf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618498320442,
+          "stop" : 1618498322037,
+          "duration" : 1595
+        }
+      }, {
+        "uid" : "fa25956d4333a425",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/fa25956d4333a425",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616250258665,
+          "stop" : 1616250285522,
+          "duration" : 26857
+        }
+      }, {
+        "uid" : "ddbc2f46444f4fbb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/ddbc2f46444f4fbb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905755247,
+          "stop" : 1615905766213,
+          "duration" : 10966
+        }
+      }, {
+        "uid" : "3ea9eb2b6fd4b8e5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/3ea9eb2b6fd4b8e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786744911,
+          "stop" : 1615786756129,
+          "duration" : 11218
+        }
+      }, {
+        "uid" : "2b5206455b88b1c5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/2b5206455b88b1c5",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613715822973,
+          "stop" : 1613715823258,
+          "duration" : 285
+        }
+      }, {
+        "uid" : "3e0773e564f15875",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/3e0773e564f15875",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613032626783,
+          "stop" : 1613032627069,
+          "duration" : 286
+        }
+      }, {
+        "uid" : "7af3d36b88bd78ac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/7af3d36b88bd78ac",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612409268767,
+          "stop" : 1612409269059,
+          "duration" : 292
+        }
+      }, {
+        "uid" : "13c9cbd86b37f4ae",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/13c9cbd86b37f4ae",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612278259939,
+          "stop" : 1612278260100,
+          "duration" : 161
+        }
+      }, {
+        "uid" : "f2a65c4668fbb082",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/f2a65c4668fbb082",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612278202120,
+          "stop" : 1612278202293,
+          "duration" : 173
+        }
+      }, {
+        "uid" : "424b5e37609f79ac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/424b5e37609f79ac",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612172516983,
+          "stop" : 1612172517216,
+          "duration" : 233
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "bae8069c1b4fbb0b.json",
+  "parameterValues" : [ ]
+}
