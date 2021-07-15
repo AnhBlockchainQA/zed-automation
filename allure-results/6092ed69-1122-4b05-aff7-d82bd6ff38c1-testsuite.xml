@@ -1,0 +1,131 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1617813154735' stop='1617814215845'>
+    <name>Buy horse with credit card - Logging with Metamask</name>
+    <title>Buy horse with credit card - Logging with Metamask</title>
+    <test-cases>
+        <test-case start='1617813154736' status='passed' stop='1617813158215'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617813158216' status='passed' stop='1617813169867'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617813169868' status='passed' stop='1617813175284'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617813175284' status='failed' stop='1617814155870'>
+            <name>Process the checkout with banking account and check value</name>
+            <title>Process the checkout with banking account and check value</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:28:5)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:117:3)
+                    at addSpecsToSuite (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-cash.test.js:52:1)
+                    at Runtime._execModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/zed-automation/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617814155870' status='failed' stop='1617814185919'>
+            <name>Verify that our order is processing</name>
+            <title>Verify that our order is processing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Statement is not present!</message>
+                <stack-trace>Error: Statement is not present!
+                    at ActivityPage.checkIfStatementInfoCorrect (/Users/davidle/zed-automation/pages/ActivityPage.js:60:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617814185919' status='failed' stop='1617814200940'>
+            <name>Check the detail payment</name>
+            <title>Check the detail payment</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForSelector: Timeout 5000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:180:48)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.waitForSelector (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:215:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.waitForSelector (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:215:21)
+                    at ActivityPage.mouseOverFirstStatementInfo (/Users/davidle/zed-automation/pages/ActivityPage.js:69:21)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617814200940' status='failed' stop='1617814215845'>
+            <name>Go back to user stable and check if horse is transferred</name>
+            <title>Go back to user stable and check if horse is transferred</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Z5 60']" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForSelector: Timeout 10000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//section[@id='stable-main']//div[@class='row']//div[@class='panel']//div[contains(@class,'name') and text()='Z5 60']" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:180:48)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.waitForSelector (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:175:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:215:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.waitForSelector (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:215:21)
+                    at MyStablePage.verifySearchResultContainHorse (/Users/davidle/zed-automation/pages/MyStablePage.js:499:21)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

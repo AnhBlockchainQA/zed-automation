@@ -1,0 +1,119 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1617812336397' stop='1617812368161'>
+    <name>Purchase horse with ETH - Logging with Metamask</name>
+    <title>Purchase horse with ETH - Logging with Metamask</title>
+    <test-cases>
+        <test-case start='1617812336398' status='passed' stop='1617812340300'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617812340300' status='passed' stop='1617812356197'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617812356198' status='failed' stop='1617812368124'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Buy Horse is not present or not clickable</message>
+                <stack-trace>Error: Buy Horse is not present or not clickable
+                    at MarketplacePage.clickOnBuyHorseButton (/Users/davidle/zed-automation/pages/MarketplacePage.js:271:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617812368124' status='failed' stop='1617812368141'>
+            <name>Process the checkout with ETH</name>
+            <title>Process the checkout with ETH</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:189:23)
+                    at new PaymentPage (/Users/davidle/zed-automation/pages/PaymentPage.js:18:15)
+                    at test (/Users/davidle/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:114:19)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617812368141' status='failed' stop='1617812368146'>
+            <name>Verify that our order is performed</name>
+            <title>Verify that our order is performed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:189:23)
+                    at new PaymentPage (/Users/davidle/zed-automation/pages/PaymentPage.js:18:15)
+                    at test (/Users/davidle/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:114:19)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617812368146' status='failed' stop='1617812368157'>
+            <name>Check the detail payment</name>
+            <title>Check the detail payment</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Element is not present or not enabled yet!</message>
+                <stack-trace>Error: Element is not present or not enabled yet!
+                    at PaymentPage.clickOnBuyWithETH (/Users/davidle/zed-automation/pages/PaymentPage.js:184:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1617812368157' status='failed' stop='1617812368161'>
+            <name>Go back to user stable and check if horse is transferred</name>
+            <title>Go back to user stable and check if horse is transferred</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.bringToFront: Target page, context or browser has been closed</message>
+                <stack-trace>page.bringToFront: Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:385:33)
+                    at Page._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Page.bringToFront (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:384:21)
+                    at PaymentPage.bringToFront (/Users/davidle/zed-automation/pages/PaymentPage.js:23:21)
+                    at test (/Users/davidle/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:130:23)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

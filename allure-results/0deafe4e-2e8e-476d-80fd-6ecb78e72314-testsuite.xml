@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1612349038021' stop='1612349071411'>
+    <name>Purchase horse with ETH</name>
+    <title>Purchase horse with ETH</title>
+    <test-cases>
+        <test-case start='1612349038021' status='passed' stop='1612349042805'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612349042805' status='passed' stop='1612349057046'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612349057046' status='passed' stop='1612349062793'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612349062793' status='passed' stop='1612349071329'>
+            <name>Purchase horse with ETH</name>
+            <title>Purchase horse with ETH</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612349071329' status='failed' stop='1612349071411'>
+            <name>Verify that our order is performed</name>
+            <title>Verify that our order is performed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: horseName is not defined</message>
+                <stack-trace>ReferenceError: horseName is not defined
+                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/purchase-horse-ETH.test.js:130:54)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
