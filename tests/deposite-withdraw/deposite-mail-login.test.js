@@ -35,6 +35,7 @@ describe("Deposite to ZED balance by logging in with magic link", () => {
       loginPage = new LoginPage(pageInstance);
       await loginPage.navigate();
       await loginPage.clickOnStartButton();
+      await loginPage.clickOnEmailOption();
       await loginPage.typeEmail(EMAIL);
       await loginPage.clickOnContinueButton();
       await loginPage.waitForTimeout();

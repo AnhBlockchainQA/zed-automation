@@ -41,6 +41,7 @@ describe("Buy horse with credit card - Logging with Metamask", () => {
       loginPage = new LoginPage(pageInstance);
       await loginPage.navigate();
       await loginPage.clickOnStartButton();
+      await loginPage.clickOnEmailOption();
       await loginPage.typeEmail(EMAIL);
       await loginPage.clickOnContinueButton();
       await loginPage.waitForTimeout();

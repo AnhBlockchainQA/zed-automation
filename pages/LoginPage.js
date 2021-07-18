@@ -1,5 +1,5 @@
 const { ZEDRUN_URL, TEMP_ZEDRUN_URL } = require("../data/env");
-const { WAIT_TIME } = require("../data/api"); 
+const { WAIT_TIME } = require("../data/api");
 const {
   LOGIN_START_BUTTON,
   EMAIL_INPUT,
@@ -9,6 +9,8 @@ const {
   AUTHENTICATE_BUTTON,
   TEMP_CONNECT_METAMASK,
   TEMP_LOGIN_START_BUTTON,
+  EMAIL_LOGGIN_OPTION,
+  METAMASK_LOGGIN_OPTION,
 } = require("../locators/ZedRun");
 
 class LoginPage {
@@ -44,6 +46,21 @@ class LoginPage {
       await this.page.click(LOGIN_START_BUTTON);
     } catch {
       throw new Error("Start button is not present yet!");
+    }
+  }
+
+  async clickOnEmailOption() {
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Select Email Option to log in ---"
+      );
+      await expect(this.page).toHaveSelector(EMAIL_LOGGIN_OPTION, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(EMAIL_LOGGIN_OPTION);
+    } catch {
+      throw new Error("Email Option is not present yet!");
     }
   }
 
