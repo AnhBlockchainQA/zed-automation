@@ -1,0 +1,138 @@
+{
+  "uid" : "6a359c4f9bfed6e5",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Check that the ZED app is loading successfully",
+  "historyId" : "a7f7c692a3378a498d2d72f05e943faf",
+  "time" : {
+    "start" : 1626602621666,
+    "stop" : 1626602756778,
+    "duration" : 135112
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Accept button is not present or not clickable",
+  "statusTrace" : "Error: Accept button is not present or not clickable\n                    at HomePage.clickOnAcceptButton (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:50:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "5806a67b01d3992a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/5806a67b01d3992a",
+        "status" : "failed",
+        "statusDetails" : "Error: Accept button is not present or not clickable",
+        "time" : {
+          "start" : 1626602337145,
+          "stop" : 1626602472271,
+          "duration" : 135126
+        }
+      }, {
+        "uid" : "2d6422eb9dc03e1b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/2d6422eb9dc03e1b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626233510058,
+          "stop" : 1626233810076,
+          "duration" : 300018
+        }
+      }, {
+        "uid" : "f8ff8d32070ac178",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/f8ff8d32070ac178",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626196806052,
+          "stop" : 1626197106064,
+          "duration" : 300012
+        }
+      }, {
+        "uid" : "32a4ad62f210e7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/32a4ad62f210e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095798926,
+          "stop" : 1619095799131,
+          "duration" : 205
+        }
+      }, {
+        "uid" : "19a3468445fe6588",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/19a3468445fe6588",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494977053,
+          "stop" : 1618494977488,
+          "duration" : 435
+        }
+      }, {
+        "uid" : "d1c3e042e5f4607e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/d1c3e042e5f4607e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247854878,
+          "stop" : 1616247892044,
+          "duration" : 37166
+        }
+      }, {
+        "uid" : "5718d426c1b90a1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/5718d426c1b90a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903541745,
+          "stop" : 1615903579201,
+          "duration" : 37456
+        }
+      }, {
+        "uid" : "c2d92b77dd0d44d5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/c2d92b77dd0d44d5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783864872,
+          "stop" : 1615783902781,
+          "duration" : 37909
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6a359c4f9bfed6e5.json",
+  "parameterValues" : [ ]
+}

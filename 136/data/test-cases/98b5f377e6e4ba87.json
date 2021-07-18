@@ -1,0 +1,46 @@
+{
+  "uid" : "98b5f377e6e4ba87",
+  "name" : "Update metamask info",
+  "fullName" : "Free racing when logged by Meta Mask.Update metamask info",
+  "historyId" : "e1c98d814847f4c654a21c32e2f1845f",
+  "time" : {
+    "start" : 1626609617798,
+    "stop" : 1626609622984,
+    "duration" : 5186
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "98b5f377e6e4ba87.json",
+  "parameterValues" : [ ]
+}

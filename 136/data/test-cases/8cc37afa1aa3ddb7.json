@@ -1,0 +1,52 @@
+{
+  "uid" : "8cc37afa1aa3ddb7",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Free racing with Magic Link.Check mail inbox to get magic link",
+  "historyId" : "47a9b54cc862ce5539de61883d0bcfb6",
+  "time" : {
+    "start" : 1626612859770,
+    "stop" : 1626612861255,
+    "duration" : 1485
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/FreeGate-Email.test.js:44:21\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8cc37afa1aa3ddb7.json",
+  "parameterValues" : [ ]
+}

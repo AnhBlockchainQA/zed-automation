@@ -1,0 +1,46 @@
+{
+  "uid" : "78c83811c1342d22",
+  "name" : "Open ZedRun page and click Connect Metamask",
+  "fullName" : "Paid racing with fee racing when logged by Meta Mask.Open ZedRun page and click Connect Metamask",
+  "historyId" : "97359c0938698f0895ccfdde47e306c6",
+  "time" : {
+    "start" : 1626602228446,
+    "stop" : 1626602236190,
+    "duration" : 7744
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "78c83811c1342d22.json",
+  "parameterValues" : [ ]
+}

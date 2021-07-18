@@ -1,0 +1,46 @@
+{
+  "uid" : "e68f3bdafe47831",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "fullName" : "Paid racing with fee racing when logged by Meta Mask.Select a racehorses to add into the paid entry racing",
+  "historyId" : "97135a62b668efa309fe758584317b07",
+  "time" : {
+    "start" : 1626602236967,
+    "stop" : 1626602237701,
+    "duration" : 734
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses to add into the paid entry racing"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e68f3bdafe47831.json",
+  "parameterValues" : [ ]
+}

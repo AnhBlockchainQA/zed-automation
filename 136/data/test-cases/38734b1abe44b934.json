@@ -1,0 +1,191 @@
+{
+  "uid" : "38734b1abe44b934",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Login to ZedRun with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "19433122bf1e5a835866655ce2216ce9",
+  "time" : {
+    "start" : 1626610625652,
+    "stop" : 1626610647420,
+    "duration" : 21768
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: page.click: selector: expected string, got undefined",
+  "statusTrace" : "Error: page.click: selector: expected string, got undefined\n                    at Object.<anonymous>.exports.tString (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/protocol/validatorPrimitives.js:42:11)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/protocol/validatorPrimitives.js:81:27\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:64:99)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:279:34\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:34)\n                    at Frame.click (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:278:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:447:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:231:20)\n                    at Page.click (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:447:21)\n                    at MetamaskFactory.clickNewPage (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:63:12)\n                    at /home/runner/work/zed-automation/zed-automation/tests/login/metamask.test.js:56:58\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Login to ZedRun with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 15
+      },
+      "items" : [ {
+        "uid" : "fcf36f5d12f96916",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/fcf36f5d12f96916",
+        "status" : "failed",
+        "statusDetails" : "Error: page.click: selector: expected string, got undefined",
+        "time" : {
+          "start" : 1626609713567,
+          "stop" : 1626609735129,
+          "duration" : 21562
+        }
+      }, {
+        "uid" : "8d4a1eb63f0fe8eb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/8d4a1eb63f0fe8eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626242399481,
+          "stop" : 1626242410502,
+          "duration" : 11021
+        }
+      }, {
+        "uid" : "618982f89e88d16d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/618982f89e88d16d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626205704751,
+          "stop" : 1626205715760,
+          "duration" : 11009
+        }
+      }, {
+        "uid" : "88d61c355e069c76",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/88d61c355e069c76",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619099231055,
+          "stop" : 1619099241925,
+          "duration" : 10870
+        }
+      }, {
+        "uid" : "dad3b53961966ce4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/dad3b53961966ce4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618497648715,
+          "stop" : 1618497668443,
+          "duration" : 19728
+        }
+      }, {
+        "uid" : "c7cfebf73c44539b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/c7cfebf73c44539b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249696814,
+          "stop" : 1616249731824,
+          "duration" : 35010
+        }
+      }, {
+        "uid" : "8120a0825b40a4af",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8120a0825b40a4af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905211349,
+          "stop" : 1615905233569,
+          "duration" : 22220
+        }
+      }, {
+        "uid" : "9a0b019af1617b3c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/9a0b019af1617b3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786153190,
+          "stop" : 1615786171499,
+          "duration" : 18309
+        }
+      }, {
+        "uid" : "aea153d537efd57c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/aea153d537efd57c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613713390307,
+          "stop" : 1613713401672,
+          "duration" : 11365
+        }
+      }, {
+        "uid" : "a0d96bfeb62df42f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/a0d96bfeb62df42f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613030795664,
+          "stop" : 1613030809294,
+          "duration" : 13630
+        }
+      }, {
+        "uid" : "c0f77d2b13978a9f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/c0f77d2b13978a9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612408165836,
+          "stop" : 1612408177769,
+          "duration" : 11933
+        }
+      }, {
+        "uid" : "6cd46ebf4938dfd4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/6cd46ebf4938dfd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275328259,
+          "stop" : 1612275336960,
+          "duration" : 8701
+        }
+      }, {
+        "uid" : "c3f617ed07f1afe8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/c3f617ed07f1afe8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612275270545,
+          "stop" : 1612275279600,
+          "duration" : 9055
+        }
+      }, {
+        "uid" : "9102d7add02f57c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/9102d7add02f57c8",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172411587,
+          "stop" : 1612172421598,
+          "duration" : 10011
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "38734b1abe44b934.json",
+  "parameterValues" : [ ]
+}

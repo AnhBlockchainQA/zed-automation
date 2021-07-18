@@ -1,0 +1,1221 @@
+[ {
+  "uid" : "218634962b9094de",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626602306118,
+    "stop" : 1626602309393,
+    "duration" : 3275
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6e2562ef00e12792",
+  "name" : "Check that avatar is shown",
+  "time" : {
+    "start" : 1626610647420,
+    "stop" : 1626610782497,
+    "duration" : 135077
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8b60a0e778cbf97",
+  "name" : "Validate has a race open on Events page",
+  "time" : {
+    "start" : 1626602214363,
+    "stop" : 1626602214950,
+    "duration" : 587
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d71c839ba0827635",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1626606712118,
+    "stop" : 1626606757142,
+    "duration" : 45024
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d4be1707025b012b",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626600656044,
+    "stop" : 1626600659391,
+    "duration" : 3347
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "98b5f377e6e4ba87",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626609617798,
+    "stop" : 1626609622984,
+    "duration" : 5186
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7b1664de5a0641f0",
+  "name" : "Validate has a Winning on Winning Page",
+  "time" : {
+    "start" : 1626602981880,
+    "stop" : 1626603026899,
+    "duration" : 45019
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cc37afa1aa3ddb7",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626612859770,
+    "stop" : 1626612861255,
+    "duration" : 1485
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a6374697b4ac2c2",
+  "name" : "Check that the ZED app is loading successfully",
+  "time" : {
+    "start" : 1626609634999,
+    "stop" : 1626609636487,
+    "duration" : 1488
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ccb8f4b2325d0a3b",
+  "name" : "Proceed breeding steps",
+  "time" : {
+    "start" : 1626604574379,
+    "stop" : 1626604874383,
+    "duration" : 300004
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fe134e028168a3e",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626611823072,
+    "stop" : 1626611823507,
+    "duration" : 435
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "18bfc4f3421cf58f",
+  "name" : "Click on Accept button to close the cookie popup",
+  "time" : {
+    "start" : 1626607673519,
+    "stop" : 1626607674845,
+    "duration" : 1326
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34414d119fa3f605",
+  "name" : "Wait until homepage is loading",
+  "time" : {
+    "start" : 1626602291237,
+    "stop" : 1626602292159,
+    "duration" : 922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "115062e1c0556907",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1626606108075,
+    "stop" : 1626606109381,
+    "duration" : 1306
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "17e01c4625ac53bf",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626607664222,
+    "stop" : 1626607673519,
+    "duration" : 9297
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f98071efcc8b096",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1626605490981,
+    "stop" : 1626605492182,
+    "duration" : 1201
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3095c62621a1f1bb",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "time" : {
+    "start" : 1626610271627,
+    "stop" : 1626610316687,
+    "duration" : 45060
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f86f93ddc3c50720",
+  "name" : "Select female horse",
+  "time" : {
+    "start" : 1626601267156,
+    "stop" : 1626601567160,
+    "duration" : 300004
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "db4d482b2dc015ca",
+  "name" : "Wait until wallet icon is shown",
+  "time" : {
+    "start" : 1626609180081,
+    "stop" : 1626609315133,
+    "duration" : 135052
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ea36c801c6e661ed",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626611821608,
+    "stop" : 1626611823072,
+    "duration" : 1464
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b5894fe2d115fe45",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1626611823507,
+    "stop" : 1626611958606,
+    "duration" : 135099
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ba0ec21e1b2aaa4",
+  "name" : "Select a racehorses and add into the free racing",
+  "time" : {
+    "start" : 1626609636487,
+    "stop" : 1626609669034,
+    "duration" : 32547
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b10d2c63e1e12ab7",
+  "name" : "Confirm the transfer",
+  "time" : {
+    "start" : 1626602297906,
+    "stop" : 1626602298828,
+    "duration" : 922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c32e527e2316ec50",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626609178242,
+    "stop" : 1626609179765,
+    "duration" : 1523
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4563be37aeb5b09f",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626609179765,
+    "stop" : 1626609180081,
+    "duration" : 316
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ed312b943d745a4",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "time" : {
+    "start" : 1626611958606,
+    "stop" : 1626612258616,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "789fc90ff9b50061",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626605481018,
+    "stop" : 1626605490981,
+    "duration" : 9963
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "69b0e8c4523f2854",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626603627530,
+    "stop" : 1626603927538,
+    "duration" : 300008
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "850693416e98803b",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626602171111,
+    "stop" : 1626602174311,
+    "duration" : 3200
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "265cbbf94ba648e7",
+  "name" : "Validate has a race open on Events page",
+  "time" : {
+    "start" : 1626602891837,
+    "stop" : 1626602936860,
+    "duration" : 45023
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e68f3bdafe47831",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "time" : {
+    "start" : 1626602236967,
+    "stop" : 1626602237701,
+    "duration" : 734
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eaac226cbdfe61bc",
+  "name" : "Check that the ZED app is loading successfully",
+  "time" : {
+    "start" : 1626609971617,
+    "stop" : 1626610271627,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1eed0efc797b165",
+  "name" : "Validate the component displays on Home Page",
+  "time" : {
+    "start" : 1626602756779,
+    "stop" : 1626602801799,
+    "duration" : 45020
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f702106b3c426027",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626606094989,
+    "stop" : 1626606098891,
+    "duration" : 3902
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9d526df200c85f9",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626610783619,
+    "stop" : 1626611083629,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4e33e53b959303b",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626602619934,
+    "stop" : 1626602621493,
+    "duration" : 1559
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2d79c659ceac43f3",
+  "name" : "Go to My Settings page then click on Select Racehorse",
+  "time" : {
+    "start" : 1626607977099,
+    "stop" : 1626608277120,
+    "duration" : 300021
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2dc05c2756808dc",
+  "name" : "Select mate horse",
+  "time" : {
+    "start" : 1626600967141,
+    "stop" : 1626601267156,
+    "duration" : 300015
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "294bd731ef77a08a",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626606098891,
+    "stop" : 1626606108075,
+    "duration" : 9184
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a359c4f9bfed6e5",
+  "name" : "Check that the ZED app is loading successfully",
+  "time" : {
+    "start" : 1626602621666,
+    "stop" : 1626602756778,
+    "duration" : 135112
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f501dfb7e334ea3",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626606410253,
+    "stop" : 1626606710262,
+    "duration" : 300009
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c64cded1e12291a",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626606710262,
+    "stop" : 1626606711879,
+    "duration" : 1617
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1181449676752452",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626612559758,
+    "stop" : 1626612859770,
+    "duration" : 300012
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "644de19f6e0d7616",
+  "name" : "Assign horse to paid races",
+  "time" : {
+    "start" : 1626602237701,
+    "stop" : 1626602277817,
+    "duration" : 40116
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "311b49817ed0935e",
+  "name" : "Filter with male horse",
+  "time" : {
+    "start" : 1626602318057,
+    "stop" : 1626602319449,
+    "duration" : 1392
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2d8d979d4a635e08",
+  "name" : "Process the checkout with ETH",
+  "time" : {
+    "start" : 1626599738387,
+    "stop" : 1626600038400,
+    "duration" : 300013
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "af96e3e02d21981b",
+  "name" : "Go to Stable page and verify there is a new horse",
+  "time" : {
+    "start" : 1626602167173,
+    "stop" : 1626602168416,
+    "duration" : 1243
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b05524372c8fb17b",
+  "name" : "Check that the ZED app is loading successfully",
+  "time" : {
+    "start" : 1626602236190,
+    "stop" : 1626602236966,
+    "duration" : 776
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8eb730b06d381737",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626607675312,
+    "stop" : 1626607975320,
+    "duration" : 300008
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb2bf824de35150f",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626609971284,
+    "stop" : 1626609971617,
+    "duration" : 333
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d1e54bd6b4c6fa2",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626603929126,
+    "stop" : 1626603929313,
+    "duration" : 187
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "aaa30a84e627f219",
+  "name" : "Get token",
+  "time" : {
+    "start" : 1626602225099,
+    "stop" : 1626602225102,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a33ef4c784f8de4e",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626607976851,
+    "stop" : 1626607977098,
+    "duration" : 247
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8a34ca39b47e68c9",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626602319928,
+    "stop" : 1626602619934,
+    "duration" : 300006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c4a7123767eb87",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626611521591,
+    "stop" : 1626611821608,
+    "duration" : 300017
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "2f8ee5933a664dd9",
+  "name" : "Validate Marketplace Page has a racehorse",
+  "time" : {
+    "start" : 1626602801799,
+    "stop" : 1626602846818,
+    "duration" : 45019
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ce3b50d45e609bee",
+  "name" : "Go to My Settings page then click on Select Racehorse",
+  "time" : {
+    "start" : 1626602292159,
+    "stop" : 1626602292683,
+    "duration" : 524
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f09651442f9eaaf2",
+  "name" : "Select female horse",
+  "time" : {
+    "start" : 1626604274375,
+    "stop" : 1626604574379,
+    "duration" : 300004
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c346f450cbd3bd1",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "time" : {
+    "start" : 1626602846818,
+    "stop" : 1626602891837,
+    "duration" : 45019
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b7c2fa16d19ad305",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626611083629,
+    "stop" : 1626611085127,
+    "duration" : 1498
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f853efc3f89de548",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626607660080,
+    "stop" : 1626607664222,
+    "duration" : 4142
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3cefb618f4d2755d",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626611085127,
+    "stop" : 1626611085507,
+    "duration" : 380
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d0f735f0f4ba24b",
+  "name" : "Validate the component displays on Home Page",
+  "time" : {
+    "start" : 1626602182253,
+    "stop" : 1626602193181,
+    "duration" : 10928
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "38734b1abe44b934",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626610625652,
+    "stop" : 1626610647420,
+    "duration" : 21768
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "176da4bd368a25b9",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "time" : {
+    "start" : 1626611085507,
+    "stop" : 1626611220597,
+    "duration" : 135090
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "50c03a673e4ac255",
+  "name" : "Go to Stable page and verify there is a new horse",
+  "time" : {
+    "start" : 1626605174385,
+    "stop" : 1626605474390,
+    "duration" : 300005
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "467bbbadb0063507",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626609669761,
+    "stop" : 1626609969768,
+    "duration" : 300007
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c9e2c9e47e67d84",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626602279830,
+    "stop" : 1626602283110,
+    "duration" : 3280
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dc66adf24f9c2e18",
+  "name" : "Verify that our order is performed",
+  "time" : {
+    "start" : 1626607057147,
+    "stop" : 1626607357150,
+    "duration" : 300003
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "35222c5757c7b614",
+  "name" : "Wait for the web is loading successfully",
+  "time" : {
+    "start" : 1626602181475,
+    "stop" : 1626602182253,
+    "duration" : 778
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "25582246d94c53c5",
+  "name" : "Click on Deposit button and type amount to deposit",
+  "time" : {
+    "start" : 1626605492182,
+    "stop" : 1626605792226,
+    "duration" : 300044
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "32270a24f1d22a1b",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626613808701,
+    "stop" : 1626613809135,
+    "duration" : 434
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b76d9659fb7a86a",
+  "name" : "Check if ETH balance is updated",
+  "time" : {
+    "start" : 1626605792226,
+    "stop" : 1626606092233,
+    "duration" : 300007
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "914a958038673dde",
+  "name" : "Select horse then click on Transfer button",
+  "time" : {
+    "start" : 1626602292683,
+    "stop" : 1626602297906,
+    "duration" : 5223
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e071ab3d72ea01a",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "time" : {
+    "start" : 1626603026899,
+    "stop" : 1626603326902,
+    "duration" : 300003
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "63b6d21f3b510c5c",
+  "name" : "Select mate horse",
+  "time" : {
+    "start" : 1626603974365,
+    "stop" : 1626604274375,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "aae8dad1d263761d",
+  "name" : "Verify that our order is performed",
+  "time" : {
+    "start" : 1626600038400,
+    "stop" : 1626600338403,
+    "duration" : 300003
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9d9da0b25c3dca0",
+  "name" : "Switch back to ZedRun page and verify login successful",
+  "time" : {
+    "start" : 1626613809135,
+    "stop" : 1626614109163,
+    "duration" : 300028
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "35ca770860cee6d2",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626602309393,
+    "stop" : 1626602317330,
+    "duration" : 7937
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78ca377e6fc293d2",
+  "name" : "Validate has a result on Result Page",
+  "time" : {
+    "start" : 1626602214950,
+    "stop" : 1626602215412,
+    "duration" : 462
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ade3ac28566a026",
+  "name" : "Check that we can not search this horse anymore",
+  "time" : {
+    "start" : 1626608577128,
+    "stop" : 1626608877137,
+    "duration" : 300009
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "170550eb26e91ac0",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626602174311,
+    "stop" : 1626602181475,
+    "duration" : 7164
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c231e7d9fb7d6084",
+  "name" : "Proceed breeding steps",
+  "time" : {
+    "start" : 1626601567161,
+    "stop" : 1626601867167,
+    "duration" : 300006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ef2a77564ca00ce",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626610620226,
+    "stop" : 1626610625652,
+    "duration" : 5426
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe939cade45ff132",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626607975320,
+    "stop" : 1626607976851,
+    "duration" : 1531
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f2b1ec0bf1d6fe99",
+  "name" : "Validate Marketplace Page has a racehorse",
+  "time" : {
+    "start" : 1626602193181,
+    "stop" : 1626602214038,
+    "duration" : 20857
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4354866b4876790e",
+  "name" : "Go to Activity page and check if we breed successfully",
+  "time" : {
+    "start" : 1626604874383,
+    "stop" : 1626605174385,
+    "duration" : 300002
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8d872eeb2dbd4fd",
+  "name" : "Validate has a racehorse existing on Stable Page",
+  "time" : {
+    "start" : 1626602216099,
+    "stop" : 1626602217065,
+    "duration" : 966
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ed1319d0284c11b",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626599430669,
+    "stop" : 1626599438376,
+    "duration" : 7707
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33fb61d5851db8e7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626602283110,
+    "stop" : 1626602291237,
+    "duration" : 8127
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "51b2fbbd67953fc4",
+  "name" : "Check that the ZED app is loading successfully",
+  "time" : {
+    "start" : 1626612861672,
+    "stop" : 1626613161698,
+    "duration" : 300026
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "eabc9b06032aea06",
+  "name" : "Click on Withdraw button and check if ZED balance is updated",
+  "time" : {
+    "start" : 1626606109381,
+    "stop" : 1626606409391,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ac94bb85605573b",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "time" : {
+    "start" : 1626603929313,
+    "stop" : 1626603974365,
+    "duration" : 45052
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b15199e9233a8697",
+  "name" : "Go to Activity page and check if we breed successfully",
+  "time" : {
+    "start" : 1626601867167,
+    "stop" : 1626602167173,
+    "duration" : 300006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7b82d4c36051489d",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626602621493,
+    "stop" : 1626602621666,
+    "duration" : 173
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1fa326b8109612c",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626613807203,
+    "stop" : 1626613808701,
+    "duration" : 1498
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "154b96c37d2ee322",
+  "name" : "Select a racehorses and add into the free racing",
+  "time" : {
+    "start" : 1626613161698,
+    "stop" : 1626613206789,
+    "duration" : 45091
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "bfdc39f49800a831",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626605476755,
+    "stop" : 1626605481018,
+    "duration" : 4263
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41db28aaefdf63d5",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626600659391,
+    "stop" : 1626600667118,
+    "duration" : 7727
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cae9b55810ad6279",
+  "name" : "Process the checkout with ETH",
+  "time" : {
+    "start" : 1626606757142,
+    "stop" : 1626607057147,
+    "duration" : 300005
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a29fdd9c4f038fe",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626603927538,
+    "stop" : 1626603929126,
+    "duration" : 1588
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "200edf2dccd8fcac",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626602225102,
+    "stop" : 1626602228446,
+    "duration" : 3344
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e72e4e75c7ae7ce",
+  "name" : "Check mail inbox to get magic link",
+  "time" : {
+    "start" : 1626609969768,
+    "stop" : 1626609971284,
+    "duration" : 1516
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6539c811a2cfa265",
+  "name" : "Click on Filter button in My Stable page",
+  "time" : {
+    "start" : 1626602317330,
+    "stop" : 1626602318057,
+    "duration" : 727
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "18a1d34f6fa8a167",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "time" : {
+    "start" : 1626602214038,
+    "stop" : 1626602214363,
+    "duration" : 325
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ecfb915a5b0eecfd",
+  "name" : "Check the detail payment",
+  "time" : {
+    "start" : 1626600338403,
+    "stop" : 1626600353448,
+    "duration" : 15045
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c25c29ab587270f2",
+  "name" : "Select horse then click on Transfer button",
+  "time" : {
+    "start" : 1626608277120,
+    "stop" : 1626608577128,
+    "duration" : 300008
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "888fac076d970239",
+  "name" : "Check the detail payment",
+  "time" : {
+    "start" : 1626607357150,
+    "stop" : 1626607357151,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "77657aa846b61d7e",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626608878230,
+    "stop" : 1626609178242,
+    "duration" : 300012
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "318174bebfcdbf9d",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "time" : {
+    "start" : 1626613507197,
+    "stop" : 1626613807203,
+    "duration" : 300006
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "62cdc71189fe1bb4",
+  "name" : "Click on Deposit button and check if ETH balance is updated",
+  "time" : {
+    "start" : 1626611220597,
+    "stop" : 1626611520607,
+    "duration" : 300010
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1a91a335bd72b1a",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626606711879,
+    "stop" : 1626606712118,
+    "duration" : 239
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "66833e99d8f9530b",
+  "name" : "Validate has a result on Result Page",
+  "time" : {
+    "start" : 1626602936860,
+    "stop" : 1626602981879,
+    "duration" : 45019
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1f583e621e97446",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "time" : {
+    "start" : 1626609622985,
+    "stop" : 1626609634999,
+    "duration" : 12014
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fecda9294decbe25",
+  "name" : "Validate has a Winning on Winning Page",
+  "time" : {
+    "start" : 1626602215412,
+    "stop" : 1626602216099,
+    "duration" : 687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9b230d370046899",
+  "name" : "Go back to user stable and check if horse is transferred",
+  "time" : {
+    "start" : 1626600353448,
+    "stop" : 1626600653451,
+    "duration" : 300003
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ef99a835a5d41a4",
+  "name" : "Update metamask info",
+  "time" : {
+    "start" : 1626599427302,
+    "stop" : 1626599430669,
+    "duration" : 3367
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78c83811c1342d22",
+  "name" : "Open ZedRun page and click Connect Metamask",
+  "time" : {
+    "start" : 1626602228446,
+    "stop" : 1626602236190,
+    "duration" : 7744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a8da5c2ca3ddf6b",
+  "name" : "Open new browser with magic link",
+  "time" : {
+    "start" : 1626612861255,
+    "stop" : 1626612861672,
+    "duration" : 417
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "68d12518edbf50db",
+  "name" : "Check that we can not search this horse anymore",
+  "time" : {
+    "start" : 1626602298828,
+    "stop" : 1626602304147,
+    "duration" : 5319
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f39d8df336c69729",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "time" : {
+    "start" : 1626600667118,
+    "stop" : 1626600967141,
+    "duration" : 300023
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "9579cc4011505666",
+  "name" : "Go to Marketplace and select first horse",
+  "time" : {
+    "start" : 1626599438376,
+    "stop" : 1626599738387,
+    "duration" : 300011
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

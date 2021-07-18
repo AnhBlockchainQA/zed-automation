@@ -1,0 +1,46 @@
+{
+  "uid" : "f1f583e621e97446",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Free racing when logged by Meta Mask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "df863a38f5c76710dbd59c981f84b6a8",
+  "time" : {
+    "start" : 1626609622985,
+    "stop" : 1626609634999,
+    "duration" : 12014
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f1f583e621e97446.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,52 @@
+{
+  "uid" : "154b96c37d2ee322",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Free racing with Magic Link.Select a racehorses and add into the free racing",
+  "historyId" : "c9a845c77bde5393aea911d39a9ce426",
+  "time" : {
+    "start" : 1626613161698,
+    "stop" : 1626613206789,
+    "duration" : 45091
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Racing link is not present or clickable",
+  "statusTrace" : "Error: Racing link is not present or clickable\n                    at HomePage.clickOnRacingLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:122:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "154b96c37d2ee322.json",
+  "parameterValues" : [ ]
+}

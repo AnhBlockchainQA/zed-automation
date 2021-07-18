@@ -1,0 +1,46 @@
+{
+  "uid" : "aaa30a84e627f219",
+  "name" : "Get token",
+  "fullName" : "Paid racing with fee racing when logged by Meta Mask.Get token",
+  "historyId" : "aa6da28b66bf35855286a3492f3f8e0b",
+  "time" : {
+    "start" : 1626602225099,
+    "stop" : 1626602225102,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Get token"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "aaa30a84e627f219.json",
+  "parameterValues" : [ ]
+}

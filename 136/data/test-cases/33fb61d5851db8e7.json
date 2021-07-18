@@ -1,0 +1,122 @@
+{
+  "uid" : "33fb61d5851db8e7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "6873ad6b0366804cde27a9106f9f0ff3",
+  "time" : {
+    "start" : 1626602283110,
+    "stop" : 1626602291237,
+    "duration" : 8127
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "9d9dd67ecffbdd0c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/9d9dd67ecffbdd0c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626601995485,
+          "stop" : 1626602003395,
+          "duration" : 7910
+        }
+      }, {
+        "uid" : "f2abc5ab0f25b267",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/f2abc5ab0f25b267",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626231811609,
+          "stop" : 1626231845570,
+          "duration" : 33961
+        }
+      }, {
+        "uid" : "dc9f9cc227c1aedc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/dc9f9cc227c1aedc",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626195108035,
+          "stop" : 1626195141780,
+          "duration" : 33745
+        }
+      }, {
+        "uid" : "f82dc0647e8f7e4f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/f82dc0647e8f7e4f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095471968,
+          "stop" : 1619095479727,
+          "duration" : 7759
+        }
+      }, {
+        "uid" : "583a449650e6caec",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/583a449650e6caec",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494605462,
+          "stop" : 1618494618046,
+          "duration" : 12584
+        }
+      }, {
+        "uid" : "97f3035c0c50db80",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/97f3035c0c50db80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247463865,
+          "stop" : 1616247478907,
+          "duration" : 15042
+        }
+      }, {
+        "uid" : "74e7180ba0f64c60",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/74e7180ba0f64c60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903152965,
+          "stop" : 1615903167849,
+          "duration" : 14884
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "33fb61d5851db8e7.json",
+  "parameterValues" : [ ]
+}

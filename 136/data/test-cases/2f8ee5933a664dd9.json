@@ -1,0 +1,138 @@
+{
+  "uid" : "2f8ee5933a664dd9",
+  "name" : "Validate Marketplace Page has a racehorse",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate Marketplace Page has a racehorse",
+  "historyId" : "fd55bb93613a98b7ed66a022939455ec",
+  "time" : {
+    "start" : 1626602801799,
+    "stop" : 1626602846818,
+    "duration" : 45019
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Marketplace link is not presnet or clickable",
+  "statusTrace" : "Error: Marketplace link is not presnet or clickable\n                    at HomePage.clickOnMarketplaceLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:74:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Marketplace Page has a racehorse"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "67e06524285ea387",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/67e06524285ea387",
+        "status" : "failed",
+        "statusDetails" : "Error: Marketplace link is not presnet or clickable",
+        "time" : {
+          "start" : 1626602517298,
+          "stop" : 1626602562355,
+          "duration" : 45057
+        }
+      }, {
+        "uid" : "8d6912cf34afe001",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/8d6912cf34afe001",
+        "status" : "failed",
+        "statusDetails" : "Error: Marketplace link is not presnet or clickable",
+        "time" : {
+          "start" : 1626233855116,
+          "stop" : 1626233900144,
+          "duration" : 45028
+        }
+      }, {
+        "uid" : "c6948b4c9fc9c341",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/c6948b4c9fc9c341",
+        "status" : "failed",
+        "statusDetails" : "Error: Marketplace link is not presnet or clickable",
+        "time" : {
+          "start" : 1626197151112,
+          "stop" : 1626197196138,
+          "duration" : 45026
+        }
+      }, {
+        "uid" : "4d5df91954e6bac3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/4d5df91954e6bac3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095800187,
+          "stop" : 1619095801313,
+          "duration" : 1126
+        }
+      }, {
+        "uid" : "d13f2f50100aef05",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/d13f2f50100aef05",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494979057,
+          "stop" : 1618494981659,
+          "duration" : 2602
+        }
+      }, {
+        "uid" : "9f2c588541f1674d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/9f2c588541f1674d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247903522,
+          "stop" : 1616247905523,
+          "duration" : 2001
+        }
+      }, {
+        "uid" : "1b21aa54005f3666",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/1b21aa54005f3666",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903580289,
+          "stop" : 1615903582891,
+          "duration" : 2602
+        }
+      }, {
+        "uid" : "6240cce8f1a7f8f1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/6240cce8f1a7f8f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783903876,
+          "stop" : 1615783906627,
+          "duration" : 2751
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2f8ee5933a664dd9.json",
+  "parameterValues" : [ ]
+}

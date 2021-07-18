@@ -1,0 +1,52 @@
+{
+  "uid" : "2ba0ec21e1b2aaa4",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Free racing when logged by Meta Mask.Select a racehorses and add into the free racing",
+  "historyId" : "d3599fc56e1fa087ca56cc158d671654",
+  "time" : {
+    "start" : 1626609636487,
+    "stop" : 1626609669034,
+    "duration" : 32547
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"text=\"Free Entry\"\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                Error: \n                    at Object.captureStackTrace (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/utils/stackTrace.js:48:19)\n                    at Connection.sendMessageToServer (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/connection.js:69:48)\n                    at Proxy.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:64:61)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:279:34\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:34)\n                    at Frame.click (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:278:21)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:447:60\n                    at Page._attributeToPage (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:231:20)\n                    at Page.click (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/page.js:447:21)\n                    at RacingPage.addRaceHorseIntoRace (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:123:29)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/Freegate-Metamask.test.js:88:23\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2ba0ec21e1b2aaa4.json",
+  "parameterValues" : [ ]
+}

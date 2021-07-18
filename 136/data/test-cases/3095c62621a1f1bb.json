@@ -1,0 +1,52 @@
+{
+  "uid" : "3095c62621a1f1bb",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Select a racehorses to add into the paid entry racing",
+  "historyId" : "dcc8d62613fa2447cc245fe0eba9350d",
+  "time" : {
+    "start" : 1626610271627,
+    "stop" : 1626610316687,
+    "duration" : 45060
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Racing link is not present or clickable",
+  "statusTrace" : "Error: Racing link is not present or clickable\n                    at HomePage.clickOnRacingLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:122:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses to add into the paid entry racing"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3095c62621a1f1bb.json",
+  "parameterValues" : [ ]
+}

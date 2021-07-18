@@ -1,0 +1,52 @@
+{
+  "uid" : "bb2bf824de35150f",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Open new browser with magic link",
+  "historyId" : "6b184cca5598481ba1afd9ac5b1c52bc",
+  "time" : {
+    "start" : 1626609971284,
+    "stop" : 1626609971617,
+    "duration" : 333
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Url is not valid or network timeout while loading ",
+  "statusTrace" : "Error: Url is not valid or network timeout while loading \n                    at MagicLinkPage.navigate (/home/runner/work/zed-automation/zed-automation/pages/MagicLinkPage.js:20:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "bb2bf824de35150f.json",
+  "parameterValues" : [ ]
+}

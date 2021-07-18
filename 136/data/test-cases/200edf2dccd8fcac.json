@@ -1,0 +1,46 @@
+{
+  "uid" : "200edf2dccd8fcac",
+  "name" : "Update metamask info",
+  "fullName" : "Paid racing with fee racing when logged by Meta Mask.Update metamask info",
+  "historyId" : "c4f82912ef007d31e7308194c0417393",
+  "time" : {
+    "start" : 1626602225102,
+    "stop" : 1626602228446,
+    "duration" : 3344
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "200edf2dccd8fcac.json",
+  "parameterValues" : [ ]
+}
