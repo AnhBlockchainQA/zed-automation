@@ -1,0 +1,46 @@
+{
+  "uid" : "ccf92b5e5a914c4c",
+  "name" : "Get token",
+  "fullName" : "Pick horses and add into the entry with fee racing when logged by Meta Mask.Get token",
+  "historyId" : "a52bd36e1c534623c54cff334868d1e6",
+  "time" : {
+    "start" : 1626601936159,
+    "stop" : 1626601936161,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Get token"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the entry with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ccf92b5e5a914c4c.json",
+  "parameterValues" : [ ]
+}

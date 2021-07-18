@@ -1,0 +1,119 @@
+{
+  "uid" : "14b1e177e45bf54c",
+  "name" : "Go to Marketplace and select first horse",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Go to Marketplace and select first horse",
+  "historyId" : "3feaa9a7313339f3599368f6a7647f4e",
+  "time" : {
+    "start" : 1626599147111,
+    "stop" : 1626599447131,
+    "duration" : 300020
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)\n                    at it (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at test (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:28:5)\n                    at Suite.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:97:3)\n                    at addSpecsToSuite (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:48:1)\n                    at Runtime._execModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:1299:24)\n                    at Runtime._loadModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:898:12)\n                    at Runtime.requireModule (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runtime/build/index.js:746:10)\n                    at jasmine2 (/home/runner/work/zed-automation/zed-automation/node_modules/jest-jasmine2/build/index.js:230:13)\n                    at runTestInternal (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:380:22)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-runner/build/runTest.js:472:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Marketplace and select first horse"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "65c4eb2b9c6335ef",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/65c4eb2b9c6335ef",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626228051556,
+          "stop" : 1626228096594,
+          "duration" : 45038
+        }
+      }, {
+        "uid" : "aabf7e61b112ab07",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/aabf7e61b112ab07",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626191642139,
+          "stop" : 1626191687178,
+          "duration" : 45039
+        }
+      }, {
+        "uid" : "a083f547ee64ca6f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/a083f547ee64ca6f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619093586870,
+          "stop" : 1619093592300,
+          "duration" : 5430
+        }
+      }, {
+        "uid" : "31f4321a0a3c728b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/31f4321a0a3c728b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618493565777,
+          "stop" : 1618493573028,
+          "duration" : 7251
+        }
+      }, {
+        "uid" : "ab3157631096d373",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/ab3157631096d373",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246366823,
+          "stop" : 1616246376430,
+          "duration" : 9607
+        }
+      }, {
+        "uid" : "d01900a548b8edf3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/d01900a548b8edf3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902355567,
+          "stop" : 1615902365245,
+          "duration" : 9678
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "14b1e177e45bf54c.json",
+  "parameterValues" : [ ]
+}

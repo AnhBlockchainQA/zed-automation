@@ -1,0 +1,116 @@
+{
+  "uid" : "2f22bfbf41f33fd0",
+  "name" : "Confirm the transfer",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Confirm the transfer",
+  "historyId" : "f82789c89a562a99e4dec04792dc28b",
+  "time" : {
+    "start" : 1626602010279,
+    "stop" : 1626602011225,
+    "duration" : 946
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Confirm the transfer"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 5,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "4162dbace7cfabc1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/4162dbace7cfabc1",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626232490608,
+          "stop" : 1626232520614,
+          "duration" : 30006
+        }
+      }, {
+        "uid" : "59a5bc33b1d17cc5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/59a5bc33b1d17cc5",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626195786818,
+          "stop" : 1626195816829,
+          "duration" : 30011
+        }
+      }, {
+        "uid" : "e813d146f32524e5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/e813d146f32524e5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095488916,
+          "stop" : 1619095489852,
+          "duration" : 936
+        }
+      }, {
+        "uid" : "f4e97454c92e7e7c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/f4e97454c92e7e7c",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1618494742975,
+          "stop" : 1618494772983,
+          "duration" : 30008
+        }
+      }, {
+        "uid" : "8a168a6ceb50a3b3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/8a168a6ceb50a3b3",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1616247605384,
+          "stop" : 1616247635389,
+          "duration" : 30005
+        }
+      }, {
+        "uid" : "d4bc7ac3b8211efd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/d4bc7ac3b8211efd",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615903294162,
+          "stop" : 1615903324165,
+          "duration" : 30003
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2f22bfbf41f33fd0.json",
+  "parameterValues" : [ ]
+}

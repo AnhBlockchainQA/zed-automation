@@ -1,0 +1,131 @@
+{
+  "uid" : "1f85dac2c7f435a",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "91a2a16407e041e3fbe43aee91ea85ac",
+  "time" : {
+    "start" : 1626601884219,
+    "stop" : 1626601891685,
+    "duration" : 7466
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "f9893e833c56ae88",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/f9893e833c56ae88",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626230900586,
+          "stop" : 1626230934458,
+          "duration" : 33872
+        }
+      }, {
+        "uid" : "60b5c7581744ff0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/60b5c7581744ff0",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626194196965,
+          "stop" : 1626194230765,
+          "duration" : 33800
+        }
+      }, {
+        "uid" : "4941a8ef4999505e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/4941a8ef4999505e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095449071,
+          "stop" : 1619095456935,
+          "duration" : 7864
+        }
+      }, {
+        "uid" : "74fc2d6af65a705c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/74fc2d6af65a705c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494572541,
+          "stop" : 1618494584844,
+          "duration" : 12303
+        }
+      }, {
+        "uid" : "57742e7ad87ded12",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/57742e7ad87ded12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247415370,
+          "stop" : 1616247430549,
+          "duration" : 15179
+        }
+      }, {
+        "uid" : "ecab3f112c4ce113",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/ecab3f112c4ce113",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903116055,
+          "stop" : 1615903130894,
+          "duration" : 14839
+        }
+      }, {
+        "uid" : "aa5374260fa3a7dd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/aa5374260fa3a7dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783613526,
+          "stop" : 1615783629475,
+          "duration" : 15949
+        }
+      }, {
+        "uid" : "5702af28489f79b5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/5702af28489f79b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612406939408,
+          "stop" : 1612406950426,
+          "duration" : 11018
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1f85dac2c7f435a.json",
+  "parameterValues" : [ ]
+}

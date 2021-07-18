@@ -1,0 +1,119 @@
+{
+  "uid" : "7375ec5d87de319e",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Check mail inbox to get magic link",
+  "historyId" : "bdccf39773556963041bff11e3411b5b",
+  "time" : {
+    "start" : 1626607093088,
+    "stop" : 1626607094622,
+    "duration" : 1534
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'id' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'id' of undefined\n                    at APIRequest.getZedRunMessageId (/home/runner/work/zed-automation/zed-automation/utils/api/api.js:43:52)\n                    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/transfer-horse/mail-transfer-horse.test.js:53:17\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "1213b0935577434b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/1213b0935577434b",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1626239712673,
+          "stop" : 1626239714558,
+          "duration" : 1885
+        }
+      }, {
+        "uid" : "eb57073e5ce211ca",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/eb57073e5ce211ca",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1626203016125,
+          "stop" : 1626203017985,
+          "duration" : 1860
+        }
+      }, {
+        "uid" : "ca117756e19f2c98",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/ca117756e19f2c98",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619098261679,
+          "stop" : 1619098262760,
+          "duration" : 1081
+        }
+      }, {
+        "uid" : "38815a09b05cf09d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/38815a09b05cf09d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496743973,
+          "stop" : 1618496745195,
+          "duration" : 1222
+        }
+      }, {
+        "uid" : "6521c5be49c623fd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/6521c5be49c623fd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249366695,
+          "stop" : 1616249367766,
+          "duration" : 1071
+        }
+      }, {
+        "uid" : "7ac087ef085bf9f4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/7ac087ef085bf9f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904912515,
+          "stop" : 1615904913638,
+          "duration" : 1123
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7375ec5d87de319e.json",
+  "parameterValues" : [ ]
+}

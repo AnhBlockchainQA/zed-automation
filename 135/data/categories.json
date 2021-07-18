@@ -1,0 +1,1113 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "14b1e177e45bf54c",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626599147111,
+          "stop" : 1626599447131,
+          "duration" : 300020
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with ETH",
+        "uid" : "aa50129be151b6ff",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626599447131,
+          "stop" : 1626599747147,
+          "duration" : 300016
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "1f6b541536215806",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626599747147,
+          "stop" : 1626600047151,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go back to user stable and check if horse is transferred",
+        "uid" : "2d6f2b121122f0ef",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626600062181,
+          "stop" : 1626600362184,
+          "duration" : 300003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that avatar is shown then click on Breeding link",
+        "uid" : "2d9cb5c7fa353d30",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626600376482,
+          "stop" : 1626600676501,
+          "duration" : 300019
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select mate horse",
+        "uid" : "7c9de0bc343e5b45",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626600676501,
+          "stop" : 1626600976520,
+          "duration" : 300019
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select female horse",
+        "uid" : "f5f480f31dd56b43",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626600976520,
+          "stop" : 1626601276524,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Proceed breeding steps",
+        "uid" : "32f24832e177c02f",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601276525,
+          "stop" : 1626601576531,
+          "duration" : 300006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Activity page and check if we breed successfully",
+        "uid" : "54ef55e332c8cd51",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601576531,
+          "stop" : 1626601876536,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "7af9d30c22b05920",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602035254,
+          "stop" : 1626602335260,
+          "duration" : 300006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a racehorse existing on Stable Page",
+        "uid" : "ee4cbd076b81cd50",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602742442,
+          "stop" : 1626603042444,
+          "duration" : 300002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "b549fb281ceb1ae7",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603043510,
+          "stop" : 1626603343519,
+          "duration" : 300009
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select mate horse",
+        "uid" : "989610d075ffee46",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603390465,
+          "stop" : 1626603690476,
+          "duration" : 300011
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select female horse",
+        "uid" : "5da752ac3634cf15",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603690477,
+          "stop" : 1626603990482,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Proceed breeding steps",
+        "uid" : "f789af504d1ad3cc",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603990482,
+          "stop" : 1626604290486,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Activity page and check if we breed successfully",
+        "uid" : "72147675e7d0e1df",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626604290486,
+          "stop" : 1626604590489,
+          "duration" : 300003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Stable page and verify there is a new horse",
+        "uid" : "d143d533f55f006b",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626604590489,
+          "stop" : 1626604890492,
+          "duration" : 300003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and type amount to deposit",
+        "uid" : "2fe1df539c965778",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626604908208,
+          "stop" : 1626605208231,
+          "duration" : 300023
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check if ETH balance is updated",
+        "uid" : "ac524707035f7cc3",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626605208232,
+          "stop" : 1626605508238,
+          "duration" : 300006
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "bcfaed1d8fb02714",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626605525972,
+          "stop" : 1626605825998,
+          "duration" : 300026
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "a472cf7ddf65b4fc",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626605826973,
+          "stop" : 1626606126994,
+          "duration" : 300021
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with ETH",
+        "uid" : "f05dac61d3b29b4e",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606173848,
+          "stop" : 1626606473854,
+          "duration" : 300006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "87a78e73170f02b",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606473854,
+          "stop" : 1626606773856,
+          "duration" : 300002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "c4690058fc8b746",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606793080,
+          "stop" : 1626607093087,
+          "duration" : 300007
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to My Settings page then click on Select Racehorse",
+        "uid" : "dd889a2189ec616",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607094859,
+          "stop" : 1626607394882,
+          "duration" : 300023
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select horse then click on Transfer button",
+        "uid" : "df83427957137d3a",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607394882,
+          "stop" : 1626607694892,
+          "duration" : 300010
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that we can not search this horse anymore",
+        "uid" : "ca4fe04f76fb97ac",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607694892,
+          "stop" : 1626607994896,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "71ce164d6ee747ce",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607996044,
+          "stop" : 1626608296054,
+          "duration" : 300010
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "63018d967d7efdde",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626608757565,
+          "stop" : 1626609057575,
+          "duration" : 300010
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "2662fb2e2bf5f5a7",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609059524,
+          "stop" : 1626609359545,
+          "duration" : 300021
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "7f4a6ccc78f589ac",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609871680,
+          "stop" : 1626610171692,
+          "duration" : 300012
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and check if ETH balance is updated",
+        "uid" : "77fff58045432837",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626610308609,
+          "stop" : 1626610608623,
+          "duration" : 300014
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "6296ae9e73073093",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626610909066,
+          "stop" : 1626611209084,
+          "duration" : 300018
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "611935bcca728e7",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626611346047,
+          "stop" : 1626611646064,
+          "duration" : 300017
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "cd0ad0775738f947",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626611947142,
+          "stop" : 1626612247153,
+          "duration" : 300011
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "dee3cc61dda1263f",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626612249126,
+          "stop" : 1626612549137,
+          "duration" : 300011
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "507ffe132d4f8545",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626612894547,
+          "stop" : 1626613194549,
+          "duration" : 300002
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Switch back to ZedRun page and verify login successful",
+        "uid" : "81e8c216a183eb68",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626613196497,
+          "stop" : 1626613496508,
+          "duration" : 300011
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f061b37a2a6ffb801a8fe904244be6d"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Check the detail payment",
+        "uid" : "b94ed7d1bca331a8",
+        "parentUid" : "d2fd7448186a1d7b3e211e71fe725bbb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626600047151,
+          "stop" : 1626600062181,
+          "duration" : 15030
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2fd7448186a1d7b3e211e71fe725bbb"
+    }, {
+      "name" : "Error: The new born horse did not display on Stable page",
+      "children" : [ {
+        "name" : "Go to Stable page and verify there is a new horse",
+        "uid" : "23d897beb0efa54f",
+        "parentUid" : "8d0fd448a07397359991b05caaf83e35",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601876536,
+          "stop" : 1626601877903,
+          "duration" : 1367
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8d0fd448a07397359991b05caaf83e35"
+    }, {
+      "name" : "Error: The Horse On Sale does not display as expected",
+      "children" : [ {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "337e722501a344dc",
+        "parentUid" : "6df15621c1065569fcaa0a9d481c7066",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601892463,
+          "stop" : 1626601903516,
+          "duration" : 11053
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6df15621c1065569fcaa0a9d481c7066"
+    }, {
+      "name" : "Error: There is no racehorse display on Marketplace Page",
+      "children" : [ {
+        "name" : "Validate Marketplace Page has a racehorse",
+        "uid" : "17ce077619335b9a",
+        "parentUid" : "b50d4abd2a3c4478d518ac5af4a9a6aa",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601903517,
+          "stop" : 1626601924456,
+          "duration" : 20939
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b50d4abd2a3c4478d518ac5af4a9a6aa"
+    }, {
+      "name" : "TimeoutError: page.click: Timeout 30000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \"//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='3']\"\n                  selector resolved to visible <div class=\"gate-btn\">…</div>\n                attempting click action\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,140.84)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #1\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #2\n                  waiting 20ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"loader-container \">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #3\n                  waiting 100ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #4\n                  waiting 100ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #5\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #6\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"loader-container \">…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #7\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #8\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #9\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #10\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #11\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #12\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #13\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #14\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #15\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #16\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #17\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #18\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #19\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #20\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #21\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #22\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #23\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #24\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #25\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #26\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #27\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #28\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #29\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #30\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #31\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #32\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #33\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #34\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #35\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #36\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #37\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #38\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #39\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #40\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #41\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #42\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #43\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #44\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #45\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #46\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #47\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #48\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #49\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #50\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #51\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #52\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #53\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #54\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #55\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #56\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #57\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,702.82)\n                  <div class=\"ReactModal__Overlay ReactModal__Overlay--…>…</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #58\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,360.84)\n                  <div class=\"primary-text bold mr-3\">Brown Sugar 1002</div> from <div class=\"ReactModalPortal\">…</div> subtree intercepts pointer events\n                retrying click action, attempt #59\n                  waiting 500ms\n                  waiting for element to be visible, enabled and stable\n                  element is visible, enabled and stable\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (492.59,17.84)\n                  <span class=\"announcekit-booster-bar-label\">Announcement</span> from <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> subtree intercepts pointer events\n                retrying click action, attempt #60\n                  waiting 500ms\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Assign horse to paid races",
+        "uid" : "aace3ed011a808af",
+        "parentUid" : "4e3c53ec834adae845db9bad21e9327e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626601949695,
+          "stop" : 1626601989617,
+          "duration" : 39922
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4e3c53ec834adae845db9bad21e9327e"
+    }, {
+      "name" : "TypeError: Cannot read property 'id' of undefined",
+      "children" : [ {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "56c6692666678493",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602335260,
+          "stop" : 1626602336923,
+          "duration" : 1663
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "57a543f804444eae",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603343519,
+          "stop" : 1626603345080,
+          "duration" : 1561
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "c3f66a0a51825a0f",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606126994,
+          "stop" : 1626606128594,
+          "duration" : 1600
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "7375ec5d87de319e",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607093088,
+          "stop" : 1626607094622,
+          "duration" : 1534
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "d7cfbcaae26e0ec1",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626608296054,
+          "stop" : 1626608297606,
+          "duration" : 1552
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "61a4d7aaea3d9eaf",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609057575,
+          "stop" : 1626609059183,
+          "duration" : 1608
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "60e7ff7808d791e6",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626610171693,
+          "stop" : 1626610173265,
+          "duration" : 1572
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "6264cce126397b47",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626611209084,
+          "stop" : 1626611210606,
+          "duration" : 1522
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "79835a86557dcdfc",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626612247154,
+          "stop" : 1626612248745,
+          "duration" : 1591
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check mail inbox to get magic link",
+        "uid" : "c09c5dfefd0b2733",
+        "parentUid" : "94c1cf348696e9c9a57e23231fb48630",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626613194549,
+          "stop" : 1626613196024,
+          "duration" : 1475
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "94c1cf348696e9c9a57e23231fb48630"
+    }, {
+      "name" : "Error: Url is not valid or network timeout while loading ",
+      "children" : [ {
+        "name" : "Open new browser with magic link",
+        "uid" : "ec29e3e5b02c4a77",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602336923,
+          "stop" : 1626602337145,
+          "duration" : 222
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "a0613a16757596e2",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603345081,
+          "stop" : 1626603345414,
+          "duration" : 333
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "8b1ed50cff648ee9",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606128594,
+          "stop" : 1626606128822,
+          "duration" : 228
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "643e31d252965eff",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626607094622,
+          "stop" : 1626607094859,
+          "duration" : 237
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "cbab756f450778ef",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626608297606,
+          "stop" : 1626608297857,
+          "duration" : 251
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "bf2f6995784b6911",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609059184,
+          "stop" : 1626609059524,
+          "duration" : 340
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "c99247e809b4b5e0",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626610173265,
+          "stop" : 1626610173552,
+          "duration" : 287
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "e57cc1086554c80a",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626611210606,
+          "stop" : 1626611210962,
+          "duration" : 356
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "f79c30dea11993f0",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626612248745,
+          "stop" : 1626612249126,
+          "duration" : 381
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "1c8b3a0cd285608d",
+        "parentUid" : "9025e8850353fcbde2da976cf76fc0c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626613196024,
+          "stop" : 1626613196497,
+          "duration" : 473
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "9025e8850353fcbde2da976cf76fc0c7"
+    }, {
+      "name" : "Error: Accept button is not present or not clickable",
+      "children" : [ {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "5806a67b01d3992a",
+        "parentUid" : "f23414951d658e6c0a8883a23222449e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602337145,
+          "stop" : 1626602472271,
+          "duration" : 135126
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f23414951d658e6c0a8883a23222449e"
+    }, {
+      "name" : "Error: Cannot navigate to Home Page",
+      "children" : [ {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "b522733a2d181da1",
+        "parentUid" : "de5277ae54ed80ca75eaad97ce8b6c5d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602472271,
+          "stop" : 1626602517298,
+          "duration" : 45027
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "de5277ae54ed80ca75eaad97ce8b6c5d"
+    }, {
+      "name" : "Error: Marketplace link is not presnet or clickable",
+      "children" : [ {
+        "name" : "Validate Marketplace Page has a racehorse",
+        "uid" : "67e06524285ea387",
+        "parentUid" : "5bd78979b8f8c90f23cd84af6b146124",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602517298,
+          "stop" : 1626602562355,
+          "duration" : 45057
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5bd78979b8f8c90f23cd84af6b146124"
+    }, {
+      "name" : "Error: Breeding link is not shown!",
+      "children" : [ {
+        "name" : "Validate Stud Service Page has a racehorse In Stud",
+        "uid" : "2a4e3e01e2483977",
+        "parentUid" : "f85e09b0aff41cc17c9f7c945f1bbd63",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602562355,
+          "stop" : 1626602607379,
+          "duration" : 45024
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f85e09b0aff41cc17c9f7c945f1bbd63"
+    }, {
+      "name" : "Error: Racing link is not present or clickable",
+      "children" : [ {
+        "name" : "Validate has a race open on Events page",
+        "uid" : "5eb90fd53a887714",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602607379,
+          "stop" : 1626602652401,
+          "duration" : 45022
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a result on Result Page",
+        "uid" : "f2f489d204c4140e",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602652401,
+          "stop" : 1626602697421,
+          "duration" : 45020
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a Winning on Winning Page",
+        "uid" : "b06411b811118da0",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626602697421,
+          "stop" : 1626602742442,
+          "duration" : 45021
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select a racehorses to add into the paid entry racing",
+        "uid" : "7629a8229353ae2b",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609359545,
+          "stop" : 1626609404582,
+          "duration" : 45037
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select a racehorses and add into the free racing",
+        "uid" : "576c96e6203c6a61",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626612549137,
+          "stop" : 1626612594182,
+          "duration" : 45045
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "44c9d4840d3f321187e4914d06473f78"
+    }, {
+      "name" : "Error: Element is not present yet!",
+      "children" : [ {
+        "name" : "Check that avatar is shown then click on Breeding link",
+        "uid" : "207cbb06c48aa8d9",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626603345414,
+          "stop" : 1626603390465,
+          "duration" : 45051
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "efd54fc292aa09fd",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606128822,
+          "stop" : 1626606173847,
+          "duration" : 45025
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown",
+        "uid" : "30d547c664d46d97",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626608297857,
+          "stop" : 1626608432921,
+          "duration" : 135064
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that avatar is shown",
+        "uid" : "101b8a4451d84719",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609735129,
+          "stop" : 1626609870204,
+          "duration" : 135075
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "2d61ee33c3d04479",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626610173552,
+          "stop" : 1626610308609,
+          "duration" : 135057
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "34c1f75e9e93f7bd",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626611210962,
+          "stop" : 1626611346047,
+          "duration" : 135085
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8df7d6eb6458aad2503382755cc6768f"
+    }, {
+      "name" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+      "children" : [ {
+        "name" : "Check the detail payment",
+        "uid" : "c7331db07c261459",
+        "parentUid" : "107b62ed9e29f2a9c15d99d4b2e092a1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626606773856,
+          "stop" : 1626606773858,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "107b62ed9e29f2a9c15d99d4b2e092a1"
+    }, {
+      "name" : "Error: page.click: selector: expected string, got undefined",
+      "children" : [ {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "fcf36f5d12f96916",
+        "parentUid" : "d3841be94ea467964195a5dda3972362",
+        "status" : "failed",
+        "time" : {
+          "start" : 1626609713567,
+          "stop" : 1626609735129,
+          "duration" : 21562
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d3841be94ea467964195a5dda3972362"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

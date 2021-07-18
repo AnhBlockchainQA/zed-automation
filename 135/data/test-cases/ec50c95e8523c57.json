@@ -1,0 +1,131 @@
+{
+  "uid" : "ec50c95e8523c57",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Pick horses and add into the free racing when logged by Meta Mask.Check that the ZED app is loading successfully",
+  "historyId" : "fe8c9671e2dfb92daac52f1f417f64db",
+  "time" : {
+    "start" : 1626608752817,
+    "stop" : 1626608753907,
+    "duration" : 1090
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Pick horses and add into the free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "21c0f013fd6fffe9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/21c0f013fd6fffe9",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626241096981,
+          "stop" : 1626241396986,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "12830523512bc3f3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/12830523512bc3f3",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626204402422,
+          "stop" : 1626204702430,
+          "duration" : 300008
+        }
+      }, {
+        "uid" : "38799358cd682eb2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/38799358cd682eb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619098880985,
+          "stop" : 1619098884799,
+          "duration" : 3814
+        }
+      }, {
+        "uid" : "9535836af0ec8117",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/9535836af0ec8117",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618497321345,
+          "stop" : 1618497327695,
+          "duration" : 6350
+        }
+      }, {
+        "uid" : "6c4a77749e9a1576",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/6c4a77749e9a1576",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249540754,
+          "stop" : 1616249552496,
+          "duration" : 11742
+        }
+      }, {
+        "uid" : "d9c6b2919506b758",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/d9c6b2919506b758",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905046961,
+          "stop" : 1615905055992,
+          "duration" : 9031
+        }
+      }, {
+        "uid" : "2b48bcb956cb9fd1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/2b48bcb956cb9fd1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615785447426,
+          "stop" : 1615785454205,
+          "duration" : 6779
+        }
+      }, {
+        "uid" : "b47e35567e881822",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/b47e35567e881822",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712231856,
+          "stop" : 1613712235599,
+          "duration" : 3743
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ec50c95e8523c57.json",
+  "parameterValues" : [ ]
+}

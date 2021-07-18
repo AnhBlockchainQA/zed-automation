@@ -1,0 +1,120 @@
+{
+  "uid" : "207cbb06c48aa8d9",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check that avatar is shown then click on Breeding link",
+  "historyId" : "c47c7e071ce634abe00ba264146490b5",
+  "time" : {
+    "start" : 1626603345414,
+    "stop" : 1626603390465,
+    "duration" : 45051
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "7483778761007f1e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/7483778761007f1e",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626234983176,
+          "stop" : 1626235028205,
+          "duration" : 45029
+        }
+      }, {
+        "uid" : "684ad64061267391",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/684ad64061267391",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626198279391,
+          "stop" : 1626198324469,
+          "duration" : 45078
+        }
+      }, {
+        "uid" : "214300819e7439ca",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/214300819e7439ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619096091086,
+          "stop" : 1619096091553,
+          "duration" : 467
+        }
+      }, {
+        "uid" : "e7a50c487d062c94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/e7a50c487d062c94",
+        "status" : "failed",
+        "statusDetails" : "Error: Accept button is not present or not clickable",
+        "time" : {
+          "start" : 1618495245275,
+          "stop" : 1618495290422,
+          "duration" : 45147
+        }
+      }, {
+        "uid" : "99c15308382b60e4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/99c15308382b60e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616248246611,
+          "stop" : 1616248275990,
+          "duration" : 29379
+        }
+      }, {
+        "uid" : "8088461ac8eba37e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8088461ac8eba37e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903864884,
+          "stop" : 1615903901072,
+          "duration" : 36188
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "207cbb06c48aa8d9.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,114 @@
+{
+  "uid" : "872c2e99df7e4a9",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Generate stud horse when logging in Metamask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "5d1602fb03225deedc68d248cc4c37e1",
+  "time" : {
+    "start" : 1626600368705,
+    "stop" : 1626600376482,
+    "duration" : 7777
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 7
+      },
+      "items" : [ {
+        "uid" : "27fc5e19f0701600",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/27fc5e19f0701600",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626229018543,
+          "stop" : 1626229052613,
+          "duration" : 34070
+        }
+      }, {
+        "uid" : "1e2872fd9849257a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/1e2872fd9849257a",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626192610083,
+          "stop" : 1626192644778,
+          "duration" : 34695
+        }
+      }, {
+        "uid" : "49bc3d03d5d6ae83",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/49bc3d03d5d6ae83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619094229789,
+          "stop" : 1619094237933,
+          "duration" : 8144
+        }
+      }, {
+        "uid" : "488a5aef3e011436",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/488a5aef3e011436",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618493724138,
+          "stop" : 1618493844141,
+          "duration" : 120003
+        }
+      }, {
+        "uid" : "6adb981b86b8f6a5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/6adb981b86b8f6a5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616246527467,
+          "stop" : 1616246542712,
+          "duration" : 15245
+        }
+      }, {
+        "uid" : "799599fbe1bed6bc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/799599fbe1bed6bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615902418072,
+          "stop" : 1615902432157,
+          "duration" : 14085
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "872c2e99df7e4a9.json",
+  "parameterValues" : [ ]
+}

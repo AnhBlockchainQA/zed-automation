@@ -1,0 +1,188 @@
+{
+  "uid" : "34c1f75e9e93f7bd",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "f2c78ff6a4942579043a2ac4051aa3d4",
+  "time" : {
+    "start" : 1626611210962,
+    "stop" : 1626611346047,
+    "duration" : 135085
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 9,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "69ec12dae8e557d1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/69ec12dae8e557d1",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626243753445,
+          "stop" : 1626243888529,
+          "duration" : 135084
+        }
+      }, {
+        "uid" : "810d29c3e5c4d346",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/810d29c3e5c4d346",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626207058452,
+          "stop" : 1626207193569,
+          "duration" : 135117
+        }
+      }, {
+        "uid" : "f104fe20a873143c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/f104fe20a873143c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619099710665,
+          "stop" : 1619099758642,
+          "duration" : 47977
+        }
+      }, {
+        "uid" : "84c0cd394b81fff0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/84c0cd394b81fff0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618497702149,
+          "stop" : 1618497746545,
+          "duration" : 44396
+        }
+      }, {
+        "uid" : "c8ffbc3cde98e284",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/c8ffbc3cde98e284",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249890873,
+          "stop" : 1616249910144,
+          "duration" : 19271
+        }
+      }, {
+        "uid" : "fa06c0d0d1255cc3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/fa06c0d0d1255cc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905350631,
+          "stop" : 1615905383175,
+          "duration" : 32544
+        }
+      }, {
+        "uid" : "b7f8d5592ee08f2e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/b7f8d5592ee08f2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786402545,
+          "stop" : 1615786437524,
+          "duration" : 34979
+        }
+      }, {
+        "uid" : "884b28290df45744",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/884b28290df45744",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613714137650,
+          "stop" : 1613714257661,
+          "duration" : 120011
+        }
+      }, {
+        "uid" : "c58b76764008b00b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/c58b76764008b00b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613031299610,
+          "stop" : 1613031419658,
+          "duration" : 120048
+        }
+      }, {
+        "uid" : "3e26d6fa80a85dd4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/3e26d6fa80a85dd4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612408304414,
+          "stop" : 1612408424443,
+          "duration" : 120029
+        }
+      }, {
+        "uid" : "9309f918c5e7b6bf",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/9309f918c5e7b6bf",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1612275914048,
+          "stop" : 1612276049079,
+          "duration" : 135031
+        }
+      }, {
+        "uid" : "a2627e79bb97bbb5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/a2627e79bb97bbb5",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1612275856430,
+          "stop" : 1612275991467,
+          "duration" : 135037
+        }
+      }, {
+        "uid" : "154bc20a5bb0739b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/154bc20a5bb0739b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172441752,
+          "stop" : 1612172451757,
+          "duration" : 10005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "34c1f75e9e93f7bd.json",
+  "parameterValues" : [ ]
+}
