@@ -1,5 +1,5 @@
-const { ZEDRUN_URL } = require("../data/env");
-const { WAIT_TIME } = require("../data/api"); 
+const { ZEDRUN_URL, TEMP_ZEDRUN_URL } = require("../data/env");
+const { WAIT_TIME } = require("../data/api");
 const {
   LOGIN_START_BUTTON,
   EMAIL_INPUT,
@@ -7,8 +7,10 @@ const {
   WELCOME_LABEL,
   CONNECT_METAMASK,
   AUTHENTICATE_BUTTON,
-    EMAIL_LOGGIN_OPTION,
-    METAMASK_LOGGIN_OPTION
+  TEMP_CONNECT_METAMASK,
+  TEMP_LOGIN_START_BUTTON,
+  EMAIL_LOGGIN_OPTION,
+  METAMASK_LOGGIN_OPTION,
 } = require("../locators/ZedRun");
 
 class LoginPage {
@@ -25,6 +27,7 @@ class LoginPage {
     console.log("--- Zed Run Automation Framework: Navigate to the url ---");
     try {
       await this.page.goto(ZEDRUN_URL, { timeout: 0 });
+      // await this.page.goto(TEMP_ZEDRUN_URL, {timeout: 0});
       await this.page.waitForLoadState();
     } catch {
       throw new Error("Unable to launch the url ", ZEDRUN_URL);
@@ -36,7 +39,7 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Start Button ---"
       );
-      await expect(this.page).toHaveSelector(LOGIN_START_BUTTON, {
+      await this.page.waitForSelector(LOGIN_START_BUTTON, {
         visible: true,
         timeout: 0,
       });
@@ -46,20 +49,20 @@ class LoginPage {
     }
   }
 
-    async clickOnEmailOption() {
-        try {
-            console.log(
-                "--- Zed Run Automation Framework: Select Email Option to log in ---"
-            );
-            await expect(this.page).toHaveSelector(EMAIL_LOGGIN_OPTION, {
-                visible: true,
-                timeout: 0,
-            });
-            await this.page.click(EMAIL_LOGGIN_OPTION);
-        } catch {
-            throw new Error("Email Option is not present yet!");
-        }
+  async clickOnEmailOption() {
+    try {
+      console.log(
+        "--- Zed Run Automation Framework: Select Email Option to log in ---"
+      );
+      await expect(this.page).toHaveSelector(EMAIL_LOGGIN_OPTION, {
+        visible: true,
+        timeout: 0,
+      });
+      await this.page.click(EMAIL_LOGGIN_OPTION);
+    } catch {
+      throw new Error("Email Option is not present yet!");
     }
+  }
 
   async typeEmail(email) {
     try {
@@ -124,8 +127,10 @@ class LoginPage {
       console.log(
         "--- Zed Run Automation Framework: Click on Connect Metamask button ---"
       );
-      await expect(this.page).toHaveSelector(CONNECT_METAMASK, { timeout: 0 });
+      await this.page.waitForSelector(CONNECT_METAMASK, { timeout: 0 });
       await this.page.click(CONNECT_METAMASK);
+      // await this.page.waitForSelector(TEMP_CONNECT_METAMASK, { timeout: 0 });
+      // await this.page.click(TEMP_CONNECT_METAMASK);
     } catch {
       throw new Error(
         "Connect Metamask button is not present or not clickable"

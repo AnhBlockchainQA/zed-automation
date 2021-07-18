@@ -21,6 +21,14 @@ class StringUtils {
         throw new Error("Index value is bigger than the size of matched string");
       }else return matchedStringArrays[index];
     }
+
+    async transformArrayToStringArray(array, callback){
+      return array.map(callback);
+    }
+
+    async pickRandomValueFromStringArray(array){
+      return array[Math.floor(Math.random() * array.length)];
+    }
   }
   
   module.exports = new StringUtils();

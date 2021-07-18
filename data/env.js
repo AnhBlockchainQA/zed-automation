@@ -1,5 +1,6 @@
 module.exports = {
     ZEDRUN_URL: "https://goerli-test.zed.run/",
+    TEMP_ZEDRUN_URL: "https://zed-pr--pr825-feature-login-flow-dh9pz5v4.web.app/",
     SEED_PHRASE:
         "promote involve unaware today camera major net tail area rule manual humor",
     PASSWORD: "nidalee1",
@@ -67,4 +68,12 @@ module.exports = {
     },
     FIRST_WALLET_ADDRESS: "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
     SECOND_WALLET_ADDRESS: "0x48205801D243fd53cfB10c4edb441C5d2f6EA7e1",
+    METAMASK_LOGIN: {
+        PUBLIC_ADDRESS: "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
+        SIGNED_MESSAGE: "0x84ac739515f569cb0cc85924ee219ba6cf040d550bd6c0db36d3938ea69bb1da41eb8677b503494f9285eccb004637cb8406964fac330b22685af06aae1bc8f91c"
+    },
+    MAIL_LOGIN: {
+       PUBLIC_ADDRESS: "0x70b3BA01a7DF6999e12BF880D52FB73C62Fd4f2c",
+       SIGNED_MESSAGE :"0x2893c60b14aa1b3c9e089b3202e4f52f9def1481b6b6e1fc335a8cff16f24c7b36e4be03bbe1769dc60309125fce40f1b6d4aacedd6e4164138f7a2f591038051b"
+    }
 };
