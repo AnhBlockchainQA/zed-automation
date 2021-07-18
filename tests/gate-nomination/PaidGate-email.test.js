@@ -25,7 +25,7 @@ beforeAll(async () => {
     pageFactory.removeCache();
 });
 
-describe("Pick horses and add into the entry with fee racing when logged by Magic Link", () => {
+describe("Paid racing with fee racing when logged by Magic Link", () => {
     test(
         "Open ZedRun page and input valid email to generate magic link",
         3,
@@ -34,6 +34,7 @@ describe("Pick horses and add into the entry with fee racing when logged by Magi
             loginPage = new LoginPage(pageInstance);
             await loginPage.navigate();
             await loginPage.clickOnStartButton();
+            await loginPage.clickOnEmailOption();
             await loginPage.typeEmail(EMAIL);
             await loginPage.clickOnContinueButton();
             await loginPage.waitForTimeout();

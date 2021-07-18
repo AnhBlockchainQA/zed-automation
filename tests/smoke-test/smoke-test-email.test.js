@@ -39,6 +39,7 @@ describe("Do the smoke test to validate the Zed Run works well when logged by Em
             loginPage = new LoginPage(pageInstance);
             await loginPage.navigate();
             await loginPage.clickOnStartButton();
+            await loginPage.clickOnEmailOption();
             await loginPage.typeEmail(EMAIL);
             await loginPage.clickOnContinueButton();
             await loginPage.waitForTimeout();
@@ -59,8 +60,9 @@ describe("Do the smoke test to validate the Zed Run works well when logged by Em
         magicLinkPage = new MagicLinkPage(newPageInstance);
         await magicLinkPage.bringToFront();
         await magicLinkPage.navigate(magicLink);
-        await magicLinkPage.waitForNavigation();
-        await magicLinkPage.waitForLoadState();
+       /* await magicLinkPage.waitForNavigation();
+        await magicLinkPage.waitForLoadState();*/
+        await magicLinkPage.waitForTimeout();
     });
 
     test(
@@ -69,8 +71,8 @@ describe("Do the smoke test to validate the Zed Run works well when logged by Em
         async () => {
             homePage = new HomePage(pageInstance);
             await homePage.bringToFront();
-            await homePage.waitUntilBalanceShown();
-            await homePage.waitForLoadState();
+            /*await homePage.waitUntilBalanceShown();
+            await homePage.waitForLoadState();*/
             await homePage.clickOnAcceptButton();
         }
     );
