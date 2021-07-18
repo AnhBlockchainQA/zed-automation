@@ -1,12 +1,11 @@
-const {PageFactory} = require("../../utils/browser/pageFactory");
-const {LoginPage} = require("../../pages/LoginPage");
-const {MagicLinkPage} = require("../../pages/MagicLinkPage");
-const {HomePage} = require("../../pages/HomePage");
-const {RacingPage} = require("../../pages/RacingPage");
+const { PageFactory } = require("../../utils/browser/pageFactory");
+const { LoginPage } = require("../../pages/LoginPage");
+const { MagicLinkPage } = require("../../pages/MagicLinkPage");
+const { HomePage } = require("../../pages/HomePage");
+const { RacingPage } = require("../../pages/RacingPage");
 const apiRequest = require("../../utils/api/api");
-const {ACCOUNT_LIST } = require("../../data/env");
+const { ACCOUNT_LIST } = require("../../data/env");
 const test = require("jest-retries");
-
 
 var pageFactory = new PageFactory();
 var messageId;
@@ -17,15 +16,15 @@ var racingPage;
 var pageInstance;
 var newPageInstance;
 var homePage;
-const EMAIL = ACCOUNT_LIST.FIRST_ACCOUNT.EMAIL;
-const LOGIN = ACCOUNT_LIST.FIRST_ACCOUNT.LOGIN;
-const DOMAIN = ACCOUNT_LIST.FIRST_ACCOUNT.DOMAIN;
+const EMAIL = ACCOUNT_LIST.SEVENTH_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.SEVENTH_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.SEVENTH_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
     pageFactory.removeCache();
 });
 
-describe("Pick horses and add into the entry with fee racing when logged by Magic Link", () => {
+describe("Free racing with Magic Link", () => {
     test(
         "Open ZedRun page and input valid email to generate magic link",
         3,
@@ -71,26 +70,14 @@ describe("Pick horses and add into the entry with fee racing when logged by Magi
         }
     );
 
-    test("Select a racehorses to add into the paid entry racing", async () => {
-        await homePage.clickOnRacingLink();
-        await homePage.selectEventsTab();
-        racingPage = new RacingPage(pageInstance);
-        await racingPage.selectFirstEntryHasFeeEvent();
-        const numberGateOpening = await racingPage.getGateOpening();
-        const getEventName = await racingPage.returnEventName();
-        console.log('List of Gates are opening ', numberGateOpening);
-        const totalGate = numberGateOpening.length;
-        console.log('The number of gate ', totalGate);
-        for (let i = 0; i < numberGateOpening.length; i++) {
-            await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
-            await racingPage.waitForLoadState();
-            await racingPage.clickConfirmButton();
-            await racingPage.waitForLoadState();
-        }
-
-        await racingPage.waitForLoadState();
-        await racingPage.validateRacingEventAfterInNextToRun(getEventName);
-    });
+    test("Select a racehorses and add into the free racing", async () => {
+    await homePage.clickOnRacingLink();
+    await homePage.selectEventsTab();
+    racingPage = new RacingPage(pageInstance);
+    await racingPage.selectEntryFreeEvent();
+    const eventName = await racingPage.addRaceHorseIntoRace();
+    await racingPage.validateRacingEventAfterInNextToRun(eventName);
+  });
 });
 
 afterAll(async (done) => {
@@ -104,4 +91,3 @@ afterAll(async (done) => {
         done();
     }
 });
-
