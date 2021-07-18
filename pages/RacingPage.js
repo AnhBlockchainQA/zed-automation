@@ -3,6 +3,10 @@ const {EVENT_LIST_SIZE} = require("../data/env");
 const stringUtils = require("../utils/api/stringUtils");
 const {REGEX} = require("../data/env");
 const {ADD_RACE_CONFIRM_BUTTON} = require("../locators/Payment");
+const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON} = require("../locators/Racing");
+const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
+var confirmMetamaskNotificationInstance;
+var metamaskFactory = new MetamaskFactory();
 
 class RacingPage {
     constructor(page) {
@@ -93,8 +97,9 @@ class RacingPage {
         console.log(
             `--- Zed Run Automation Framework: Select the open gate ${index} and add the racehorse ---`
         );
+
         await this.page.click(
-            `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()=${index}]`
+            `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='${index}']`
         );
         await this.page.waitForLoadState();
         await this.page.hover(`.horse-infos`);
@@ -344,6 +349,32 @@ class RacingPage {
                 expectedValue +
                 "]"
             );
+        }
+    }
+
+    async clickOnRacingClass(clazzName){
+        console.log(
+            "--- Zed Run Automation Framework: Click on the racing class with name ---", clazzName
+        );
+        let locator = await stringUtils.replaceTemplateString(
+            REGEX.TEXT,
+            CUSTOM_CLASS_BUTTON,
+            clazzName
+          );
+        try{
+            console.log(" >>>> Locator : ", locator);
+            await this.page.waitForSelector(locator, {timeout: 0});
+            await this.page.evaluate((selector) => {
+                return document.evaluate(
+                    selector,
+                    document,
+                    null,
+                    XPathResult.FIRST_ORDERED_NODE_TYPE,
+                    null
+                ).singleNodeValue.click();
+            }, locator);
+        }catch{
+            throw new Error("Selector not found or dettached! Please update your selector");
         }
     }
 }

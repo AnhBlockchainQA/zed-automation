@@ -1,6 +1,5 @@
 module.exports = {
-    LOGIN_START_BUTTON: "div.start-part",
-    TEMP_LOGIN_START_BUTTON: "#app .app-content .header-desktop .start-part button",
+    LOGIN_START_BUTTON: "#app .app-content .header-desktop .start-part button",
     EMAIL_INPUT: "div.m-input-content > input[placeholder='Email']",
     CONTINUE_BUTTON: "button[type='Submit']",
     AUTHENTICATE_BUTTON: "//button[text()='authenticate']",
@@ -8,7 +7,7 @@ module.exports = {
     TRUST_ME_BUTTON: "//div[contains(@class,'auth-anomaly-detected__actionRack')]/span[@role='button' and descendant::text()='Yes, this is me']",
     LOGIN_SUCESSFUL_MESSAGE: "//h1/p[contains(text(),'logged into ZED Run!')]",
     CONNECT_METAMASK: "//div[text()='Connect Metamask']",
-    TEMP_CONNECT_METAMASK: "#login-modal .login-options .metamask-login",
+    // TEMP_CONNECT_METAMASK: "#login-modal .login-options .metamask-login",
     ACCEPT_BUTTON: "text='Accept'",
     MARKETPLACE_LINK: "//div[@class='header-desktop']//div[@class='header-content']//div[text()='Marketplace']",
     LOGIN_POPUP: "#login-modal #login-steps .start-modal-content",
