@@ -3,7 +3,7 @@ const {EVENT_LIST_SIZE} = require("../data/env");
 const stringUtils = require("../utils/api/stringUtils");
 const {REGEX} = require("../data/env");
 const {ADD_RACE_CONFIRM_BUTTON} = require("../locators/Payment");
-const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON} = require("../locators/Racing");
+const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON, OPEN_GATE_LIST} = require("../locators/Racing");
 const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
 var confirmMetamaskNotificationInstance;
 var metamaskFactory = new MetamaskFactory();
@@ -66,8 +66,7 @@ class RacingPage {
         console.log(
             "--- Zed Run Automation Framework: Wait until the open gates display---"
         );
-        const listGateElement = ".buy-in-content .pick-gate .gate-group .gate-btn";
-        await this.page.waitForSelector(listGateElement, {timeout: 20000});
+        await this.page.waitForSelector(OPEN_GATE_LIST, {timeout: 0});
         let listOfGate = [];
 
         const size = await this.page.evaluate((locator) => {
@@ -364,15 +363,7 @@ class RacingPage {
         try{
             console.log(" >>>> Locator : ", locator);
             await this.page.waitForSelector(locator, {timeout: 0});
-            await this.page.evaluate((selector) => {
-                return document.evaluate(
-                    selector,
-                    document,
-                    null,
-                    XPathResult.FIRST_ORDERED_NODE_TYPE,
-                    null
-                ).singleNodeValue.click();
-            }, locator);
+            await this.page.click(locator);
         }catch{
             throw new Error("Selector not found or dettached! Please update your selector");
         }
