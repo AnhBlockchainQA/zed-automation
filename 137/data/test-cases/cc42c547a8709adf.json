@@ -1,0 +1,129 @@
+{
+  "uid" : "cc42c547a8709adf",
+  "name" : "Update metamask info",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Update metamask info",
+  "historyId" : "57d175a1774a6c0fb30fe771aa0fbef3",
+  "time" : {
+    "start" : 1627579418679,
+    "stop" : 1627579422347,
+    "duration" : 3668
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "9c9e2c9e47e67d84",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/9c9e2c9e47e67d84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626602279830,
+          "stop" : 1626602283110,
+          "duration" : 3280
+        }
+      }, {
+        "uid" : "88306853156ffc79",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/88306853156ffc79",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626601991849,
+          "stop" : 1626601995485,
+          "duration" : 3636
+        }
+      }, {
+        "uid" : "f77f463e2fcc9f46",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/f77f463e2fcc9f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626231807538,
+          "stop" : 1626231811609,
+          "duration" : 4071
+        }
+      }, {
+        "uid" : "b437dd33db38e85a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/b437dd33db38e85a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626195103995,
+          "stop" : 1626195108035,
+          "duration" : 4040
+        }
+      }, {
+        "uid" : "9d3582ffdd63e15",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/9d3582ffdd63e15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095468635,
+          "stop" : 1619095471968,
+          "duration" : 3333
+        }
+      }, {
+        "uid" : "d41d21864f210449",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/d41d21864f210449",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494601124,
+          "stop" : 1618494605462,
+          "duration" : 4338
+        }
+      }, {
+        "uid" : "52934e4490c815dc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/52934e4490c815dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247458790,
+          "stop" : 1616247463865,
+          "duration" : 5075
+        }
+      }, {
+        "uid" : "26c553cab49aaf63",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/26c553cab49aaf63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903148234,
+          "stop" : 1615903152965,
+          "duration" : 4731
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "cc42c547a8709adf.json",
+  "parameterValues" : [ ]
+}

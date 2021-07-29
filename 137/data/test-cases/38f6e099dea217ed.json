@@ -1,0 +1,67 @@
+{
+  "uid" : "38f6e099dea217ed",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Free racing with Magic Link.Check that the ZED app is loading successfully",
+  "historyId" : "87c88a65491452201befe6cad0285bd",
+  "time" : {
+    "start" : 1627586902069,
+    "stop" : 1627586902358,
+    "duration" : 289
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "51b2fbbd67953fc4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/51b2fbbd67953fc4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626612861672,
+          "stop" : 1626613161698,
+          "duration" : 300026
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "38f6e099dea217ed.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,72 @@
+{
+  "uid" : "702258da87b3ade7",
+  "name" : "Open ZedRun page and click Connnect Metamask",
+  "fullName" : "Free racing when logged by Meta Mask.Open ZedRun page and click Connnect Metamask",
+  "historyId" : "df863a38f5c76710dbd59c981f84b6a8",
+  "time" : {
+    "start" : 1627585106957,
+    "stop" : 1627585142946,
+    "duration" : 35989
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at ChromiumBrowserContext.waitForEvent (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/browserContext.js:214:24)\n                    at async Promise.all (index 0)\n                    at MetamaskFactory.clickNewPage (/home/runner/work/zed-automation/zed-automation/utils/browser/metamaskFactory.js:61:23)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/Freegate-Metamask.test.js:52:36\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and click Connnect Metamask"
+  }, {
+    "name" : "package",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f1f583e621e97446",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/f1f583e621e97446",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626609622985,
+          "stop" : 1626609634999,
+          "duration" : 12014
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "702258da87b3ade7.json",
+  "parameterValues" : [ ]
+}

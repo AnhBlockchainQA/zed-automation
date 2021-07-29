@@ -1,0 +1,1043 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "TimeoutError: Timeout while waiting for event \"page\"\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "28bf51c50f1865c8",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627575464509,
+          "stop" : 1627575566180,
+          "duration" : 101671
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "2a17257ff467efd2",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576533718,
+          "stop" : 1627576567848,
+          "duration" : 34130
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "1ed6897768210634",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578120015,
+          "stop" : 1627578153924,
+          "duration" : 33909
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connect Metamask",
+        "uid" : "9b7d103277eb1030",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579036975,
+          "stop" : 1627579070788,
+          "duration" : 33813
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "1bfe5a312d1d099a",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579422347,
+          "stop" : 1627579456273,
+          "duration" : 33926
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Confirm the transfer",
+        "uid" : "7f6d71981c72d94c",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580101304,
+          "stop" : 1627580131311,
+          "duration" : 30007
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "1aef1e8d6d38e51a",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580438284,
+          "stop" : 1627580472224,
+          "duration" : 33940
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "f752458fd2908fb2",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627582137706,
+          "stop" : 1627582243431,
+          "duration" : 105725
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "f1d824f06bc155c6",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627582987849,
+          "stop" : 1627583093923,
+          "duration" : 106074
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "d5a1dda44f2ae25f",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584455829,
+          "stop" : 1627584560792,
+          "duration" : 104963
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "702258da87b3ade7",
+        "parentUid" : "71de5fe87161c3bf9a25228471f26775",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585106957,
+          "stop" : 1627585142946,
+          "duration" : 35989
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "71de5fe87161c3bf9a25228471f26775"
+    }, {
+      "name" : "Error: Element is not present yet!",
+      "children" : [ {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "a25b289afddf8e46",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627575566180,
+          "stop" : 1627575611219,
+          "duration" : 45039
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that avatar is shown then click on Breeding link",
+        "uid" : "87048a42a44ecbff",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576567848,
+          "stop" : 1627576612864,
+          "duration" : 45016
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until homepage is loading",
+        "uid" : "8853de780ff4eaa0",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579456273,
+          "stop" : 1627579501289,
+          "duration" : 45016
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Filter button in My Stable page",
+        "uid" : "676a5fb483ebc9f6",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580472225,
+          "stop" : 1627580517241,
+          "duration" : 45016
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "6bd8f111ef762007",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627582243431,
+          "stop" : 1627582378487,
+          "duration" : 135056
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown then click on Wallet icon",
+        "uid" : "ebef8ba98a30c917",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627583093923,
+          "stop" : 1627583228983,
+          "duration" : 135060
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Accept button to close the cookie popup",
+        "uid" : "15098722485dd80e",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584560792,
+          "stop" : 1627584605812,
+          "duration" : 45020
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait until wallet icon is shown",
+        "uid" : "475b554542203d2a",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584962118,
+          "stop" : 1627585097193,
+          "duration" : 135075
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that avatar is shown",
+        "uid" : "126d7dbcdbefbe72",
+        "parentUid" : "8df7d6eb6458aad2503382755cc6768f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585835602,
+          "stop" : 1627585970668,
+          "duration" : 135066
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8df7d6eb6458aad2503382755cc6768f"
+    }, {
+      "name" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+      "children" : [ {
+        "name" : "Process the checkout with ETH",
+        "uid" : "4ac5ccbc0c827821",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627575611220,
+          "stop" : 1627575911239,
+          "duration" : 300019
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "2373fd2604635c96",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627575911239,
+          "stop" : 1627576211243,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go back to user stable and check if horse is transferred",
+        "uid" : "5d25e81d1af5cfa3",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576226270,
+          "stop" : 1627576526276,
+          "duration" : 300006
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select mate horse",
+        "uid" : "9197abf9c7de7954",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576612864,
+          "stop" : 1627576912884,
+          "duration" : 300020
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select female horse",
+        "uid" : "2d063cc442d558a9",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576912884,
+          "stop" : 1627577212889,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Proceed breeding steps",
+        "uid" : "419e194a4e814587",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627577212889,
+          "stop" : 1627577512894,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Activity page and check if we breed successfully",
+        "uid" : "fe6e2c9c69f41d81",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627577512894,
+          "stop" : 1627577812899,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Stable page and verify there is a new horse",
+        "uid" : "9b612249e90f7660",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627577812899,
+          "stop" : 1627578112903,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Wait for the web is loading successfully",
+        "uid" : "aa1698f2747dad8b",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578153925,
+          "stop" : 1627578453937,
+          "duration" : 300012
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a racehorse existing on Stable Page",
+        "uid" : "d22f97b4a28b57cc",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578724099,
+          "stop" : 1627579024102,
+          "duration" : 300003
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "87c81d9ee7ed70da",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579070788,
+          "stop" : 1627579370796,
+          "duration" : 300008
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to My Settings page then click on Select Racehorse",
+        "uid" : "6b9af01cdbd9c7d3",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579501289,
+          "stop" : 1627579801294,
+          "duration" : 300005
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select horse then click on Transfer button",
+        "uid" : "9ee42f6a3f8d3b4c",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579801294,
+          "stop" : 1627580101303,
+          "duration" : 300009
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that we can not search this horse anymore",
+        "uid" : "11ffce3ceb1a3f72",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580131311,
+          "stop" : 1627580431317,
+          "duration" : 300006
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Filter with male horse",
+        "uid" : "c8b6af337fd70ebe",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580517241,
+          "stop" : 1627580817261,
+          "duration" : 300020
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a racehorse existing on Stable Page",
+        "uid" : "b1117c88d984efc5",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581237746,
+          "stop" : 1627581537751,
+          "duration" : 300005
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Activity page and check if we breed successfully",
+        "uid" : "231ab9563eefb423",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581828664,
+          "stop" : 1627582128666,
+          "duration" : 300002
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and type amount to deposit",
+        "uid" : "d5bc2a85e4b6451e",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627582378487,
+          "stop" : 1627582678514,
+          "duration" : 300027
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check if ETH balance is updated",
+        "uid" : "6734b1fdea4a6784",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627582678514,
+          "stop" : 1627582978522,
+          "duration" : 300008
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "d03231e21e736b73",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627583228984,
+          "stop" : 1627583528991,
+          "duration" : 300007
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Go to Marketplace and select first horse",
+        "uid" : "871f6b42723d131e",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627583545744,
+          "stop" : 1627583845759,
+          "duration" : 300015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Process the checkout with ETH",
+        "uid" : "8b7e8a08a98db189",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627583845760,
+          "stop" : 1627584145772,
+          "duration" : 300012
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Verify that our order is performed",
+        "uid" : "8202ca6ddcf9e4d0",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584145772,
+          "stop" : 1627584445776,
+          "duration" : 300004
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "559e0dfb6a37b1aa",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585142947,
+          "stop" : 1627585442960,
+          "duration" : 300013
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Deposit button and check if ETH balance is updated",
+        "uid" : "7e39e1010c42980f",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585992421,
+          "stop" : 1627586292437,
+          "duration" : 300016
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Click on Withdraw button and check if ZED balance is updated",
+        "uid" : "d35491f7904e2d1",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627586314129,
+          "stop" : 1627586614149,
+          "duration" : 300020
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open ZedRun page and input valid email to generate magic link",
+        "uid" : "5b9e348615ca3a64",
+        "parentUid" : "6f061b37a2a6ffb801a8fe904244be6d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627586959546,
+          "stop" : 1627587259553,
+          "duration" : 300007
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6f061b37a2a6ffb801a8fe904244be6d"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Check the detail payment",
+        "uid" : "f9dd9438bfd4a15f",
+        "parentUid" : "d2fd7448186a1d7b3e211e71fe725bbb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627576211243,
+          "stop" : 1627576226270,
+          "duration" : 15027
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2fd7448186a1d7b3e211e71fe725bbb"
+    }, {
+      "name" : "Error: Cannot navigate to Home Page",
+      "children" : [ {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "f16eff08d374b080",
+        "parentUid" : "de5277ae54ed80ca75eaad97ce8b6c5d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578453937,
+          "stop" : 1627578498972,
+          "duration" : 45035
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate the component displays on Home Page",
+        "uid" : "239296ca1a193852",
+        "parentUid" : "de5277ae54ed80ca75eaad97ce8b6c5d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580967499,
+          "stop" : 1627581012545,
+          "duration" : 45046
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "de5277ae54ed80ca75eaad97ce8b6c5d"
+    }, {
+      "name" : "Error: Marketplace link is not presnet or clickable",
+      "children" : [ {
+        "name" : "Validate Marketplace Page has a racehorse",
+        "uid" : "bf4d5cc3629960bc",
+        "parentUid" : "5bd78979b8f8c90f23cd84af6b146124",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578498972,
+          "stop" : 1627578543998,
+          "duration" : 45026
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate Marketplace Page has a racehorse",
+        "uid" : "2e6e6a71fa27c3c4",
+        "parentUid" : "5bd78979b8f8c90f23cd84af6b146124",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581012545,
+          "stop" : 1627581057637,
+          "duration" : 45092
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5bd78979b8f8c90f23cd84af6b146124"
+    }, {
+      "name" : "Error: Breeding link is not shown!",
+      "children" : [ {
+        "name" : "Validate Stud Service Page has a racehorse In Stud",
+        "uid" : "4d721f10764f982f",
+        "parentUid" : "f85e09b0aff41cc17c9f7c945f1bbd63",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578543998,
+          "stop" : 1627578589021,
+          "duration" : 45023
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate Stud Service Page has a racehorse In Stud",
+        "uid" : "41bdb186335c49e0",
+        "parentUid" : "f85e09b0aff41cc17c9f7c945f1bbd63",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581057637,
+          "stop" : 1627581102663,
+          "duration" : 45026
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f85e09b0aff41cc17c9f7c945f1bbd63"
+    }, {
+      "name" : "Error: Racing link is not present or clickable",
+      "children" : [ {
+        "name" : "Validate has a race open on Events page",
+        "uid" : "40eadce6a86d41fb",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578589021,
+          "stop" : 1627578634046,
+          "duration" : 45025
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a result on Result Page",
+        "uid" : "51b04fd89c388d59",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578634046,
+          "stop" : 1627578679075,
+          "duration" : 45029
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a Winning on Winning Page",
+        "uid" : "40c6f4ee5a5c4859",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627578679075,
+          "stop" : 1627578724099,
+          "duration" : 45024
+        },
+        "flaky" : true,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select a racehorses to add into the paid entry racing",
+        "uid" : "100c16dae5e7aa37",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579370796,
+          "stop" : 1627579415863,
+          "duration" : 45067
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a race open on Events page",
+        "uid" : "cf5ffdcb8b0de6dd",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581102663,
+          "stop" : 1627581147689,
+          "duration" : 45026
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a result on Result Page",
+        "uid" : "9d80859f108f7a9f",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581147689,
+          "stop" : 1627581192715,
+          "duration" : 45026
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validate has a Winning on Winning Page",
+        "uid" : "3ca8942f339f9efc",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581192715,
+          "stop" : 1627581237746,
+          "duration" : 45031
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Select a racehorses and add into the free racing",
+        "uid" : "ca987b2fba8ca347",
+        "parentUid" : "44c9d4840d3f321187e4914d06473f78",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585442960,
+          "stop" : 1627585488012,
+          "duration" : 45052
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "44c9d4840d3f321187e4914d06473f78"
+    }, {
+      "name" : "TypeError: Cannot read property 'waitForLoadState' of undefined",
+      "children" : [ {
+        "name" : "Assign horse to paid races",
+        "uid" : "1dc63177a68f4b57",
+        "parentUid" : "c7b19248795c474bceb53082c7299ec9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627579415863,
+          "stop" : 1627579415864,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c7b19248795c474bceb53082c7299ec9"
+    }, {
+      "name" : "Error: Accept button is not present or not clickable",
+      "children" : [ {
+        "name" : "Check that the ZED app is loading successfully",
+        "uid" : "dea178c0d8cb7c9a",
+        "parentUid" : "f23414951d658e6c0a8883a23222449e",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627580832335,
+          "stop" : 1627580967498,
+          "duration" : 135163
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f23414951d658e6c0a8883a23222449e"
+    }, {
+      "name" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Open new browser with magic link",
+        "uid" : "cb7640ab515c0305",
+        "parentUid" : "6c9d48d55b3b481c6231f76aee29da4b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627581552149,
+          "stop" : 1627581824823,
+          "duration" : 272674
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "c99c5a3f4f836c50",
+        "parentUid" : "6c9d48d55b3b481c6231f76aee29da4b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584688685,
+          "stop" : 1627584962117,
+          "duration" : 273432
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Open new browser with magic link",
+        "uid" : "7778d2094e12ff9b",
+        "parentUid" : "6c9d48d55b3b481c6231f76aee29da4b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585503829,
+          "stop" : 1627585777119,
+          "duration" : 273290
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6c9d48d55b3b481c6231f76aee29da4b"
+    }, {
+      "name" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+      "children" : [ {
+        "name" : "Check the detail payment",
+        "uid" : "e4896b303a2d7881",
+        "parentUid" : "107b62ed9e29f2a9c15d99d4b2e092a1",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584445776,
+          "stop" : 1627584445780,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "107b62ed9e29f2a9c15d99d4b2e092a1"
+    }, {
+      "name" : "Error: Transfer horse list is empty or not present",
+      "children" : [ {
+        "name" : "Select horse then click on Transfer button",
+        "uid" : "e6683df0dffaca14",
+        "parentUid" : "c32e8c949081fafae63b1d3978c2bca9",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584627366,
+          "stop" : 1627584627735,
+          "duration" : 369
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c32e8c949081fafae63b1d3978c2bca9"
+    }, {
+      "name" : "Error: User avatar is not present",
+      "children" : [ {
+        "name" : "Check that we can not search this horse anymore",
+        "uid" : "2afc0d0b7e1979bb",
+        "parentUid" : "b67c7eea938be6bc66bd4b9894f9cdc3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627584627735,
+          "stop" : 1627584672762,
+          "duration" : 45027
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b67c7eea938be6bc66bd4b9894f9cdc3"
+    }, {
+      "name" : "Error: There is no Confirm display as expected",
+      "children" : [ {
+        "name" : "Select a racehorses to add into the paid entry racing",
+        "uid" : "5b63400511fb942c",
+        "parentUid" : "82b1f1942f42bb49280398950b8f7819",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585777394,
+          "stop" : 1627585810336,
+          "duration" : 32942
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "82b1f1942f42bb49280398950b8f7819"
+    }, {
+      "name" : "Error: page.click: selector: expected string, got undefined",
+      "children" : [ {
+        "name" : "Open ZedRun page and click Connnect Metamask",
+        "uid" : "d55864379aca377f",
+        "parentUid" : "d3841be94ea467964195a5dda3972362",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627585819208,
+          "stop" : 1627585835602,
+          "duration" : 16394
+        },
+        "flaky" : true,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d3841be94ea467964195a5dda3972362"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 20000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".buy-in-content .pick-gate .gate-group .gate-btn\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Open the existing racing",
+        "uid" : "a62acd2d4ba13ba8",
+        "parentUid" : "a7aecb8c417f90ff2334e6654846e5c7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627586935574,
+          "stop" : 1627586959546,
+          "duration" : 23972
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a7aecb8c417f90ff2334e6654846e5c7"
+    }, {
+      "name" : "TimeoutError: page.waitForSelector: Timeout 10000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".free-race-badge\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+      "children" : [ {
+        "name" : "Select a racehorses and add into the free racing",
+        "uid" : "1c82b6a999c054d",
+        "parentUid" : "8cbb5c9bed927dde16331afc1be45e6f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1627587262158,
+          "stop" : 1627587272234,
+          "duration" : 10076
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8cbb5c9bed927dde16331afc1be45e6f"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

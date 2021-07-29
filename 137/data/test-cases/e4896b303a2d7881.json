@@ -1,0 +1,142 @@
+{
+  "uid" : "e4896b303a2d7881",
+  "name" : "Check the detail payment",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Check the detail payment",
+  "historyId" : "9cf7fcea441d4404c138f9184af51387",
+  "time" : {
+    "start" : 1627584445776,
+    "stop" : 1627584445780,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+  "statusTrace" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:100:24\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:3:24\n                    at new Promise (<anonymous>)\n                    at runTest (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:2:12)\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:23)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "888fac076d970239",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/888fac076d970239",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1626607357150,
+          "stop" : 1626607357151,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "c7331db07c261459",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/c7331db07c261459",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1626606773856,
+          "stop" : 1626606773858,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "5419f31c596489fc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/5419f31c596489fc",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1626239411853,
+          "stop" : 1626239411855,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "271f6ce3d2536871",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/271f6ce3d2536871",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1626202714729,
+          "stop" : 1626202714731,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "8af612af78a189e0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/8af612af78a189e0",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1619098248818,
+          "stop" : 1619098248819,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "848b8df770b4e938",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/848b8df770b4e938",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined",
+        "time" : {
+          "start" : 1618496726242,
+          "stop" : 1618496726245,
+          "duration" : 3
+        }
+      }, {
+        "uid" : "d324e9435788fb29",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/d324e9435788fb29",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1616247331332,
+          "stop" : 1616247346359,
+          "duration" : 15027
+        }
+      }, {
+        "uid" : "44805256967c4ee6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/44805256967c4ee6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903093997,
+          "stop" : 1615903095442,
+          "duration" : 1445
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e4896b303a2d7881.json",
+  "parameterValues" : [ ]
+}

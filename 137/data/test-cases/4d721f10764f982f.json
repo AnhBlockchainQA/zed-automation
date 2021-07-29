@@ -1,0 +1,156 @@
+{
+  "uid" : "4d721f10764f982f",
+  "name" : "Validate Stud Service Page has a racehorse In Stud",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate Stud Service Page has a racehorse In Stud",
+  "historyId" : "baa2e2e0212c6ae4d5a73b7bbcbbae2d",
+  "time" : {
+    "start" : 1627578543998,
+    "stop" : 1627578589021,
+    "duration" : 45023
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Breeding link is not shown!",
+  "statusTrace" : "Error: Breeding link is not shown!\n                    at HomePage.clickOnBreedingLink (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:192:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate Stud Service Page has a racehorse In Stud"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "18a1d34f6fa8a167",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/18a1d34f6fa8a167",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626602214038,
+          "stop" : 1626602214363,
+          "duration" : 325
+        }
+      }, {
+        "uid" : "b857a736016946a4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/b857a736016946a4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626601924456,
+          "stop" : 1626601924842,
+          "duration" : 386
+        }
+      }, {
+        "uid" : "ab1a0a1a4b10e980",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/ab1a0a1a4b10e980",
+        "status" : "failed",
+        "statusDetails" : "Error: Breeding link is not shown!",
+        "time" : {
+          "start" : 1626231324526,
+          "stop" : 1626231369546,
+          "duration" : 45020
+        }
+      }, {
+        "uid" : "78eac648a1250aea",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/78eac648a1250aea",
+        "status" : "failed",
+        "statusDetails" : "Error: Breeding link is not shown!",
+        "time" : {
+          "start" : 1626194620852,
+          "stop" : 1626194665878,
+          "duration" : 45026
+        }
+      }, {
+        "uid" : "14f680d43bac5a78",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/14f680d43bac5a78",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095462506,
+          "stop" : 1619095462854,
+          "duration" : 348
+        }
+      }, {
+        "uid" : "ed2c9a1ff3690140",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/ed2c9a1ff3690140",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494592978,
+          "stop" : 1618494593497,
+          "duration" : 519
+        }
+      }, {
+        "uid" : "d27b088781f3894d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/d27b088781f3894d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247449497,
+          "stop" : 1616247450216,
+          "duration" : 719
+        }
+      }, {
+        "uid" : "54a586e7920dadfe",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/54a586e7920dadfe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903140030,
+          "stop" : 1615903140893,
+          "duration" : 863
+        }
+      }, {
+        "uid" : "8d2730c869845202",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/8d2730c869845202",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615783638440,
+          "stop" : 1615783639075,
+          "duration" : 635
+        }
+      }, {
+        "uid" : "dc393174c59f820b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/dc393174c59f820b",
+        "status" : "failed",
+        "statusDetails" : "TypeError: studServicePage.selectStudServiceTab is not a function",
+        "time" : {
+          "start" : 1612406954151,
+          "stop" : 1612406955217,
+          "duration" : 1066
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4d721f10764f982f.json",
+  "parameterValues" : [ ]
+}

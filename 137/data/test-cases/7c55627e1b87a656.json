@@ -1,0 +1,67 @@
+{
+  "uid" : "7c55627e1b87a656",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Check that the ZED app is loading successfully",
+  "historyId" : "4a13789f3f9dca131333ee6d73af8370",
+  "time" : {
+    "start" : 1627585777119,
+    "stop" : 1627585777394,
+    "duration" : 275
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "eaac226cbdfe61bc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/eaac226cbdfe61bc",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626609971617,
+          "stop" : 1626610271627,
+          "duration" : 300010
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7c55627e1b87a656.json",
+  "parameterValues" : [ ]
+}

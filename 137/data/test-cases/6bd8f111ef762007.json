@@ -1,0 +1,200 @@
+{
+  "uid" : "6bd8f111ef762007",
+  "name" : "Wait until wallet icon is shown then click on Wallet icon",
+  "fullName" : "Deposite to ZED balance by logging in with Metamask.Wait until wallet icon is shown then click on Wallet icon",
+  "historyId" : "d7aa7d8b5c37caf0a6f022de9f790ca7",
+  "time" : {
+    "start" : 1627582243431,
+    "stop" : 1627582378487,
+    "duration" : 135056
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Element is not present yet!",
+  "statusTrace" : "Error: Element is not present yet!\n                    at HomePage.waitForBalanceInfoToBeShown (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:130:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Wait until wallet icon is shown then click on Wallet icon"
+  }, {
+    "name" : "package",
+    "value" : "Deposite to ZED balance by logging in with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 13,
+        "unknown" : 0,
+        "total" : 16
+      },
+      "items" : [ {
+        "uid" : "9f98071efcc8b096",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/9f98071efcc8b096",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626605490981,
+          "stop" : 1626605492182,
+          "duration" : 1201
+        }
+      }, {
+        "uid" : "4b8e2943961ae797",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/4b8e2943961ae797",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626604907005,
+          "stop" : 1626604908208,
+          "duration" : 1203
+        }
+      }, {
+        "uid" : "1451a6a1ff1ec73a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/1451a6a1ff1ec73a",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626237025474,
+          "stop" : 1626237160533,
+          "duration" : 135059
+        }
+      }, {
+        "uid" : "67007c1b392561d6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/67007c1b392561d6",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626200325521,
+          "stop" : 1626200460585,
+          "duration" : 135064
+        }
+      }, {
+        "uid" : "cd7c24ae3453d456",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/cd7c24ae3453d456",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619097367849,
+          "stop" : 1619097371478,
+          "duration" : 3629
+        }
+      }, {
+        "uid" : "3ee347e3cc8f10bf",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/3ee347e3cc8f10bf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496064572,
+          "stop" : 1618496065063,
+          "duration" : 491
+        }
+      }, {
+        "uid" : "b101ccb02cba6f4b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/b101ccb02cba6f4b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249265860,
+          "stop" : 1616249279316,
+          "duration" : 13456
+        }
+      }, {
+        "uid" : "c4f4b561ee4a3219",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/c4f4b561ee4a3219",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904827281,
+          "stop" : 1615904835816,
+          "duration" : 8535
+        }
+      }, {
+        "uid" : "c7d4fcf29d03f00a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/c7d4fcf29d03f00a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615784848724,
+          "stop" : 1615784855813,
+          "duration" : 7089
+        }
+      }, {
+        "uid" : "9142aab88969ca74",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/9142aab88969ca74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613712131459,
+          "stop" : 1613712135029,
+          "duration" : 3570
+        }
+      }, {
+        "uid" : "8c65f46d62fc1ad0",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/8c65f46d62fc1ad0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1613029527815,
+          "stop" : 1613029531620,
+          "duration" : 3805
+        }
+      }, {
+        "uid" : "7443c7d8785551a6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/7443c7d8785551a6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612407605391,
+          "stop" : 1612407609457,
+          "duration" : 4066
+        }
+      }, {
+        "uid" : "7a2740ab57c3f8c5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/7a2740ab57c3f8c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612274168458,
+          "stop" : 1612274172029,
+          "duration" : 3571
+        }
+      }, {
+        "uid" : "1f58009cd6cc7c57",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/1f58009cd6cc7c57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612273868908,
+          "stop" : 1612273872323,
+          "duration" : 3415
+        }
+      }, {
+        "uid" : "25b78fa94e6655a3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/25b78fa94e6655a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1612172263809,
+          "stop" : 1612172270362,
+          "duration" : 6553
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6bd8f111ef762007.json",
+  "parameterValues" : [ ]
+}

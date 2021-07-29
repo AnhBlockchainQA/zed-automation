@@ -1,0 +1,66 @@
+{
+  "uid" : "53d0d803ab35c91c",
+  "name" : "Update metamask info",
+  "fullName" : "Paid racing with fee racing when logged by Meta Mask.Update metamask info",
+  "historyId" : "c4f82912ef007d31e7308194c0417393",
+  "time" : {
+    "start" : 1627579033054,
+    "stop" : 1627579036974,
+    "duration" : 3920
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "200edf2dccd8fcac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/200edf2dccd8fcac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626602225102,
+          "stop" : 1626602228446,
+          "duration" : 3344
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "53d0d803ab35c91c.json",
+  "parameterValues" : [ ]
+}

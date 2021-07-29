@@ -1,0 +1,67 @@
+{
+  "uid" : "1eed1bfdf481df23",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "b8c517e513f6cd7629c1950662a0eb39",
+  "time" : {
+    "start" : 1627585488794,
+    "stop" : 1627585502264,
+    "duration" : 13470
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "467bbbadb0063507",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/467bbbadb0063507",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626609669761,
+          "stop" : 1626609969768,
+          "duration" : 300007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "1eed1bfdf481df23.json",
+  "parameterValues" : [ ]
+}

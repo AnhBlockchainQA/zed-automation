@@ -1,0 +1,113 @@
+{
+  "uid" : "2afc0d0b7e1979bb",
+  "name" : "Check that we can not search this horse anymore",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Check that we can not search this horse anymore",
+  "historyId" : "8be409577138d7b5332a041f68ee5252",
+  "time" : {
+    "start" : 1627584627735,
+    "stop" : 1627584672762,
+    "duration" : 45027
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: User avatar is not present",
+  "statusTrace" : "Error: User avatar is not present\n                    at HomePage.clickOnUserAvatar (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:430:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that we can not search this horse anymore"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "1ade3ac28566a026",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/1ade3ac28566a026",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626608577128,
+          "stop" : 1626608877137,
+          "duration" : 300009
+        }
+      }, {
+        "uid" : "ca4fe04f76fb97ac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/ca4fe04f76fb97ac",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626607694892,
+          "stop" : 1626607994896,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "3b8a026a96fe4b0d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/3b8a026a96fe4b0d",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626240314859,
+          "stop" : 1626240614863,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "dfc4a5e8039c61b4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/dfc4a5e8039c61b4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626203618291,
+          "stop" : 1626203918296,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "2b6dd9c196387053",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/2b6dd9c196387053",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1619098275569,
+          "stop" : 1619098575574,
+          "duration" : 300005
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2afc0d0b7e1979bb.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,133 @@
+{
+  "uid" : "53fcf50444f4ce07",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Buy horse with credit card - Logging with Metamask.Open new browser with magic link",
+  "historyId" : "8002179957d3f81e5c0f9454cb231059",
+  "time" : {
+    "start" : 1627583544785,
+    "stop" : 1627583545744,
+    "duration" : 959
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Buy horse with credit card - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "d1a91a335bd72b1a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/d1a91a335bd72b1a",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626606711879,
+          "stop" : 1626606712118,
+          "duration" : 239
+        }
+      }, {
+        "uid" : "8b1ed50cff648ee9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/8b1ed50cff648ee9",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626606128594,
+          "stop" : 1626606128822,
+          "duration" : 228
+        }
+      }, {
+        "uid" : "e9114067b2055427",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/e9114067b2055427",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626238766578,
+          "stop" : 1626238766814,
+          "duration" : 236
+        }
+      }, {
+        "uid" : "392c985b954e327b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/392c985b954e327b",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626202069422,
+          "stop" : 1626202069665,
+          "duration" : 243
+        }
+      }, {
+        "uid" : "c6f4ea19f721d246",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/c6f4ea19f721d246",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619097602822,
+          "stop" : 1619097603739,
+          "duration" : 917
+        }
+      }, {
+        "uid" : "a85b0769144e3d0a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/a85b0769144e3d0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496440010,
+          "stop" : 1618496441130,
+          "duration" : 1120
+        }
+      }, {
+        "uid" : "c6b35ac509a4b43a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/c6b35ac509a4b43a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249781114,
+          "stop" : 1616249807015,
+          "duration" : 25901
+        }
+      }, {
+        "uid" : "815aeccab1615f7b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/815aeccab1615f7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905266799,
+          "stop" : 1615905278890,
+          "duration" : 12091
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "53fcf50444f4ce07.json",
+  "parameterValues" : [ ]
+}

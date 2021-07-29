@@ -1,0 +1,44 @@
+{
+  "uid" : "e1100ba8b5487c6",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Free racing with Magic Link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "20debffd4648e70a5b14347298308fe1",
+  "time" : {
+    "start" : 1627586614965,
+    "stop" : 1627586627406,
+    "duration" : 12441
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e1100ba8b5487c6.json",
+  "parameterValues" : [ ]
+}
