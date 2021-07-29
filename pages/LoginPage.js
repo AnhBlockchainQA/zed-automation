@@ -34,6 +34,17 @@ class LoginPage {
     }
   }
 
+    async navigate_existing_racing_url(url) {
+        console.log("--- Zed Run Automation Framework: Navigate to the existing racing url ---");
+        try {
+            await this.page.goto(url, { timeout: 0 });
+            // await this.page.goto(TEMP_ZEDRUN_URL, {timeout: 0});
+            await this.page.waitForLoadState();
+        } catch {
+            throw new Error("Unable to launch the url ", url);
+        }
+    }
+
   async clickOnStartButton() {
     try {
       console.log(
@@ -102,6 +113,10 @@ class LoginPage {
       throw new Error("Page instance is not ready or present!");
     }
   }
+
+    async waitForLoadState() {
+        await this.page.waitForLoadState();
+    }
 
   async waitForTimeout() {
     console.log("---- Zed Run Automation Framework: Wait for timeout ---");
