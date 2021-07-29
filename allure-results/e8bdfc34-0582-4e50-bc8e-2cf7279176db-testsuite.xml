@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1617814219687' stop='1617814245404'>
+    <name>[Smoke Test] Validate the some pages on app work well</name>
+    <title>[Smoke Test] Validate the some pages on app work well</title>
+    <test-cases>
+        <test-case start='1617814219687' status='passed' stop='1617814224556'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814224556' status='passed' stop='1617814236016'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814236016' status='passed' stop='1617814239810'>
+            <name>Wait for the web is loading successfully</name>
+            <title>Wait for the web is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814239810' status='passed' stop='1617814240846'>
+            <name>Validate the component displays on Home Page</name>
+            <title>Validate the component displays on Home Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814240846' status='passed' stop='1617814242146'>
+            <name>Validate Marketplace Page has a racehorse</name>
+            <title>Validate Marketplace Page has a racehorse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814242146' status='passed' stop='1617814242479'>
+            <name>Validate Stud Service Page has a racehorse In Stud</name>
+            <title>Validate Stud Service Page has a racehorse In Stud</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814242479' status='passed' stop='1617814242904'>
+            <name>Validate has a race open on Events page</name>
+            <title>Validate has a race open on Events page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814242904' status='passed' stop='1617814243453'>
+            <name>Validate has a result on Result Page</name>
+            <title>Validate has a result on Result Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814243453' status='passed' stop='1617814243977'>
+            <name>Validate has a Winning on Winning Page</name>
+            <title>Validate has a Winning on Winning Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1617814243977' status='passed' stop='1617814245404'>
+            <name>Validate has a racehorse existing on Stable Page</name>
+            <title>Validate has a racehorse existing on Stable Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
