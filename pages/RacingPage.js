@@ -14,6 +14,10 @@ class RacingPage {
         this.page.setDefaultTimeout(30000);
     }
 
+    async bringToFront(){
+        await this.page.bringToFront();
+    }
+
     async waitUntilRacingEventShown() {
         console.log(
             "--- Zed Run Automation Framework: Wait until racing event shown ---"
@@ -367,6 +371,18 @@ class RacingPage {
         }catch{
             throw new Error("Selector not found or dettached! Please update your selector");
         }
+    }
+    
+    async goToRaceByLink(url){
+        console.log(
+            "--- Zed Run Automation Framework: Navigate to race event by link ---", url);
+        try{
+            await this.page.goto(url);
+            await this.page.waitForLoadState();
+        }catch{
+            throw new Error('URL is unreachable or incorrect');
+        }  
+
     }
 }
 
