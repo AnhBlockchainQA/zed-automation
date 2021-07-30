@@ -7,6 +7,7 @@ const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON, OPEN_GATE_LIST} = require("../lo
 const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
 var confirmMetamaskNotificationInstance;
 var metamaskFactory = new MetamaskFactory();
+const { ACCEPT_BUTTON } = require("../locators/ZedRun");
 
 class RacingPage {
     constructor(page) {
@@ -108,6 +109,22 @@ class RacingPage {
         await this.page.hover(`.horse-infos`);
         await this.page.click('text="Enter"');
         await this.page.waitForLoadState();
+    }
+
+    async clickOnGateOpen(index) {
+        console.log(
+            `--- Zed Run Automation Framework: Select the open gate ${index} ---`
+        );
+
+        await this.page.click(
+            `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='${index}']`
+        );
+        await this.page.waitForLoadState();
+    }
+
+    async bringToFront() {
+        console.log("--- Zed Run Automation Framework: Bring page to upfront ---");
+        await this.page.bringToFront();
     }
 
     async addRaceHorseIntoRace() {
@@ -352,6 +369,21 @@ class RacingPage {
                 expectedValue +
                 "]"
             );
+        }
+    }
+
+    async clickOnAcceptButton() {
+        console.log(
+            "---- Zed Run Automation Framework: Click on Accept button ---"
+        );
+        try {
+            await this.page.waitForSelector(ACCEPT_BUTTON, {
+                visible: true,
+                timeout: 0,
+            });
+            await this.page.click(ACCEPT_BUTTON);
+        } catch {
+            throw new Error("Accept button is not present or not clickable");
         }
     }
 

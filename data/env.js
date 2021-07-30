@@ -1,5 +1,10 @@
 module.exports = {
     ZEDRUN_URL: "https://goerli-test.zed.run/",
+<<<<<<< HEAD
+=======
+    ZEDRUN_SPECIFIC_FREE_RACE_URL: "https://goerli-test.zed.run/race/ePGVKI0v",
+    TEMP_ZEDRUN_URL: "https://zed-pr--pr825-feature-login-flow-dh9pz5v4.web.app/",
+>>>>>>> develop
     SEED_PHRASE:
         "promote involve unaware today camera major net tail area rule manual humor",
     PASSWORD: "nidalee1",
