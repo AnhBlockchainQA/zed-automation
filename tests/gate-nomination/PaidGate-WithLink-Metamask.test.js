@@ -25,6 +25,7 @@ let metamaskPage;
 let metamaskInstance;
 let zedRunPage;
 let newPageInstance;
+let pageInstance;
 let metamaskNotificationInstance;
 let metamaskNotificationPage;
 let otherMetamaskNotificationInstance;
@@ -34,30 +35,18 @@ let racingPage;
 var confirmMetamaskNotificationPage;
 var confirmMetamaskNotificationInstance;
 var zedRunApi = require("../../utils/api/zedApi");
+const { PAID_RACE_LINK } = require("../../data/races");
 var className;
 var numberGateOpening;
 var getEventName;
 
 beforeAll(async () => {
-  let token = await zedRunApi.login(
-    METAMASK_LOGIN.PUBLIC_ADDRESS,
-    METAMASK_LOGIN.SIGNED_MESSAGE
-  );
-  let array = await zedRunApi.checkIfUserHorsesEnoughForPaidRaces(
-    token,
-    METAMASK_LOGIN.PUBLIC_ADDRESS
-  );
-  className = await stringUtils.pickRandomValueFromStringArray(array);
-
   metamaskFactory = new MetamaskFactory();
   await metamaskFactory.removeCache();
   metamaskInstance = await metamaskFactory.init();
 });
 
 describe("Paid racing with fee racing when logged by Meta Mask", () => {
-  test("Get token", 3, async () => {
-    console.log(className);
-  });
   test("Update metamask info", 3, async () => {
     metamaskPage = new MetamaskPage(metamaskInstance);
     await metamaskPage.clickOnGetStartedButton();
@@ -94,26 +83,20 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
     await metamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Check that the ZED app is loading successfully", async () => {
-    homePage = new HomePage(newPageInstance);
-    await homePage.waitUntilBalanceShown();
-    await homePage.clickOnAcceptButton();
-  });
-
-  test("Select a racehorses to add into the paid entry racing", async () => {
-    await homePage.clickOnRacingLink();
-    racingPage = new RacingPage(newPageInstance);
-    // await racingPage.waitForLoadState();
-    await racingPage.clickOnRacingClass(className);
-    await racingPage.selectFirstEntryHasFeeEvent();
+  test("Open new tab and go to the paid race link", async () => {
+    pageInstance = await metamaskFactory.newPage();
+    racingPage = new RacingPage(pageInstance);
+    await racingPage.bringToFront();
+    await racingPage.goToRaceByLink(PAID_RACE_LINK);
+    await racingPage.waitForLoadState();
     numberGateOpening = await racingPage.getGateOpening();
     console.log("Gate opening ", numberGateOpening);
     getEventName = await racingPage.returnEventName();
     console.log("Selected event name ", getEventName);
   });
 
-  test("Assign horse to paid races", async () => {
-    await racingPage.waitForLoadState();
+  // test("Assign horse to paid races", async () => {
+    // await racingPage.waitForLoadState();
     // for (let i = 0; i < numberGateOpening.length; i++) {
     //   await racingPage.waitForLoadState();
     //   await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
@@ -131,7 +114,7 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
     // }
     // await racingPage.waitForLoadState();
     // await racingPage.validateRacingEventAfterInNextToRun(getEventName);
-  });
+  // });
 });
 
 afterAll(async (done) => {

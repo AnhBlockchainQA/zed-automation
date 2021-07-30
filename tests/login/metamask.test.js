@@ -7,8 +7,6 @@ const {
 const { SEED_PHRASE, PASSWORD, CONFIRM_PASSWORD } = require("../../data/env");
 const {
   CONNECT_METAMASK,
-  AUTHENTICATE_BUTTON,
-  TEMP_CONNECT_METAMASK,
 } = require("../../locators/ZedRun");
 const { HomePage } = require("../../pages/HomePage");
 const test = require("jest-retries");
@@ -55,7 +53,7 @@ describe("Login to ZedRun with Metamask", () => {
     await zedRunPage.clickOnStartButton();
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
-      TEMP_CONNECT_METAMASK
+      CONNECT_METAMASK
     );
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
@@ -65,18 +63,6 @@ describe("Login to ZedRun with Metamask", () => {
     await metamaskNotificationPage.clickOnConnectButton();
     await metamaskNotificationPage.clickOnSignButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
-    // This portion of code is invalid for goerli-zedrun
-    // otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-    //   newPageInstance,
-    //   AUTHENTICATE_BUTTON
-    // );
-    // otherMetamaskNotificationPage = new MetamaskNotificationPage(
-    //   otherMetamaskNotificationInstance
-    // );
-    // await otherMetamaskNotificationPage.waitForLoadState();
-    // await otherMetamaskNotificationPage.clickOnSignButton();
-    // await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
   test("Check that avatar is shown", 3, async () => {

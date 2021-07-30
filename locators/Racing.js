@@ -10,6 +10,8 @@ module.exports = {
     SELECTED_GATE_REGISTERED_INFO: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .in-race-info .horses-registered span",
     SELECTED_RACING_EVENT_GATE_HEADER: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .pick-gate .h3-text",
     SELECTED_RACING_EVENT_OPEN_GATES_LIST: ".page-content.buy-in .accordion-container .accordion-content .accordion .panel:nth-child(${i}) .buy-in-content .pick-gate .gate-group .gate-btn",
+    CUSTOM_CLASS_BUTTON: "//div[@class='open-races']//div[@class='race-filters']/div[descendant::text()='${name}']",
+    OPEN_GATE_LIST: ".buy-in-content .pick-gate .gate-group .gate-btn",
+    CUSTOM_GATE_WITH_INDEX: ".buy-in-content .pick-gate .gate-group .gate-btn:nth-child(${i})",
     CUSTOM_CLASS_BUTTON: "//div[@class='open-races']//div[@class='race-filters']/div[descendant::text()='${name}']//label",
-     
 };    
