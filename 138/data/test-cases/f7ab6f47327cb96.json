@@ -1,0 +1,211 @@
+{
+  "uid" : "f7ab6f47327cb96",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "a80d9e2efdc26aee80b663fcb0077246",
+  "time" : {
+    "start" : 1627627687622,
+    "stop" : 1627627700907,
+    "duration" : 13285
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 17
+      },
+      "items" : [ {
+        "uid" : "debd60a988ecdb84",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/debd60a988ecdb84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627586293538,
+          "stop" : 1627586306691,
+          "duration" : 13153
+        }
+      }, {
+        "uid" : "1c4a7123767eb87",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/1c4a7123767eb87",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626611521591,
+          "stop" : 1626611821608,
+          "duration" : 300017
+        }
+      }, {
+        "uid" : "6296ae9e73073093",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/6296ae9e73073093",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626610909066,
+          "stop" : 1626611209084,
+          "duration" : 300018
+        }
+      }, {
+        "uid" : "f0c4e2c95c7e31e3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/f0c4e2c95c7e31e3",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626243451209,
+          "stop" : 1626243751221,
+          "duration" : 300012
+        }
+      }, {
+        "uid" : "d4d9ebda6434d05a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/d4d9ebda6434d05a",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626206756046,
+          "stop" : 1626207056057,
+          "duration" : 300011
+        }
+      }, {
+        "uid" : "28352e2e07a8cef2",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/28352e2e07a8cef2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619099696208,
+          "stop" : 1619099708676,
+          "duration" : 12468
+        }
+      }, {
+        "uid" : "5fe9f805378e354a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/5fe9f805378e354a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618497678736,
+          "stop" : 1618497699243,
+          "duration" : 20507
+        }
+      }, {
+        "uid" : "613baa58615275d8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/613baa58615275d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249836416,
+          "stop" : 1616249867101,
+          "duration" : 30685
+        }
+      }, {
+        "uid" : "b78c604c75cf72eb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/b78c604c75cf72eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905316892,
+          "stop" : 1615905338967,
+          "duration" : 22075
+        }
+      }, {
+        "uid" : "44f6a9b88ba55fd5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/44f6a9b88ba55fd5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786371620,
+          "stop" : 1615786390799,
+          "duration" : 19179
+        }
+      }, {
+        "uid" : "2c147a19e02cfda4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/2c147a19e02cfda4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613713896455,
+          "stop" : 1613714016491,
+          "duration" : 120036
+        }
+      }, {
+        "uid" : "be4a6cb2162a1d68",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/be4a6cb2162a1d68",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613031178080,
+          "stop" : 1613031298090,
+          "duration" : 120010
+        }
+      }, {
+        "uid" : "3a2d0a742c0582bd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/3a2d0a742c0582bd",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612408182894,
+          "stop" : 1612408302902,
+          "duration" : 120008
+        }
+      }, {
+        "uid" : "c68a9ea84f4baa8c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/c68a9ea84f4baa8c",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612275340813,
+          "stop" : 1612275640818,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "297a128781c7f83b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/297a128781c7f83b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612275283234,
+          "stop" : 1612275583239,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "23f4616650a8548e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/23f4616650a8548e",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 10000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1612172429568,
+          "stop" : 1612172439575,
+          "duration" : 10007
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f7ab6f47327cb96.json",
+  "parameterValues" : [ ]
+}

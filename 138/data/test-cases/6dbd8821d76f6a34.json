@@ -1,0 +1,76 @@
+{
+  "uid" : "6dbd8821d76f6a34",
+  "name" : "Check that the ZED app is loading successfully",
+  "fullName" : "Free racing with Magic Link.Check that the ZED app is loading successfully",
+  "historyId" : "87c88a65491452201befe6cad0285bd",
+  "time" : {
+    "start" : 1627628296987,
+    "stop" : 1627628297299,
+    "duration" : 312
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that the ZED app is loading successfully"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "38f6e099dea217ed",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/38f6e099dea217ed",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627586902069,
+          "stop" : 1627586902358,
+          "duration" : 289
+        }
+      }, {
+        "uid" : "51b2fbbd67953fc4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/51b2fbbd67953fc4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626612861672,
+          "stop" : 1626613161698,
+          "duration" : 300026
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6dbd8821d76f6a34.json",
+  "parameterValues" : [ ]
+}

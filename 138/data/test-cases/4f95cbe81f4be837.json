@@ -1,0 +1,46 @@
+{
+  "uid" : "4f95cbe81f4be837",
+  "name" : "Select a racehorses and add into the free racing",
+  "fullName" : "Free racing with Magic Link.Select a racehorses and add into the free racing",
+  "historyId" : "c9a845c77bde5393aea911d39a9ce426",
+  "time" : {
+    "start" : 1627628297299,
+    "stop" : 1627628298500,
+    "duration" : 1201
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: listGateElement is not defined",
+  "statusTrace" : "ReferenceError: listGateElement is not defined\n                    at RacingPage.getGateOpening (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:79:12)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)\n                    at RacingPage.addRaceHorseIntoRace (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:134:26)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/FreeGate-Email.test.js:78:23\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses and add into the free racing"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4f95cbe81f4be837.json",
+  "parameterValues" : [ ]
+}

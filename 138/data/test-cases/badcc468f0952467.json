@@ -1,0 +1,142 @@
+{
+  "uid" : "badcc468f0952467",
+  "name" : "Open ZedRun page and input valid email to generate magic link",
+  "fullName" : "Transfer horse to other wallet address - Logging with magic link.Open ZedRun page and input valid email to generate magic link",
+  "historyId" : "f363831270f3ecf84f58ba99f6df4684",
+  "time" : {
+    "start" : 1627626313124,
+    "stop" : 1627626325575,
+    "duration" : 12451
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open ZedRun page and input valid email to generate magic link"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "a5e21ad2288872a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/a5e21ad2288872a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627584607174,
+          "stop" : 1627584619846,
+          "duration" : 12672
+        }
+      }, {
+        "uid" : "8eb730b06d381737",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/8eb730b06d381737",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626607675312,
+          "stop" : 1626607975320,
+          "duration" : 300008
+        }
+      }, {
+        "uid" : "c4690058fc8b746",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/c4690058fc8b746",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626606793080,
+          "stop" : 1626607093087,
+          "duration" : 300007
+        }
+      }, {
+        "uid" : "7983e4e4c8f0e404",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/7983e4e4c8f0e404",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626239412663,
+          "stop" : 1626239712672,
+          "duration" : 300009
+        }
+      }, {
+        "uid" : "7295e6961b579571",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/7295e6961b579571",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626202716113,
+          "stop" : 1626203016124,
+          "duration" : 300011
+        }
+      }, {
+        "uid" : "e4f5346e1c104fe8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/e4f5346e1c104fe8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619098249866,
+          "stop" : 1619098261679,
+          "duration" : 11813
+        }
+      }, {
+        "uid" : "606a9f87df369188",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/606a9f87df369188",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618496727923,
+          "stop" : 1618496743972,
+          "duration" : 16049
+        }
+      }, {
+        "uid" : "11a46e100b75df84",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/11a46e100b75df84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249332603,
+          "stop" : 1616249366694,
+          "duration" : 34091
+        }
+      }, {
+        "uid" : "8ebb44b8e4012c94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8ebb44b8e4012c94",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615904891385,
+          "stop" : 1615904912515,
+          "duration" : 21130
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "badcc468f0952467.json",
+  "parameterValues" : [ ]
+}

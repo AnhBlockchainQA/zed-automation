@@ -1,0 +1,83 @@
+{
+  "uid" : "ae2a36c4faf3ecf5",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Select a racehorses to add into the paid entry racing",
+  "historyId" : "dcc8d62613fa2447cc245fe0eba9350d",
+  "time" : {
+    "start" : 1627627364177,
+    "stop" : 1627627365229,
+    "duration" : 1052
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "ReferenceError: listGateElement is not defined",
+  "statusTrace" : "ReferenceError: listGateElement is not defined\n                    at RacingPage.getGateOpening (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:79:12)\n                    at /home/runner/work/zed-automation/zed-automation/tests/gate-nomination/PaidGate-email.test.js:79:35\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses to add into the paid entry racing"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5b63400511fb942c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/5b63400511fb942c",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Confirm display as expected",
+        "time" : {
+          "start" : 1627585777394,
+          "stop" : 1627585810336,
+          "duration" : 32942
+        }
+      }, {
+        "uid" : "3095c62621a1f1bb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/3095c62621a1f1bb",
+        "status" : "failed",
+        "statusDetails" : "Error: Racing link is not present or clickable",
+        "time" : {
+          "start" : 1626610271627,
+          "stop" : 1626610316687,
+          "duration" : 45060
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ae2a36c4faf3ecf5.json",
+  "parameterValues" : [ ]
+}

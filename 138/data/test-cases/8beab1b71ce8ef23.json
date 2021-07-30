@@ -1,0 +1,75 @@
+{
+  "uid" : "8beab1b71ce8ef23",
+  "name" : "Update metamask info",
+  "fullName" : "Free racing when logged by Meta Mask.Update metamask info",
+  "historyId" : "e1c98d814847f4c654a21c32e2f1845f",
+  "time" : {
+    "start" : 1627626671857,
+    "stop" : 1627626677209,
+    "duration" : 5352
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Update metamask info"
+  }, {
+    "name" : "package",
+    "value" : "Free racing when logged by Meta Mask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "207eafa8c2846721",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/207eafa8c2846721",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627585101280,
+          "stop" : 1627585106956,
+          "duration" : 5676
+        }
+      }, {
+        "uid" : "98b5f377e6e4ba87",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/98b5f377e6e4ba87",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626609617798,
+          "stop" : 1626609622984,
+          "duration" : 5186
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8beab1b71ce8ef23.json",
+  "parameterValues" : [ ]
+}

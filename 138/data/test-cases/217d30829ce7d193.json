@@ -1,0 +1,160 @@
+{
+  "uid" : "217d30829ce7d193",
+  "name" : "Validate the component displays on Home Page",
+  "fullName" : "[Smoke Test] Validate the some pages on app work well.Validate the component displays on Home Page",
+  "historyId" : "35c5c101ecfc6a597f73938bf60ad9ab",
+  "time" : {
+    "start" : 1627620700396,
+    "stop" : 1627620745435,
+    "duration" : 45039
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Cannot navigate to Home Page",
+  "statusTrace" : "Error: Cannot navigate to Home Page\n                    at HomePage.navigateToHomePage (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:228:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testClass",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate the component displays on Home Page"
+  }, {
+    "name" : "package",
+    "value" : "[Smoke Test] Validate the some pages on app work well"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 8,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "f16eff08d374b080",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/f16eff08d374b080",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1627578453937,
+          "stop" : 1627578498972,
+          "duration" : 45035
+        }
+      }, {
+        "uid" : "3d0f735f0f4ba24b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/3d0f735f0f4ba24b",
+        "status" : "failed",
+        "statusDetails" : "Error: The Horse On Sale does not display as expected",
+        "time" : {
+          "start" : 1626602182253,
+          "stop" : 1626602193181,
+          "duration" : 10928
+        }
+      }, {
+        "uid" : "337e722501a344dc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/337e722501a344dc",
+        "status" : "failed",
+        "statusDetails" : "Error: The Horse On Sale does not display as expected",
+        "time" : {
+          "start" : 1626601892463,
+          "stop" : 1626601903516,
+          "duration" : 11053
+        }
+      }, {
+        "uid" : "321e85b00991e4ac",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/321e85b00991e4ac",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626231234468,
+          "stop" : 1626231279502,
+          "duration" : 45034
+        }
+      }, {
+        "uid" : "554fc2c92959b45f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/554fc2c92959b45f",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626194530773,
+          "stop" : 1626194575827,
+          "duration" : 45054
+        }
+      }, {
+        "uid" : "30b9d5a2811e67ce",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/30b9d5a2811e67ce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095460368,
+          "stop" : 1619095461415,
+          "duration" : 1047
+        }
+      }, {
+        "uid" : "1da6b351269045fa",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/1da6b351269045fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494589291,
+          "stop" : 1618494590630,
+          "duration" : 1339
+        }
+      }, {
+        "uid" : "25a9f9c8d26c9959",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/25a9f9c8d26c9959",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247436212,
+          "stop" : 1616247447558,
+          "duration" : 11346
+        }
+      }, {
+        "uid" : "c114374568ee9ae3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/c114374568ee9ae3",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615903136231,
+          "stop" : 1615903137437,
+          "duration" : 1206
+        }
+      }, {
+        "uid" : "64e2c601576b83a6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/64e2c601576b83a6",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615783635244,
+          "stop" : 1615783636125,
+          "duration" : 881
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "217d30829ce7d193.json",
+  "parameterValues" : [ ]
+}

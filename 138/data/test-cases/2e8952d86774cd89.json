@@ -1,0 +1,152 @@
+{
+  "uid" : "2e8952d86774cd89",
+  "name" : "Go to Stable page and verify there is a new horse",
+  "fullName" : "Generate stud horse when logging in with magic link.Go to Stable page and verify there is a new horse",
+  "historyId" : "138f49ea587f3eeb0f4651e76aac9e0d",
+  "time" : {
+    "start" : 1627623376070,
+    "stop" : 1627623466162,
+    "duration" : 90092
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: The Profile Icon or My Stable Page is not present",
+  "statusTrace" : "Error: The Profile Icon or My Stable Page is not present\n                    at HomePage.navigateToMyStablePage (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:218:13)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Stable page and verify there is a new horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 9,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "82ea6a09a938bad7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/82ea6a09a938bad7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627582128666,
+          "stop" : 1627582129471,
+          "duration" : 805
+        }
+      }, {
+        "uid" : "50c03a673e4ac255",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/50c03a673e4ac255",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626605174385,
+          "stop" : 1626605474390,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "d143d533f55f006b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/d143d533f55f006b",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626604590489,
+          "stop" : 1626604890492,
+          "duration" : 300003
+        }
+      }, {
+        "uid" : "87fb986aebcb6377",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/87fb986aebcb6377",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626236228226,
+          "stop" : 1626236528230,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "b91896e2a9372fd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/b91896e2a9372fd",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626199524494,
+          "stop" : 1626199824497,
+          "duration" : 300003
+        }
+      }, {
+        "uid" : "1b9ca2438e39e269",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/1b9ca2438e39e269",
+        "status" : "failed",
+        "statusDetails" : "Error: The new born horse did not display on Stable page",
+        "time" : {
+          "start" : 1619097291574,
+          "stop" : 1619097293988,
+          "duration" : 2414
+        }
+      }, {
+        "uid" : "f4f2f294dedae4ed",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/f4f2f294dedae4ed",
+        "status" : "failed",
+        "statusDetails" : "Error: The Profile Icon or My Stable Page is not present",
+        "time" : {
+          "start" : 1618495770450,
+          "stop" : 1618495860563,
+          "duration" : 90113
+        }
+      }, {
+        "uid" : "34ebfc801a0cbaad",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/34ebfc801a0cbaad",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616248756043,
+          "stop" : 1616248876046,
+          "duration" : 120003
+        }
+      }, {
+        "uid" : "ec2948fb01c10506",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/ec2948fb01c10506",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1615904381114,
+          "stop" : 1615904501116,
+          "duration" : 120002
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2e8952d86774cd89.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,76 @@
+{
+  "uid" : "8da2dfea161eec3",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Check mail inbox to get magic link",
+  "historyId" : "c7d5e7e3716ae7e4483842afceaca539",
+  "time" : {
+    "start" : 1627627089237,
+    "stop" : 1627627090724,
+    "duration" : 1487
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5834db265e1a4dcb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/5834db265e1a4dcb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627585502265,
+          "stop" : 1627585503829,
+          "duration" : 1564
+        }
+      }, {
+        "uid" : "9e72e4e75c7ae7ce",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/9e72e4e75c7ae7ce",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read property 'id' of undefined",
+        "time" : {
+          "start" : 1626609969768,
+          "stop" : 1626609971284,
+          "duration" : 1516
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8da2dfea161eec3.json",
+  "parameterValues" : [ ]
+}
