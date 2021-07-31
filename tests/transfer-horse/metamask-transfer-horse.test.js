@@ -62,33 +62,20 @@ describe("Transfer horse to other wallet address - Logging with Metamask", () =>
   test("Open ZedRun page and click Connnect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
     zedRunPage = new LoginPage(newPageInstance);
-    await zedRunPage.navigate();
-    await zedRunPage.clickOnStartButton();
-
-    metamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      CONNECT_METAMASK
-    );
-    metamaskNotificationPage = new MetamaskNotificationPage(
-      metamaskNotificationInstance
-    );
-
-    await metamaskNotificationPage.waitForLoadState();
-    await metamaskNotificationPage.clickOnNextButton();
-    await metamaskNotificationPage.clickOnConnectButton();
-    await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
+        await zedRunPage.navigate();
+        await zedRunPage.clickOnStartButton();
+        metamaskNotificationInstance = await metamaskFactory.clickNewPage(
+          newPageInstance,
+          CONNECT_METAMASK
+        );
+        metamaskNotificationPage = new MetamaskNotificationPage(
+          metamaskNotificationInstance
+        );
+        await metamaskNotificationPage.waitForLoadState();
+        await metamaskNotificationPage.clickOnNextButton();
+        await metamaskNotificationPage.clickOnConnectButton();
+        await metamaskNotificationPage.clickOnSignButton();
+        await metamaskNotificationPage.waitForCloseEvent();
   });
 
   test("Wait until homepage is loading", async () => {

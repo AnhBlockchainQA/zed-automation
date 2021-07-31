@@ -1,4 +1,4 @@
 module.exports = {
-    PAID_RACE_LINK: "https://goerli-test.zed.run/race/Y7P5dw9",
+    PAID_RACE_LINK: "https://goerli-test.zed.run/race/b9dhbV5m",
     FREE_RACE_LINK: ""
 }

@@ -15,6 +15,10 @@ class RacingPage {
         this.page.setDefaultTimeout(30000);
     }
 
+    async reloadPage(){
+        await this.page.reload();
+    }
+
     async bringToFront(){
         await this.page.bringToFront();
     }
@@ -76,7 +80,7 @@ class RacingPage {
 
         const size = await this.page.evaluate((locator) => {
             return document.querySelectorAll(locator).length;
-        }, listGateElement);
+        }, OPEN_GATE_LIST);
         console.log("Number of Gate are opening", size);
 
         for (let i = 2; i <= size + 1; i++) {
@@ -101,13 +105,25 @@ class RacingPage {
         console.log(
             `--- Zed Run Automation Framework: Select the open gate ${index} and add the racehorse ---`
         );
-
+        await this.page.waitForLoadState();
         await this.page.click(
             `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='${index}']`
         );
+        // Scroll to 5th element, to load more horses
+        // We avoid to select first 5th horses since it could be duplicated
+        for(let i = 1; i <= 3; i++){
+            await this.page.waitForSelector(`.horse-card:nth-child(${5 * i})`, {timeout: 0});
+            await this.page.evaluate(locator => {
+                 document.querySelector(locator).scrollIntoView(true, {behavior: 'smooth'});
+            },`.horse-card:nth-child(${5 * i})`);
+            await this.page.waitForLoadState();
+        }
+        await this.page.waitForSelector(`.horse-card:nth-child(${index})`, {timeout: 0});
         await this.page.waitForLoadState();
-        await this.page.hover(`.horse-infos`);
-        await this.page.click('text="Enter"');
+        await this.page.hover(`.horse-card:nth-child(${index}) .horse-infos`);
+        await this.page.evaluate(locator => {
+            document.querySelector(locator).click();
+         },`.horse-card:nth-child(${index}) .horse-infos button`);
         await this.page.waitForLoadState();
     }
 

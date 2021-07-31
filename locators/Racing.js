@@ -15,4 +15,5 @@ module.exports = {
     CUSTOM_GATE_WITH_INDEX: ".buy-in-content .pick-gate .gate-group .gate-btn:nth-child(${i})",
     CUSTOM_CLASS_BUTTON: "//div[@class='open-races']//div[@class='race-filters']/div[descendant::text()='${name}']//label",
     AVAILABLE_HORSES_LIST : ".select-for-nomination-content .select-for-nomination-form .section-content .horse-card",
+    TAKEN_GATES_LIST: ".race-horse-list .list-content .racehorse-row",
 };    
