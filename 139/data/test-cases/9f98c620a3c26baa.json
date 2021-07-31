@@ -1,0 +1,158 @@
+{
+  "uid" : "9f98c620a3c26baa",
+  "name" : "Check that avatar is shown then click on Breeding link",
+  "fullName" : "Generate stud horse when logging in with magic link.Check that avatar is shown then click on Breeding link",
+  "historyId" : "c47c7e071ce634abe00ba264146490b5",
+  "time" : {
+    "start" : 1627738961658,
+    "stop" : 1627739007260,
+    "duration" : 45602
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForLoadState: Timeout 45000ms exceeded.\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: page.waitForLoadState: Timeout 45000ms exceeded.\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:150:13\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:28)\n                    at HomePage.waitForLoadState (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:147:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/stud-service/mail-stud-generate-horse.test.js:72:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that avatar is shown then click on Breeding link"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 6,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "d541529752a2ac9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/d541529752a2ac9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627623072002,
+          "stop" : 1627623072575,
+          "duration" : 573
+        }
+      }, {
+        "uid" : "4631326c88107806",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/4631326c88107806",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627581824823,
+          "stop" : 1627581825255,
+          "duration" : 432
+        }
+      }, {
+        "uid" : "9ac94bb85605573b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/9ac94bb85605573b",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626603929313,
+          "stop" : 1626603974365,
+          "duration" : 45052
+        }
+      }, {
+        "uid" : "207cbb06c48aa8d9",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/207cbb06c48aa8d9",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626603345414,
+          "stop" : 1626603390465,
+          "duration" : 45051
+        }
+      }, {
+        "uid" : "7483778761007f1e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/7483778761007f1e",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626234983176,
+          "stop" : 1626235028205,
+          "duration" : 45029
+        }
+      }, {
+        "uid" : "684ad64061267391",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/684ad64061267391",
+        "status" : "failed",
+        "statusDetails" : "Error: Element is not present yet!",
+        "time" : {
+          "start" : 1626198279391,
+          "stop" : 1626198324469,
+          "duration" : 45078
+        }
+      }, {
+        "uid" : "214300819e7439ca",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/214300819e7439ca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619096091086,
+          "stop" : 1619096091553,
+          "duration" : 467
+        }
+      }, {
+        "uid" : "e7a50c487d062c94",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/e7a50c487d062c94",
+        "status" : "failed",
+        "statusDetails" : "Error: Accept button is not present or not clickable",
+        "time" : {
+          "start" : 1618495245275,
+          "stop" : 1618495290422,
+          "duration" : 45147
+        }
+      }, {
+        "uid" : "99c15308382b60e4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/99c15308382b60e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616248246611,
+          "stop" : 1616248275990,
+          "duration" : 29379
+        }
+      }, {
+        "uid" : "8088461ac8eba37e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/8088461ac8eba37e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615903864884,
+          "stop" : 1615903901072,
+          "duration" : 36188
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9f98c620a3c26baa.json",
+  "parameterValues" : [ ]
+}

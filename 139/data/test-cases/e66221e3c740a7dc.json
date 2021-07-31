@@ -1,0 +1,170 @@
+{
+  "uid" : "e66221e3c740a7dc",
+  "name" : "Validate the component displays on Home Page",
+  "fullName" : "Do the smoke test to validate the Zed Run works well when logged by Email.Validate the component displays on Home Page",
+  "historyId" : "8d08013babc7ff9800914e2aab91c10c",
+  "time" : {
+    "start" : 1627738291342,
+    "stop" : 1627738302372,
+    "duration" : 11030
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: The Horse On Sale does not display as expected",
+  "statusTrace" : "Error: The Horse On Sale does not display as expected\n                    at HomePage.validateHorseOnSaleSection (/home/runner/work/zed-automation/zed-automation/pages/HomePage.js:319:19)\n                    at /home/runner/work/zed-automation/zed-automation/tests/smoke-test/smoke-test-email.test.js:93:9\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testClass",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate the component displays on Home Page"
+  }, {
+    "name" : "package",
+    "value" : "Do the smoke test to validate the Zed Run works well when logged by Email"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 9,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 12
+      },
+      "items" : [ {
+        "uid" : "2fdafa4ab637ceff",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/2fdafa4ab637ceff",
+        "status" : "failed",
+        "statusDetails" : "Error: The Horse On Sale does not display as expected",
+        "time" : {
+          "start" : 1627622730466,
+          "stop" : 1627622741588,
+          "duration" : 11122
+        }
+      }, {
+        "uid" : "239296ca1a193852",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/239296ca1a193852",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1627580967499,
+          "stop" : 1627581012545,
+          "duration" : 45046
+        }
+      }, {
+        "uid" : "b1eed0efc797b165",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/b1eed0efc797b165",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626602756779,
+          "stop" : 1626602801799,
+          "duration" : 45020
+        }
+      }, {
+        "uid" : "b522733a2d181da1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/b522733a2d181da1",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626602472271,
+          "stop" : 1626602517298,
+          "duration" : 45027
+        }
+      }, {
+        "uid" : "cf1f0c3ff6c20c1b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/cf1f0c3ff6c20c1b",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626233810076,
+          "stop" : 1626233855116,
+          "duration" : 45040
+        }
+      }, {
+        "uid" : "2f4abc419c8076ca",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/2f4abc419c8076ca",
+        "status" : "failed",
+        "statusDetails" : "Error: Cannot navigate to Home Page",
+        "time" : {
+          "start" : 1626197106064,
+          "stop" : 1626197151112,
+          "duration" : 45048
+        }
+      }, {
+        "uid" : "3cf81f837eed8476",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/3cf81f837eed8476",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095799131,
+          "stop" : 1619095800187,
+          "duration" : 1056
+        }
+      }, {
+        "uid" : "14f14f84dd6fb9c8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/14f14f84dd6fb9c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618494977489,
+          "stop" : 1618494979057,
+          "duration" : 1568
+        }
+      }, {
+        "uid" : "4f7cdfb3ce109951",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/4f7cdfb3ce109951",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616247892044,
+          "stop" : 1616247903522,
+          "duration" : 11478
+        }
+      }, {
+        "uid" : "9ae2da0336058b13",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/9ae2da0336058b13",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615903579201,
+          "stop" : 1615903580289,
+          "duration" : 1088
+        }
+      }, {
+        "uid" : "268ba21b0b8f2b17",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/268ba21b0b8f2b17",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Discord widget section display",
+        "time" : {
+          "start" : 1615783902781,
+          "stop" : 1615783903876,
+          "duration" : 1095
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e66221e3c740a7dc.json",
+  "parameterValues" : [ ]
+}

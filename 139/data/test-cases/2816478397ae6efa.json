@@ -1,0 +1,154 @@
+{
+  "uid" : "2816478397ae6efa",
+  "name" : "Check that we can not search this horse anymore",
+  "fullName" : "Transfer horse to other wallet address - Logging with Metamask.Check that we can not search this horse anymore",
+  "historyId" : "237a78daccdf5f668d3e05dba73514c",
+  "time" : {
+    "start" : 1627738351637,
+    "stop" : 1627738358550,
+    "duration" : 6913
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check that we can not search this horse anymore"
+  }, {
+    "name" : "package",
+    "value" : "Transfer horse to other wallet address - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "31f38c047b96fb9e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/31f38c047b96fb9e",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1627622005293,
+          "stop" : 1627622305299,
+          "duration" : 300006
+        }
+      }, {
+        "uid" : "11ffce3ceb1a3f72",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/11ffce3ceb1a3f72",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1627580131311,
+          "stop" : 1627580431317,
+          "duration" : 300006
+        }
+      }, {
+        "uid" : "68d12518edbf50db",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/68d12518edbf50db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626602298828,
+          "stop" : 1626602304147,
+          "duration" : 5319
+        }
+      }, {
+        "uid" : "c285e1a053ac08ee",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/c285e1a053ac08ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1626602011225,
+          "stop" : 1626602018129,
+          "duration" : 6904
+        }
+      }, {
+        "uid" : "4fae4520fe2c96db",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/4fae4520fe2c96db",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626232520614,
+          "stop" : 1626232820621,
+          "duration" : 300007
+        }
+      }, {
+        "uid" : "c3ae67caeb545179",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/c3ae67caeb545179",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626195816829,
+          "stop" : 1626196116836,
+          "duration" : 300007
+        }
+      }, {
+        "uid" : "a553d384b6f0ae2d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/a553d384b6f0ae2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619095489852,
+          "stop" : 1619095496516,
+          "duration" : 6664
+        }
+      }, {
+        "uid" : "1179f2421e32707b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/1179f2421e32707b",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1618494772983,
+          "stop" : 1618494813027,
+          "duration" : 40044
+        }
+      }, {
+        "uid" : "7f8480ebfb628b98",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/7f8480ebfb628b98",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1616247635389,
+          "stop" : 1616247675441,
+          "duration" : 40052
+        }
+      }, {
+        "uid" : "66c38c756a29a6e7",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/66c38c756a29a6e7",
+        "status" : "failed",
+        "statusDetails" : "Error: User avatar is not present",
+        "time" : {
+          "start" : 1615903324166,
+          "stop" : 1615903364218,
+          "duration" : 40052
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2816478397ae6efa.json",
+  "parameterValues" : [ ]
+}

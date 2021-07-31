@@ -1,0 +1,163 @@
+{
+  "uid" : "d97a733835ded9c",
+  "name" : "Check the detail payment",
+  "fullName" : "Purchase horse with ETH - Logging with Metamask.Check the detail payment",
+  "historyId" : "54f70a16c2db280e99294df2517cf4c3",
+  "time" : {
+    "start" : 1627734989155,
+    "stop" : 1627735169174,
+    "duration" : 180019
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutError: page.waitForLoadState: Timeout 60000ms exceeded.\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+  "statusTrace" : "TimeoutError: page.waitForLoadState: Timeout 60000ms exceeded.\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:49:51\n                    at Waiter.waitForPromise (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/waiter.js:57:28)\n                    at /home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/frame.js:150:13\n                    at Frame._wrapApiCall (/home/runner/work/zed-automation/zed-automation/node_modules/playwright/lib/client/channelOwner.js:77:28)\n                    at ActivityPage.mouseOverFirstStatementInfo (/home/runner/work/zed-automation/zed-automation/pages/ActivityPage.js:68:5)\n                    at /home/runner/work/zed-automation/zed-automation/tests/purchase-horse/metamask-purchase-horse-with-eth.test.js:129:5\n                    at Object.<anonymous> (/home/runner/work/zed-automation/zed-automation/node_modules/jest-retries/src/retry.js:32:17)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check the detail payment"
+  }, {
+    "name" : "package",
+    "value" : "Purchase horse with ETH - Logging with Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 11,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "43924db7ac82f64a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/43924db7ac82f64a",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1627618420190,
+          "stop" : 1627618435220,
+          "duration" : 15030
+        }
+      }, {
+        "uid" : "f9dd9438bfd4a15f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/f9dd9438bfd4a15f",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1627576211243,
+          "stop" : 1627576226270,
+          "duration" : 15027
+        }
+      }, {
+        "uid" : "ecfb915a5b0eecfd",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/ecfb915a5b0eecfd",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626600338403,
+          "stop" : 1626600353448,
+          "duration" : 15045
+        }
+      }, {
+        "uid" : "b94ed7d1bca331a8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/b94ed7d1bca331a8",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626600047151,
+          "stop" : 1626600062181,
+          "duration" : 15030
+        }
+      }, {
+        "uid" : "f95b535557ea823b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/f95b535557ea823b",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626228696612,
+          "stop" : 1626228711636,
+          "duration" : 15024
+        }
+      }, {
+        "uid" : "c3e05afd352b7994",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/c3e05afd352b7994",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1626192287204,
+          "stop" : 1626192302231,
+          "duration" : 15027
+        }
+      }, {
+        "uid" : "8ffc3c5c5d5ae828",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/8ffc3c5c5d5ae828",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\" to be visible\n                ============================================================\n                Note: use DEBUG=pw:api environment variable to capture Playwright logs.",
+        "time" : {
+          "start" : 1619094192324,
+          "stop" : 1619094207359,
+          "duration" : 15035
+        }
+      }, {
+        "uid" : "98dc5c65a7eef14d",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/98dc5c65a7eef14d",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618493578816,
+          "stop" : 1618493698820,
+          "duration" : 120004
+        }
+      }, {
+        "uid" : "f7cdc98a5fb7e5a4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/f7cdc98a5fb7e5a4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616246380703,
+          "stop" : 1616246500705,
+          "duration" : 120002
+        }
+      }, {
+        "uid" : "16d2616f76f25966",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/16d2616f76f25966",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.hover: Timeout 2000ms exceeded.\n                =========================== logs ===========================\n                waiting for selector \".page-content.activity .activity .activity-content .activity-row:nth-child(1) .statement\"\n                  selector resolved to visible <div class=\"primary-text statement false\">…</div>\n                attempting hover action\n                  waiting for element to be visible and not moving\n                  element is visible and does not move\n                  scrolling into view if needed\n                  done scrolling\n                  checking that element receives pointer events at (490.51,16.92)\n                  <a target=\"_blank\" href=\"https://announcekit.co/zed…>…</a> intercepts pointer events\n                retrying hover action, attempt #1\n                  waiting for element to be visible and not moving\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1615902369755,
+          "stop" : 1615902402464,
+          "duration" : 32709
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d97a733835ded9c.json",
+  "parameterValues" : [ ]
+}

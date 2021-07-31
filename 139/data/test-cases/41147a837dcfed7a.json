@@ -1,0 +1,93 @@
+{
+  "uid" : "41147a837dcfed7a",
+  "name" : "Select a racehorses to add into the paid entry racing",
+  "fullName" : "Paid racing with fee racing when logged by Magic Link.Select a racehorses to add into the paid entry racing",
+  "historyId" : "dcc8d62613fa2447cc245fe0eba9350d",
+  "time" : {
+    "start" : 1627742633182,
+    "stop" : 1627742666530,
+    "duration" : 33348
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: There is no Confirm display as expected",
+  "statusTrace" : "Error: There is no Confirm display as expected\n                    at RacingPage.clickConfirmButton (/home/runner/work/zed-automation/zed-automation/pages/RacingPage.js:361:19)\n                    at runMicrotasks (<anonymous>)\n                    at runNextTicks (internal/process/task_queues.js:62:5)\n                    at processImmediate (internal/timers.js:434:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Select a racehorses to add into the paid entry racing"
+  }, {
+    "name" : "package",
+    "value" : "Paid racing with fee racing when logged by Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "ae2a36c4faf3ecf5",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/ae2a36c4faf3ecf5",
+        "status" : "failed",
+        "statusDetails" : "ReferenceError: listGateElement is not defined",
+        "time" : {
+          "start" : 1627627364177,
+          "stop" : 1627627365229,
+          "duration" : 1052
+        }
+      }, {
+        "uid" : "5b63400511fb942c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/5b63400511fb942c",
+        "status" : "failed",
+        "statusDetails" : "Error: There is no Confirm display as expected",
+        "time" : {
+          "start" : 1627585777394,
+          "stop" : 1627585810336,
+          "duration" : 32942
+        }
+      }, {
+        "uid" : "3095c62621a1f1bb",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/3095c62621a1f1bb",
+        "status" : "failed",
+        "statusDetails" : "Error: Racing link is not present or clickable",
+        "time" : {
+          "start" : 1626610271627,
+          "stop" : 1626610316687,
+          "duration" : 45060
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "41147a837dcfed7a.json",
+  "parameterValues" : [ ]
+}

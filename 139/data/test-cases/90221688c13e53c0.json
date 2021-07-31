@@ -1,0 +1,220 @@
+{
+  "uid" : "90221688c13e53c0",
+  "name" : "Open new browser with magic link",
+  "fullName" : "Withdraw from ZED balance by logging in with magic link.Open new browser with magic link",
+  "historyId" : "c464f31c6ebbf10200617f5ad890f74e",
+  "time" : {
+    "start" : 1627743001783,
+    "stop" : 1627743002590,
+    "duration" : 807
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testClass",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Open new browser with magic link"
+  }, {
+    "name" : "package",
+    "value" : "Withdraw from ZED balance by logging in with magic link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 8,
+        "unknown" : 0,
+        "total" : 18
+      },
+      "items" : [ {
+        "uid" : "d10125f3f58d3f29",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/d10125f3f58d3f29",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627627702416,
+          "stop" : 1627627703454,
+          "duration" : 1038
+        }
+      }, {
+        "uid" : "3f632e81b71d9f57",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/3f632e81b71d9f57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1627586308220,
+          "stop" : 1627586309182,
+          "duration" : 962
+        }
+      }, {
+        "uid" : "8fe134e028168a3e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/8fe134e028168a3e",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626611823072,
+          "stop" : 1626611823507,
+          "duration" : 435
+        }
+      }, {
+        "uid" : "e57cc1086554c80a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/e57cc1086554c80a",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626611210606,
+          "stop" : 1626611210962,
+          "duration" : 356
+        }
+      }, {
+        "uid" : "61356394fab8a123",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/61356394fab8a123",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626243753152,
+          "stop" : 1626243753445,
+          "duration" : 293
+        }
+      }, {
+        "uid" : "acbc5bbce3371934",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/acbc5bbce3371934",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1626207057975,
+          "stop" : 1626207058451,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "65d187d3c08ed5cc",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/65d187d3c08ed5cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1619099709740,
+          "stop" : 1619099710665,
+          "duration" : 925
+        }
+      }, {
+        "uid" : "34cfc8813a9d5b55",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/34cfc8813a9d5b55",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618497700464,
+          "stop" : 1618497702149,
+          "duration" : 1685
+        }
+      }, {
+        "uid" : "bfa3611a3b5d5a4e",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/bfa3611a3b5d5a4e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1616249868111,
+          "stop" : 1616249890873,
+          "duration" : 22762
+        }
+      }, {
+        "uid" : "fbaf27609de5a9c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/fbaf27609de5a9c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615905340012,
+          "stop" : 1615905350631,
+          "duration" : 10619
+        }
+      }, {
+        "uid" : "eaa786ad50ff71e3",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/128//#testresult/eaa786ad50ff71e3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615786391826,
+          "stop" : 1615786402545,
+          "duration" : 10719
+        }
+      }, {
+        "uid" : "cbe05245a975aae4",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/127//#testresult/cbe05245a975aae4",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1613714017647,
+          "stop" : 1613714137650,
+          "duration" : 120003
+        }
+      }, {
+        "uid" : "2c76e7d28341d4de",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/126//#testresult/2c76e7d28341d4de",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1613031299342,
+          "stop" : 1613031299610,
+          "duration" : 268
+        }
+      }, {
+        "uid" : "d2486e6b78c0faa6",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/125//#testresult/d2486e6b78c0faa6",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612408304187,
+          "stop" : 1612408304414,
+          "duration" : 227
+        }
+      }, {
+        "uid" : "b4481bdd2ab645e8",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/123//#testresult/b4481bdd2ab645e8",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1612275641811,
+          "stop" : 1612275914048,
+          "duration" : 272237
+        }
+      }, {
+        "uid" : "828f9310ae8d4d78",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/124//#testresult/828f9310ae8d4d78",
+        "status" : "failed",
+        "statusDetails" : "TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.\n                =========================== logs ===========================\n                waiting for navigation until \"load\"\n                ============================================================\n                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.",
+        "time" : {
+          "start" : 1612275584181,
+          "stop" : 1612275856430,
+          "duration" : 272249
+        }
+      }, {
+        "uid" : "2386c217903bb90c",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/122//#testresult/2386c217903bb90c",
+        "status" : "failed",
+        "statusDetails" : "Error: Url is not valid or network timeout while loading ",
+        "time" : {
+          "start" : 1612172441475,
+          "stop" : 1612172441752,
+          "duration" : 277
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "90221688c13e53c0.json",
+  "parameterValues" : [ ]
+}

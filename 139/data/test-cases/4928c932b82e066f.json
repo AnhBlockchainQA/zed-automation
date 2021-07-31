@@ -1,0 +1,157 @@
+{
+  "uid" : "4928c932b82e066f",
+  "name" : "Go to Stable page and verify there is a new horse",
+  "fullName" : "Generate stud horse when logging in Metamask.Go to Stable page and verify there is a new horse",
+  "historyId" : "c528db265a11f8129f280ba9f483e890",
+  "time" : {
+    "start" : 1627736984947,
+    "stop" : 1627736985934,
+    "duration" : 987
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testClass",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "testMethod",
+    "value" : "Go to Stable page and verify there is a new horse"
+  }, {
+    "name" : "package",
+    "value" : "Generate stud horse when logging in Metamask"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 11
+      },
+      "items" : [ {
+        "uid" : "e2e7d10620007800",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/138//#testresult/e2e7d10620007800",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1627620040312,
+          "stop" : 1627620340317,
+          "duration" : 300005
+        }
+      }, {
+        "uid" : "9b612249e90f7660",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/137//#testresult/9b612249e90f7660",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1627577812899,
+          "stop" : 1627578112903,
+          "duration" : 300004
+        }
+      }, {
+        "uid" : "af96e3e02d21981b",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/136//#testresult/af96e3e02d21981b",
+        "status" : "failed",
+        "statusDetails" : "Error: The new born horse did not display on Stable page",
+        "time" : {
+          "start" : 1626602167173,
+          "stop" : 1626602168416,
+          "duration" : 1243
+        }
+      }, {
+        "uid" : "23d897beb0efa54f",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/135//#testresult/23d897beb0efa54f",
+        "status" : "failed",
+        "statusDetails" : "Error: The new born horse did not display on Stable page",
+        "time" : {
+          "start" : 1626601876536,
+          "stop" : 1626601877903,
+          "duration" : 1367
+        }
+      }, {
+        "uid" : "6af6bf55fc12339a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/134//#testresult/6af6bf55fc12339a",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626230297657,
+          "stop" : 1626230597660,
+          "duration" : 300003
+        }
+      }, {
+        "uid" : "4483914c372be856",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/133//#testresult/4483914c372be856",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1626193889828,
+          "stop" : 1626194189831,
+          "duration" : 300003
+        }
+      }, {
+        "uid" : "5d6ee6d94cc7557a",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/132//#testresult/5d6ee6d94cc7557a",
+        "status" : "failed",
+        "statusDetails" : "Error: The new born horse did not display on Stable page",
+        "time" : {
+          "start" : 1619095441692,
+          "stop" : 1619095443184,
+          "duration" : 1492
+        }
+      }, {
+        "uid" : "7f1f978fa0d4e565",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/131//#testresult/7f1f978fa0d4e565",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1618494444202,
+          "stop" : 1618494564207,
+          "duration" : 120005
+        }
+      }, {
+        "uid" : "5f5366bc970e13e1",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/130//#testresult/5f5366bc970e13e1",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1616247028482,
+          "stop" : 1616247148486,
+          "duration" : 120004
+        }
+      }, {
+        "uid" : "98950e24fbc69824",
+        "reportUrl" : "https://letuananhit1405.github.io/zed-automation/129//#testresult/98950e24fbc69824",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 120000 ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1615902917773,
+          "stop" : 1615903037776,
+          "duration" : 120003
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4928c932b82e066f.json",
+  "parameterValues" : [ ]
+}

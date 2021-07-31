@@ -1,0 +1,44 @@
+{
+  "uid" : "933b3c442f5276b0",
+  "name" : "Check mail inbox to get magic link",
+  "fullName" : "Free racing with Magic Link.Check mail inbox to get magic link",
+  "historyId" : "47a9b54cc862ce5539de61883d0bcfb6",
+  "time" : {
+    "start" : 1627743319645,
+    "stop" : 1627743321177,
+    "duration" : 1532
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testClass",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "testMethod",
+    "value" : "Check mail inbox to get magic link"
+  }, {
+    "name" : "package",
+    "value" : "Free racing with Magic Link"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "933b3c442f5276b0.json",
+  "parameterValues" : [ ]
+}
