@@ -5,9 +5,9 @@ const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
 const {
-  FIRST_SEED_PHRASE,
-  FIRST_PASSWORD,
-  FIRST_CONFIRM_PASSWORD
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD
 } = require("../../data/env");
 const { HomePage } = require("../../pages/HomePage");
 const { RacingPage } = require("../../pages/RacingPage");
@@ -63,9 +63,9 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
     await metamaskPage.clickOnIAgreeButton();
-    await metamaskPage.typeSeedPhase(FIRST_SEED_PHRASE);
-    await metamaskPage.typeNewPassword(FIRST_PASSWORD);
-    await metamaskPage.typeConfirmPassword(FIRST_CONFIRM_PASSWORD);
+    await metamaskPage.typeSeedPhase(SEED_PHRASE);
+    await metamaskPage.typeNewPassword(PASSWORD);
+    await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
     await metamaskPage.checkTermsAndConditionCheckBox();
     await metamaskPage.clickImportButton();
     await metamaskPage.clickOnAllDoneButton();
@@ -114,23 +114,23 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
 
   test("Assign horse to paid races", async () => {
     await racingPage.waitForLoadState();
-    // for (let i = 0; i < numberGateOpening.length; i++) {
-    //   await racingPage.waitForLoadState();
-    //   await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
-    //   await racingPage.waitForLoadState();
-    //   confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-    //     newPageInstance,
-    //     ADD_RACE_CONFIRM_BUTTON
-    //   );
-    //   confirmMetamaskNotificationPage = new MetamaskNotificationPage(
-    //     confirmMetamaskNotificationInstance
-    //   );
-    //   await confirmMetamaskNotificationPage.waitForLoadState();
-    //   await confirmMetamaskNotificationPage.clickOnSignButton();
-    //   await confirmMetamaskNotificationPage.waitForCloseEvent();
-    // }
-    // await racingPage.waitForLoadState();
-    // await racingPage.validateRacingEventAfterInNextToRun(getEventName);
+    for (let i = 0; i < numberGateOpening.length; i++) {
+      await racingPage.waitForLoadState();
+      await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i + 3]);
+      await racingPage.waitForLoadState();
+      confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+        newPageInstance,
+        ADD_RACE_CONFIRM_BUTTON
+      );
+      confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+        confirmMetamaskNotificationInstance
+      );
+      await confirmMetamaskNotificationPage.waitForLoadState();
+      await confirmMetamaskNotificationPage.clickOnSignButton();
+      await confirmMetamaskNotificationPage.waitForCloseEvent();
+    }
+    await racingPage.waitForLoadState();
+    await racingPage.validateRacingEventAfterInNextToRun(getEventName);
   });
 });
 

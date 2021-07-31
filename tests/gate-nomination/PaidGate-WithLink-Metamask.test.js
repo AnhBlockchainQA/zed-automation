@@ -5,18 +5,14 @@ const {
   MetamaskNotificationPage,
 } = require("../../pages/MetamaskNotification");
 const {
-  FIRST_SEED_PHRASE,
-  FIRST_PASSWORD,
-  FIRST_CONFIRM_PASSWORD
+  SEED_PHRASE,
+  PASSWORD,
+  CONFIRM_PASSWORD,
 } = require("../../data/env");
-const { HomePage } = require("../../pages/HomePage");
 const { RacingPage } = require("../../pages/RacingPage");
 const test = require("jest-retries");
-const { METAMASK_LOGIN, MAIL_LOGIN } = require("../../data/env");
-const stringUtils = require("../../utils/api/stringUtils");
 const {
   CONNECT_METAMASK,
-  AUTHENTICATE_BUTTON,
 } = require("../../locators/ZedRun");
 const { ADD_RACE_CONFIRM_BUTTON } = require("../../locators/Payment");
 
@@ -52,9 +48,9 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
     await metamaskPage.clickOnGetStartedButton();
     await metamaskPage.clickOnImportWalletButton();
     await metamaskPage.clickOnIAgreeButton();
-    await metamaskPage.typeSeedPhase(FIRST_SEED_PHRASE);
-    await metamaskPage.typeNewPassword(FIRST_PASSWORD);
-    await metamaskPage.typeConfirmPassword(FIRST_CONFIRM_PASSWORD);
+    await metamaskPage.typeSeedPhase(SEED_PHRASE);
+    await metamaskPage.typeNewPassword(PASSWORD);
+    await metamaskPage.typeConfirmPassword(CONFIRM_PASSWORD);
     await metamaskPage.checkTermsAndConditionCheckBox();
     await metamaskPage.clickImportButton();
     await metamaskPage.clickOnAllDoneButton();
@@ -65,9 +61,8 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
 
   test("Open ZedRun page and click Connect Metamask", async () => {
     newPageInstance = await metamaskFactory.newPage();
-    console.log(">newPageInstance>>>");
     zedRunPage = new LoginPage(newPageInstance);
-    await zedRunPage.navigate();
+    await zedRunPage.navigate_existing_racing_url(PAID_RACE_LINK);
     await zedRunPage.clickOnStartButton();
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
@@ -83,38 +78,30 @@ describe("Paid racing with fee racing when logged by Meta Mask", () => {
     await metamaskNotificationPage.waitForCloseEvent();
   });
 
-  test("Open new tab and go to the paid race link", async () => {
-    pageInstance = await metamaskFactory.newPage();
-    racingPage = new RacingPage(pageInstance);
-    await racingPage.bringToFront();
-    await racingPage.goToRaceByLink(PAID_RACE_LINK);
-    await racingPage.waitForLoadState();
+  test("Select a racehorses and add into the free racing", async () => {
+    racingPage = new RacingPage(newPageInstance);
     numberGateOpening = await racingPage.getGateOpening();
-    console.log("Gate opening ", numberGateOpening);
-    getEventName = await racingPage.returnEventName();
-    console.log("Selected event name ", getEventName);
-  });
-
-  // test("Assign horse to paid races", async () => {
-    // await racingPage.waitForLoadState();
-    // for (let i = 0; i < numberGateOpening.length; i++) {
-    //   await racingPage.waitForLoadState();
-    //   await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
-    //   await racingPage.waitForLoadState();
-    //   confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-    //     newPageInstance,
-    //     ADD_RACE_CONFIRM_BUTTON
-    //   );
-    //   confirmMetamaskNotificationPage = new MetamaskNotificationPage(
-    //     confirmMetamaskNotificationInstance
-    //   );
-    //   await confirmMetamaskNotificationPage.waitForLoadState();
-    //   await confirmMetamaskNotificationPage.clickOnSignButton();
-    //   await confirmMetamaskNotificationPage.waitForCloseEvent();
-    // }
-    // await racingPage.waitForLoadState();
+    await racingPage.bringToFront();
+    await racingPage.waitForLoadState();
+    for (let i = 0; i < numberGateOpening.length; i++) {
+      await racingPage.waitForLoadState();
+      await racingPage.clickGateNumberAndSelectHorse(numberGateOpening[i]);
+      await racingPage.waitForLoadState();
+      confirmMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
+        newPageInstance,
+        ADD_RACE_CONFIRM_BUTTON
+      );
+      confirmMetamaskNotificationPage = new MetamaskNotificationPage(
+        confirmMetamaskNotificationInstance
+      );
+      await confirmMetamaskNotificationPage.waitForLoadState();
+      await confirmMetamaskNotificationPage.clickOnSignButton();
+      await confirmMetamaskNotificationPage.waitForCloseEvent();
+      await racingPage.waitForLoadState();
+    }
+    await racingPage.waitForLoadState();
     // await racingPage.validateRacingEventAfterInNextToRun(getEventName);
-  // });
+  });
 });
 
 afterAll(async (done) => {
