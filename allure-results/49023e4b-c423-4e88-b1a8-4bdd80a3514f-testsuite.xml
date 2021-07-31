@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627617606975' stop='1627617672386'>
+    <name>Free racing when logged by Meta Mask</name>
+    <title>Free racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1627617606976' status='passed' stop='1627617611073'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627617611073' status='failed' stop='1627617665631'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: Timeout while waiting for event "close"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>TimeoutError: Timeout while waiting for event "close"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at _rejectOn.promise.then (/Users/davidle/zed-automation/node_modules/playwright/lib/client/waiter.js:40:51)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617665631' status='failed' stop='1627617672381'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: The Balance is not present</message>
+                <stack-trace>Error: The Balance is not present
+                    at HomePage.waitUntilBalanceShown (/Users/davidle/zed-automation/pages/HomePage.js:203:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617672381' status='failed' stop='1627617672385'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/davidle/zed-automation/pages/HomePage.js:122:13)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

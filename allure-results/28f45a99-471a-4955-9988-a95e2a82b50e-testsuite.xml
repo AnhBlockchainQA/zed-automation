@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627617570318' stop='1627617585552'>
+    <name>Free racing with Magic Link</name>
+    <title>Free racing with Magic Link</title>
+    <test-cases>
+        <test-case start='1627617570318' status='failed' stop='1627617576720'>
+            <name>Open the existing racing</name>
+            <title>Open the existing racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: listGateElement is not defined</message>
+                <stack-trace>ReferenceError: listGateElement is not defined
+                    at RacingPage.getGateOpening (/Users/davidle/zed-automation/pages/RacingPage.js:79:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617576720' status='failed' stop='1627617584782'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:189:23)
+                    at new LoginPage (/Users/davidle/zed-automation/pages/LoginPage.js:19:15)
+                    at test (/Users/davidle/zed-automation/tests/gate-nomination/add-specific-FreeGate-Email.test.js:42:25)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617584782' status='failed' stop='1627617584796'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Email Option is not present yet!</message>
+                <stack-trace>Error: Email Option is not present yet!
+                    at LoginPage.clickOnEmailOption (/Users/davidle/zed-automation/pages/LoginPage.js:74:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617584796' status='failed' stop='1627617585549'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Url is not valid or network timeout while loading </message>
+                <stack-trace>Error: Url is not valid or network timeout while loading 
+                    at MagicLinkPage.navigate (/Users/davidle/zed-automation/pages/MagicLinkPage.js:20:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617585549' status='failed' stop='1627617585552'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.bringToFront: Target page, context or browser has been closed</message>
+                <stack-trace>page.bringToFront: Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:385:33)
+                    at Page._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Page.bringToFront (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:384:21)
+                    at RacingPage.bringToFront (/Users/davidle/zed-automation/pages/RacingPage.js:127:25)
+                    at test (/Users/davidle/zed-automation/tests/gate-nomination/add-specific-FreeGate-Email.test.js:69:22)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

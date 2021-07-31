@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1626598510196' stop='1626598536483'>
+    <name>Pick horses and add into the entry with fee racing when logged by Meta Mask</name>
+    <title>Pick horses and add into the entry with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1626598510197' status='passed' stop='1626598514430'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1626598514430' status='passed' stop='1626598525496'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1626598525497' status='passed' stop='1626598529124'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1626598529124' status='passed' stop='1626598536483'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

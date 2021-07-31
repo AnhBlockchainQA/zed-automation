@@ -13,5 +13,7 @@ module.exports = {
     ZED_LOGIN_PATH: '/api/v1/users/login',
     AVAILABLE_HORSES_API: 'https://api.dev.zed.run',
     FREE_HORSES_PATH: '/api/v1/races/free/available_race_horses',
-    PAID_HORSES_PATH: '/api/v1/races/paid/available_race_horses'
+    PAID_HORSES_PATH: '/api/v1/races/paid/available_race_horses',
+    PAID_RACES: [2, 3, 4, 5],
+    FREE_RACES: [0, 1]
 }

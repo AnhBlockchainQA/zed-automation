@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1627617547559' stop='1627617569284'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1627617547560' status='passed' stop='1627617547564'>
+            <name>Get token</name>
+            <title>Get token</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627617547564' status='passed' stop='1627617553182'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627617553182' status='passed' stop='1627617566148'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627617566148' status='passed' stop='1627617568264'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1627617568264' status='failed' stop='1627617569283'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: listGateElement is not defined</message>
+                <stack-trace>ReferenceError: listGateElement is not defined
+                    at RacingPage.getGateOpening (/Users/davidle/zed-automation/pages/RacingPage.js:79:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1627617569283' status='passed' stop='1627617569284'>
+            <name>Assign horse to paid races</name>
+            <title>Assign horse to paid races</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1612348979288' stop='1612349034504'>
+    <name>Buy horse with credit card</name>
+    <title>Buy horse with credit card</title>
+    <test-cases>
+        <test-case start='1612348979289' status='passed' stop='1612348984411'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612348984411' status='passed' stop='1612348998946'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612348998946' status='passed' stop='1612349005371'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1612349005371' status='failed' stop='1612349034486'>
+            <name>Process payment by cash</name>
+            <title>Process payment by cash</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:189:23)
+                    at new PaymentPage (/Users/davidle/qa-automationtest/pages/PaymentPage.js:17:15)
+                    at test (/Users/davidle/qa-automationtest/tests/purchase-horse/purchase-horse-cash.test.js:109:19)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1612349034486' status='failed' stop='1612349034503'>
+            <name>Verify that our order is performed</name>
+            <title>Verify that our order is performed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Buy with credit card button is not present or clickable</message>
+                <stack-trace>Error: Buy with credit card button is not present or clickable
+                    at PaymentPage.clickOnBuyWithCreditCardButton (/Users/davidle/qa-automationtest/pages/PaymentPage.js:36:13)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

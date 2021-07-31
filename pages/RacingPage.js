@@ -3,7 +3,7 @@ const {EVENT_LIST_SIZE} = require("../data/env");
 const stringUtils = require("../utils/api/stringUtils");
 const {REGEX} = require("../data/env");
 const {ADD_RACE_CONFIRM_BUTTON} = require("../locators/Payment");
-const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON} = require("../locators/Racing");
+const { RACING_EVENT_INFO, CUSTOM_CLASS_BUTTON, OPEN_GATE_LIST} = require("../locators/Racing");
 const { MetamaskFactory } = require("../utils/browser/metamaskFactory");
 var confirmMetamaskNotificationInstance;
 var metamaskFactory = new MetamaskFactory();
@@ -13,6 +13,14 @@ class RacingPage {
     constructor(page) {
         this.page = page;
         this.page.setDefaultTimeout(30000);
+    }
+
+    async reloadPage(){
+        await this.page.reload();
+    }
+
+    async bringToFront(){
+        await this.page.bringToFront();
     }
 
     async waitUntilRacingEventShown() {
@@ -67,13 +75,12 @@ class RacingPage {
         console.log(
             "--- Zed Run Automation Framework: Wait until the open gates display---"
         );
-        const listGateElement = ".buy-in-content .pick-gate .gate-group .gate-btn";
-        await this.page.waitForSelector(listGateElement, {timeout: 20000});
+        await this.page.waitForSelector(OPEN_GATE_LIST, {timeout: 0});
         let listOfGate = [];
 
         const size = await this.page.evaluate((locator) => {
             return document.querySelectorAll(locator).length;
-        }, listGateElement);
+        }, OPEN_GATE_LIST);
         console.log("Number of Gate are opening", size);
 
         for (let i = 2; i <= size + 1; i++) {
@@ -98,13 +105,25 @@ class RacingPage {
         console.log(
             `--- Zed Run Automation Framework: Select the open gate ${index} and add the racehorse ---`
         );
-
+        await this.page.waitForLoadState();
         await this.page.click(
             `//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='${index}']`
         );
+        // Scroll to 5th element, to load more horses
+        // We avoid to select first 5th horses since it could be duplicated
+        for(let i = 1; i <= 3; i++){
+            await this.page.waitForSelector(`.horse-card:nth-child(${5 * i})`, {timeout: 0});
+            await this.page.evaluate(locator => {
+                 document.querySelector(locator).scrollIntoView(true, {behavior: 'smooth'});
+            },`.horse-card:nth-child(${5 * i})`);
+            await this.page.waitForLoadState();
+        }
+        await this.page.waitForSelector(`.horse-card:nth-child(${index})`, {timeout: 0});
         await this.page.waitForLoadState();
-        await this.page.hover(`.horse-infos`);
-        await this.page.click('text="Enter"');
+        await this.page.hover(`.horse-card:nth-child(${index}) .horse-infos`);
+        await this.page.evaluate(locator => {
+            document.querySelector(locator).click();
+         },`.horse-card:nth-child(${index}) .horse-infos button`);
         await this.page.waitForLoadState();
     }
 
@@ -396,18 +415,22 @@ class RacingPage {
         try{
             console.log(" >>>> Locator : ", locator);
             await this.page.waitForSelector(locator, {timeout: 0});
-            await this.page.evaluate((selector) => {
-                return document.evaluate(
-                    selector,
-                    document,
-                    null,
-                    XPathResult.FIRST_ORDERED_NODE_TYPE,
-                    null
-                ).singleNodeValue.click();
-            }, locator);
+            await this.page.click(locator);
         }catch{
             throw new Error("Selector not found or dettached! Please update your selector");
         }
+    }
+    
+    async goToRaceByLink(url){
+        console.log(
+            "--- Zed Run Automation Framework: Navigate to race event by link ---", url);
+        try{
+            await this.page.goto(url);
+            await this.page.waitForLoadState();
+        }catch{
+            throw new Error('URL is unreachable or incorrect');
+        }  
+
     }
 }
 

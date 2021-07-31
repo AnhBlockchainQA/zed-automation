@@ -1,0 +1,142 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1626762957122' stop='1626763004054'>
+    <name>Generate stud horse when logging in Metamask</name>
+    <title>Generate stud horse when logging in Metamask</title>
+    <test-cases>
+        <test-case start='1626762957122' status='passed' stop='1626762961146'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1626762961146' status='passed' stop='1626762973965'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1626762973965' status='failed' stop='1626763003997'>
+            <name>Check that avatar is shown then click on Breeding link</name>
+            <title>Check that avatar is shown then click on Breeding link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForLoadState: Navigation failed because page was closed!
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: page.waitForLoadState: Navigation failed because page was closed!
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at Frame._setupNavigationWaiter (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:85:70)
+                    at _wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:127:33)
+                    at Frame._wrapApiCall (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.waitForLoadState (/Users/davidle/zed-automation/node_modules/playwright/lib/client/frame.js:126:21)
+                    at _attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:279:60)
+                    at Page._attributeToPage (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.waitForLoadState (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:279:21)
+                    at HomePage.waitForLoadState (/Users/davidle/zed-automation/pages/HomePage.js:147:21)
+                    at test (/Users/davidle/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:98:20)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1626763003997' status='failed' stop='1626763004022'>
+            <name>Select mate horse</name>
+            <title>Select mate horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:189:23)
+                    at new StudServicePage (/Users/davidle/zed-automation/pages/StudServicePage.js:26:15)
+                    at test (/Users/davidle/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:102:23)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/zed-automation/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1626763004022' status='failed' stop='1626763004029'>
+            <name>Select female horse</name>
+            <title>Select female horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: '.page-content.stud .stud-content .accordion-content .panel:nth-child(1) button.panel__label' could not be found on the page.</message>
+                <stack-trace>Error: '.page-content.stud .stud-content .accordion-content .panel:nth-child(1) button.panel__label' could not be found on the page.
+                    at StudServicePage.clickOnSelectedMaleHorseWithIndex (/Users/davidle/zed-automation/pages/StudServicePage.js:72:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1626763004029' status='failed' stop='1626763004038'>
+            <name>Proceed breeding steps</name>
+            <title>Proceed breeding steps</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/zed-automation/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/zed-automation/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/zed-automation/node_modules/playwright/lib/client/page.js:189:23)
+                    at new StudServicePage (/Users/davidle/zed-automation/pages/StudServicePage.js:26:15)
+                    at test (/Users/davidle/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:115:23)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1626763004038' status='failed' stop='1626763004045'>
+            <name>Go to Activity page and check if we breed successfully</name>
+            <title>Go to Activity page and check if we breed successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: '.select-mate  .select-mate-part .female-part .female-content' could not be found on the page.</message>
+                <stack-trace>Error: '.select-mate  .select-mate-part .female-part .female-content' could not be found on the page.
+                    at StudServicePage.clickOnSelectFemaleButton (/Users/davidle/zed-automation/pages/StudServicePage.js:145:29)
+                    at test (/Users/davidle/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:116:27)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1626763004045' status='failed' stop='1626763004054'>
+            <name>Go to Stable page and verify there is a new horse</name>
+            <title>Go to Stable page and verify there is a new horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: '.breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn' could not be found on the page.</message>
+                <stack-trace>Error: '.breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn' could not be found on the page.
+                    at StudServicePage.scrollToBuyCoverButton (/Users/davidle/zed-automation/pages/StudServicePage.js:252:29)
+                    at test (/Users/davidle/zed-automation/tests/stud-service/metamask-stud-generate-horse.test.js:132:27)
+                    at Promise (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/zed-automation/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
