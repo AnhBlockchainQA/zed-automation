@@ -67,7 +67,6 @@ describe("Purchase horse with ETH - Logging with Metamask", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
       CONNECT_METAMASK
@@ -75,23 +74,11 @@ describe("Purchase horse with ETH - Logging with Metamask", () => {
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
     );
-
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
+    await metamaskNotificationPage.clickOnSignButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
   test("Go to Marketplace and select first horse", 1, async () => {

@@ -53,7 +53,6 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
       CONNECT_METAMASK
@@ -61,23 +60,11 @@ describe("Withdraw from ETH balance by logging in with Metamask", () => {
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
     );
-
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
+    await metamaskNotificationPage.clickOnSignButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
   test(

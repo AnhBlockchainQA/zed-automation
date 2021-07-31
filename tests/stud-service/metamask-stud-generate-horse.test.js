@@ -63,7 +63,6 @@ describe("Generate stud horse when logging in Metamask", () => {
     zedRunPage = new LoginPage(newPageInstance);
     await zedRunPage.navigate();
     await zedRunPage.clickOnStartButton();
-
     metamaskNotificationInstance = await metamaskFactory.clickNewPage(
       newPageInstance,
       CONNECT_METAMASK
@@ -71,23 +70,11 @@ describe("Generate stud horse when logging in Metamask", () => {
     metamaskNotificationPage = new MetamaskNotificationPage(
       metamaskNotificationInstance
     );
-
     await metamaskNotificationPage.waitForLoadState();
     await metamaskNotificationPage.clickOnNextButton();
     await metamaskNotificationPage.clickOnConnectButton();
+    await metamaskNotificationPage.clickOnSignButton();
     await metamaskNotificationPage.waitForCloseEvent();
-
-    otherMetamaskNotificationInstance = await metamaskFactory.clickNewPage(
-      newPageInstance,
-      AUTHENTICATE_BUTTON
-    );
-    otherMetamaskNotificationPage = new MetamaskNotificationPage(
-      otherMetamaskNotificationInstance
-    );
-
-    await otherMetamaskNotificationPage.waitForLoadState();
-    await otherMetamaskNotificationPage.clickOnSignButton();
-    await otherMetamaskNotificationPage.waitForCloseEvent();
   });
 
   test("Check that avatar is shown then click on Breeding link", async () => {
