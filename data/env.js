@@ -1,6 +1,7 @@
 module.exports = {
     ZEDRUN_URL: "https://goerli-test.zed.run/",
     ZEDRUN_SPECIFIC_FREE_RACE_URL: "https://goerli-test.zed.run/race/zTn770CI",
+    PAID_RACE_LINK: "https://goerli-test.zed.run/race/ezgYcUcP",
     TEMP_ZEDRUN_URL: "https://zed-pr--pr825-feature-login-flow-dh9pz5v4.web.app/",
     SEED_PHRASE:
         "promote involve unaware today camera major net tail area rule manual humor",

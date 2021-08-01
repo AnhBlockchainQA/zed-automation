@@ -8,6 +8,7 @@ const {
   SEED_PHRASE,
   PASSWORD,
   CONFIRM_PASSWORD,
+  PAID_RACE_LINK,
 } = require("../../data/env");
 const { RacingPage } = require("../../pages/RacingPage");
 const test = require("jest-retries");
@@ -31,7 +32,6 @@ let racingPage;
 var confirmMetamaskNotificationPage;
 var confirmMetamaskNotificationInstance;
 var zedRunApi = require("../../utils/api/zedApi");
-const { PAID_RACE_LINK } = require("../../data/races");
 var className;
 var numberGateOpening;
 var getEventName;
