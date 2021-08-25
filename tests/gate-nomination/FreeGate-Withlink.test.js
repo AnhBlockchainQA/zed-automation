@@ -16,9 +16,9 @@ var racingPage;
 var pageInstance;
 var newPageInstance;
 var homePage;
-const EMAIL = ACCOUNT_LIST.SEVENTH_ACCOUNT.EMAIL;
-const LOGIN = ACCOUNT_LIST.SEVENTH_ACCOUNT.LOGIN;
-const DOMAIN = ACCOUNT_LIST.SEVENTH_ACCOUNT.DOMAIN;
+const EMAIL = ACCOUNT_LIST.FIRST_ACCOUNT.EMAIL;
+const LOGIN = ACCOUNT_LIST.FIRST_ACCOUNT.LOGIN;
+const DOMAIN = ACCOUNT_LIST.FIRST_ACCOUNT.DOMAIN;
 
 beforeAll(async () => {
     pageFactory.removeCache();

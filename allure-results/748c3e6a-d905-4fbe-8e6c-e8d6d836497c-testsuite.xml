@@ -1,0 +1,398 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629723448533' stop='1629723507373'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629723448533' status='passed' stop='1629723454485'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629723454485' status='passed' stop='1629723465087'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629723465087' status='failed' stop='1629723507373'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.hover: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                  selector resolved to visible &lt;div class="horse-infos">…&lt;/div>
+                attempting hover action
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #1
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="md-text bold">Transaction confirmation&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="md-text bold">Transaction confirmation&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                element was detached from the DOM, retrying
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.hover: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                  selector resolved to visible &lt;div class="horse-infos">…&lt;/div>
+                attempting hover action
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #1
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;div class="section-footer">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="md-text bold">Transaction confirmation&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="md-text bold">Transaction confirmation&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,421.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,398.82)
+                  &lt;img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iM…/> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (635,236.82)
+                  &lt;div class="title md-text">Please complete your transaction on MetaMask.&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                element was detached from the DOM, retrying
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:334:33)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.hover (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:333:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:451:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.hover (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:451:21)
+                    at RacingPage.clickGateNumberAndSelectHorse (/Users/davidle/qa-automationtest/pages/RacingPage.js:123:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629091634136' stop='1629091760936'>
+    <name>Free racing when logged by Meta Mask</name>
+    <title>Free racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629091634137' status='passed' stop='1629091638294'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091638294' status='failed' stop='1629091692257'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: Timeout while waiting for event "close"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>TimeoutError: Timeout while waiting for event "close"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at _rejectOn.promise.then (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/waiter.js:40:51)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629091692257' status='passed' stop='1629091720680'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091720680' status='passed' stop='1629091760936'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629262220966' stop='1629262268957'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629262220966' status='passed' stop='1629262225070'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629262225070' status='passed' stop='1629262233157'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629262233157' status='failed' stop='1629262268956'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: Timeout while waiting for event "page"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>TimeoutError: Timeout while waiting for event "page"
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at _rejectOn.promise.then (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/waiter.js:40:51)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

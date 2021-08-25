@@ -1,16 +1,16 @@
 module.exports = {
-    ZEDRUN_URL: "https://goerli-test.zed.run/",
-    ZEDRUN_SPECIFIC_FREE_RACE_URL: "https://goerli-test.zed.run/race/t8rEfGzS",
-    PAID_RACE_LINK: "https://goerli-test.zed.run/race/kkIcwzjZ",
+    ZEDRUN_URL: "https://zed-pr--pr940-hotfix-ledger-suppor-i1cjl0r5.web.app/",
+    ZEDRUN_SPECIFIC_FREE_RACE_URL: "https://zed-pr--pr908-mega-pr-make-racing-vvy0f028.web.app/race/CiloiZXs",
+    PAID_RACE_LINK: "https://goerli-test.zed.run/race/Vglvts4",
     TEMP_ZEDRUN_URL: "https://zed-pr--pr825-feature-login-flow-dh9pz5v4.web.app/",
     SEED_PHRASE:
-        "promote involve unaware today camera major net tail area rule manual humor",
+        "shy unknown cause attract misery laundry false notable tourist angry later smoke",
     SEED_PHRASE_2:
-        "promote involve unaware today camera major net tail area rule manual humor",
+        "frame timber square minimum climb tackle jealous narrow say lamp tennis embrace",
     PASSWORD: "12345678",
     CONFIRM_PASSWORD: "12345678",
     FIRST_SEED_PHRASE_1:
-        "shy unknown cause attract misery laundry false notable tourist angry later smoke",
+        "promote involve unaware today camera major net tail area rule manual humor",
     FIRST_PASSWORD: "12345678",
     FIRST_CONFIRM_PASSWORD: "12345678",
     CARD_NUMBER: "371449635398431",

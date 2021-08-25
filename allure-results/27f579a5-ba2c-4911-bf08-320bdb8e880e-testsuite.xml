@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629208708534' stop='1629208783558'>
+    <name>Paid racing with fee racing when logged by Magic Link</name>
+    <title>Paid racing with fee racing when logged by Magic Link</title>
+    <test-cases>
+        <test-case start='1629208708534' status='passed' stop='1629208721476'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629208721476' status='passed' stop='1629208723389'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629208723389' status='failed' stop='1629208783523'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>Error: page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at Frame._setupNavigationWaiter (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:85:70)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:95:33)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.waitForNavigation (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:93:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:282:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.waitForNavigation (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:282:21)
+                    at MagicLinkPage.waitForNavigation (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:39:21)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-email.test.js:58:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629208783523' status='failed' stop='1629208783548'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:189:23)
+                    at new HomePage (/Users/davidle/qa-automationtest/pages/HomePage.js:34:15)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-email.test.js:66:24)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629208783548' status='failed' stop='1629208783558'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/davidle/qa-automationtest/pages/HomePage.js:122:13)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

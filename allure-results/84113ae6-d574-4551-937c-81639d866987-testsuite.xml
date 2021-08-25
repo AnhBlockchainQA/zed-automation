@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629264480044' stop='1629264523727'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629264480045' status='passed' stop='1629264484564'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629264484564' status='passed' stop='1629264493000'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629264493000' status='failed' stop='1629264523727'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.click: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".section-footer .primary-btn"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.click: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".section-footer .primary-btn"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:257:40)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:256:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:21)
+                    at MetamaskFactory.clickNewPage (/Users/davidle/qa-automationtest/utils/browser/metamaskFactory.js:63:12)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-WithLink.test.js:90:67)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

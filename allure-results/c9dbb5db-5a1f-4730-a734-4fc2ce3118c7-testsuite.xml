@@ -1,0 +1,126 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629092145728' stop='1629092288047'>
+    <name>Free racing with Magic Link</name>
+    <title>Free racing with Magic Link</title>
+    <test-cases>
+        <test-case start='1629092145728' status='failed' stop='1629092287996'>
+            <name>Open the existing racing</name>
+            <title>Open the existing racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".buy-in-content .pick-gate .gate-group .gate-btn" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.waitForSelector: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".buy-in-content .pick-gate .gate-group .gate-btn" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:180:48)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.waitForSelector (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:175:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:215:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.waitForSelector (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:215:21)
+                    at RacingPage.getGateOpening (/Users/davidle/qa-automationtest/pages/RacingPage.js:78:25)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Withlink.test.js:34:45)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629092287996' status='failed' stop='1629092288015'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:189:23)
+                    at new LoginPage (/Users/davidle/qa-automationtest/pages/LoginPage.js:19:15)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Withlink.test.js:42:25)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629092288015' status='failed' stop='1629092288032'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:189:23)
+                    at new LoginPage (/Users/davidle/qa-automationtest/pages/LoginPage.js:19:15)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Withlink.test.js:42:25)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629092288033' status='failed' stop='1629092288041'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Email Option is not present yet!</message>
+                <stack-trace>Error: Email Option is not present yet!
+                    at LoginPage.clickOnEmailOption (/Users/davidle/qa-automationtest/pages/LoginPage.js:74:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629092288042' status='failed' stop='1629092288047'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.bringToFront: Target page, context or browser has been closed</message>
+                <stack-trace>page.bringToFront: Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:385:33)
+                    at Page._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Page.bringToFront (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:384:21)
+                    at RacingPage.bringToFront (/Users/davidle/qa-automationtest/pages/RacingPage.js:143:25)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Withlink.test.js:69:22)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

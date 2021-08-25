@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629091961217' stop='1629092144319'>
+    <name>Free racing with Magic Link</name>
+    <title>Free racing with Magic Link</title>
+    <test-cases>
+        <test-case start='1629091961217' status='passed' stop='1629091993903'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091993904' status='failed' stop='1629091996365'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'id' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'id' of undefined
+                    at APIRequest.getZedRunMessageId (/Users/davidle/qa-automationtest/utils/api/api.js:43:52)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629091996365' status='failed' stop='1629091996863'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Url is not valid or network timeout while loading </message>
+                <stack-trace>Error: Url is not valid or network timeout while loading 
+                    at MagicLinkPage.navigate (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:20:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629091996863' status='failed' stop='1629092144314'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at Page.setDefaultTimeout (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:189:23)
+                    at new HomePage (/Users/davidle/qa-automationtest/pages/HomePage.js:34:15)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Email.test.js:65:24)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629092144314' status='failed' stop='1629092144318'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.bringToFront: Target page, context or browser has been closed</message>
+                <stack-trace>page.bringToFront: Target page, context or browser has been closed: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:385:33)
+                    at Page._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Page.bringToFront (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:384:21)
+                    at HomePage.bringToFront (/Users/davidle/qa-automationtest/pages/HomePage.js:39:21)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/FreeGate-Email.test.js:66:28)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

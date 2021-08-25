@@ -1,0 +1,771 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629091762296' stop='1629091960182'>
+    <name>Paid racing with fee racing when logged by Magic Link</name>
+    <title>Paid racing with fee racing when logged by Magic Link</title>
+    <test-cases>
+        <test-case start='1629091762296' status='passed' stop='1629091776037'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091776037' status='passed' stop='1629091787489'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091787490' status='failed' stop='1629091916269'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Url is not valid or network timeout while loading </message>
+                <stack-trace>Error: Url is not valid or network timeout while loading 
+                    at MagicLinkPage.navigate (/Users/davidle/qa-automationtest/pages/MagicLinkPage.js:20:13)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629091916269' status='passed' stop='1629091916499'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629091916500' status='failed' stop='1629091960182'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.hover: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                  selector resolved to visible &lt;div class="horse-infos">…&lt;/div>
+                attempting hover action
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #1
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #22
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #23
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #24
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #25
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #26
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #27
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #28
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #29
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #30
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #31
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #32
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #33
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #34
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #35
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #36
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #37
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #38
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #39
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #40
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #41
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #42
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #43
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                element was detached from the DOM, retrying
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.hover: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                  selector resolved to visible &lt;div class="horse-infos">…&lt;/div>
+                attempting hover action
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #1
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #2
+                  waiting 20ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="price-field mb-5">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #3
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #4
+                  waiting 100ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #5
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #6
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #7
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #8
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #9
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #10
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #11
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #12
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #13
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #14
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #15
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #16
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #17
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #18
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #19
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #20
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #21
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #22
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #23
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #24
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #25
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #26
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #27
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #28
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #29
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #30
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #31
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #32
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #33
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #34
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #35
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #36
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #37
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #38
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #39
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #40
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,253.03)
+                  &lt;div class="ReactModal__Overlay ReactModal__Overlay--…>…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #41
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #42
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                  scrolling into view if needed
+                  done scrolling
+                  checking that element receives pointer events at (595,438.03)
+                  &lt;div class="loader-container ">…&lt;/div> from &lt;div class="ReactModalPortal">…&lt;/div> subtree intercepts pointer events
+                retrying hover action, attempt #43
+                  waiting 500ms
+                  waiting for element to be visible and not moving
+                  element is visible and does not move
+                element was detached from the DOM, retrying
+                waiting for selector ".horse-card:nth-child(3) .horse-infos"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:334:33)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.hover (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:333:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:451:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.hover (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:451:21)
+                    at RacingPage.clickGateNumberAndSelectHorse (/Users/davidle/qa-automationtest/pages/RacingPage.js:123:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

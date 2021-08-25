@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629744226011' stop='1629744233873'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629744226012' status='passed' stop='1629744233487'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629744233488' status='failed' stop='1629744233864'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Page closed</message>
+                <stack-trace>Error: Page closed
+                    at CRSession.FrameSession.client.once (/Users/davidle/qa-automationtest/node_modules/playwright/lib/server/chromium/crPage.js:272:60)
+                    at Object.onceWrapper (events.js:286:20)
+                    at CRSession.emit (events.js:203:15)
+                    at Promise.resolve.then (/Users/davidle/qa-automationtest/node_modules/playwright/lib/server/chromium/crConnection.js:174:43)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629744233864' status='failed' stop='1629744233872'>
+            <name>Select a racehorses and add into the free racing</name>
+            <title>Select a racehorses and add into the free racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'setDefaultTimeout' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'setDefaultTimeout' of undefined
+                    at new RacingPage (/Users/davidle/qa-automationtest/pages/RacingPage.js:15:19)
+                    at test (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-WithLink.test.js:82:18)
+                    at Promise (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24)
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at resolve (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12)
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at promise.then (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

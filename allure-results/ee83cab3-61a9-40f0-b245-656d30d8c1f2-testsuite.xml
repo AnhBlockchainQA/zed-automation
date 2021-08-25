@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629096805708' stop='1629097436265'>
+    <name>Paid racing with fee racing when logged by Magic Link</name>
+    <title>Paid racing with fee racing when logged by Magic Link</title>
+    <test-cases>
+        <test-case start='1629096805708' status='passed' stop='1629096826455'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629096826456' status='passed' stop='1629096834395'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629096834395' status='failed' stop='1629097134406'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 300000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/davidle/qa-automationtest/node_modules/jest-retries/src/retry.js:28:5)
+                    at Suite.Object.&lt;anonymous>.describe (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-email.test.js:53:5)
+                    at addSpecsToSuite (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/davidle/qa-automationtest/tests/gate-nomination/PaidGate-email.test.js:28:1)
+                    at Runtime._execModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/davidle/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/davidle/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/davidle/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at process._tickCallback (internal/process/next_tick.js:68:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629097134406' status='failed' stop='1629097434437'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>TimeoutError: page.waitForNavigation: Timeout 90000ms exceeded.
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.
+                    at _rejectOn.promise.then (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/waiter.js:40:51)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629097434437' status='failed' stop='1629097436264'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/davidle/qa-automationtest/pages/HomePage.js:122:13)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

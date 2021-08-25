@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1628852282963' stop='1628852343474'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1628852282963' status='passed' stop='1628852282965'>
+            <name>Get token</name>
+            <title>Get token</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1628852282965' status='passed' stop='1628852287641'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1628852287641' status='passed' stop='1628852310445'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1628852310445' status='passed' stop='1628852311890'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1628852311890' status='failed' stop='1628852313444'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.evaluate: Evaluation failed: TypeError: Cannot read property 'innerText' of null
+                    at eval (eval at callFunction (:307:29), &lt;anonymous>:2:45)
+                    at UtilityScript.callFunction (&lt;anonymous>:308:24)
+                    at UtilityScript.&lt;anonymous> (&lt;anonymous>:1:44)</message>
+                <stack-trace>page.evaluate: Evaluation failed: TypeError: Cannot read property 'innerText' of null
+                    at eval (eval at callFunction (:307:29), &lt;anonymous>:2:45)
+                    at UtilityScript.callFunction (&lt;anonymous>:308:24)
+                    at UtilityScript.&lt;anonymous> (&lt;anonymous>:1:44): 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:157:48)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.evaluate (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:156:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:344:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.evaluate (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:344:21)
+                    at RacingPage.returnEventName (/Users/davidle/qa-automationtest/pages/RacingPage.js:68:47)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1628852313445' status='failed' stop='1628852343474'>
+            <name>Assign horse to paid races</name>
+            <title>Assign horse to paid races</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TimeoutError: page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='4']"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.</message>
+                <stack-trace>page.click: Timeout 30000ms exceeded.
+                =========================== logs ===========================
+                waiting for selector "//div[contains(@class,'pick-gate')]//div[@class='gate-group']/div[@class='gate-btn' and descendant::text()='4']"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable and rerun to capture Playwright logs.: 
+                    at Connection.sendMessageToServer (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:15)
+                    at Proxy.&lt;anonymous> (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:44:61)
+                    at _wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:257:40)
+                    at Frame._wrapApiCall (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:72:34)
+                    at Frame.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/frame.js:256:21)
+                    at _attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:60)
+                    at Page._attributeToPage (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:205:20)
+                    at Page.click (/Users/davidle/qa-automationtest/node_modules/playwright/lib/client/page.js:406:21)
+                    at RacingPage.clickGateNumberAndSelectHorse (/Users/davidle/qa-automationtest/pages/RacingPage.js:109:25)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
