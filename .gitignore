@@ -1,2 +1,3 @@
 node_modules
-utils/browser 
+utils/browser
+package-lock.json

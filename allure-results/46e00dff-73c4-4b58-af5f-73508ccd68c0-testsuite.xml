@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763472525' stop='1629763493551'>
+    <name>[Smoke Test] Validate the some pages on app work well</name>
+    <title>[Smoke Test] Validate the some pages on app work well</title>
+    <test-cases>
+        <test-case start='1629763472526' status='passed' stop='1629763474704'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763474704' status='failed' stop='1629763478545'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: CONNECT_METAMASK is not defined</message>
+                <stack-trace>ReferenceError: CONNECT_METAMASK is not defined
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:60:11)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763478545' status='failed' stop='1629763493536'>
+            <name>Wait for the web is loading successfully</name>
+            <title>Wait for the web is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: The Balance is not present</message>
+                <stack-trace>Error: The Balance is not present
+                    at HomePage.waitUntilBalanceShown (/Users/development/workspace/qa-automationtest/pages/HomePage.js:203:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:75:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493536' status='failed' stop='1629763493539'>
+            <name>Validate the component displays on Home Page</name>
+            <title>Validate the component displays on Home Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Cannot navigate to Home Page</message>
+                <stack-trace>Error: Cannot navigate to Home Page
+                    at HomePage.navigateToHomePage (/Users/development/workspace/qa-automationtest/pages/HomePage.js:228:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:87:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493539' status='failed' stop='1629763493542'>
+            <name>Validate Marketplace Page has a racehorse</name>
+            <title>Validate Marketplace Page has a racehorse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Marketplace link is not presnet or clickable</message>
+                <stack-trace>Error: Marketplace link is not presnet or clickable
+                    at HomePage.clickOnMarketplaceLink (/Users/development/workspace/qa-automationtest/pages/HomePage.js:74:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:98:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493542' status='failed' stop='1629763493544'>
+            <name>Validate Stud Service Page has a racehorse In Stud</name>
+            <title>Validate Stud Service Page has a racehorse In Stud</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Breeding link is not shown!</message>
+                <stack-trace>Error: Breeding link is not shown!
+                    at HomePage.clickOnBreedingLink (/Users/development/workspace/qa-automationtest/pages/HomePage.js:192:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:105:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493544' status='failed' stop='1629763493546'>
+            <name>Validate has a race open on Events page</name>
+            <title>Validate has a race open on Events page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/development/workspace/qa-automationtest/pages/HomePage.js:122:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:113:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493546' status='failed' stop='1629763493548'>
+            <name>Validate has a result on Result Page</name>
+            <title>Validate has a result on Result Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/development/workspace/qa-automationtest/pages/HomePage.js:122:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:121:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493548' status='failed' stop='1629763493549'>
+            <name>Validate has a Winning on Winning Page</name>
+            <title>Validate has a Winning on Winning Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Racing link is not present or clickable</message>
+                <stack-trace>Error: Racing link is not present or clickable
+                    at HomePage.clickOnRacingLink (/Users/development/workspace/qa-automationtest/pages/HomePage.js:122:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:129:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763493550' status='failed' stop='1629763493551'>
+            <name>Validate has a racehorse existing on Stable Page</name>
+            <title>Validate has a racehorse existing on Stable Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: The Profile Icon or My Stable Page is not present</message>
+                <stack-trace>Error: The Profile Icon or My Stable Page is not present
+                    at HomePage.navigateToMyStablePage (/Users/development/workspace/qa-automationtest/pages/HomePage.js:218:13)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:136:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

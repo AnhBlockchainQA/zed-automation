@@ -1,0 +1,168 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763715276' stop='1629763715321'>
+    <name>Buy horse with credit card - Logging with Metamask</name>
+    <title>Buy horse with credit card - Logging with Metamask</title>
+    <test-cases>
+        <test-case start='1629763715276' status='failed' stop='1629763715283'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:118:25
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715284' status='failed' stop='1629763715293'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:107:23
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715293' status='failed' stop='1629763715295'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Caught error after test environment was torn down
+                
+                '.breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn' could not be found on the page.</message>
+                <stack-trace>Error: Caught error after test environment was torn down
+                
+                '.breeding .breeding-content .breeding-part .confirm-part .breeding-btns .buy-cover-btn' could not be found on the page.
+                    at StudServicePage.scrollToBuyCoverButton (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:252:29)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:108:27
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715295' status='failed' stop='1629763715307'>
+            <name>Go to Marketplace and select first horse</name>
+            <title>Go to Marketplace and select first horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'setDefaultTimeout' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'setDefaultTimeout' of undefined
+                    at new HomePage (/Users/development/workspace/qa-automationtest/pages/HomePage.js:34:15)
+                    at /Users/development/workspace/qa-automationtest/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:65:16
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715307' status='failed' stop='1629763715318'>
+            <name>Process the checkout with ETH</name>
+            <title>Process the checkout with ETH</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'setDefaultTimeout' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'setDefaultTimeout' of undefined
+                    at new PaymentPage (/Users/development/workspace/qa-automationtest/pages/PaymentPage.js:18:15)
+                    at /Users/development/workspace/qa-automationtest/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:81:19
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715318' status='failed' stop='1629763715320'>
+            <name>Verify that our order is performed</name>
+            <title>Verify that our order is performed</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'waitForLoadState' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'waitForLoadState' of undefined
+                    at /Users/development/workspace/qa-automationtest/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:90:23
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763715320' status='failed' stop='1629763715321'>
+            <name>Check the detail payment</name>
+            <title>Check the detail payment</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'mouseOverFirstStatementInfo' of undefined
+                    at /Users/development/workspace/qa-automationtest/tests/purchase-horse/mail-purchase-horse-with-eth.test.js:100:24
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

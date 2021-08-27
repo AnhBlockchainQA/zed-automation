@@ -1,0 +1,201 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763659052' stop='1629763714981'>
+    <name>Generate stud horse when logging in with magic link</name>
+    <title>Generate stud horse when logging in with magic link</title>
+    <test-cases>
+        <test-case start='1629763659052' status='passed' stop='1629763671045'>
+            <name>Open ZedRun page and input valid email to generate magic link</name>
+            <title>Open ZedRun page and input valid email to generate magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763671045' status='passed' stop='1629763672790'>
+            <name>Check mail inbox to get magic link</name>
+            <title>Check mail inbox to get magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763672790' status='failed' stop='1629763708970'>
+            <name>Open new browser with magic link</name>
+            <title>Open new browser with magic link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>Error: page.waitForNavigation: Navigation failed because page was closed!
+                =========================== logs ===========================
+                waiting for navigation until "load"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                    at Frame._setupNavigationWaiter (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:107:70)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:117:33
+                    at Frame._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:34)
+                    at Frame.waitForNavigation (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:115:21)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:308:60
+                    at Page._attributeToPage (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:231:20)
+                    at Page.waitForNavigation (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:308:21)
+                    at MagicLinkPage.waitForNavigation (/Users/development/workspace/qa-automationtest/pages/MagicLinkPage.js:39:21)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:62:25
+                    at runMicrotasks (&lt;anonymous>)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763708970' status='failed' stop='1629763714960'>
+            <name>Check that avatar is shown then click on Breeding link</name>
+            <title>Check that avatar is shown then click on Breeding link</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Accept button is not present or not clickable</message>
+                <stack-trace>Error: Accept button is not present or not clickable
+                    at HomePage.clickOnAcceptButton (/Users/development/workspace/qa-automationtest/pages/HomePage.js:50:13)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:70:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763714960' status='failed' stop='1629763714967'>
+            <name>Select mate horse</name>
+            <title>Select mate horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:76:23
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763714967' status='failed' stop='1629763714971'>
+            <name>Select female horse</name>
+            <title>Select female horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:90:23
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763714971' status='failed' stop='1629763714976'>
+            <name>Proceed breeding steps</name>
+            <title>Proceed breeding steps</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: '.page-content.stud .stud-content .accordion-content .panel:nth-child(1) button.panel__label' could not be found on the page.</message>
+                <stack-trace>Error: '.page-content.stud .stud-content .accordion-content .panel:nth-child(1) button.panel__label' could not be found on the page.
+                    at StudServicePage.clickOnSelectedMaleHorseWithIndex (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:72:29)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:79:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763714976' status='failed' stop='1629763714977'>
+            <name>Go to Activity page and check if we breed successfully</name>
+            <title>Go to Activity page and check if we breed successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:90:23
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763714978' status='failed' stop='1629763714981'>
+            <name>Go to Stable page and verify there is a new horse</name>
+            <title>Go to Stable page and verify there is a new horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new StudServicePage (/Users/development/workspace/qa-automationtest/pages/StudServicePage.js:26:15)
+                    at /Users/development/workspace/qa-automationtest/tests/stud-service/mail-stud-generate-horse.test.js:118:25
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runNextTicks (internal/process/task_queues.js:64:3)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,94 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763495724' stop='1629763550310'>
+    <name>Generate stud horse</name>
+    <title>Generate stud horse</title>
+    <test-cases>
+        <test-case start='1629763495724' status='passed' stop='1629763497855'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763497855' status='failed' stop='1629763550273'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.click: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector "//button[text()='authenticate']"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>page.click: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector "//button[text()='authenticate']"
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:279:34
+                    at Frame._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:34)
+                    at Frame.click (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:278:21)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:447:60
+                    at Page._attributeToPage (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:231:20)
+                    at Page.click (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:447:21)
+                    at MetamaskFactory.clickNewPage (/Users/development/workspace/qa-automationtest/utils/browser/metamaskFactory.js:63:12)
+                    at /Users/development/workspace/qa-automationtest/tests/add-horse-to-stud.test.js:71:67
+                    at runMicrotasks (&lt;anonymous>)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763550273' status='failed' stop='1629763550287'>
+            <name>Click on Filter button in My Stable page</name>
+            <title>Click on Filter button in My Stable page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new HomePage (/Users/development/workspace/qa-automationtest/pages/HomePage.js:34:15)
+                    at /Users/development/workspace/qa-automationtest/tests/add-horse-to-stud.test.js:85:20
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763550287' status='failed' stop='1629763550310'>
+            <name>Filter with male horse</name>
+            <title>Filter with male horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Element is not present yet!</message>
+                <stack-trace>Error: Element is not present yet!
+                    at HomePage.waitForBalanceInfoToBeShown (/Users/development/workspace/qa-automationtest/pages/HomePage.js:130:13)
+                    at /Users/development/workspace/qa-automationtest/tests/add-horse-to-stud.test.js:86:9
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

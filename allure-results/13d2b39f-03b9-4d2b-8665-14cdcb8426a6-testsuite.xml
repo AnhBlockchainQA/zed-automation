@@ -1,0 +1,127 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763604617' stop='1629763622419'>
+    <name>Transfer horse to other wallet address - Logging with Metamask</name>
+    <title>Transfer horse to other wallet address - Logging with Metamask</title>
+    <test-cases>
+        <test-case start='1629763604617' status='passed' stop='1629763606854'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763606854' status='passed' stop='1629763612290'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763612290' status='failed' stop='1629763613096'>
+            <name>Wait until homepage is loading</name>
+            <title>Wait until homepage is loading</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Element is not present yet!</message>
+                <stack-trace>Error: Element is not present yet!
+                    at HomePage.waitForBalanceInfoToBeShown (/Users/development/workspace/qa-automationtest/pages/HomePage.js:130:13)
+                    at runMicrotasks (&lt;anonymous>)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)
+                    at /Users/development/workspace/qa-automationtest/tests/transfer-horse/metamask-transfer-horse.test.js:83:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763613096' status='failed' stop='1629763622407'>
+            <name>Go to My Settings page then click on Select Racehorse</name>
+            <title>Go to My Settings page then click on Select Racehorse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: User menu arrow is not present!</message>
+                <stack-trace>Error: User menu arrow is not present!
+                    at HomePage.clickOnUserMenuArrow (/Users/development/workspace/qa-automationtest/pages/HomePage.js:390:13)
+                    at /Users/development/workspace/qa-automationtest/tests/transfer-horse/metamask-transfer-horse.test.js:90:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763622407' status='failed' stop='1629763622412'>
+            <name>Select horse then click on Transfer button</name>
+            <title>Select horse then click on Transfer button</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new TransferHorsePage (/Users/development/workspace/qa-automationtest/pages/TransferHorsePage.js:14:15)
+                    at /Users/development/workspace/qa-automationtest/tests/transfer-horse/metamask-transfer-horse.test.js:99:25
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763622412' status='failed' stop='1629763622415'>
+            <name>Confirm the transfer</name>
+            <title>Confirm the transfer</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Transfer horse list is empty or not present</message>
+                <stack-trace>Error: Transfer horse list is empty or not present
+                    at TransferHorsePage.checkIfTransferHorseListShown (/Users/development/workspace/qa-automationtest/pages/TransferHorsePage.js:42:13)
+                    at /Users/development/workspace/qa-automationtest/tests/transfer-horse/metamask-transfer-horse.test.js:100:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763622415' status='failed' stop='1629763622419'>
+            <name>Check that we can not search this horse anymore</name>
+            <title>Check that we can not search this horse anymore</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Target page, context or browser has been closed</message>
+                <stack-trace>Target page, context or browser has been closed
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at Page.setDefaultTimeout (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:215:23)
+                    at new HomePage (/Users/development/workspace/qa-automationtest/pages/HomePage.js:34:15)
+                    at /Users/development/workspace/qa-automationtest/tests/transfer-horse/metamask-transfer-horse.test.js:124:16
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:3:24
+                    at new Promise (&lt;anonymous>)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:2:12)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:23)
+                    at Object.asyncJestTest (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+                    at /Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/queueRunner.js:75:41</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
