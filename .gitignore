@@ -1,2 +1,7 @@
 node_modules
-utils/browser 
+.DS_Store
+.idea
+.vscode
+.github/.DS_Store
+utils/browser
+package-lock.json

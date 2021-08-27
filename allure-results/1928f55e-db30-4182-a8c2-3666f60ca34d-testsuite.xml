@@ -1,0 +1,90 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629763625192' stop='1629763658576'>
+    <name>Paid racing with fee racing when logged by Meta Mask</name>
+    <title>Paid racing with fee racing when logged by Meta Mask</title>
+    <test-cases>
+        <test-case start='1629763625193' status='passed' stop='1629763625193'>
+            <name>Get token</name>
+            <title>Get token</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763625193' status='passed' stop='1629763627338'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763627338' status='passed' stop='1629763633587'>
+            <name>Open ZedRun page and click Connect Metamask</name>
+            <title>Open ZedRun page and click Connect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763633587' status='failed' stop='1629763649108'>
+            <name>Check that the ZED app is loading successfully</name>
+            <title>Check that the ZED app is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: The Balance is not present</message>
+                <stack-trace>Error: The Balance is not present
+                    at HomePage.waitUntilBalanceShown (/Users/development/workspace/qa-automationtest/pages/HomePage.js:203:13)
+                    at runMicrotasks (&lt;anonymous>)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)
+                    at /Users/development/workspace/qa-automationtest/tests/gate-nomination/PaidGate-metamask.test.js:99:5
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629763649108' status='passed' stop='1629763650007'>
+            <name>Select a racehorses to add into the paid entry racing</name>
+            <title>Select a racehorses to add into the paid entry racing</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1629763650007' status='failed' stop='1629763658576'>
+            <name>Assign horse to paid races</name>
+            <title>Assign horse to paid races</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForSelector: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(5)" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>page.waitForSelector: Protocol error (Runtime.callFunctionOn): Target closed.
+                =========================== logs ===========================
+                waiting for selector ".horse-card:nth-child(5)" to be visible
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:202:42
+                    at Frame._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:34)
+                    at Frame.waitForSelector (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/frame.js:197:21)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:241:60
+                    at Page._attributeToPage (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:231:20)
+                    at Page.waitForSelector (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/page.js:241:21)
+                    at RacingPage.clickGateNumberAndSelectHorse (/Users/development/workspace/qa-automationtest/pages/RacingPage.js:115:29)
+                    at /Users/development/workspace/qa-automationtest/tests/gate-nomination/PaidGate-metamask.test.js:119:7
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/jest-retries/src/retry.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

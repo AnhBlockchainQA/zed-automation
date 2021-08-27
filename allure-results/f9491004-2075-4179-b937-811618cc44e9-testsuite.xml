@@ -1,0 +1,294 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629857552106' stop='1629857602327'>
+    <name>[Smoke Test] Validate the some pages on app work well</name>
+    <title>[Smoke Test] Validate the some pages on app work well</title>
+    <test-cases>
+        <test-case start='1629857552107' status='failed' stop='1629857557218'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:37:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857557218' status='failed' stop='1629857562225'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:53:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857562225' status='failed' stop='1629857567243'>
+            <name>Wait for the web is loading successfully</name>
+            <title>Wait for the web is loading successfully</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:73:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857567243' status='failed' stop='1629857572253'>
+            <name>Validate the component displays on Home Page</name>
+            <title>Validate the component displays on Home Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: CONNECT_METAMASK is not defined</message>
+                <stack-trace>ReferenceError: CONNECT_METAMASK is not defined
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:60:11)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857572253' status='failed' stop='1629857577262'>
+            <name>Validate Marketplace Page has a racehorse</name>
+            <title>Validate Marketplace Page has a racehorse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:97:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857577262' status='failed' stop='1629857582270'>
+            <name>Validate Stud Service Page has a racehorse In Stud</name>
+            <title>Validate Stud Service Page has a racehorse In Stud</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: There is no Streaming widget section display</message>
+                <stack-trace>Error: There is no Streaming widget section display
+                    at HomePage.validateStreamingWidgetSection (/Users/development/workspace/qa-automationtest/pages/HomePage.js:243:13)
+                    at runNextTicks (internal/process/task_queues.js:60:5)
+                    at processImmediate (internal/timers.js:437:9)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:89:9)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857582271' status='failed' stop='1629857587280'>
+            <name>Validate has a race open on Events page</name>
+            <title>Validate has a race open on Events page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:112:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857587280' status='failed' stop='1629857592289'>
+            <name>Validate has a result on Result Page</name>
+            <title>Validate has a result on Result Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:120:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857592289' status='failed' stop='1629857597301'>
+            <name>Validate has a Winning on Winning Page</name>
+            <title>Validate has a Winning on Winning Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:128:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857597302' status='failed' stop='1629857602326'>
+            <name>Validate has a racehorse existing on Stable Page</name>
+            <title>Validate has a racehorse existing on Stable Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+                    at new Spec (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+                    at specFactory (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+                    at Env.it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+                    at it (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+                    at test (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:98:20)
+                    at Suite.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:135:5)
+                    at addSpecsToSuite (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+                    at Env.describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+                    at describe (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+                    at Object.&lt;anonymous> (/Users/development/workspace/qa-automationtest/tests/smoke-test/smoke-test-metamask.test.js:35:1)
+                    at Runtime._execModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:1299:24)
+                    at Runtime._loadModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:898:12)
+                    at Runtime.requireModule (/Users/development/workspace/qa-automationtest/node_modules/jest-runtime/build/index.js:746:10)
+                    at jasmine2 (/Users/development/workspace/qa-automationtest/node_modules/jest-jasmine2/build/index.js:230:13)
+                    at runTestInternal (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:380:22)
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at runTest (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/runTest.js:472:34)
+                    at Object.worker (/Users/development/workspace/qa-automationtest/node_modules/jest-runner/build/testWorker.js:133:12)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

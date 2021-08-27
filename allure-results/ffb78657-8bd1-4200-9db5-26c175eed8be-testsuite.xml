@@ -1,0 +1,259 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1629857552234' stop='1629857552343'>
+    <name>Generate stud horse</name>
+    <title>Generate stud horse</title>
+    <test-cases>
+        <test-case start='1629857552234' status='failed' stop='1629857552274'>
+            <name>Update metamask info</name>
+            <title>Update metamask info</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/browserType.js:86:42
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at BrowserType._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:28)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857552274' status='failed' stop='1629857552306'>
+            <name>Open ZedRun page and click Connnect Metamask</name>
+            <title>Open ZedRun page and click Connnect Metamask</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/browserType.js:86:42
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at BrowserType._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:28)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857552306' status='failed' stop='1629857552324'>
+            <name>Click on Filter button in My Stable page</name>
+            <title>Click on Filter button in My Stable page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/browserType.js:86:42
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at BrowserType._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:28)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1629857552324' status='failed' stop='1629857552343'>
+            <name>Filter with male horse</name>
+            <title>Filter with male horse</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.</message>
+                <stack-trace>browserType.launchPersistentContext: Protocol error (Browser.getVersion): Browser closed.
+                ==================== Browser output: ====================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                =========================== logs ===========================
+                &lt;launching> /Users/development/Library/Caches/ms-playwright/chromium-857950/chrome-mac/Chromium.app/Contents/MacOS/Chromium --disable-background-networking --enable-features=NetworkService,NetworkServiceInProcess --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=TranslateUI,BlinkGenPropertyTrees,ImprovedCookieControls,SameSiteByDefaultCookies,LazyFrameLoading --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-sync --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --user-data-dir=/Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir --remote-debugging-pipe --no-sandbox --disable-extensions-except=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --load-extension=/Users/development/workspace/qa-automationtest/utils/browser/metamask-chrome-8.1.3 --start-maximized about:blank
+                &lt;launched> pid=66726
+                [pid=66726][err] 2021-08-24 20:12:30.735 Chromium[66726:3972718] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture, 262): no suitable image found.  Did find:
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] 	/Library/CoreMediaIO/Plug-Ins/DAL/LogiCapture.plugin/Contents/MacOS/LogiCapture: mach-o, but wrong architecture
+                [pid=66726][err] [66726:78339:0824/201231.687115:ERROR:block_files.cc(465)] Failed to open /Users/development/workspace/qa-automationtest/utils/browser/test-user-data-dir/GrShaderCache/GPUCache/data_0
+                [pid=66726][err] [66726:35075:0824/201231.687902:ERROR:disk_cache.cc(184)] Unable to create cache
+                [pid=66726][err] [66726:35075:0824/201231.688053:ERROR:shader_disk_cache.cc(606)] Shader Cache Creation failed: -2
+                [pid=66726][out] Opening in existing browser session.
+                ============================================================
+                Note: use DEBUG=pw:api environment variable to capture Playwright logs.
+                Error: 
+                    at Object.captureStackTrace (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/utils/stackTrace.js:48:19)
+                    at Connection.sendMessageToServer (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/connection.js:69:48)
+                    at Proxy.&lt;anonymous> (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:64:61)
+                    at /Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/browserType.js:86:42
+                    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+                    at BrowserType._wrapApiCall (/Users/development/workspace/qa-automationtest/node_modules/playwright/lib/client/channelOwner.js:77:28)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
