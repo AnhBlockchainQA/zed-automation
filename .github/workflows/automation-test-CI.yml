@@ -66,7 +66,7 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         source: https://github.com/swinton/screenshot-website
-        destination: /home/runner/work/qa-automationtest/qa-automationtest/allure.png
+        destination: allure.png
         full-page: true
     - name: Get cunrrent directory and List
       run: pwd && ls
@@ -74,5 +74,5 @@ jobs:
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/qa-automationtest/qa-automationtest/allure.png
+        path: /home/runner/work/_temp/allure.png
         channel: automation-test-report
