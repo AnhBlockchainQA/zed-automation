@@ -1,4 +1,5 @@
 module.exports = {
+    BASE_URL: 'https://goerli-test.zed.run/',
     ZEDRUN_URL: "https://zed-pr--pr940-hotfix-ledger-suppor-i1cjl0r5.web.app/",
     ZEDRUN_SPECIFIC_FREE_RACE_URL: "https://zed-pr--pr908-mega-pr-make-racing-vvy0f028.web.app/race/CiloiZXs",
     PAID_RACE_LINK: "https://goerli-test.zed.run/race/Vglvts4",
