@@ -71,12 +71,11 @@ jobs:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
         slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
-#    - name: create file
-#      run: |
-#        echo "Test file " > screenshot.png
-#    - name: Slack File Upload
-#      uses: adrey/slack-file-upload-action@1.0.5
-#      with:
-#        token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-#        path: /root/screenshot.png
-#        channel: automation-test-report
+    - name: Create ScreenShot file
+      run: echo "Test file " > screenshot.png
+    - name: Slack File Upload
+      uses: adrey/slack-file-upload-action@1.0.5
+      with:
+        token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        path: screenshot.png
+        channel: automation-test-report
