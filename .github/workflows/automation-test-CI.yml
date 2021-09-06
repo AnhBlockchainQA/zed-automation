@@ -38,7 +38,6 @@ jobs:
       with:
         ref: gh-pages
         path: gh-pages
-
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
       if: always()
@@ -55,14 +54,6 @@ jobs:
         PERSONAL_TOKEN: 07a56d6a3c3b39cc83c0375fedf5070e4b60a4cf
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
-
-#    - name: Screenshot Test Report
-#      uses: swinton/screenshot-website@v1.x
-#      with:
-#        source: https://vhslab.github.io/qa-automationtest/
-#        destination: screenshot.png
-#        full-page: true
-        
     - name: Send url test report to Slack
       if: always()
       uses: archive/github-actions-slack@v1.0.3
@@ -70,19 +61,18 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
-        slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
-    - name: Screenshot Website
+        slack-text: New report available at https://vhslab.github.io/qa-automationtest/
+    - name: Screenshot Report
       uses: swinton/screenshot-website@v1.x
       with:
         source: https://github.com/swinton/screenshot-website
-        destination: screenshot.png
+        destination: /home/runner/work/qa-automationtest/qa-automationtest/allure.png
         full-page: true
     - name: Get cunrrent directory and List
       run: pwd && ls
-#      run: echo "Test file " > screenshot.png
     - name: Slack File Upload
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: ~screenshot.png
+        path: /home/runner/work/qa-automationtest/qa-automationtest/allure.png
         channel: automation-test-report
