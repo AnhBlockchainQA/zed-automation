@@ -47,14 +47,14 @@ jobs:
         #gh_pages: gh-pages
         #allure_report: allure-report
         allure_history: allure-history
-    - name: Deploy report to Github Pages
+    - name: Deploying Allure Report to Github Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v2
       env:
         PERSONAL_TOKEN: 07a56d6a3c3b39cc83c0375fedf5070e4b60a4cf
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
-    - name: Send url test report to Slack
+    - name: Upload message with Allure Report URL to Slack Channel
       if: always()
       uses: archive/github-actions-slack@v1.0.3
       id: notify
@@ -62,15 +62,13 @@ jobs:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
         slack-text: New report available at https://vhslab.github.io/qa-automationtest/
-    - name: Screenshot Report
+    - name: Take Report Screenshot
       uses: swinton/screenshot-website@v1.x
       with:
-        source: https://github.com/swinton/screenshot-website
+        source: https://vhslab.github.io/qa-automationtest/
         destination: allure.png
         full-page: true
-    - name: Get cunrrent directory and List
-      run: pwd && ls
-    - name: Slack File Upload
+    - name: Upload Report Screenshot to Slack Channel
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
