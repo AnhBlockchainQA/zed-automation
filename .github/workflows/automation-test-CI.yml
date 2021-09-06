@@ -71,12 +71,12 @@ jobs:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
         slack-text: check your report detail here https://vhslab.github.io/qa-automationtest/
-    - name: Screenshot Website
-      uses: swinton/screenshot-website@v1.x
-      with:
-        source: https://github.com/swinton/screenshot-website
-        destination: screenshot.png
-        full-page: true
+#    - name: Screenshot Website
+#      uses: swinton/screenshot-website@v1.x
+#      with:
+#        source: https://github.com/swinton/screenshot-website
+#        destination: screenshot.png
+#        full-page: true
 #    - name: Create ScreenShot file
 #      run: echo "Test file " > screenshot.png
     - name: Slack File Upload
