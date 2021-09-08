@@ -232,7 +232,7 @@ describe('Home', () => {
         expect(await home.getPageUrl()).toContain('/home/start');
     })
 
-    it('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
+    it.skip('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
     })
 
@@ -245,7 +245,16 @@ describe('Home', () => {
     })
 
     it('ZED-32 - Home is showing the Go Up icon on the website right corner and hits the action after the user clicks on', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const cookies = await home.btnAcceptCookies()
+        await cookies.click()
+        await page.keyboard.press("PageDown")
+        await page.waitForLoadState()
+        await page.waitForTimeout(3000)
+        const scrollUp = await home.btnScrollUp()
+        expect(await scrollUp.isHidden()).toBe(false)
+        await scrollUp.click()
+        await page.waitForTimeout(2000)
+        expect(await scrollUp.isHidden()).toBe(true)
     })
 
     it('ZED-97 - Home is showing up the modal with a warning message when the Metamask Extension has not been installed @fast', async() => {
