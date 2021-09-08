@@ -5,10 +5,13 @@
         "module": "CommonJS",
         "sourceMap": true,
         "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
         "types": [
             "@types/jest",
             "jest-playwright-preset",
             "expect-playwright"
         ]
-    }
+    },
+    "preset": "ts-jest"
 }

@@ -12,5 +12,15 @@ module.exports = {
     testMatch: [
         "**/tests/**/*.spec.(js|jsx|ts|tsx)",
         // "**/tests/**/*.test.(js|jsx|ts|tsx)"
-    ]
+    ],
+    bail: true,
+    bail: 1,
+    testEnvironmentOptions: {
+        "jest-playwright": {
+            browsers: ["chromium"],
+            launchOptions: {
+                headless: false,
+            },
+        },
+    }
 };
