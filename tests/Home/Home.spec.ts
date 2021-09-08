@@ -201,9 +201,8 @@ describe('Home', () => {
         const error =  await frames[1].waitForSelector('#sub-frame-error')
         if (await error.isVisible()){
             await page.waitForLoadState()
-            const errorDetails =  await error.waitForSelector('#sub-frame-error-details')
-            expect(await errorDetails.innerText()).toContain('player.twitch.tv refused to connect.')
-            expect(await errorDetails.isVisible()).toBeTruthy()
+            const errorIcon =  await error.waitForSelector('//div[@class="icon icon-generic"]')
+            expect(await errorIcon.isVisible()).toBeTruthy()
         } else {
             // Implement code here
             expect(false).toBeFalsy()
