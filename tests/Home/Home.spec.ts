@@ -246,8 +246,10 @@ describe('Home', () => {
         expect(await home.getPageUrl()).toContain('/home/start');
     })
 
-    it.skip('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+    it('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
+        await page.waitForSelector(home.objects.divInStudHorsesSection)
+        const OnSaleCards = await page.$$eval(home.objects.divInStudHorsesSection, (items) => items.length);
+        expect(OnSaleCards === 2).toBeTruthy();
     })
 
     it('ZED-31 - Home is showing In Stud section with More Breeding Button at the bottom of the section and respective redirects', async () => {

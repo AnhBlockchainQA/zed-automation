@@ -12,7 +12,8 @@ class Home {
         btnStart: '#app .app-content .header-desktop .start-part button',
         btnMetamaskOption: '#login-modal .login-options .metamask-login',
         divCardsUpAndUpcoming: '//div[contains(@class,\'race-card\')]',
-        divOnSaleCardPlaceHolders: '//div[contains(@class,\'horse-sale-card horse-skeleton placeholder\')]'
+        divOnSaleCardPlaceHolders: '//div[contains(@class,\'horse-sale-card horse-skeleton placeholder\')]',
+        divInStudHorsesSection: '//div[contains(@class,\'horses\')]/div[@class=\'horse\']'
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
@@ -56,6 +57,7 @@ class Home {
     lblH3TitleOnSaleSection = async () => await this.page.waitForSelector('//h3[contains(text(),\'On Sale\')]')
     divSoldOutOnSaleSection = async () => await this.page.waitForSelector('//div[contains(@class,\'sold-out\')]')
     divSoldOutMessageOnSaleSection = async () => await this.page.waitForSelector('//div[contains(@class,\'sold-out\')]/div[@class=\'message\']')
+    divInStudHorsesSection = async () => await this.page.waitForSelector('//div[contains(@class,\'horses\')]/div[@class=\'horse\']')
 
 
     async getPageTitle() {
