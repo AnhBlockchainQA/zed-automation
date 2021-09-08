@@ -187,7 +187,11 @@ describe('Home', () => {
     })
 
     it('ZED-23 - Home is showing the What\'s New? Menu Option on the top navigation bar and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const whatsNew = await home.lknNavWhatsNew()
+        expect(await whatsNew.getAttribute('href')).toContain('https://announcekit.co/zed-run/product-updates')
+        const lblWhatsNew = await home.lblNavWhatsNew()
+        expect(await lblWhatsNew.isVisible()).toBe(true)
+        await lblWhatsNew.click()
     })
 
     it('ZED-24 - Home is showing/loading the Streaming Video', async () => {

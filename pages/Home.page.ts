@@ -15,7 +15,6 @@ class Home {
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
     btnMetamaskOption = async () => await this.page.$('#login-modal .login-options .metamask-login');
-
     imgZedLogo = async () => await this.page.waitForSelector('.logo-img')
     lknImgZedLogo = async () => await this.page.waitForSelector('.header-content > .left-part > .logo-part > .logo')
     ddlNavRacing = async () => await this.page.waitForSelector('.icon-part-wrap:nth-child(2) > .menu-button > .icon-part > .icon-arrow > .icon')
@@ -25,7 +24,6 @@ class Home {
     lknNextRun = async () => await this.page.waitForSelector('//a[contains(text(),\'Next to Run\')]')
     lknResults = async () => await this.page.waitForSelector('//a[contains(text(),\'Results\')]')
     lknWinnings = async () => await this.page.waitForSelector('//a[contains(text(),\'Winnings\')]')
-
     lblNavBreeding = async () => await this.page.waitForSelector('//div[contains(text(),\'BREEDING\')]')
     lknNavBreeding = async () => await this.page.waitForSelector('//div[contains(text(),\'BREEDING\')]/..')
     lblNavMarketplace = async () => await this.page.waitForSelector('//div[contains(text(),\'Marketplace\')]')
@@ -38,8 +36,8 @@ class Home {
     lknLearnHelp = async () => await this.page.waitForSelector('//a[contains(text(),\'Help\')]')
     lknLearnGettingStarted = async () => await this.page.waitForSelector('//a[contains(text(),\'Getting started\')]')
     lknLearnProductPortal = async () => await this.page.waitForSelector('//a[contains(text(),\'Product Portal\')]')
-
-
+    lblNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]')
+    lknNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]/../a')
 
     async getPageTitle() {
         return await this.page.title();
