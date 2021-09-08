@@ -1,6 +1,7 @@
 import {Browser, BrowserContext, chromium, Page} from "playwright";
 import Home from '../../pages/Home.page';
 import * as data from '../../data/qa.json';
+// import {expect} from "@playwright/test";
 
 describe('Home', () => {
 
@@ -88,7 +89,12 @@ describe('Home', () => {
     })
 
     it('ZED-7 - Home is showing the Breeding Menu Option on the top navigation bar and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const breeding = await home.lknNavBreeding()
+        expect(await breeding.getAttribute('href')).toContain('/stud')
+        const lblBreeding = await home.lblNavBreeding()
+        expect(await lblBreeding.isVisible()).toBe(true)
+        await lblBreeding.click()
+        expect(await home.getPageUrl()).toContain('/stud');
     })
 
     it('ZED-21 - Home is showing the MarketPlace Menu Option on the top navigation bar and redirects respectively', async () => {
