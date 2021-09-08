@@ -31,9 +31,12 @@ describe('Home', () => {
     });
 
     it('ZED-5 - Home is showing the LOGO on the top navigation bar and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
-        await home.startWithMetamask();
-        expect(await home.getPageUrl()).toContain('home');
+        const ele = await home.imgZedLogo()
+        expect(await ele.screenshot()).toMatchSnapshot('zed.png');
+        expect(await ele?.isVisible()).toBe(true)
+        const eleLink = await home.lknImgZedLogo()
+        await eleLink.click()
+        expect(await eleLink.getAttribute('href')).toBe('/');
     })
 
     it('ZED-6 - Home is showing the Racing Dropdown List on the top navigation bar with the corresponding sub-links and redirects respectively', async () => {
