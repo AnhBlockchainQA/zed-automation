@@ -10,7 +10,8 @@ class Home {
 
     objects = {
         btnStart: '#app .app-content .header-desktop .start-part button',
-        btnMetamaskOption: '#login-modal .login-options .metamask-login'
+        btnMetamaskOption: '#login-modal .login-options .metamask-login',
+        divCardsUpAndUpcoming: '//div[contains(@class,\'race-card\')]'
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
@@ -38,6 +39,7 @@ class Home {
     lknLearnProductPortal = async () => await this.page.waitForSelector('//a[contains(text(),\'Product Portal\')]')
     lblNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]')
     lknNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]/../a')
+    lblH3UpAndUpcoming = async () => await this.page.waitForSelector('//div[contains(@class,\'up-and-coming\')]//h3[contains(text(),\'Up and Coming\')]')
 
     async getPageTitle() {
         return await this.page.title();

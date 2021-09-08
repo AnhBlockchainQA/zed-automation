@@ -199,7 +199,10 @@ describe('Home', () => {
     })
 
     it('ZED-25 - Home is showing the UP and COMING section with at least 3 Races in Card Containers', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const sectionTitle = await home.lblH3UpAndUpcoming()
+        const length = await page.$$eval(home.objects.divCardsUpAndUpcoming, (items) => items.length);
+        expect(length === 3).toBeTruthy();
+        expect(await sectionTitle.innerText()).toContain('UP AND COMING')
     })
 
     it('ZED-26 - Home is showing the UP and COMING section with More Races button at the bottom of the section and respective redirect', async () => {
