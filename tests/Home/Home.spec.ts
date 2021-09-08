@@ -206,7 +206,11 @@ describe('Home', () => {
     })
 
     it('ZED-26 - Home is showing the UP and COMING section with More Races button at the bottom of the section and respective redirect', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const btnMoreRaces = await home.btnUpAndUpcomingMoreRaces()
+        expect(await btnMoreRaces.innerText()).toContain('More Races')
+        expect(await btnMoreRaces.getAttribute('href')).toContain('/racing/events')
+        await btnMoreRaces.click()
+        expect(await home.getPageUrl()).toContain('/racing/events');
     })
 
     it('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {

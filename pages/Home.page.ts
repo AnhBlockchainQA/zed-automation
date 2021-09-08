@@ -40,6 +40,7 @@ class Home {
     lblNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]')
     lknNavWhatsNew = async () => await this.page.waitForSelector('//div[contains(text(),"What\'s new?")]/../a')
     lblH3UpAndUpcoming = async () => await this.page.waitForSelector('//div[contains(@class,\'up-and-coming\')]//h3[contains(text(),\'Up and Coming\')]')
+    btnUpAndUpcomingMoreRaces = async () => await this.page.waitForSelector('//a[contains(text(),\'More Races\')]')
 
     async getPageTitle() {
         return await this.page.title();
