@@ -7,3 +7,4 @@ utils/browser
 package-lock.json
 allure-report/
 allure-results/
+/tests/**/__snapshots__/
