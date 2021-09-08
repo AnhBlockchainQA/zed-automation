@@ -45,6 +45,8 @@ class Home {
     lblPUpAndUpcomingCreateFreeStableLegend = async () => await this.page.waitForSelector('//p[contains(text(),\'Become a stable owner and start racing now to win!\')]')
     btnStartUpAndUpcomingCreateFreeStable = async () => await this.page.waitForSelector('//button[contains(text(),\'Start\')]')
     btnMoreBreeding = async () => await this.page.waitForSelector('//a[contains(text(),\'More Breeding\')]')
+    btnScrollUp = async () => await this.page.waitForSelector('//body/div[@id=\'app\']/div[1]/div[3]/div[1]')
+    btnAcceptCookies = async () => await this.page.waitForSelector('//div/footer[1]/div[2]/div/div[2]/button')
 
     async getPageTitle() {
         return await this.page.title();

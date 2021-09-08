@@ -213,11 +213,11 @@ describe('Home', () => {
         expect(await home.getPageUrl()).toContain('/racing/events');
     })
 
-    it('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {
+    it.skip('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
     })
 
-    it('ZED-28 - Home is showing the On Sale Section with an Explore Market Botton at the bottom of the section and respective redirect', async () => {
+    it.skip('ZED-28 - Home is showing the On Sale Section with an Explore Market Botton at the bottom of the section and respective redirect', async () => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
     })
 
