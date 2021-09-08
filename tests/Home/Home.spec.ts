@@ -40,7 +40,51 @@ describe('Home', () => {
     })
 
     it('ZED-6 - Home is showing the Racing Dropdown List on the top navigation bar with the corresponding sub-links and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+
+        // Racing Main Nav Text
+        const racing = await home.lblNavRacing()
+        expect(await racing.innerText()).toContain('RACING')
+
+        // Racing Nav Link
+        const racingLink = await home.lknRacing()
+        expect(await racingLink.getAttribute('href')).toContain('/racing/events')
+        await racing.click()
+        expect(await home.getPageUrl()).toContain('/racing/events')
+
+        // Racing DDL Options
+        const ddlRacing = await home.ddlNavRacing()
+        await ddlRacing.click()
+
+        // Event Link
+        const events = await home.lknEvents()
+        expect(await events.getAttribute('href')).toContain('/racing/events')
+        expect(await events.isVisible()).toBe(true)
+        await events.click()
+        expect(await home.getPageUrl()).toContain('/racing/events');
+
+        // Next Run Link
+        await ddlRacing.click()
+        const nextRun = await home.lknNextRun()
+        expect(await nextRun.getAttribute('href')).toContain('/racing/upcoming')
+        expect(await nextRun.isVisible()).toBe(true)
+        await nextRun.click()
+        expect(await home.getPageUrl()).toContain('/racing/upcoming');
+
+        // Results Link
+        await ddlRacing.click()
+        const results = await home.lknResults()
+        expect(await results.getAttribute('href')).toContain('/racing/results')
+        expect(await results.isVisible()).toBe(true)
+        await results.click()
+        expect(await home.getPageUrl()).toContain('/racing/results');
+
+        // Winnings Link
+        await ddlRacing.click()
+        const winnings = await home.lknWinnings()
+        expect(await winnings.getAttribute('href')).toContain('/racing/winnings')
+        expect(await winnings.isVisible()).toBe(true)
+        await winnings.click()
+        expect(await home.getPageUrl()).toContain('/racing/winnings/start');
     })
 
     it('ZED-7 - Home is showing the Breeding Menu Option on the top navigation bar and redirects respectively', async () => {
