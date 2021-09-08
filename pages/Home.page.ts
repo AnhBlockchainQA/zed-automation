@@ -11,7 +11,8 @@ class Home {
     objects = {
         btnStart: '#app .app-content .header-desktop .start-part button',
         btnMetamaskOption: '#login-modal .login-options .metamask-login',
-        divCardsUpAndUpcoming: '//div[contains(@class,\'race-card\')]'
+        divCardsUpAndUpcoming: '//div[contains(@class,\'race-card\')]',
+        divOnSaleCardPlaceHolders: '//div[contains(@class,\'horse-sale-card horse-skeleton placeholder\')]'
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
@@ -47,6 +48,15 @@ class Home {
     btnMoreBreeding = async () => await this.page.waitForSelector('//a[contains(text(),\'More Breeding\')]')
     btnScrollUp = async () => await this.page.waitForSelector('//body/div[@id=\'app\']/div[1]/div[3]/div[1]')
     btnAcceptCookies = async () => await this.page.waitForSelector('//div/footer[1]/div[2]/div/div[2]/button')
+    lblH1TitleModalNonExtension = async () => await this.page.waitForSelector('//*[@id="login-modal"]/h1')
+    lblPLegendModalNonExtension = async () => await this.page.waitForSelector('//*[@id="login-modal"]/p[1]')
+    lblPLegendQuestionModalNonExtension = async () => await this.page.waitForSelector('//*[@id="login-modal"]/p[2]')
+    lknInstallMetamaskModalNonExtension = async () => await this.page.waitForSelector('//*[@id="login-modal"]/a')
+    imgInstallMetamaskModalNonExtension = async () => await this.page.waitForSelector('//*[@id="login-modal"]/img[1]')
+    lblH3TitleOnSaleSection = async () => await this.page.waitForSelector('//h3[contains(text(),\'On Sale\')]')
+    divSoldOutOnSaleSection = async () => await this.page.waitForSelector('//div[contains(@class,\'sold-out\')]')
+    divSoldOutMessageOnSaleSection = async () => await this.page.waitForSelector('//div[contains(@class,\'sold-out\')]/div[@class=\'message\']')
+
 
     async getPageTitle() {
         return await this.page.title();

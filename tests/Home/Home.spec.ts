@@ -213,8 +213,22 @@ describe('Home', () => {
         expect(await home.getPageUrl()).toContain('/racing/events');
     })
 
-    it.skip('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+    it('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {
+        const onSaleTitle = await home.lblH3TitleOnSaleSection()
+        expect(await onSaleTitle.innerText()).toContain('On Sale')
+        const soldOutShadow = await home.divSoldOutOnSaleSection()
+        if (await soldOutShadow.isVisible()){
+            await page.waitForSelector(home.objects.divOnSaleCardPlaceHolders)
+            const OnSaleCards = await page.$$eval(home.objects.divOnSaleCardPlaceHolders, (items) => items.length);
+            expect(OnSaleCards === 5).toBeTruthy();
+            const soldOutContent = await home.divSoldOutMessageOnSaleSection()
+            expect(await soldOutContent.isVisible()).toBeTruthy()
+            expect(await soldOutContent.$$eval('p', nodes => nodes.map(n => n.innerText))).toEqual(['The last drop sold out super fast but don\'t worry the next pack of horses are dropping soon. Visit our Discord for updates.']);
+            expect(await soldOutContent.$$eval('a', nodes => nodes.map(n => n.href))).toEqual(['https://discord.gg/zedrun']);
+        } else {
+            // Add the logic when the sold out is not there.
+            console.log('No implemented yet!')
+        }
     })
 
     it.skip('ZED-28 - Home is showing the On Sale Section with an Explore Market Botton at the bottom of the section and respective redirect', async () => {
@@ -249,23 +263,28 @@ describe('Home', () => {
         await cookies.click()
         await page.keyboard.press("PageDown")
         await page.waitForLoadState()
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(1000)
         const scrollUp = await home.btnScrollUp()
         expect(await scrollUp.isHidden()).toBe(false)
         await scrollUp.click()
-        await page.waitForTimeout(2000)
+        await page.waitForTimeout(1000)
         expect(await scrollUp.isHidden()).toBe(true)
     })
 
     it('ZED-97 - Home is showing up the modal with a warning message when the Metamask Extension has not been installed @fast', async() => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
         await home.startWithMetamask();
-        await page.waitForSelector('//*[@id="login-modal"]/h1');
-        expect(await page.textContent('//*[@id="login-modal"]/h1')).toContain(`HAVE YOU INSTALLED METAMASK?`);
-        expect(await page.textContent('//*[@id="login-modal"]/p[1]')).toContain(`ZED has detected that your browser does not have MetaMask installed. MetaMask is widely used by many blockchain applications in order to keep your information secure.`);
-        expect(await page.innerText('//*[@id="login-modal"]/p[2]')).toContain(`What is MetaMask? Head over to our  FAQ`);
-        expect(await page.textContent('//*[@id="login-modal"]/a')).toContain(`Install Metamask`);
-        await page.click('//*[@id="login-modal"]/img[1]');
+        // await page.waitForSelector('//*[@id="login-modal"]/h1');
+        const modalTitle = await home.lblH1TitleModalNonExtension()
+        expect(await modalTitle.textContent()).toContain(`HAVE YOU INSTALLED METAMASK?`);
+        const modalLegend = await home.lblPLegendModalNonExtension()
+        expect(await modalLegend.textContent()).toContain(`ZED has detected that your browser does not have MetaMask installed. MetaMask is widely used by many blockchain applications in order to keep your information secure.`);
+        const modalQuestion = await home.lblPLegendQuestionModalNonExtension()
+        expect(await modalQuestion.innerText()).toContain(`What is MetaMask? Head over to our  FAQ`);
+        const installMeta = await home.lknInstallMetamaskModalNonExtension()
+        expect(await installMeta.textContent()).toContain(`Install Metamask`);
+        const installMetaImg = await home.imgInstallMetamaskModalNonExtension()
+        await installMetaImg.click();
         expect(await home.getPageUrl()).toContain('home');
     })
 
