@@ -237,7 +237,11 @@ describe('Home', () => {
     })
 
     it('ZED-31 - Home is showing In Stud section with More Breeding Button at the bottom of the section and respective redirects', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const btnMoreBreeding = await home.btnMoreBreeding()
+        expect(await btnMoreBreeding.innerText()).toContain('More Breeding')
+        expect(await btnMoreBreeding.getAttribute('href')).toContain('/stud')
+        await btnMoreBreeding.click()
+        expect(await home.getPageUrl()).toContain('/stud');
     })
 
     it('ZED-32 - Home is showing the Go Up icon on the website right corner and hits the action after the user clicks on', async () => {
