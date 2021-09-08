@@ -194,7 +194,7 @@ describe('Home', () => {
         await lblWhatsNew.click()
     })
 
-    it('ZED-24 - Home is showing/loading the Streaming Video', async () => {
+    xit('ZED-24 - Home is showing/loading the Streaming Video', async () => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
     })
 
