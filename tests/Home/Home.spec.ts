@@ -107,7 +107,83 @@ describe('Home', () => {
     })
 
     it('ZED-22 - Home is showing the Learn Dropdown List on the top navigation bar with the corresponding sub-links and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        // Learn Main Nav Text
+        const learn = await home.lblNavLearn()
+        expect(await learn.innerText()).toContain('LEARN')
+
+        // Learn Nav Link
+        const racingLink = await home.lknNavLearn()
+        expect(await racingLink.getAttribute('href')).toContain('/genesis')
+        await learn.click()
+        expect(await home.getPageUrl()).toContain('/genesis')
+
+        // Learn DDL Options
+        const ddlLearn = await home.ddlNavLearn()
+        await ddlLearn.click()
+
+        // Genesis Link
+        const genesis = await home.lknLearnGenesisRaceHorses()
+        expect(await genesis.getAttribute('href')).toContain('/genesis')
+        expect(await genesis.isVisible()).toBe(true)
+        await genesis.click()
+        expect(await home.getPageUrl()).toContain('/genesis');
+
+        // Roster Link
+        await ddlLearn.click()
+        const roster = await home.lknLearnRoster()
+        expect(await roster.getAttribute('href')).toContain('/roster')
+        expect(await roster.isVisible()).toBe(true)
+        await roster.click()
+        expect(await home.getPageUrl()).toContain('/roster');
+
+        // Help Link
+        await ddlLearn.click()
+        const help = await home.lknLearnHelp()
+        expect(await help.getAttribute('href')).toContain('https://help.zed.run/help')
+        expect(await help.isVisible()).toBe(true)
+        const [multipage] = await Promise.all([
+            context.waitForEvent("page"),
+            await help.click()
+        ])
+        await multipage.waitForLoadState();
+        const windows = page.context().pages();
+        await windows[1].bringToFront();
+        const back = await windows[1].waitForSelector('//a[contains(text(),\'Back to ZED\')]');
+        expect(await back.isVisible()).toBe(true)
+        await windows[1].close()
+        await windows[0].bringToFront()
+
+        // Getting Started Link
+        await ddlLearn.click()
+        const gettingStarted = await home.lknLearnGettingStarted()
+        expect(await gettingStarted.getAttribute('href')).toContain('https://guide.zed.run')
+        expect(await gettingStarted.isVisible()).toBe(true)
+        const [multipage2] = await Promise.all([
+            context.waitForEvent("page"),
+            await gettingStarted.click()
+        ])
+        await multipage2.waitForLoadState();
+        const windows2 = page.context().pages();
+        await windows2[1].bringToFront();
+        expect(windows2[1].url()).toContain('https://guide.zed.run/')
+        await windows2[1].close()
+        await windows2[0].bringToFront()
+
+        // Product Portal Link
+        await ddlLearn.click()
+        const productPortal = await home.lknLearnProductPortal()
+        expect(await productPortal.getAttribute('href')).toContain('https://product.zed.run/tabs/4-under-development')
+        expect(await productPortal.isVisible()).toBe(true)
+        const [multipage3] = await Promise.all([
+            context.waitForEvent("page"),
+            await productPortal.click()
+        ])
+        await multipage3.waitForLoadState();
+        const windows3 = page.context().pages();
+        await windows3[1].bringToFront();
+        expect(windows3[1].url()).toContain('https://product.zed.run/tabs/15-under-consideration/tabs/4-under-development')
+        await windows3[1].close()
+        await windows3[0].bringToFront()
     })
 
     it('ZED-23 - Home is showing the What\'s New? Menu Option on the top navigation bar and redirects respectively', async () => {
