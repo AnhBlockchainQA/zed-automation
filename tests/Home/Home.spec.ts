@@ -33,7 +33,7 @@ describe('Home', () => {
 
     it('ZED-5 - Home is showing the LOGO on the top navigation bar and redirects respectively', async () => {
         const ele = await home.imgZedLogo()
-        expect(await ele.screenshot()).toMatchSnapshot('zed.png');
+        // expect(await ele.screenshot()).toMatchSnapshot('zed.png');
         expect(await ele?.isVisible()).toBe(true)
         const eleLink = await home.lknImgZedLogo()
         await eleLink.click()
