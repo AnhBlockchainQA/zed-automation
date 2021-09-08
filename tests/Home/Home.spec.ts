@@ -1,7 +1,6 @@
 import {Browser, BrowserContext, chromium, Page} from "playwright";
 import Home from '../../pages/Home.page';
 import * as data from '../../data/qa.json';
-// import {expect} from "@playwright/test";
 
 describe('Home', () => {
 
@@ -17,7 +16,7 @@ describe('Home', () => {
         });
         context = await browser.newContext();
         page = await context.newPage();
-        home =  new Home(page);
+        home = new Home(page);
     })
 
     beforeEach(async () => {
@@ -25,7 +24,7 @@ describe('Home', () => {
         await page.waitForLoadState();
     })
 
-    afterAll( async () => {
+    afterAll(async () => {
         await page.close();
         await context.close();
         await browser.close();
@@ -198,10 +197,10 @@ describe('Home', () => {
         await page.waitForSelector('.streaming')
         const frames = page.frames();
         await page.waitForLoadState()
-        const error =  await frames[1].waitForSelector('#sub-frame-error')
-        if (await error.isVisible()){
+        const error = await frames[1].waitForSelector('#sub-frame-error')
+        if (await error.isVisible()) {
             await page.waitForLoadState()
-            const errorIcon =  await error.waitForSelector('//div[@class="icon icon-generic"]')
+            const errorIcon = await error.waitForSelector('//div[@class="icon icon-generic"]')
             expect(await errorIcon.isVisible()).toBeTruthy()
         } else {
             // Implement code here
@@ -229,7 +228,7 @@ describe('Home', () => {
         const onSaleTitle = await home.lblH3TitleOnSaleSection()
         expect(await onSaleTitle.innerText()).toContain('On Sale')
         const soldOutShadow = await home.divSoldOutOnSaleSection()
-        if (await soldOutShadow.isVisible()){
+        if (await soldOutShadow.isVisible()) {
             await page.waitForSelector(home.objects.divOnSaleCardPlaceHolders)
             const OnSaleCards = await page.$$eval(home.objects.divOnSaleCardPlaceHolders, (items) => items.length);
             expect(OnSaleCards === 5).toBeTruthy();
@@ -261,7 +260,7 @@ describe('Home', () => {
 
     it('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
         const inStudHorses = await home.divInStudHorsesSection()
-        if(await inStudHorses.isVisible()){
+        if (await inStudHorses.isVisible()) {
             await page.waitForSelector(home.objects.divInStudHorsesSection)
             const OnSaleCards = await page.$$eval(home.objects.divInStudHorsesSection, (items) => items.length);
             expect(OnSaleCards === 2).toBeTruthy();
@@ -277,6 +276,7 @@ describe('Home', () => {
         expect(await btnMoreBreeding.innerText()).toContain('More Breeding')
         expect(await btnMoreBreeding.getAttribute('href')).toContain('/stud')
         await btnMoreBreeding.click()
+        await page.waitForTimeout(5000)
         expect(await home.getPageUrl()).toContain('/stud');
     })
 
@@ -293,7 +293,7 @@ describe('Home', () => {
         expect(await scrollUp.isHidden()).toBe(true)
     })
 
-    it('ZED-97 - Home is showing up the modal with a warning message when the Metamask Extension has not been installed @fast', async() => {
+    it('ZED-97 - Home is showing up the modal with a warning message when the Metamask Extension has not been installed @fast', async () => {
         expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
         await home.startWithMetamask();
         // await page.waitForSelector('//*[@id="login-modal"]/h1');
