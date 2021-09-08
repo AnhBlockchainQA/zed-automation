@@ -194,8 +194,18 @@ describe('Home', () => {
         await lblWhatsNew.click()
     })
 
-    xit('ZED-24 - Home is showing/loading the Streaming Video', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+    it('ZED-24 - Home is showing/loading the Streaming Video', async () => {
+        await page.waitForSelector('.streaming')
+        const frames = page.frames();
+        const error =  await frames[1].waitForSelector('#sub-frame-error')
+        if (await error.isVisible()){
+            const errorDetails =  await frames[1].waitForSelector('#sub-frame-error-details')
+            expect(await errorDetails.innerText()).toContain('player.twitch.tv refused to connect.')
+            expect(await errorDetails.isVisible()).toBeTruthy()
+        } else {
+            // Implement code here
+            console.log('No implemented yet!')
+        }
     })
 
     it('ZED-25 - Home is showing the UP and COMING section with at least 3 Races in Card Containers', async () => {
