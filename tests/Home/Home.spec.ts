@@ -222,7 +222,14 @@ describe('Home', () => {
     })
 
     it('ZED-29 - Home is showing the Create your free stable section with START button on the right side of the content', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const lblCreateFreeStable = await home.lblH2UpAndUpcomingCreateFreeStable()
+        expect(await lblCreateFreeStable.isVisible()).toBe(true)
+        const lblCreateFreeStableLegend = await home.lblPUpAndUpcomingCreateFreeStableLegend()
+        expect(await lblCreateFreeStableLegend.isVisible()).toBe(true)
+        const btnStart = await home.btnStartUpAndUpcomingCreateFreeStable()
+        expect(await btnStart.innerText()).toContain('START')
+        await btnStart.click()
+        expect(await home.getPageUrl()).toContain('/home/start');
     })
 
     it('ZED-30 - Home is showing In Stud section with a list of horses', async () => {
