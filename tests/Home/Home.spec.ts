@@ -98,7 +98,12 @@ describe('Home', () => {
     })
 
     it('ZED-21 - Home is showing the MarketPlace Menu Option on the top navigation bar and redirects respectively', async () => {
-        expect(await home.getPageTitle()).toContain('ZED RUN | Digital Horse Racing')
+        const marketplace = await home.lknNavMarketplace()
+        expect(await marketplace.getAttribute('href')).toContain('/marketplace')
+        const lblMarketplace = await home.lblNavMarketplace()
+        expect(await lblMarketplace.isVisible()).toBe(true)
+        await lblMarketplace.click()
+        expect(await home.getPageUrl()).toContain('/marketplace');
     })
 
     it('ZED-22 - Home is showing the Learn Dropdown List on the top navigation bar with the corresponding sub-links and redirects respectively', async () => {
