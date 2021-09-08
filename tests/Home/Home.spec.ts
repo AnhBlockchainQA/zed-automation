@@ -197,6 +197,7 @@ describe('Home', () => {
     it('ZED-24 - Home is showing/loading the Streaming Video', async () => {
         await page.waitForSelector('.streaming')
         const frames = page.frames();
+        await page.waitForLoadState()
         const error =  await frames[1].waitForSelector('#sub-frame-error')
         if (await error.isVisible()){
             await page.waitForLoadState()
