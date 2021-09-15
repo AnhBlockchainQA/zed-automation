@@ -14,7 +14,8 @@ module.exports = {
         // "**/tests/**/*.test.(js|jsx|ts|tsx)"
     ],
     bail: true,
-    bail: 1,
+    bail: 10,
+    collectCoverage: true,
     testEnvironmentOptions: {
         "jest-playwright": {
             browsers: ["chromium"],

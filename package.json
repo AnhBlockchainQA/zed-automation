@@ -6,6 +6,8 @@
   "scripts": {
     "test": "jest --runInBand --testTimeout=300000 --forceExit --detectOpenHandles",
     "test.watch": "jest --watchAll",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "format": "prettier --write \"*.{ts,md}\" \"tests/**/*.ts\"",
     "allure": "allure generate --clean"
   },
   "keywords": [],
