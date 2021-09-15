@@ -263,7 +263,7 @@ describe('Home', () => {
         if (await inStudHorses.isVisible()) {
             await page.waitForSelector(home.objects.divInStudHorsesSection)
             const OnSaleCards = await page.$$eval(home.objects.divInStudHorsesSection, (items) => items.length);
-            expect(OnSaleCards === 2).toBeTruthy();
+            expect(OnSaleCards > 2).toBe(true);
         } else {
             // implement code here.
             expect(false).toBeFalsy()
