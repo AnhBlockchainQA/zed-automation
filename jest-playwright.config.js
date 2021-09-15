@@ -9,6 +9,7 @@ module.exports = {
     },
     errorOnPageError: false,
     launchOptions:{
-        headless: false
+        headless: false,
+        screenshot: 'only-on-failure'
     }
 }

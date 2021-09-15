@@ -20,6 +20,8 @@ module.exports = {
             browsers: ["chromium"],
             launchOptions: {
                 headless: false,
+                screenshot: 'only-on-failure',
+                trace: 'retain-on-failure',
             },
         },
     }

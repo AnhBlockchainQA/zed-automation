@@ -147,7 +147,6 @@ describe('Home', () => {
         await multipage.waitForLoadState();
         const windows = page.context().pages();
         await windows[1].bringToFront();
-        await page.waitForTimeout(1000);
         const back = await windows[1].waitForSelector('//a[contains(text(),\'Back to ZED\')]');
         expect(await back.isVisible()).toBe(true)
         await windows[1].close()
