@@ -12,3 +12,4 @@ allure-results/
 tests/Authorization/test-user-data-dir/
 coverage/**.*
 coverage/**/**.**
+.nyc_output/**.**

@@ -18,6 +18,7 @@ module.exports = {
     collectCoverage: true,
     testEnvironmentOptions: {
         "jest-playwright": {
+            exitOnPageError: false,
             browsers: ["chromium"],
             collectCoverage: true,
             launchOptions: {
