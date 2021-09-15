@@ -19,6 +19,7 @@ module.exports = {
     testEnvironmentOptions: {
         "jest-playwright": {
             browsers: ["chromium"],
+            collectCoverage: true,
             launchOptions: {
                 headless: false,
                 screenshot: 'only-on-failure',

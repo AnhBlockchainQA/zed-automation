@@ -51,7 +51,7 @@ describe('Authorization', () => {
         await browserContext.close();
     });
 
-    it('ZED-1 - Authorization with Existing Magic Account', async () => {
+    xit('ZED-1 - Authorization with Existing Magic Account', async () => {
         expect(true).toBe(true);
     })
 

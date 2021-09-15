@@ -7,6 +7,9 @@ on:
 
   #repository_dispatch:
   #push:
+env:
+  # Force terminal colors. @see https://www.npmjs.com/package/colors
+  FORCE_COLOR: 1
 
 jobs:
   e2e-tests:
