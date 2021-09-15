@@ -8,3 +8,5 @@ package-lock.json
 allure-report/
 allure-results/
 /tests/**/__snapshots__/
+/tests/Authorization/test-user-data-dir/**.*
+tests/Authorization/test-user-data-dir/
