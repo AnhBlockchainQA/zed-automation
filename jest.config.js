@@ -13,14 +13,12 @@ module.exports = {
         "**/tests/**/*.spec.(js|jsx|ts|tsx)",
         // "**/tests/**/*.test.(js|jsx|ts|tsx)"
     ],
-    bail: true,
     bail: 10,
     collectCoverage: true,
     testEnvironmentOptions: {
         "jest-playwright": {
             exitOnPageError: false,
             browsers: ["chromium"],
-            collectCoverage: true,
             launchOptions: {
                 headless: false,
                 screenshot: 'only-on-failure',

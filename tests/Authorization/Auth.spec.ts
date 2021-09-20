@@ -28,17 +28,42 @@ describe('Authorization', () => {
         page = await browserContext.newPage();
         auth = new Authorization(page);
         const [tabs] = await Promise.all([
-            browserContext.waitForEvent("page")
-            // browserContext.backgroundPages()[0],
+            browserContext.waitForEvent("page"),
+            browserContext.backgroundPages()[0],
         ]);
         await tabs.waitForLoadState();
         pages = tabs.context().pages();
-        // console.log(pages.length);
-        // pages.forEach(page => {
-        //     console.log(page.url());
-        // })
         await pages[0].close();
         await pages[2].bringToFront();
+        await pages[2].reload();
+        await pages[2].click(auth.objects.BTN_METAMASK_GET_STARTED);
+        await pages[2].click(auth.objects.BTN_METAMASK_IMPORT_WALLET);
+        await pages[2].click(auth.objects.BTN_METAMASK_I_AGREE);
+        await pages[2].type(auth.objects.TEXT_AREA_METAMASK_PASSPHRASE, data.seed_phrase);
+        await pages[2].type(auth.objects.TXT_METAMASK_PASSWORD, data.password);
+        await pages[2].type(auth.objects.TXT_METAMASK_PASSWORD_CONFIRM, data.password);
+        await pages[2].click(auth.objects.CHECKBOX_METAMASK_AGREE);
+        await pages[2].click(auth.objects.BTN_METAMASK_IMPORT);
+        await pages[2].click(auth.objects.BTN_METAMASK_ALL_DONE);
+        await pages[2].click(auth.objects.BTN_METAMASK_CLOSE);
+        await pages[2].click(auth.objects.BTN_METAMASK_NETWORK_NAME);
+        await pages[2].click(auth.objects.BTN_METAMASK_CHOOSE_NETWORK);
+        await pages[1].bringToFront();
+        await pages[1].goto(data.baseUrl);
+        await pages[1].waitForLoadState();
+        await pages[1].click(auth.objects.BTN_NAV_START);
+        const [windows] = await Promise.all([
+            browserContext.waitForEvent("page"),
+            await page.click(auth.objects.BTN_MODAL_METAMASK_LOGIN)
+        ]);
+        await windows.waitForLoadState();
+        pages = windows.context().pages();
+        await pages[2].bringToFront();
+        await pages[2].click(auth.objects.BTN_METAMASK_NEXT);
+        await pages[2].click(auth.objects.BTN_METAMASK_CONNECT);
+        await pages[2].click(auth.objects.BTN_METAMASK_SIGN);
+        await pages[0].bringToFront();
+        await pages[1].close();
     })
 
     beforeEach(async () => {
@@ -55,11 +80,11 @@ describe('Authorization', () => {
         expect(true).toBe(true);
     })
 
-    xit('ZED-2 - Authorization Redirects from Magic Form to Metamask Sign In', async () => {
+    it('ZED-2 - Authorization Redirects from Magic Form to Metamask Sign In', async () => {
         expect('/').toBe('/');
     })
 
-    xit('ZED-4 - Authorization redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
+    it('ZED-4 - Authorization redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
         expect('/').toBe('/');
     })
 
