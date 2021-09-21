@@ -1,16 +1,19 @@
 import {BrowserContext, chromium, Page} from "playwright";
 import Authorization from '../../pages/Authorization.page';
+import Wallet from "../../pages/Wallet.page";
 import * as data from '../../data/qa.json';
 const pathToExtension = require('path').join(__dirname, '../../extensions/metamask-chrome-8.1.3');
 const userDataDir = __dirname + "/test-user-data-dir";
 const fs = require("fs-extra");
 
-describe('Authorization', () => {
+describe('Wallet', () => {
 
     let browserContext: BrowserContext;
     let page: Page;
     let auth: Authorization;
+    let wallet: Wallet;
     let pages;
+    let tabs;
 
     beforeAll(async () => {
         await fs.remove(userDataDir, (err: any) => {
@@ -27,7 +30,8 @@ describe('Authorization', () => {
         });
         page = await browserContext.newPage();
         auth = new Authorization(page);
-        const [tabs] = await Promise.all([
+        wallet = new Wallet(page);
+        [tabs] = await Promise.all([
             browserContext.waitForEvent("page"),
             browserContext.backgroundPages()[0],
         ]);
@@ -64,6 +68,7 @@ describe('Authorization', () => {
         await pages[2].click(auth.objects.BTN_METAMASK_SIGN);
         await pages[0].bringToFront();
         await pages[1].close();
+        await page.waitForTimeout(4000);
     })
 
     beforeEach(async () => {
@@ -76,46 +81,33 @@ describe('Authorization', () => {
         await browserContext.close();
     });
 
-    it('ZED-1 - Authorization with Existing Magic Account', async () => {
-        expect(true).toBe(true);
+    it('ZED-90 - Wallet is shown to the user', async () => {
+        expect(await page.isVisible(auth.objects.B_ETH_BALANCE)).toBe(true)
+        expect(await page.isVisible(auth.objects.B_WETH_BALANCE)).toBe(true)
+        expect(await page.isVisible(auth.objects.IMG_WALLET_ICON)).toBe(true)
     })
 
-    xit('ZED-11 - Authorization with New Metamask Account', async () => {
+    it('ZED-91 - Wallet is shown to the user the balance in `$` Dollars Currency', async () => {
+        expect(await page.innerText(auth.objects.B_ETH_BALANCE)).toContain(`USD`)
+        expect(await page.innerText(auth.objects.B_ETH_BALANCE)).toContain(`$`)
+        expect(await page.innerText(auth.objects.B_WETH_BALANCE)).toContain(`USD`)
+        expect(await page.innerText(auth.objects.B_WETH_BALANCE)).toContain(`$`)
+    })
+
+    xit('ZED-92 - Wallet is shown to the user the Address', async () => {
         expect('/').toBe('/');
     })
 
-    xit('ZED-12 - Authorization with Existing Metamask Account', async () => {
+    xit('ZED-93 - Wallet is shown to the user after hit the three bullet icon', async () => {
         expect('/').toBe('/');
     })
 
-    xit('ZED-13 - Authorization with New Magic Account', async () => {
-        expect('/').toBe('/');
+    it('ZED-94 - Wallet is sidebar is closed it out after hit the X icon', async () => {
+        await page.click(auth.objects.IMG_WALLET_ICON)
+        expect(await page.isVisible(auth.objects.DIV_WALLET_MODAL_TITLE)).toBe(true)
+        await page.click(auth.objects.IMG_CLOSE_WALLET_MODAL)
+        await page.waitForTimeout(5000)
+        expect(await page.isHidden(auth.objects.DIV_WALLET_MODAL_TITLE)).toBe(false)
     })
-
-    xit('ZED-14 - Authorization Content of What Is The Difference Modal', async () => {
-        expect('/').toBe('/');
-    })
-
-    xit('ZED-15 - Authorization Cancel Action with Existing Metamask Account', async () => {
-        expect('/').toBe('/');
-    })
-
-    xit('ZED-16 - Authorization Cancel Action with New Metamask Account', async () => {
-        expect('/').toBe('/');
-    })
-    
-    xit('ZED-18 - Authorization Cancel Action on Choose An Account Modal', async () => {
-        expect('/').toBe('/');
-    })
-
-    xit('ZED-19 - Authorization after user confirm the link sent to the email inbox', async () => {
-        expect('/').toBe('/');
-    })
-
-    xit('ZED-20 - Authorization forms shows an error message after any validation fails', async () => {
-        expect('/').toBe('/');
-    })
-
-
 
 });

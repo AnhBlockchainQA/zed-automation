@@ -27,6 +27,11 @@ class Authorization {
         BTN_METAMASK_CONFIRM: "//button[text()='Confirm']",
         BTN_NAV_START: '#app .app-content .header-desktop .start-part button',
         BTN_MODAL_METAMASK_LOGIN: '#login-modal .login-options .metamask-login',
+        IMG_WALLET_ICON: "//div[@class='right']/following-sibling::img[1]",
+        B_ETH_BALANCE: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[1]',
+        B_WETH_BALANCE: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[2]',
+        IMG_CLOSE_WALLET_MODAL:'.close-icon',
+        DIV_WALLET_MODAL_TITLE: '//div[text()=\'Wallet settings\']'
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
