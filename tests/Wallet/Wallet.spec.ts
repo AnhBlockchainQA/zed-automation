@@ -98,8 +98,10 @@ describe('Wallet', () => {
         expect('/').toBe('/');
     })
 
-    xit('ZED-93 - Wallet is shown to the user after hit the three bullet icon', async () => {
-        expect('/').toBe('/');
+    it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
+        await wallet.imgWalletUserIcon().then( (x) => x.click() )
+        const elem = await wallet.divWalletUserModalTitle()
+        expect(await elem.isVisible()).toBe(true)
     })
 
     it('ZED-94 - Wallet is sidebar is closed it out after hit the X icon', async () => {
