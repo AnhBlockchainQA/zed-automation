@@ -38,6 +38,14 @@ describe('Home', () => {
         expect(await page.isVisible(home.objects.lblH1ChooseAccountModalTitle)).toBe(true)
     })
 
+    it('ZED-4 - Home redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
+        await home.btnStart().then((x)=> x?.click())
+        expect(await page.isVisible(home.objects.lblH1ChooseAccountModalTitle)).toBe(true)
+        await home.imgCloseChooseAccountLogin().then((x) => x?.click())
+        await home.btnStartHeader().then((x) => x?.click())
+        expect(await page.isVisible(home.objects.lblH1ChooseAccountModalTitle)).toBe(true)
+    })
+
     it('ZED-5 - Home is showing the LOGO on the top navigation bar and redirects respectively', async () => {
         const ele = await home.imgZedLogo()
         // expect(await ele.screenshot()).toMatchSnapshot('zed.png');

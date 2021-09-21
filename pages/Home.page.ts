@@ -19,6 +19,8 @@ class Home {
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
+    btnStartHeader = async () => await this.page.$('//h1[text()=\'OWN. RACE. EARN.\']/following-sibling::button');
+    imgCloseChooseAccountLogin = async () => await this.page.$('(//img[@class=\'close-icon\'])[2]')
     btnMetamaskOption = async () => await this.page.$('#login-modal .login-options .metamask-login');
     btnMagicLinkAccount = async () => await this.page.waitForSelector('//div[@class=\'login-option magic-login\']');
     lblH1MagicLinkFormTitle = async () => await this.page.waitForSelector('//h1[text()=\'ENTER YOUR EMAIL\']');
