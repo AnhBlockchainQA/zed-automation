@@ -13,11 +13,17 @@ class Home {
         btnMetamaskOption: '#login-modal .login-options .metamask-login',
         divCardsUpAndUpcoming: '//div[contains(@class,\'race-card\')]',
         divOnSaleCardPlaceHolders: '//div[contains(@class,\'horse-sale-card horse-skeleton placeholder\')]',
-        divInStudHorsesSection: '//div[contains(@class,\'horses\')]/div[@class=\'horse\']'
+        divInStudHorsesSection: '//div[contains(@class,\'horses\')]/div[@class=\'horse\']',
+        lblH1MagicLinkFormTitle: '//h1[text()=\'ENTER YOUR EMAIL\']',
+        lblH1ChooseAccountModalTitle: '//h1[text()=\'CHOOSE AN ACCOUNT\']'
     }
 
     btnStart = async () => await this.page.$('#app .app-content .header-desktop .start-part button');
     btnMetamaskOption = async () => await this.page.$('#login-modal .login-options .metamask-login');
+    btnMagicLinkAccount = async () => await this.page.waitForSelector('//div[@class=\'login-option magic-login\']');
+    lblH1MagicLinkFormTitle = async () => await this.page.waitForSelector('//h1[text()=\'ENTER YOUR EMAIL\']');
+    lblH1ChooseAccountModalTitle = async () => await this.page.waitForSelector('//h1[text()=\'CHOOSE AN ACCOUNT\']');
+    imgBackIconFromMagicLinkForm = async () => await this.page.waitForSelector('.back-icon');
     imgZedLogo = async () => await this.page.waitForSelector('.logo-img')
     lknImgZedLogo = async () => await this.page.waitForSelector('.header-content > .left-part > .logo-part > .logo')
     ddlNavRacing = async () => await this.page.waitForSelector('.icon-part-wrap:nth-child(2) > .menu-button > .icon-part > .icon-arrow > .icon')

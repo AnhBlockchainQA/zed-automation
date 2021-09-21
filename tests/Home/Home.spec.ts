@@ -30,6 +30,14 @@ describe('Home', () => {
         await browser.close();
     });
 
+    it('ZED-2 - Home Login Options - Redirects from Magic Form to Metamask Sign In', async () => {
+        await home.btnStart().then((x)=> x?.click())
+        await home.btnMagicLinkAccount().then((x) => x?.click())
+        expect(await page.isVisible(home.objects.lblH1MagicLinkFormTitle)).toBe(true)
+        await home.imgBackIconFromMagicLinkForm().then((x)=> x?.click())
+        expect(await page.isVisible(home.objects.lblH1ChooseAccountModalTitle)).toBe(true)
+    })
+
     it('ZED-5 - Home is showing the LOGO on the top navigation bar and redirects respectively', async () => {
         const ele = await home.imgZedLogo()
         // expect(await ele.screenshot()).toMatchSnapshot('zed.png');

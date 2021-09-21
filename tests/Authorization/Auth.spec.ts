@@ -80,10 +80,6 @@ describe('Authorization', () => {
         expect(true).toBe(true);
     })
 
-    it('ZED-2 - Authorization Redirects from Magic Form to Metamask Sign In', async () => {
-        expect('/').toBe('/');
-    })
-
     it('ZED-4 - Authorization redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
         expect('/').toBe('/');
     })
