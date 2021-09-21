@@ -112,6 +112,11 @@ describe('Home', () => {
         expect(await home.getPageUrl()).toContain('/stud');
     })
 
+    it('ZED-17 - Home redirects from the START button shown on the site header to Choose Account/Options Modal', async () => {
+        await home.btnStart().then((x)=> x?.click())
+        expect(await page.isVisible(home.objects.lblH1ChooseAccountModalTitle)).toBe(true)
+    })
+
     it('ZED-21 - Home is showing the MarketPlace Menu Option on the top navigation bar and redirects respectively', async () => {
         const marketplace = await home.lknNavMarketplace()
         expect(await marketplace.getAttribute('href')).toContain('/marketplace')
