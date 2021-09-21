@@ -95,12 +95,15 @@ describe('Wallet', () => {
     })
 
     xit('ZED-92 - Wallet is shown to the user the Address', async () => {
+        await wallet.lblWETHUserBalance().then( async (x) => {
+            console.log(await x.innerText())
+        })
         expect('/').toBe('/');
     })
 
     it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
         await wallet.imgWalletUserIcon().then( (x) => x.click() )
-        const elem = await wallet.divWalletUserModalTitle()
+        const elem = await wallet.lblWalletUserModalTitle()
         expect(await elem.isVisible()).toBe(true)
     })
 
@@ -124,8 +127,40 @@ describe('Wallet', () => {
         expect('/').toBe('/');
     })
 
-    xit('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
-        expect('/').toBe('/');
+    it('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
+        await wallet.imgWalletUserIcon().then( (x) => x.click() )
+        await page.waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY)
+        await page.click(wallet.objects.DDL_DISPLAY_CURRENCY)
+        await wallet.ddlWalletCurrencyGBPPound().then( async (x) => {
+            await x.click()
+            expect(await x.innerText()).toContain(`GBP (British Pound)`)
+        })
+        let currency = await wallet.lblWalletDisplayedCurrencyOnDDL()
+        expect(await currency.innerText()).toContain(`GBP (British Pound)`)
+        await page.waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY)
+        await page.click(wallet.objects.DDL_DISPLAY_CURRENCY)
+        await wallet.ddlWalletCurrencyAUDDollar().then( async (x) => {
+            await x.click()
+            expect(await x.innerText()).toContain(`AUD (Australian Dollar)`)
+        })
+        currency = await wallet.lblWalletDisplayedCurrencyOnDDL()
+        expect(await currency.innerText()).toContain(`AUD (Australian Dollar)`)
+        await page.waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY)
+        await page.click(wallet.objects.DDL_DISPLAY_CURRENCY)
+        await wallet.ddlWalletCurrencyUSDDollar().then( async (x) => {
+            await x.click()
+            expect(await x.innerText()).toContain(`USD (US Dollar)`)
+        })
+        currency =  await wallet.lblWalletDisplayedCurrencyOnDDL()
+        expect(await currency.innerText()).toContain(`USD (US Dollar)`)
+        await page.waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY)
+        await page.click(wallet.objects.DDL_DISPLAY_CURRENCY)
+        await wallet.ddlWalletCurrencyGBPPound().then( async (x) => {
+            await x.click()
+            expect(await x.innerText()).toContain(`GBP (British Pound)`)
+        })
+        currency = await wallet.lblWalletDisplayedCurrencyOnDDL()
+        expect(await currency.innerText()).toContain(`GBP (British Pound)`)
     })
 
     xit('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
