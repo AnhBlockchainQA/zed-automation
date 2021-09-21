@@ -110,4 +110,24 @@ describe('Wallet', () => {
         expect(await page.isHidden(auth.objects.DIV_WALLET_MODAL_TITLE)).toBe(false)
     })
 
+    xit('ZED-132 - Wallet is allowing the user to transfer/deposit to the address', async () => {
+        expect('/').toBe('/');
+    })
+
+    xit('ZED-133 - Wallet is allowing the user to transfer/withdraw to the address', async () => {
+        expect('/').toBe('/');
+    })
+
+    xit('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
+        expect('/').toBe('/');
+    })
+
+    xit('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
+        expect('/').toBe('/');
+    })
+
+    xit('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
+        expect('/').toBe('/');
+    })
+
 });
