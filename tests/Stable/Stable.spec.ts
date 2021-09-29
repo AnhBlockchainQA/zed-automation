@@ -9,13 +9,13 @@ describe('Stable', () => {
     let auth: Authorization;
     let stable: Stable;
     let pages: any;
-    let driver: BrowserContext;
+    let browserContext: BrowserContext;
     let metamask: Metamask;
 
     beforeAll(async () => {
         metamask = new Metamask();
-        driver = await metamask.init()
-        pages = await metamask.authenticate(driver)
+        browserContext = await metamask.init()
+        pages = await metamask.authenticate(browserContext)
         auth = new Authorization(pages);
         stable = new Stable(pages);
     })
@@ -27,7 +27,8 @@ describe('Stable', () => {
 
     afterAll(async () => {
         await pages[0].close();
-        await metamask.close(pages, driver)
+        await browserContext.close()
+        await metamask.close(pages, browserContext)
     });
 
     it('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {

@@ -1,4 +1,4 @@
-import {Browser, BrowserContext, chromium, Page} from "playwright";
+import {Page} from "playwright";
 
 class Home {
 

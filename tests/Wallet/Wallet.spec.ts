@@ -27,6 +27,7 @@ describe('Wallet', () => {
 
     afterAll(async () => {
         await pages[0].close()
+        await browserContext.close()
         await metamask.close(pages, browserContext)
     });
 
