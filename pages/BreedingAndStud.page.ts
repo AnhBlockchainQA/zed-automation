@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
 
-class Breeding {
+class BreedingAndStud {
   public page: Page;
 
   constructor(page: Page) {
@@ -22,4 +22,4 @@ class Breeding {
 
 }
 
-export default Breeding;
+export default BreedingAndStud;

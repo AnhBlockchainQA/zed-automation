@@ -123,4 +123,11 @@ describe('Authorization', () => {
   xit('ZED-20 - Authorization forms shows an error message after any validation fails', async () => {
     expect('/').toBe('/');
   });
+
+  describe('KyC and TC', function() {
+    it('ZED-XXX - Not Implemented Yet', async () => {
+      expect('/').toBe('/');
+    });
+  });
+
 });

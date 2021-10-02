@@ -1,9 +1,9 @@
-import Authorization from '../../../pages/Authorization.page';
-import * as data from '../../../fixtures/qa.json';
-import Metamask from '../../../pages/Metamask.module';
+import Authorization from '../../pages/Authorization.page';
+import * as data from '../../fixtures/qa.json';
+import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
 
-describe('KyC_and_TC', () => {
+describe('Breeding And Stud', () => {
   let auth: Authorization;
   let pages: any;
   let browserContext: BrowserContext;
@@ -31,6 +31,19 @@ describe('KyC_and_TC', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     expect(await pages[0].isVisible(auth.objects.B_WETH_BALANCE)).toBe(true);
     expect(await pages[0].isVisible(auth.objects.IMG_WALLET_ICON)).toBe(true);
+  });
+
+
+  describe('Breeding', function() {
+    it('ZED-XXX - Not Implemented Yet', async () => {
+      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    });
+  });
+
+  describe('Stud', function() {
+    it('ZED-XXX - Not Implemented Yet', async () => {
+      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    });
   });
 
 });

@@ -34,9 +34,30 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  describe('Settings', function () {
+  describe('Settings', function() {
+
     it('ZED-128 - Stable Setting allows the user to navigate through the Tabs [General/Notifications/Advance]', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
+
+    describe('Advanced', function() {
+      it('ZED-XXX - Not Implemented Yet', async () => {
+        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      });
+    });
+
+    describe('General', function() {
+      it('ZED-XXX - Not Implemented Yet', async () => {
+        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      });
+    });
+
+    describe('Notifications', function() {
+      it('ZED-XXX - Not Implemented Yet', async () => {
+        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      });
+    });
+
   });
+
 });
