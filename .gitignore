@@ -3,7 +3,7 @@ node_modules
 .idea
 .vscode
 .github/.DS_Store
-utils/browser
+backUp(DeleteAfterRelease)/utils/browser
 package-lock.json
 allure-report/
 allure-results/
