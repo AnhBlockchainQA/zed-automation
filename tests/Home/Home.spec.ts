@@ -168,7 +168,7 @@ describe('Home', () => {
     await ddlLearn.click();
     const help = await home.lknLearnHelp();
     expect(await help.getAttribute('href')).toContain(
-      'https://help.zed.run/help',
+      'https://community.zed.run/2021/09/10/zed-run-guide/',
     );
     expect(await help.isVisible()).toBe(true);
     const [multipage] = await Promise.all([
@@ -179,7 +179,7 @@ describe('Home', () => {
     const windows = page.context().pages();
     await windows[1].bringToFront();
     const back = await windows[1].waitForSelector(
-      "//a[contains(text(),'Back to ZED')]",
+      "//span[contains(text(),'Go play ZED')]/ancestor::a",
     );
     expect(await back.isVisible()).toBe(true);
     await windows[1].close();
