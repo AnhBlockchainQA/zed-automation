@@ -34,12 +34,6 @@ class Authorization {
     DIV_WALLET_MODAL_TITLE: "//div[text()='Wallet settings']",
   };
 
-  btnStart = async () =>
-    await this.page.$('#app .app-content .header-desktop .start-part button');
-
-  btnGetStartedMetamask = async () =>
-    await this.page.waitForSelector("//button[text()='Get Started']");
-
   async getPageTitle() {
     return await this.page.title();
   }

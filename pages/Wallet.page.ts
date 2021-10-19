@@ -29,40 +29,6 @@ class Wallet {
     collapsePanelWalletSetting: '//span[text()=\'Wallet Settings\']'
   };
 
-  // divUserBalance = async () => await this.page.$('.balance-part');
-  // lblWalletUserModalTitle = async () =>
-  //   await this.page.waitForSelector("//div[text()='Wallet settings']");
-  // imgWalletUserIcon = async () =>
-  //   await this.page.waitForSelector(
-  //     "//div[@class='right']/following-sibling::img[1]",
-  //   );
-  // lblETHUserBalance = async () =>
-  //   await this.page.waitForSelector(
-  //     "//*[@class='balance-part']//div[@class='right']/b[1]",
-  //   );
-  // lblWETHUserBalance = async () =>
-  //   await this.page.waitForSelector(
-  //     "//*[@class='balance-part']//div[@class='right']/b[2]",
-  //   );
-  // ddlWalletDisplayCurrency = async () =>
-  //   await this.page.waitForSelector(
-  //     '.sidebar-content > .currency-part > .z-select > .z-select__control',
-  //   );
-  // lblWalletDisplayedCurrencyOnDDL = async () =>
-  //   await this.page.waitForSelector(
-  //     "//div[contains(@class,'z-select__value-container z-select__value-container--has-value')]//div[1]",
-  //   );
-  // ddlWalletCurrencyETH = async () =>
-  //   await this.page.waitForSelector('#react-select-2-option-0');
-  // ddlWalletCurrencyUSDDollar = async () =>
-  //   await this.page.waitForSelector('#react-select-2-option-1');
-  // ddlWalletCurrencyAUDDollar = async () =>
-  //   await this.page.waitForSelector('#react-select-2-option-2');
-  // ddlWalletCurrencyJPYDollar = async () =>
-  //   await this.page.waitForSelector('#react-select-2-option-3');
-  // ddlWalletCurrencyGBPPound = async () =>
-  //   await this.page.waitForSelector('#react-select-2-option-4');
-
   async getPageTitle() {
     return await this.page.title();
   }

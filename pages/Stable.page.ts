@@ -48,9 +48,6 @@ class Stable {
     }
   };
 
-  btnStart = async () =>
-    await this.page.$('#app .app-content .header-desktop .start-part button');
-
   async getPageTitle() {
     return await this.page.title();
   }
