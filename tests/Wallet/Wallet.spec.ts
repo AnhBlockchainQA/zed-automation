@@ -31,29 +31,19 @@ describe('Wallet', () => {
   });
 
   it('ZED-90 - Wallet is shown to the user', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-    expect(await pages[0].isVisible(auth.objects.B_WETH_BALANCE)).toBe(true);
-    expect(await pages[0].isVisible(auth.objects.IMG_WALLET_ICON)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance_amount)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.IMG_WALLET_ICON)).toBe(true);
   });
 
   it('ZED-91 - Wallet is shown to the user the balance in `$` Dollars Currency', async () => {
-    expect(await pages[0].innerText(auth.objects.B_ETH_BALANCE)).toContain(
-      `USD`,
-    );
-    expect(await pages[0].innerText(auth.objects.B_ETH_BALANCE)).toContain(`$`);
-    expect(await pages[0].innerText(auth.objects.B_WETH_BALANCE)).toContain(
-      `USD`,
-    );
-    expect(await pages[0].innerText(auth.objects.B_WETH_BALANCE)).toContain(
-      `$`,
-    );
+    expect(await pages[0].innerText(wallet.objects.lbl_navbar_balance_amount)).toContain(`$`);
   });
 
   xit('ZED-92 - Wallet is shown to the user the Address', async () => {
-    await wallet.lblWETHUserBalance().then(async (x) => {
-      console.log(await x.innerText());
-    });
-    expect('/').toBe('/');
+    expect(
+        await pages[0].innerText(wallet.objects.B_WETH_BALANCE),
+    ).toContain(`GBP (British Pound)`);
   });
 
   it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
@@ -64,14 +54,14 @@ describe('Wallet', () => {
   });
 
   it('ZED-94 - Wallet is sidebar is closed it out after hit the X icon', async () => {
-    await pages[0].click(auth.objects.IMG_WALLET_ICON);
-    expect(await pages[0].isVisible(auth.objects.DIV_WALLET_MODAL_TITLE)).toBe(
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    expect(await pages[0].isVisible(wallet.objects.DIV_WALLET_MODAL_TITLE)).toBe(
       true,
     );
-    await pages[0].click(auth.objects.IMG_CLOSE_WALLET_MODAL);
+    await pages[0].click(wallet.objects.IMG_CLOSE_WALLET_MODAL);
     await pages[0].waitForTimeout(5000);
-    expect(await pages[0].isHidden(auth.objects.DIV_WALLET_MODAL_TITLE)).toBe(
-      false,
+    expect(await pages[0].isHidden(wallet.objects.DIV_WALLET_MODAL_TITLE)).toBe(
+      false
     );
   });
 
@@ -88,7 +78,8 @@ describe('Wallet', () => {
   });
 
   it('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
-    await pages[0].click(auth.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.collapsePanelWalletSetting);
     await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
     await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
     expect(
