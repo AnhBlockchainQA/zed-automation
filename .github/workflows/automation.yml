@@ -30,6 +30,7 @@ jobs:
         npm install
         xvfb-run --auto-servernum -- npm run test
         variable=$(git rev-parse --short HEAD)
+        echo $variable
       env:
         CI: true
     - name: Upload message with Allure Report URL to Slack Channel
@@ -39,4 +40,4 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
-        slack-text: New push! ${{ variable }}
+        slack-text: New push! $variable
