@@ -27,7 +27,7 @@ jobs:
         npm ci
         npm install
         variable=$(git rev-parse --short HEAD)
-        echo Last commit registred: $variable
+        echo "Last commit registred:" $variable
         xvfb-run --auto-servernum -- npm run test
       env:
         CI: true
