@@ -30,8 +30,12 @@ describe('Stable', () => {
     await metamask.close(pages, browserContext);
   });
 
-  xit('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  afterEach( async () => {
+    console.log('After Each')
+  })
+
+  it('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
+    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(false);
   });
 
   xit('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
