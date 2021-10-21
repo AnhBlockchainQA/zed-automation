@@ -1,0 +1,41 @@
+name: ZED Test Automation (Develop)
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  # Force terminal colors. @see https://www.npmjs.com/package/colors
+  FORCE_COLOR: 1
+
+jobs:
+  e2e-tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: microsoft/playwright-github-action@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Run test when have event ping
+      if: ${{ always()}}
+      # if: github.event.action == 'ping'
+      run: |
+        echo "action '${{ github.event.action }}' "
+        echo "repository '${{ github.event.client_payload.repository }}' "
+        npm ci
+        npm install
+        xvfb-run --auto-servernum -- npm run test
+      env:
+        CI: true
+    - name: Upload message with Allure Report URL to Slack Channel
+      if: always()
+      uses: archive/github-actions-slack@v1.0.3
+      id: notify
+      with:
+        slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        slack-channel: "automation-test-report"
+        slack-text: New push!

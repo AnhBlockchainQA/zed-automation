@@ -1,0 +1,76 @@
+{
+  "baseUrl": "https://goerli-test.zed.run/",
+  "zedrun_url": "https://zed-pr--pr940-hotfix-ledger-suppor-i1cjl0r5.web.app/",
+  "zedrun_specific_free_race_url": "https://zed-pr--pr908-mega-pr-make-racing-vvy0f028.web.app/race/ciloizxs",
+  "paid_race_link": "https://goerli-test.zed.run/race/vglvts4",
+  "temp_zedrun_url": "https://zed-pr--pr825-feature-login-flow-dh9pz5v4.web.app/",
+  "seed_phrase": "shy unknown cause attract misery laundry false notable tourist angry later smoke",
+  "seed_phrase_2": "frame timber square minimum climb tackle jealous narrow say lamp tennis embrace",
+  "password": "12345678",
+  "confirm_password": "12345678",
+  "first_seed_phrase_1": "promote involve unaware today camera major net tail area rule manual humor",
+  "first_password": "12345678",
+  "first_confirm_password": "12345678",
+  "card_number": "371449635398431",
+  "card_expiration_date": "08/25",
+  "card_cvc": "324",
+  "account_list": {
+    "first_account": {
+      "email": "zedrun@1secmail.net",
+      "login": "zedrun",
+      "domain": "1secmail.net"
+    },
+    "second_account": {
+      "email": "zedrun1@1secmail.org",
+      "login": "zedrun1",
+      "domain": "1secmail.org"
+    },
+    "third_account": {
+      "email": "zedrun2@1secmail.com",
+      "login": "zedrun2",
+      "domain": "1secmail.com"
+    },
+    "fourth_account": {
+      "email": "zedrun3@wwjmp.com",
+      "login": "zedrun3",
+      "domain": "wwjmp.com"
+    },
+    "fifth_account": {
+      "email": "zedrun4@esiix.com",
+      "login": "zedrun4",
+      "domain": "esiix.com"
+    },
+    "sixth_account": {
+      "email": "zedrun6@1secmail.org",
+      "login": "zedrun6",
+      "domain": "1secmail.org"
+    },
+    "seventh_account": {
+      "email": "zedrun7@1secmail.org",
+      "login": "zedrun7",
+      "domain": "1secmail.org"
+    }
+  },
+  "amount": "0.01",
+  "percent_discount": {
+    "code": "anh_test",
+    "value": "90.0%",
+    "net_value": 0.9
+  },
+  "invalid_code": {
+    "code": "invalid_coupon",
+    "error": "invalid coupon. check your code and try again"
+  },
+  "horse_list_size": 5,
+  "event_list_size": 10,
+  "first_wallet_address": "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
+  "second_wallet_address": "0x48205801D243fd53cfB10c4edb441C5d2f6EA7e1",
+  "metamask_login": {
+    "public_address": "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
+    "signed_message": "0x84ac739515f569cb0cc85924ee219ba6cf040d550bd6c0db36d3938ea69bb1da41eb8677b503494f9285eccb004637cb8406964fac330b22685af06aae1bc8f91c"
+  },
+  "mail_login": {
+    "public_address": "0x70b3BA01a7DF6999e12BF880D52FB73C62Fd4f2c",
+    "signed_message" :"0x2893c60b14aa1b3c9e089b3202e4f52f9def1481b6b6e1fc335a8cff16f24c7b36e4be03bbe1769dc60309125fce40f1b6d4aacedd6e4164138f7a2f591038051b"
+  }
+}

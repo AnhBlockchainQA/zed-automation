@@ -1,32 +1,58 @@
 {
-  "name": "automate-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ZED-Test-Automation",
+  "version": "2.0.0",
+  "description": "Running tests using Jest & Playwright.",
   "main": "index.js",
+  "license": "MIT",
+  "author": "VHS Lab",
+  "keywords": [
+    "jest",
+    "playwright",
+    "jest-playwright",
+    "jest-playwright-preset"
+  ],
+  "repository": {
+    "url": "https://github.com/vhslab/qa-automationtest.git",
+    "type": "git"
+  },
+  "homepage": "https://vhslab.github.io/qa-automationtest/",
   "scripts": {
     "test": "jest --runInBand --testTimeout=300000 --forceExit --detectOpenHandles",
+    "test.watch": "jest --watchAll",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "allure": "allure generate --clean"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.14.1",
+    "@types/jest": "^27.0.1",
     "allure-commandline": "^2.13.8",
     "expect-playwright": "^0.3.2",
-    "jest": "^26.6.3",
-    "jest-playwright-preset": "^1.4.5",
-    "playwright": "^1.10.0"
+    "jasmine": "^3.9.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jest": "27.2.1",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.10.0",
+    "playwright-core": "^1.14.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
   },
   "dependencies": {
+    "cd": "^0.3.3",
     "config": "^3.3.3",
     "faker": "^5.3.1",
     "fs": "0.0.1-security",
     "fs-extra": "^9.1.0",
+    "jasmine": "^3.9.0",
+    "jest": "27.2.1",
     "jest-allure": "^0.1.3",
-    "jest-circus": "^26.6.3",
+    "jest-cli": "27.2.1",
+    "jest-playwright-preset": "1.7.0",
     "jest-retries": "^1.0.1",
-    "playwright-core": "^1.10.0",
+    "jest-runner": "27.2.1",
+    "playwright": "1.14.1",
+    "playwright-cli": "^0.180.0",
     "superagent-retry-delay": "^2.6.2",
-    "supertest": "^6.1.3"
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.5"
   }
 }
