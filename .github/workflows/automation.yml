@@ -33,9 +33,11 @@ jobs:
         CI: true
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
+      run: |
+        variable=$(git rev-parse --short HEAD)
       uses: archive/github-actions-slack@v1.0.3
       id: notify
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "automation-test-report"
-        slack-text: New push!
+        slack-text: New push! ${{ $variable }}
