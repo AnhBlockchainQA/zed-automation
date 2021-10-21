@@ -29,12 +29,11 @@ jobs:
         npm ci
         npm install
         xvfb-run --auto-servernum -- npm run test
+        variable=$(git rev-parse --short HEAD)
       env:
         CI: true
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
-      run: |
-        variable=$(git rev-parse --short HEAD)
       uses: archive/github-actions-slack@v1.0.3
       id: notify
       with:
