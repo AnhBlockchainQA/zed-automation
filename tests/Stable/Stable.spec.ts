@@ -37,16 +37,21 @@ describe('Stable', () => {
     expect(pages[0].url()).toContain('settings')
   });
 
-  xit('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-  });
-
   xit('ZED-147 - Stable is allowing the user to go the Horse Details after a click on the horse card/link', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-164 - Stable allows the user to filter by BLOODLINE', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-164 - Stable allows the user to filter by BLOODLINE', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.bloodline)
+    await pages[0].click(stable.objects.filtersPanel.bloodline)
+    await pages[0].waitForTimeout(10000)
+    await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
+    await pages[0].waitForTimeout(10000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
   });
 
   xit('ZED-165 - Stable allows the user to filter by GENDER', async () => {

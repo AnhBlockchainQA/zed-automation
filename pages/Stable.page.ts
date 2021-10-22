@@ -22,6 +22,7 @@ class Stable {
     btnStableFilterOptions: '.filters-btn',
     ddlStableSortBy: '(//div[contains(@class,\'z-select\')])[2]',
     stableList:{
+      HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
       horseName: '(//div[@class=\'primary-text name\'])[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
@@ -47,7 +48,8 @@ class Stable {
       zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
       zedGenerationMaxSlider: '(//div[@class=\'input-range__slider\'])[2]',
       bloodline: '//span[text()=\'BLOODLINE\']',
-      bloodlineCheckBoxOptions: '(//div[@class=\'Collapsible\'])[1]//input[@type=\'checkbox\']'
+      bloodlineNakamotoCheckBox: '#Nakamoto',
+      bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
     }
   };
 
