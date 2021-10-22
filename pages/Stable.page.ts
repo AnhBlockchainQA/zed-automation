@@ -53,6 +53,9 @@ class Stable {
       genderFillyLabel: '//label[text()=\'Filly\']',
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
+      breeds: '//span[text()=\'BREEDS\']',
+      breedGenesisCheckBox: '#genesis',
+      breedGenesisLabel: '//label[text()=\'genesis\']'
     }
   };
 

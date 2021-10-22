@@ -67,8 +67,17 @@ describe('Stable', () => {
     expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
   });
 
-  xit('ZED-166 - Stable allows the user to filter BREEDS', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-166 - Stable allows the user to filter BREEDS', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.breeds)
+    await pages[0].click(stable.objects.filtersPanel.breeds)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(stable.objects.filtersPanel.breedGenesisLabel)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
   });
 
   xit('ZED-167 - Stable allows the user to filter by ZED GENERATION range', async () => {
