@@ -47,15 +47,24 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.btnStableFilterOptions)
     await pages[0].waitForSelector(stable.objects.filtersPanel.bloodline)
     await pages[0].click(stable.objects.filtersPanel.bloodline)
-    await pages[0].waitForTimeout(10000)
+    await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
-    await pages[0].waitForTimeout(10000)
+    await pages[0].waitForTimeout(1000)
     expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
   });
 
-  xit('ZED-165 - Stable allows the user to filter by GENDER', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-165 - Stable allows the user to filter by GENDER', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.gender)
+    await pages[0].click(stable.objects.filtersPanel.gender)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
   });
 
   xit('ZED-166 - Stable allows the user to filter BREEDS', async () => {

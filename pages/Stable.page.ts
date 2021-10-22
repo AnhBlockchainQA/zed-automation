@@ -48,6 +48,9 @@ class Stable {
       zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
       zedGenerationMaxSlider: '(//div[@class=\'input-range__slider\'])[2]',
       bloodline: '//span[text()=\'BLOODLINE\']',
+      gender: '//span[text()=\'GENDER\']',
+      genderFillyCheckBox: '#Filly',
+      genderFillyLabel: '//label[text()=\'Filly\']',
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
     }
