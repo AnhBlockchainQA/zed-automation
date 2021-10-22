@@ -8,6 +8,9 @@ class Stable {
   }
 
   objects = {
+    h3EmptyStable: '//h3[text()=\'Your stable is currently empty.\']',
+    lknExploreMarketPlace: '//div[contains(@class,\'explore-card explore-card-marketplace\')]//a[1]',
+    imgStableProfile: '(//div[@class=\'icon-sm\']//img)[1]',
     btnStart: '#app .app-content .header-desktop .start-part button',
     lblStableName: '(//h1[@class=\'stable-name\'])[2]',
     lblStableDescription: '//p[@class=\'primary-text secondary\']',
@@ -37,7 +40,7 @@ class Stable {
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]'
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
-    btnSettings: 'Settings',
+    btnSettings: 'text="Settings"',
     filtersPanel: {
       zedGeneration: '//div[@class=\'f-part zed-generation\']',
       zedGenerationMin: '//div[@class=\'f-part zed-generation\']//input[1]',
