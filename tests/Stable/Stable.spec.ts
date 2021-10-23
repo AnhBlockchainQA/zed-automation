@@ -136,8 +136,11 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.ddlStableSortByDateOldest)
   });
 
-  xit('ZED-173 - Stable shown the stable name', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-173 - Stable shown the stable name', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(await pages[0].isVisible(stable.objects.lblStableName)).toBe(true)
+    expect(await pages[0].innerText(stable.objects.lblStableName)).toContain('stable')
   });
 
   xit('ZED-174 - Stable shown the profile/stable image', async () => {
