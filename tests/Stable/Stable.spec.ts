@@ -143,8 +143,10 @@ describe('Stable', () => {
     expect(await pages[0].innerText(stable.objects.lblStableName)).toContain('stable')
   });
 
-  xit('ZED-174 - Stable shown the profile/stable image', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-174 - Stable shown the profile/stable image', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(await pages[0].isVisible(stable.objects.imgStable)).toBe(true)
   });
 
   xit('ZED-175 - Stable shown the stable description below the stable name', async () => {

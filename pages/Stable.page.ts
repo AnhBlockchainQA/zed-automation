@@ -11,6 +11,7 @@ class Stable {
     h3EmptyStable: '//h3[text()=\'Your stable is currently empty.\']',
     lknExploreMarketPlace: '//div[contains(@class,\'explore-card explore-card-marketplace\')]//a[1]',
     imgStableProfile: '(//div[@class=\'icon-sm\']//img)[1]',
+    imgStable: '(//div[@class=\'name-part\']//div)[1]',
     btnStart: '#app .app-content .header-desktop .start-part button',
     lblStableName: '(//h1[@class=\'stable-name\'])[2]',
     lblStableDescription: '//p[@class=\'primary-text secondary\']',
