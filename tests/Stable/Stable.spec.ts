@@ -118,12 +118,22 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortBy)
+    await pages[0].click(stable.objects.ddlStableSortBy)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortByDateNewest)
+    await pages[0].click(stable.objects.ddlStableSortByDateNewest)
   });
 
-  xit('ZED-172 - Stable allows the user to SORT BT date - oldest', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-172 - Stable allows the user to SORT BT date - oldest', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortBy)
+    await pages[0].click(stable.objects.ddlStableSortBy)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortByDateOldest)
+    await pages[0].click(stable.objects.ddlStableSortByDateOldest)
   });
 
   xit('ZED-173 - Stable shown the stable name', async () => {

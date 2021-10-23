@@ -20,7 +20,9 @@ class Stable {
     imgIconShareStable: '(//img[@class=\'icon icon-share\'])[1]',
     txtStableSearch: '//input[@placeholder=\'Search\']',
     btnStableFilterOptions: '.filters-btn',
-    ddlStableSortBy: '(//div[contains(@class,\'z-select\')])[2]',
+    ddlStableSortBy: '(//div[contains(@class,\'z-select__value-container z-select__value-container--has-value\')])[2]',
+    ddlStableSortByDateNewest: '//div[text()=\'Date - Newest\']',
+    ddlStableSortByDateOldest: '//div[text()=\'Date - Oldest\']',
     stableList:{
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
