@@ -90,8 +90,16 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.breeds)
+    expect(await pages[0].getAttribute(stable.objects.filtersPanel.divPanelFilter, 'class')).toContain('open')
+    await pages[0].waitForSelector(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].click(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].getAttribute(stable.objects.filtersPanel.divPanelFilter, 'class')).toContain('false')
   });
 
   xit('ZED-169 - Stable is shown the left-side filter panel after clicking on FILTERS', async () => {

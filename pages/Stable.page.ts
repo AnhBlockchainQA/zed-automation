@@ -43,6 +43,8 @@ class Stable {
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnSettings: 'text="Settings"',
     filtersPanel: {
+      divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
+      btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
       zedGeneration: '//div[@class=\'f-part zed-generation\']',
       zedGenerationMin: '//div[@class=\'f-part zed-generation\']//input[1]',
       zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
