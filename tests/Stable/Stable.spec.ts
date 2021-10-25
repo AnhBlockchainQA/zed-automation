@@ -149,8 +149,12 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(stable.objects.imgStable)).toBe(true)
   });
 
-  xit('ZED-175 - Stable shown the stable description below the stable name', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-175 - Stable shown the stable description below the stable name', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.stableDescription).not.toEqual('')
+    expect(await pages[0].innerText(stable.objects.stableList.stableDescription)).toContain('Description')
   });
 
   it('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
