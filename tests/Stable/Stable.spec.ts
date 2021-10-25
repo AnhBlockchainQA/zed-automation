@@ -153,8 +153,11 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
   });
 
   xit('ZED-177 - Stable allows the user to go to Horse details after a click on a listed horse', async () => {
