@@ -25,6 +25,7 @@ class Stable {
     ddlStableSortByDateNewest: '//div[text()=\'Date - Newest\']',
     ddlStableSortByDateOldest: '//div[text()=\'Date - Oldest\']',
     stableList:{
+      HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
       horseName: '(//div[@class=\'primary-text name\'])[1]',
@@ -41,7 +42,8 @@ class Stable {
       panelHorseImg: '(//img[@class=\'horse-glow\'])[2]',
       panelHorseDetailsLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[1]',
       panelHorseBreedLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[2]',
-      panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]'
+      panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
+      panelMinimize: '(//img[@class=\'open-label\'])'
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnSettings: 'text="Settings"',

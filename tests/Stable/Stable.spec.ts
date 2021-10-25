@@ -157,11 +157,21 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(2)
   });
 
-  xit('ZED-177 - Stable allows the user to go to Horse details after a click on a listed horse', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-177 - Stable allows the user to close to Horse details after a click on a minimize icon of the card/link', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    const Horselist = pages[0].locator(stable.objects.stableList.HorseList)
+    await Horselist.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    expect(await Horselist.nth(1).getAttribute('class')).toContain('panel open')
+    const cardLinks = pages[0].locator(stable.objects.stableList.panelMinimize)
+    await cardLinks.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    expect(await Horselist.nth(1).getAttribute('class')).toContain('panel closed')
   });
 
   xit('ZED-178 - Stable shown OWN A RACEHORSE button down below the stable horse list', async () => {
