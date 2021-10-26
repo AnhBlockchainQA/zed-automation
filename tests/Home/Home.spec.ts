@@ -1,12 +1,14 @@
 import { Browser, BrowserContext, chromium, Page } from 'playwright';
 import Home from '../../pages/Home.page';
 import * as data from '../../fixtures/qa.json';
+import Navbar from "../../pages/Navbar.component";
 
 describe('Home', () => {
   let browser: Browser;
   let context: BrowserContext;
   let page: Page;
   let home: Home;
+  let nav: Navbar;
 
   beforeAll(async () => {
     browser = await chromium.launch({
@@ -16,6 +18,7 @@ describe('Home', () => {
     context = await browser.newContext();
     page = await context.newPage();
     home = new Home(page);
+    nav = new Navbar(page);
   });
 
   beforeEach(async () => {
@@ -30,7 +33,7 @@ describe('Home', () => {
   });
 
   it('ZED-2 - Home Login Options - Redirects from Magic Form to Metamask Sign In', async () => {
-    await home.btnStart().then((x) => x?.click());
+    await page.click(nav.objects.btnStart)
     await home.btnMagicLinkAccount().then((x) => x?.click());
     expect(await page.isVisible(home.objects.lblH1MagicLinkFormTitle)).toBe(
       true,
@@ -42,7 +45,7 @@ describe('Home', () => {
   });
 
   it('ZED-4 - Home redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
-    await home.btnStart().then((x) => x?.click());
+    await page.click(nav.objects.btnStart)
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);
@@ -119,7 +122,7 @@ describe('Home', () => {
   });
 
   it('ZED-17 - Home redirects from the START button shown on the site header to Choose Account/Options Modal', async () => {
-    await home.btnStart().then((x) => x?.click());
+    await page.click(nav.objects.btnStart)
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);

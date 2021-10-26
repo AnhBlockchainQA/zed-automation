@@ -20,7 +20,7 @@ class Home {
   };
 
   btnStart = async () =>
-    await this.page.$('#app .app-content .header-desktop .start-part button');
+    await this.page.$('//div[contains(text(),\'start\')]');
   btnStartHeader = async () =>
     await this.page.$(
       "//h1[text()='OWN. RACE. EARN.']/following-sibling::button",

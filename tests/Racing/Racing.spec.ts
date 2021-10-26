@@ -27,10 +27,8 @@ describe('Racing', () => {
     await metamask.close(pages, browserContext);
   });
 
-  it('ZED-XX - Not Implemented Yet', async () => {
+  xit('ZED-XX - Not Implemented Yet', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-    expect(await pages[0].isVisible(auth.objects.B_WETH_BALANCE)).toBe(true);
-    expect(await pages[0].isVisible(auth.objects.IMG_WALLET_ICON)).toBe(true);
   });
 
 });
