@@ -30,76 +30,152 @@ describe('Stable', () => {
     await metamask.close(pages, browserContext);
   });
 
-  afterEach( async () => {
-    console.log('After Each')
-  })
-
   it('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(false);
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnSettings)
+    expect(pages[0].url()).toContain('settings')
   });
 
-  xit('ZED-129 - Stable is allowing the user to navigate to Settings section', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-147 - Stable is allowing the user to go the Horse Details after a click on the horse card/link', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const list = pages[0].locator(stable.objects.stableList.HorseList)
+    await list.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].isVisible(stable.objects.stableList.panelCollapseOption)).toBe(true)
   });
 
-  xit('ZED-147 - Stable is allowing the user to go the Horse Details after a click on the horse card/link', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-164 - Stable allows the user to filter by BLOODLINE', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.bloodline)
+    await pages[0].click(stable.objects.filtersPanel.bloodline)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
   });
 
-  xit('ZED-164 - Stable allows the user to filter by BLOODLINE', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-165 - Stable allows the user to filter by GENDER', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.gender)
+    await pages[0].click(stable.objects.filtersPanel.gender)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
   });
 
-  xit('ZED-165 - Stable allows the user to filter by GENDER', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-  });
-
-  xit('ZED-166 - Stable allows the user to filter BREEDS', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-166 - Stable allows the user to filter BREEDS', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.breeds)
+    await pages[0].click(stable.objects.filtersPanel.breeds)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(stable.objects.filtersPanel.breedGenesisLabel)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    expect(await pages[0].isChecked(stable.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
   });
 
   xit('ZED-167 - Stable allows the user to filter by ZED GENERATION range', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.breeds)
+    expect(await pages[0].getAttribute(stable.objects.filtersPanel.divPanelFilter, 'class')).toContain('open')
+    await pages[0].waitForSelector(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].click(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].getAttribute(stable.objects.filtersPanel.divPanelFilter, 'class')).toContain('false')
   });
 
-  xit('ZED-169 - Stable is shown the left-side filter panel after clicking on FILTERS', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-169 - Stable is shown the left-side filter panel after clicking on FILTERS', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].click(stable.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(stable.objects.filtersPanel.breeds)
+    expect(await pages[0].getAttribute(stable.objects.filtersPanel.divPanelFilter, 'class')).toContain('open')
+    await pages[0].waitForSelector(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].click(stable.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].isVisible(stable.objects.filtersPanel.btnCloseFilterPanel)).toBe(true)
   });
 
   xit('ZED-170 - Stable allows the user to SEARCH after type a value and the value match with the input entered', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortBy)
+    await pages[0].click(stable.objects.ddlStableSortBy)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortByDateNewest)
+    await pages[0].click(stable.objects.ddlStableSortByDateNewest)
   });
 
-  xit('ZED-172 - Stable allows the user to SORT BT date - oldest', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-172 - Stable allows the user to SORT BT date - oldest', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortBy)
+    await pages[0].click(stable.objects.ddlStableSortBy)
+    await pages[0].waitForSelector(stable.objects.ddlStableSortByDateOldest)
+    await pages[0].click(stable.objects.ddlStableSortByDateOldest)
   });
 
-  xit('ZED-173 - Stable shown the stable name', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-173 - Stable shown the stable name', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(await pages[0].isVisible(stable.objects.lblStableName)).toBe(true)
+    expect(await pages[0].innerText(stable.objects.lblStableName)).toContain('stable')
   });
 
-  xit('ZED-174 - Stable shown the profile/stable image', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-174 - Stable shown the profile/stable image', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(await pages[0].isVisible(stable.objects.imgStable)).toBe(true)
   });
 
-  xit('ZED-175 - Stable shown the stable description below the stable name', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-175 - Stable shown the stable description below the stable name', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.stableDescription).not.toEqual('')
+    expect(await pages[0].innerText(stable.objects.stableList.stableDescription)).toContain('Description')
   });
 
-  xit('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(2)
   });
 
-  xit('ZED-177 - Stable allows the user to go to Horse details after a click on a listed horse', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-177 - Stable allows the user to close to Horse details after a click on a minimize icon of the card/link', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    await pages[0].waitForTimeout(1000)
+    const Horselist = pages[0].locator(stable.objects.stableList.HorseList)
+    await Horselist.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    expect(await Horselist.nth(1).getAttribute('class')).toContain('panel open')
+    const cardLinks = pages[0].locator(stable.objects.stableList.panelMinimize)
+    await cardLinks.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    expect(await Horselist.nth(1).getAttribute('class')).toContain('panel closed')
   });
 
   xit('ZED-178 - Stable shown OWN A RACEHORSE button down below the stable horse list', async () => {

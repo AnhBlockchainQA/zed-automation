@@ -300,7 +300,7 @@ describe('Home', () => {
     }
   });
 
-  it.skip('ZED-28 - Home is showing the On Sale Section with an Explore Market Botton at the bottom of the section and respective redirect', async () => {
+  it.skip('ZED-28 - Home is showing the On Sale Section with an Explore Market Button at the bottom of the section and respective redirect', async () => {
     expect(await home.getPageTitle()).toContain(
       'ZED RUN | Digital Horse Racing',
     );
