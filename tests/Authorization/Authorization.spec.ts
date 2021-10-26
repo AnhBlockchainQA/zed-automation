@@ -125,7 +125,7 @@ describe('Authorization', () => {
   });
 
   describe('KyC and TC', function() {
-    it('ZED-XXX - Not Implemented Yet', async () => {
+    xit('ZED-XXX - Not Implemented Yet', async () => {
       expect('/').toBe('/');
     });
   });
