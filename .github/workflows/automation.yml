@@ -51,7 +51,7 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v2
       env:
-        PERSONAL_TOKEN: 07a56d6a3c3b39cc83c0375fedf5070e4b60a4cf
+        PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
     - name: Upload message with Allure Report URL to Slack Channel
