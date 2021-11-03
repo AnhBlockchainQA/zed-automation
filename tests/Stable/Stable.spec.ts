@@ -178,9 +178,38 @@ describe('Stable', () => {
     expect(await Horselist.nth(1).getAttribute('class')).toContain('panel closed')
   });
 
-  xit('ZED-178 - Stable shown OWN A RACEHORSE button down below the stable horse list', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-  });
+  it('ZED-178 - Stable shown OWN A RACEHORSE button down below the stable horse list', async () => {
+		await pages[0].click(stable.objects.imgStableProfile);
+		await pages[0].waitForSelector(stable.objects.btnSettings);
+		await pages[0].waitForTimeout(1000);
+		await pages[0].evaluate(async () => {
+			const wait = (duration: number) => {
+				console.log('waiting', duration);
+				return new Promise((resolve) => setTimeout(resolve, duration));
+			};
+
+			let atBottom = false;
+			const scroller = document.documentElement; // usually what you want to scroll, but not always
+			let lastPosition = -1;
+			while (!atBottom) {
+				scroller.scrollTop += 1000;
+				// scrolling down all at once has pitfalls on some sites: scroller.scrollTop = scroller.scrollHeight;
+				await wait(2000);
+				const currentPosition = scroller.scrollTop;
+				if (currentPosition > lastPosition) {
+					console.log('currentPosition', currentPosition);
+					lastPosition = currentPosition;
+				} else {
+					atBottom = true;
+				}
+			}
+			console.log('Done!');
+		});
+		expect(
+			(await pages[0].isVisible(stable.objects.btnOwnARacehorse)) &&
+				(await pages[0].isEnabled(stable.objects.btnOwnARacehorse))
+		).toBe(true);
+	});
 
   xit('ZED-179 - Stable allows the user to OWN a new horse and after that is being shown in the STABLE horse list', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
