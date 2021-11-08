@@ -351,11 +351,11 @@ describe('Home', () => {
     await cookies.click();
     await page.keyboard.press('PageDown');
     await page.waitForLoadState();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     const scrollUp = await home.btnScrollUp();
     expect(await scrollUp.isHidden()).toBe(false);
     await scrollUp.click();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     expect(await scrollUp.isHidden()).toBe(true);
   });
 
