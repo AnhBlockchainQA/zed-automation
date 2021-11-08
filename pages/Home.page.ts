@@ -8,7 +8,11 @@ class Home {
   }
 
   objects = {
-    btnStart: '#app .app-content .header-desktop .start-part button',
+    btnStart: '//div[contains(text(),\'start\')]',
+    btnStartHeader: '//h1[text()=\'OWN. RACE. EARN.\']/following-sibling::button',
+    imgCloseChooseAccountLogin: '(//img[@class=\'close-icon\'])[2]',
+    btnMagicLinkAccount: '//div[@class=\'login-option magic-login\']',
+    imgBackIconFromMagicLinkForm: '.back-icon',
     btnMetamaskOption: '#login-modal .login-options .metamask-login',
     divCardsUpAndUpcoming: "//div[contains(@class,'race-card')]",
     divOnSaleCardPlaceHolders:
@@ -19,16 +23,6 @@ class Home {
     lblH1ChooseAccountModalTitle: "//h1[text()='CHOOSE AN ACCOUNT']",
   };
 
-  btnStart = async () =>
-    await this.page.$('//div[contains(text(),\'start\')]');
-  btnStartHeader = async () =>
-    await this.page.$(
-      "//h1[text()='OWN. RACE. EARN.']/following-sibling::button",
-    );
-  imgCloseChooseAccountLogin = async () =>
-    await this.page.$("(//img[@class='close-icon'])[2]");
-  btnMetamaskOption = async () =>
-    await this.page.$('#login-modal .login-options .metamask-login');
   btnMagicLinkAccount = async () =>
     await this.page.waitForSelector("//div[@class='login-option magic-login']");
   lblH1MagicLinkFormTitle = async () =>
@@ -148,12 +142,8 @@ class Home {
   }
 
   async startWithMetamask() {
-    const btnStart = await this.btnStart();
-    if (btnStart != null) await btnStart.click();
-    else throw new Error('Start Button Not Found!');
-    const btnMetamask = await this.btnMetamaskOption();
-    if (btnMetamask != null) await btnMetamask.click();
-    else throw new Error('Metamask Login Option not found!');
+    await page.click(this.objects.btnStart)
+    await page.click(this.objects.btnMetamaskOption)
   }
 
   async clickOnStartButton() {
