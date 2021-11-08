@@ -142,8 +142,10 @@ class Home {
   }
 
   async startWithMetamask() {
-    await page.click(this.objects.btnStart)
-    await page.click(this.objects.btnMetamaskOption)
+    await this.page.waitForSelector(this.objects.btnStart);
+    await this.page.click(this.objects.btnStart)
+    await this.page.waitForSelector(this.objects.btnMetamaskOption);
+    return await this.page.click(this.objects.btnMetamaskOption)
   }
 
   async clickOnStartButton() {
