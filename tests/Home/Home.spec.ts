@@ -1,7 +1,7 @@
 import { Browser, BrowserContext, chromium, Page } from 'playwright';
 import Home from '../../pages/Home.page';
 import * as data from '../../fixtures/qa.json';
-import Navbar from "../../pages/Navbar.component";
+import Navbar from '../../pages/Navbar.component';
 
 describe('Home', () => {
   let browser: Browser;
@@ -33,24 +33,24 @@ describe('Home', () => {
   });
 
   it('ZED-2 - Home Login Options - Redirects from Magic Form to Metamask Sign In', async () => {
-    await page.click(nav.objects.btnStart)
-    await home.btnMagicLinkAccount().then((x) => x?.click());
+    await page.click(nav.objects.btnStart);
+    await page.click(home.objects.btnMagicLinkAccount);
     expect(await page.isVisible(home.objects.lblH1MagicLinkFormTitle)).toBe(
       true,
     );
-    await home.imgBackIconFromMagicLinkForm().then((x) => x?.click());
+    await page.click(home.objects.imgBackIconFromMagicLinkForm);
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);
   });
 
   it('ZED-4 - Home redirects from the START button shown on the main nav-bar to Choose Account/Options Modal', async () => {
-    await page.click(nav.objects.btnStart)
+    await page.click(nav.objects.btnStart);
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);
-    await home.imgCloseChooseAccountLogin().then((x) => x?.click());
-    await home.btnStartHeader().then((x) => x?.click());
+    await page.click(home.objects.imgCloseChooseAccountLogin);
+    await page.click(home.objects.btnStart);
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);
@@ -122,7 +122,7 @@ describe('Home', () => {
   });
 
   it('ZED-17 - Home redirects from the START button shown on the site header to Choose Account/Options Modal', async () => {
-    await page.click(nav.objects.btnStart)
+    await page.click(nav.objects.btnStart);
     expect(
       await page.isVisible(home.objects.lblH1ChooseAccountModalTitle),
     ).toBe(true);
@@ -144,9 +144,9 @@ describe('Home', () => {
 
     // Learn Nav Link
     const racingLink = await home.lknNavLearn();
-    expect(await racingLink.getAttribute('href')).toContain('/genesis');
+    expect(await racingLink.getAttribute('href')).toContain('/learn');
     await learn.click();
-    expect(await home.getPageUrl()).toContain('/genesis');
+    expect(await home.getPageUrl()).toContain('/learn');
 
     // Learn DDL Options
     const ddlLearn = await home.ddlNavLearn();
@@ -182,7 +182,7 @@ describe('Home', () => {
     const windows = page.context().pages();
     await windows[1].bringToFront();
     const back = await windows[1].waitForSelector(
-      "//span[contains(text(),'Go play ZED')]/ancestor::a",
+      '//span[contains(text(),\'Go play ZED\')]/ancestor::a',
     );
     expect(await back.isVisible()).toBe(true);
     await windows[1].close();
@@ -227,7 +227,7 @@ describe('Home', () => {
     await windows3[0].bringToFront();
   });
 
-  it("ZED-23 - Home is showing the What's New? Menu Option on the top navigation bar and redirects respectively", async () => {
+  it('ZED-23 - Home is showing the What\'s New? Menu Option on the top navigation bar and redirects respectively', async () => {
     const whatsNew = await home.lknNavWhatsNew();
     expect(await whatsNew.getAttribute('href')).toContain(
       'https://announcekit.co/zed-run/product-updates',
@@ -291,7 +291,7 @@ describe('Home', () => {
           nodes.map((n) => n.innerText),
         ),
       ).toEqual([
-        "The last drop sold out super fast but don't worry the next pack of horses are dropping soon. Visit our Discord for updates.",
+        'The last drop sold out super fast but don\'t worry the next pack of horses are dropping soon. Visit our Discord for updates.',
       ]);
       expect(
         await soldOutContent.$$eval('a', (nodes) => nodes.map((n) => n.href)),
@@ -351,11 +351,11 @@ describe('Home', () => {
     await cookies.click();
     await page.keyboard.press('PageDown');
     await page.waitForLoadState();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     const scrollUp = await home.btnScrollUp();
     expect(await scrollUp.isHidden()).toBe(false);
     await scrollUp.click();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(2000);
     expect(await scrollUp.isHidden()).toBe(true);
   });
 

@@ -105,10 +105,10 @@ class Metamask {
   }
 
   async close(pages: any, driver: BrowserContext) {
-    await pages?.close();
+    await pages.close();
     await this.pages.close();
     await this.browserContext?.close();
-    await driver?.close();
+    await driver.close();
   }
 }
 

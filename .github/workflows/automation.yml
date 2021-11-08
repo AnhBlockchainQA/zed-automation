@@ -19,7 +19,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
     - name: Run test when have event ping
       if: ${{ always()}}
       # if: github.event.action == 'ping'
