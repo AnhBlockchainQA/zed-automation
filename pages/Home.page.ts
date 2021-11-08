@@ -8,7 +8,7 @@ class Home {
   }
 
   objects = {
-    btnStart: '//div[contains(text(),\'start\')]',
+    btnStart: '//div[contains(text(),\'start\')]/..',
     btnStartHeader: '//h1[text()=\'OWN. RACE. EARN.\']/following-sibling::button',
     imgCloseChooseAccountLogin: '(//img[@class=\'close-icon\'])[2]',
     btnMagicLinkAccount: '//div[@class=\'login-option magic-login\']',
