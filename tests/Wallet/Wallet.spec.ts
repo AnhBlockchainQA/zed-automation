@@ -81,10 +81,7 @@ describe('Wallet', () => {
 
   it('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
     await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    const collapsePanelWalletSetting = await pages[0].$$("text='display currency'");
-    if (!collapsePanelWalletSetting) {
-      await pages[0].click(wallet.objects.collapsePanelWalletSetting);
-    }
+    await pages[0].click(wallet.objects.collapsePanelWalletSetting);
     await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
     await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
     expect(
