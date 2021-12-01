@@ -47,7 +47,7 @@ class Stable {
       panelMinimize: '(//img[@class=\'open-label\'])'
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
-    btnSettings: 'text="Settings"',
+    btnSettings: '//span[text()=\'Settings\']',
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
