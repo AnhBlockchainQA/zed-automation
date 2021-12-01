@@ -1,5 +1,5 @@
 {
-  "name": "ZED-Test-Automation",
+  "name": "ZED_Test_Automation",
   "version": "2.0.0",
   "description": "Running tests using Jest & Playwright.",
   "main": "index.js",

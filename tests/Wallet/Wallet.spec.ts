@@ -73,8 +73,26 @@ describe('Wallet', () => {
     expect('/').toBe('/');
   });
 
-  xit('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
-    expect('/').toBe('/');
+  it('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
+    await pages[0].click(wallet.objects.BALANCE_NAV_INFO);
+    let account_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.B_ETH_BALANCE))
+    let account_balance_wallet = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.BALANCE_WALLET_INFO))
+    expect(account_balance).toStrictEqual(account_balance_wallet)
+    await pages[0].click(wallet.objects.BTN_TRANSFER)
+    let init_transfer_amount = await pages[0].innerText(wallet.objects.LBL_ETH_DLS_TRANSFER_AMOUNT_IN_MODAL)
+    expect(await wallet.getNumberFromText(init_transfer_amount)).toContain('0.00')
+    const _available_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.P_AVAILABLE_BALANCE_USD))
+    expect(parseInt(<string>_available_balance?.toString())).toBeGreaterThan(0)
+    if (await pages[0].innerText(wallet.objects.LBL_ETH_TRANSFER_MODAL) === 'ETHEREUM')
+      await pages[0].type(wallet.objects.TXT_TRANSFER_AMOUNT, '0.001')
+      expect(await wallet.getNumberFromText(init_transfer_amount)).not.toStrictEqual('0.00')
+      await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON)
+      expect(await pages[0].innerText(wallet.objects.H1_TRANSFER_ETH_TO_POLYGON_NETWORK)).toContain('TRANSFER ETH TO POLYGON NETWORK')
+      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_TO_POLYGON_ASSETS_AMOUNT)).toContain('0.001 ETH')
+      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_FROM)).toContain('Ethereum Mainnet')
+      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_TO)).toContain('Polygon Mainnet')
+      await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_CONFIRM)
+    await pages[0].waitForTimeout(3000)
   });
 
 
