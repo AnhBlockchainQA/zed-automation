@@ -72,8 +72,11 @@ jobs:
         pwd
         ls
         cd videos/
+        pwd
         ls
+        zip -r archive_name.zip .
     - name: Tar files
+      if: always()
       run: tar -cvf files.tar /home/runner/work/qa-automationtest/qa-automationtest/videos/
     - name: See
       if: ${{ always() }}
