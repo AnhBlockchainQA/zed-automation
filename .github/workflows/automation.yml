@@ -64,12 +64,20 @@ jobs:
       with:
         name: Recordings
         path: videos/
-    - name: Upload VIDEO to Slack Channel
+    - name: Tar files
+      run: tar -cvf my_files.tar  /home/runner/work/_temp/my_files.tar
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: my_files.tar
+        retention-days: 3
+    - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path:  /home/runner/work/qa-automationtest/qa-automationtest/videos/*.webm
+        path: /home/runner/work/_temp/my_files.tar
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
