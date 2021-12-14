@@ -53,6 +53,10 @@ class Metamask {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+      recordVideo: {
+        dir: 'videos/',
+        size: { width: 640, height: 480 },
+      }
     });
     return this.browserContext;
   }

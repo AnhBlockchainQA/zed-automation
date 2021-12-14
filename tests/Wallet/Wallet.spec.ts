@@ -20,6 +20,7 @@ describe('Wallet', () => {
   });
 
   beforeEach(async () => {
+    await pages[0].goto(data.baseUrl);
     await pages[0].waitForLoadState();
     await pages[0].waitForTimeout(2000);
     await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
@@ -33,7 +34,7 @@ describe('Wallet', () => {
   });
 
   it('ZED-90 - Wallet is shown to the user', async () => {
-    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(false);
     expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance_amount)).toBe(true);
     expect(await pages[0].isVisible(wallet.objects.IMG_WALLET_ICON)).toBe(true);
   });
