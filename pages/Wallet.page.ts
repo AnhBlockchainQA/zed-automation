@@ -9,6 +9,7 @@ class Wallet {
 
   objects = {
     IMG_WALLET_ICON: "//div[@class='right']/following-sibling::img[1]",
+    DIV_BALANCE_PART: ".header-container > .header > .header-content > .right-part > .balance-part",
     B_ETH_BALANCE: "//*[@class='balance-part']//div[@class='right']/b[1]",
     B_WETH_BALANCE: "//*[@class='balance-part']//div[@class='right']/b[2]",
     BALANCE_NAV_INFO: '//div[text()=\'balance\']',

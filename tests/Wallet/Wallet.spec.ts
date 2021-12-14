@@ -32,12 +32,16 @@ describe('Wallet', () => {
   });
 
   it('ZED-90 - Wallet is shown to the user', async () => {
-      expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(true);
-      expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance_amount)).toBe(true);
-      expect(await pages[0].isVisible(wallet.objects.IMG_WALLET_ICON)).toBe(true);
+    await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
+    await pages[0].click(wallet.objects.DIV_BALANCE_PART)
+    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance_amount)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.IMG_WALLET_ICON)).toBe(true);
   });
 
   it('ZED-91 - Wallet is shown to the user the balance in `$` Dollars Currency', async () => {
+    await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
+    await pages[0].click(wallet.objects.DIV_BALANCE_PART)
     expect(await pages[0].innerText(wallet.objects.lbl_navbar_balance_amount)).toContain(`$`);
   });
 
