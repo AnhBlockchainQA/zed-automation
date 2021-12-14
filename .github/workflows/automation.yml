@@ -60,24 +60,17 @@ jobs:
         commit_message: ${{ github.event.head_commit.message }}
     - name: Record Video On Failure
       uses: actions/upload-artifact@v2
-      if: ${{ failure() || success() }}
+      if: ${{ failure() }}
       with:
         name: Recordings
         path: videos/
-    - name: Tar files
-      run: tar -cvf my_files.tar  /home/runner/work/_temp/my_files.tar
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: my_files.tar
         retention-days: 3
     - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/_temp/my_files.tar
+        path: /home/runner/work/_temp/Recordings.zip
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()

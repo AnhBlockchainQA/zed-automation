@@ -55,10 +55,7 @@ class Metamask {
       ],
       recordVideo: {
         dir: 'videos/',
-        size: {
-          width: 1280,
-          height: 800
-        },
+        size: { width: 640, height: 480 },
       }
     });
     return this.browserContext;
