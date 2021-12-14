@@ -66,19 +66,29 @@ jobs:
         path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
         retention-days: 3
     - name: See
-      if: ${{ always()}}
+      if: ${{ always() }}
       # if: github.event.action == 'ping'
       run: |
         pwd
         ls
         cd videos/
         ls
+    - name: Tar files
+      run: tar -cvf files.tar /home/runner/work/qa-automationtest/qa-automationtest/videos/
+    - name: See
+      if: ${{ always() }}
+        # if: github.event.action == 'ping'
+      run: |
+          pwd
+          ls
+          cd videos/
+          ls
     - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*.webm
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/files.tar
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
