@@ -60,10 +60,10 @@ jobs:
         commit_message: ${{ github.event.head_commit.message }}
     - name: Record Video On Failure
       uses: actions/upload-artifact@v2
-      if: ${{ failure() }}
+      if: ${{ failure() || success() }}
       with:
         name: Recordings
-        path: videos/
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
         retention-days: 3
     - name: See
       if: ${{ always()}}
@@ -78,7 +78,7 @@ jobs:
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/Recordings.zip
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*.webm
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
