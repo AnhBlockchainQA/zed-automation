@@ -65,18 +65,20 @@ jobs:
         name: Recordings
         path: videos/
         retention-days: 3
-    - name: Run test when have event ping
+    - name: See
       if: ${{ always()}}
       # if: github.event.action == 'ping'
       run: |
         pwd
+        ls
+        cd videos/
         ls
     - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/qa-automationtest/videos/Recordings.zip
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/Recordings.zip
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
