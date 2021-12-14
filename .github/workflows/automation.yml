@@ -65,6 +65,12 @@ jobs:
         name: Recordings
         path: videos/
         retention-days: 3
+    - name: Run test when have event ping
+      if: ${{ always()}}
+      # if: github.event.action == 'ping'
+      run: |
+        pwd
+        ls
     - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
