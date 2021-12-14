@@ -67,7 +67,7 @@ jobs:
         retention-days: 3
     - name: Tar files
       if: always()
-      run: tar -cvf development_files.tar /home/runner/work/qa-automationtest/qa-automationtest/videos/
+      run: tar -cvf development_files.tar videos/
     - name: Upload artifact to Slack Channel
       if: always()
       uses: adrey/slack-file-upload-action@1.0.5
