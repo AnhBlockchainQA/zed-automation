@@ -70,7 +70,7 @@ jobs:
       uses: adrey/slack-file-upload-action@1.0.5
       with:
         token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: /home/runner/work/_temp/video/Recordings.zip
+        path: /home/runner/work/qa-automationtest/video/Recordings.zip
         channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
