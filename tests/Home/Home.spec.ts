@@ -274,10 +274,8 @@ describe('Home', () => {
   });
 
   it('ZED-27 - Home is showing the On Sale Section with a list of Horses shown in Card Containers with their respective price per animal', async () => {
-    const onSaleTitle = await home.lblH3TitleOnSaleSection();
-    expect(await onSaleTitle.innerText()).toContain('On Sale');
-    const soldOutShadow = await home.divSoldOutOnSaleSection();
-    if (await soldOutShadow.isVisible()) {
+    expect(await page.innerText(home.objects.lblH3TitleOnSaleSection)).toContain('On Sale');
+    if (await page.isVisible(home.objects.divSoldOutOnSaleSection)) {
       await page.waitForSelector(home.objects.divOnSaleCardPlaceHolders);
       const OnSaleCards = await page.$$eval(
         home.objects.divOnSaleCardPlaceHolders,

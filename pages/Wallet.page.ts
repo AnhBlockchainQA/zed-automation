@@ -39,7 +39,7 @@ class Wallet {
     DDL_DISPLAY_CURRENCY_AUD_DOLLARS: '//*[contains(text(),\'AUD (Australian Dollar)\')]',
     DDL_DISPLAY_CURRENCY_GPY_DOLLARS: '//*[contains(text(),\'JPY (Japanese Yen)\')]',
     DDL_DISPLAY_CURRENCY_GB_POUNDS: '//*[contains(text(),\'GBP (British Pound)\')]',
-    lbl_navbar_balance: '//div[contains(text(),\'balance\')]',
+    lbl_navbar_balance: '//div[text()=\'balance\']',
     lbl_navbar_balance_amount: '//div[@class=\'right\']//b[1]',
     collapsePanelWalletSetting: '//span[text()=\'Wallet Settings\']'
   };
