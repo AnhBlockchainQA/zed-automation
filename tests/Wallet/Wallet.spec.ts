@@ -21,8 +21,8 @@ describe('Wallet', () => {
 
   beforeEach(async () => {
     await pages[0].goto(data.baseUrl);
-    await pages[0].waitForTimeout(2000);
     await pages[0].waitForLoadState();
+    await pages[0].waitForTimeout(3000);
     await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
     await pages[0].click(wallet.objects.DIV_BALANCE_PART)
   });
