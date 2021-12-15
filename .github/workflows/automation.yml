@@ -63,7 +63,7 @@ jobs:
       if: ${{ failure() || success() }}
       with:
         name: Recordings
-        path: videos/
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
         retention-days: 3
     - name: Tar files
       if: always()
