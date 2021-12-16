@@ -279,12 +279,17 @@ describe('Stable', () => {
 
     });
 
+
     describe('Advanced', function() {
-
-      xit('ZED-130 - Advanced Setting allows the user to get API Key', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      it('ZED-130 - Advanced Setting allows the user to get API Key', async () => {
+        await pages[0].click(stable.objects.imgStableProfile);
+		    await pages[0].waitForSelector(stable.objects.btnSettings);
+		    await pages[0].waitForTimeout(1000);
+        await pages[0].click(stable.objects.btnSettings);
+        await pages[0].click(stable.objects.btnAdvanced);
+        const apiKeyTxt = await pages[0].getAttribute(stable.objects.txtApiKey,'value');
+        expect(apiKeyTxt).toContain('SFMyNTY');
       });
-
     });
 
     describe('Notifications', function() {
