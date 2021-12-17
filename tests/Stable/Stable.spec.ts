@@ -219,14 +219,20 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-
   it('ZED-181 - Stable shown the THOROUGHBREDS number', async () => {
     await pages[0].click(stable.objects.imgStableProfile);
     const thoroughbredsTxt= await pages[0].innerText(stable.objects.lblStableThoroughbreds);
     expect(parseInt(thoroughbredsTxt)).toBeGreaterThanOrEqual(1);
   });
-  xit('ZED-182 - Stable shown the TOTAL CAREER of that stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-182 - Stable shown the TOTAL CAREER of that stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    const totalCareerTxt= await pages[0].innerText(stable.objects.lblStableTotalCareer);
+    var careerList= totalCareerTxt.split("/");
+    expect((careerList.length)).toBe(3);
+    for(var career of careerList ){
+      expect(parseInt(career)).toBeGreaterThan(0);
+    }
+
   });
 
   xit('ZED-183 - Stable shown the WIN RATE of the stable', async () => {

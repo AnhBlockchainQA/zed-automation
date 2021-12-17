@@ -66,10 +66,7 @@ class Stable {
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
       breedGenesisLabel: '//label[text()=\'genesis\']'
-    },
-    
-   
-    
+    }  
   };
 
   async getPageTitle() {
