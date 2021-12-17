@@ -235,10 +235,15 @@ describe('Stable', () => {
 
   });
 
-  xit('ZED-183 - Stable shown the WIN RATE of the stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-  });
+  it('ZED-183 - Stable shown the WIN RATE of the stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    const winRateTxt= await pages[0].innerText(stable.objects.lblStableWinRate);
+    expect(winRateTxt).toContain('%');
+    var txt= winRateTxt.split("%");
+    //console.log(txt[0]);
+    expect(parseInt(txt[0])).toBeGreaterThan(0);
 
+  });
   xit('ZED-184 - Stable allows/shown the COPY LINK STABLE next to the stable name', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
