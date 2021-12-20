@@ -50,6 +50,7 @@ class Stable {
     btnSettings: '//span[text()=\'Settings\']',
     btnAdvanced: '//div[text()=\'Advanced\']',
     txtApiKey: '//input[@type=\'text\']',
+    btnNotifications: '//div[text()=\'Notifications\']',
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',

@@ -240,7 +240,6 @@ describe('Stable', () => {
     const winRateTxt= await pages[0].innerText(stable.objects.lblStableWinRate);
     expect(winRateTxt).toContain('%');
     var txt= winRateTxt.split("%");
-    //console.log(txt[0]);
     expect(parseInt(txt[0])).toBeGreaterThan(0);
 
   });
@@ -254,8 +253,16 @@ describe('Stable', () => {
 
   describe('Settings', function() {
 
-    xit('ZED-128 - Stable Setting allows the user to navigate through the Tabs [General/Notifications/Advance]', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-128 - Stable Setting allows the user to navigate through the Tabs [General/Notifications/Advance]', async () => {
+      await pages[0].click(stable.objects.imgStableProfile);
+      await pages[0].waitForSelector(stable.objects.btnSettings);
+      await pages[0].waitForTimeout(1000);
+      await pages[0].click(stable.objects.btnSettings);
+      expect(pages[0].url()).toContain('settings')
+      await pages[0].click(stable.objects.btnNotifications);
+      expect(pages[0].url()).toContain('notifications')
+      await pages[0].click(stable.objects.btnAdvanced);
+      expect(pages[0].url()).toContain('advanced')
     });
 
     describe('General', function() {
