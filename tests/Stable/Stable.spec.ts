@@ -258,11 +258,11 @@ describe('Stable', () => {
       await pages[0].waitForSelector(stable.objects.btnSettings);
       await pages[0].waitForTimeout(1000);
       await pages[0].click(stable.objects.btnSettings);
-      expect(pages[0].url()).toContain('settings')
+      expect(await pages[0].url()).toContain('settings')
       await pages[0].click(stable.objects.btnNotifications);
-      expect(pages[0].url()).toContain('notifications')
+      expect(await pages[0].url()).toContain('notifications')
       await pages[0].click(stable.objects.btnAdvanced);
-      expect(pages[0].url()).toContain('advanced')
+      expect(await pages[0].url()).toContain('advanced')
     });
 
     describe('General', function() {
