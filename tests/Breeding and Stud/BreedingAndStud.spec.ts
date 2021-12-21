@@ -318,8 +318,12 @@ describe('Breeding And Stud', () => {
       expect(urlCopied).toBe(urlShared)
     });
 
-    xit('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const divHorseProfile = await pages[0].waitForSelector(breedingAndStud.objects.divHorseProfile).catch(() => false)
+      expect(divHorseProfile).not.toBeFalsy()
+      const divHorseImage = await pages[0].waitForSelector(breedingAndStud.objects.divHorseImage).catch(() => false)
+      expect(divHorseImage).not.toBeFalsy()
     });
 
     xit('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
