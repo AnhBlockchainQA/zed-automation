@@ -54,6 +54,7 @@ class Metamask {
         `--start-maximized`,
       ],
     });
+    this.browserContext.grantPermissions(["clipboard-read"])
     return this.browserContext;
   }
 

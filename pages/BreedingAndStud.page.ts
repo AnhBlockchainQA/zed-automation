@@ -14,7 +14,7 @@ class BreedingAndStud {
     lblHorseHeader: '.d-flex.header-text',
     lblHorseOwner: '.panel.open .green',
     lblOwner: '.subheader-text > span',
-    lblOwnerVal: '.subheader-text > a',
+    lblOwnerValue: '.subheader-text > a',
     divHorseProfile: '.horse-profile_properties',
     divHorseImage: '.horse-profile_image',
     imgHorse3D: '.horse-inspector',
@@ -25,7 +25,7 @@ class BreedingAndStud {
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
     lblAttr: '.xs',
-    lblAttrVal: '.xs + div > .primary-text.bold',
+    lblAttrValue: '.xs + div > .primary-text.bold',
     lblBloodline: '//div[text()=\'bloodline\']',
     lstHorses: (id?: Number) => id ? `.panel:nth-child(${id})` : '.panel'
   };

@@ -304,11 +304,18 @@ describe('Breeding And Stud', () => {
       const horseName = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
       const horseHeader = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
-      expect(horseHeader).toEqual(horseName)
+      expect(horseHeader).toBe(horseName)
     });
 
-    xit('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.btnShare)
+      const urlShared = await pages[0].getAttribute(breedingAndStud.objects.textShareUrl, 'value')
+      expect(urlShared).toBe(pages[0].url())
+      await pages[0].click(breedingAndStud.objects.btnCopy)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgCopied)
+      const urlCopied = await pages[0].evaluate(async () => await navigator.clipboard.readText())
+      expect(urlCopied).toBe(urlShared)
     });
 
     xit('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
@@ -368,5 +375,4 @@ describe('Breeding And Stud', () => {
     });
 
   });
-  
 });
