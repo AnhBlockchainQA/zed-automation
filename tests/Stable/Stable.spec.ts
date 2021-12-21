@@ -232,12 +232,11 @@ describe('Stable', () => {
     for(var career of careerList ){
       expect(parseInt(career)).toBeGreaterThan(0);
     }
-
   });
 
   it('ZED-183 - Stable shown the WIN RATE of the stable', async () => {
     await pages[0].click(stable.objects.imgStableProfile);
-    const winRateTxt= await pages[0].innerText(stable.objects.lblStableWinRate);
+    const winRateTxt = await pages[0].innerText(stable.objects.lblStableWinRate);
     expect(winRateTxt).toContain('%');
     var txt = winRateTxt.split("%");
     expect(parseInt(txt[0])).toBeGreaterThan(0);
