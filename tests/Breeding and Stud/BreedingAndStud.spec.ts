@@ -1,7 +1,7 @@
 import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
-import { BrowserContext, Page } from 'playwright';
+import { BrowserContext } from 'playwright';
 import BreedingAndStud from '../../pages/BreedingAndStud.page'
 
 describe('Breeding And Stud', () => {
@@ -326,8 +326,10 @@ describe('Breeding And Stud', () => {
       expect(divHorseImage).not.toBeFalsy()
     });
 
-    xit('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const imgHorse3D = await pages[0].waitForSelector(breedingAndStud.objects.imgHorse3D)
+      expect(await imgHorse3D.isEnabled()).toBeTruthy()
     });
 
     xit('ZED-152 - Horse details allow the user to see the horse render in 3D modal after click on the `view 3D` link/icon', async () => {
