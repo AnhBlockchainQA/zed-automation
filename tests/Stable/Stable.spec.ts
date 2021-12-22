@@ -281,8 +281,24 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
       });
 
-      xit('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      it('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
+        await pages[0].click(stable.objects.imgStableProfile);
+        await pages[0].waitForSelector(stable.objects.btnSettings);
+        await pages[0].waitForTimeout(1000);
+        await pages[0].click(stable.objects.btnSettings);
+        const stableName = await pages[0].getAttribute(stable.objects.txtStableTitle,"value");
+        await pages[0].fill(stable.objects.txtStableTitle,'Automation Stable');
+        await pages[0].fill(stable.objects.txtStableDescription,'Automation Descirption');
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated');
+        if(stableName == 'Automation Stable'){
+        await pages[0].waitForTimeout(1000);
+        await pages[0].fill(stable.objects.txtStableDescription,"Stable Descirption");
+        await pages[0].fill(stable.objects.txtStableTitle,'stable 72931792');
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated'); }
       });
 
       xit('ZED-118 - Stable allows the user to transfer a Horse to another stable/address', async () => {
