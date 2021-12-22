@@ -1,19 +1,22 @@
 import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
-import { BrowserContext } from 'playwright';
+import { BrowserContext, Page } from 'playwright';
+import BreedingAndStud from '../../pages/BreedingAndStud.page'
 
 describe('Breeding And Stud', () => {
   let auth: Authorization;
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
+  let breedingAndStud: BreedingAndStud
 
   beforeAll(async () => {
     metamask = new Metamask();
     browserContext = await metamask.init();
     pages = await metamask.authenticate(browserContext);
     auth = new Authorization(pages);
+    breedingAndStud = new BreedingAndStud(pages)
   });
 
   beforeEach(async () => {
@@ -292,9 +295,16 @@ describe('Breeding And Stud', () => {
   });
 
   describe('Horse Details', () => {
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+    })
 
-    xit('ZED-148 - Horse details are showing the horse name on top of the section in a big font size', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-148 - Horse details are showing the horse name on top of the section in a big font size', async () => {
+      const horseName = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const horseHeader = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
+      expect(horseHeader).toEqual(horseName)
     });
 
     xit('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
@@ -358,5 +368,5 @@ describe('Breeding And Stud', () => {
     });
 
   });
-
+  
 });
