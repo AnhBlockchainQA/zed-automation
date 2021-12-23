@@ -332,8 +332,11 @@ describe('Breeding And Stud', () => {
       expect(await imgHorse3D.isEnabled()).toBeTruthy()
     });
 
-    xit('ZED-152 - Horse details allow the user to see the horse render in 3D modal after click on the `view 3D` link/icon', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-152 - Horse details allow the user to see the horse render in 3D modal after click on the `view 3D` link/icon', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.imgHorse3D)
+      const divView3D = await pages[0].waitForSelector(breedingAndStud.objects.divView3D).catch(() => false)
+      expect(divView3D).not.toBeFalsy()
     });
 
     xit('ZED-153 - Horse details allow the user to close 3D view after click on `X` button of the top right side of the modal.', async () => {
