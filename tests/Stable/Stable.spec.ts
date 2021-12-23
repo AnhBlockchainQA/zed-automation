@@ -281,8 +281,36 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
       });
 
-      xit('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      it('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
+        await pages[0].click(stable.objects.imgStableProfile);
+        await pages[0].waitForSelector(stable.objects.btnSettings);
+        await pages[0].waitForTimeout(1000);
+        await pages[0].click(stable.objects.btnSettings);
+        const stableName = await pages[0].getAttribute(stable.objects.txtStableTitle,"value");
+        await pages[0].fill(stable.objects.txtStableTitle,'Automation Stable');
+        await pages[0].fill(stable.objects.txtStableDescription,'Automation Description');
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        await pages[0].waitForTimeout(1000);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated');
+        expect(await pages[0].isVisible(stable.objects.txtUpdate)).toBe(true);
+        await pages[0].click(stable.objects.imgStableProfile);
+        await pages[0].waitForTimeout(1000);
+        expect(await pages[0].innerText(stable.objects.lblStableName)).toBe('Automation Stable');
+        await pages[0].waitForSelector(stable.objects.btnSettings);
+        await pages[0].waitForTimeout(1000);
+        if(stableName != 'Automation Stable'){   // rollback of the values updated.
+        await pages[0].click(stable.objects.btnSettings);
+        await pages[0].fill(stable.objects.txtStableTitle,stableName);
+        await pages[0].fill(stable.objects.txtStableDescription,"");
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated');
+        expect(await pages[0].isVisible(stable.objects.txtUpdate)).toBe(true);
+        }
+    
       });
 
       xit('ZED-118 - Stable allows the user to transfer a Horse to another stable/address', async () => {
