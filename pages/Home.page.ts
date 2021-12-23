@@ -21,6 +21,8 @@ class Home {
       "//div[contains(@class,'horses')]/div[@class='horse']",
     lblH1MagicLinkFormTitle: "//h1[text()='ENTER YOUR EMAIL']",
     lblH1ChooseAccountModalTitle: "//h1[text()='CHOOSE AN ACCOUNT']",
+    divSoldOutOnSaleSection: "//div[contains(@class,'sold-out')]",
+    lblH3TitleOnSaleSection:"//h3[contains(text(),'On Sale')]"
   };
 
   btnMagicLinkAccount = async () =>

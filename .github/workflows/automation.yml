@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
-    - name: Run test when have event ping
+    - name: Run test
       if: ${{ always()}}
       # if: github.event.action == 'ping'
       run: |
@@ -58,6 +58,23 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         commit_message: ${{ github.event.head_commit.message }}
+    - name: Record Video On Failure
+      uses: actions/upload-artifact@v2
+      if: ${{ failure() || success() }}
+      with:
+        name: Recordings
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
+        retention-days: 3
+    - name: Tar files
+      if: always()
+      run: tar -cvf development_files.tar videos/
+    - name: Upload artifact to Slack Channel
+      if: always()
+      uses: adrey/slack-file-upload-action@1.0.5
+      with:
+        token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        path: development_files.tar
+        channel: automation-test-report
     - name: Upload message with Allure Report URL to Slack Channel
       if: always()
       uses: archive/github-actions-slack@v1.0.3

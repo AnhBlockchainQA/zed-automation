@@ -8,8 +8,29 @@ class BreedingAndStud {
   }
 
   objects = {
-    btnStart: '#app .app-content .header-desktop .start-part button',
-    btnMetamaskOption: '#login-modal .login-options .metamask-login',
+    lstHorses: (id?: Number) => id ? `.panel:nth-child(${id})` : '.panel',
+    btnBreeding: 'text=\'BREEDING\'',
+    lblHorseName: '.panel.open .md-text',
+    divHorsePanel: '.panel.open .panel-horse',
+    lblHorseHeader: '.d-flex.header-text',
+    lblOwnerNameAtStud: '.panel.open .green',
+    lblOwner: '.subheader-text > span',
+    lblOwnerNameAtProfile: '.subheader-text > a',
+    divHorseProfile: '.horse-profile_properties',
+    divHorseImage: '.horse-profile_image',
+    imgHorse3D: '.horse-inspector',
+    imgClose3D: '.horse-inspector-modal .close-icon',
+    divView3D: '.viewer-body',
+    btnShare: '.share-btn',
+    textShareUrl: '.share-url',
+    btnCopy: '.copy-link',
+    imgCopied: '.copy-link > img',
+    lblBloodline: '//div[text()=\'bloodline\']',
+    lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
+    lblProfileValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/div`,
+    lblProfileSubValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/span`,
+    lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
+    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`
   };
 
   async getPageTitle() {
@@ -19,7 +40,6 @@ class BreedingAndStud {
   async getPageUrl() {
     return this.page.url();
   }
-
 }
 
 export default BreedingAndStud;

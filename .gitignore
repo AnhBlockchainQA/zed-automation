@@ -17,3 +17,4 @@ tests/Wallet/test-user-data-dir/**.*
 /tests/Wallet/test-user-data-dir/*
 pages/test-user-data-dir/**.*
 pages/test-user-data-dir/*
+*.webm

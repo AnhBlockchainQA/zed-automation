@@ -219,18 +219,28 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-181 - Stable shown the THOROUGHBREDS number', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-181 - Stable shown the THOROUGHBREDS number', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    const thoroughbredsTxt = await pages[0].innerText(stable.objects.lblStableThoroughbreds);
+    expect(parseInt(thoroughbredsTxt)).toBeGreaterThanOrEqual(1);
+  });
+  it('ZED-182 - Stable shown the TOTAL CAREER of that stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    const totalCareerTxt = await pages[0].innerText(stable.objects.lblStableTotalCareer);
+    var careerList = totalCareerTxt.split("/");
+    expect((careerList.length)).toBe(3);
+    for(var career of careerList ){
+      expect(parseInt(career)).toBeGreaterThan(0);
+    }
   });
 
-  xit('ZED-182 - Stable shown the TOTAL CAREER of that stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-183 - Stable shown the WIN RATE of the stable', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    const winRateTxt = await pages[0].innerText(stable.objects.lblStableWinRate);
+    expect(winRateTxt).toContain('%');
+    var txt = winRateTxt.split("%");
+    expect(parseInt(txt[0])).toBeGreaterThan(0);
   });
-
-  xit('ZED-183 - Stable shown the WIN RATE of the stable', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
-  });
-
   xit('ZED-184 - Stable allows/shown the COPY LINK STABLE next to the stable name', async () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
@@ -241,8 +251,16 @@ describe('Stable', () => {
 
   describe('Settings', function() {
 
-    xit('ZED-128 - Stable Setting allows the user to navigate through the Tabs [General/Notifications/Advance]', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-128 - Stable Setting allows the user to navigate through the Tabs [General/Notifications/Advance]', async () => {
+      await pages[0].click(stable.objects.imgStableProfile);
+      await pages[0].waitForSelector(stable.objects.btnSettings);
+      await pages[0].waitForTimeout(1000);
+      await pages[0].click(stable.objects.btnSettings);
+      expect(await pages[0].url()).toContain('settings')
+      await pages[0].click(stable.objects.btnNotifications);
+      expect(await pages[0].url()).toContain('notifications')
+      await pages[0].click(stable.objects.btnAdvanced);
+      expect(await pages[0].url()).toContain('advanced')
     });
 
     describe('General', function() {
@@ -263,8 +281,36 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
       });
 
-      xit('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      it('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
+        await pages[0].click(stable.objects.imgStableProfile);
+        await pages[0].waitForSelector(stable.objects.btnSettings);
+        await pages[0].waitForTimeout(1000);
+        await pages[0].click(stable.objects.btnSettings);
+        const stableName = await pages[0].getAttribute(stable.objects.txtStableTitle,"value");
+        await pages[0].fill(stable.objects.txtStableTitle,'Automation Stable');
+        await pages[0].fill(stable.objects.txtStableDescription,'Automation Description');
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        await pages[0].waitForTimeout(1000);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated');
+        expect(await pages[0].isVisible(stable.objects.txtUpdate)).toBe(true);
+        await pages[0].click(stable.objects.imgStableProfile);
+        await pages[0].waitForTimeout(1000);
+        expect(await pages[0].innerText(stable.objects.lblStableName)).toBe('Automation Stable');
+        await pages[0].waitForSelector(stable.objects.btnSettings);
+        await pages[0].waitForTimeout(1000);
+        if(stableName != 'Automation Stable'){   // rollback of the values updated.
+        await pages[0].click(stable.objects.btnSettings);
+        await pages[0].fill(stable.objects.txtStableTitle,stableName);
+        await pages[0].fill(stable.objects.txtStableDescription,"");
+        await pages[0].check(stable.objects.checkboxSureForUpdate);
+        expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
+        await pages[0].click(stable.objects.btnSaveChanges);
+        expect(await pages[0].innerText(stable.objects.txtUpdate)).toBe('Updated');
+        expect(await pages[0].isVisible(stable.objects.txtUpdate)).toBe(true);
+        }
+    
       });
 
       xit('ZED-118 - Stable allows the user to transfer a Horse to another stable/address', async () => {
@@ -277,12 +323,17 @@ describe('Stable', () => {
 
     });
 
+
     describe('Advanced', function() {
-
-      xit('ZED-130 - Advanced Setting allows the user to get API Key', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      it('ZED-130 - Advanced Setting allows the user to get API Key', async () => {
+      await pages[0].click(stable.objects.imgStableProfile);
+      await pages[0].waitForSelector(stable.objects.btnSettings);
+	    await pages[0].waitForTimeout(1000);
+      await pages[0].click(stable.objects.btnSettings);
+      await pages[0].click(stable.objects.btnAdvanced);
+      const apiKeyTxt = await pages[0].getAttribute(stable.objects.txtApiKey,'value');
+      expect(apiKeyTxt).toContain('SFMyNTY');
       });
-
     });
 
     describe('Notifications', function() {

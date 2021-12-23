@@ -48,6 +48,14 @@ class Stable {
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnSettings: '//span[text()=\'Settings\']',
+    btnAdvanced: '//div[text()=\'Advanced\']',
+    txtApiKey: '//input[@type=\'text\']',
+    btnNotifications: '//div[text()=\'Notifications\']',
+    txtStableTitle :'(//label[text()=\'STABLE TITLE\']/following::input)[1]',
+    txtStableDescription :'(//label[text()="STABLE DESCRIPTION"]/following::textarea)[1]',
+    checkboxSureForUpdate:'//input[@id="sureForUpdate"]/following-sibling::label[1]',
+    btnSaveChanges:'//button[text()="Save Changes"]',
+    txtUpdate:'//i[text()="Updated"]',
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
@@ -64,7 +72,7 @@ class Stable {
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
       breedGenesisLabel: '//label[text()=\'genesis\']'
-    }
+    }  
   };
 
   async getPageTitle() {

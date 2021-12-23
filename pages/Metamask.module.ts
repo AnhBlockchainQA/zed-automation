@@ -53,7 +53,12 @@ class Metamask {
         `--load-extension=${pathToExtension}`,
         `--start-maximized`,
       ],
+      recordVideo: {
+        dir: 'videos/',
+        size: { width: 640, height: 480 },
+      }
     });
+    this.browserContext.grantPermissions(["clipboard-read"])
     return this.browserContext;
   }
 
@@ -94,9 +99,11 @@ class Metamask {
     ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
+
     await this.pages[2].bringToFront();
     await this.pages[2].click(this.objects.BTN_METAMASK_NEXT);
     await this.pages[2].click(this.objects.BTN_METAMASK_CONNECT);
+    await this.pages[2].waitForTimeout(1000);
     await this.pages[2].click(this.objects.BTN_METAMASK_SIGN);
     await this.pages[0].bringToFront();
     await this.pages[1].close();

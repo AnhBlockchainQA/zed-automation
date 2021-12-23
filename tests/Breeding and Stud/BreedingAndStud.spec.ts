@@ -2,18 +2,21 @@ import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
+import BreedingAndStud from '../../pages/BreedingAndStud.page'
 
 describe('Breeding And Stud', () => {
   let auth: Authorization;
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
+  let breedingAndStud: BreedingAndStud
 
   beforeAll(async () => {
     metamask = new Metamask();
     browserContext = await metamask.init();
     pages = await metamask.authenticate(browserContext);
     auth = new Authorization(pages);
+    breedingAndStud = new BreedingAndStud(pages)
   });
 
   beforeEach(async () => {
@@ -292,21 +295,41 @@ describe('Breeding And Stud', () => {
   });
 
   describe('Horse Details', () => {
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+    })
 
-    xit('ZED-148 - Horse details are showing the horse name on top of the section in a big font size', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-148 - Horse details are showing the horse name on top of the section in a big font size', async () => {
+      const horseName = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const horseHeader = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
+      expect(horseHeader).toBe(horseName)
     });
 
-    xit('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.btnShare)
+      const urlShared = await pages[0].getAttribute(breedingAndStud.objects.textShareUrl, 'value')
+      expect(urlShared).toBe(pages[0].url())
+      await pages[0].click(breedingAndStud.objects.btnCopy)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgCopied)
+      const urlCopied = await pages[0].evaluate(async () => await navigator.clipboard.readText())
+      expect(urlCopied).toBe(urlShared)
     });
 
-    xit('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const divHorseProfile = await pages[0].waitForSelector(breedingAndStud.objects.divHorseProfile).catch(() => false)
+      expect(divHorseProfile).not.toBeFalsy()
+      const divHorseImage = await pages[0].waitForSelector(breedingAndStud.objects.divHorseImage).catch(() => false)
+      expect(divHorseImage).not.toBeFalsy()
     });
 
-    xit('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      const imgHorse3D = await pages[0].waitForSelector(breedingAndStud.objects.imgHorse3D)
+      expect(await imgHorse3D.isEnabled()).toBeTruthy()
     });
 
     xit('ZED-152 - Horse details allow the user to see the horse render in 3D modal after click on the `view 3D` link/icon', async () => {
@@ -358,5 +381,4 @@ describe('Breeding And Stud', () => {
     });
 
   });
-
 });
