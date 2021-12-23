@@ -25,7 +25,6 @@ class BreedingAndStud {
     textShareUrl: '.share-url',
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
-    lblBloodline: '//div[text()=\'bloodline\']',
     lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
     lblProfileValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/div`,
     lblProfileSubValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/span`,
