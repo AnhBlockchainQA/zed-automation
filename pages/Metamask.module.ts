@@ -58,6 +58,7 @@ class Metamask {
         size: { width: 640, height: 480 },
       }
     });
+    this.browserContext.grantPermissions(["clipboard-read"])
     return this.browserContext;
   }
 
