@@ -48,6 +48,7 @@ class Stable {
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnSettings: '//span[text()=\'Settings\']',
+    imgIconSettings: '//div[@class="icon-part"]/img', 
     btnAdvanced: '//div[text()=\'Advanced\']',
     txtApiKey: '//input[@type=\'text\']',
     btnNotifications: '//div[text()=\'Notifications\']',
