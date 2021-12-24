@@ -337,23 +337,28 @@ describe('Stable', () => {
     });
 
     describe('Notifications', function() {
-      xit('ZED-131 - Notifications allow the user to enable and disable it', async () => {// disable due to https://app.qase.io/defect/ZED/view/2
+      it('ZED-131 - Notifications allow the user to enable and disable it', async () => {
         await pages[0].click(stable.objects.imgStableProfile);
 		  await pages[0].waitForSelector(stable.objects.btnSettings);
 		  await pages[0].waitForTimeout(1000);
         await pages[0].click(stable.objects.btnSettings);
         await pages[0].click(stable.objects.btnNotifications);
         expect(await pages[0].isChecked(stable.objects.checkBoxNotification)).toBe(false);
-        await pages[0].check(stable.objects.checkBoxNotification);
-        await pages[0].check(stable.objects.checkBoxNotification);
+        await pages[0].click(stable.objects.checkBoxNotification,{ force: true });
         await pages[0].waitForTimeout(1000);
-        expect(await pages[0].isChecked(stable.objects.checkBoxNotification)).toBe(true);
-        await pages[0].waitForSelector(stable.objects.checkBoxMyRaceReminder)
+        await pages[0].waitForSelector(stable.objects.checkBoxNotification);
         await pages[0].check(stable.objects.checkBoxMyRaceReminder);
-        await pages[0].waitForTimeout(1000);
         await pages[0].check(stable.objects.checkBoxRaceReminder); 
         expect(await pages[0].isChecked(stable.objects.checkBoxMyRaceReminder)).toBe(true);
         expect(await pages[0].isChecked(stable.objects.checkBoxRaceReminder)).toBe(true);
+        expect(await pages[0].isChecked(stable.objects.checkBoxNotification)).toBe(true);
+        //rollback updated
+        await pages[0].uncheck(stable.objects.checkBoxMyRaceReminder);
+        await pages[0].uncheck(stable.objects.checkBoxRaceReminder);
+        expect(await pages[0].isChecked(stable.objects.checkBoxMyRaceReminder)).toBe(false);
+        expect(await pages[0].isChecked(stable.objects.checkBoxRaceReminder)).toBe(false);
+        await pages[0].check(stable.objects.checkBoxNotification);
+        expect(await pages[0].isChecked(stable.objects.checkBoxMyRaceReminder)).toBe(false);
       });
 
     });
