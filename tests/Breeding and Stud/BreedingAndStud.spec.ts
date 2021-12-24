@@ -352,8 +352,12 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
+      const nameAtStud = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtStud)
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('Owner')
+      const nameAtProfile = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)
+      expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
     });
 
     xit('ZED-156 - Horse details has showing the BLOODLINE', async () => {
