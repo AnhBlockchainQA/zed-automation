@@ -364,8 +364,17 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-157 - Horse details has showing the GEN', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-157 - Horse details has showing the GEN', async () => {
+      const panelGen = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(1))
+      const panelSubGen = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(2))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(2))).toBe('GEN')
+      const profileGen = await pages[0].innerText(breedingAndStud.objects.lblProfileValue(2))
+      const profileSubGen = await pages[0].innerText(breedingAndStud.objects.lblProfileValue(3))
+      expect(profileGen.length).toBeGreaterThan(0)
+      expect(profileSubGen.length).toBeGreaterThan(0)
+      expect(profileGen).toBe(panelGen)
+      expect(profileSubGen).toBe(panelSubGen)
     });
 
     xit('ZED-158 - Horse details has showing the GENDER', async () => {

@@ -8,12 +8,13 @@ class BreedingAndStud {
   }
 
   objects = {
-    lstHorses: (id?: Number) => id ? `.panel:nth-child(${id})` : '.panel',
     btnBreeding: 'text=\'BREEDING\'',
+    lstHorses: (id?: Number) => id ? `.panel:nth-child(${id})` : '.panel',
     lblHorseName: '.panel.open .md-text',
     divHorsePanel: '.panel.open .panel-horse',
-    lblHorseHeader: '.d-flex.header-text',
     lblOwnerNameAtStud: '.panel.open .green',
+    lblPanelValue: (id: Number) => `(//div[@class='panel open']//div[@class='item']//*[contains(@class, 'primary-text')])[${id}]`,
+    lblHorseHeader: '.d-flex.header-text',
     lblOwner: '.subheader-text > span',
     lblOwnerNameAtProfile: '.subheader-text > a',
     divHorseProfile: '.horse-profile_properties',
@@ -26,8 +27,7 @@ class BreedingAndStud {
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
     lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
-    lblProfileValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/div`,
-    lblProfileSubValue: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]/following-sibling::div/span`,
+    lblProfileValue: (id: Number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`
   };
