@@ -294,7 +294,7 @@ describe('Breeding And Stud', () => {
 
   });
 
-  describe('Horse Details', () => {
+  describe('Horse Profile', () => {
     beforeEach(async() => {
       await pages[0].click(breedingAndStud.objects.btnBreeding)
       await pages[0].click(breedingAndStud.objects.lstHorses(1))
@@ -339,8 +339,13 @@ describe('Breeding And Stud', () => {
       expect(divView3D).not.toBeFalsy()
     });
 
-    xit('ZED-153 - Horse details allow the user to close 3D view after click on `X` button of the top right side of the modal.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-153 - Horse details allow the user to close 3D view after click on `X` button of the top right side of the modal.', async () => {
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.imgHorse3D)
+      await pages[0].waitForSelector(breedingAndStud.objects.divView3D)
+      await pages[0].click(breedingAndStud.objects.imgClose3D)
+      const divView3D = await pages[0].waitForSelector(breedingAndStud.objects.divView3D, {state: 'hidden', timeout: 3000}).catch(() => true)
+      expect(divView3D).toBeNull()
     });
 
     xit('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {
