@@ -360,8 +360,13 @@ describe('Breeding And Stud', () => {
       expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
     });
 
-    xit('ZED-156 - Horse details has showing the BLOODLINE', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-156 - Horse details has showing the BLOODLINE', async () => {
+      const panelBloodline = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(3))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(1))).toBe('BLOODLINE')
+      const profileBloodline = await pages[0].innerText(breedingAndStud.objects.lblProfileValue(1))
+      expect(profileBloodline.length).toBeGreaterThan(0)
+      expect(profileBloodline).toBe(panelBloodline)
     });
 
     it('ZED-157 - Horse details has showing the GEN', async () => {
