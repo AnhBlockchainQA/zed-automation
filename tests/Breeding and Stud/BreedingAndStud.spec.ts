@@ -386,8 +386,13 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-159 - Horse details has showing the COAT', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-159 - Horse details has showing the COAT', async () => {
+      const panelCoat = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(5))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(4))).toBe('COAT')
+      const profileCoat = await pages[0].innerText(breedingAndStud.objects.lblProfileValue(5))
+      expect(profileCoat.length).toBeGreaterThan(0)
+      expect(profileCoat).toBe(panelCoat)
     });
 
     xit('ZED-160 - Horse details has showing the number of RACES', async () => {
