@@ -52,7 +52,7 @@ class Stable {
     btnAdvanced: '//div[text()=\'Advanced\']',
     txtApiKey: '//input[@type=\'text\']',
     btnNotifications: '//div[text()=\'Notifications\']',
-    checkBoxNotification: '(//input[@class="switch"]/following-sibling::div)[3]',
+    checkBoxNotification: '(//input[@class="switch"])[3]',
     checkBoxRaceReminder: '//label[text()="Race start reminder (1 min)"]',
     checkBoxMyRaceReminder: '//label[text()="Race start reminder (My Racehorses only) (1 min)"]',
     txtStableTitle :'(//label[text()=\'STABLE TITLE\']/following::input)[1]',
