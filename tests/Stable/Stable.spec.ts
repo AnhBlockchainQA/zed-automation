@@ -245,8 +245,11 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
   });
 
-  xit('ZED-185 - Stable shown/allows navigating to the SETTINGS using the icon shown into the stable name/description section of the screen', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-185 - Stable shown/allows navigating to the SETTINGS using the icon shown into the stable name/description section of the screen', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    await pages[0].waitForSelector(stable.objects.imgIconSettings);
+    await pages[0].click(stable.objects.imgIconSettings);
+    expect(await pages[0].url()).toContain('settings');
   });
 
   describe('Settings', function() {
