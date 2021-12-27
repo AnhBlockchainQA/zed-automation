@@ -59,7 +59,9 @@ class Stable {
     txtStableDescription :'(//label[text()="STABLE DESCRIPTION"]/following::textarea)[1]',
     checkboxSureForUpdate:'//input[@id="sureForUpdate"]/following-sibling::label[1]',
     btnSaveChanges:'//button[text()="Save Changes"]',
-    txtUpdate:'//i[text()="Updated"]',
+    txtUpdate:'//i[text()="Updated"]', 
+    imgIconCopyStableLink: '//h1[@class=\'stable-name\']//img[1]',
+    tooltipStableLink: '//div[@role=\'tooltip\']',
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',

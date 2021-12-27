@@ -241,8 +241,10 @@ describe('Stable', () => {
     var txt = winRateTxt.split("%");
     expect(parseInt(txt[0])).toBeGreaterThan(0);
   });
-  xit('ZED-184 - Stable allows/shown the COPY LINK STABLE next to the stable name', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-184 - Stable allows/shown the COPY LINK STABLE next to the stable name', async () => {
+    await pages[0].click(stable.objects.imgStableProfile);
+    await pages[0].click(stable.objects.imgIconCopyStableLink);
+    expect(await pages[0].innerText(stable.objects.tooltipStableLink)).toBe('Copied to clipboard');
   });
 
   it('ZED-185 - Stable shown/allows navigating to the SETTINGS using the icon shown into the stable name/description section of the screen', async () => {
