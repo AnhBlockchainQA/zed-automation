@@ -114,8 +114,16 @@ describe('Stable', () => {
     expect(await pages[0].isVisible(stable.objects.filtersPanel.btnCloseFilterPanel)).toBe(true)
   });
 
-  xit('ZED-170 - Stable allows the user to SEARCH after type a value and the value match with the input entered', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+  it('ZED-170 - Stable allows the user to SEARCH after type a value and the value match with the input entered', async () => {
+    await pages[0].click(stable.objects.imgStableProfile)
+    await pages[0].waitForSelector(stable.objects.btnSettings)
+    const horseName = await pages[0].innerText(stable.objects.stableList.txtHorseName)
+    await pages[0].fill(stable.objects.txtStableSearch,horseName.substring(0,horseName.length-1))
+    await pages[0].waitForTimeout(1000)
+    await pages[0].waitForSelector(stable.objects.stableList.HorseList)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).toEqual(1)
+    expect(await pages[0].innerText(stable.objects.stableList.txtHorseName)).toBe(horseName) 
   });
 
   it('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {

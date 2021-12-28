@@ -28,7 +28,7 @@ class Stable {
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
-      stableName: '(//div[@class=\'primary-text name\'])[1]',
+      txtHorseName: '(//div[@class=\'primary-text name\'])[1]',
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
       panelHorseGen: '(//span[@class=\'primary-text gen\'])[1]',
@@ -44,7 +44,7 @@ class Stable {
       panelHorseDetailsLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[1]',
       panelHorseBreedLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[2]',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
-      panelMinimize: '(//img[@class=\'open-label\'])'
+      panelMinimize: '(//img[@class=\'open-label\'])',
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnSettings: '//span[text()=\'Settings\']',
