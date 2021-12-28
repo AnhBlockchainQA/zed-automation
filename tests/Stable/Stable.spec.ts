@@ -257,6 +257,10 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.imgStableProfile);
     await pages[0].click(stable.objects.imgIconCopyStableLink);
     expect(await pages[0].innerText(stable.objects.tooltipStableLink)).toBe('Copied to clipboard');
+    const stableName = await pages[0].innerText(stable.objects.lblStableName);
+    const stableNamePathStr = stableName.toLowerCase().split(' ').join('-');
+    const urlCopied = await pages[0].evaluate(async () => await navigator.clipboard.readText())
+    expect(urlCopied).toContain(stableNamePathStr);
   });
 
   it('ZED-185 - Stable shown/allows navigating to the SETTINGS using the icon shown into the stable name/description section of the screen', async () => {
