@@ -394,8 +394,16 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-161 - Horse details has showing the number of CAREER', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-161 - Horse details has showing the number of CAREER', async () => {
+      const panelCareer = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(7))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblCareerProperty(2))).toBe('CAREER')
+      const career = (await pages[0].innerText(breedingAndStud.objects.lblCareerValue(2)))
+      expect(career.length).toBeGreaterThan(0)
+      const careerStat = career.split('/')
+      expect(careerStat.length).toBe(3)
+      careerStat.forEach((val: String) => expect(Number(val)).toBeGreaterThanOrEqual(0));
+      expect(career).toBe(panelCareer)
     });
 
     xit('ZED-162 - Horse details has showing the percentage WIN RATE', async () => {
