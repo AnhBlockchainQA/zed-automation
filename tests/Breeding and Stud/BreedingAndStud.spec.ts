@@ -426,8 +426,18 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-163 - Horse details has showing the OFFSPRING left', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-163 - Horse details has showing the OFFSPRING left', async () => {
+      const panelOffspring = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(9))
+      const panelSubOffspring = await pages[0].textContent(breedingAndStud.objects.lblPanelValue(10))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(2))).toBe('GEN')
+      const profileOffspring = await pages[0].innerText(breedingAndStud.objects.lblProfileValue(6))
+      const profileSubOffspring = await pages[0].textContent(breedingAndStud.objects.lblProfileValue(7))
+      expect(profileOffspring.length).toBeGreaterThan(0)
+      expect(profileSubOffspring.length).toBeGreaterThan(0)
+      expect(Number(profileOffspring)).toBeGreaterThanOrEqual(0)
+      expect(profileOffspring).toBe(panelOffspring)
+      expect(profileSubOffspring.replace(/\u00a0/g, ' ')).toBe(panelSubOffspring)
     });
 
   });
