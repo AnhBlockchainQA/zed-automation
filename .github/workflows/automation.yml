@@ -2,11 +2,7 @@ name: ZED Test Automation (Develop)
 on:
   push:
     branches:
-      - 'feature/**'
-  pull_request:
-    branches:
-      - main
-
+      - feature/**
 env:
   # Force terminal colors. @see https://www.npmjs.com/package/colors
   FORCE_COLOR: 1
