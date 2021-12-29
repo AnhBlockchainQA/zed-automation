@@ -1,4 +1,7 @@
 import { Page } from 'playwright';
+import fs from 'fs';
+const PNG = require('pngjs').PNG;
+const pixelmatch = require('pixelmatch');
 
 class BreedingAndStud {
   public page: Page;
@@ -38,6 +41,14 @@ class BreedingAndStud {
 
   async getPageUrl() {
     return this.page.url();
+  }
+
+  // compares 2 images. function returns 0 if matched, a non-zero value if not matched
+  async compareImages(pathImage1: string, pathImage2: string) {
+    const img1 = PNG.sync.read(fs.readFileSync(pathImage1))
+    const img2 = PNG.sync.read(fs.readFileSync(pathImage2))
+    const {width, height} = img1
+    return pixelmatch(img1.data, img2.data, null, width, height, {threshold: 0.1})
   }
 }
 

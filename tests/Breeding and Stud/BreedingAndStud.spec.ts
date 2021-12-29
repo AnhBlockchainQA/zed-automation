@@ -3,6 +3,7 @@ import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
 import BreedingAndStud from '../../pages/BreedingAndStud.page'
+import fs from 'fs';
 
 describe('Breeding And Stud', () => {
   let auth: Authorization;
@@ -348,8 +349,28 @@ describe('Breeding And Stud', () => {
       expect(divView3D).toBeNull()
     });
 
-    xit('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {      
+      const pathImgBefore = './imageTemp/screen-before.png'
+      const pathImgAfter = './imageTemp/screen-after.png'
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.imgHorse3D)
+      const currentView = await pages[0].waitForSelector(breedingAndStud.objects.divView3D)
+      await pages[0].waitForTimeout(8000)
+      await currentView.screenshot({ path: pathImgBefore })
+      const box = await currentView.boundingBox()
+      const startPos = { 
+        x: (box.x + box.width) / 2,
+        y: (box.y + box.height) / 2
+      }
+      await pages[0].mouse.down()
+      await pages[0].mouse.move(startPos.x, startPos.y, { steps: 30 })
+      await pages[0].mouse.up()
+      await currentView.screenshot({ path: pathImgAfter })
+      const result = await breedingAndStud.compareImages(pathImgBefore, pathImgAfter)
+      fs.rm('./imageTemp', { recursive: true }, (err: any) => {
+        if (err) return console.error(err)
+      })
+      expect(result).not.toBe(0)
     });
 
     it('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
