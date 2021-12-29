@@ -50,6 +50,8 @@ class Stable {
     btnSettings: '//span[text()=\'Settings\']',
     imgIconSettings: '//div[@class="icon-part"]/img', 
     btnAdvanced: '//div[text()=\'Advanced\']',
+    btnGetApiKey: '//button[text()="Get API Key"]',
+    btnDeleteKey: '//button[text()="Delete Key"]',
     txtApiKey: '//input[@type=\'text\']',
     btnNotifications: '//div[text()=\'Notifications\']',
     checkBoxNotification: '(//input[@class="switch"])[3]',

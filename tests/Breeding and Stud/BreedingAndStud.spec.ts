@@ -36,7 +36,9 @@ describe('Breeding And Stud', () => {
 
 
   describe('Breeding', () => {
-
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+    })
     xit('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
@@ -81,8 +83,14 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-188 - Breeding is showing the FILTER collapse panel after hit on the FILTERS button', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-188 - Breeding is showing the FILTER collapse panel after hit on the FILTERS button', async () => {
+    await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.breeds)
+    expect(await pages[0].getAttribute(breedingAndStud.objects.filtersPanel.divPanelFilterStud, 'class')).toContain('open')
+    await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].click(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].isVisible(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)).toBe(true)
     });
 
     xit('ZED-189 - Breeding allows the user to filter racehorses by GENERATION range', async () => {

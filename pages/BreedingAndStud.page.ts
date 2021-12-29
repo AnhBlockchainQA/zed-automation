@@ -29,7 +29,18 @@ class BreedingAndStud {
     lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
     lblProfileValue: (id: Number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
-    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`
+    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`,
+    btnStableFilterOptions: '.filters-btn',
+    stubList:{
+      HorseCard: '//div[@class=\'panel\']',
+      HorseList: '(//div[@role=\'tabpanel\'])',
+      horseCard: '(//div[@class=\'label-content\'])[1]',
+    },
+    filtersPanel: {
+      divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
+      btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
+      breeds: '//span[text()=\'BREEDS\']',
+    } ,
   };
 
   async getPageTitle() {
