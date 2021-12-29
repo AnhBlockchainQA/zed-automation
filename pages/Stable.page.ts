@@ -26,9 +26,10 @@ class Stable {
     ddlStableSortByDateOldest: '//div[text()=\'Date - Oldest\']',
     stableList:{
       HorseCard: '//div[@class=\'panel\']',
-      HorseList: (id?: number) => id ? `(//div[@role=\'tabpanel\'])[${id}]` : '(//div[@role=\'tabpanel\'])',
+      HorseList: '(//div[@role=\'tabpanel\'])',
+      horse: (id?: number) => `(//div[@role=\'tabpanel\'])[${id}]`,
       horseCard: '(//div[@class=\'label-content\'])[1]',
-      txtHorseName: '(//div[@class=\'primary-text name\'])[1]',
+      txtHorseName: (id: number) => `(//div[@class=\'primary-text name\'])[${id}]`,
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
       studBadge: (id: number) => `[role="tabpanel"]:nth-child(${id}) .panel__label .badge.stud`,
