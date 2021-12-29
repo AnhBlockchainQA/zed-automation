@@ -82,7 +82,9 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.breedGenesisLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    await pages[0].waitForSelector(stable.objects.stableList.HorseList)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
   });
 
