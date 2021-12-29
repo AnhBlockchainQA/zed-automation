@@ -2,7 +2,7 @@ name: ZED Test Automation (Develop)
 on:
   push:
     branches:
-      - feature/*
+      - 'feature/**'
   pull_request:
     branches:
       - main
@@ -63,7 +63,7 @@ jobs:
         commit_message: ${{ github.event.head_commit.message }}
     - name: Record Video On Failure
       uses: actions/upload-artifact@v2
-      if: ${{ failure() || success() }}
+      if: ${{ failure() }}
       with:
         name: Recordings
         path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
