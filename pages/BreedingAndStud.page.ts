@@ -9,11 +9,11 @@ class BreedingAndStud {
 
   objects = {
     btnBreeding: 'text=\'BREEDING\'',
-    lstHorses: (id?: Number) => id ? `.panel:nth-child(${id})` : '.panel',
+    lstHorses: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',
     lblHorseName: '.panel.open .md-text',
     divHorsePanel: '.panel.open .panel-horse',
     lblOwnerNameAtStud: '.panel.open .green',
-    lblPanelValue: (id: Number) => `(//div[@class='panel open']//div[@class='item']//*[contains(@class, 'primary-text')])[${id}]`,
+    lblPanelValue: (id: number) => `(//div[@class='panel open']//div[@class='item']//*[contains(@class, 'primary-text')])[${id}]`,
     lblHorseHeader: '.d-flex.header-text',
     lblOwner: '.subheader-text > span',
     lblOwnerNameAtProfile: '.subheader-text > a',
@@ -22,14 +22,15 @@ class BreedingAndStud {
     imgHorse3D: '.horse-inspector',
     imgClose3D: '.horse-inspector-modal .close-icon',
     divView3D: '.viewer-body',
+    lblInfoLeft: '.other-infos  > .left .primary-text',
     btnShare: '.share-btn',
     textShareUrl: '.share-url',
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
-    lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
-    lblProfileValue: (id: Number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
-    lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
-    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`
+    lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
+    lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
+    lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
+    lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`
   };
 
   async getPageTitle() {
