@@ -152,7 +152,7 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
     expect(await pages[0].isVisible(stable.objects.lblStableName)).toBe(true)
-    expect(await pages[0].innerText(stable.objects.lblStableName)).toContain('stable')
+    expect(String(await pages[0].innerText(stable.objects.lblStableName)).toLowerCase()).toContain('stable')
   });
 
   it('ZED-174 - Stable shown the profile/stable image', async () => {
