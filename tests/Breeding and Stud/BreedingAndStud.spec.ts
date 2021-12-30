@@ -36,6 +36,9 @@ describe('Breeding And Stud', () => {
 
 
   describe('Breeding', () => {
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+    })
 
     xit('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
@@ -93,8 +96,16 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-191 - Breeding allows the user to filter racehorses by GENDER', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-191 - Breeding allows the user to filter racehorses by GENDER', async () => {
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.genderColtLabel)  
+      await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.genderColtCheckBox)).toBe(true)
     });
 
     xit('ZED-192 - Breeding allows the user to filter racehorses by BREEDS', async () => {
