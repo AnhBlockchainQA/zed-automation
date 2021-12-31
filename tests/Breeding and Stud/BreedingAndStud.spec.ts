@@ -36,6 +36,9 @@ describe('Breeding And Stud', () => {
 
 
   describe('Breeding', () => {
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+    })
 
     xit('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
@@ -133,8 +136,13 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-201 - Breeding racehorse list is showing the Horse Name', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-201 - Breeding racehorse list is showing the Horse Name', async () => {
+      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      for(let i=1 ;i<= horsesList.length;i++){
+       const horseName = await pages[0].innerText(breedingAndStud.objects.stubList.lblHorseNmValue(i))
+       expect(horseName).not.toBe('');
+       expect(horseName).toBeTruthy();
+      }
     });
 
     xit('ZED-202 - Breeding racehorse list is showing the GEN + BLOODLINE below the Horse Name', async () => {
