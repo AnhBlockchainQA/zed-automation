@@ -9,9 +9,7 @@ env:
 
 jobs:
   e2e-tests:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
@@ -19,15 +17,26 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
+    - name: Use NPM
+        if: ${{ always() }}
+        # if: github.event.action == 'ping'
+        run: |
+          npm ci
+          npm install
+        env:
+          CI: true
+    - name: Use Commit ID
+        if: ${{ always() }}
+        # if: github.event.action == 'ping'
+        run: |
+          variable=$(git rev-parse --short HEAD)
+          echo "Last commit registred:" $variable
+        env:
+          CI: true
     - name: Run test
-      if: ${{ always()}}
+      if: ${{ always() }}
       # if: github.event.action == 'ping'
-      run: |
-        npm ci
-        npm install
-        variable=$(git rev-parse --short HEAD)
-        echo "Last commit registred:" $variable
-        xvfb-run --auto-servernum -- npm run test
+      run: xvfb-run --auto-servernum -- npm run test
       env:
         CI: true
     - name: Get Allure history
@@ -64,21 +73,11 @@ jobs:
         name: Recordings
         path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
         retention-days: 3
-    - name: Tar files
-      if: always()
-      run: tar -cvf development_files.tar videos/
-    - name: Upload artifact to Slack Channel
-      if: always()
-      uses: adrey/slack-file-upload-action@1.0.5
-      with:
-        token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        path: development_files.tar
-        channel: automation-test-report
-    - name: Upload message with Allure Report URL to Slack Channel
-      if: always()
+    - name: Notify on Slack Channel
+      if: ${{ failure() }}
       uses: archive/github-actions-slack@v1.0.3
       id: notify
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        slack-channel: "automation-test-report"
-        slack-text: Development Report https://vhslab.github.io/qa-automationtest/
+        slack-channel: "dev-qa-team"
+        slack-text: [A development progress has been reported] but there's a failure on it let's check on https://vhslab.github.io/qa-automationtest/
