@@ -2,7 +2,7 @@ import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
-import BreedingAndStud from '../../pages/BreedingAndStud.page'
+import BreedingAndStud from '../../pages/BreedingAndStud.page';
 import fs from 'fs';
 
 describe('Breeding And Stud', () => {
@@ -11,13 +11,15 @@ describe('Breeding And Stud', () => {
   let browserContext: BrowserContext;
   let metamask: Metamask;
   let breedingAndStud: BreedingAndStud
+  let stable: Stable
 
   beforeAll(async () => {
     metamask = new Metamask();
     browserContext = await metamask.init();
     pages = await metamask.authenticate(browserContext);
-    auth = new Authorization(pages);
-    breedingAndStud = new BreedingAndStud(pages)
+    auth = new Authorization(pages[0]);
+    breedingAndStud = new BreedingAndStud(pages[0])
+    stable = new Stable(pages[0])
   });
 
   beforeEach(async () => {
@@ -221,8 +223,19 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      await pages[0].click(stable.objects.breedForm.btnCancel)
+      const breedForm = await pages[0].waitForSelector(stable.objects.breedForm.formBreed, {state: 'hidden', timeout: 3000}).catch(() => true)
+      expect(breedForm).toBeNull()
     });
 
     xit('ZED-63 - Stud Service is not showing the racehorse on the Stud Service page in the expiration after 1-3-7 days', async () => {
@@ -233,8 +246,24 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      const [windows] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(stable.objects.breedForm.btnNext)
+      ]);
+      await windows.waitForLoadState();
+      pages = windows.context().pages();
+      await pages[1].click(auth.objects.BTN_METAMASK_CANCEL)
+      expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
     xit('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
