@@ -49,6 +49,7 @@
     "jest-playwright-preset": "1.7.0",
     "jest-retries": "^1.0.1",
     "jest-runner": "27.2.1",
+    "pixelmatch": "^5.2.1",
     "playwright": "1.14.1",
     "playwright-cli": "^0.180.0",
     "superagent-retry-delay": "^2.6.2",

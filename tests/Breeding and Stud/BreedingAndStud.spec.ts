@@ -2,8 +2,9 @@ import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
-import BreedingAndStud from '../../pages/BreedingAndStud.page'
+import BreedingAndStud from '../../pages/BreedingAndStud.page';
 import Stable from '../../pages/Stable.page';
+import fs from 'fs';
 
 describe('Breeding And Stud', () => {
   let auth: Authorization;
@@ -223,8 +224,19 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      await pages[0].click(stable.objects.breedForm.btnCancel)
+      const breedForm = await pages[0].waitForSelector(stable.objects.breedForm.formBreed, {state: 'hidden', timeout: 3000}).catch(() => true)
+      expect(breedForm).toBeNull()
     });
 
     xit('ZED-63 - Stud Service is not showing the racehorse on the Stud Service page in the expiration after 1-3-7 days', async () => {
@@ -235,8 +247,24 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      const [windows] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(stable.objects.breedForm.btnNext)
+      ]);
+      await windows.waitForLoadState();
+      pages = windows.context().pages();
+      await pages[1].click(auth.objects.BTN_METAMASK_CANCEL)
+      expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
     xit('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
@@ -351,8 +379,28 @@ describe('Breeding And Stud', () => {
       expect(divView3D).toBeNull()
     });
 
-    xit('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {      
+      const pathImgBefore = './imageTemp/screen-before.png'
+      const pathImgAfter = './imageTemp/screen-after.png'
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.imgHorse3D)
+      const currentView = await pages[0].waitForSelector(breedingAndStud.objects.divView3D)
+      await pages[0].waitForTimeout(8000)
+      await currentView.screenshot({ path: pathImgBefore })
+      const box = await currentView.boundingBox()
+      const startPos = { 
+        x: (box.x + box.width) / 2,
+        y: (box.y + box.height) / 2
+      }
+      await pages[0].mouse.down()
+      await pages[0].mouse.move(startPos.x, startPos.y, { steps: 30 })
+      await pages[0].mouse.up()
+      await currentView.screenshot({ path: pathImgAfter })
+      const result = await breedingAndStud.compareImages(pathImgBefore, pathImgAfter)
+      fs.rm('./imageTemp', { recursive: true }, (err: any) => {
+        if (err) return console.error(err)
+      })
+      expect(result).not.toBe(0)
     });
 
     it('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
