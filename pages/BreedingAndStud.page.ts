@@ -49,6 +49,10 @@ class BreedingAndStud {
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
+      breedGenesisLabel: '//label[text()=\'genesis\']',
+      gender: '//span[text()=\'GENDER\']',
+      genderColtCheckBox: '#Colt',
+      genderColtLabel: '//label[text()=\'Colt\']',
       breedGenesisLabel: '//label[text()=\'genesis\']'
     } ,
     lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
