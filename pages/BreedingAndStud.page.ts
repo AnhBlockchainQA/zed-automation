@@ -44,6 +44,7 @@ class BreedingAndStud {
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
       lblStableValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[2]/div[1]`,
+      lblHorseNmValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[1]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
