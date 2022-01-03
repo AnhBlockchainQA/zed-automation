@@ -27,10 +27,12 @@ class Stable {
     stableList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
-      horseCard: '(//div[@class=\'label-content\'])[1]',
-      txtHorseName: '(//div[@class=\'primary-text name\'])[1]',
+      horse: (id: number) => `(//div[@role=\'tabpanel\'])[${id}]`,
+      txtHorseName: (id: number) => `(//div[@class=\'primary-text name\'])[${id}]`,
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
+      studBadge: (id: number) => `[role="tabpanel"]:nth-child(${id}) .panel__label .badge.stud`,
+      panelHorseName: '.panel.open .name-icon > div',
       panelHorseGen: '(//span[@class=\'primary-text gen\'])[1]',
       panelHorseBloodline: '(//div[@class=\'primary-text\'])[1]',
       panelHorseGender: '(//div[@class=\'primary-text\'])[2]',
@@ -41,13 +43,15 @@ class Stable {
       panelHorseOffSpringInfo: '(//div[@class=\'offspring-info\'])[1]',
       panelHorseFullStamina: '(//div[@class=\'full\'])[1]',
       panelHorseImg: '(//img[@class=\'horse-glow\'])[2]',
-      panelHorseDetailsLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[1]',
-      panelHorseBreedLink: '(//div[@class=\'panel-btns false\'])[1]//div[@class=\'left\']/div[2]',
+      panelHorseDetailsLink: (id: number) => `(//div[@class=\'panel-btns false\'])[${id}]//div[@class=\'left\']/div[1]`,
+      panelHorseBreedLink: '.panel.open .icn-txt:last-child',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
       panelMinimize: '(//img[@class=\'open-label\'])',
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
+    btnUserMenu: '.user-part .menu-button',
     btnSettings: '//span[text()=\'Settings\']',
+    btnLogOut: '//span[text()=\'Log Out\']',
     imgIconSettings: '//div[@class="icon-part"]/img', 
     btnAdvanced: '//div[text()=\'Advanced\']',
     btnGetApiKey: '//button[text()="Get API Key"]',
@@ -64,6 +68,8 @@ class Stable {
     txtUpdate:'//i[text()="Updated"]', 
     imgIconCopyStableLink: '//h1[@class=\'stable-name\']//img[1]',
     tooltipStableLink: '//div[@role=\'tooltip\']',
+    loader: '.loader-container',
+    transactionLoader: '.transaction-loading-modal',
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
@@ -75,12 +81,25 @@ class Stable {
       gender: '//span[text()=\'GENDER\']',
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
+      genderColtCheckBox: '#Colt',
+      genderColtLabel: "text='Colt'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
       breedGenesisLabel: '//label[text()=\'genesis\']'
-    }  
+    },
+    breedForm: {
+      formBreed: '.breed-form',
+      ddlStudDuration: '.breed-form .z-select__control',
+      txtStudDuration: '.breed-form  .z-select__single-value',
+      txt1Day: 'text="1 Day"',
+      txt3Day: 'text="3 Days"',
+      txt7Day: 'text="7 Days"',
+      txtMetaMaskError: '.primary-text.error',
+      btnCancel: '.handle-btns .secondary-btn',
+      btnNext: '.handle-btns .primary-btn'
+    }
   };
 
   async getPageTitle() {
@@ -89,6 +108,28 @@ class Stable {
 
   async getPageUrl() {
     return this.page.url();
+  }
+
+  async getFirstHorseNotInStud(startId?: number): Promise<any> {
+    // index starts from 1
+    if (!startId)
+      startId = 1
+    let i: number;
+    await this.page.waitForSelector(this.objects.stableList.horse(startId))
+    const horseList = await this.page.$$(this.objects.stableList.HorseList)
+    for (i = startId; i <= horseList.length; i++) {
+      const horseName = await this.page.innerText(this.objects.stableList.txtHorseName(i))
+      const hasBadge = await this.page.$(this.objects.stableList.studBadge(i))
+      if (horseName.replace(/\d+/g, '') !== 'Newborn' && !hasBadge) {
+        await horseList[i - 1].click()
+        return i
+      }
+    }
+    if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
+      await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+      return await this.getFirstHorseNotInStud(i)
+    }
+    return false
   }
 }
 
