@@ -43,6 +43,7 @@ class BreedingAndStud {
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
+      lblStableValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[2]/div[1]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
@@ -53,6 +54,7 @@ class BreedingAndStud {
       gender: '//span[text()=\'GENDER\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: '//label[text()=\'Colt\']',
+    } ,
       breedGenesisLabel: '//label[text()=\'genesis\']'
     } ,
     lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,

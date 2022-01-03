@@ -152,8 +152,13 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-198 - Breeding racehorse list is showing the stable name of each horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-198 - Breeding racehorse list is showing the stable name of each horse', async () => {
+      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      for(let i=1 ;i<= horsesList.length;i++){
+       expect(await pages[0].innerText(breedingAndStud.objects.stubList.lblStableValue(i))).not.toBe('');
+       expect(await pages[0].innerText(breedingAndStud.objects.stubList.lblStableValue(i))).toBeTruthy();
+      }
+
     });
 
     xit('ZED-199 - Breeding racehorse list is showing the TIME LEFT in format DD HH MM like 2d 9h 6m', async () => {
