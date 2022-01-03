@@ -498,6 +498,15 @@ describe('Breeding And Stud', () => {
       expect(profileSubOffspring.replace(/\u00a0/g, ' ')).toBe(panelSubOffspring)
     });
 
+    it('ZED-242 - Horse profile is being shown the BREED card option/action while the user is authenticated', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      const res = await stable.getFirstHorseNotInStud()
+      expect(res).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseDetailsLink(res))
+      const text = await pages[0].waitForSelector(breedingAndStud.objects.lblInfoLeft)
+      expect(await text.innerText()).toBe('Breed')
+    });
+
     it('ZED-243 - Horse profile is not shown the BREED card option/action while the user is not authenticated', async () => {
       await pages[0].click(stable.objects.btnUserMenu)
       await pages[0].click(stable.objects.btnLogOut)

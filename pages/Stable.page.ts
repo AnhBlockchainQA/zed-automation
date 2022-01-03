@@ -28,7 +28,6 @@ class Stable {
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horse: (id: number) => `(//div[@role=\'tabpanel\'])[${id}]`,
-      horseCard: '(//div[@class=\'label-content\'])[1]',
       txtHorseName: (id: number) => `(//div[@class=\'primary-text name\'])[${id}]`,
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
