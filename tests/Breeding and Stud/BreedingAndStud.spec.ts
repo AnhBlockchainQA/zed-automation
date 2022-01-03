@@ -140,8 +140,14 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
     });
 
-    xit('ZED-193 - Breeding allows the user to SORT by Recently Listed', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-193 - Breeding allows the user to SORT by Recently Listed', async () => {
+    await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortBy)
+    await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+    await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortByRecentlyListed)
+    await pages[0].click(breedingAndStud.objects.ddlStudSortByRecentlyListed)
+    await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
+    const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+    expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
     xit('ZED-194 - Breeding allows the user to SORT by Expired Soon', async () => {

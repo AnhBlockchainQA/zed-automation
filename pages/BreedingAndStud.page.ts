@@ -39,6 +39,11 @@ class BreedingAndStud {
     lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`,
     btnStableFilterOptions: '.filters-btn',
+    ddlStudSortBy: '(//div[contains(@class,\'z-select__value-container z-select__value-container--has-value\')])[2]',
+    ddlStudSortByRecentlyListed: '//div[text()=\'Recently Listed\']',
+    ddlStudSortByExpiringSoon: '//div[text()=\'Expiring Soon\']',
+    ddlStudSortByHighestPrice: '//div[text()=\'Highest Price\']',
+    ddlStudSortByLowestPrice: '//div[text()=\'Lowest Price\']',
     stubList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
