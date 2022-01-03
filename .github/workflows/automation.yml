@@ -35,7 +35,7 @@ jobs:
     - name: Run test
       if: always()
       # if: github.event.action == 'ping'
-      run: xvfb-run --auto-servernum -- npm run test
+      run: xvfb-run --auto-servernum -- npm run test -- --verbose
       env:
         CI: true
     - name: Get Allure history
@@ -78,4 +78,6 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: 'dev-qa-team'
-        slack-text: A development progress has been reported but there's a failure on it let's check on https://vhslab.github.io/qa-automationtest/
+        slack-text: Hello! Something is burning! Or not...
+        slack-optional-icon_emoji: ":fire:"
+        slack-optional-thread_ts: A development progress has been reported but there's a failure on it let's check on https://vhslab.github.io/qa-automationtest/
