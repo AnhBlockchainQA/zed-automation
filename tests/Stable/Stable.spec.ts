@@ -56,7 +56,8 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
   });
 
@@ -69,7 +70,8 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
   });
 
@@ -82,7 +84,9 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.breedGenesisLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    await pages[0].waitForSelector(stable.objects.stableList.HorseList)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
   });
 
@@ -99,7 +103,8 @@ describe('Stable', () => {
     await pages[0].waitForSelector(stable.objects.stableList.HorseList)
     const zedGenerationMin = await pages[0].getAttribute(stable.objects.filtersPanel.zedGenerationMin,"value")
     expect(zedGenerationMin).toBe('34')
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
   });
 
   it('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {
@@ -129,13 +134,13 @@ describe('Stable', () => {
   it('ZED-170 - Stable allows the user to SEARCH after type a value and the value match with the input entered', async () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
-    const horseName = await pages[0].innerText(stable.objects.stableList.txtHorseName)
+    const horseName = await pages[0].innerText(stable.objects.stableList.txtHorseName(1))
     await pages[0].fill(stable.objects.txtStableSearch,horseName.substring(0,horseName.length-1))
     await pages[0].waitForTimeout(1000)
     await pages[0].waitForSelector(stable.objects.stableList.HorseList)
     const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
     expect(horsesList.length).toEqual(1)
-    expect(await pages[0].innerText(stable.objects.stableList.txtHorseName)).toBe(horseName) 
+    expect(await pages[0].innerText(stable.objects.stableList.txtHorseName(1))).toBe(horseName) 
   });
 
   it('ZED-171 - Stable allows the user to SORT BY Date - Newest', async () => {
@@ -360,8 +365,10 @@ describe('Stable', () => {
 	    await pages[0].waitForTimeout(1000);
       await pages[0].click(stable.objects.btnSettings);
       await pages[0].click(stable.objects.btnAdvanced);
+      await pages[0].click(stable.objects.btnGetApiKey);
       const apiKeyTxt = await pages[0].getAttribute(stable.objects.txtApiKey,'value');
       expect(apiKeyTxt).toContain('SFMyNTY');
+      await pages[0].click(stable.objects.btnDeleteKey); //rollback changes
       });
     });
 
