@@ -34,10 +34,10 @@ class BreedingAndStud {
     textShareUrl: '.share-url',
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
-    lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
-    lblProfileValue: (id: Number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
-    lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
-    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`,
+    lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
+    lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
+    lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
+    lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`,
     btnStableFilterOptions: '.filters-btn',
     stubList:{
       HorseCard: '//div[@class=\'panel\']',
@@ -58,12 +58,8 @@ class BreedingAndStud {
       bloodline: '//span[text()=\'BLOODLINE\']', 
       bloodlineButerinCheckBox: '#Buterin',
       bloodlineButerinLabel:'//label[@for=\'Buterin\']',
-      breedGenesisLabel: '//label[text()=\'genesis\']'
     } ,
-    lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
-    lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
-    lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
-    lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`
+    
   };
 
   async getPageTitle() {
