@@ -48,13 +48,13 @@ class BreedingAndStud {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
       breeds: '//span[text()=\'BREEDS\']',
+      breedGenesisCheckBox: '#genesis',
+      breedGenesisLabel: '//label[text()=\'genesis\']'
     } ,
-
     lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
     lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`
-
   };
 
   async getPageTitle() {
