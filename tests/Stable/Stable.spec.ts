@@ -360,8 +360,10 @@ describe('Stable', () => {
 	    await pages[0].waitForTimeout(1000);
       await pages[0].click(stable.objects.btnSettings);
       await pages[0].click(stable.objects.btnAdvanced);
+      await pages[0].click(stable.objects.btnGetApiKey);
       const apiKeyTxt = await pages[0].getAttribute(stable.objects.txtApiKey,'value');
       expect(apiKeyTxt).toContain('SFMyNTY');
+      await pages[0].click(stable.objects.btnDeleteKey); //rollback changes
       });
     });
 
