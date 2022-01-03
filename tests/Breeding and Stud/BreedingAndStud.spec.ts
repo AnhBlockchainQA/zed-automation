@@ -265,8 +265,23 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-61 - Stud Service allows the user to move the male Genesis racehorse into Stud service with a duration is 1 day or 3 days or 7 days', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-61 - Stud Service allows the user to move the male Genesis racehorse into Stud service with a duration is 1 day or 3 days or 7 days', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('1 Day')
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt3Day)
+      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('3 Days')
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt7Day)
+      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('7 Days')
     });
 
     it('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
@@ -449,11 +464,21 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      const nameAtStable = await pages[0].innerText(stable.objects.lblStableName)
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
       const nameAtStud = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtStud)
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
-      expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('Owner')
-      const nameAtProfile = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)
-      expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
+      if (nameAtStud === nameAtStable) {
+        expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('')
+        expect(await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)).toBe('')
+      }
+      else {
+        expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('Owner')
+        const nameAtProfile = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)
+        expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
+      }
     });
 
     it('ZED-156 - Horse details has showing the BLOODLINE', async () => {
