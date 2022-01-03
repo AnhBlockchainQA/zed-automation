@@ -257,8 +257,30 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-59 - Stud Service is showing the racehorse details', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-59 - Stud Service is showing the racehorse details', async () => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      expect(await pages[0].innerText(breedingAndStud.objects.lblHorseName)).not.toBe('')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelDate)).not.toBe('')
+      const link = await pages[0].getAttribute(breedingAndStud.objects.lblPanelLink, 'href')
+      const [windows] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(breedingAndStud.objects.lblPanelLink)
+      ]);
+      await windows.waitForLoadState();
+      pages = windows.context().pages();
+      expect(await pages[1].url()).toBe(link)
+      await pages[0].bringToFront()
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(1))).toBe('GEN')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(2))).toBe('BLOODLINE')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(3))).toBe('GENDER')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(4))).toBe('COAT')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(5))).toBe('RACES')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(6))).toBe('CAREER')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(7))).toBe('WIN RATE')
+      expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(8))).toBe('OFFSPRING')
+      for (let i = 1; i <= 10; i++)
+        expect(await pages[0].innerText(breedingAndStud.objects.lblPanelValue(i))).not.toBe('')
     });
 
     xit('ZED-60 - Stud Service allows the Colt can breed 3 times during their breeding cycle', async () => {
