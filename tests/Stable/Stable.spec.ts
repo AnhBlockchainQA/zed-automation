@@ -337,7 +337,7 @@ describe('Stable', () => {
         if(stableName != 'Automation Stable'){   // rollback of the values updated. 
         await pages[0].click(stable.objects.btnSettings);
         await pages[0].fill(stable.objects.txtStableTitle,stableName);
-        await pages[0].fill(stable.objects.txtStableDescription,"");
+        await pages[0].fill(stable.objects.txtStableDescription,"Description");
         await pages[0].check(stable.objects.checkboxSureForUpdate);
         expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
         await pages[0].click(stable.objects.btnSaveChanges);
