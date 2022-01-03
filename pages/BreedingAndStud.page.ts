@@ -58,6 +58,9 @@ class BreedingAndStud {
       bloodline: '//span[text()=\'BLOODLINE\']', 
       bloodlineButerinCheckBox: '#Buterin',
       bloodlineButerinLabel:'//label[@for=\'Buterin\']',
+      zedGeneration: '//div[@class=\'f-part zed-generation\']',
+      zedGenerationMin: '//div[@class=\'f-part zed-generation\']//input[1]',
+      zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
     } ,
     
   };
