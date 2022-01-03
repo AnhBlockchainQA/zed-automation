@@ -78,8 +78,9 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "dev-qa-team"
-        slack-text: Hello! Something is burning! Or not...
+        slack-text: Hello! Something is burning on development scripts! Or not...
         slack-optional-icon_emoji: ":fire:"
+        slack-optional-as_user: false
 
     - name: Send Thread Message
       if: ${{ failure() }}
