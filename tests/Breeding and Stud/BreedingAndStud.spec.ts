@@ -40,6 +40,10 @@ describe('Breeding And Stud', () => {
 
 
   describe('Breeding', () => {
+    beforeEach(async() => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+    })
+
 
     xit('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
@@ -77,8 +81,9 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-186 - Breeding is showing the list of RACEHORSES', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-186 - Breeding is showing the list of RACEHORSES', async () => {
+      const horseList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      expect(horseList.length).toBeGreaterThanOrEqual(0)
     });
 
     xit('ZED-187 - Breeding is loading RACEHORSES through infinite scroll loading/pagination', async () => {

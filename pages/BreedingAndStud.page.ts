@@ -34,10 +34,21 @@ class BreedingAndStud {
     textShareUrl: '.share-url',
     btnCopy: '.copy-link',
     imgCopied: '.copy-link > img',
+    lblProfileProperty: (id: Number) => `(//*[contains(@class, 'xs')])[${id}]`,
+    lblProfileValue: (id: Number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
+    lblCareerProperty: (id: Number) => `.career-property:nth-child(${id}) .overline-text`,
+    lblCareerValue: (id: Number) => `.career-property:nth-child(${id}) .primary-text`,
+    stubList:{
+      HorseCard: '//div[@class=\'panel\']',
+      HorseList: '(//div[@role=\'tabpanel\'])',
+      horseCard: '(//div[@class=\'label-content\'])[1]',
+    },
+
     lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
     lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`
+
   };
 
   async getPageTitle() {
