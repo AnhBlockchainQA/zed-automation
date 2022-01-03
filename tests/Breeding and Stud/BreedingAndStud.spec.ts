@@ -3,6 +3,7 @@ import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
 import BreedingAndStud from '../../pages/BreedingAndStud.page';
+import Stable from '../../pages/Stable.page';
 import fs from 'fs';
 
 describe('Breeding And Stud', () => {
@@ -495,6 +496,15 @@ describe('Breeding And Stud', () => {
       expect(Number(profileOffspring)).toBeGreaterThanOrEqual(0)
       expect(profileOffspring).toBe(panelOffspring)
       expect(profileSubOffspring.replace(/\u00a0/g, ' ')).toBe(panelSubOffspring)
+    });
+
+    it('ZED-243 - Horse profile is not shown the BREED card option/action while the user is not authenticated', async () => {
+      await pages[0].click(stable.objects.btnUserMenu)
+      await pages[0].click(stable.objects.btnLogOut)
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      expect(await pages[0].innerText(breedingAndStud.objects.lblInfoLeft)).not.toBe('Breed')
     });
 
   });
