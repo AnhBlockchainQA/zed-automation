@@ -80,4 +80,6 @@ jobs:
         slack-channel: "dev-qa-team"
         slack-text: Hello! Something is burning! Or not...
         slack-optional-icon_emoji: ":fire:"
-        slack-optional-thread_ts: A development progress has been reported with failures check on https://vhslab.github.io/qa-automationtest/
+        slack-optional-thread_ts: ${{ fromJson(steps.send-message.outputs.slack-result).response.message.ts }}
+        slack-optional-reply_broadcast: true # To broadcast thread reply in channel
+#        slack-optional-thread_ts: A development progress has been reported with failures check on https://vhslab.github.io/qa-automationtest/
