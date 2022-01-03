@@ -44,7 +44,7 @@ class BreedingAndStud {
     ddlStudSortByExpiringSoon: '//div[text()=\'Expiring Soon\']',
     ddlStudSortByHighestPrice: '//div[text()=\'Highest Price\']',
     ddlStudSortByLowestPrice: '//div[text()=\'Lowest Price\']',
-    stubList:{
+    studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
