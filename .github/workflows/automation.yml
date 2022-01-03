@@ -18,23 +18,22 @@ jobs:
       with:
         node-version: '14.x'
     - name: Use NPM
-        if: ${{ always() }}
+      if: always()
         # if: github.event.action == 'ping'
-        run: |
-          npm ci
-          npm install
-        env:
-          CI: true
+      run: |
+        npm ci
+        npm install
+      env:
+        CI: true
     - name: Use Commit ID
-        if: ${{ always() }}
-        # if: github.event.action == 'ping'
-        run: |
-          variable=$(git rev-parse --short HEAD)
-          echo "Last commit registred:" $variable
-        env:
-          CI: true
+      if: always()
+      run: |
+        variable=$(git rev-parse --short HEAD)
+        echo "Last commit registred:" $variable
+      env:
+        CI: true
     - name: Run test
-      if: ${{ always() }}
+      if: always()
       # if: github.event.action == 'ping'
       run: xvfb-run --auto-servernum -- npm run test
       env:
@@ -49,7 +48,6 @@ jobs:
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
       if: always()
-      #id: allure-report
       with:
         allure_results: allure-results
         gh_pages: gh-pages
