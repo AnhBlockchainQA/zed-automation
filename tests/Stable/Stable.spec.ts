@@ -56,7 +56,8 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
   });
 
@@ -69,7 +70,8 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
     expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
   });
 
@@ -101,7 +103,8 @@ describe('Stable', () => {
     await pages[0].waitForSelector(stable.objects.stableList.HorseList)
     const zedGenerationMin = await pages[0].getAttribute(stable.objects.filtersPanel.zedGenerationMin,"value")
     expect(zedGenerationMin).toBe('34')
-    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
+    expect(horsesList.length).not.toEqual(0)
   });
 
   it('ZED-168 - Stable allows the user to close the left-side filter panel', async () => {

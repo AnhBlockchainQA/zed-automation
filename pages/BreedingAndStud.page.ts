@@ -54,7 +54,9 @@ class BreedingAndStud {
       gender: '//span[text()=\'GENDER\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: '//label[text()=\'Colt\']',
-    } ,
+      bloodline: '//span[text()=\'BLOODLINE\']', 
+      bloodlineButerinCheckBox: '#Buterin',
+      bloodlineButerinLabel:'//label[@for=\'Buterin\']',
       breedGenesisLabel: '//label[text()=\'genesis\']'
     } ,
     lblProfileProperty: (id: number) => `(//*[contains(@class, 'xs')])[${id}]`,
