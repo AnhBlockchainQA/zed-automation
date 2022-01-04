@@ -78,6 +78,6 @@ jobs:
       with:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "dev-qa-team"
-        slack-text: Hello! Something is burning on development scripts! Or not... check on https://vhslab.github.io/qa-automationtest/
+        slack-text: Hello! Something is burning on development scripts! Or not... check on https://vhslab.github.io/qa-automationtest/ or into the run id at https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
         slack-optional-icon_emoji: ":fire:"
 
