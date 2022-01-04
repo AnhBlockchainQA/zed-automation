@@ -89,5 +89,5 @@ jobs:
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
         slack-channel: "dev-qa-team"
         slack-text: A development progress has been reported with failures check on https://vhslab.github.io/qa-automationtest/
-        slack-optional-thread_ts: ${{ fromJson(steps.send-message.outputs.slack-result).response.message.ts }}
+        slack-optional-thread_ts: check on https://vhslab.github.io/qa-automationtest/
         #slack-optional-reply_broadcast: true # To broadcast thread reply in channel
