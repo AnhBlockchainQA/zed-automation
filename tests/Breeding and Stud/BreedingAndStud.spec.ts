@@ -106,10 +106,10 @@ describe('Breeding And Stud', () => {
     await pages[0].waitForTimeout(1000) 
     await pages[0].fill(breedingAndStud.objects.filtersPanel.zedGenerationMin,'6')
     await pages[0].click(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
-    await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
+    await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
     const zedGenerationMin = await pages[0].getAttribute(breedingAndStud.objects.filtersPanel.zedGenerationMin,"value")
     expect(zedGenerationMin).toBe('6')
-    const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+    const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
     expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
@@ -190,9 +190,9 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       for(let i=1 ;i<= horsesList.length;i++){
-       const StudFee = await pages[0].innerText(breedingAndStud.objects.stubList.lblStudFeeValue(i))
+       const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(i))
        expect(StudFee).not.toBe('')
        expect(StudFee).toContain('$')
        expect(StudFee).toContain('USD')
@@ -371,8 +371,24 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
-    xit('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      let res = await stable.getFirstNewborn()
+      if (res) {
+        const name = 'testhorse ' + (Math.random() + 1).toString(36).substring(7)
+        await pages[0].click(stable.objects.newbornForm.btnConfirm)
+        await pages[0].fill(stable.objects.newbornForm.tfName, name)
+        await pages[0].click(stable.objects.newbornForm.lblConfirm)
+        await pages[0].click(stable.objects.newbornForm.btnConfirm)
+        await pages[0].waitForTimeout(2000)
+        await pages[0].fill(stable.objects.txtStableSearch, name)
+        await pages[0].waitForSelector(stable.objects.loader)
+        await pages[0].waitForSelector(stable.objects.stableList.txtHorseName(1))
+        await pages[0].waitForTimeout(2000)
+        res = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, 
+          stable.objects.stableList.txtHorseName(1))
+        expect(res).toBe(name)
+      }
     });
 
     xit('ZED-67 - Stud Service allows the user to transfer horse to other account after name has being assigned', async () => {
