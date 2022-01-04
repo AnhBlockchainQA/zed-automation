@@ -28,10 +28,11 @@ class Stable {
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horse: (id: number) => `(//div[@role=\'tabpanel\'])[${id}]`,
-      txtHorseName: (id: number) => `(//div[@class=\'primary-text name\'])[${id}]`,
+      txtHorseName: (id: number) => `.panel:nth-child(${id}) .primary-text.name`,
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
       horseGenotype: '(//div[@class=\'horse-infos\']//div)[2]',
-      studBadge: (id: number) => `[role="tabpanel"]:nth-child(${id}) .panel__label .badge.stud`,
+      studBadge: (id: number) => `.panel:nth-child(${id}) .panel__label .badge.stud`,
+      newName: (id: number) => `.panel:nth-child(${id}) .outline-btn`,
       panelHorseName: '.panel.open .name-icon > div',
       panelHorseGen: '(//span[@class=\'primary-text gen\'])[1]',
       panelHorseBloodline: '(//div[@class=\'primary-text\'])[1]',
@@ -99,6 +100,11 @@ class Stable {
       txtMetaMaskError: '.primary-text.error',
       btnCancel: '.handle-btns .secondary-btn',
       btnNext: '.handle-btns .primary-btn'
+    },
+    newbornForm: {
+      tfName: "[placeholder='Choose Name']",
+      lblConfirm: "[for='isChecked']",
+      btnConfirm: '.confirm-btn'
     }
   };
 
