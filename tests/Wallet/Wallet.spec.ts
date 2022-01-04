@@ -78,7 +78,7 @@ describe('Wallet', () => {
     expect('/').toBe('/');
   });
 
-  it('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
+  xit('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
     await pages[0].click(wallet.objects.BALANCE_NAV_INFO);
     let account_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.B_ETH_BALANCE))
     let account_balance_wallet = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.BALANCE_WALLET_INFO))
@@ -102,7 +102,7 @@ describe('Wallet', () => {
 
 
 
-  it('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
+  xit('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
     await pages[0].click(wallet.objects.IMG_WALLET_ICON);
     await pages[0].click(wallet.objects.collapsePanelWalletSetting);
     await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
