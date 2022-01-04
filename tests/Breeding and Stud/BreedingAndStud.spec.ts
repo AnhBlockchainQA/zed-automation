@@ -81,7 +81,7 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-186 - Breeding is showing the list of RACEHORSES', async () => {
-      const horseList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      const horseList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horseList.length).toBeGreaterThanOrEqual(0)
     });
 
@@ -119,8 +119,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.filtersPanel.bloodline)
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.filtersPanel.bloodlineButerinLabel)  
-      await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.bloodlineButerinCheckBox)).toBe(true)
     });
@@ -131,8 +131,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.filtersPanel.genderColtLabel)  
-      await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.genderColtCheckBox)).toBe(true)
     });
@@ -144,14 +144,20 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.filtersPanel.breedGenesisLabel)
       await pages[0].waitForTimeout(1000)  
-      await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.breedGenesisCheckBox)).toBe(true)
     });
 
-    xit('ZED-193 - Breeding allows the user to SORT by Recently Listed', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-193 - Breeding allows the user to SORT by Recently Listed', async () => {
+    await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortBy)
+    await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+    await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortByRecentlyListed)
+    await pages[0].click(breedingAndStud.objects.ddlStudSortByRecentlyListed)
+    await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+    const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+    expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
     xit('ZED-194 - Breeding allows the user to SORT by Expired Soon', async () => {
@@ -171,10 +177,10 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-198 - Breeding racehorse list is showing the stable name of each horse', async () => {
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       for(let i=1 ;i<= horsesList.length;i++){
-       expect(await pages[0].innerText(breedingAndStud.objects.stubList.lblStableValue(i))).not.toBe('');
-       expect(await pages[0].innerText(breedingAndStud.objects.stubList.lblStableValue(i))).toBeTruthy();
+       expect(await pages[0].innerText(breedingAndStud.objects.studList.lblStableValue(i))).not.toBe('');
+       expect(await pages[0].innerText(breedingAndStud.objects.studList.lblStableValue(i))).toBeTruthy();
       }
 
     });
@@ -194,9 +200,9 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-201 - Breeding racehorse list is showing the Horse Name', async () => {
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       for(let i=1 ;i<= horsesList.length;i++){
-       const horseName = await pages[0].innerText(breedingAndStud.objects.stubList.lblHorseNmValue(i))
+       const horseName = await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(i))
        expect(horseName).not.toBe('');
        expect(horseName).toBeTruthy();
       }
