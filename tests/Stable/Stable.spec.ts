@@ -178,8 +178,21 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
     await pages[0].waitForTimeout(1000)
-    expect(stable.objects.stableList.stableDescription).not.toEqual('')
-    expect(await pages[0].innerText(stable.objects.stableList.stableDescription)).toContain('Description')
+    if(await pages[0].innerText(stable.objects.stableList.stableDescription) != ''){
+      expect(stable.objects.stableList.stableDescription).not.toEqual('')
+      expect(await pages[0].innerText(stable.objects.stableList.stableDescription)).toContain('Description')
+    } else {
+      await pages[0].click(stable.objects.btnSettings);
+      await pages[0].fill(stable.objects.txtStableDescription,'Automation Description');
+      await pages[0].check(stable.objects.checkboxSureForUpdate);
+      expect(await pages[0].isEnabled(stable.objects.btnSaveChanges)).toBe(true);
+      await pages[0].click(stable.objects.btnSaveChanges);
+      await pages[0].waitForTimeout(500);
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].waitForTimeout(500)
+      expect(stable.objects.stableList.stableDescription).not.toEqual('')
+      expect(await pages[0].innerText(stable.objects.stableList.stableDescription)).toContain('Description')
+    }
   });
 
   it('ZED-176 - Stable shown the list of horses that belong to the stable', async () => {
