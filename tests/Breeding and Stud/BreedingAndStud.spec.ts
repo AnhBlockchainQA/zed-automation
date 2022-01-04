@@ -173,8 +173,14 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
+      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      for(let i=1 ;i<= horsesList.length;i++){
+       const StudFee = await pages[0].innerText(breedingAndStud.objects.stubList.lblStudFeeValue(i))
+       expect(StudFee).not.toBe('')
+       expect(StudFee).toContain('$')
+       expect(StudFee).toContain('USD')
+      }
     });
 
     it('ZED-201 - Breeding racehorse list is showing the Horse Name', async () => {
