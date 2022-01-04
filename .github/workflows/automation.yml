@@ -80,7 +80,6 @@ jobs:
         slack-channel: "dev-qa-team"
         slack-text: Hello! Something is burning on development scripts! Or not...
         slack-optional-icon_emoji: ":fire:"
-        slack-optional-as_user: false
 
     - name: Send Thread Message
       if: ${{ failure() }}
@@ -88,7 +87,7 @@ jobs:
       with:
         slack-function: send-message
         slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-        slack-channel: ${{ fromJson(steps.send-message.outputs.slack-result).response.channel }}
+        slack-channel: "dev-qa-team"
         slack-text: A development progress has been reported with failures check on https://vhslab.github.io/qa-automationtest/
         slack-optional-thread_ts: ${{ fromJson(steps.send-message.outputs.slack-result).response.message.ts }}
         #slack-optional-reply_broadcast: true # To broadcast thread reply in channel
