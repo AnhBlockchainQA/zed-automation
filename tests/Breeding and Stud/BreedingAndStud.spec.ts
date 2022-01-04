@@ -99,8 +99,18 @@ describe('Breeding And Stud', () => {
     expect(await pages[0].isVisible(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)).toBe(true)
     });
 
-    xit('ZED-189 - Breeding allows the user to filter racehorses by GENERATION range', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-189 - Breeding allows the user to filter racehorses by GENERATION range', async () => {
+    await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+    await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.zedGeneration)
+    await pages[0].click(breedingAndStud.objects.filtersPanel.zedGeneration)
+    await pages[0].waitForTimeout(1000) 
+    await pages[0].fill(breedingAndStud.objects.filtersPanel.zedGenerationMin,'6')
+    await pages[0].click(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
+    await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
+    const zedGenerationMin = await pages[0].getAttribute(breedingAndStud.objects.filtersPanel.zedGenerationMin,"value")
+    expect(zedGenerationMin).toBe('6')
+    const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+    expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
     it('ZED-190 - Breeding allows the user to filter racehorses by BLOODLINE', async () => {
