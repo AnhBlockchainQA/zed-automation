@@ -164,8 +164,26 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-195 - Breeding allows the user to SORT by Highest Price', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-195 - Breeding allows the user to SORT by Highest Price', async () => {
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortByHighestPrice)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByHighestPrice)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      var feeList = []
+      var isHighestFeeFirst = true;
+      for(let horseRow =1 ;horseRow<= horsesList.length; horseRow++){
+        const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(horseRow)) 
+        feeList.push(parseFloat(StudFee.substring(1,StudFee.length)))
+      }
+      for(let feeRow = 0; feeRow < feeList.length ; feeRow++) {
+        if (feeList[feeRow] < feeList[feeRow+1]){ 
+          isHighestFeeFirst = false;
+            break;}
+       } 
+      expect(await isHighestFeeFirst).toBe(true);
     });
 
     xit('ZED-196 - Breeding allows the user to SORT by Lowest Price', async () => {
@@ -210,7 +228,7 @@ describe('Breeding And Stud', () => {
        const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(i))
        expect(StudFee).not.toBe('')
        expect(StudFee).toContain('$')
-       expect(StudFee).toContain('USD')
+       expect(parseFloat(StudFee.substring(1,StudFee.length))).toBeGreaterThanOrEqual(0)
       }
     });
 
@@ -320,8 +338,14 @@ describe('Breeding And Stud', () => {
         expect(await pages[0].innerText(breedingAndStud.objects.lblPanelValue(i))).not.toBe('')
     });
 
-    xit('ZED-60 - Stud Service allows the Colt can breed 3 times during their breeding cycle', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-60 - Stud Service allows the Colt can breed 3 times during their breeding cycle', async () => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.genderColtLabel)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      const breedCount = await pages[0].waitForSelector(breedingAndStud.objects.lblPanelValue(10))
+      expect(await breedCount.innerText()).toContain('of 3 left')
     });
 
     it('ZED-61 - Stud Service allows the user to move the male Genesis racehorse into Stud service with a duration is 1 day or 3 days or 7 days', async () => {
