@@ -190,8 +190,14 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-197 - Breeding allows the user to SEARCH and the result match with the text/chars entered', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-197 - Breeding allows the user to SEARCH and the result match with the text/chars entered', async () => {
+      const horseName = await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(1))
+      await pages[0].fill(breedingAndStud.objects.tfSearch,horseName)
+      await pages[0].waitForTimeout(1000)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toEqual(1)
+      expect(await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(1))).toBe(horseName) 
     });
 
     it('ZED-198 - Breeding racehorse list is showing the stable name of each horse', async () => {
