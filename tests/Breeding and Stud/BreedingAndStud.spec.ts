@@ -106,10 +106,10 @@ describe('Breeding And Stud', () => {
     await pages[0].waitForTimeout(1000) 
     await pages[0].fill(breedingAndStud.objects.filtersPanel.zedGenerationMin,'6')
     await pages[0].click(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
-    await pages[0].waitForSelector(breedingAndStud.objects.stubList.HorseList)
+    await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
     const zedGenerationMin = await pages[0].getAttribute(breedingAndStud.objects.filtersPanel.zedGenerationMin,"value")
     expect(zedGenerationMin).toBe('6')
-    const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+    const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
     expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
@@ -190,9 +190,9 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
-      const horsesList= await pages[0].$$(breedingAndStud.objects.stubList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       for(let i=1 ;i<= horsesList.length;i++){
-       const StudFee = await pages[0].innerText(breedingAndStud.objects.stubList.lblStudFeeValue(i))
+       const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(i))
        expect(StudFee).not.toBe('')
        expect(StudFee).toContain('$')
        expect(StudFee).toContain('USD')
@@ -305,8 +305,14 @@ describe('Breeding And Stud', () => {
         expect(await pages[0].innerText(breedingAndStud.objects.lblPanelValue(i))).not.toBe('')
     });
 
-    xit('ZED-60 - Stud Service allows the Colt can breed 3 times during their breeding cycle', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-60 - Stud Service allows the Colt can breed 3 times during their breeding cycle', async () => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.genderColtLabel)
+      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      const breedCount = await pages[0].waitForSelector(breedingAndStud.objects.lblPanelValue(10))
+      expect(await breedCount.innerText()).toContain('of 3 left')
     });
 
     it('ZED-61 - Stud Service allows the user to move the male Genesis racehorse into Stud service with a duration is 1 day or 3 days or 7 days', async () => {
