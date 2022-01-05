@@ -53,6 +53,8 @@ class BreedingAndStud {
       horseCard: '(//div[@class=\'label-content\'])[1]',
       lblStableValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[2]/div[1]`,
       lblHorseNmValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[1]`,
+      lblStudFeeValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[3]`,
+      lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
       lblStudFeeValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[3]/span[1]`,
     },
     filtersPanel: {

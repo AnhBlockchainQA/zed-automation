@@ -203,8 +203,23 @@ describe('Breeding And Stud', () => {
 
     });
 
-    xit('ZED-199 - Breeding racehorse list is showing the TIME LEFT in format DD HH MM like 2d 9h 6m', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-199 - Breeding racehorse list is showing the TIME LEFT in format DD HH MM like 2d 9h 6m', async () => {
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      for(let i=1 ;i<= horsesList.length;i++){
+       const timeLeftValue = await pages[0].innerText(breedingAndStud.objects.studList.lblTimeLeftValue(i))
+       var timeUnit = timeLeftValue.split("")
+       if((timeUnit.length === 3)){
+        expect(timeUnit[0]).toContain('d')
+        expect(timeUnit[1]).toContain('h')
+        expect(timeUnit[2]).toContain('m')
+       }
+       else if((timeUnit.length === 2)){
+        expect(timeUnit[0]).toContain('h')
+        expect(timeUnit[1]).toContain('m')
+       }
+       else{
+        expect(timeUnit[0]).toContain('m')
+       }}
     });
 
     it('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
