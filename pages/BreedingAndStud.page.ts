@@ -89,6 +89,22 @@ class BreedingAndStud {
     const {width, height} = img1
     return pixelmatch(img1.data, img2.data, null, width, height, {threshold: 0.1})
   }
+
+  async searchHorseWithRetries(input: string, maxRetries: number): Promise<string | null> {
+    if (!maxRetries) 
+      return null;
+    await this.page.fill(this.objects.tfSearch, input)
+    await this.page.waitForTimeout(2000)
+    await this.page.waitForSelector(this.objects.loader, { state: 'hidden', timeout: 20000 })
+    const result = await this.page.innerText(this.objects.txtHorseName(1), { timeout: 1000 }).catch(() => null)
+    if (!result) {
+      await this.page.click(this.objects.btnClearSearch)
+      await this.page.waitForSelector(this.objects.loader)
+      await this.page.waitForTimeout(5000)
+      return this.searchHorseWithRetries(input, maxRetries - 1)
+    }
+    return result
+  }
 }
 
 export default BreedingAndStud;
