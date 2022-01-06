@@ -207,7 +207,7 @@ describe('Breeding And Stud', () => {
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       for(let i=1 ;i<= horsesList.length;i++){
        const timeLeftValue = await pages[0].innerText(breedingAndStud.objects.studList.lblTimeLeftValue(i))
-       var timeUnit = timeLeftValue.split("")
+       var timeUnit = timeLeftValue.split(" ")
        if((timeUnit.length === 3)){
         expect(timeUnit[0]).toContain('d')
         expect(timeUnit[1]).toContain('h')
@@ -241,8 +241,16 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-202 - Breeding racehorse list is showing the GEN + BLOODLINE below the Horse Name', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-202 - Breeding racehorse list is showing the GEN + BLOODLINE below the Horse Name', async () => {
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      for(let horseRow=1 ;horseRow<= horsesList.length;horseRow++){
+       const genBoodlineValue = await pages[0].innerText(breedingAndStud.objects.studList.lblGenBoodlineValue(horseRow))
+       expect(genBoodlineValue).not.toBe('');
+       var genBoodlineIndex = genBoodlineValue.split('•')
+       expect(genBoodlineIndex.length).toBe(3)
+       genBoodlineIndex.forEach((val: String) => expect(val).not.toBe(''));
+      }
     });
 
     xit('ZED-203 - Breeding allows the user to open collapsed panel after click on a horse of the list.', async () => {
