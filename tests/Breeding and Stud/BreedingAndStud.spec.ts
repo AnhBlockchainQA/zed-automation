@@ -186,8 +186,26 @@ describe('Breeding And Stud', () => {
       expect(await isHighestFeeFirst).toBe(true);
     });
 
-    xit('ZED-196 - Breeding allows the user to SORT by Lowest Price', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-196 - Breeding allows the user to SORT by Lowest Price', async () => {
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortByLowestPrice)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByLowestPrice)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      var feeList = []
+      var isLowestFeeFirst = true;
+      for(let horseRow =1 ;horseRow<= horsesList.length; horseRow++){
+        const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(horseRow)) 
+        feeList.push(parseFloat(StudFee.substring(1,StudFee.length)))
+      }
+      for(let feeRow = 0; feeRow < feeList.length ; feeRow++) {
+        if (feeList[feeRow] > feeList[feeRow+1]){ 
+          isLowestFeeFirst = false;
+            break;}
+       } 
+      expect(await isLowestFeeFirst).toBe(true);
     });
 
     xit('ZED-197 - Breeding allows the user to SEARCH and the result match with the text/chars entered', async () => {
