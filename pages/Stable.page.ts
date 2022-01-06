@@ -137,6 +137,27 @@ class Stable {
     }
     return false
   }
+
+  async getFirstNewborn(startId?: number): Promise<any> {
+    // index starts from 1
+    if (!startId)
+      startId = 1
+    let i: number;
+    await this.page.waitForSelector(this.objects.stableList.horse(startId))
+    const horseList = await this.page.$$(this.objects.stableList.HorseList)
+    for (i = startId; i <= horseList.length; i++) {
+      const newName = await this.page.$(this.objects.stableList.newName(i))
+      if (newName != null) {
+        await newName.click()
+        return i
+      }
+    }
+    if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
+      await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+      return await this.getFirstNewborn(i)
+    }
+    return false
+  }
 }
 
 export default Stable;

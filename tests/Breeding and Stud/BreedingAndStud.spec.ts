@@ -410,8 +410,24 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
-    xit('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      let res = await stable.getFirstNewborn()
+      if (res) {
+        const name = 'testhorse ' + (Math.random() + 1).toString(36).substring(7)
+        await pages[0].click(stable.objects.newbornForm.btnConfirm)
+        await pages[0].fill(stable.objects.newbornForm.tfName, name)
+        await pages[0].click(stable.objects.newbornForm.lblConfirm)
+        await pages[0].click(stable.objects.newbornForm.btnConfirm)
+        await pages[0].waitForTimeout(2000)
+        await pages[0].fill(stable.objects.txtStableSearch, name)
+        await pages[0].waitForSelector(stable.objects.loader)
+        await pages[0].waitForSelector(stable.objects.stableList.txtHorseName(1))
+        await pages[0].waitForTimeout(2000)
+        res = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, 
+          stable.objects.stableList.txtHorseName(1))
+        expect(res).toBe(name)
+      }
     });
 
     xit('ZED-67 - Stud Service allows the user to transfer horse to other account after name has being assigned', async () => {
