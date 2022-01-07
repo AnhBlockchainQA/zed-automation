@@ -442,8 +442,32 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
+      // function to find the first horse in the list that is in race
+      const getFirstHorseInRace = async (startId?: number): Promise<any> => {
+        // index starts from 1
+        if (!startId)
+          startId = 1
+        let i: number;
+        await pages[0].waitForSelector(stable.objects.stableList.horse(startId))
+        const horseList = await pages[0].$$(stable.objects.stableList.HorseList)
+        for (i = startId; i <= horseList.length; i++) {
+          const badge = await pages[0].innerText(stable.objects.stableList.horseBadge(i))
+          if (badge === 'IN RACE') {
+            await horseList[i - 1].click()
+            const res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink, { timeout: 2000 }).catch(() => null)
+            expect(res).toBeNull()
+            return
+          }
+        }
+        if (!await pages[0].isVisible(stable.objects.btnOwnARacehorse)) {
+          await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)')
+          return await getFirstHorseInRace(i)
+        }
+        return
+      }
+      await pages[0].click(stable.objects.imgStableProfile)
+      await getFirstHorseInRace()
     });
 
     it('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
