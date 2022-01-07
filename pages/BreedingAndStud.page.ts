@@ -56,6 +56,10 @@ class BreedingAndStud {
       lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
       lblStudFeeValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[3]/span[1]`,
       lblGenBoodlineValue: (id: number) => `(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[2]`,
+      collapsedPanelOpen: '(//div[@class="label-content"])[1]',
+      panelMinimize: '(//img[@class=\'open-label\'])[1]',
+      btnSelectMate: '(//button[contains(@class,"primary-btn md")])[1]',
+      lblBreeding: '//h2[text()="breeding"]',
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
