@@ -55,6 +55,7 @@ class BreedingAndStud {
       lblHorseNmValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[1]`,
       lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
       lblStudFeeValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[3]/span[1]`,
+      lblGenBoodlineValue: (id: number) => `(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[2]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
