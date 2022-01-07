@@ -314,8 +314,32 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-58 - Stud Service is showing the Racehorse when is added IN STUD', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-58 - Stud Service is showing the Racehorse when is added IN STUD', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
+      await pages[0].waitForSelector(stable.objects.stableList.panelHorseName)
+      const horseAtStable = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
+      await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
+      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
+      await pages[0].click(stable.objects.breedForm.txt1Day)
+      const [tabs] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(stable.objects.breedForm.btnNext)
+      ]);
+      await tabs.waitForLoadState();
+      pages = tabs.context().pages();
+      await pages[1].click(auth.objects.BTN_METAMASK_SIGN)
+      const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden' }).catch(() => true)
+      expect(loading).toBeNull()
+      await pages[0].goto('https://goerli-test.zed.run/stud')
+      await pages[0].waitForLoadState()
+      await pages[0].waitForTimeout(2000)
+      const horseAtStud = await breedingAndStud.searchHorseWithRetries(horseAtStable, 10)
+      expect(horseAtStud).toBe(horseAtStable)
     });
 
     it('ZED-59 - Stud Service is showing the racehorse details', async () => {
@@ -360,7 +384,7 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -379,7 +403,7 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -402,7 +426,7 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstHorseNotInStud()).not.toBeFalsy()
+      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -420,7 +444,7 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.imgStableProfile)
       let res = await stable.getFirstNewborn()
       if (res) {
-        const name = 'testhorse ' + (Math.random() + 1).toString(36).substring(7)
+        const name = 'Test Horse ' + (Math.random() + 1).toString(36).substring(7)
         await pages[0].click(stable.objects.newbornForm.btnConfirm)
         await pages[0].fill(stable.objects.newbornForm.tfName, name)
         await pages[0].click(stable.objects.newbornForm.lblConfirm)
@@ -675,7 +699,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-242 - Horse profile is being shown the BREED card option/action while the user is authenticated', async () => {
       await pages[0].click(stable.objects.imgStableProfile)
-      const res = await stable.getFirstHorseNotInStud()
+      const res = await stable.getFirstAvailableHorse()
       expect(res).not.toBeFalsy()
       await pages[0].click(stable.objects.stableList.panelHorseDetailsLink(res))
       const text = await pages[0].waitForSelector(breedingAndStud.objects.lblInfoLeft)
