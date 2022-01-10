@@ -61,6 +61,7 @@ class BreedingAndStud {
       panelMinimize: (id: number) =>`(//img[@class=\'open-label\'])[${id}]`,
       btnSelectMate: (id: number) =>`(//button[contains(@class,"primary-btn md")])[${id}]`,
       lblGenderValue: (id: number) => `(//div[text()='gender']/following-sibling::div)[${id}]`,
+      txtStudFeeBox: (id: number) => `(//div[@class='price-input']//div)[${id}]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',

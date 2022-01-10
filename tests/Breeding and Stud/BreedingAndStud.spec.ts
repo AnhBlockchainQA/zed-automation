@@ -328,8 +328,16 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-214 - Breeding Horse Details Panel shown the Horse STUD FEE in a box close to the SELECT MATE button', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-214 - Breeding Horse Details Panel shown the Horse STUD FEE in a box close to the SELECT MATE button', async () => {
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      for(let horseRow=1 ;horseRow<= horsesList.length;horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const studFee=await pages[0].innerText(breedingAndStud.objects.studList.txtStudFeeBox(horseRow))
+      expect(parseInt(studFee.substring(1,studFee.length))).toBeGreaterThanOrEqual(1)
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      }
     });
 
     it('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
