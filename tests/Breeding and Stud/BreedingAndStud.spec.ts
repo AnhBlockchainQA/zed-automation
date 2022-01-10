@@ -280,8 +280,12 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-203 - Breeding allows the user to open collapsed panel after click on a horse of the list.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-203 - Breeding allows the user to open collapsed panel after click on a horse of the list.', async () => {  
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen)
+      await pages[0].waitForTimeout(1000)
+      expect(await pages[0].isVisible(breedingAndStud.objects.studList.panelMinimize)).toBe(true);
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize)
     });
 
     xit('ZED-204 - Breeding Horse Details Panel shown the Horse GEN', async () => {
