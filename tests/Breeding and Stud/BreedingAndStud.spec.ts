@@ -282,10 +282,10 @@ describe('Breeding And Stud', () => {
 
     it('ZED-203 - Breeding allows the user to open collapsed panel after click on a horse of the list.', async () => {  
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
       await pages[0].waitForTimeout(1000)
-      expect(await pages[0].isVisible(breedingAndStud.objects.studList.panelMinimize)).toBe(true);
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize)
+      expect(await pages[0].isVisible(breedingAndStud.objects.studList.panelMinimize(1))).toBe(true);
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(1))
     });
 
     xit('ZED-204 - Breeding Horse Details Panel shown the Horse GEN', async () => {
@@ -334,11 +334,11 @@ describe('Breeding And Stud', () => {
 
     it('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
       await pages[0].waitForTimeout(1000)
-      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
       await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
-      const breedingTxt=await pages[0].innerText(breedingAndStud.objects.studList.lblBreeding)
+      const breedingTxt=await pages[0].innerText(breedingAndStud.objects.lblBreeding)
       expect(breedingTxt).toBe('Breeding')
       expect(await pages[0].url()).toContain('select-mate');
     });

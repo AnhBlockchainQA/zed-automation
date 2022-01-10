@@ -47,6 +47,7 @@ class BreedingAndStud {
     ddlStudSortByExpiringSoon: '//div[text()=\'Expiring Soon\']',
     ddlStudSortByHighestPrice: '//div[text()=\'Highest Price\']',
     ddlStudSortByLowestPrice: '//div[text()=\'Lowest Price\']',
+    lblBreeding: '//h2[text()="breeding"]',
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
@@ -56,10 +57,10 @@ class BreedingAndStud {
       lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
       lblStudFeeValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[3]/span[1]`,
       lblGenBoodlineValue: (id: number) => `(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[2]`,
-      collapsedPanelOpen: '(//div[@class="label-content"])[1]',
-      panelMinimize: '(//img[@class=\'open-label\'])[1]',
-      btnSelectMate: '(//button[contains(@class,"primary-btn md")])[1]',
-      lblBreeding: '//h2[text()="breeding"]',
+      collapsedPanelOpen: (id: number) => `(//div[@class="label-content"])[${id}]`,
+      panelMinimize: (id: number) =>`(//img[@class=\'open-label\'])[${id}]`,
+      btnSelectMate: (id: number) =>`(//button[contains(@class,"primary-btn md")])[${id}]`,
+      lblGenderValue: (id: number) => `(//div[text()='gender']/following-sibling::div)[${id}]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
