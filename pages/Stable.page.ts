@@ -45,7 +45,6 @@ class Stable {
       panelHorseOffSpringInfo: '(//div[@class=\'offspring-info\'])[1]',
       panelHorseFullStamina: '(//div[@class=\'full\'])[1]',
       panelHorseImg: '(//img[@class=\'horse-glow\'])[2]',
-      panelHorseDetailsLink: (id: number) => `(//div[@class=\'panel-btns false\'])[${id}]//div[@class=\'left\']/div[1]`,
       panelHorseBreedLink: '.panel.open .icn-txt:nth-child(2)',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
       panelMinimize: '(//img[@class=\'open-label\'])',

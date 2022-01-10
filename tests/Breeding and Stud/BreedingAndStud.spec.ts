@@ -4,6 +4,7 @@ import Metamask from '../../pages/Metamask.module';
 import { BrowserContext } from 'playwright';
 import BreedingAndStud from '../../pages/BreedingAndStud.page';
 import Stable from '../../pages/Stable.page';
+import Racing from '../../pages/Racing.module';
 import fs from 'fs';
 
 describe('Breeding And Stud', () => {
@@ -13,6 +14,7 @@ describe('Breeding And Stud', () => {
   let metamask: Metamask;
   let breedingAndStud: BreedingAndStud
   let stable: Stable
+  let racing: Racing
 
   beforeAll(async () => {
     metamask = new Metamask();
@@ -21,6 +23,7 @@ describe('Breeding And Stud', () => {
     auth = new Authorization(pages[0]);
     breedingAndStud = new BreedingAndStud(pages[0])
     stable = new Stable(pages[0])
+    racing = new Racing(pages[0])
   });
 
   beforeEach(async () => {
@@ -329,8 +332,15 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen)
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate)
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      const breedingTxt=await pages[0].innerText(breedingAndStud.objects.studList.lblBreeding)
+      expect(breedingTxt).toBe('Breeding')
+      expect(await pages[0].url()).toContain('select-mate');
     });
 
     xit('ZED-216 - Breeding Horse Details Panel shown the - icon as a close link action of the collapse section and closes it after a click', async () => {
@@ -446,8 +456,32 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
+      // function to find the first horse in the list that is in race
+      const getFirstHorseInRace = async (startId?: number): Promise<any> => {
+        // index starts from 1
+        if (!startId)
+          startId = 1
+        let i: number;
+        await pages[0].waitForSelector(stable.objects.stableList.horse(startId))
+        const horseList = await pages[0].$$(stable.objects.stableList.HorseList)
+        for (i = startId; i <= horseList.length; i++) {
+          const badge = await pages[0].innerText(stable.objects.stableList.horseBadge(i))
+          if (badge === 'IN RACE') {
+            await horseList[i - 1].click()
+            const res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink, { timeout: 2000 }).catch(() => null)
+            expect(res).toBeNull()
+            return
+          }
+        }
+        if (!await pages[0].isVisible(stable.objects.btnOwnARacehorse)) {
+          await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)')
+          return await getFirstHorseInRace(i)
+        }
+        return
+      }
+      await pages[0].click(stable.objects.imgStableProfile)
+      await getFirstHorseInRace()
     });
 
     it('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
@@ -494,8 +528,50 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-68 - Stud Service allows the user to put into the gate nomination after the name has being assigned', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-68 - Stud Service allows the user to put into the gate nomination after the name has being assigned', async () => {
+      // function to put horse into gate
+      const enterHorseRace = async (id: number): Promise<any> => {
+        let res = await pages[0].click(racing.objects.events.lstRaces(id)).catch(() => null)
+        if (res === null)
+          return
+        res = await pages[0].click(racing.objects.events.lstGates()).catch(() => null)
+        if (res === null)
+          return await enterHorseRace(id + 1)
+        res = await selectRaceHorse()
+        if (res === null)
+          return await enterHorseRace(id + 1)
+        res = await pages[0].waitForSelector(`text='${res}'`).catch(() => null)
+        expect(res).not.toBeNull()
+      }
+
+      // function to select a horse from stable list
+      const selectRaceHorse = async (): Promise<any> => {
+        let res = await pages[0].waitForRequest('**/available_race_horses*', { timeout: 5000 }).catch(() => null)
+        if (!res) {
+          await pages[0].click(racing.objects.formNominate.btnClose)
+          return res
+        }
+        res = await pages[0].hover(racing.objects.formNominate.lstAvailHorse, { timeout: 5000 }).catch(() => null)
+        if (res === null) {
+          await scrollToBottom()
+          return await selectRaceHorse()
+        }
+        res = await pages[0].innerText(racing.objects.formNominate.txtAvailName)
+        await pages[0].click(racing.objects.formNominate.btnAvailNominate)
+        await pages[0].click(racing.objects.formNominate.btnConfirm, { timeout: 2000 }).catch(() => null)
+        return res
+      }
+
+      // function to scroll to bottom of the list in nominate horse pop-up
+      const scrollToBottom = async () => {
+        await pages[0].evaluate((el: any) => {
+          const e = document.querySelector(el)
+          e.scrollTop = e.scrollHeight
+         }, racing.objects.formNominate.paneHorseList)
+      }
+
+      await pages[0].click(racing.objects.menuRacing)
+      await enterHorseRace(1)
     });
 
   });
@@ -729,11 +805,10 @@ describe('Breeding And Stud', () => {
 
     it('ZED-242 - Horse profile is being shown the BREED card option/action while the user is authenticated', async () => {
       await pages[0].click(stable.objects.imgStableProfile)
-      const res = await stable.getFirstAvailableHorse()
+      let res = await stable.getFirstAvailableHorse()
       expect(res).not.toBeFalsy()
-      await pages[0].click(stable.objects.stableList.panelHorseDetailsLink(res))
-      const text = await pages[0].waitForSelector(breedingAndStud.objects.lblInfoLeft)
-      expect(await text.innerText()).toBe('Breed')
+      res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink).catch(() => null)
+      expect(res).not.toBeNull()
     });
 
     it('ZED-243 - Horse profile is not shown the BREED card option/action while the user is not authenticated', async () => {
