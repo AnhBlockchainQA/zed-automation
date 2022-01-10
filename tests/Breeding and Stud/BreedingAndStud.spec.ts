@@ -328,8 +328,15 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen)
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate)
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      const breedingTxt=await pages[0].innerText(breedingAndStud.objects.studList.lblBreeding)
+      expect(breedingTxt).toBe('Breeding')
+      expect(await pages[0].url()).toContain('select-mate');
     });
 
     xit('ZED-216 - Breeding Horse Details Panel shown the - icon as a close link action of the collapse section and closes it after a click', async () => {
