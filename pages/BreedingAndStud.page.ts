@@ -102,12 +102,12 @@ class BreedingAndStud {
       return null;
     await this.page.fill(this.objects.tfSearch, input)
     await this.page.waitForTimeout(2000)
-    await this.page.waitForSelector(this.objects.loader, { state: 'hidden', timeout: 20000 })
+    await this.page.waitForSelector(this.objects.loader, { state: 'hidden', timeout: 30000 })
     const result = await this.page.innerText(this.objects.txtHorseName(1), { timeout: 1000 }).catch(() => null)
     if (!result) {
       await this.page.click(this.objects.btnClearSearch)
       await this.page.waitForSelector(this.objects.loader)
-      await this.page.waitForTimeout(5000)
+      await this.page.waitForTimeout(10000)
       return this.searchHorseWithRetries(input, maxRetries - 1)
     }
     return result
