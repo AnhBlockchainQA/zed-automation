@@ -47,8 +47,19 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.btnBreeding)
     })
 
-    xit('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-69 - Breeding Service does not show Female horses on  breeding modal when are younger than 1 month', async () => {
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const filterHorseCount= await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
+      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const genderValueTxt= await pages[0].innerText(breedingAndStud.objects.studList.lblGenderValue(horseRow))
+      expect(['Colt', 'Stallion'].findIndex(v => v === genderValueTxt)).not.toBe(-1)
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      }
     });
 
     xit('ZED-70 - Breeding Services does not show Female horses on breeding modal when are running in a race or has being registered to one', async () => {
