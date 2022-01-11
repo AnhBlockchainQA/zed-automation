@@ -48,6 +48,7 @@ class BreedingAndStud {
     ddlStudSortByHighestPrice: '//div[text()=\'Highest Price\']',
     ddlStudSortByLowestPrice: '//div[text()=\'Lowest Price\']',
     lblBreeding: '//h2[text()="breeding"]',
+    lblFilterCount: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]/following-sibling::div[1]',
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
