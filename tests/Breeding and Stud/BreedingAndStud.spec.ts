@@ -74,8 +74,19 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-120 - Breeding Service allows the user to select a valid FEMALE', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-120 - Breeding Service allows the user to select a valid FEMALE', async () => {
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.btnSelectFemale) 
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.lblFemaleHorse(1))
+      const femaleHorseNm = await pages[0].innerText(breedingAndStud.objects.selectMate.lblFemaleHorse(1))
+      await pages[0].click(breedingAndStud.objects.selectMate.btnSelect)
+      const selectedFemaleHorse = await pages[0].innerText(breedingAndStud.objects.selectMate.lblSelectedFemaleNm)
+      expect(selectedFemaleHorse).toBe(femaleHorseNm)
     });
 
     xit('ZED-121 - Breeding Service allows the user to select a valid STUD', async () => {
