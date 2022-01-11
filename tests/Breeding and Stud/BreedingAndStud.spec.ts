@@ -524,8 +524,48 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-67 - Stud Service allows the user to transfer horse to other account after name has being assigned', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-67 - Stud Service allows the user to transfer horse to other account after name has being assigned', async () => {
+      let res: any
+      // function to search horse in stable list until it does not exist (after transferred)
+      const searchUntilHorseNotFound = async (input: string, maxRetries: number): Promise<any> => {
+        if (!maxRetries) 
+          return false;
+        await pages[0].fill(stable.objects.txtStableSearch, input)
+        await pages[0].waitForTimeout(1000)
+        await pages[0].waitForSelector(stable.objects.loader, { state: 'hidden', timeout: 20000 })
+        await pages[0].waitForTimeout(1000)
+        res = await pages[0].$(stable.objects.stableList.HorseCard)
+        if (res) {
+          await pages[0].click(stable.objects.btnClearSearch)
+          await pages[0].waitForTimeout(10000)
+          return await searchUntilHorseNotFound(input, maxRetries - 1)
+        }
+        return res
+      }
+      
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnSettings)
+      await pages[0].click(stable.objects.transferHorse.btnSelectRaceHorse)
+      res = await pages[0].hover(stable.objects.transferHorse.lstHorse, { timeout: 5000 }).catch(() => null)
+      if (res !== null) {
+        await pages[0].click(stable.objects.transferHorse.btnSelect)
+        const name = await pages[0].innerText(stable.objects.transferHorse.txtHorseName)
+        await pages[0].fill(stable.objects.transferHorse.tfWalletAddress, data.second_wallet_address)
+        await pages[0].click(stable.objects.transferHorse.btnTransfer)
+        const [tabs] = await Promise.all([
+          browserContext.waitForEvent('page'),
+          await pages[0].click(stable.objects.transferHorse.btnConfirm)
+        ]);
+        await tabs.waitForLoadState();
+        pages = tabs.context().pages();
+        await pages[1].click(auth.objects.BTN_METAMASK_SIGN)
+        const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden' }).catch(() => true)
+        expect(loading).toBeNull()
+        await pages[0].click(stable.objects.btnUserMenu)
+        await pages[0].click(stable.objects.btnMyStable)
+        res = await searchUntilHorseNotFound(name, 10)
+        expect(res).toBeNull()
+      }
     });
 
     it('ZED-68 - Stud Service allows the user to put into the gate nomination after the name has being assigned', async () => {
