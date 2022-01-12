@@ -369,8 +369,17 @@ describe('Breeding And Stud', () => {
   });
 
   describe('Stud', function() {
-    xit('ZED-57 - Stud Service allows the user to BREED racehorse while racehorse is in STUD', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-57 - Stud Service allows the user to BREED racehorse while racehorse is in STUD', async () => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      let res = await pages[0].waitForSelector(breedingAndStud.objects.lstHorses(1)).catch(() => null)
+      if (res) {
+        await res.click()
+        const horseAtStud = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
+        await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
+        await pages[0].waitForURL('**/select-mate')
+        const horseAtBreed = await pages[0].innerText(breedingAndStud.objects.selectMate.txtStudHorseName)
+        expect(horseAtBreed).toContain(horseAtStud)
+      }
     });
 
     it('ZED-58 - Stud Service is showing the Racehorse when is added IN STUD', async () => {
@@ -519,7 +528,8 @@ describe('Breeding And Stud', () => {
       ]);
       await windows.waitForLoadState();
       pages = windows.context().pages();
-      await pages[1].click(auth.objects.BTN_METAMASK_CANCEL)
+      await pages[1].bringToFront()
+      await pages[1].click(auth.objects.BTN_METAMASK_CANCEL, { force: true })
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
