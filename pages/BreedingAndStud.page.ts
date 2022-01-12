@@ -79,12 +79,17 @@ class BreedingAndStud {
       zedGeneration: '//div[@class=\'f-part zed-generation\']',
       zedGenerationMin: '//div[@class=\'f-part zed-generation\']//input[1]',
       zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
-    },
+    } ,
     selectMate: {
+      lblBreeding: '//h2[text()="breeding"]',
+      btnSelectFemale: '//div[text()="select female"]',
+      lblSelectedFemaleNm: '(//div[@class="female-content selected"]//div)[1]',
+      lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
+      btnSelect : '(//div[@class="actions"]//button)[1]',
       txtStudHorseName: '.stud-content > .overline-text',
       cardParents: '.horse-family-card.parent',
       cardOffsprings: '.horse-family-card.undefined',
-    }
+    } ,
   };
 
   async getPageTitle() {
