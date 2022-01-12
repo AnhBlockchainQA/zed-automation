@@ -86,8 +86,10 @@ class BreedingAndStud {
       lblSelectedFemaleNm: '(//div[@class="female-content selected"]//div)[1]',
       lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
       btnSelect : '(//div[@class="actions"]//button)[1]',
+      txtStudHorseName: '.stud-content > .overline-text',
+      cardParents: '.horse-family-card.parent',
+      cardOffsprings: '.horse-family-card.undefined',
     } ,
-    
   };
 
   async getPageTitle() {
@@ -120,6 +122,16 @@ class BreedingAndStud {
       return this.searchHorseWithRetries(input, maxRetries - 1)
     }
     return result
+  }
+
+  async getHorseWithOffspring(id: number): Promise<any> {
+    let res: any = await this.page.click(this.objects.lstHorses(id), { timeout: 10000 }).catch(() => null)
+    if (res !== null) {
+      res = await this.page.innerText(this.objects.lblPanelValue(9))
+      if (res === '0')
+        return await this.getHorseWithOffspring(id + 1)
+    }
+    return res
   }
 }
 
