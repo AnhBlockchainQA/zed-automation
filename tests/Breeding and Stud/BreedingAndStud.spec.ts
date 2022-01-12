@@ -649,8 +649,23 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-140 - Offspring is showing the descendant/offspring horses in a styled card and the user is able to click/redirect to horse details.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-140 - Offspring is showing the descendant/offspring horses in a styled card and the user is able to click/redirect to horse details.', async () => {
+      await pages[0].click(breedingAndStud.objects.btnBreeding)
+      let res = await breedingAndStud.getHorseWithOffspring(1)
+      if (res) {
+        await pages[0].click(breedingAndStud.objects.divHorsePanel)
+        await pages[0].waitForSelector(breedingAndStud.objects.selectMate.cardOffsprings)
+        const offspring = await pages[0].$$(breedingAndStud.objects.selectMate.cardOffsprings)
+        expect(offspring.length).toBe(Number(res))
+        res = await offspring[0].getAttribute('href')
+        const [tabs] = await Promise.all([
+          browserContext.waitForEvent('page'),
+          await offspring[0].click()
+        ])
+        await tabs.waitForLoadState();
+        pages = tabs.context().pages();
+        expect(pages[1].url()).toContain(res)
+      }
     });
 
     xit('ZED-141 - Offspring is showing `Your Colt has no offsprings yet` when the horse has no descendant/offspring horses associated', async () => {
