@@ -65,6 +65,7 @@ class BreedingAndStud {
       txtStudFeeBox: (id: number) => `(//div[@class='price-input']//div)[${id}]`,
       lblZedGen: (id: number) => `(//div[@class='properties-content'])[${id}]/div[1]/span[1]`,
       lblBreedType: (id: number) => `(//div[@class='properties-content'])[${id}]/div[1]/span[2]`,
+      lblBloodline: (id: number) => `(//div[@class='properties-content'])[${id}]/div[2]/div[2]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
