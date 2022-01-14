@@ -90,8 +90,12 @@ class BreedingAndStud {
       lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
       btnSelect : '(//div[@class="actions"]//button)[1]',
       txtStudHorseName: '.stud-content > .overline-text',
+      txtAvgWin: (id: number) => `(//div[@class='subheader-text-white'])[${id}]`,
       cardParents: '.horse-family-card.parent',
       cardOffsprings: '.horse-family-card.undefined',
+      txtNoOffspring: "[class='offspring-prompt']",
+      btnBreed: '.dedicate-horse > div > button',
+      btnLoadMore: '.more-offspring-button'
     } ,
   };
 
@@ -127,12 +131,12 @@ class BreedingAndStud {
     return result
   }
 
-  async getHorseWithOffspring(id: number): Promise<any> {
-    let res: any = await this.page.click(this.objects.lstHorses(id), { timeout: 10000 }).catch(() => null)
+  async getHorseWithOffspring(startId: number): Promise<any> {
+    let res: any = await this.page.click(this.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
     if (res !== null) {
       res = await this.page.innerText(this.objects.lblPanelValue(9))
       if (res === '0')
-        return await this.getHorseWithOffspring(id + 1)
+        return await this.getHorseWithOffspring(startId + 1)
     }
     return res
   }
