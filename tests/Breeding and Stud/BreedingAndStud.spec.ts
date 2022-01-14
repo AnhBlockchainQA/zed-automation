@@ -553,6 +553,7 @@ describe('Breeding And Stud', () => {
       await windows.waitForLoadState();
       pages = windows.context().pages();
       await pages[1].bringToFront()
+      await pages[1].waitForTimeout(1000)
       await pages[1].click(auth.objects.BTN_METAMASK_CANCEL, { force: true })
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
@@ -675,54 +676,75 @@ describe('Breeding And Stud', () => {
 
     it('ZED-137 - Offspring is showing the Parents of a Horse', async () => {
       let res = await breedingAndStud.getHorseWithOffspring(1)
-      if (res) {
-        await pages[0].click(breedingAndStud.objects.divHorsePanel)
-        res = await pages[0].waitForSelector(breedingAndStud.objects.selectMate.cardOffsprings)
-        const parent = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
-        const [tabs] = await Promise.all([
-          browserContext.waitForEvent('page'),
-          await res.click()
-        ])
-        await tabs.waitForLoadState();
-        pages = tabs.context().pages();
-        await pages[1].waitForSelector(breedingAndStud.objects.selectMate.cardParents)
-        res = await pages[1].$$(breedingAndStud.objects.selectMate.cardParents)
-        const parents = await pages[1].$$(breedingAndStud.objects.selectMate.cardParents)
-        let match = false
-        for (const p of parents) {
-          res = await p.innerText()
-          if (res.includes(parent)) {
-            match = true
-            break
-          }
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.cardOffsprings)
+      const parent = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
+      const [tabs] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await res.click()
+      ])
+      await tabs.waitForLoadState();
+      pages = tabs.context().pages();
+      await pages[1].waitForSelector(breedingAndStud.objects.cardParents)
+      res = await pages[1].$$(breedingAndStud.objects.cardParents)
+      const parents = await pages[1].$$(breedingAndStud.objects.cardParents)
+      let match = false
+      for (const p of parents) {
+        res = await p.innerText()
+        if (res.includes(parent)) {
+          match = true
+          break
         }
-        expect(match).toBeTruthy()
       }
+      await pages[1].close()
+      expect(match).toBeTruthy()
     });
 
     xit('ZED-138 - Offspring is showing the Average wins percentage even when just shows the Parents of the Horse', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-139 - Offspring is showing the Average Win percentage of the offspring of the horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-139 - Offspring is showing the Average Win percentage of the offspring of the horse', async () => {
+      let res = await breedingAndStud.getHorseWithOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.txtAvgWin(2))
+      res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
+      const cards = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+      let totalRaces = 0
+      let totalWins = 0
+      for (const c of cards) {
+        const [tabs] = await Promise.all([
+          browserContext.waitForEvent('page'),
+          await c.click()
+        ])
+        await tabs.waitForLoadState();
+        pages = tabs.context().pages();
+        const races = await pages[1].waitForSelector(breedingAndStud.objects.lblCareerValue(1))
+        totalRaces += Number(await races.innerText())
+        const wins = await pages[1].innerText(breedingAndStud.objects.lblCareerValue(2))
+        totalWins += Number(wins.split('/')[0])
+        await pages[1].close()
+      }
+      expect((totalWins / totalRaces * 100).toFixed(2)).toBe(res)
     });
 
     it('ZED-140 - Offspring is showing the descendant/offspring horses in a styled card and the user is able to click/redirect to horse details.', async () => {
       let res = await breedingAndStud.getHorseWithOffspring(1)
       if (!res) return
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
-      await pages[0].waitForSelector(breedingAndStud.objects.selectMate.cardOffsprings)
-      const offspring = await pages[0].$$(breedingAndStud.objects.selectMate.cardOffsprings)
-      expect(offspring.length).toBe(Number(res))
-      res = await offspring[0].getAttribute('href')
+      await pages[0].waitForSelector(breedingAndStud.objects.cardOffsprings)
+      const offspring = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+      res = await offspring[0].innerText()
       const [tabs] = await Promise.all([
         browserContext.waitForEvent('page'),
         await offspring[0].click()
       ])
       await tabs.waitForLoadState();
       pages = tabs.context().pages();
-      expect(pages[1].url()).toContain(res)
+      let osProfileName = await pages[1].waitForSelector(breedingAndStud.objects.lblHorseHeader)
+      expect(res).toContain(await osProfileName.innerText())
     });
 
     xit('ZED-141 - Offspring is showing `Your Colt has no offsprings yet` when the horse has no descendant/offspring horses associated', async () => {
@@ -748,7 +770,6 @@ describe('Breeding And Stud', () => {
     xit('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
-
   });
 
   describe('Horse Profile', () => {

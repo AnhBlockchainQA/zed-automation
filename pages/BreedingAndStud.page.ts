@@ -41,6 +41,13 @@ class BreedingAndStud {
     lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`,
+    txtAvgWin: (id: number) => `(//div[@class='subheader-text-white'])[${id}]`,
+    txtOffspringCount: '.offspring-count',
+    cardParents: '.horse-family-card.parent',
+    cardOffsprings: '.horse-family-card.undefined',
+    txtNoOffspring: "[class='offspring-prompt']",
+    btnBreed: '.dedicate-horse > div > button',
+    btnLoadMore: '.more-offspring-button',
     btnStableFilterOptions: '.filters-btn',
     ddlStudSortBy: '(//div[contains(@class,\'z-select__value-container z-select__value-container--has-value\')])[2]',
     ddlStudSortByRecentlyListed: '//div[text()=\'Recently Listed\']',
@@ -88,13 +95,7 @@ class BreedingAndStud {
       lblSelectedFemaleNm: '(//div[@class="female-content selected"]//div)[1]',
       lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
       btnSelect : '(//div[@class="actions"]//button)[1]',
-      txtStudHorseName: '.stud-content > .overline-text',
-      txtAvgWin: (id: number) => `(//div[@class='subheader-text-white'])[${id}]`,
-      cardParents: '.horse-family-card.parent',
-      cardOffsprings: '.horse-family-card.undefined',
-      txtNoOffspring: "[class='offspring-prompt']",
-      btnBreed: '.dedicate-horse > div > button',
-      btnLoadMore: '.more-offspring-button'
+      txtStudHorseName: '.stud-content > .overline-text'
     } ,
   };
 
@@ -136,6 +137,16 @@ class BreedingAndStud {
       res = await this.page.innerText(this.objects.lblPanelValue(9))
       if (res === '0')
         return await this.getHorseWithOffspring(startId + 1)
+    }
+    return res
+  }
+
+  async getHorseWithNoOffspring(startId: number): Promise<any> {
+    let res: any = await this.page.click(this.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+    if (res !== null) {
+      res = await this.page.innerText(this.objects.lblPanelValue(9))
+      if (res !== '0')
+        return await this.getHorseWithNoOffspring(startId + 1)
     }
     return res
   }
