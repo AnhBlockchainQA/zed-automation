@@ -25,7 +25,7 @@ class Authorization {
     BTN_METAMASK_CONNECT: "text='Connect'",
     BTN_METAMASK_SIGN: "text='Sign'",
     BTN_METAMASK_CONFIRM: "//button[text()='Confirm']",
-    BTN_METAMASK_CANCEL: "text='Cancel'",
+    BTN_METAMASK_CANCEL: "//button[text()='Cancel']",
     BTN_NAV_START: '//div[contains(text(),\'start\')]',
     BTN_MODAL_METAMASK_LOGIN: '#login-modal .login-options .metamask-login',
     IMG_WALLET_ICON: "//div[@class='right']/following-sibling::img[1]",
