@@ -734,8 +734,29 @@ describe('Breeding And Stud', () => {
       expect((totalWins / totalRaces * 100).toFixed(2)).toBe(res)
     });
 
-    xit('ZED-139 - Offspring is showing the Average Win percentage of the offspring of the horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-139 - Offspring is showing the Average Win percentage of the offspring of the horse', async () => {
+      let res = await breedingAndStud.getHorseWithOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.txtAvgWin(2))
+      res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
+      const cards = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+      let totalRaces = 0
+      let totalWins = 0
+      for (const c of cards) {
+        const [tabs] = await Promise.all([
+          browserContext.waitForEvent('page'),
+          await c.click()
+        ])
+        await tabs.waitForLoadState();
+        pages = tabs.context().pages();
+        const races = await pages[1].waitForSelector(breedingAndStud.objects.lblCareerValue(1))
+        totalRaces += Number(await races.innerText())
+        const wins = await pages[1].innerText(breedingAndStud.objects.lblCareerValue(2))
+        totalWins += Number(wins.split('/')[0])
+        await pages[1].close()
+      }
+      expect((totalWins / totalRaces * 100).toFixed(2)).toBe(res)
     });
 
     it('ZED-140 - Offspring is showing the descendant/offspring horses in a styled card and the user is able to click/redirect to horse details.', async () => {
