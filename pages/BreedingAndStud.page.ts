@@ -41,7 +41,7 @@ class BreedingAndStud {
     lblProfileValue: (id: number) => `((//*[contains(@class, 'xs')])//following-sibling::div/*)[${id}]`,
     lblCareerProperty: (id: number) => `.career-property:nth-child(${id}) .overline-text`,
     lblCareerValue: (id: number) => `.career-property:nth-child(${id}) .primary-text`,
-    txtAvgWin: (id: number) => `(//div[@class='subheader-text-white'])[${id}]`,
+    txtAvgWin: '.subheader-text-white',
     txtOffspringCount: '.offspring-count',
     cardParents: '.horse-family-card.parent',
     cardOffsprings: '.horse-family-card.undefined',

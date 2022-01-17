@@ -477,14 +477,13 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].innerText(breedingAndStud.objects.lblHorseName)).not.toBe('')
       expect(await pages[0].innerText(breedingAndStud.objects.lblPanelDate)).not.toBe('')
       const link = await pages[0].getAttribute(breedingAndStud.objects.lblPanelLink, 'href')
-      const [windows] = await Promise.all([
+      const [tabs] = await Promise.all([
         browserContext.waitForEvent('page'),
         await pages[0].click(breedingAndStud.objects.lblPanelLink)
       ]);
-      await windows.waitForLoadState();
-      pages = windows.context().pages();
-      expect(await pages[1].url()).toBe(link)
-      await pages[0].bringToFront()
+      pages = tabs.context().pages();
+      await pages[1].waitForURL(link)
+      await pages[1].close()
       expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(1))).toBe('GEN')
       expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(2))).toBe('BLOODLINE')
       expect(await pages[0].innerText(breedingAndStud.objects.lblPanelInfo(3))).toBe('GENDER')
@@ -589,8 +588,6 @@ describe('Breeding And Stud', () => {
       ]);
       await windows.waitForLoadState();
       pages = windows.context().pages();
-      await pages[1].bringToFront()
-      await pages[1].waitForTimeout(1000)
       await pages[1].click(auth.objects.BTN_METAMASK_CANCEL, { force: true })
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
@@ -721,8 +718,9 @@ describe('Breeding And Stud', () => {
         browserContext.waitForEvent('page'),
         await res.click()
       ])
-      await tabs.waitForLoadState();
-      pages = tabs.context().pages();
+      await tabs.waitForLoadState()
+      pages = tabs.context().pages()
+      await pages[1].bringToFront()
       await pages[1].waitForSelector(breedingAndStud.objects.cardParents)
       res = await pages[1].$$(breedingAndStud.objects.cardParents)
       const parents = await pages[1].$$(breedingAndStud.objects.cardParents)
@@ -747,9 +745,10 @@ describe('Breeding And Stud', () => {
         browserContext.waitForEvent('page'),
         await res.click()
       ])
-      await tabs.waitForLoadState();
-      pages = tabs.context().pages();
-      res = await pages[1].waitForSelector(breedingAndStud.objects.txtAvgWin(1))
+      await tabs.waitForLoadState()
+      pages = tabs.context().pages()
+      await pages[1].bringToFront()
+      res = await pages[1].waitForSelector(breedingAndStud.objects.txtAvgWin)
       res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
       const cards = await pages[1].$$(breedingAndStud.objects.cardParents)
       let totalRaces = 0
@@ -759,8 +758,9 @@ describe('Breeding And Stud', () => {
           browserContext.waitForEvent('page'),
           await c.click()
         ])
-        await tabs.waitForLoadState();
-        pages = tabs.context().pages();
+        await tabs.waitForLoadState()
+        pages = tabs.context().pages()
+        await pages[2].bringToFront()
         const races = await pages[2].waitForSelector(breedingAndStud.objects.lblCareerValue(1))
         totalRaces += Number(await races.innerText())
         const wins = await pages[2].innerText(breedingAndStud.objects.lblCareerValue(2))
@@ -775,8 +775,10 @@ describe('Breeding And Stud', () => {
       let res = await breedingAndStud.getHorseWithOffspring(1)
       if (!res) return
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
-      res = await pages[0].waitForSelector(breedingAndStud.objects.txtAvgWin(2))
-      res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
+      await pages[0].waitForSelector(breedingAndStud.objects.txtAvgWin)
+      res = await pages[0].$$(breedingAndStud.objects.txtAvgWin)
+      const id = res.length - 1
+      res = await res[id].innerText().then((t: string) => (Number(t.replace('%', ''))).toFixed(2))
       const cards = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
       let totalRaces = 0
       let totalWins = 0
@@ -785,8 +787,9 @@ describe('Breeding And Stud', () => {
           browserContext.waitForEvent('page'),
           await c.click()
         ])
-        await tabs.waitForLoadState();
-        pages = tabs.context().pages();
+        await tabs.waitForLoadState()
+        pages = tabs.context().pages()
+        await pages[1].bringToFront()
         const races = await pages[1].waitForSelector(breedingAndStud.objects.lblCareerValue(1))
         totalRaces += Number(await races.innerText())
         const wins = await pages[1].innerText(breedingAndStud.objects.lblCareerValue(2))
@@ -809,6 +812,7 @@ describe('Breeding And Stud', () => {
       ])
       await tabs.waitForLoadState();
       pages = tabs.context().pages();
+      await pages[1].bringToFront()
       let osProfileName = await pages[1].waitForSelector(breedingAndStud.objects.lblHorseHeader)
       expect(res).toContain(await osProfileName.innerText())
     });
@@ -817,8 +821,16 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-142 - Offspring is showing the `Breed` button when the colt has no offsprings yet and allows to redirect to the action.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-142 - Offspring is showing the `Breed` button when the colt has no offsprings yet and allows to redirect to the action.', async () => {
+      let res = await breedingAndStud.getHorseWithNoOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.lblHorseHeader)
+      res = await res.innerText()
+      await pages[0].click(breedingAndStud.objects.btnBreed)
+      await pages[0].waitForURL('**/select-mate')
+      const horseAtStud = await pages[0].innerText(breedingAndStud.objects.selectMate.txtStudHorseName)
+      expect(horseAtStud).toContain(res)
     });
 
     xit('ZED-143 - Offspring is showing `Unable to Bree` if the horse does not have at least one month of born.', async () => {
