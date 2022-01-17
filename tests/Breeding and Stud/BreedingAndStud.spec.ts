@@ -381,8 +381,23 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-213 - Breeding Horse Details Panel shown the Horse TIME LEFT', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-213 - Breeding Horse Details Panel shown the Horse TIME LEFT', async () => {
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1));
+      await pages[0].waitForTimeout(1000);
+      expect(await pages[0].$$(breedingAndStud.objects.studList.timeLeftValue)).not.toEqual(null);
+      const timeLeftValue = await pages[0].innerText(breedingAndStud.objects.studList.timeLeftValue);
+      let timeUnit = timeLeftValue.split(" ");
+      if (timeUnit.length === 3) {
+        expect(timeUnit[0]).toContain("d");
+        expect(timeUnit[1]).toContain("h");
+        expect(timeUnit[2]).toContain("m");
+      } else if (timeUnit.length === 2) {
+        expect(timeUnit[0]).toContain("h");
+        expect(timeUnit[1]).toContain("m");
+      } else {
+        expect(timeUnit[0]).toContain("m");
+      }
     });
 
     it('ZED-214 - Breeding Horse Details Panel shown the Horse STUD FEE in a box close to the SELECT MATE button', async () => {

@@ -60,6 +60,7 @@ class BreedingAndStud {
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
+      timeLeftValue: '(//div[@class=\'time\']//div)[2]',
       lblStableValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[2]/div[1]`,
       lblHorseNmValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[1]`,
       lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
