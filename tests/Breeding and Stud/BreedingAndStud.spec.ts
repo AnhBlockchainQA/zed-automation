@@ -331,12 +331,12 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
       await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
-      const filterHorseCount= await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
       for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
-      const lblBloodline=await pages[0].innerText(breedingAndStud.objects.studList.lblBloodline(horseRow))
+      const lblBloodline = await pages[0].innerText(breedingAndStud.objects.studList.lblBloodline(horseRow))
       expect(['Nakamoto', 'Szabo', 'Finney' ,'Buterin'].findIndex(v => v === lblBloodline)).not.toBe(-1)
       await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
       }
