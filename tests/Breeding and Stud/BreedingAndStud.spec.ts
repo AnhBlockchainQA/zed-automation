@@ -701,8 +701,37 @@ describe('Breeding And Stud', () => {
       expect(match).toBeTruthy()
     });
 
-    xit('ZED-138 - Offspring is showing the Average wins percentage even when just shows the Parents of the Horse', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-138 - Offspring is showing the Average wins percentage even when just shows the Parents of the Horse', async () => {
+      let res = await breedingAndStud.getHorseWithOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.cardOffsprings)
+      const [tabs] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await res.click()
+      ])
+      await tabs.waitForLoadState();
+      pages = tabs.context().pages();
+      res = await pages[1].waitForSelector(breedingAndStud.objects.txtAvgWin(1))
+      res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
+      const cards = await pages[1].$$(breedingAndStud.objects.cardParents)
+      let totalRaces = 0
+      let totalWins = 0
+      for (const c of cards) {
+        const [tabs] = await Promise.all([
+          browserContext.waitForEvent('page'),
+          await c.click()
+        ])
+        await tabs.waitForLoadState();
+        pages = tabs.context().pages();
+        const races = await pages[2].waitForSelector(breedingAndStud.objects.lblCareerValue(1))
+        totalRaces += Number(await races.innerText())
+        const wins = await pages[2].innerText(breedingAndStud.objects.lblCareerValue(2))
+        totalWins += Number(wins.split('/')[0])
+        await pages[2].close()
+      }
+      await pages[1].close()
+      expect((totalWins / totalRaces * 100).toFixed(2)).toBe(res)
     });
 
     it('ZED-139 - Offspring is showing the Average Win percentage of the offspring of the horse', async () => {
