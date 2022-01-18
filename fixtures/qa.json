@@ -14,6 +14,7 @@
   "card_number": "371449635398431",
   "card_expiration_date": "08/25",
   "card_cvc": "324",
+  "withdraw_Inprogress_message":"Transaction In Progress",
   "account_list": {
     "first_account": {
       "email": "zedrun@1secmail.net",
@@ -53,6 +54,7 @@
   },
   "amount": "0.01",
   "Eth_amount": "0.001",
+  "withdraw_amount":"0.0001",
   "percent_discount": {
     "code": "anh_test",
     "value": "90.0%",
