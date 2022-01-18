@@ -449,7 +449,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
+      const res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!res) return
       await pages[0].waitForSelector(stable.objects.stableList.panelHorseName)
       const horseAtStable = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
@@ -512,7 +513,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
+      const res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!res) return
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -531,7 +533,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
+      const res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!res) return
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -545,31 +548,11 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
-      // function to find the first horse in the list that is in race
-      const getFirstHorseInRace = async (startId?: number): Promise<any> => {
-        // index starts from 1
-        if (!startId)
-          startId = 1
-        let i: number;
-        await pages[0].waitForSelector(stable.objects.stableList.horse(startId))
-        const horseList = await pages[0].$$(stable.objects.stableList.HorseList)
-        for (i = startId; i <= horseList.length; i++) {
-          const badge = await pages[0].innerText(stable.objects.stableList.horseBadge(i))
-          if (badge === 'IN RACE') {
-            await horseList[i - 1].click()
-            const res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink, { timeout: 2000 }).catch(() => null)
-            expect(res).toBeNull()
-            return
-          }
-        }
-        if (!await pages[0].isVisible(stable.objects.btnOwnARacehorse)) {
-          await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)')
-          return await getFirstHorseInRace(i)
-        }
-        return
-      }
       await pages[0].click(stable.objects.imgStableProfile)
-      await getFirstHorseInRace()
+      let res = await stable.getHorseInStable(1, stable.getFirstHorseInRace)
+      if (!res) return
+      res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink, { timeout: 2000 }).catch(() => null)
+      expect(res).toBeNull()
     });
 
     it('ZED-65 - Stud Services allows the user to cancel the stub Service process', async () => {
@@ -578,7 +561,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstAvailableHorse()).not.toBeFalsy()
+      const res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!res) return
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
       await pages[0].click(stable.objects.breedForm.txt1Day)
@@ -594,22 +578,21 @@ describe('Breeding And Stud', () => {
 
     it('ZED-66 - Stud Service allows the user to set a name to a horse after is being generated', async () => {
       await pages[0].click(stable.objects.imgStableProfile)
-      let res = await stable.getFirstNewborn()
-      if (res) {
-        const name = 'Test Horse ' + (Math.random() + 1).toString(36).substring(7)
-        await pages[0].click(stable.objects.newbornForm.btnConfirm)
-        await pages[0].fill(stable.objects.newbornForm.tfName, name)
-        await pages[0].click(stable.objects.newbornForm.lblConfirm)
-        await pages[0].click(stable.objects.newbornForm.btnConfirm)
-        await pages[0].waitForTimeout(2000)
-        await pages[0].fill(stable.objects.txtStableSearch, name)
-        await pages[0].waitForSelector(stable.objects.loader)
-        await pages[0].waitForSelector(stable.objects.stableList.txtHorseName(1))
-        await pages[0].waitForTimeout(2000)
-        res = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, 
-          stable.objects.stableList.txtHorseName(1))
-        expect(res).toBe(name)
-      }
+      let res = await stable.getHorseInStable(1, stable.getFirstNewborn)
+      if (!res) return
+      const name = 'Test Horse ' + (Math.random() + 1).toString(36).substring(7)
+      await pages[0].click(stable.objects.newbornForm.btnConfirm)
+      await pages[0].fill(stable.objects.newbornForm.tfName, name)
+      await pages[0].click(stable.objects.newbornForm.lblConfirm)
+      await pages[0].click(stable.objects.newbornForm.btnConfirm)
+      await pages[0].waitForTimeout(2000)
+      await pages[0].fill(stable.objects.txtStableSearch, name)
+      await pages[0].waitForSelector(stable.objects.loader)
+      await pages[0].waitForSelector(stable.objects.stableList.txtHorseName(1))
+      await pages[0].waitForTimeout(2000)
+      res = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, 
+        stable.objects.stableList.txtHorseName(1))
+      expect(res).toBe(name)
     });
 
     it('ZED-67 - Stud Service allows the user to transfer horse to other account after name has being assigned', async () => {
@@ -749,7 +732,7 @@ describe('Breeding And Stud', () => {
       pages = tabs.context().pages()
       await pages[1].bringToFront()
       res = await pages[1].waitForSelector(breedingAndStud.objects.txtAvgWin)
-      res = await res.innerText().then((t: any) => (Number(t.replace('%', ''))).toFixed(2))
+      res = await res.innerText().then((t: string) => (Number(t.replace('%', ''))).toFixed(2))
       const cards = await pages[1].$$(breedingAndStud.objects.cardParents)
       let totalRaces = 0
       let totalWins = 0
@@ -817,8 +800,12 @@ describe('Breeding And Stud', () => {
       expect(res).toContain(await osProfileName.innerText())
     });
 
-    xit('ZED-141 - Offspring is showing `Your Colt has no offsprings yet` when the horse has no descendant/offspring horses associated', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-141 - Offspring is showing `Your Colt has no offsprings yet` when the horse has no descendant/offspring horses associated', async () => {
+      let res = await breedingAndStud.getHorseWithNoOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.txtNoOffspring)
+      expect(await res.innerText()).toBe('Your Colt has no offspring yet')
     });
 
     it('ZED-142 - Offspring is showing the `Breed` button when the colt has no offsprings yet and allows to redirect to the action.', async () => {
@@ -1035,8 +1022,8 @@ describe('Breeding And Stud', () => {
 
     it('ZED-242 - Horse profile is being shown the BREED card option/action while the user is authenticated', async () => {
       await pages[0].click(stable.objects.imgStableProfile)
-      let res = await stable.getFirstAvailableHorse()
-      expect(res).not.toBeFalsy()
+      let res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!res) return
       res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseBreedLink).catch(() => null)
       expect(res).not.toBeNull()
     });
