@@ -154,7 +154,19 @@ describe('Wallet', () => {
     ).toContain(`GBP (British Pound)`);
   });
 
-  xit('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
-    expect('/').toBe('/');
+  it('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.BTN_SEND_ETH);
+    await pages[0].waitForTimeout(2000);
+    await pages[0].fill(wallet.objects.ETHEREUM_WALLET_ADDRESS, data.third_wallet_address);
+    await pages[0].fill(wallet.objects.ETHEREUM_INPUT_AMOUNT, data.Eth_amount);
+    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
+    await metamask.confirmEthTransfer(browserContext);
+    await pages[0].waitForTimeout(5000);
+    await pages[0].waitForSelector(wallet.objects.IMG_WITHDRAW_SUCCESS);
+    expect(await pages[0].isVisible(wallet.objects.IMG_WITHDRAW_SUCCESS)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain(data.Eth_amount)
   });
+
 });
