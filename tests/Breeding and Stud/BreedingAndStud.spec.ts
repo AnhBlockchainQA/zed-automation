@@ -69,7 +69,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
       await pages[0].click(stable.objects.filtersPanel.genderMareLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      expect(await stable.getFirstHorseInRace()).not.toBeFalsy()
+      const res = await stable.getHorseInStable(1, stable.getFirstHorseInRace)
+      if (!res) return
       await pages[0].waitForSelector(stable.objects.stableList.panelHorseName)
       const stableHorseInRace_badge = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
       await pages[0].goto('https://goerli-test.zed.run/stud')
