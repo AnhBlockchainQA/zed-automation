@@ -50,7 +50,9 @@ class Wallet {
     BTN_SEND_ETH_CONFIRM: '.actions-buttons .primary-btn',
     IMG_LOADER:'.loader-container img',
     IMG_WITHDRAW_SUCCESS:'.withdraw-success img',
-    WITHDRAW_SUCCESS_MODAL: '.send-eth-modal-content .withdraw-success'
+    WITHDRAW_SUCCESS_MODAL: '.send-eth-modal-content .withdraw-success',
+    TRANSACTION_STATUS: '.info-card-container.tx-in-process',
+    TRANSACTION_AMOUNT: '.col-6.text-right .white'
   };
 
   async getPageTitle() {
