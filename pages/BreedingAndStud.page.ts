@@ -98,7 +98,11 @@ class BreedingAndStud {
       lblSelectedFemaleNm: '(//div[@class="female-content selected"]//div)[1]',
       lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
       btnSelect : '(//div[@class="actions"]//button)[1]',
-      txtStudHorseName: '.stud-content > .overline-text'
+      txtStudHorseName: '.stud-content > .overline-text',
+      txtBoxSearchRaceHorseLogo : '//div[text()="Search a racehorse"]',
+      txtBoxSearchRaceHorse: '//div[@class="css-1g6gooi"]/div',
+      lblHorseStatus: '//div[@class="breeds-and-type"]/div[1]',
+
     } ,
   };
 

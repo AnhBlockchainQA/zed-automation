@@ -83,6 +83,7 @@ class Stable {
       gender: '//span[text()=\'GENDER\']',
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
+      genderMareLabel: '//label[text()=\'Mare\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: "text='Colt'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
@@ -173,6 +174,33 @@ class Stable {
     }
     return false
   }
+
+/* get the first female horse in the list that is:
+  1. in race
+  2. not a newborn
+  */          
+async getFirstHorseInRace(startId?: number): Promise<any> {
+  // index starts from 1
+  if (!startId)
+    startId = 1
+  let i: number;
+  await this.page.waitForSelector(this.objects.stableList.horse(startId))
+  const horseList = await this.page.$$(this.objects.stableList.HorseList)
+  for (i = startId; i <= horseList.length; i++) {
+    const newName = await this.page.$(this.objects.stableList.newName(i))
+    const badge = await this.page.innerText(this.objects.stableList.horseBadge(i))
+    if (!newName && badge === 'IN RACE') {
+      await horseList[i - 1].click()
+      return i
+    }
+  }
+  if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
+    await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+    return await this.getFirstAvailableHorse(i)
+  }
+  return false
+}
+
 }
 
 export default Stable;
