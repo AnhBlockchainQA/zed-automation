@@ -74,9 +74,18 @@ describe('Wallet', () => {
     expect('/').toBe('/');
   });
 
-  xit('ZED-133 - Wallet is allowing the user to transfer/withdraw to the address', async () => {
-    expect('/').toBe('/');
-  });
+  it('ZED-133 - Wallet is allowing the user to transfer/withdraw to the address', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].waitForSelector(wallet.objects.BTN_TRANSFER);
+    await pages[0].click(wallet.objects.BTN_TRANSFER);
+    await pages[0].waitForSelector(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON);
+    await pages[0].type(wallet.objects.TXT_TRANSFER_AMOUNT,data.withdraw_amount);
+    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON);
+    await metamask.confirmWithdrawETH(browserContext);
+    await pages[0].waitForTimeout(16000);
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_STATUS)).toContain(data.withdraw_Inprogress_message);
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_AMOUNT)).toContain(data.withdraw_amount);
+ });
 
   xit('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
     await pages[0].click(wallet.objects.BALANCE_NAV_INFO);
@@ -154,7 +163,19 @@ describe('Wallet', () => {
     ).toContain(`GBP (British Pound)`);
   });
 
-  xit('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
-    expect('/').toBe('/');
+  it('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.BTN_SEND_ETH);
+    await pages[0].waitForTimeout(2000);
+    await pages[0].fill(wallet.objects.ETHEREUM_WALLET_ADDRESS, data.third_wallet_address);
+    await pages[0].fill(wallet.objects.ETHEREUM_INPUT_AMOUNT, data.Eth_amount);
+    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
+    await metamask.confirmEthTransfer(browserContext);
+    await pages[0].waitForTimeout(5000);
+    await pages[0].waitForSelector(wallet.objects.IMG_WITHDRAW_SUCCESS);
+    expect(await pages[0].isVisible(wallet.objects.IMG_WITHDRAW_SUCCESS)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain(data.Eth_amount)
   });
+
 });

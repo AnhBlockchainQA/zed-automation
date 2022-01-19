@@ -46,6 +46,7 @@ class Stable {
       panelHorseFullStamina: '(//div[@class=\'full\'])[1]',
       panelHorseImg: '(//img[@class=\'horse-glow\'])[2]',
       panelHorseBreedLink: '.panel.open .icn-txt:nth-child(2)',
+      panelHorseTimeLeft: '.panel.open .time-left > .primary-text',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
       panelMinimize: '(//img[@class=\'open-label\'])',
     },
@@ -127,52 +128,44 @@ class Stable {
     return this.page.url();
   }
 
-  /* get the first horse in the list that is:
-  1. not in stud
-  2. not in race
-  3. not a newborn
-  */
-  async getFirstAvailableHorse(startId?: number): Promise<any> {
-    // index starts from 1
-    if (!startId)
-      startId = 1
+  async getHorseInStable(startId: number, fnCondition: (newName: any, badge: string) => Promise<boolean>): Promise<any> {
     let i: number;
-    await this.page.waitForSelector(this.objects.stableList.horse(startId))
+    const exist = await this.page.waitForSelector(this.objects.stableList.horse(startId)).catch(() => null)
+    if (!exist) return
     const horseList = await this.page.$$(this.objects.stableList.HorseList)
     for (i = startId; i <= horseList.length; i++) {
       const newName = await this.page.$(this.objects.stableList.newName(i))
       const badge = await this.page.innerText(this.objects.stableList.horseBadge(i))
-      if (!newName && badge === '') {
+      if (await fnCondition(newName, badge)) {
         await horseList[i - 1].click()
         return i
       }
     }
     if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
       await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-      return await this.getFirstAvailableHorse(i)
+      return await this.getHorseInStable(i + 1, fnCondition)
     }
-    return false
   }
 
-  async getFirstNewborn(startId?: number): Promise<any> {
-    // index starts from 1
-    if (!startId)
-      startId = 1
-    let i: number;
-    await this.page.waitForSelector(this.objects.stableList.horse(startId))
-    const horseList = await this.page.$$(this.objects.stableList.HorseList)
-    for (i = startId; i <= horseList.length; i++) {
-      const newName = await this.page.$(this.objects.stableList.newName(i))
-      if (newName != null) {
-        await newName.click()
-        return i
-      }
-    }
-    if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
-      await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-      return await this.getFirstNewborn(i)
-    }
-    return false
+  /* get the first horse in the list that is:
+  1. not in stud
+  2. not in race
+  3. not a newborn
+  */
+  async getFirstAvailHorse(newName: any, badge: string) {
+    return !newName && badge === ''
+  }
+
+  async getFirstHorseInStud(newName: any, badge: string) {
+    return !newName && badge === 'IN STUD'
+  }
+
+  async getFirstHorseInRace(newName: any, badge: string) {
+    return !newName && badge === 'IN RACE'
+  }
+
+  async getFirstNewborn(newName: any) {
+    return newName !== null
   }
 
 /* get the first female horse in the list that is:

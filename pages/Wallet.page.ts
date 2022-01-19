@@ -42,7 +42,17 @@ class Wallet {
     DDL_DISPLAY_CURRENCY_GB_POUNDS: '//*[contains(text(),\'GBP (British Pound)\')]',
     lbl_navbar_balance: '//div[text()=\'balance\']',
     lbl_navbar_balance_amount: '//div[@class=\'right\']//b[1]',
-    collapsePanelWalletSetting: '//span[text()=\'Wallet Settings\']'
+    collapsePanelWalletSetting: '//span[text()=\'Wallet Settings\']',
+    BTN_SEND_ETH: '.send-eth-button',
+    ETHEREUM_WALLET_ADDRESS: '.wallet-input .my-3.z-input',
+    ETHEREUM_INPUT_AMOUNT: '.amount-input .amount-input-container .z-input',
+    BTN_TRANSFER_ETH: '.send-eth-modal-content .primary-btn',
+    BTN_SEND_ETH_CONFIRM: '.actions-buttons .primary-btn',
+    IMG_LOADER:'.loader-container img',
+    IMG_WITHDRAW_SUCCESS:'.withdraw-success img',
+    WITHDRAW_SUCCESS_MODAL: '.send-eth-modal-content .withdraw-success',
+    TRANSACTION_STATUS: '.info-card-container.tx-in-process',
+    TRANSACTION_AMOUNT: '.col-6.text-right .white'
   };
 
   async getPageTitle() {
