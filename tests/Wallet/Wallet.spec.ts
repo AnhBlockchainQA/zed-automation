@@ -45,10 +45,12 @@ describe('Wallet', () => {
     expect(await pages[0].innerText(wallet.objects.lbl_navbar_balance_amount)).toContain(`$`);
   });
 
-  xit('ZED-92 - Wallet is shown to the user the Address', async () => {
-    expect(
-        await pages[0].innerText(wallet.objects.B_WETH_BALANCE),
-    ).toContain(`GBP (British Pound)`);
+  it('ZED-92 - Wallet is shown to the user the Address', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].waitForSelector(wallet.objects.COPY_ADDRESS);
+    expect(await pages[0].isVisible(wallet.objects.ADDRESS),).toBe(true);
+    await pages[0].waitForTimeout(5000);
+    await metamask.validateAddressInPolygonscan(browserContext);
   });
 
   it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
