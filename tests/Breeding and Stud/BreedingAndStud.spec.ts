@@ -824,12 +824,30 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-144 - Offspring is showing the `Time Left: 22 Day(s)` to put the horse in Stud or Breed.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-144 - Offspring is showing the `Time Left: 22 Day(s)` to put the horse in Stud or Breed.', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      let res = await stable.getHorseInStable(1, stable.getFirstHorseInStud)
+      if (!res) return
+      res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseTimeLeft)
+      res = await res.innerText()
+      switch (res.length) {
+        case 3:
+          expect(res[0].endsWith('d')).toBeTruthy()
+          expect(res[1].endsWith('h')).toBeTruthy()
+          expect(res[2].endsWith('m')).toBeTruthy()
+          break;
+        case 2:
+          expect(res[0].endsWith('h')).toBeTruthy()
+          expect(res[1].endsWith('m')).toBeTruthy()
+          break;
+        case 1:
+          expect(res[0].endsWith('m')).toBeTruthy()
+          break;
+      }
     });
 
     xit('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);    
     });
 
     xit('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
@@ -929,7 +947,7 @@ describe('Breeding And Stud', () => {
       else {
         expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('Owner')
         const nameAtProfile = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)
-        expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
+        expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBe(0)
       }
     });
 
