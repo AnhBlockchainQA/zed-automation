@@ -110,8 +110,12 @@ describe('Breeding And Stud', () => {
       expect(horseList.length).toBeGreaterThanOrEqual(0)
     });
 
-    xit('ZED-187 - Breeding is loading RACEHORSES through infinite scroll loading/pagination', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-187 - Breeding is loading RACEHORSES through infinite scroll loading/pagination', async () => {
+      let previousHeight = await pages[0].evaluate('document.body.scrollHeight');
+      await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)');
+      await pages[0].waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      expect(await pages[0].isVisible(breedingAndStud.objects.lblFooter)).toBe(true);
     });
 
     it('ZED-188 - Breeding is showing the FILTER collapse panel after hit on the FILTERS button', async () => {
