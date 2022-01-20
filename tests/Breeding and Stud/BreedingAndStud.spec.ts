@@ -892,8 +892,16 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);    
     });
 
-    xit('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
+      let res = await breedingAndStud.getHorseWithOffspring(1)
+      if (!res) return
+      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      res = await pages[0].waitForSelector(breedingAndStud.objects.lblProfileValue(6))
+      res = await res.innerText()
+      let text = res + ' of ' + res
+      if (Number(res) > 6)
+        text = '6 of ' + res
+      expect(await pages[0].innerText(breedingAndStud.objects.txtOffspringCount)).toBe(text)
     });
   });
 

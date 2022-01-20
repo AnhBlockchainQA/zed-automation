@@ -1,4 +1,5 @@
 import { Page } from 'playwright';
+import Authorization from '../pages/Authorization.page';
 
 class Marketplace {
   public page: Page;
@@ -18,6 +19,11 @@ class Marketplace {
 
   async getPageUrl() {
     return this.page.url();
+  }
+
+  async buyHorse() {
+    console.log('fffffffff = ' + Authorization.obj().BTN_METAMASK_SIGN)
+    // await this.page.click()
   }
 
 }
