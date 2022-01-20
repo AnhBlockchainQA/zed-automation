@@ -59,7 +59,9 @@ class Wallet {
     BTN_COPY_ADDRESS: '.eth-address-container .primary-btn',
     CLOSE_ICON: '.close-icon[icon=\'[object Object]\']',
     BTN_NETWORK_SELECTOR: '.select-container .ETHEREUM',
-    INPUT_POLYGON_NETWORK:`//div[text()='Polygon Network']`
+    INPUT_POLYGON_NETWORK:`//div[text()='Polygon Network']`,
+    COPY_ADDRESS: '.address-container .copy-icon',
+    ADDRESS: '.address-container .address'
   };
 
   async getPageTitle() {
