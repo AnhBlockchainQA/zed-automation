@@ -62,8 +62,33 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-70 - Breeding Services does not show Female horses on breeding modal when are running in a race or has being registered to one', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-70 - Breeding Services does not show Female horses on breeding modal when are running in a race or has being registered to one', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+      await pages[0].click(stable.objects.filtersPanel.genderMareLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      const res = await stable.getHorseInStable(1, stable.getFirstHorseInRace)
+      if (!res) return
+      await pages[0].waitForSelector(stable.objects.stableList.panelHorseName)
+      const stableHorseInRace_badge = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
+      await pages[0].goto('https://goerli-test.zed.run/stud')
+      await pages[0].waitForLoadState()
+      await pages[0].waitForTimeout(2000)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.btnSelectFemale) 
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 30000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.txtBoxSearchRaceHorseLogo)
+      await pages[0].type(breedingAndStud.objects.selectMate.txtBoxSearchRaceHorse,stableHorseInRace_badge)
+      const horseInRace = await pages[0].innerText(breedingAndStud.objects.selectMate.lblHorseStatus)
+      await pages[0].click(breedingAndStud.objects.selectMate.lblFemaleHorse(1))
+      expect (await pages[0].isVisible(breedingAndStud.objects.selectMate.btnSelect)).toBe(false)
+      expect(horseInRace).toContain('In race')
+
     });
 
     xit('ZED-71 - Breeding Service does not allow the user to put bred male horse younger than 1 month in stud (From stable or direct horse page)', async () => {

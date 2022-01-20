@@ -84,6 +84,7 @@ class Stable {
       gender: '//span[text()=\'GENDER\']',
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
+      genderMareLabel: '//label[text()=\'Mare\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: "text='Colt'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
