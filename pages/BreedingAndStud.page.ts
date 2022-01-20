@@ -77,6 +77,7 @@ class BreedingAndStud {
       lblBloodline: (id: number) => `(//div[@class='properties-content'])[${id}]/div[2]/div[2]`,
       lblStableOwner: (id: number) => `(//div[contains(@class,'primary-text green')])[${id}]`,
       lblCareerValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[6]/div[2]`,
+      lblWinRateValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[7]/div[2]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
