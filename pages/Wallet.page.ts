@@ -49,10 +49,17 @@ class Wallet {
     BTN_TRANSFER_ETH: '.send-eth-modal-content .primary-btn',
     BTN_SEND_ETH_CONFIRM: '.actions-buttons .primary-btn',
     IMG_LOADER:'.loader-container img',
-    IMG_WITHDRAW_SUCCESS:'.withdraw-success img',
-    WITHDRAW_SUCCESS_MODAL: '.send-eth-modal-content .withdraw-success',
+    IMG_TRANSACTION_SUCCESS:'.withdraw-success img',
+    TRANSACTION_SUCCESS_MODAL: '.send-eth-modal-content .withdraw-success',
     TRANSACTION_STATUS: '.info-card-container.tx-in-process',
-    TRANSACTION_AMOUNT: '.col-6.text-right .white'
+    TRANSACTION_AMOUNT: '.col-6.text-right .white',
+    BTN_TOPUP: '.topup-btn',
+    TOP_UP_OPTION_RECEIVE: `//h4[text()='Receive']`,
+    TOP_UP_OPTION_BUY:`//h4[text()='Buy']`,
+    BTN_COPY_ADDRESS: '.eth-address-container .primary-btn',
+    CLOSE_ICON: '.close-icon[icon=\'[object Object]\']',
+    BTN_NETWORK_SELECTOR: '.select-container .ETHEREUM',
+    INPUT_POLYGON_NETWORK:`//div[text()='Polygon Network']`
   };
 
   async getPageTitle() {
