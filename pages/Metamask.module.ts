@@ -45,7 +45,9 @@ class Metamask {
     BTN_TRANSFER_ETH_TOPOLYGON_CONFIRM: '.buttons-row button.primary-btn',
     BTN_POLYGON_DEPOSIT_SIGN: '.signature-request-footer .btn-primary.button',
     ADDRESS: '.address-container .address',
-    ADDRESS_IN_POLYGONSCAN: `//span[contains(@class,'text-size-address text-secondary')]`
+    ADDRESS_IN_POLYGONSCAN: `//span[contains(@class,'text-size-address text-secondary')]`,
+    BTN_CONFIRM_BUY_RACEHORSE: '.confirm-btn.primary-btn',
+    BTN_TRANSACTION_SIGN: '.signature-request-footer button.btn-primary'
   };
 
   async init() {
@@ -165,7 +167,23 @@ class Metamask {
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
   }
-  
+
+  async confirmBuyRaceHorse(browserContext: BrowserContext){
+    const [windows] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    await this.pages[0].click(this.objects.BTN_CONFIRM_BUY_RACEHORSE),
+    ]);
+    await windows.waitForLoadState();
+    this.pages = windows.context().pages();
+    await this.pages[1].bringToFront();
+    await this.pages[1].waitForTimeout(5000);
+    await this.pages[1].waitForSelector(this.objects.BTN_TRANSACTION_SIGN);
+    await this.pages[1].click(this.objects.BTN_TRANSACTION_SIGN);
+    await this.pages[1].waitForTimeout(1000);
+    await this.pages[0].bringToFront();
+    await this.pages[0].waitForTimeout(15000);
+  }
+
   async validateAddressInPolygonscan(browserContext: BrowserContext){
     [this.tabs] = await Promise.all([
     browserContext.waitForEvent('page'),

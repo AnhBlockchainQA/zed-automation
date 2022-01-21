@@ -14,13 +14,29 @@ class Marketplace {
     marketPlaceContent: '.marketplace-content .masonry-tiles',
     marketPlaceFilter: '.filters-btn .filters',
     horseDetailsCard: '.horse-details.horse-sale-card',
-    firsthorseCard: `(//div[@role='gridcell']/following-sibling::div)[1]`,
+    firstHorseCard: `(//div[@role='gridcell']/following-sibling::div)[1]`,
     buyButton: '.details-block .buy-btn.primary-btn',
-    priceBadge: '.details-block .price-badge'
+    priceBadge: '.details-block .price-badge',
+    btnBuyConfirm: '.buy-confirm-modal .confirm-btn.primary-btn',
+    btnConfirm: '.confirm-btn.primary-btn',
+    paymentSuccessModal: '.buy-confirm-modal .payment-successful',
+    goToTheStable:`//h4[text()='Go To Stable']`,
+    btnDone: `//button[text()='Done']`,
+    successImage:'.cc-successful-img .generic-card',
+    horseName:'.details-block.horse-name',
+    horseWETHPrice: '.grey-text.my-2',
+    horsePriceInBuySuccessModal: '.buy-modal-content .horse-price',
+    horseNameInBuySuccessModal:'.buy-modal-content .horse-name'
   };
 
   async getPageTitle() {
     return await this.page.title();
+  }
+
+  async getNumberFromText(value: string){
+    const regex = /[\d|,|.|e|E|\+]+/g;
+    let amount = value.match(regex);
+    return amount;
   }
 
   async getPageUrl() {
