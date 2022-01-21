@@ -16,6 +16,7 @@
   "card_cvc": "324",
   "withdraw_Inprogress_message":"Transaction In Progress",
   "copy_address_btn_text":"Address copied",
+  "buy_btn_text":"Buy Racehorse",
   "account_list": {
     "first_account": {
       "email": "zedrun@1secmail.net",
