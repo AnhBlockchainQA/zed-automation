@@ -422,8 +422,19 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-210 - Breeding Horse Details Panel shown the Horse WIN RATE', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-210 - Breeding Horse Details Panel shown the Horse WIN RATE', async () => {
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
+      for(let horseRow = 1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const winRateValue = await pages[0].innerText(breedingAndStud.objects.studList.lblWinRateValue(horseRow))
+      expect(winRateValue).toContain('%')
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      }
     });
 
     xit('ZED-211 - Breeding Horse Details Panel shown the Horse OFFSPRING', async () => {
