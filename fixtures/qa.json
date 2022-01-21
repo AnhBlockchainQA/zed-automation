@@ -15,6 +15,7 @@
   "card_expiration_date": "08/25",
   "card_cvc": "324",
   "withdraw_Inprogress_message":"Transaction In Progress",
+  "copy_address_btn_text":"Address copied",
   "account_list": {
     "first_account": {
       "email": "zedrun@1secmail.net",
@@ -69,6 +70,7 @@
   "first_wallet_address": "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
   "second_wallet_address": "0x48205801D243fd53cfB10c4edb441C5d2f6EA7e1",
   "third_wallet_address": "0x64c0f191418C63925B7dE4AcD7Fbb5419Ed8fc02",
+  "wallet_address": "0x2E6d2d60d398c49C7768DAA61aCF17e4936aaC9B",
   "metamask_login": {
     "public_address": "0x9948cF6323C5A41Bf673ADb9CFDf9D39a65A86e1",
     "signed_message": "0x84ac739515f569cb0cc85924ee219ba6cf040d550bd6c0db36d3938ea69bb1da41eb8677b503494f9285eccb004637cb8406964fac330b22685af06aae1bc8f91c"

@@ -56,6 +56,7 @@ class BreedingAndStud {
     ddlStudSortByLowestPrice: '//div[text()=\'Lowest Price\']',
     lblBreeding: '//h2[text()="breeding"]',
     lblFilterCount: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]/following-sibling::div[1]',
+    lblFooter:'(//div[@class="footer-content"])[1]',
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
@@ -76,7 +77,7 @@ class BreedingAndStud {
       lblBloodline: (id: number) => `(//div[@class='properties-content'])[${id}]/div[2]/div[2]`,
       lblStableOwner: (id: number) => `(//div[contains(@class,'primary-text green')])[${id}]`,
       lblRaceValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[5]/div[2]`,
-      
+      lblCareerValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[6]/div[2]`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
@@ -100,7 +101,11 @@ class BreedingAndStud {
       lblSelectedFemaleNm: '(//div[@class="female-content selected"]//div)[1]',
       lblFemaleHorse: (id: number) => `(//div[@class="primary-text name"])[${id}]`,
       btnSelect : '(//div[@class="actions"]//button)[1]',
-      txtStudHorseName: '.stud-content > .overline-text'
+      txtStudHorseName: '.stud-content > .overline-text',
+      txtBoxSearchRaceHorseLogo : '//div[text()="Search a racehorse"]',
+      txtBoxSearchRaceHorse: '//div[@class="css-1g6gooi"]/div',
+      lblHorseStatus: '//div[@class="breeds-and-type"]/div[1]',
+
     } ,
   };
 

@@ -45,10 +45,12 @@ describe('Wallet', () => {
     expect(await pages[0].innerText(wallet.objects.lbl_navbar_balance_amount)).toContain(`$`);
   });
 
-  xit('ZED-92 - Wallet is shown to the user the Address', async () => {
-    expect(
-        await pages[0].innerText(wallet.objects.B_WETH_BALANCE),
-    ).toContain(`GBP (British Pound)`);
+  it('ZED-92 - Wallet is shown to the user the Address', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].waitForSelector(wallet.objects.COPY_ADDRESS);
+    expect(await pages[0].isVisible(wallet.objects.ADDRESS),).toBe(true);
+    await pages[0].waitForTimeout(5000);
+    await metamask.validateAddressInPolygonscan(browserContext);
   });
 
   it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
@@ -70,8 +72,33 @@ describe('Wallet', () => {
     );
   });
 
-  xit('ZED-132 - Wallet is allowing the user to transfer/deposit to the address', async () => {
-    expect('/').toBe('/');
+  it('ZED-132 - Wallet is allowing the user to transfer/deposit to the address', async () => {
+    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].waitForSelector(wallet.objects.BTN_TOPUP);
+    await pages[0].click(wallet.objects.BTN_TOPUP);
+    await pages[0].waitForTimeout(3000);
+    expect(await pages[0].isVisible(wallet.objects.TOP_UP_OPTION_RECEIVE)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.TOP_UP_OPTION_BUY)).toBe(true);
+    await pages[0].click(wallet.objects.TOP_UP_OPTION_RECEIVE);
+    await pages[0].waitForSelector(wallet.objects.BTN_COPY_ADDRESS);
+    await pages[0].click(wallet.objects.BTN_COPY_ADDRESS);
+    expect(await pages[0].innerText(wallet.objects.BTN_COPY_ADDRESS)).toContain(data.copy_address_btn_text);
+    await pages[0].click(wallet.objects.CLOSE_ICON);
+    await pages[0].waitForSelector(wallet.objects.BTN_SEND_ETH);
+    await pages[0].click(wallet.objects.BTN_SEND_ETH);
+    await pages[0].waitForSelector(wallet.objects.ETHEREUM_WALLET_ADDRESS);
+    const copiedAddress = await pages[0].evaluate(async () => await navigator.clipboard.readText())
+    await pages[0].fill(wallet.objects.ETHEREUM_WALLET_ADDRESS, copiedAddress);
+    await pages[0].click(wallet.objects.BTN_NETWORK_SELECTOR);
+    await pages[0].click(wallet.objects.INPUT_POLYGON_NETWORK);
+    await pages[0].fill(wallet.objects.ETHEREUM_INPUT_AMOUNT, data.Eth_amount);
+    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
+    await metamask.confirmDepositETH(browserContext);
+    await pages[0].waitForTimeout(5000);
+    await pages[0].waitForSelector(wallet.objects.IMG_TRANSACTION_SUCCESS);
+    expect(await pages[0].isVisible(wallet.objects.IMG_TRANSACTION_SUCCESS)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain(data.Eth_amount)
   });
 
   it('ZED-133 - Wallet is allowing the user to transfer/withdraw to the address', async () => {
@@ -172,10 +199,10 @@ describe('Wallet', () => {
     await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
     await metamask.confirmEthTransfer(browserContext);
     await pages[0].waitForTimeout(5000);
-    await pages[0].waitForSelector(wallet.objects.IMG_WITHDRAW_SUCCESS);
-    expect(await pages[0].isVisible(wallet.objects.IMG_WITHDRAW_SUCCESS)).toBe(true);
-    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain('Success')
-    expect(await pages[0].innerText(wallet.objects.WITHDRAW_SUCCESS_MODAL)).toContain(data.Eth_amount)
+    await pages[0].waitForSelector(wallet.objects.IMG_TRANSACTION_SUCCESS);
+    expect(await pages[0].isVisible(wallet.objects.IMG_TRANSACTION_SUCCESS)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain(data.Eth_amount)
   });
 
 });

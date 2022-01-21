@@ -84,6 +84,7 @@ class Stable {
       gender: '//span[text()=\'GENDER\']',
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
+      genderMareLabel: '//label[text()=\'Mare\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: "text='Colt'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
@@ -127,7 +128,7 @@ class Stable {
     return this.page.url();
   }
 
-  async getHorseInStable(startId: number, fnCondition: (newName: any, badge: string) => Promise<boolean>): Promise<any> {
+  async getHorseInStable(startId: number, fnCondition: (newName: any, badge: string) => boolean): Promise<any> {
     let i: number;
     const exist = await this.page.waitForSelector(this.objects.stableList.horse(startId)).catch(() => null)
     if (!exist) return
@@ -135,7 +136,7 @@ class Stable {
     for (i = startId; i <= horseList.length; i++) {
       const newName = await this.page.$(this.objects.stableList.newName(i))
       const badge = await this.page.innerText(this.objects.stableList.horseBadge(i))
-      if (await fnCondition(newName, badge)) {
+      if (fnCondition(newName, badge)) {
         await horseList[i - 1].click()
         return i
       }
@@ -151,19 +152,19 @@ class Stable {
   2. not in race
   3. not a newborn
   */
-  async getFirstAvailHorse(newName: any, badge: string) {
+  getFirstAvailHorse(newName: any, badge: string) {
     return !newName && badge === ''
   }
 
-  async getFirstHorseInStud(newName: any, badge: string) {
+  getFirstHorseInStud(newName: any, badge: string) {
     return !newName && badge === 'IN STUD'
   }
 
-  async getFirstHorseInRace(newName: any, badge: string) {
+  getFirstHorseInRace(newName: any, badge: string) {
     return !newName && badge === 'IN RACE'
   }
 
-  async getFirstNewborn(newName: any) {
+  getFirstNewborn(newName: any) {
     return newName !== null
   }
 }

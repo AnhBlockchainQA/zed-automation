@@ -42,7 +42,10 @@ class Metamask {
     BTN_METAMASK_ETH_TRANSFER_CONFIRM: 'button[data-testid=\'page-container-footer-next\']',
     CONFIRM_CURRENCY_SUMMARY: '.confirm-page-container-summary__title-text .currency-display-component',
     BTN_SEND_ETH_CONFIRM: '.actions-buttons .primary-btn',
-    BTN_TRANSFER_ETH_TOPOLYGON_CONFIRM: '.buttons-row button.primary-btn'
+    BTN_TRANSFER_ETH_TOPOLYGON_CONFIRM: '.buttons-row button.primary-btn',
+    BTN_POLYGON_DEPOSIT_SIGN: '.signature-request-footer .btn-primary.button',
+    ADDRESS: '.address-container .address',
+    ADDRESS_IN_POLYGONSCAN: `//span[contains(@class,'text-size-address text-secondary')]`
   };
 
   async init() {
@@ -145,6 +148,34 @@ class Metamask {
     await this.pages[1].waitForTimeout(1000);
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
+  }
+
+  async confirmDepositETH(browserContext: BrowserContext){
+    const [windows] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    await this.pages[0].click(this.objects.BTN_SEND_ETH_CONFIRM),
+    ]);
+    await windows.waitForLoadState();
+    this.pages = windows.context().pages();
+    await this.pages[1].bringToFront();
+    await this.pages[1].waitForTimeout(5000);
+    await this.pages[1].waitForSelector(this.objects.BTN_POLYGON_DEPOSIT_SIGN);
+    await this.pages[1].click(this.objects.BTN_POLYGON_DEPOSIT_SIGN);
+    await this.pages[1].waitForTimeout(1000);
+    await this.pages[0].bringToFront();
+    await this.pages[0].waitForTimeout(15000);
+  }
+  
+  async validateAddressInPolygonscan(browserContext: BrowserContext){
+    [this.tabs] = await Promise.all([
+    browserContext.waitForEvent('page'),
+    await this.pages[0].click(this.objects.ADDRESS),
+    ]);
+    await this.tabs.waitForLoadState();
+    this.pages = this.tabs.context().pages();
+    await this.pages[1].bringToFront();
+    expect(await this.pages[1].isVisible(this.objects.ADDRESS_IN_POLYGONSCAN)).toBe(true);
+    expect(await this.pages[1].innerText(this.objects.ADDRESS_IN_POLYGONSCAN)).toContain(data.wallet_address);
   }
 
   async close(pages: any, driver: BrowserContext) {

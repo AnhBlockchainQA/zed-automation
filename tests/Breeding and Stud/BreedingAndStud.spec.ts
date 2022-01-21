@@ -62,8 +62,33 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-70 - Breeding Services does not show Female horses on breeding modal when are running in a race or has being registered to one', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-70 - Breeding Services does not show Female horses on breeding modal when are running in a race or has being registered to one', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      await pages[0].click(stable.objects.btnStableFilterOptions)
+      await pages[0].click(stable.objects.filtersPanel.gender)
+      await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+      await pages[0].click(stable.objects.filtersPanel.genderMareLabel)
+      await pages[0].waitForSelector(stable.objects.loader)
+      const res = await stable.getHorseInStable(1, stable.getFirstHorseInRace)
+      if (!res) return
+      await pages[0].waitForSelector(stable.objects.stableList.panelHorseName)
+      const stableHorseInRace_badge = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
+      await pages[0].goto('https://goerli-test.zed.run/stud')
+      await pages[0].waitForLoadState()
+      await pages[0].waitForTimeout(2000)
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].waitForTimeout(1000)
+      await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.btnSelectFemale) 
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 30000 })
+      await pages[0].click(breedingAndStud.objects.selectMate.txtBoxSearchRaceHorseLogo)
+      await pages[0].type(breedingAndStud.objects.selectMate.txtBoxSearchRaceHorse,stableHorseInRace_badge)
+      const horseInRace = await pages[0].innerText(breedingAndStud.objects.selectMate.lblHorseStatus)
+      await pages[0].click(breedingAndStud.objects.selectMate.lblFemaleHorse(1))
+      expect (await pages[0].isVisible(breedingAndStud.objects.selectMate.btnSelect)).toBe(false)
+      expect(horseInRace).toContain('In race')
+
     });
 
     xit('ZED-71 - Breeding Service does not allow the user to put bred male horse younger than 1 month in stud (From stable or direct horse page)', async () => {
@@ -110,8 +135,12 @@ describe('Breeding And Stud', () => {
       expect(horseList.length).toBeGreaterThanOrEqual(0)
     });
 
-    xit('ZED-187 - Breeding is loading RACEHORSES through infinite scroll loading/pagination', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-187 - Breeding is loading RACEHORSES through infinite scroll loading/pagination', async () => {
+      let previousHeight = await pages[0].evaluate('document.body.scrollHeight');
+      await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)');
+      await pages[0].waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
+      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+      expect(await pages[0].isVisible(breedingAndStud.objects.lblFooter)).toBe(true);
     });
 
     it('ZED-188 - Breeding is showing the FILTER collapse panel after hit on the FILTERS button', async () => {
@@ -365,8 +394,21 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-209 - Breeding Horse Details Panel shown the Horse CAREER', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-209 - Breeding Horse Details Panel shown the Horse CAREER', async () => {
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
+      for(let horseRow = 1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const careerValue = await pages[0].innerText(breedingAndStud.objects.studList.lblCareerValue(horseRow))
+      const careerStat = careerValue.split('/')
+      expect(careerStat.length).toBe(3)
+      careerStat.forEach((val: String) => expect(Number(val)).toBeGreaterThanOrEqual(0));
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      }
     });
 
     xit('ZED-210 - Breeding Horse Details Panel shown the Horse WIN RATE', async () => {
@@ -835,12 +877,45 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
     });
 
-    xit('ZED-144 - Offspring is showing the `Time Left: 22 Day(s)` to put the horse in Stud or Breed.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-144 - Offspring is showing the `Time Left: 22 Day(s)` to put the horse in Stud or Breed.', async () => {
+      await pages[0].click(stable.objects.imgStableProfile)
+      let res = await stable.getHorseInStable(1, stable.getFirstHorseInStud)
+      if (!res) return
+      res = await pages[0].waitForSelector(stable.objects.stableList.panelHorseTimeLeft)
+      res = await res.innerText()
+      switch (res.length) {
+        case 3:
+          expect(res[0].endsWith('d')).toBeTruthy()
+          expect(res[1].endsWith('h')).toBeTruthy()
+          expect(res[2].endsWith('m')).toBeTruthy()
+          break;
+        case 2:
+          expect(res[0].endsWith('h')).toBeTruthy()
+          expect(res[1].endsWith('m')).toBeTruthy()
+          break;
+        case 1:
+          expect(res[0].endsWith('m')).toBeTruthy()
+          break;
+      }
     });
 
-    xit('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
+      const checkLoadMoreButton = async (startId: number): Promise<any> => {
+        let res = await pages[0].click(breedingAndStud.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+        if (res === null) return
+        res = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(9))
+        if (Number(res) < 7)
+          return await checkLoadMoreButton(startId + 1)
+        await pages[0].click(breedingAndStud.objects.divHorsePanel)
+        await pages[0].waitForSelector(breedingAndStud.objects.cardOffsprings)
+        res = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+        expect(res.length).toBe(6)
+        await pages[0].click(breedingAndStud.objects.btnLoadMore)
+        await pages[0].waitForTimeout(2000)
+        res = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+        expect(res.length).toBeGreaterThan(6)
+      }
+      await checkLoadMoreButton(1)
     });
 
     xit('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
@@ -940,7 +1015,7 @@ describe('Breeding And Stud', () => {
       else {
         expect(await pages[0].innerText(breedingAndStud.objects.lblOwner)).toBe('Owner')
         const nameAtProfile = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtProfile)
-        expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBeTruthy()
+        expect(nameAtStud.localeCompare(nameAtProfile, undefined, { sensitivity: 'accent' })).toBe(0)
       }
     });
 
