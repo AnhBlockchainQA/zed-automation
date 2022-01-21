@@ -888,8 +888,23 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);    
+    it('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
+      const checkLoadMoreButton = async (startId: number): Promise<any> => {
+        let res = await pages[0].click(breedingAndStud.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+        if (res === null) return
+        res = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(9))
+        if (Number(res) < 7)
+          return await checkLoadMoreButton(startId + 1)
+        await pages[0].click(breedingAndStud.objects.divHorsePanel)
+        await pages[0].waitForSelector(breedingAndStud.objects.cardOffsprings)
+        res = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+        expect(res.length).toBe(6)
+        await pages[0].click(breedingAndStud.objects.btnLoadMore)
+        await pages[0].waitForTimeout(2000)
+        res = await pages[0].$$(breedingAndStud.objects.cardOffsprings)
+        expect(res.length).toBeGreaterThan(6)
+      }
+      await checkLoadMoreButton(1)
     });
 
     xit('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
