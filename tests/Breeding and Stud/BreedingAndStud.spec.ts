@@ -437,8 +437,28 @@ describe('Breeding And Stud', () => {
       }
     });
 
-    xit('ZED-211 - Breeding Horse Details Panel shown the Horse OFFSPRING', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-211 - Breeding Horse Details Panel shown the Horse OFFSPRING', async () => {
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
+      for(let horseRow = 2; horseRow<= parseInt(horseCount[1]); horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const offspringValue = await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringValue(horseRow))
+      if(parseInt(offspringValue) === 0 ){
+        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('3 of 3 left')
+      }else if(parseInt(offspringValue) === 1 ){
+        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('2 of 3 left')
+      } 
+       else if(parseInt(offspringValue) === 2 ){
+        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('1 of 3 left')
+      }else{
+        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('0 of 3 left')
+      }
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
+      }
     });
 
     it('ZED-212 - Breeding Horse Details Panel shown the Horse OWNER STABLE', async () => {
