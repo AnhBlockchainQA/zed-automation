@@ -1,5 +1,4 @@
 import { Page } from 'playwright';
-import Authorization from '../pages/Authorization.page';
 
 class Marketplace {
   public page: Page;
