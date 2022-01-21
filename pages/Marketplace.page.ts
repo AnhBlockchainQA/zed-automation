@@ -21,11 +21,6 @@ class Marketplace {
     return this.page.url();
   }
 
-  async buyHorse() {
-    console.log('fffffffff = ' + Authorization.obj().BTN_METAMASK_SIGN)
-    // await this.page.click()
-  }
-
 }
 
 export default Marketplace;
