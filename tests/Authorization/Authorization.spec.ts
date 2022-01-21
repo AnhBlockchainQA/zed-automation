@@ -38,38 +38,38 @@ describe('Authorization', () => {
     await pages[0].close();
     await pages[2].bringToFront();
     await pages[2].reload();
-    await pages[2].click(auth.objects.BTN_METAMASK_GET_STARTED);
-    await pages[2].click(auth.objects.BTN_METAMASK_IMPORT_WALLET);
-    await pages[2].click(auth.objects.BTN_METAMASK_I_AGREE);
+    await pages[2].click(auth.objects.btnMetamakGetStarted);
+    await pages[2].click(auth.objects.btnMetamaskImportWallet);
+    await pages[2].click(auth.objects.btnMetamaskIAgree);
     await pages[2].type(
-      auth.objects.TEXT_AREA_METAMASK_PASSPHRASE,
+      auth.objects.textAreaMetamaskPassphrase,
       data.seed_phrase,
     );
-    await pages[2].type(auth.objects.TXT_METAMASK_PASSWORD, data.password);
+    await pages[2].type(auth.objects.txtMetamaskPassword, data.password);
     await pages[2].type(
-      auth.objects.TXT_METAMASK_PASSWORD_CONFIRM,
+      auth.objects.txtMetamaskPasswordConfirm,
       data.password,
     );
-    await pages[2].click(auth.objects.CHECKBOX_METAMASK_AGREE);
-    await pages[2].click(auth.objects.BTN_METAMASK_IMPORT);
-    await pages[2].click(auth.objects.BTN_METAMASK_ALL_DONE);
-    await pages[2].click(auth.objects.BTN_METAMASK_CLOSE);
-    await pages[2].click(auth.objects.BTN_METAMASK_NETWORK_NAME);
-    await pages[2].click(auth.objects.BTN_METAMASK_CHOOSE_NETWORK);
+    await pages[2].click(auth.objects.checkboxMetamaskAgree);
+    await pages[2].click(auth.objects.btnMetamaskImport);
+    await pages[2].click(auth.objects.btnMetamaskAllDone);
+    await pages[2].click(auth.objects.btnMetamaskClose);
+    await pages[2].click(auth.objects.btnMetamaskNetworkName);
+    await pages[2].click(auth.objects.btnMetamaskChooseNetwork);
     await pages[1].bringToFront();
     await pages[1].goto(data.baseUrl);
     await pages[1].waitForLoadState();
-    await pages[1].click(auth.objects.BTN_NAV_START);
+    await pages[1].click(auth.objects.btnNavStart);
     const [windows] = await Promise.all([
       browserContext.waitForEvent('page'),
-      await page.click(auth.objects.BTN_MODAL_METAMASK_LOGIN),
+      await page.click(auth.objects.btnModalMetamaskLogin),
     ]);
     await windows.waitForLoadState();
     pages = windows.context().pages();
     await pages[2].bringToFront();
-    await pages[2].click(auth.objects.BTN_METAMASK_NEXT);
-    await pages[2].click(auth.objects.BTN_METAMASK_CONNECT);
-    await pages[2].click(auth.objects.BTN_METAMASK_SIGN);
+    await pages[2].click(auth.objects.btnMetamaskNext);
+    await pages[2].click(auth.objects.btnMetamaskConnect);
+    await pages[2].click(auth.objects.btnMetamaskSign);
     await pages[0].bringToFront();
     await pages[1].close();
   });
