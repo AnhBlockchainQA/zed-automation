@@ -33,16 +33,35 @@ describe('Marketplace', () => {
   });
 
   it('ZED-8 - Marketplace is showing the Horse List at Sale', async () => {
-    await pages[0].waitForSelector(marketplace.objects.firsthorseCard)
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
     await pages[0].waitForTimeout(3000);
     expect(await pages[0].isVisible(marketplace.objects.marketPlaceFilter)).toBe(true);
     expect(await pages[0].isVisible(marketplace.objects.marketPlaceContent)).toBe(true);
     expect(await pages[0].isVisible(marketplace.objects.horseDetailsCard)).toBe(true);
-    await pages[0].click(marketplace.objects.firsthorseCard);
+    await pages[0].click(marketplace.objects.firstHorseCard);
     await pages[0].waitForSelector(marketplace.objects.buyButton)
     expect(await pages[0].isVisible(marketplace.objects.buyButton)).toBe(true);
     expect(await pages[0].isVisible(marketplace.objects.priceBadge)).toBe(true);
     expect(await pages[0].innerText(marketplace.objects.buyButton)).toContain(data.buy_btn_text);
+  });
+
+  it('ZED-9 Marketplace allows the user to buy a Horse using ETH', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].waitForTimeout(5000);
+    await pages[0].click(marketplace.objects.firstHorseCard);
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let horseName = await pages[0].innerText(marketplace.objects.horseName);
+    await pages[0].click(marketplace.objects.buyButton);
+    await pages[0].waitForSelector(marketplace.objects.btnBuyConfirm);
+    await pages[0].click(marketplace.objects.btnBuyConfirm);
+    await pages[0].waitForTimeout(1000);
+    await metamask.confirmBuyRaceHorse(browserContext);
+    await pages[0].waitForTimeout(5000);
+    expect(await pages[0].isVisible(marketplace.objects.successImage)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.btnDone)).toBe(true);
+    expect(await pages[0].innerText(marketplace.objects.paymentSuccessModal)).toContain(data.transaction_success_message);
+    expect(await pages[0].innerText(marketplace.objects.horseNameInBuySuccessModal)).toContain(horseName);
+    await pages[0].click(marketplace.objects.btnDone);
   });
 
 });
