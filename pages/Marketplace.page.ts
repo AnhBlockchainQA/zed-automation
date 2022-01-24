@@ -26,7 +26,17 @@ class Marketplace {
     horseName:'.details-block.horse-name',
     horseWETHPrice: '.grey-text.my-2',
     horsePriceInBuySuccessModal: '.buy-modal-content .horse-price',
-    horseNameInBuySuccessModal:'.buy-modal-content .horse-name'
+    horseNameInBuySuccessModal:'.buy-modal-content .horse-name',
+    
+    filtersPanel: {
+      genderColt: '(//label[text()="Colt"])[2]',
+      genderColtCheckBox: '#id-Colt',
+    } ,
+
+    horseCardsPanel: {
+      horsesCards: '//div[@class="marketplace-content "]/div/div',
+      horseGenGenderBloodlineValue : (id: number) => `//div[@role='gridcell'][${id}]/div/div[2]/p[1]`
+    }
   };
 
   async getPageTitle() {
