@@ -81,7 +81,7 @@ class BreedingAndStud {
       lblWinRateValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[7]/div[2]`,
       lblOffspringValue: (id: number) => `(//div[@class='properties-content'])[${id}]/div[8]/div[2]/div[1]`,
       lblOffspringLeft: (id: number) => `(//div[@class='properties-content'])[${id}]/div[8]/div[2]/div[2]`,
-    
+      lblCoatValue: (id: number) => ` (//div[@class='properties-content'])[${id}]/div[4]/span`,
     },
     filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',

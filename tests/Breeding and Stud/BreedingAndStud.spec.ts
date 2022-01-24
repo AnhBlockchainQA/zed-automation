@@ -53,12 +53,12 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount= await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const genderValueTxt= await pages[0].innerText(breedingAndStud.objects.studList.lblGenderValue(horseRow))
       expect(['Colt', 'Stallion'].findIndex(v => v === genderValueTxt)).not.toBe(-1)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
@@ -76,7 +76,7 @@ describe('Breeding And Stud', () => {
       await pages[0].goto('https://goerli-test.zed.run/stud')
       await pages[0].waitForLoadState()
       await pages[0].waitForTimeout(2000)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(2))
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
       await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
@@ -101,7 +101,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-120 - Breeding Service allows the user to select a valid FEMALE', async () => {
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(2))
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
       await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
@@ -333,7 +333,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-203 - Breeding allows the user to open collapsed panel after click on a horse of the list.', async () => {  
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(2))
       await pages[0].waitForTimeout(1000)
       expect(await pages[0].isVisible(breedingAndStud.objects.studList.panelMinimize(1))).toBe(true);
       await pages[0].click(breedingAndStud.objects.studList.panelMinimize(1))
@@ -345,14 +345,14 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount= await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const zedGen=await pages[0].innerText(breedingAndStud.objects.studList.lblZedGen(horseRow))
       expect(zedGen).toContain('Z')
       const breedType=await pages[0].innerText(breedingAndStud.objects.studList.lblBreedType(horseRow))
       expect(['Genesis', 'Legendary', 'Exclusive' ,'Elite', 'Cross', 'Pacer'].findIndex(v => v === breedType)).not.toBe(-1)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
@@ -362,12 +362,12 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const lblBloodline = await pages[0].innerText(breedingAndStud.objects.studList.lblBloodline(horseRow))
       expect(['Nakamoto', 'Szabo', 'Finney' ,'Buterin'].findIndex(v => v === lblBloodline)).not.toBe(-1)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
@@ -377,17 +377,28 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const genderValue = await pages[0].innerText(breedingAndStud.objects.studList.lblGenderValue(horseRow))
       expect(['Colt', 'Stallion'].findIndex(v => v === genderValue)).not.toBe(-1)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
-    xit('ZED-207 - Breeding Horse Details Panel shown the Horse COAT', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    it('ZED-207 - Breeding Horse Details Panel shown the Horse COAT', async () => {
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
+      const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+      await pages[0].waitForTimeout(1000)
+      const coatValue = await pages[0].innerText(breedingAndStud.objects.studList.lblCoatValue(horseRow))
+      expect(coatValue).not.toBe('')
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
+      }
     });
 
     it('ZED-208 - Breeding Horse Details Panel shown the Horse RACES', async () => {
@@ -396,12 +407,12 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const raceValue = await pages[0].innerText(breedingAndStud.objects.studList.lblRaceValue(horseRow))
       expect(parseInt(raceValue)).toBeGreaterThanOrEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow))
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1))
       }
     });
 
@@ -411,14 +422,14 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow = 1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow = 2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const careerValue = await pages[0].innerText(breedingAndStud.objects.studList.lblCareerValue(horseRow))
       const careerStat = careerValue.split('/')
       expect(careerStat.length).toBe(3)
       careerStat.forEach((val: String) => expect(Number(val)).toBeGreaterThanOrEqual(0));
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
@@ -428,12 +439,12 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow = 1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow = 2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const winRateValue = await pages[0].innerText(breedingAndStud.objects.studList.lblWinRateValue(horseRow))
       expect(winRateValue).toContain('%')
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
@@ -467,18 +478,18 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const filterHorseCount= await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
-      for(let horseRow =1; horseRow<= parseInt(horseCount[1]); horseRow++){
+      for(let horseRow =2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const lblStableOwner = await pages[0].innerText(breedingAndStud.objects.studList.lblStableOwner(horseRow))
       expect(lblStableOwner).not.toBe('')
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
     it('ZED-213 - Breeding Horse Details Panel shown the Horse TIME LEFT', async () => {
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1));
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(2));
       await pages[0].waitForTimeout(1000);
       expect(await pages[0].$$(breedingAndStud.objects.studList.timeLeftValue)).not.toEqual(null);
       const timeLeftValue = await pages[0].innerText(breedingAndStud.objects.studList.timeLeftValue);
@@ -498,18 +509,18 @@ describe('Breeding And Stud', () => {
     it('ZED-214 - Breeding Horse Details Panel shown the Horse STUD FEE in a box close to the SELECT MATE button', async () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
-      for(let horseRow=1 ;horseRow<= horsesList.length;horseRow++){
+      for(let horseRow=2 ;horseRow<= horsesList.length;horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
       const studFee=await pages[0].innerText(breedingAndStud.objects.studList.txtStudFeeBox(horseRow))
       expect(parseInt(studFee.substring(1,studFee.length))).toBeGreaterThanOrEqual(1)
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow)) 
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
     });
 
     it('ZED-215 - Breeding Horse Details Panel shown SELECT MATE button and perform the action after a click', async () => {
       expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(1))
+      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(2))
       await pages[0].waitForTimeout(1000)
       await pages[0].click(breedingAndStud.objects.studList.btnSelectMate(1))
       await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
