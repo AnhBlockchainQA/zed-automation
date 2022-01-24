@@ -38,7 +38,7 @@ describe('Breeding And Stud', () => {
   });
 
   xit('ZED-XX - Not Implemented Yet', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
 
@@ -92,11 +92,11 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-71 - Breeding Service does not allow the user to put bred male horse younger than 1 month in stud (From stable or direct horse page)', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     xit('ZED-72 - Breeding Service does not allow 1-month minimum breeding for Genesis horses', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     it('ZED-120 - Breeding Service allows the user to select a valid FEMALE', async () => {
@@ -115,19 +115,19 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-121 - Breeding Service allows the user to select a valid STUD', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     xit('ZED-122 - Breeding Service allows the user to BUY COVER', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     xit('ZED-123 - Breeding Service allows the user to cancel the transaction of BUY COVER', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     xit('ZED-124 - Breeding service revokes the BUY COVER transaction is the HORSE is not in STUD', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     it('ZED-186 - Breeding is showing the list of RACEHORSES', async () => {
@@ -215,7 +215,7 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-194 - Breeding allows the user to SORT by Expired Soon', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     it('ZED-195 - Breeding allows the user to SORT by Highest Price', async () => {
@@ -470,6 +470,7 @@ describe('Breeding And Stud', () => {
       }
       await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
+
     });
 
     it('ZED-212 - Breeding Horse Details Panel shown the Horse OWNER STABLE', async () => {
@@ -530,7 +531,7 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-216 - Breeding Horse Details Panel shown the - icon as a close link action of the collapse section and closes it after a click', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
   });
@@ -568,7 +569,7 @@ describe('Breeding And Stud', () => {
       ]);
       await tabs.waitForLoadState();
       pages = tabs.context().pages();
-      await pages[1].click(auth.objects.BTN_METAMASK_SIGN)
+      await pages[1].click(auth.objects.btnMetamaskSign)
       const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden' }).catch(() => true)
       expect(loading).toBeNull()
       await pages[0].goto('https://goerli-test.zed.run/stud')
@@ -650,7 +651,7 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-63 - Stud Service is not showing the racehorse on the Stud Service page in the expiration after 1-3-7 days', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     it('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {
@@ -678,7 +679,7 @@ describe('Breeding And Stud', () => {
       ]);
       await windows.waitForLoadState();
       pages = windows.context().pages();
-      await pages[1].click(auth.objects.BTN_METAMASK_CANCEL, { force: true })
+      await pages[1].click(auth.objects.btnMetamaskCancel, { force: true })
       expect(await pages[0].waitForSelector(stable.objects.breedForm.txtMetaMaskError)).not.toBeNull()
     });
 
@@ -735,7 +736,7 @@ describe('Breeding And Stud', () => {
         ]);
         await tabs.waitForLoadState();
         pages = tabs.context().pages();
-        await pages[1].click(auth.objects.BTN_METAMASK_SIGN)
+        await pages[1].click(auth.objects.btnMetamaskSign)
         const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden' }).catch(() => true)
         expect(loading).toBeNull()
         await pages[0].click(stable.objects.btnUserMenu)
@@ -927,7 +928,7 @@ describe('Breeding And Stud', () => {
     });
 
     xit('ZED-143 - Offspring is showing `Unable to Bree` if the horse does not have at least one month of born.', async () => {
-      expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
     it('ZED-144 - Offspring is showing the `Time Left: 22 Day(s)` to put the horse in Stud or Breed.', async () => {

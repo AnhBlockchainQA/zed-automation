@@ -23,8 +23,8 @@ describe('Wallet', () => {
     await pages[0].goto(data.baseUrl);
     await pages[0].waitForLoadState();
     await pages[0].waitForTimeout(3000);
-    await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
-    await pages[0].click(wallet.objects.DIV_BALANCE_PART)
+    await pages[0].waitForSelector(wallet.objects.divBalancePart)
+    await pages[0].click(wallet.objects.divBalancePart)
   });
 
   afterAll(async () => {
@@ -34,175 +34,175 @@ describe('Wallet', () => {
   });
 
   it('ZED-90 - Wallet is shown to the user', async () => {
-    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance)).toBe(true);
-    expect(await pages[0].isVisible(wallet.objects.lbl_navbar_balance_amount)).toBe(true);
-    expect(await pages[0].isVisible(wallet.objects.IMG_WALLET_ICON)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lblNavbarBalance)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.lblNavbarBalanceAmount)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.imgWalletIcon)).toBe(true);
   });
 
   it('ZED-91 - Wallet is shown to the user the balance in `$` Dollars Currency', async () => {
-    await pages[0].waitForSelector(wallet.objects.DIV_BALANCE_PART)
-    await pages[0].click(wallet.objects.DIV_BALANCE_PART)
-    expect(await pages[0].innerText(wallet.objects.lbl_navbar_balance_amount)).toContain(`$`);
+    await pages[0].waitForSelector(wallet.objects.divBalancePart)
+    await pages[0].click(wallet.objects.divBalancePart)
+    expect(await pages[0].innerText(wallet.objects.lblNavbarBalanceAmount)).toContain(`$`);
   });
 
   it('ZED-92 - Wallet is shown to the user the Address', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    await pages[0].waitForSelector(wallet.objects.COPY_ADDRESS);
-    expect(await pages[0].isVisible(wallet.objects.ADDRESS),).toBe(true);
+    await pages[0].click(wallet.objects.imgWalletIcon);
+    await pages[0].waitForSelector(wallet.objects.copyAddress);
+    expect(await pages[0].isVisible(wallet.objects.walletAddress),).toBe(true);
     await pages[0].waitForTimeout(5000);
     await metamask.validateAddressInPolygonscan(browserContext);
   });
 
   it('ZED-93 - Wallet is shown to the user after hit the wallet icon', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.imgWalletIcon);
     expect(
-      await pages[0].isVisible(wallet.objects.DIV_WALLET_MODAL_TITLE),
+      await pages[0].isVisible(wallet.objects.walletModalTitle),
     ).toBe(true);
   });
 
   it('ZED-94 - Wallet is sidebar is closed it out after hit the X icon', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    expect(await pages[0].isVisible(wallet.objects.DIV_WALLET_MODAL_TITLE)).toBe(
+    await pages[0].click(wallet.objects.imgWalletIcon);
+    expect(await pages[0].isVisible(wallet.objects.walletModalTitle)).toBe(
       true,
     );
-    await pages[0].click(wallet.objects.IMG_CLOSE_WALLET_MODAL);
+    await pages[0].click(wallet.objects.imgCloseWalletModal);
     await pages[0].waitForTimeout(5000);
-    expect(await pages[0].isHidden(wallet.objects.DIV_WALLET_MODAL_TITLE)).toBe(
+    expect(await pages[0].isHidden(wallet.objects.walletModalTitle)).toBe(
       false
     );
   });
 
   it('ZED-132 - Wallet is allowing the user to transfer/deposit to the address', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    await pages[0].waitForSelector(wallet.objects.BTN_TOPUP);
-    await pages[0].click(wallet.objects.BTN_TOPUP);
+    await pages[0].click(wallet.objects.imgWalletIcon);
+    await pages[0].waitForSelector(wallet.objects.btnTopup);
+    await pages[0].click(wallet.objects.btnTopup);
     await pages[0].waitForTimeout(3000);
-    expect(await pages[0].isVisible(wallet.objects.TOP_UP_OPTION_RECEIVE)).toBe(true);
-    expect(await pages[0].isVisible(wallet.objects.TOP_UP_OPTION_BUY)).toBe(true);
-    await pages[0].click(wallet.objects.TOP_UP_OPTION_RECEIVE);
-    await pages[0].waitForSelector(wallet.objects.BTN_COPY_ADDRESS);
-    await pages[0].click(wallet.objects.BTN_COPY_ADDRESS);
-    expect(await pages[0].innerText(wallet.objects.BTN_COPY_ADDRESS)).toContain(data.copy_address_btn_text);
-    await pages[0].click(wallet.objects.CLOSE_ICON);
-    await pages[0].waitForSelector(wallet.objects.BTN_SEND_ETH);
-    await pages[0].click(wallet.objects.BTN_SEND_ETH);
-    await pages[0].waitForSelector(wallet.objects.ETHEREUM_WALLET_ADDRESS);
+    expect(await pages[0].isVisible(wallet.objects.topupOptionReceive)).toBe(true);
+    expect(await pages[0].isVisible(wallet.objects.topupOptionBuy)).toBe(true);
+    await pages[0].click(wallet.objects.topupOptionReceive);
+    await pages[0].waitForSelector(wallet.objects.btnCopyAddress);
+    await pages[0].click(wallet.objects.btnCopyAddress);
+    expect(await pages[0].innerText(wallet.objects.btnCopyAddress)).toContain(data.copy_address_btn_text);
+    await pages[0].click(wallet.objects.closeIcon);
+    await pages[0].waitForSelector(wallet.objects.btnSendEth);
+    await pages[0].click(wallet.objects.btnSendEth);
+    await pages[0].waitForSelector(wallet.objects.ethereumWalletAddress);
     const copiedAddress = await pages[0].evaluate(async () => await navigator.clipboard.readText())
-    await pages[0].fill(wallet.objects.ETHEREUM_WALLET_ADDRESS, copiedAddress);
-    await pages[0].click(wallet.objects.BTN_NETWORK_SELECTOR);
-    await pages[0].click(wallet.objects.INPUT_POLYGON_NETWORK);
-    await pages[0].fill(wallet.objects.ETHEREUM_INPUT_AMOUNT, data.Eth_amount);
-    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
+    await pages[0].fill(wallet.objects.ethereumWalletAddress, copiedAddress);
+    await pages[0].click(wallet.objects.btnNetworkSelector);
+    await pages[0].click(wallet.objects.inputPolygonNetwork);
+    await pages[0].fill(wallet.objects.ethereumInputAmount, data.Eth_amount);
+    await pages[0].click(wallet.objects.btnTransferEth);
     await metamask.confirmDepositETH(browserContext);
     await pages[0].waitForTimeout(5000);
-    await pages[0].waitForSelector(wallet.objects.IMG_TRANSACTION_SUCCESS);
-    expect(await pages[0].isVisible(wallet.objects.IMG_TRANSACTION_SUCCESS)).toBe(true);
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain('Success')
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain(data.Eth_amount)
+    await pages[0].waitForSelector(wallet.objects.imgTransactionSuccess);
+    expect(await pages[0].isVisible(wallet.objects.imgTransactionSuccess)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.transactionSuccessModal)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.transactionSuccessModal)).toContain(data.Eth_amount)
   });
 
   it('ZED-133 - Wallet is allowing the user to transfer/withdraw to the address', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    await pages[0].waitForSelector(wallet.objects.BTN_TRANSFER);
-    await pages[0].click(wallet.objects.BTN_TRANSFER);
-    await pages[0].waitForSelector(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON);
-    await pages[0].type(wallet.objects.TXT_TRANSFER_AMOUNT,data.withdraw_amount);
-    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON);
+    await pages[0].click(wallet.objects.imgWalletIcon);
+    await pages[0].waitForSelector(wallet.objects.btnTransfer);
+    await pages[0].click(wallet.objects.btnTransfer);
+    await pages[0].waitForSelector(wallet.objects.btnTransferEthToPolygon);
+    await pages[0].type(wallet.objects.txtTransferAmount,data.withdraw_amount);
+    await pages[0].click(wallet.objects.btnTransferEthToPolygon);
     await metamask.confirmWithdrawETH(browserContext);
     await pages[0].waitForTimeout(16000);
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_STATUS)).toContain(data.withdraw_Inprogress_message);
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_AMOUNT)).toContain(data.withdraw_amount);
+    expect(await pages[0].innerText(wallet.objects.transactionStatus)).toContain(data.withdraw_Inprogress_message);
+    expect(await pages[0].innerText(wallet.objects.transactionAmount)).toContain(data.withdraw_amount);
  });
 
   xit('ZED-134 - Wallet is showing the amount deposited into the address', async () => {
-    await pages[0].click(wallet.objects.BALANCE_NAV_INFO);
-    let account_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.B_ETH_BALANCE))
-    let account_balance_wallet = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.BALANCE_WALLET_INFO))
+    await pages[0].click(wallet.objects.balanceNavInfo);
+    let account_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.ethBalance))
+    let account_balance_wallet = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.balanceWalletInfo))
     expect(account_balance).toStrictEqual(account_balance_wallet)
-    await pages[0].click(wallet.objects.BTN_TRANSFER)
-    let init_transfer_amount = await pages[0].innerText(wallet.objects.LBL_ETH_DLS_TRANSFER_AMOUNT_IN_MODAL)
+    await pages[0].click(wallet.objects.btnTransfer)
+    let init_transfer_amount = await pages[0].innerText(wallet.objects.lblEthDlsTransferAmountInModal)
     expect(await wallet.getNumberFromText(init_transfer_amount)).toContain('0.00')
-    const _available_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.P_AVAILABLE_BALANCE_USD))
+    const _available_balance = await wallet.getNumberFromText(await pages[0].innerText(wallet.objects.availableBalanceUSD))
     expect(parseInt(<string>_available_balance?.toString())).toBeGreaterThan(0)
-    if (await pages[0].innerText(wallet.objects.LBL_ETH_TRANSFER_MODAL) === 'ETHEREUM')
-      await pages[0].type(wallet.objects.TXT_TRANSFER_AMOUNT, '0.001')
+    if (await pages[0].innerText(wallet.objects.lblEthTransferModal) === 'ETHEREUM')
+      await pages[0].type(wallet.objects.txtTransferAmount, '0.001')
       expect(await wallet.getNumberFromText(init_transfer_amount)).not.toStrictEqual('0.00')
-      await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_TO_POLYGON)
-      expect(await pages[0].innerText(wallet.objects.H1_TRANSFER_ETH_TO_POLYGON_NETWORK)).toContain('TRANSFER ETH TO POLYGON NETWORK')
-      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_TO_POLYGON_ASSETS_AMOUNT)).toContain('0.001 ETH')
-      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_FROM)).toContain('Ethereum Mainnet')
-      expect(await pages[0].innerText(wallet.objects.SPAN_TRANSFER_ETH_TO)).toContain('Polygon Mainnet')
-      await pages[0].click(wallet.objects.BTN_TRANSFER_ETH_CONFIRM)
+      await pages[0].click(wallet.objects.btnTransferEthToPolygon)
+      expect(await pages[0].innerText(wallet.objects.h1TransferEthToPolygonNetwork)).toContain('TRANSFER ETH TO POLYGON NETWORK')
+      expect(await pages[0].innerText(wallet.objects.spanTransferEthToPolygonAssetAmount)).toContain('0.001 ETH')
+      expect(await pages[0].innerText(wallet.objects.spanTransferEthFrom)).toContain('Ethereum Mainnet')
+      expect(await pages[0].innerText(wallet.objects.spanTransferEthTo)).toContain('Polygon Mainnet')
+      await pages[0].click(wallet.objects.btnTransferEthConfirm)
     await pages[0].waitForTimeout(3000)
   });
 
 
 
   xit('ZED-135 - Wallet is allowing the user to select/change the displayed currency of the Account', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
+    await pages[0].click(wallet.objects.imgWalletIcon);
     await pages[0].click(wallet.objects.collapsePanelWalletSetting);
-    await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
+    await pages[0].waitForSelector(wallet.objects.lblDisplayedCurrency);
+    await pages[0].click(wallet.objects.displayCurrency);
     expect(
-      await pages[0].innerText(wallet.objects.DDL_DISPLAY_CURRENCY_GB_POUNDS),
+      await pages[0].innerText(wallet.objects.ddlDisplayCurrencyGbPounds),
     ).toContain(`GBP (British Pound)`);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY_GB_POUNDS);
+    await pages[0].click(wallet.objects.ddlDisplayCurrencyGbPounds);
     expect(
       await pages[0].innerText(
-        wallet.objects.LBL_DDL_DISPLAY_CURRENCY_SELECTED,
+        wallet.objects.lblDisplayCurrencySelected,
       ),
     ).toContain(`GBP (British Pound)`);
 
-    await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
+    await pages[0].waitForSelector(wallet.objects.lblDisplayedCurrency);
+    await pages[0].click(wallet.objects.displayCurrency);
     expect(
-      await pages[0].innerText(wallet.objects.DDL_DISPLAY_CURRENCY_AUD_DOLLARS),
+      await pages[0].innerText(wallet.objects.ddlDisplayCurrencyAudDollars),
     ).toContain(`AUD (Australian Dollar)`);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY_AUD_DOLLARS);
+    await pages[0].click(wallet.objects.ddlDisplayCurrencyAudDollars);
     expect(
       await pages[0].innerText(
-        wallet.objects.LBL_DDL_DISPLAY_CURRENCY_SELECTED,
+        wallet.objects.lblDisplayCurrencySelected,
       ),
     ).toContain(`AUD (Australian Dollar)`);
 
-    await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
+    await pages[0].waitForSelector(wallet.objects.lblDisplayedCurrency);
+    await pages[0].click(wallet.objects.displayCurrency);
     expect(
-      await pages[0].innerText(wallet.objects.DDL_DISPLAY_CURRENCY_USD_DOLLARS),
+      await pages[0].innerText(wallet.objects.ddlDisplayCurrencyUSDollars),
     ).toContain(`USD (US Dollar)`);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY_USD_DOLLARS);
+    await pages[0].click(wallet.objects.ddlDisplayCurrencyUSDollars);
     expect(
       await pages[0].innerText(
-        wallet.objects.LBL_DDL_DISPLAY_CURRENCY_SELECTED,
+        wallet.objects.lblDisplayCurrencySelected,
       ),
     ).toContain(`USD (US Dollar)`);
 
-    await pages[0].waitForSelector(wallet.objects.LBL_DDL_DISPLAYED_CURRENCY);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY);
+    await pages[0].waitForSelector(wallet.objects.lblDisplayedCurrency);
+    await pages[0].click(wallet.objects.displayCurrency);
     expect(
-      await pages[0].innerText(wallet.objects.DDL_DISPLAY_CURRENCY_GB_POUNDS),
+      await pages[0].innerText(wallet.objects.ddlDisplayCurrencyGbPounds),
     ).toContain(`GBP (British Pound)`);
-    await pages[0].click(wallet.objects.DDL_DISPLAY_CURRENCY_GB_POUNDS);
+    await pages[0].click(wallet.objects.ddlDisplayCurrencyGbPounds);
     expect(
       await pages[0].innerText(
-        wallet.objects.LBL_DDL_DISPLAY_CURRENCY_SELECTED,
+        wallet.objects.lblDisplayCurrencySelected,
       ),
     ).toContain(`GBP (British Pound)`);
   });
 
   it('ZED-136 - Wallet is allowing the user to Send ETH to another account through ETH Modal', async () => {
-    await pages[0].click(wallet.objects.IMG_WALLET_ICON);
-    await pages[0].click(wallet.objects.BTN_SEND_ETH);
+    await pages[0].click(wallet.objects.imgWalletIcon);
+    await pages[0].click(wallet.objects.btnSendEth);
     await pages[0].waitForTimeout(2000);
-    await pages[0].fill(wallet.objects.ETHEREUM_WALLET_ADDRESS, data.third_wallet_address);
-    await pages[0].fill(wallet.objects.ETHEREUM_INPUT_AMOUNT, data.Eth_amount);
-    await pages[0].click(wallet.objects.BTN_TRANSFER_ETH);
+    await pages[0].fill(wallet.objects.ethereumWalletAddress, data.third_wallet_address);
+    await pages[0].fill(wallet.objects.ethereumInputAmount, data.Eth_amount);
+    await pages[0].click(wallet.objects.btnTransferEth);
     await metamask.confirmEthTransfer(browserContext);
     await pages[0].waitForTimeout(5000);
-    await pages[0].waitForSelector(wallet.objects.IMG_TRANSACTION_SUCCESS);
-    expect(await pages[0].isVisible(wallet.objects.IMG_TRANSACTION_SUCCESS)).toBe(true);
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain('Success')
-    expect(await pages[0].innerText(wallet.objects.TRANSACTION_SUCCESS_MODAL)).toContain(data.Eth_amount)
+    await pages[0].waitForSelector(wallet.objects.imgTransactionSuccess);
+    expect(await pages[0].isVisible(wallet.objects.imgTransactionSuccess)).toBe(true);
+    expect(await pages[0].innerText(wallet.objects.transactionSuccessModal)).toContain('Success')
+    expect(await pages[0].innerText(wallet.objects.transactionSuccessModal)).toContain(data.Eth_amount)
   });
 
 });

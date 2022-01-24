@@ -250,11 +250,11 @@ describe('Stable', () => {
 	});
 
   xit('ZED-179 - Stable allows the user to OWN a new horse and after that is being shown in the STABLE horse list', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
   xit('ZED-180 - Stable shown the NEW HORSE after the Breeding is born', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
   it('ZED-181 - Stable shown the THOROUGHBREDS number', async () => {
@@ -313,19 +313,19 @@ describe('Stable', () => {
     describe('General', function() {
 
       xit('ZED-116 - Stable showing the horses that belong to a address after buy from the marketplace', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-125 - Stable is allowing the user to update the stable picture/image', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-117 - Stable is showing the list of horses that belongs to an address.', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-126 - Stable/Account is allowing the user to add a new stable picture/image', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       it('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
@@ -361,11 +361,11 @@ describe('Stable', () => {
       });
 
       xit('ZED-118 - Stable allows the user to transfer a Horse to another stable/address', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-119 - Stable is showing into the list the horse transferred from another address', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
     });

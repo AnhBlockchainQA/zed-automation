@@ -15,39 +15,38 @@ class Metamask {
   public browserContext: BrowserContext | undefined;
 
   objects = {
-    BTN_METAMASK_GET_STARTED: '//button[text()=\'Get Started\']',
-    BTN_METAMASK_IMPORT_WALLET: '//button[text()=\'Import wallet\']',
-    BTN_METAMASK_I_AGREE: '//button[text()=\'I Agree\']',
-    TEXT_AREA_METAMASK_PASSPHRASE:
-      '[placeholder=\'Paste Secret Recovery Phrase from clipboard\']',
-    TXT_METAMASK_PASSWORD: '#password',
-    TXT_METAMASK_PASSWORD_CONFIRM: '#confirm-password',
-    CHECKBOX_METAMASK_AGREE: '.first-time-flow__terms',
-    BTN_METAMASK_IMPORT: '//button[text()=\'Import\']',
-    BTN_METAMASK_ALL_DONE: 'text=\'All Done\'',
-    BTN_METAMASK_CLOSE: '[title=\'Close\']',
-    BTN_METAMASK_NETWORK_NAME: '.network-display',
-    BTN_METAMASK_CHOOSE_NETWORK: 'text=\'Goerli Test Network\'',
-    BTN_METAMASK_NEXT: 'text=\'Next\'',
-    BTN_METAMASK_CONNECT: 'text=\'Connect\'',
-    BTN_METAMASK_SIGN: 'text=\'Sign\'',
-    BTN_METAMASK_CONFIRM: '//button[text()=\'Confirm\']',
-    BTN_NAV_START: '//div[contains(text(),\'start\')]',
-    BTN_MODAL_METAMASK_LOGIN: '#login-modal .login-options .metamask-login',
-    IMG_WALLET_ICON: '//div[@class=\'right\']/following-sibling::img[1]',
-    B_ETH_BALANCE: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[1]',
-    B_WETH_BALANCE: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[2]',
-    IMG_CLOSE_WALLET_MODAL: '.close-icon',
-    DIV_WALLET_MODAL_TITLE: '//div[text()=\'Wallet settings\']',
-    BTN_METAMASK_ETH_TRANSFER_CONFIRM: 'button[data-testid=\'page-container-footer-next\']',
-    CONFIRM_CURRENCY_SUMMARY: '.confirm-page-container-summary__title-text .currency-display-component',
-    BTN_SEND_ETH_CONFIRM: '.actions-buttons .primary-btn',
-    BTN_TRANSFER_ETH_TOPOLYGON_CONFIRM: '.buttons-row button.primary-btn',
-    BTN_POLYGON_DEPOSIT_SIGN: '.signature-request-footer .btn-primary.button',
-    ADDRESS: '.address-container .address',
-    ADDRESS_IN_POLYGONSCAN: `//span[contains(@class,'text-size-address text-secondary')]`,
-    BTN_CONFIRM_BUY_RACEHORSE: '.confirm-btn.primary-btn',
-    BTN_TRANSACTION_SIGN: '.signature-request-footer button.btn-primary'
+    btnMetamakGetStarted: '//button[text()=\'Get Started\']',
+    btnMetamaskImportWallet: '//button[text()=\'Import wallet\']',
+    btnMetamaskIAgree: '//button[text()=\'I Agree\']',
+    textAreaMetamaskPassphrase:'[placeholder=\'Paste Secret Recovery Phrase from clipboard\']',
+    txtMetamaskPassword: '#password',
+    txtMetamaskPasswordConfirm: '#confirm-password',
+    checkboxMetamaskAgree: '.first-time-flow__terms',
+    btnMetamaskImport: '//button[text()=\'Import\']',
+    btnMetamaskAllDone: 'text=\'All Done\'',
+    btnMetamaskClose: '[title=\'Close\']',
+    btnMetamaskNetworkName: '.network-display',
+    btnMetamaskChooseNetwork: 'text=\'Goerli Test Network\'',
+    btnMetamaskNext: 'text=\'Next\'',
+    btnMetamaskConnect: 'text=\'Connect\'',
+    btnMetamaskSign : 'text=\'Sign\'',
+    btnMetamaskConfirm: '//button[text()=\'Confirm\']',
+    btnNavStart: '//div[contains(text(),\'start\')]',
+    btnModalMetamaskLogin: '#login-modal .login-options .metamask-login',
+    imgWalletIcon: '//div[@class=\'right\']/following-sibling::img[1]',
+    ethBalance: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[1]',
+    wethBalance: '//*[@class=\'balance-part\']//div[@class=\'right\']/b[2]',
+    imgCloseWalletModal : '.close-icon',
+    walletModalTitle: '//div[text()=\'Wallet settings\']',
+    btnMetamaskEthTransferConfirm: 'button[data-testid=\'page-container-footer-next\']',
+    confirmCurrencySummary: '.confirm-page-container-summary__title-text .currency-display-component',
+    btnSendEthConfirm: '.actions-buttons .primary-btn',
+    btnTransferEthToPolygonConfirm: '.buttons-row button.primary-btn',
+    btnPolygonDepositSign: '.signature-request-footer .btn-primary.button',
+    walletAddress: '.address-container .address',
+    addressInPolysonscan: `//span[contains(@class,'text-size-address text-secondary')]`,
+    btnConfirmBuyRacehorse: '.confirm-btn.primary-btn',
+    btnTransactionSign: '.signature-request-footer button.btn-primary'
   };
 
   async init() {
@@ -80,40 +79,40 @@ class Metamask {
     this.pages = this.tabs.context().pages();
     await this.pages[1].bringToFront();
     await this.pages[1].reload();
-    await this.pages[1].click(this.objects.BTN_METAMASK_GET_STARTED);
-    await this.pages[1].click(this.objects.BTN_METAMASK_IMPORT_WALLET);
-    await this.pages[1].click(this.objects.BTN_METAMASK_I_AGREE);
+    await this.pages[1].click(this.objects.btnMetamakGetStarted);
+    await this.pages[1].click(this.objects.btnMetamaskImportWallet);
+    await this.pages[1].click(this.objects.btnMetamaskIAgree);
     await this.pages[1].type(
-      this.objects.TEXT_AREA_METAMASK_PASSPHRASE,
+      this.objects.textAreaMetamaskPassphrase,
       data.seed_phrase,
     );
-    await this.pages[1].type(this.objects.TXT_METAMASK_PASSWORD, data.password);
+    await this.pages[1].type(this.objects.txtMetamaskPassword, data.password);
     await this.pages[1].type(
-      this.objects.TXT_METAMASK_PASSWORD_CONFIRM,
+      this.objects.txtMetamaskPasswordConfirm,
       data.password,
     );
-    await this.pages[1].click(this.objects.CHECKBOX_METAMASK_AGREE);
-    await this.pages[1].click(this.objects.BTN_METAMASK_IMPORT);
-    await this.pages[1].click(this.objects.BTN_METAMASK_ALL_DONE);
-    await this.pages[1].click(this.objects.BTN_METAMASK_CLOSE);
-    await this.pages[1].click(this.objects.BTN_METAMASK_NETWORK_NAME);
-    await this.pages[1].click(this.objects.BTN_METAMASK_CHOOSE_NETWORK);
+    await this.pages[1].click(this.objects.checkboxMetamaskAgree);
+    await this.pages[1].click(this.objects.btnMetamaskImport);
+    await this.pages[1].click(this.objects.btnMetamaskAllDone);
+    await this.pages[1].click(this.objects.btnMetamaskClose);
+    await this.pages[1].click(this.objects.btnMetamaskNetworkName);
+    await this.pages[1].click(this.objects.btnMetamaskChooseNetwork);
     await this.pages[0].bringToFront();
     await this.pages[0].goto(data.baseUrl);
     await this.pages[0].waitForLoadState();
-    await this.pages[0].click(this.objects.BTN_NAV_START);
+    await this.pages[0].click(this.objects.btnNavStart);
     const [windows] = await Promise.all([
       browserContext.waitForEvent('page'),
-      await this.pages[0].click(this.objects.BTN_MODAL_METAMASK_LOGIN),
+      await this.pages[0].click(this.objects.btnModalMetamaskLogin),
     ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
 
     await this.pages[2].bringToFront();
-    await this.pages[2].click(this.objects.BTN_METAMASK_NEXT);
-    await this.pages[2].click(this.objects.BTN_METAMASK_CONNECT);
+    await this.pages[2].click(this.objects.btnMetamaskNext);
+    await this.pages[2].click(this.objects.btnMetamaskConnect);
     await this.pages[2].waitForTimeout(1000);
-    await this.pages[2].click(this.objects.BTN_METAMASK_SIGN);
+    await this.pages[2].click(this.objects.btnMetamaskSign);
     await this.pages[0].bringToFront();
     await this.pages[1].close();
     await this.pages[1].waitForTimeout(4000);
@@ -123,15 +122,15 @@ class Metamask {
   async confirmEthTransfer(browserContext: BrowserContext){
     const [windows] = await Promise.all([
     browserContext.waitForEvent('page'),
-    await this.pages[0].click(this.objects.BTN_SEND_ETH_CONFIRM),
+    await this.pages[0].click(this.objects.btnSendEthConfirm),
     ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
     await this.pages[1].bringToFront();
     await this.pages[1].reload();
     await this.pages[1].waitForTimeout(5000);
-    await this.pages[1].waitForSelector(this.objects.BTN_METAMASK_ETH_TRANSFER_CONFIRM);
-    await this.pages[1].click(this.objects.BTN_METAMASK_ETH_TRANSFER_CONFIRM);
+    await this.pages[1].waitForSelector(this.objects.btnMetamaskEthTransferConfirm);
+    await this.pages[1].click(this.objects.btnMetamaskEthTransferConfirm);
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
   }
@@ -139,14 +138,14 @@ class Metamask {
   async confirmWithdrawETH(browserContext: BrowserContext){
     const [windows] = await Promise.all([
     browserContext.waitForEvent('page'),
-    await this.pages[0].click(this.objects.BTN_TRANSFER_ETH_TOPOLYGON_CONFIRM),
+    await this.pages[0].click(this.objects.btnTransferEthToPolygonConfirm),
   ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
     await this.pages[1].bringToFront();
     await this.pages[1].waitForTimeout(5000);
-    await this.pages[1].waitForSelector(this.objects.BTN_METAMASK_ETH_TRANSFER_CONFIRM);
-    await this.pages[1].click(this.objects.BTN_METAMASK_ETH_TRANSFER_CONFIRM);
+    await this.pages[1].waitForSelector(this.objects.btnMetamaskEthTransferConfirm);
+    await this.pages[1].click(this.objects.btnMetamaskEthTransferConfirm);
     await this.pages[1].waitForTimeout(1000);
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
@@ -155,14 +154,14 @@ class Metamask {
   async confirmDepositETH(browserContext: BrowserContext){
     const [windows] = await Promise.all([
     browserContext.waitForEvent('page'),
-    await this.pages[0].click(this.objects.BTN_SEND_ETH_CONFIRM),
+    await this.pages[0].click(this.objects.btnSendEthConfirm),
     ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
     await this.pages[1].bringToFront();
     await this.pages[1].waitForTimeout(5000);
-    await this.pages[1].waitForSelector(this.objects.BTN_POLYGON_DEPOSIT_SIGN);
-    await this.pages[1].click(this.objects.BTN_POLYGON_DEPOSIT_SIGN);
+    await this.pages[1].waitForSelector(this.objects.btnPolygonDepositSign);
+    await this.pages[1].click(this.objects.btnPolygonDepositSign);
     await this.pages[1].waitForTimeout(1000);
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
@@ -171,14 +170,14 @@ class Metamask {
   async confirmBuyRaceHorse(browserContext: BrowserContext){
     const [windows] = await Promise.all([
     browserContext.waitForEvent('page'),
-    await this.pages[0].click(this.objects.BTN_CONFIRM_BUY_RACEHORSE),
+    await this.pages[0].click(this.objects.btnConfirmBuyRacehorse),
     ]);
     await windows.waitForLoadState();
     this.pages = windows.context().pages();
     await this.pages[1].bringToFront();
     await this.pages[1].waitForTimeout(5000);
-    await this.pages[1].waitForSelector(this.objects.BTN_TRANSACTION_SIGN);
-    await this.pages[1].click(this.objects.BTN_TRANSACTION_SIGN);
+    await this.pages[1].waitForSelector(this.objects.btnTransactionSign);
+    await this.pages[1].click(this.objects.btnTransactionSign);
     await this.pages[1].waitForTimeout(1000);
     await this.pages[0].bringToFront();
     await this.pages[0].waitForTimeout(15000);
@@ -187,13 +186,13 @@ class Metamask {
   async validateAddressInPolygonscan(browserContext: BrowserContext){
     [this.tabs] = await Promise.all([
     browserContext.waitForEvent('page'),
-    await this.pages[0].click(this.objects.ADDRESS),
+    await this.pages[0].click(this.objects.walletAddress),
     ]);
     await this.tabs.waitForLoadState();
     this.pages = this.tabs.context().pages();
     await this.pages[1].bringToFront();
-    expect(await this.pages[1].isVisible(this.objects.ADDRESS_IN_POLYGONSCAN)).toBe(true);
-    expect(await this.pages[1].innerText(this.objects.ADDRESS_IN_POLYGONSCAN)).toContain(data.wallet_address);
+    expect(await this.pages[1].isVisible(this.objects.addressInPolysonscan)).toBe(true);
+    expect(await this.pages[1].innerText(this.objects.addressInPolysonscan)).toContain(data.wallet_address);
   }
 
   async close(pages: any, driver: BrowserContext) {
