@@ -64,4 +64,20 @@ describe('Marketplace', () => {
     await pages[0].click(marketplace.objects.btnDone);
   });
 
+  it('ZED-48 Marketplace allows the user to filter out the racehorse list by Gender', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].waitForTimeout(5000);
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.genderColt) 
+    await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
+    await pages[0].waitForTimeout(10000)
+    const horsesCount = await pages[0].$$(marketplace.objects.horseCardsPanel.horsesCards)
+    for(let horseRow = 1; horseRow<= parseInt(horsesCount.length); horseRow++){
+    const horseGenGenderBloodlineValue = await pages[0].innerText(marketplace.objects.horseCardsPanel.horseGenGenderBloodlineValue(horseRow))
+    const horseGenGenderBloodlineValueArray = horseGenGenderBloodlineValue.split(' · ')
+    const horseGender = horseGenGenderBloodlineValueArray[1]
+    expect(horseGender).toBe('Colt')
+    }
+  });
 });
