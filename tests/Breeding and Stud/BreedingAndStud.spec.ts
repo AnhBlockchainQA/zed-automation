@@ -534,6 +534,12 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
     });
 
+    it('ZED-245 Breeding Service is shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is authenticated.', async () => {
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      expect((await pages[0].isVisible(breedingAndStud.objects.btnSelectHorse)) &&
+            (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(true);
+    });
+
   });
 
   describe('Stud', function() {
