@@ -29,8 +29,14 @@ class Marketplace {
     horseNameInBuySuccessModal:'.buy-modal-content .horse-name',
     
     filtersPanel: {
-      genderColt: '(//label[text()="Colt"])[2]',
+      genderFilly: '//label[@for=\'id-Filly\']',
+      genderFillyCheckBox: '#id-Filly',
+      genderColt: '//label[@for=\'id-Colt\']',
       genderColtCheckBox: '#id-Colt',
+      bloodlineNakamotoCheckBox: '#id-Nakamoto',
+      bloodlineNakamotoLabel: '//label[@for=\'id-Nakamoto\']',
+      bloodlineButerinCheckBox: '#id-Buterin',
+      bloodlineButerinLabel:'//label[@for=\'id-Buterin\']',
     } ,
 
     horseCardsPanel: {
@@ -53,6 +59,23 @@ class Marketplace {
     return this.page.url();
   }
 
-}
+  async verifyBloodLineFilter(bloodlineType: string){
+    const horsesCount = await this.page.$$(this.objects.horseCardsPanel.horsesCards)
+    for(let horseRow = 1; horseRow<= horsesCount.length; horseRow++){
+    const horseGenGenderBloodlineValue = await this.page.innerText(this.objects.horseCardsPanel.horseGenGenderBloodlineValue(horseRow))
+    const horseGenGenderBloodlineValueArray = horseGenGenderBloodlineValue.split(' · ')
+    const horseBloodline = horseGenGenderBloodlineValueArray[2]
+    expect(horseBloodline).toBe(bloodlineType)
+   }
+  }
+  async verifyGenderFilter(genderType: string){
+    const horsesCount = await this.page.$$(this.objects.horseCardsPanel.horsesCards)
+    for(let horseRow = 1; horseRow<= horsesCount.length; horseRow++){
+    const horseGenGenderBloodlineValue = await this.page.innerText(this.objects.horseCardsPanel.horseGenGenderBloodlineValue(horseRow))
+    const horseGenGenderBloodlineValueArray = horseGenGenderBloodlineValue.split(' · ')
+    const horseGender = horseGenGenderBloodlineValueArray[1]
+    expect(horseGender).toBe(genderType) 
+  }
+}}
 
 export default Marketplace;
