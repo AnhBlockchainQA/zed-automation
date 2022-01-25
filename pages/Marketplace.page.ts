@@ -27,12 +27,15 @@ class Marketplace {
     horseWETHPrice: '.grey-text.my-2',
     horsePriceInBuySuccessModal: '.buy-modal-content .horse-price',
     horseNameInBuySuccessModal:'.buy-modal-content .horse-name',
-    
+    sortByPriceDefault: `//div[text()='Lowest price']`,
+    sortByPriceDropdownIndicator: `(//div[contains(@class,'z-select__indicator z-select__dropdown-indicator')])[2]`,
+    sortByPriceHighestPrice: `//div[text()='Highest price']`,
+    horseList: (id?: number) => id ? `[role='grid'] [role='gridcell']:nth-child(${id})`:`[role='grid'] [role='gridcell']`,
+    btnClose: '.horse-inspector-modal img.close-icon',
     filtersPanel: {
       genderColt: '(//label[text()="Colt"])[2]',
       genderColtCheckBox: '#id-Colt',
     } ,
-
     horseCardsPanel: {
       horsesCards: '//div[@class="marketplace-content "]/div/div',
       horseGenGenderBloodlineValue : (id: number) => `//div[@role='gridcell'][${id}]/div/div[2]/p[1]`
