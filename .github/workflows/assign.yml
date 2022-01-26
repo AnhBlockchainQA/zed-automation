@@ -18,7 +18,7 @@ jobs:
       - uses: madrapps/add-reviewers@v1
         if: ${{ always()}}
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: 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
           reviewers: jbricenoz
           re-request-when-approved: true
           re-request-when-changes-requested: true
