@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - feature/**
-  pull_request:
-    types: [ opened, ready_for_review ]
 
 env:
   # Force terminal colors. @see https://www.npmjs.com/package/colors
@@ -14,9 +12,6 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: kentaro-m/auto-assign-action@v1.2.1
-      with:
-        configuration-path: '.github/auto_assign.yml'
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
     - name: Use Node.js
