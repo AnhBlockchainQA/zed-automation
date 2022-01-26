@@ -11,9 +11,20 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     steps:
+    - name: Add Assignees
       - uses: kentaro-m/auto-assign-action@v1.2.1
         with:
-          addReviewers: jbricenoz
+          addReviewers: true
           addAssignees: author
+          reviewers:
+            - jbricenoz
           numberOfReviewers: 1
+          runOnDraft: true
+    - name: Add Reviewers
+      - uses: madrapps/add-reviewers@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: jbricenoz
+          re-request-when-approved: true
+          re-request-when-changes-requested: true
 
