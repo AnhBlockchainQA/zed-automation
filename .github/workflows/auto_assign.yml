@@ -17,12 +17,13 @@ jobs:
           addAssignees: author
           reviewers:
             - jbricenoz
+            - jhwaqa
           numberOfReviewers: 1
           runOnDraft: true
-      - uses: madrapps/add-reviewers@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: jbricenoz
-          re-request-when-approved: true
-          re-request-when-changes-requested: true
+#      - uses: madrapps/add-reviewers@v1
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          reviewers: jbricenoz
+#          re-request-when-approved: true
+#          re-request-when-changes-requested: true
 
