@@ -5,6 +5,7 @@ on:
 
 env:
   FORCE_COLOR: 1
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
 jobs:
   auto-assignation:
