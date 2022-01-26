@@ -80,4 +80,37 @@ describe('Marketplace', () => {
     expect(horseGender).toBe('Colt')
     }
   });
+  
+  it('ZED-43 Marketplace allows the user to sort the racehorses list by price', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].waitForTimeout(5000);
+    expect(await pages[0].isVisible(marketplace.objects.sortByPriceDefault)).toBe(true);
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let firstHorsePrice = await pages[0].innerText(marketplace.objects.priceBadge)
+    const horsePriceFirstHorse = parseFloat(firstHorsePrice.substr(1));
+    await pages[0].click(marketplace.objects.btnClose)
+    await pages[0].waitForTimeout(5000);
+    await pages[0].click(marketplace.objects.horseList(2))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let secondHorsePrice = await pages[0].innerText(marketplace.objects.priceBadge)
+    const horsePriceSecondHorse = parseFloat(secondHorsePrice.substr(1));
+    expect(horsePriceFirstHorse).toBeLessThanOrEqual(horsePriceSecondHorse);
+    await pages[0].click(marketplace.objects.btnClose)
+    await pages[0].click(marketplace.objects.sortByPriceDropdownIndicator)
+    await pages[0].click(marketplace.objects.sortByPriceHighestPrice)
+    await pages[0].waitForTimeout(5000);
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let priceOne = await pages[0].innerText(marketplace.objects.priceBadge)
+    const horsePrice1stHorse = parseFloat(priceOne.substr(1));
+    await pages[0].click(marketplace.objects.btnClose)
+    await pages[0].waitForTimeout(5000);
+    await pages[0].click(marketplace.objects.horseList(2))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let priceTwo = await pages[0].innerText(marketplace.objects.priceBadge)
+    const horsePrice2ndHorse = parseFloat(priceTwo.substr(1));
+    expect(horsePrice1stHorse).toBeGreaterThanOrEqual(horsePrice2ndHorse);
+  });
+
 });
