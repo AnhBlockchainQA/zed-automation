@@ -14,76 +14,76 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: kentaro-m/auto-assign-action@v1.2.1
-        with:
-          configuration-path: '.github/auto_assign.yml'
-      - uses: actions/checkout@v2
-      - uses: microsoft/playwright-github-action@v1
-      - name: Use Node.js
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - name: Use NPM
-        if: always()
+    - uses: kentaro-m/auto-assign-action@v1.2.1
+      with:
+        configuration-path: '.github/auto_assign.yml'
+    - uses: actions/checkout@v2
+    - uses: microsoft/playwright-github-action@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: Use NPM
+      if: always()
         # if: github.event.action == 'ping'
-        run: |
-          npm ci
-          npm install
-        env:
-          CI: true
-      - name: Use Commit ID
-        if: always()
-        run: |
-          variable=$(git rev-parse --short HEAD)
-          echo "Last commit registred:" $variable
-        env:
-          CI: true
-      - name: Run test
-        if: always()
-        # if: github.event.action == 'ping'
-        run: xvfb-run --auto-servernum -- npm run test -- --verbose
-        env:
-          CI: true
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-      - name: Deploying Allure Report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_branch: gh-pages
-          allow_empty_commit: true
-          publish_dir: allure-history
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: ${{ github.event.head_commit.message }}
-      - name: Record Video On Failure
-        uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
-        with:
-          name: Recordings
-          path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
-          retention-days: 3
-      - name: Notify on Slack Channel
-        if: ${{ failure() }}
-        uses: archive/github-actions-slack@v1.0.3
-        id: notify
-        with:
-          slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
-          slack-channel: "dev-qa-team"
-          slack-text: Hello! Something is burning on development scripts! Or not... check on https://vhslab.github.io/qa-automationtest/ or into the run id at https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
-          slack-optional-icon_emoji: ":fire:"
+      run: |
+        npm ci
+        npm install
+      env:
+        CI: true
+    - name: Use Commit ID
+      if: always()
+      run: |
+        variable=$(git rev-parse --short HEAD)
+        echo "Last commit registred:" $variable
+      env:
+        CI: true
+    - name: Run test
+      if: always()
+      # if: github.event.action == 'ping'
+      run: xvfb-run --auto-servernum -- npm run test -- --verbose
+      env:
+        CI: true
+    - name: Get Allure history
+      uses: actions/checkout@v2
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+    - name: Allure Report action from marketplace
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      with:
+        allure_results: allure-results
+        gh_pages: gh-pages
+        allure_report: allure-report
+        allure_history: allure-history
+    - name: Deploying Allure Report to Github Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_branch: gh-pages
+        allow_empty_commit: true
+        publish_dir: allure-history
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: ${{ github.event.head_commit.message }}
+    - name: Record Video On Failure
+      uses: actions/upload-artifact@v2
+      if: ${{ failure() }}
+      with:
+        name: Recordings
+        path: /home/runner/work/qa-automationtest/qa-automationtest/videos/*
+        retention-days: 3
+    - name: Notify on Slack Channel
+      if: ${{ failure() }}
+      uses: archive/github-actions-slack@v1.0.3
+      id: notify
+      with:
+        slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+        slack-channel: "dev-qa-team"
+        slack-text: Hello! Something is burning on development scripts! Or not... check on https://vhslab.github.io/qa-automationtest/ or into the run id at https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
+        slack-optional-icon_emoji: ":fire:"
 
