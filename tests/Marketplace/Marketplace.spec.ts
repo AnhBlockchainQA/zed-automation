@@ -15,8 +15,8 @@ describe('Marketplace', () => {
     metamask = new Metamask();
     browserContext = await metamask.init();
     pages = await metamask.authenticate(browserContext);
-    auth = new Authorization(pages);
-    marketplace = new Marketplace(pages);
+    auth = new Authorization(pages[0]);
+    marketplace = new Marketplace(pages[0]);
   });
 
   beforeEach(async () => {
@@ -72,13 +72,33 @@ describe('Marketplace', () => {
     await pages[0].click(marketplace.objects.filtersPanel.genderColt) 
     await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
     await pages[0].waitForTimeout(10000)
-    const horsesCount = await pages[0].$$(marketplace.objects.horseCardsPanel.horsesCards)
-    for(let horseRow = 1; horseRow<= parseInt(horsesCount.length); horseRow++){
-    const horseGenGenderBloodlineValue = await pages[0].innerText(marketplace.objects.horseCardsPanel.horseGenGenderBloodlineValue(horseRow))
-    const horseGenGenderBloodlineValueArray = horseGenGenderBloodlineValue.split(' · ')
-    const horseGender = horseGenGenderBloodlineValueArray[1]
-    expect(horseGender).toBe('Colt')
-    }
+    await marketplace.verifyGenderFilter('Colt')
+    expect(await pages[0].isChecked(marketplace.objects.filtersPanel.genderColtCheckBox)).toBe(true)
+    await pages[0].click(marketplace.objects.filtersPanel.genderColt) 
+
+    await pages[0].click(marketplace.objects.filtersPanel.genderFilly) 
+    await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
+    await pages[0].waitForTimeout(10000)
+    await marketplace.verifyGenderFilter('Filly')
+    expect(await pages[0].isChecked(marketplace.objects.filtersPanel.genderFillyCheckBox)).toBe(true)   
+  });
+
+  it('ZED-47 Marketplace allows the user to filter out the racehorse list by BloodLine', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel) 
+    await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
+    await pages[0].waitForTimeout(10000)
+    await marketplace.verifyBloodLineFilter('Nakamoto')
+    expect(await pages[0].isChecked(marketplace.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel) 
+
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineButerinLabel)
+    await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
+    await pages[0].waitForTimeout(10000)
+    await marketplace.verifyBloodLineFilter('Buterin')
+    expect(await pages[0].isChecked(marketplace.objects.filtersPanel.bloodlineButerinCheckBox)).toBe(true) 
   });
   
   it('ZED-43 Marketplace allows the user to sort the racehorses list by price', async () => {
