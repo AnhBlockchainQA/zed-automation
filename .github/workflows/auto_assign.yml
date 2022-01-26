@@ -1,7 +1,11 @@
 name: ZED Test Automation (Develop Auto Assign)
 on:
   pull_request:
-    types: [ opened, ready_for_review ]
+    types:
+      - opened
+      - ready_for_review
+    branches:
+      - 'feature/**'
 
 env:
   # Force terminal colors. @see https://www.npmjs.com/package/colors
@@ -13,6 +17,8 @@ jobs:
     steps:
       - uses: kentaro-m/auto-assign-action@v1.2.1
         with:
-          addReviewers: jbricenoz
+          addReviewers: true
           addAssignees: author
+          reviewers: jbricenoz
+          numberOfReviewers: 1
 
