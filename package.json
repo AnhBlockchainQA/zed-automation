@@ -23,7 +23,7 @@
     "allure": "allure generate --clean"
   },
   "devDependencies": {
-    "@playwright/test": "^1.14.1",
+    "@playwright/test": "^1.18.0",
     "@types/jest": "^27.0.1",
     "allure-commandline": "^2.13.8",
     "expect-playwright": "^0.3.2",
@@ -31,8 +31,7 @@
     "jasmine-allure-reporter": "^1.0.2",
     "jest": "27.2.1",
     "jest-playwright-preset": "^1.7.0",
-    "playwright": "^1.10.0",
-    "playwright-core": "^1.14.1",
+    "playwright-core": "^1.18.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   },
@@ -50,7 +49,7 @@
     "jest-retries": "^1.0.1",
     "jest-runner": "27.2.1",
     "pixelmatch": "^5.2.1",
-    "playwright": "1.14.1",
+    "playwright": "^1.18.0",
     "playwright-cli": "^0.180.0",
     "superagent-retry-delay": "^2.6.2",
     "supertest": "^6.1.3",
