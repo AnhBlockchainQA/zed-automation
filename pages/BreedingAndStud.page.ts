@@ -57,6 +57,8 @@ class BreedingAndStud {
     lblBreeding: '//h2[text()="breeding"]',
     lblFilterCount: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]/following-sibling::div[1]',
     lblFooter:'(//div[@class="footer-content"])[1]',
+    lblAddHorseStudFarm : '//div[text()="Add a Horse to Stud Farm"]',
+    btnSelectHorse: '//button[text()="Select Horse"]',
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
