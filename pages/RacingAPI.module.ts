@@ -4,12 +4,11 @@ import * as data from '../fixtures/qa.json';
 class RacingAPI {
   private token: string = ''
 
-  async apiContext(url: string, token?: string) {
-    token = token ? `Bearer ${token}` : ''
+  async apiContext(url: string) {
     return await request.newContext({
       baseURL: url,
       extraHTTPHeaders: {
-        'Authorization': token
+        Authorization: this.token
       }
     })
   }
@@ -22,12 +21,12 @@ class RacingAPI {
             signed_message: data.metamask_login.signed_message
         }
     })
-    this.token = await res.json().then((r: any) => r.jwt)
+    this.token = `Bearer ${await res.json().then((r: any) => r.jwt)}`
     expect(res.status()).toBe(200)
   }
 
   async apiNominateHorse() {
-    let req = await this.apiContext(data.api.racing, this.token)
+    let req = await this.apiContext(data.api.racing)
     let res = await req.get('/api/v1/races', {
         params: {
             status: 'open'
@@ -47,7 +46,7 @@ class RacingAPI {
       const total = Math.min(horses.length, openGates.length)
       
       for (let i = 0; i < total; i++) {
-          req = await this.apiContext(data.api.racing, this.token)
+          req = await this.apiContext(data.api.racing)
           res = await req.post('/api/v1/races/register', {
               data: {
                   gate: openGates[i],
@@ -56,7 +55,7 @@ class RacingAPI {
               }
           })
           expect(res.status()).toBe(200)
-          req = await this.apiContext(data.api.gateway, this.token)
+          req = await this.apiContext(data.api.gateway)
           res = await req.post('/api/v1/activity', {
               data: {
                   params: {
@@ -77,9 +76,9 @@ class RacingAPI {
   }
 
   async getEligibleHorse(raceId: string, raceClass: string, count: number): Promise<any> {
-    let allHorses = []
+    const allHorses = []
     for (let i = 0; i < count; i++) {
-      const req = await this.apiContext(data.api.gateway, this.token)
+      const req = await this.apiContext(data.api.gateway)
       const res = await req.get(`/api/v1/races/${raceId}/available_race_horses`, {   
           params: {
               public_address: data.metamask_login.public_address,
