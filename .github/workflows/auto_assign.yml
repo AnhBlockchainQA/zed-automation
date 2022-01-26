@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: kentaro-m/auto-assign-action@v1.2.1
         with:
-          addReviewers: true
+          addReviewers: jbricenoz
           addAssignees: author
-          reviewers: jbricenoz
           numberOfReviewers: 1
 
