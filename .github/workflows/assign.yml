@@ -22,4 +22,11 @@ jobs:
           reviewers: jbricenoz
           re-request-when-approved: true
           re-request-when-changes-requested: true
-
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ always()}}
+        with:
+          labels: UI_TEST
+      - uses: srggrs/assign-one-project-github-action@1.2.1
+        if: ${{ always()}}
+        with:
+          project: 'https://github.com/orgs/vhslab/projects/3'
