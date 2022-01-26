@@ -16,18 +16,18 @@ jobs:
         if: ${{ always()}}
         with:
           configuration-path: .github/auto_assign.yml
-      - uses: madrapps/add-reviewers@v1
-        if: ${{ always()}}
-        with:
-          token: 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
-          reviewers: jbricenoz
-          re-request-when-approved: true
-          re-request-when-changes-requested: true
+#      - uses: madrapps/add-reviewers@v1
+#        if: ${{ always()}}
+#        with:
+#          token: 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
+#          reviewers: jbricenoz
+#          re-request-when-approved: true
+#          re-request-when-changes-requested: true
       - uses: actions-ecosystem/action-add-labels@v1
         if: ${{ always()}}
         with:
           labels: UI_TEST
-      - uses: srggrs/assign-one-project-github-action@1.2.1
-        if: ${{ always()}}
-        with:
-          project: 'https://github.com/orgs/vhslab/projects/3'
+#      - uses: srggrs/assign-one-project-github-action@1.2.1
+#        if: ${{ always()}}
+#        with:
+#          project: 'https://github.com/orgs/vhslab/projects/3'
