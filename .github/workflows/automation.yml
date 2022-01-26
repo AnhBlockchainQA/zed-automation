@@ -14,14 +14,15 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: kentaro-m/auto-assign-action@v1.2.1
+      - uses: kentaro-m/auto-assign-action@v1.2.1
+        with:
+          configuration-path: '.github/auto_assign.yml'
     - uses: actions/checkout@v2
     - uses: microsoft/playwright-github-action@v1
     - name: Use Node.js
     - uses: actions/setup-node@v1
       with:
         node-version: '14.x'
-        configuration-path: '.github/auto_assign.yml'
     - name: Use NPM
       if: always()
         # if: github.event.action == 'ping'
