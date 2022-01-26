@@ -1,11 +1,7 @@
 name: ZED Test Automation (Develop Auto Assign)
 on:
   pull_request:
-    types:
-      - opened
-      - ready_for_review
-    branches:
-      - 'feature/**'
+    types: [ opened, ready_for_review ]
 
 env:
   # Force terminal colors. @see https://www.npmjs.com/package/colors
