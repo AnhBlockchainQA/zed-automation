@@ -32,6 +32,7 @@ class Marketplace {
     sortByPriceHighestPrice: `//div[text()='Highest price']`,
     horseList: (id?: number) => id ? `[role='grid'] [role='gridcell']:nth-child(${id})`:`[role='grid'] [role='gridcell']`,
     btnClose: '.horse-inspector-modal img.close-icon',
+    geoType: `(//div[@class='details-value'])[2]`,
     filtersPanel: {
       genderFilly: '//label[@for=\'id-Filly\']',
       genderFillyCheckBox: '#id-Filly',
@@ -41,6 +42,11 @@ class Marketplace {
       bloodlineNakamotoLabel: '//label[@for=\'id-Nakamoto\']',
       bloodlineButerinCheckBox: '#id-Buterin',
       bloodlineButerinLabel:'//label[@for=\'id-Buterin\']',
+      genoTypeMinValue:`(//label[text()='Pacer']/following::input)[1]`,
+      genoTypeMaxValue:`(//label[text()='Pacer']/following::input)[2]`,
+      minPriceInput: `(//input[@step='1'])[1]`,
+      currency:`//div[text()='price (']`,
+      filterClose: `(//img[@class='close-icon'])[2]`
     } ,
     horseCardsPanel: {
       horsesCards: '//div[@class="marketplace-content "]/div/div',

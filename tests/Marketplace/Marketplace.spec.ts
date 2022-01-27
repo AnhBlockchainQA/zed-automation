@@ -10,7 +10,7 @@ describe('Marketplace', () => {
   let browserContext: BrowserContext;
   let metamask: Metamask;
   let marketplace: Marketplace;
-
+  
   beforeAll(async () => {
     metamask = new Metamask();
     browserContext = await metamask.init();
@@ -133,4 +133,34 @@ describe('Marketplace', () => {
     expect(horsePrice1stHorse).toBeGreaterThanOrEqual(horsePrice2ndHorse);
   });
 
+  it('ZED-44 Marketplace allows the user to filter out the racehorses list by Genotype', async () => {
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.genoTypeMinValue)
+    let genoTypeMin = await pages[0].innerText(marketplace.objects.filtersPanel.genoTypeMinValue)
+    let genoTypeMax = await pages[0].innerText(marketplace.objects.filtersPanel.genoTypeMaxValue)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let firstHorseGenoType = await pages[0].innerText(marketplace.objects.geoType)
+    const GenoType = parseInt(firstHorseGenoType);
+     expect(GenoType).toBeGreaterThanOrEqual(genoTypeMin);
+     expect(GenoType).toBeLessThan(genoTypeMax);
+  });
+
+  it('ZED-46 Marketplace allows the user to filter out the racehorse list by Price', async () => {
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.minPriceInput)
+    expect(await pages[0].innerText(marketplace.objects.filtersPanel.currency)).toContain(data.currency_usd);
+    await pages[0].waitForTimeout(1000) 
+    await pages[0].fill(marketplace.objects.filtersPanel.minPriceInput,'10')
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    let firstHorsePrice = await pages[0].innerText(marketplace.objects.priceBadge)
+    const priceHorse = parseFloat(firstHorsePrice.substr(1));
+    expect(priceHorse).toBeGreaterThanOrEqual(10);
+  });
+    
 });

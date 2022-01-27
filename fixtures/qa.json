@@ -14,6 +14,7 @@
   "card_number": "371449635398431",
   "card_expiration_date": "08/25",
   "card_cvc": "324",
+  "currency_usd":"USD",
   "withdraw_Inprogress_message":"Transaction In Progress",
   "copy_address_btn_text":"Address copied",
   "buy_btn_text":"Buy Racehorse",
@@ -57,7 +58,7 @@
   },
   "amount": "0.01",
   "Eth_amount": "0.001",
-  "withdraw_amount":"0.0001",
+  "withdraw_amount": "0.0001",
   "percent_discount": {
     "code": "anh_test",
     "value": "90.0%",
@@ -79,6 +80,10 @@
   },
   "mail_login": {
     "public_address": "0x70b3BA01a7DF6999e12BF880D52FB73C62Fd4f2c",
-    "signed_message" :"0x2893c60b14aa1b3c9e089b3202e4f52f9def1481b6b6e1fc335a8cff16f24c7b36e4be03bbe1769dc60309125fce40f1b6d4aacedd6e4164138f7a2f591038051b"
+    "signed_message": "0x2893c60b14aa1b3c9e089b3202e4f52f9def1481b6b6e1fc335a8cff16f24c7b36e4be03bbe1769dc60309125fce40f1b6d4aacedd6e4164138f7a2f591038051b"
+  },
+  "api": {
+    "racing": "https://racing-api.dev.zed.run",
+    "gateway": "https://api.dev.zed.run"
   }
 }
