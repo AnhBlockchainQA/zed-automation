@@ -37,7 +37,7 @@ class Stable {
       panelHorseName: '.panel.open .name-icon > div',
       panelHorseGen: '(//span[@class=\'primary-text gen\'])[1]',
       panelHorseBloodline: '(//div[@class=\'primary-text\'])[1]',
-      panelHorseGender: '(//div[@class=\'primary-text\'])[2]',
+      panelHorseGender: (id: number) => `(//div[text()='gender']/following-sibling::div)[${id}]`,
       panelHorseCoat: '(//span[@class=\'primary-text\'])[1]',
       panelHorseRaces: '(//div[@class=\'primary-text\'])[3]',
       panelHorseCareer: '(//div[text()=\'career\']/following-sibling::div)[1]',
@@ -48,7 +48,8 @@ class Stable {
       panelHorseBreedLink: '.panel.open .icn-txt:nth-child(2)',
       panelHorseTimeLeft: '.panel.open .time-left > .primary-text',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
-      panelMinimize: '(//img[@class=\'open-label\'])',
+      panelMinimize: (id: number) => `(//img[@class=\'open-label\'])[${id}]`,
+    
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',

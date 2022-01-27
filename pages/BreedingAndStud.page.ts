@@ -105,6 +105,7 @@ class BreedingAndStud {
       gender: '//span[text()=\'GENDER\']',
       genderColtCheckBox: '#Colt',
       genderColtLabel: '//label[text()=\'Colt\']',
+      genderStallionCheckBox: '#Stallion',
       bloodline: '//span[text()=\'BLOODLINE\']', 
       bloodlineButerinCheckBox: '#Buterin',
       bloodlineButerinLabel:'//label[@for=\'Buterin\']',

@@ -210,8 +210,7 @@ describe('Stable', () => {
     await Horselist.nth(1).click()
     await pages[0].waitForTimeout(1000)
     expect(await Horselist.nth(1).getAttribute('class')).toContain('panel open')
-    const cardLinks = pages[0].locator(stable.objects.stableList.panelMinimize)
-    await cardLinks.nth(1).click()
+    await pages[0].click(stable.objects.stableList.panelMinimize(2))
     await pages[0].waitForTimeout(1000)
     expect(await Horselist.nth(1).getAttribute('class')).toContain('panel closed')
   });

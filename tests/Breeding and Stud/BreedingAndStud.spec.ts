@@ -540,6 +540,27 @@ describe('Breeding And Stud', () => {
             (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(true);
     });
 
+
+    it('ZED- 248 Breeding Service is shown the user stable with a gender filtering when comes from "+ Add Horse > Select Horse" CTA card, showing only Stallion and Colt horses in the list', async () => {
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      await pages[0].click(breedingAndStud.objects.btnSelectHorse)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
+      await pages[0].waitForTimeout(1000)
+      expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.genderColtCheckBox)).toBe(true)
+      expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.genderStallionCheckBox)).toBe(true)
+      const horsesListCount = await pages[0].$$(stable.objects.stableList.HorseCard)
+      for (let horseRow = 1;horseRow <=horsesListCount.length ;horseRow++ )
+      {
+        await pages[0].click(stable.objects.stableList.horse(horseRow))
+        const horseGenderValue =await pages[0].innerText(stable.objects.stableList.panelHorseGender(horseRow))
+        expect(['Colt', 'Stallion'].findIndex(v => v === horseGenderValue)).not.toBe(-1)
+        await pages[0].click(stable.objects.stableList.panelMinimize(horseRow))
+      }  
+     }); 
+
     it('ZED-246 Breeding Service is not shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is not authenticated.', async () => {
       await pages[0].click(stable.objects.btnUserMenu)
       await pages[0].click(stable.objects.btnLogOut)
