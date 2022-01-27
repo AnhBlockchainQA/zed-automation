@@ -540,6 +540,15 @@ describe('Breeding And Stud', () => {
             (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(true);
     });
 
+    it('ZED-246 Breeding Service is not shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is not authenticated.', async () => {
+      await pages[0].click(stable.objects.btnUserMenu)
+      await pages[0].click(stable.objects.btnLogOut)
+      await pages[0].click(breedingAndStud.objects.btnBreeding) 
+      expect(await pages[0].isVisible(breedingAndStud.objects.lblAddHorseStudFarm)).toBe(false)
+      expect((await pages[0].isVisible(breedingAndStud.objects.btnSelectHorse)) &&
+            (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(false);
+            
+    });
   });
 
   describe('Stud', function() {
