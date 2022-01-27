@@ -14,9 +14,10 @@
   "card_number": "371449635398431",
   "card_expiration_date": "08/25",
   "card_cvc": "324",
-  "withdraw_Inprogress_message": "Transaction In Progress",
-  "copy_address_btn_text": "Address copied",
-  "buy_btn_text": "Buy Racehorse",
+  "currency_usd":"USD",
+  "withdraw_Inprogress_message":"Transaction In Progress",
+  "copy_address_btn_text":"Address copied",
+  "buy_btn_text":"Buy Racehorse",
   "transaction_success_message": "Congratulations!",
   "account_list": {
     "first_account": {

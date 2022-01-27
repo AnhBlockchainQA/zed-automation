@@ -43,7 +43,10 @@ class Marketplace {
       bloodlineButerinCheckBox: '#id-Buterin',
       bloodlineButerinLabel:'//label[@for=\'id-Buterin\']',
       genoTypeMinValue:`(//label[text()='Pacer']/following::input)[1]`,
-      genoTypeMaxValue:`(//label[text()='Pacer']/following::input)[2]`
+      genoTypeMaxValue:`(//label[text()='Pacer']/following::input)[2]`,
+      minPriceInput: `(//input[@step='1'])[1]`,
+      currency:`//div[text()='price (']`,
+      filterClose: `(//img[@class='close-icon'])[2]`
     } ,
     horseCardsPanel: {
       horsesCards: '//div[@class="marketplace-content "]/div/div',
