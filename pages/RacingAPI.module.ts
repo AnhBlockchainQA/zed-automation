@@ -37,14 +37,14 @@ class RacingAPI {
     races = races.filter((r:any) => r.fee === '0.0' && Object.keys(r.gates).length < 12)
 
     for (const r of races) {
-      let horses = await this.getEligibleHorse(r.race_id, r.class, 5)
-      if (horses.length === 0) continue
-
       const allGates = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
       const usedGates = Object.keys(r.gates).map(g => Number(g))
       const openGates = allGates.filter(g => !usedGates.includes(g))
-      const total = Math.min(horses.length, openGates.length)
+
+      let horses = await this.getEligibleHorse(r.race_id, r.class, openGates.length)
+      if (horses.length === 0) continue
       
+      const total = Math.min(horses.length, openGates.length)
       for (let i = 0; i < total; i++) {
           req = await this.apiContext(data.api.racing)
           res = await req.post('/api/v1/races/register', {
@@ -77,7 +77,7 @@ class RacingAPI {
 
   async getEligibleHorse(raceId: string, raceClass: string, count: number): Promise<any> {
     const allHorses = []
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < 5; i++) {
       const req = await this.apiContext(data.api.gateway)
       const res = await req.get(`/api/v1/races/${raceId}/available_race_horses`, {   
           params: {
@@ -91,6 +91,7 @@ class RacingAPI {
       if (horses.length === 0) break
       horses = horses.filter((h: any) => h.is_eligible)
       allHorses.push(...horses)
+      if (allHorses.length >= count) break
     }
     return allHorses
   }

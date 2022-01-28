@@ -1,3 +1,4 @@
+import { request } from 'playwright'
 import Authorization from '../../pages/Authorization.page';
 import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
@@ -651,23 +652,47 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-61 - Stud Service allows the user to move the male Genesis racehorse into Stud service with a duration is 1 day or 3 days or 7 days', async () => {
+      const data = require('../../fixtures/qa.json')
+      if (!data.stud.is_check) return
       await pages[0].click(stable.objects.imgStableProfile)
       await pages[0].click(stable.objects.btnStableFilterOptions)
       await pages[0].click(stable.objects.filtersPanel.gender)
       await pages[0].click(stable.objects.filtersPanel.genderColtLabel)
+      await pages[0].click(stable.objects.filtersPanel.genderStallionLabel)
       await pages[0].waitForSelector(stable.objects.loader)
-      const res = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
-      if (!res) return
+      let val = await stable.getHorseInStable(1, stable.getFirstAvailHorse)
+      if (!val) return
+      val = await pages[0].evaluate((e: any) => document.querySelector(e).firstChild.nodeValue, stable.objects.stableList.panelHorseName)
       await pages[0].click(stable.objects.stableList.panelHorseBreedLink)
       await pages[0].click(stable.objects.breedForm.ddlStudDuration)
-      await pages[0].click(stable.objects.breedForm.txt1Day)
-      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('1 Day')
-      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
-      await pages[0].click(stable.objects.breedForm.txt3Day)
-      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('3 Days')
-      await pages[0].click(stable.objects.breedForm.ddlStudDuration)
-      await pages[0].click(stable.objects.breedForm.txt7Day)
-      expect(await pages[0].innerText(stable.objects.breedForm.txtStudDuration)).toBe('7 Days')
+      await pages[0].click(`text='${data.stud.duration}'`)
+      const [tabs] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(stable.objects.breedForm.btnNext)
+      ]);
+      await tabs.waitForLoadState();
+      pages = tabs.context().pages();
+      await pages[1].click(auth.objects.btnMetamaskSign)
+      const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden' }).catch(() => true)
+      let duration = 0
+      switch (data.stud.duration) {
+        case '1 Day':
+          duration = 86400000
+          break;
+        case '3 Days':
+          duration = 259200000
+          break;
+        case '7 Days':
+          duration = 604800000
+      }
+      data.stud.name = val
+      data.stud.expiry = Date.now() + duration + 1800000
+      data.stud.is_check = false
+      const dt = JSON.stringify(data, null, 2);
+      fs.writeFile('./fixtures/qa.json', dt, err => {
+        if (err) console.error(err)
+      })
+      expect(loading).toBeNull()
     });
 
     it('ZED-62 - Stud Service allows the user to cancel the pushing process the racehorse into the In Stub', async () => {
@@ -686,8 +711,28 @@ describe('Breeding And Stud', () => {
       expect(breedForm).toBeNull()
     });
 
-    xit('ZED-63 - Stud Service is not showing the racehorse on the Stud Service page in the expiration after 1-3-7 days', async () => {
-      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
+    it('ZED-63 - Stud Service is not showing the racehorse on the Stud Service page in the expiration after 1-3-7 days', async () => {
+      const data = require('../../fixtures/qa.json')
+      if (!data.stud.is_check && Date.now() > data.stud.expiry) {
+        const req = await request.newContext({
+          baseURL: data.api.gateway
+        })
+        let res: any = await req.get('/api/v1/stud/horses?gen[]=1&gen[]=268', {
+          params: {
+            offset: 0,
+            horse_name: '',
+            sort_by: 'inserted_at_stud'
+          }
+        })
+        res = await res.json().catch(() => [])
+        res = res.findIndex((r: any) => r.hash_info.name === data.stud.name)
+        data.stud.is_check = true
+        const dt = JSON.stringify(data, null, 2);
+        fs.writeFile('./fixtures/qa.json', dt, err => {
+          if (err) console.error(err)
+        })
+        expect(res).toBe(-1)
+      }
     });
 
     it('ZED-64 - Stud Service does not allow the user to push In Stud if the racehorse is in Race', async () => {

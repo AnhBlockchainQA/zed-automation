@@ -86,8 +86,8 @@ class Stable {
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
       genderMareLabel: '//label[text()=\'Mare\']',
-      genderColtCheckBox: '#Colt',
       genderColtLabel: "text='Colt'",
+      genderStallionLabel: "text='Stallion'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
       breeds: '//span[text()=\'BREEDS\']',
@@ -142,9 +142,10 @@ class Stable {
         return i
       }
     }
+    await this.page.waitForTimeout(1000)
     if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
       await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-      return await this.getHorseInStable(i + 1, fnCondition)
+      return await this.getHorseInStable(i, fnCondition)
     }
   }
 
