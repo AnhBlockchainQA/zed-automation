@@ -162,5 +162,37 @@ describe('Marketplace', () => {
     const priceHorse = parseFloat(firstHorsePrice.substr(1));
     expect(priceHorse).toBeGreaterThanOrEqual(10);
   });
+
+
+  it('ZED-49 Marketplace allows the user to filter out the racehorse list by Color', async () => {
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    await pages[0].click(marketplace.objects.buyButton);
+    const horseColorCoat = await pages[0].innerText(marketplace.objects.horseColor)
+    const horseColor = (horseColorCoat.substr(2))
+    console.log(horseColor)
+    await pages[0].click(marketplace.objects.buyModalClose);
+    await pages[0].click(marketplace.objects.btnClose)
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.minPriceInput)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineCollapse);
+    await pages[0].click(marketplace.objects.filtersPanel.genderCollapse);
+    await pages[0].waitForTimeout(2000)
+    await pages[0].click(marketplace.objects.filtersPanel.colorSearch);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].type(marketplace.objects.filtersPanel.colorSearch,horseColor)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.firstCoat)
+    await pages[0].click(marketplace.objects.filtersPanel.firstCoat)
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.filterClose)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    await pages[0].click(marketplace.objects.buyButton);
+    const color= await pages[0].innerText(marketplace.objects.horseColor)
+    const coatColor = (color.substr(2))
+    expect(coatColor).toBe(horseColor)
+  });
     
 });

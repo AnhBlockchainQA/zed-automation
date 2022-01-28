@@ -33,6 +33,8 @@ class Marketplace {
     horseList: (id?: number) => id ? `[role='grid'] [role='gridcell']:nth-child(${id})`:`[role='grid'] [role='gridcell']`,
     btnClose: '.horse-inspector-modal img.close-icon',
     geoType: `(//div[@class='details-value'])[2]`,
+    horseColor: `//p[@class='horse-desc text-capitalize']//span[1]`,
+    buyModalClose: '.buy-modal-content .close-icon',
     filtersPanel: {
       genderFilly: '//label[@for=\'id-Filly\']',
       genderFillyCheckBox: '#id-Filly',
@@ -46,7 +48,14 @@ class Marketplace {
       genoTypeMaxValue:`(//label[text()='Pacer']/following::input)[2]`,
       minPriceInput: `(//input[@step='1'])[1]`,
       currency:`//div[text()='price (']`,
-      filterClose: `(//img[@class='close-icon'])[2]`
+      filterClose: '.f-header .close-icon',
+      colorSearch: `(//div[text()='Search'])[2]`,
+      firstCoat: `(//label[@class='primary-text secondary ']//span)[1]`,
+      colorSelect : (color: 'color') => `//span[text()=${color}]`,
+      colorExpand: `(//div[@class='f-title']//img)[3]`,
+      bloodlineCollapse:`(//div[@class='f-title']//img)[1]`,
+      genderCollapse:`(//div[@class='f-title']//img)[2]`,
+
     } ,
     horseCardsPanel: {
       horsesCards: '//div[@class="marketplace-content "]/div/div',
