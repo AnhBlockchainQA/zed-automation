@@ -541,7 +541,16 @@ describe('Breeding And Stud', () => {
             (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(true);
     });
 
-
+    it('ZED-246 Breeding Service is not shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is not authenticated.', async () => {
+      await pages[0].click(stable.objects.btnUserMenu)
+      await pages[0].click(stable.objects.btnLogOut)
+      await pages[0].click(breedingAndStud.objects.btnBreeding) 
+      expect(await pages[0].isVisible(breedingAndStud.objects.lblAddHorseStudFarm)).toBe(false)
+      expect((await pages[0].isVisible(breedingAndStud.objects.btnSelectHorse)) &&
+      (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(false);
+            
+    });
+    
     it('ZED- 248 Breeding Service is shown the user stable with a gender filtering when comes from "+ Add Horse > Select Horse" CTA card, showing only Stallion and Colt horses in the list', async () => {
       expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
       await pages[0].click(breedingAndStud.objects.btnSelectHorse)
@@ -562,15 +571,12 @@ describe('Breeding And Stud', () => {
       }  
      }); 
 
-    it('ZED-246 Breeding Service is not shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is not authenticated.', async () => {
-      await pages[0].click(stable.objects.btnUserMenu)
-      await pages[0].click(stable.objects.btnLogOut)
-      await pages[0].click(breedingAndStud.objects.btnBreeding) 
-      expect(await pages[0].isVisible(breedingAndStud.objects.lblAddHorseStudFarm)).toBe(false)
-      expect((await pages[0].isVisible(breedingAndStud.objects.btnSelectHorse)) &&
-            (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(false);
-            
-    });
+    it('ZED-249 Breeding Service are shown the number of filters groups selected by the user', async () => {
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      await pages[0].click(breedingAndStud.objects.btnSelectHorse)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      expect (await pages[0].innerText(breedingAndStud.objects.lblFilterCounter)).toBe('1')        
+    });   
   });
 
   describe('Stud', function() {

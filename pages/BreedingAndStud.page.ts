@@ -49,6 +49,7 @@ class BreedingAndStud {
     btnBreed: '.dedicate-horse > div > button',
     btnLoadMore: '.more-offspring-button',
     btnStableFilterOptions: '.filters-btn',
+    lblFilterCounter: '//div[@class=\'filters-btn \']//div[1]',
     ddlStudSortBy: '(//div[contains(@class,\'z-select__value-container z-select__value-container--has-value\')])[2]',
     ddlStudSortByRecentlyListed: '//div[text()=\'Recently Listed\']',
     ddlStudSortByExpiringSoon: '//div[text()=\'Expiring Soon\']',
