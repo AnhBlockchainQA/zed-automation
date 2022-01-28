@@ -530,8 +530,15 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].url()).toContain('select-mate');
     });
 
-    xit('ZED-216 - Breeding Horse Details Panel shown the - icon as a close link action of the collapse section and closes it after a click', async () => {
-      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
+    it('ZED-216 - Breeding Horse Details Panel shown the - icon as a close link action of the collapse section and closes it after a click', async () => {
+      expect(breedingAndStud.objects.studList.HorseList.length).not.toEqual(0)
+      const horsesList= await pages[0].locator(breedingAndStud.objects.studList.HorseList)
+      await horsesList.nth(1).click()
+      await pages[0].waitForTimeout(1000)
+      expect(await horsesList.nth(1).getAttribute('class')).toContain('panel open')
+      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(2)) 
+      await pages[0].waitForTimeout(1000)
+      expect(await horsesList.nth(1).getAttribute('class')).toContain('panel')
     });
 
     it('ZED-245 Breeding Service is shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is authenticated.', async () => {
