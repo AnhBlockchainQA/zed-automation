@@ -15,8 +15,11 @@ class BreedingAndStud {
     tfSearch: '.search-input > .search',
     btnClearSearch: '.search-input .icn',
     lstHorses: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',
+    horseList:(id?: number) => id ? `button.panel__label .label-content:nth-child(${id})` : 'button.panel__label .label-content',
     txtHorseName: (id: number) => `.panel:nth-child(${id}) .stud`,
+    firstHorseName: `(//div[@class='h-img-name d-flex']//div)[2]`,
     lblHorseName: `(//div[contains(@class,'primary-text stud')])[2]`,
+    divPanelFirstRow:`(//button[@role='tab']//div)[1]`,
     divHorsePanel: `(//div[@class='horse-container']/following-sibling::div)[2]`,
     lblOwnerNameAtStud: `//a[contains(@class,'overline-text bold')]`,
     lblPanelDate: '.panel.open .date-key .date',
@@ -76,6 +79,8 @@ class BreedingAndStud {
       HorseList: '(//div[@role=\'tabpanel\'])',
       horseCard: '(//div[@class=\'label-content\'])[1]',
       timeLeftValue: '(//div[@class=\'time\']//div)[2]',
+      offspringValue:`(//div[@class='offspring-info']//div)[1]`,
+      btnMinimize:`(//div[@class='name-properties']//img)[1]`,
       lblStableValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[2]/div[1]`,
       lblHorseNmValue: (id: number) =>`(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[1]`,
       lblTimeLeftValue:(id: number) => `(//div[@class="label-content"])[${id}]/div[2]/div[2]`,
@@ -150,7 +155,7 @@ class BreedingAndStud {
     await this.page.fill(this.objects.tfSearch, input)
     await this.page.waitForTimeout(2000)
     await this.page.waitForSelector(this.objects.loader, { state: 'hidden', timeout: 30000 })
-    const result = await this.page.innerText(this.objects.txtHorseName(1), { timeout: 1000 }).catch(() => null)
+    const result = await this.page.innerText(this.objects.firstHorseName, { timeout: 1000 }).catch(() => null)
     if (!result) {
       await this.page.click(this.objects.btnClearSearch)
       await this.page.waitForSelector(this.objects.loader)
@@ -161,7 +166,7 @@ class BreedingAndStud {
   }
 
   async getHorseWithOffspring(startId: number): Promise<any> {
-    let res: any = await this.page.click(this.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+    let res: any = await this.page.click(this.objects.horseList(startId), { timeout: 10000 }).catch(() => null)
     if (res !== null) {
       res = await this.page.innerText(this.objects.lblPanelValue(9))
       if (res === '0')
@@ -171,7 +176,7 @@ class BreedingAndStud {
   }
 
   async getHorseWithNoOffspring(startId: number): Promise<any> {
-    let res: any = await this.page.click(this.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+    let res: any = await this.page.click(this.objects.horseList(startId), { timeout: 10000 }).catch(() => null)
     if (res !== null) {
       res = await this.page.innerText(this.objects.lblPanelValue(9))
       if (res !== '0')

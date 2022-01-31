@@ -140,7 +140,7 @@ describe('Breeding And Stud', () => {
       let previousHeight = await pages[0].evaluate('document.body.scrollHeight');
       await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)');
       await pages[0].waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
-      await pages[0].waitForSelector(breedingAndStud.objects.loader, { state: 'hidden', timeout: 20000 })
+     await pages[0].waitForSelector(breedingAndStud.objects.lblFooter)
       expect(await pages[0].isVisible(breedingAndStud.objects.lblFooter)).toBe(true);
     });
 
@@ -229,7 +229,7 @@ describe('Breeding And Stud', () => {
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
       var feeList = []
       var isHighestFeeFirst = true;
-      for(let horseRow =1 ;horseRow<= horsesList.length; horseRow++){
+      for(let horseRow =2 ;horseRow<= horsesList.length; horseRow++){
         const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(horseRow)) 
         feeList.push(parseFloat(StudFee.substring(1,StudFee.length)))
       }
@@ -251,7 +251,7 @@ describe('Breeding And Stud', () => {
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
       var feeList = []
       var isLowestFeeFirst = true;
-      for(let horseRow =1 ;horseRow<= horsesList.length; horseRow++){
+      for(let horseRow =2 ;horseRow<= horsesList.length; horseRow++){
         const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(horseRow)) 
         feeList.push(parseFloat(StudFee.substring(1,StudFee.length)))
       }
@@ -264,18 +264,18 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-197 - Breeding allows the user to SEARCH and the result match with the text/chars entered', async () => {
-      const horseName = await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(1))
+      const horseName = await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(2))
       await pages[0].fill(breedingAndStud.objects.tfSearch,horseName)
       await pages[0].waitForTimeout(1000)
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horsesList.length).toEqual(1)
-      expect(await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(1))).toBe(horseName) 
+      expect(await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(2))).toBe(horseName) 
     });
 
     it('ZED-198 - Breeding racehorse list is showing the stable name of each horse', async () => {
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
-      for(let i=1 ;i<= horsesList.length;i++){
+      for(let i=2 ;i<= horsesList.length;i++){
        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblStableValue(i))).not.toBe('');
        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblStableValue(i))).toBeTruthy();
       }
@@ -303,7 +303,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-200 - Breeding racehorse list is showing the STUD FEE per horse', async () => {
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
-      for(let i=1 ;i<= horsesList.length;i++){
+      for(let i=2 ;i<= horsesList.length;i++){
        const StudFee = await pages[0].innerText(breedingAndStud.objects.studList.lblStudFeeValue(i))
        expect(StudFee).not.toBe('')
        expect(StudFee).toContain('$')
@@ -313,7 +313,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-201 - Breeding racehorse list is showing the Horse Name', async () => {
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
-      for(let i=1 ;i<= horsesList.length;i++){
+      for(let i=2 ;i<= horsesList.length;i++){
        const horseName = await pages[0].innerText(breedingAndStud.objects.studList.lblHorseNmValue(i))
        expect(horseName).not.toBe('');
        expect(horseName).toBeTruthy();
@@ -323,7 +323,7 @@ describe('Breeding And Stud', () => {
     it('ZED-202 - Breeding racehorse list is showing the GEN + BLOODLINE below the Horse Name', async () => {
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
-      for(let horseRow=1 ;horseRow<= horsesList.length;horseRow++){
+      for(let horseRow=2 ;horseRow<= horsesList.length;horseRow++){
        const genBoodlineValue = await pages[0].innerText(breedingAndStud.objects.studList.lblGenBoodlineValue(horseRow))
        expect(genBoodlineValue).not.toBe('');
        var genBoodlineIndex = genBoodlineValue.split('•')
@@ -458,7 +458,7 @@ describe('Breeding And Stud', () => {
       for(let horseRow = 2; horseRow<= parseInt(horseCount[1]); horseRow++){
       await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
       await pages[0].waitForTimeout(1000)
-      const offspringValue = await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringValue(horseRow))
+      const offspringValue = await pages[0].innerText(breedingAndStud.objects.studList.offspringValue)
       if(parseInt(offspringValue) === 0 ){
         expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('3 of 3 left')
       }else if(parseInt(offspringValue) === 1 ){
@@ -469,7 +469,6 @@ describe('Breeding And Stud', () => {
       }else{
         expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('0 of 3 left')
       }
-      await pages[0].click(breedingAndStud.objects.studList.panelMinimize(horseRow-1)) 
       }
 
     });
@@ -589,7 +588,7 @@ describe('Breeding And Stud', () => {
   describe('Stud', function() {
     it('ZED-57 - Stud Service allows the user to BREED racehorse while racehorse is in STUD', async () => {
       await pages[0].click(breedingAndStud.objects.btnBreeding)
-      let res = await pages[0].waitForSelector(breedingAndStud.objects.lstHorses(1)).catch(() => null)
+      let res = await pages[0].waitForSelector(breedingAndStud.objects.divPanelFirstRow).catch(() => null)
       if (res) {
         await res.click()
         const horseAtStud = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
@@ -624,14 +623,14 @@ describe('Breeding And Stud', () => {
       expect(loading).toBeNull()
       await pages[0].goto('https://goerli-test.zed.run/stud')
       await pages[0].waitForLoadState()
-      await pages[0].waitForTimeout(2000)
+      await pages[0].waitForTimeout(10000)
       const horseAtStud = await breedingAndStud.searchHorseWithRetries(horseAtStable, 10)
       expect(horseAtStud).toBe(horseAtStable)
     });
 
     it('ZED-59 - Stud Service is showing the racehorse details', async () => {
       await pages[0].click(breedingAndStud.objects.btnBreeding)
-      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      await pages[0].click(breedingAndStud.objects.lstHorses(2))
       expect(await pages[0].innerText(breedingAndStud.objects.lblHorseName)).not.toBe('')
       expect(await pages[0].innerText(breedingAndStud.objects.lblPanelDate)).not.toBe('')
       const link = await pages[0].getAttribute(breedingAndStud.objects.lblPanelLink, 'href')
@@ -659,7 +658,7 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
       await pages[0].click(breedingAndStud.objects.filtersPanel.gender)
       await pages[0].click(breedingAndStud.objects.filtersPanel.genderColtLabel)
-      await pages[0].click(breedingAndStud.objects.lstHorses(1))
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       const breedCount = await pages[0].waitForSelector(breedingAndStud.objects.lblPanelValue(10))
       expect(await breedCount.innerText()).toContain('of 3 left')
     });
@@ -1002,15 +1001,15 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-141 - Offspring is showing `Your Colt has no offsprings yet` when the horse has no descendant/offspring horses associated', async () => {
-      let res = await breedingAndStud.getHorseWithNoOffspring(1)
+      let res = await breedingAndStud.getHorseWithNoOffspring(2)
       if (!res) return
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       res = await pages[0].waitForSelector(breedingAndStud.objects.txtNoOffspring)
       expect(await res.innerText()).toBe('Your Colt has no offspring yet')
     });
 
     it('ZED-142 - Offspring is showing the `Breed` button when the colt has no offsprings yet and allows to redirect to the action.', async () => {
-      let res = await breedingAndStud.getHorseWithNoOffspring(1)
+      let res = await breedingAndStud.getHorseWithNoOffspring(2)
       if (!res) return
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
       res = await pages[0].waitForSelector(breedingAndStud.objects.lblHorseHeader)
@@ -1049,7 +1048,7 @@ describe('Breeding And Stud', () => {
 
     it('ZED-145 - Offspring is showing the `LOAD MORE` button when the stable/owner has more than 6 horses shown in the section', async () => {
       const checkLoadMoreButton = async (startId: number): Promise<any> => {
-        let res = await pages[0].click(breedingAndStud.objects.lstHorses(startId), { timeout: 10000 }).catch(() => null)
+        let res = await pages[0].click(breedingAndStud.objects.horseList(startId), { timeout: 10000 }).catch(() => null)
         if (res === null) return
         res = await pages[0].innerText(breedingAndStud.objects.lblPanelValue(9))
         if (Number(res) < 7)
@@ -1067,7 +1066,7 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-146 - Offspring is showing `6 of 14 offsprings` as a counter of the stable/owner horses on the top left section of the card', async () => {
-      let res = await breedingAndStud.getHorseWithOffspring(1)
+      let res = await breedingAndStud.getHorseWithOffspring(2)
       if (!res) return
       await pages[0].click(breedingAndStud.objects.divHorsePanel)
       res = await pages[0].waitForSelector(breedingAndStud.objects.lblProfileValue(6))
@@ -1087,13 +1086,14 @@ describe('Breeding And Stud', () => {
 
     it('ZED-148 - Horse details are showing the horse name on top of the section in a big font size', async () => {
       const horseName = await pages[0].innerText(breedingAndStud.objects.lblHorseName)
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       const horseHeader = await pages[0].innerText(breedingAndStud.objects.lblHorseHeader)
       expect(horseHeader).toBe(horseName)
     });
 
     it('ZED-149 - Horse details are showing the `Share` link/icon on the top/right section of the top', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.btnShare)
       const urlShared = await pages[0].getAttribute(breedingAndStud.objects.textShareUrl, 'value')
@@ -1105,7 +1105,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-150 - Horse details is showing the horse render in the center of the top section', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       const divHorseProfile = await pages[0].waitForSelector(breedingAndStud.objects.divHorseProfile).catch(() => false)
       expect(divHorseProfile).not.toBeFalsy()
@@ -1114,14 +1115,16 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-151 - Horse details are showing the `view 3D` icon/link to enable the 3D rendering', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       const imgHorse3D = await pages[0].waitForSelector(breedingAndStud.objects.imgHorse3D)
       expect(await imgHorse3D.isEnabled()).toBeTruthy()
     });
 
     it('ZED-152 - Horse details allow the user to see the horse render in 3D modal after click on the `view 3D` link/icon', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse3D)
       const divView3D = await pages[0].waitForSelector(breedingAndStud.objects.divView3D).catch(() => false)
@@ -1129,7 +1132,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-153 - Horse details allow the user to close 3D view after click on `X` button of the top right side of the modal.', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse3D)
       await pages[0].waitForSelector(breedingAndStud.objects.divView3D)
@@ -1141,7 +1145,8 @@ describe('Breeding And Stud', () => {
     it('ZED-154 - Horse details allow the user to use to mouse move (left-right) event to view the 3D rendering of the horse', async () => {      
       const pathImgBefore = './imageTemp/screen-before.png'
       const pathImgAfter = './imageTemp/screen-after.png'
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse3D)
       const currentView = await pages[0].waitForSelector(breedingAndStud.objects.divView3D)
@@ -1165,7 +1170,8 @@ describe('Breeding And Stud', () => {
 
     it('ZED-155 - Horse details is showing the Stable Owner below the horse render section', async () => {
       const nameAtStable = await pages[0].innerText(breedingAndStud.objects.stableOwnerName)
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       const nameAtStud = await pages[0].innerText(breedingAndStud.objects.lblOwnerNameAtStud)
       if (nameAtStud === nameAtStable) {
@@ -1180,7 +1186,7 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-156 - Horse details has showing the BLOODLINE', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       const panelBloodline = await pages[0].innerText(breedingAndStud.objects.horseBloodline)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(1))).toBe('BLOODLINE')
@@ -1190,7 +1196,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-157 - Horse details has showing the GEN', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelSubGen = await pages[0].innerText(breedingAndStud.objects.horseGen)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(2))).toBe('GEN')
@@ -1202,7 +1209,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-158 - Horse details has showing the GENDER', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelGender = await pages[0].innerText(breedingAndStud.objects.horseGender)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(3))).toBe('GENDER')
@@ -1212,7 +1220,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-159 - Horse details has showing the COAT', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelCoat = await pages[0].innerText(breedingAndStud.objects.horseCoat)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblProfileProperty(4))).toBe('COAT')
@@ -1222,7 +1231,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-160 - Horse details has showing the number of RACES', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelRaces = await pages[0].innerText(breedingAndStud.objects.horseRaces)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblCareerProperty(1))).toBe('RACES')
@@ -1233,7 +1243,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-161 - Horse details has showing the number of CAREER', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelCareer = await pages[0].innerText(breedingAndStud.objects.horseCareer)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblCareerProperty(2))).toBe('CAREER')
@@ -1246,7 +1257,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-162 - Horse details has showing the percentage WIN RATE', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelWinRate = await pages[0].innerText(breedingAndStud.objects.horseWinRate)
       await pages[0].click(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblCareerProperty(3))).toBe('WIN RATE')
@@ -1258,7 +1270,8 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-163 - Horse details has showing the OFFSPRING left', async () => {
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       const panelOffspring = await pages[0].innerText(breedingAndStud.objects.horseOffSpringInfo)
       const panelSubOffspring = await pages[0].innerText(breedingAndStud.objects.horseoffSpring)
       await pages[0].click(breedingAndStud.objects.imgHorse)
@@ -1284,8 +1297,8 @@ describe('Breeding And Stud', () => {
       await pages[0].click(stable.objects.btnUserMenu)
       await pages[0].click(stable.objects.btnLogOut)
       await pages[0].click(breedingAndStud.objects.btnBreeding)
-      await pages[0].click(breedingAndStud.objects.lstHorses(1))
-      await pages[0].click(breedingAndStud.objects.divHorsePanel)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       expect(await pages[0].innerText(breedingAndStud.objects.lblInfoLeft)).not.toBe('Breed')
     });
 
