@@ -93,7 +93,6 @@ describe('Marketplace', () => {
     await marketplace.verifyBloodLineFilter('Nakamoto')
     expect(await pages[0].isChecked(marketplace.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
     await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel) 
-
     await pages[0].click(marketplace.objects.filtersPanel.bloodlineButerinLabel)
     await pages[0].waitForSelector(marketplace.objects.horseCardsPanel.horsesCards)
     await pages[0].waitForTimeout(10000)
@@ -193,6 +192,27 @@ describe('Marketplace', () => {
     const color= await pages[0].innerText(marketplace.objects.horseColor)
     const coatColor = (color.substr(2))
     expect(coatColor).toBe(horseColor)
+  });
+
+  it('ZED-55 Marketplace allows the user to filter out the racehorse list by Gender/Bloodline (mixed filtering)', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.minPriceInput)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel) 
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.genderFilly) 
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.filterClose)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    await pages[0].waitForTimeout(3000)
+    let bloodline =  await pages[0].innerText(marketplace.objects.bloodline)
+    expect(bloodline).toBe(data.bloodline)
+    let gender =  await pages[0].innerText(marketplace.objects.genderFilly)
+    expect(gender).toBe(data.gender)
   });
     
 });

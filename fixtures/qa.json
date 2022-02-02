@@ -16,6 +16,7 @@
   "card_cvc": "324",
   "currency_usd": "USD",
   "gender":"Filly",
+  "bloodline":"Nakamoto",
   "withdraw_Inprogress_message": "Transaction In Progress",
   "copy_address_btn_text": "Address copied",
   "buy_btn_text": "Buy Racehorse",
