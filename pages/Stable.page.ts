@@ -49,7 +49,7 @@ class Stable {
       panelHorseTimeLeft: '.panel.open .time-left > .primary-text',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
       panelMinimize: (id: number) => `(//img[@class=\'open-label\'])[${id}]`,
-    
+      
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',
@@ -74,6 +74,9 @@ class Stable {
     tooltipStableLink: '//div[@role=\'tooltip\']',
     loader: '.loader-container',
     transactionLoader: '.transaction-loading-modal',
+    bloodlineName: `(//div[text()='bloodline']/following-sibling::div)[1]`,
+    closeDetails: `(//div[@class='horse-properties']//img)[1]`,
+    gender: `(//div[text()='gender']/following-sibling::div)[1]`,
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
@@ -90,6 +93,7 @@ class Stable {
       genderStallionLabel: "text='Stallion'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
+      bloodlineLabel : (bloodline: 'bloodline') => `//label[text()='${bloodline}']`,
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
       breedGenesisLabel: '//label[text()=\'genesis\']'
