@@ -214,5 +214,33 @@ describe('Marketplace', () => {
     let gender =  await pages[0].innerText(marketplace.objects.genderFilly)
     expect(gender).toBe(data.gender)
   });
+
+  it('ZED-45 Marketplace allows the user to clear out the filter options on the racehorse list', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].click(marketplace.objects.marketPlaceFilter);
+    await pages[0].waitForTimeout(3000)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.minPriceInput)
+    await pages[0].click(marketplace.objects.filtersPanel.genderMare) 
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel)
+    await pages[0].waitForTimeout(1000) 
+    await pages[0].click(marketplace.objects.filtersPanel.colorSearch);
+    await pages[0].waitForTimeout(1000)
+    await pages[0].type(marketplace.objects.filtersPanel.colorSearch,data.horseColor)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.firstCoat)
+    await pages[0].click(marketplace.objects.filtersPanel.firstCoat)
+    await pages[0].click(marketplace.objects.filtersPanel.filterClose)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].innerText(marketplace.objects.noHorseFound)).toBe(data.nohorseFound)
+    await pages[0].click(marketplace.objects.clearFilters)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].click(marketplace.objects.horseList(1))
+    await pages[0].waitForTimeout(2000)
+    await pages[0].waitForSelector(marketplace.objects.buyButton);
+    await pages[0].click(marketplace.objects.buyButton);
+    const color= await pages[0].innerText(marketplace.objects.horseColor)
+    const coatColor = (color.substr(2))
+    expect(coatColor).not.toEqual(data.horseColor)
+  });
     
 });
