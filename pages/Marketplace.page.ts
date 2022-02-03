@@ -35,6 +35,8 @@ class Marketplace {
     geoType: `(//div[@class='details-value'])[2]`,
     horseColor: `//p[@class='horse-desc text-capitalize']//span[1]`,
     buyModalClose: '.buy-modal-content .close-icon',
+    bloodline: `(//div[@class='details-block']//div)[2]`,
+    genderFilly: `(//div[text()='Filly'])[1]`,
     filtersPanel: {
       genderFilly: '//label[@for=\'id-Filly\']',
       genderFillyCheckBox: '#id-Filly',
