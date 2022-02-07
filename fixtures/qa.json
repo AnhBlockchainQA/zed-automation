@@ -17,6 +17,8 @@
   "currency_usd": "USD",
   "gender":"Filly",
   "bloodline":"Nakamoto",
+  "nohorseFound":"No racehorses found",
+  "horseColor": "Colombo Spice",
   "withdraw_Inprogress_message": "Transaction In Progress",
   "copy_address_btn_text": "Address copied",
   "buy_btn_text": "Buy Racehorse",
