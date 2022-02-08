@@ -65,6 +65,26 @@ class Marketplace {
     horseCardsPanel: {
       horsesCards: '//div[@class="marketplace-content "]/div/div',
       horseGenGenderBloodlineValue : (id: number) => `//div[@role='gridcell'][${id}]/div/div[2]/p[1]`
+    },
+    footerContent:{
+      copyWright: `//div[text()='Copyright ©Z']`,
+      termsOfService: `//a[@class='primary-text secondary']`,
+      privacyPolicy: `(//a[contains(@class,'primary-text secondary')])[3]`,
+      ccpa: `(//div[@class='nav-part']//a)[3]`,
+      ageLimit: `//span[text()='18+']`,
+      zedIcon: `(//img[@class='icon icon-zed'])[1]`,
+      zedLink: `(//a[@class='icon-part'])[1]`,
+      twitch: `(//img[@class='icon icon-twitch'])[1]`,
+      twitchLink: `(//a[@class='icon-part'])[2]`,
+      discord: `(//img[@class='icon icon-discord'])[1]`,
+      discordLink: `(//a[@class='icon-part'])[3]`,
+      telegram: `(//img[@class='icon icon-telegram'])[1]`,
+      telegramLink: `(//a[@class='icon-part']/following-sibling::a)[3]`,
+      twitter: `(//img[@class='icon icon-twitter'])[1]`,
+      youtube: `(//img[@class='icon icon-youtube'])[1]`,
+      facebook: `(//img[@class='icon icon-facebook'])[1]`,
+      instergram: `(//img[@class='icon icon-instagram'])[1]`,
+      arrowUp: `//img[@alt='arrow-up']`,
     }
   };
 
