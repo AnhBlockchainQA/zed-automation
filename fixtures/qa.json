@@ -23,6 +23,13 @@
   "copy_address_btn_text": "Address copied",
   "buy_btn_text": "Buy Racehorse",
   "transaction_success_message": "Congratulations!",
+  "privacyPolicy": "/privacy",
+  "ccpa": "/ccpa",
+  "termsOfService": "/terms",
+  "zedLink": "https://community.zed.run",
+  "twitchLink": "https://www.twitch.tv/zed_run",
+  "discordLink": "https://discord.gg/zedrun",
+  "telegramLink": "https://t.me/joinchat/Tq0wUgj_L4zQ4a_m",
   "account_list": {
     "first_account": {
       "email": "zedrun@1secmail.net",

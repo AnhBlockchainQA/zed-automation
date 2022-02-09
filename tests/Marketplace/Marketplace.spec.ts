@@ -242,5 +242,45 @@ describe('Marketplace', () => {
     const coatColor = (color.substr(2))
     expect(coatColor).not.toEqual(data.horseColor)
   });
+
+  it('ZED-50 Marketplace footer content verification', async () => {
+    await pages[0].waitForSelector(marketplace.objects.firstHorseCard)
+    await pages[0].click(marketplace.objects.marketPlaceFilter)
+    await pages[0].waitForTimeout(3000)
+    await pages[0].waitForSelector(marketplace.objects.filtersPanel.minPriceInput)
+    await pages[0].click(marketplace.objects.filtersPanel.genderMare) 
+    await pages[0].waitForTimeout(1000)
+    await pages[0].click(marketplace.objects.filtersPanel.bloodlineNakamotoLabel)
+    await pages[0].waitForTimeout(1000) 
+    await pages[0].click(marketplace.objects.filtersPanel.filterClose)
+    await pages[0].waitForTimeout(1000)
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.copyWright)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.privacyPolicy)).toBe(true);
+    const privacyPolicyLink = await pages[0].getAttribute(marketplace.objects.footerContent.privacyPolicy, 'href')
+    expect(privacyPolicyLink).toContain(data.privacyPolicy);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.ccpa)).toBe(true);
+    const ccpaLink = await pages[0].getAttribute(marketplace.objects.footerContent.ccpa, 'href')
+    expect(ccpaLink).toContain(data.ccpa);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.termsOfService)).toBe(true);
+    const termsOfServiceLink = await pages[0].getAttribute(marketplace.objects.footerContent.termsOfService, 'href')
+    expect(termsOfServiceLink).toContain(data.termsOfService);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.ageLimit)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.zedIcon)).toBe(true);
+    const zedLink = await pages[0].getAttribute(marketplace.objects.footerContent.zedLink, 'href')
+    expect(zedLink).toContain(data.zedLink);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.twitch)).toBe(true);
+    const twitchLink = await pages[0].getAttribute(marketplace.objects.footerContent.twitchLink, 'href')
+    expect(twitchLink).toContain(data.twitchLink);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.discord)).toBe(true);
+    const discordLink = await pages[0].getAttribute(marketplace.objects.footerContent.discordLink, 'href')
+    expect(discordLink).toContain(data.discordLink);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.telegram)).toBe(true);
+    const telegramLink = await pages[0].getAttribute(marketplace.objects.footerContent.telegramLink, 'href')
+    expect(telegramLink).toContain(data.telegramLink);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.twitter)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.youtube)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.facebook)).toBe(true);
+    expect(await pages[0].isVisible(marketplace.objects.footerContent.instergram)).toBe(true);
+});
     
 });
