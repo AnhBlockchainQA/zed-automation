@@ -215,8 +215,26 @@ describe('Breeding And Stud', () => {
     expect(horsesList.length).toBeGreaterThanOrEqual(0)
     });
 
-    xit('ZED-194 - Breeding allows the user to SORT by Expired Soon', async () => {
-      expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
+    it('ZED-194 - Breeding allows the user to SORT by Expired Soon', async () => {
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortBy)
+      await pages[0].waitForSelector(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].click(breedingAndStud.objects.ddlStudSortByExpiringSoon)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      var timeList = []
+      var isLowestTimeFirst = true;
+      for(let horseRow =2 ;horseRow<= horsesList.length; horseRow++){
+        const timeLeft = await pages[0].innerText(breedingAndStud.objects.studList.timeLeft(horseRow)) 
+        timeList.push(parseInt(timeLeft.length))
+        }
+      for(let timeRow = 0; timeRow < timeList.length ; timeRow++) {
+        if (timeList[timeRow] > timeList[timeRow+1]){ 
+          isLowestTimeFirst = false;
+            break;}
+       } 
+      expect(await isLowestTimeFirst).toBe(true);
     });
 
     it('ZED-195 - Breeding allows the user to SORT by Highest Price', async () => {

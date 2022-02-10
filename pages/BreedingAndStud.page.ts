@@ -88,6 +88,7 @@ class BreedingAndStud {
       lblGenBoodlineValue: (id: number) => `(//div[@class="label-content"])[${id}]/div[1]/div[2]/div[2]`,
       collapsedPanelOpen: (id: number) => `(//div[@class="label-content"])[${id}]`,
       panelMinimize: (id: number) =>`(//img[@class=\'open-label\'])[${id}]`,
+      timeLeft: (id: number) =>`(//div[@class='primary-text date'])[${id}]`,
       btnSelectMate: (id: number) =>`(//button[contains(@class,"primary-btn md")])[${id}]`,
       lblGenderValue: (id: number) => `(//div[text()='gender']/following-sibling::div)[${id}]`,
       txtStudFeeBox: (id: number) => `(//div[@class='price-input']//div)[${id}]`,
