@@ -1320,5 +1320,21 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].innerText(breedingAndStud.objects.lblInfoLeft)).not.toBe('Breed')
     });
 
+    it('ZED-268 - User should be able to filter Horse by Colour', async () => {
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      const horseColour = await pages[0].innerText(breedingAndStud.objects.horseColour)
+      console.log(horseColour)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.colour);
+      await pages[0].type(breedingAndStud.objects.filtersPanel.colourSearch,horseColour)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.colorSelect(horseColour))
+      await pages[0].click(breedingAndStud.objects.filtersPanel.filterClose);
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      const colour = await pages[0].innerText(breedingAndStud.objects.horseColour)
+      expect(horseColour).toBe(colour)
+    })
+
   });
 });
