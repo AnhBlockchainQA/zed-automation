@@ -74,6 +74,7 @@ class BreedingAndStud {
     horseWinRate: `(//div[text()='win rate']/following-sibling::div)[1]`,
     horseOffSpringInfo: `(//div[@class='offspring-info']//div)[1]`,
     horseoffSpring: `(//div[@class='primary-text']/following-sibling::div)[1]`,
+    horseColour: `//span[@class='primary-text']`,
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
@@ -119,6 +120,10 @@ class BreedingAndStud {
       zedGeneration: '//div[@class=\'f-part zed-generation\']',
       zedGenerationMin: '//div[@class=\'f-part zed-generation\']//input[1]',
       zedGenerationMax: '//div[@class=\'f-part zed-generation\']//input[2]',
+      colour: `//span[text()='COLOUR']`,
+      colourSearch: `(//input[@placeholder='Search'])[3]`,
+      colorSelect : (color: 'color') => `//label[text()='${color}']`,
+      filterClose: `(//div[@class='title-wrapper']//img)[2]`,
     } ,
     selectMate: {
       lblBreeding: '//h2[text()="breeding"]',
