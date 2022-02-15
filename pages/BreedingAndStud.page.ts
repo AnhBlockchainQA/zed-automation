@@ -124,6 +124,8 @@ class BreedingAndStud {
       colourSearch: `(//input[@placeholder='Search'])[3]`,
       colorSelect : (color: 'color') => `//label[text()='${color}']`,
       filterClose: `(//div[@class='title-wrapper']//img)[2]`,
+      colourGroup: `//span[text()='COLOUR GROUP']`,
+      mysticalColourGroup: `//label[text()='Mystical']`
     } ,
     selectMate: {
       lblBreeding: '//h2[text()="breeding"]',
