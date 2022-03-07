@@ -125,7 +125,8 @@ class BreedingAndStud {
       colorSelect : (color: 'color') => `//label[text()='${color}']`,
       filterClose: `(//div[@class='title-wrapper']//img)[2]`,
       colourGroup: `//span[text()='COLOUR GROUP']`,
-      mysticalColourGroup: `//label[text()='Mystical']`
+      mysticalColourGroup: `//label[text()='Mystical']`,
+      colourRarity: `//span[text()='COLOUR RARITY']`
     } ,
     selectMate: {
       lblBreeding: '//h2[text()="breeding"]',
