@@ -377,6 +377,21 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
+      it('ZED-263 Select mate option should not be available for the Female Horses when user sign in', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.gender)
+        await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+        await pages[0].click(stable.objects.filtersPanel.genderMareLabel)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        await pages[0].waitForSelector(stable.objects.loader)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(1000)
+        expect(await pages[0].isVisible(stable.objects.stableList.selectMateBtn)).toBe(false)
+       });
+
     });
 
 

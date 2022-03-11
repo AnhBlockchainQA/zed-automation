@@ -49,7 +49,7 @@ class Stable {
       panelHorseTimeLeft: '.panel.open .time-left > .primary-text',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
       panelMinimize: (id: number) => `(//img[@class=\'open-label\'])[${id}]`,
-      
+      selectMateBtn: `//button[text()='Select Mate']`
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',
@@ -96,7 +96,8 @@ class Stable {
       bloodlineLabel : (bloodline: 'bloodline') => `//label[text()='${bloodline}']`,
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
-      breedGenesisLabel: '//label[text()=\'genesis\']'
+      breedGenesisLabel: '//label[text()=\'genesis\']',
+      stableFilterClose: `(//div[@class='title-wrapper']//img)[2]`,
     },
     breedForm: {
       formBreed: '.breed-form',
