@@ -6,7 +6,7 @@ import { BrowserContext } from 'playwright';
 import BreedingAndStud from '../../pages/BreedingAndStud.page';
 import Stable from '../../pages/Stable.page';
 import Racing from '../../pages/Racing.module';
-import fs from 'fs';
+import fs, { watchFile } from 'fs';
 
 describe('Breeding And Stud', () => {
   let auth: Authorization;
@@ -1362,6 +1362,22 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.filtersPanel.colorSelect(horseColour))
       expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colourGroup)) .toBe(false);
       expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colourRarity)) .toBe(false);
+     })
+
+     it('ZED-272 When the user select Colour Group or Colour Rarity it disables the Colour Selection', async () => {
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.colourGroup)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.mysticalColourGroup)
+      expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colour)) .toBe(false);
+      await pages[0].click(breedingAndStud.objects.filtersPanel.mysticalColourGroup)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.colourRarity)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.superCoatColourRarity)
+      expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colour)) .toBe(false);
+      await pages[0].click(breedingAndStud.objects.filtersPanel.superCoatColourRarity)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.commonColourRarity)
+      expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colour)) .toBe(false);
      })
 
   });

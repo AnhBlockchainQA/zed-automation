@@ -126,7 +126,9 @@ class BreedingAndStud {
       filterClose: `(//div[@class='title-wrapper']//img)[2]`,
       colourGroup: `//span[text()='COLOUR GROUP']`,
       mysticalColourGroup: `//label[text()='Mystical']`,
-      colourRarity: `//span[text()='COLOUR RARITY']`
+      colourRarity: `//span[text()='COLOUR RARITY']`,
+      superCoatColourRarity: `//label[@for='supercoat-switcher']//div[@class='line']`,
+      commonColourRarity: `//label[normalize-space()='Common']`
     } ,
     selectMate: {
       lblBreeding: '//h2[text()="breeding"]',
