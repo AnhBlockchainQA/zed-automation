@@ -36,6 +36,11 @@
                           "Cyclamen","Electric Violet","Dark Byzantium","Byzantine",
                           "Byzantium", "Destiny", "Baker-Miller Pink","Fandango",
                           "Fiery Rose","Suave Mauve"],
+ "rareColourList" : ["Alice Blue","Cadet Blue","Powder Blue","Royal Blue",
+                            "Absolute Zero","Rosy Brown","Antique Brass","Chartreuse",
+                            "Sir Aquamarine","Ghost White","White Smoke","Coral Wave",
+                            "Firebrick","Golden Rod","Burlywood","Misty Rose",
+                            "Pale Violet"],
   "account_list": {
     "first_account": {
       "email": "zedrun@1secmail.net",
