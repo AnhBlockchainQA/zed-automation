@@ -1351,6 +1351,21 @@ describe('Breeding And Stud', () => {
       expect(data.mysticalColourList).toContain(colour)
      })
 
+     it('ZED-270 User should be able to filter Horse by Colour Rarity', async () => {
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.colourRarity);
+      await pages[0].click (breedingAndStud.objects.filtersPanel.rareRarity)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.filterClose);
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      const colour = await pages[0].innerText(breedingAndStud.objects.horseColour)
+      expect(data.rareColourList).toContain(colour)
+     })
+
      it('ZED-271 When the user select Colours for filter it disables Colour Group and Colour Rarity', async () => {
       await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
