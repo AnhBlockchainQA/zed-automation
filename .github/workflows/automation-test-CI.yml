@@ -3,7 +3,7 @@ on:
   repository_dispatch:
   push:
     branches:
-      - lipsa/runsuite
+      - master
     tags:
       - '*.*.*'
   schedule:
@@ -35,7 +35,6 @@ jobs:
           echo "repository '${{ github.event.client_payload.repository }}' "
           npm ci
           npm install
-          npm update
         env:
           CI: true
       - name: Use Commit ID
