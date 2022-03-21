@@ -89,7 +89,7 @@ jobs:
         if: always()
         uses: swinton/screenshot-website@v1.x
         with:
-          source: https://vhslab.github.io/qa-automationtest/
+          source: https://congenial-meme-7cbdcde1.pages.github.io/
           destination: allure.png
           full-page: true
       - name: Upload Report Screenshot to Slack Channel
