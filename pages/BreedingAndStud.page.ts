@@ -14,6 +14,8 @@ class BreedingAndStud {
     btnBreeding: 'text=\'BREEDING\'',
     tfSearch: '.search-input > .search',
     btnClearSearch: '.search-input .icn',
+    btnClearFilters: `//button[@class='clear-filters-btn']`,
+    btnCloseModalBreedingDecay: `//button[@class='sc-hUpaCq xdrCX secondary-btn']`,
     lstHorses: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',
     horseList:(id?: number) => id ? `button.panel__label .label-content:nth-child(${id})` : 'button.panel__label .label-content',
     txtHorseName: (id: number) => `.panel:nth-child(${id}) .stud`,
