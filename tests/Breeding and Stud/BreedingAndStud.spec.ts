@@ -1384,7 +1384,7 @@ describe('Breeding And Stud', () => {
       expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colour)) .toBe(false);
      })
 
-     it.only('ZED-273 Clear Filter button should remove the filters from the sidebar', async () =>{
+     it('ZED-273 Clear Filter button should remove the filters from the sidebar', async () =>{
       await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
       await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
       await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
