@@ -1097,8 +1097,12 @@ describe('Breeding And Stud', () => {
   });
 
   describe('Horse Profile', () => {
-    beforeEach(async() => {
-      await pages[0].click(breedingAndStud.objects.btnBreeding)
+    beforeEach(async() => {      
+      await pages[0].click(breedingAndStud.objects.btnBreeding)     
+      const breedingmodal = await pages[0].$(breedingAndStud.objects.btnCloseModalBreedingDecay)
+      if (breedingmodal){
+        await pages[0].click(breedingAndStud.objects.btnCloseModalBreedingDecay)
+      }       
       await pages[0].click(breedingAndStud.objects.lstHorses(1))
     })
 
@@ -1393,6 +1397,25 @@ describe('Breeding And Stud', () => {
       await pages[0].click(breedingAndStud.objects.filtersPanel.superCoatColourRarity)
       await pages[0].click(breedingAndStud.objects.filtersPanel.commonColourRarity)
       expect(await pages[0].isEnabled(breedingAndStud.objects.filtersPanel.colour)) .toBe(false);
+     })
+
+     it('ZED-273 Clear Filter button should remove the filters from the sidebar', async () =>{
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.zedGeneration)
+      await pages[0].fill(breedingAndStud.objects.filtersPanel.zedGenerationMin,'80')
+      await pages[0].click(breedingAndStud.objects.filtersPanel.bloodline)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.bloodlineButerinLabel)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.breeds)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.breedGenesisLabel)
+      await pages[0].click(breedingAndStud.objects.btnClearFilters)
+      await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)      
+      expect(horsesList.length).toBeGreaterThanOrEqual(1)      
+      expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.bloodlineButerinCheckBox)) .toBe(false)
+      expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.breedGenesisCheckBox)) .toBe(false)
+      expect(await pages[0].innerText(breedingAndStud.objects.filtersPanel.zedGenerationMin)) .toEqualText('1')
      })
 
   });
