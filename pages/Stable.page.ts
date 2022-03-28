@@ -37,7 +37,7 @@ class Stable {
       panelHorseName: '.panel.open .name-icon > div',
       panelHorseGen: '(//span[@class=\'primary-text gen\'])[1]',
       panelHorseBloodline: '(//div[@class=\'primary-text\'])[1]',
-      panelHorseGender: '(//div[@class=\'primary-text\'])[2]',
+      panelHorseGender: (id: number) => `(//div[text()='gender']/following-sibling::div)[${id}]`,
       panelHorseCoat: '(//span[@class=\'primary-text\'])[1]',
       panelHorseRaces: '(//div[@class=\'primary-text\'])[3]',
       panelHorseCareer: '(//div[text()=\'career\']/following-sibling::div)[1]',
@@ -48,7 +48,8 @@ class Stable {
       panelHorseBreedLink: '.panel.open .icn-txt:nth-child(2)',
       panelHorseTimeLeft: '.panel.open .time-left > .primary-text',
       panelCollapseOption: '(//div[@class=\'horse-properties\']//img)[1]',
-      panelMinimize: '(//img[@class=\'open-label\'])',
+      panelMinimize: (id: number) => `(//img[@class=\'open-label\'])[${id}]`,
+      selectMateBtn: `//button[text()='Select Mate']`
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',
@@ -73,6 +74,9 @@ class Stable {
     tooltipStableLink: '//div[@role=\'tooltip\']',
     loader: '.loader-container',
     transactionLoader: '.transaction-loading-modal',
+    bloodlineName: `(//div[text()='bloodline']/following-sibling::div)[1]`,
+    closeDetails: `(//div[@class='horse-properties']//img)[1]`,
+    gender: `(//div[text()='gender']/following-sibling::div)[1]`,
     filtersPanel: {
       divPanelFilter: '(//div[@class=\'page-content stable\']//div)[1]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
@@ -85,13 +89,15 @@ class Stable {
       genderFillyCheckBox: '#Filly',
       genderFillyLabel: '//label[text()=\'Filly\']',
       genderMareLabel: '//label[text()=\'Mare\']',
-      genderColtCheckBox: '#Colt',
       genderColtLabel: "text='Colt'",
+      genderStallionLabel: "text='Stallion'",
       bloodlineNakamotoCheckBox: '#Nakamoto',
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
+      bloodlineLabel : (bloodline: 'bloodline') => `//label[text()='${bloodline}']`,
       breeds: '//span[text()=\'BREEDS\']',
       breedGenesisCheckBox: '#genesis',
-      breedGenesisLabel: '//label[text()=\'genesis\']'
+      breedGenesisLabel: '//label[text()=\'genesis\']',
+      stableFilterClose: `(//div[@class='title-wrapper']//img)[2]`,
     },
     breedForm: {
       formBreed: '.breed-form',
@@ -141,9 +147,10 @@ class Stable {
         return i
       }
     }
+    await this.page.waitForTimeout(1000)
     if (!await this.page.isVisible(this.objects.btnOwnARacehorse)) {
       await this.page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
-      return await this.getHorseInStable(i + 1, fnCondition)
+      return await this.getHorseInStable(i, fnCondition)
     }
   }
 

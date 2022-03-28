@@ -50,15 +50,23 @@ describe('Stable', () => {
   it('ZED-164 - Stable allows the user to filter by BLOODLINE', async () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
+    expect(stable.objects.stableList.HorseList.length).not.toEqual(0)
+    const list = pages[0].locator(stable.objects.stableList.HorseList)
+    await list.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    const horseBloodLine = await pages[0].innerText(stable.objects.bloodlineName)
+    await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.btnStableFilterOptions)
     await pages[0].waitForSelector(stable.objects.filtersPanel.bloodline)
     await pages[0].click(stable.objects.filtersPanel.bloodline)
     await pages[0].waitForTimeout(1000)
-    await pages[0].click(stable.objects.filtersPanel.bloodlineNakamotoLabel)
+    await pages[0].click(stable.objects.filtersPanel.bloodlineLabel(horseBloodLine))
     await pages[0].waitForTimeout(1000)
-    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
-    expect(horsesList.length).not.toEqual(0)
-    expect(await pages[0].isChecked(stable.objects.filtersPanel.bloodlineNakamotoCheckBox)).toBe(true)
+    const horselist = pages[0].locator(stable.objects.stableList.HorseList)
+    await horselist.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    const bloodLine = await pages[0].innerText(stable.objects.bloodlineName)
+    expect(bloodLine).toBe(horseBloodLine)
   });
 
   it('ZED-165 - Stable allows the user to filter by GENDER', async () => {
@@ -70,9 +78,11 @@ describe('Stable', () => {
     await pages[0].waitForTimeout(1000)
     await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
     await pages[0].waitForTimeout(1000)
-    const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
-    expect(horsesList.length).not.toEqual(0)
-    expect(await pages[0].isChecked(stable.objects.filtersPanel.genderFillyCheckBox)).toBe(true)
+    const horselist = pages[0].locator(stable.objects.stableList.HorseList)
+    await horselist.nth(1).click()
+    await pages[0].waitForTimeout(1000)
+    const gender = await pages[0].innerText(stable.objects.gender)
+    expect(gender).toBe(data.gender)
   });
 
   it('ZED-166 - Stable allows the user to filter BREEDS', async () => {
@@ -97,12 +107,12 @@ describe('Stable', () => {
     await pages[0].waitForSelector(stable.objects.filtersPanel.zedGeneration)
     await pages[0].click(stable.objects.filtersPanel.zedGeneration)
     await pages[0].waitForTimeout(1000) 
-    await pages[0].fill(stable.objects.filtersPanel.zedGenerationMin,'34')
+    await pages[0].fill(stable.objects.filtersPanel.zedGenerationMin,'1')
     await pages[0].click(stable.objects.filtersPanel.btnCloseFilterPanel)
     await pages[0].waitForTimeout(1000)
     await pages[0].waitForSelector(stable.objects.stableList.HorseList)
     const zedGenerationMin = await pages[0].getAttribute(stable.objects.filtersPanel.zedGenerationMin,"value")
-    expect(zedGenerationMin).toBe('34')
+    expect(zedGenerationMin).toBe('1')
     const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
     expect(horsesList.length).not.toEqual(0)
   });
@@ -135,8 +145,8 @@ describe('Stable', () => {
     await pages[0].click(stable.objects.imgStableProfile)
     await pages[0].waitForSelector(stable.objects.btnSettings)
     const horseName = await pages[0].innerText(stable.objects.stableList.txtHorseName(1))
-    await pages[0].fill(stable.objects.txtStableSearch,horseName.substring(0,horseName.length-1))
-    await pages[0].waitForTimeout(1000)
+    await pages[0].fill(stable.objects.txtStableSearch,horseName.substring(0,horseName.length-4))
+    await pages[0].waitForTimeout(2000)
     await pages[0].waitForSelector(stable.objects.stableList.HorseList)
     const horsesList= await pages[0].$$(stable.objects.stableList.HorseList)
     expect(horsesList.length).toEqual(1)
@@ -210,8 +220,7 @@ describe('Stable', () => {
     await Horselist.nth(1).click()
     await pages[0].waitForTimeout(1000)
     expect(await Horselist.nth(1).getAttribute('class')).toContain('panel open')
-    const cardLinks = pages[0].locator(stable.objects.stableList.panelMinimize)
-    await cardLinks.nth(1).click()
+    await pages[0].click(stable.objects.stableList.panelMinimize(2))
     await pages[0].waitForTimeout(1000)
     expect(await Horselist.nth(1).getAttribute('class')).toContain('panel closed')
   });
@@ -250,11 +259,11 @@ describe('Stable', () => {
 	});
 
   xit('ZED-179 - Stable allows the user to OWN a new horse and after that is being shown in the STABLE horse list', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
   xit('ZED-180 - Stable shown the NEW HORSE after the Breeding is born', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
   it('ZED-181 - Stable shown the THOROUGHBREDS number', async () => {
@@ -313,19 +322,19 @@ describe('Stable', () => {
     describe('General', function() {
 
       xit('ZED-116 - Stable showing the horses that belong to a address after buy from the marketplace', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-125 - Stable is allowing the user to update the stable picture/image', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-117 - Stable is showing the list of horses that belongs to an address.', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-126 - Stable/Account is allowing the user to add a new stable picture/image', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       it('ZED-127 - Stable/Account is allowing the user to update the stable information', async () => {
@@ -361,12 +370,27 @@ describe('Stable', () => {
       });
 
       xit('ZED-118 - Stable allows the user to transfer a Horse to another stable/address', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
 
       xit('ZED-119 - Stable is showing into the list the horse transferred from another address', async () => {
-        expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+        expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
       });
+
+      it('ZED-263 Select mate option should not be available for the Female Horses when user sign in', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.gender)
+        await pages[0].click(stable.objects.filtersPanel.genderFillyLabel)
+        await pages[0].click(stable.objects.filtersPanel.genderMareLabel)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        await pages[0].waitForSelector(stable.objects.loader)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(1000)
+        expect(await pages[0].isVisible(stable.objects.stableList.selectMateBtn)).toBe(false)
+       });
 
     });
 

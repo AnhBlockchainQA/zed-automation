@@ -28,7 +28,7 @@ describe('Racing', () => {
   });
 
   xit('ZED-XX - Not Implemented Yet', async () => {
-    expect(await pages[0].isVisible(auth.objects.B_ETH_BALANCE)).toBe(true);
+    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
 
 });
