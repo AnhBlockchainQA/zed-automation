@@ -25,11 +25,35 @@ describe('Breeding And Stud', () => {
     breedingAndStud = new BreedingAndStud(pages[0])
     stable = new Stable(pages[0])
     racing = new Racing(pages[0])
+
+    await pages[0].goto(data.baseUrl);
+    await pages[0].waitForLoadState();
+    await pages[0].click(breedingAndStud.objects.btnBreeding)
+    const breedingModal = await pages[0].$(breedingAndStud.objects.btnCloseModalBreedingDecay)
+    if (breedingModal){
+      await pages[0].click(breedingAndStud.objects.btnCloseModalBreedingDecay)
+    }
   });
 
   beforeEach(async () => {
     await pages[0].goto(data.baseUrl);
     await pages[0].waitForLoadState();
+
+    //******************************************
+    //This is to Re-login Zed Account if needed
+    //******************************************
+    const NavStart = await pages[0].$(auth.objects.btnNavStart)
+    if (NavStart) {
+      await pages[0].click(auth.objects.btnNavStart)
+      const [tabs] = await Promise.all([
+        browserContext.waitForEvent('page'),
+        await pages[0].click(auth.objects.btnModalMetamaskLogin)
+      ]);
+      await tabs.waitForLoadState();
+      pages = tabs.context().pages();
+      await pages[pages.length-1].click(auth.objects.btnMetamaskSign)
+      const loading = await pages[0].waitForSelector(stable.objects.transactionLoader, {state: 'hidden'}).catch(() => true)
+    }
   });
 
   afterAll(async () => {
@@ -41,7 +65,6 @@ describe('Breeding And Stud', () => {
   xit('ZED-XX - Not Implemented Yet', async () => {
     expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
   });
-
 
   describe('Breeding', () => {
     beforeEach(async() => {
@@ -140,7 +163,7 @@ describe('Breeding And Stud', () => {
       let previousHeight = await pages[0].evaluate('document.body.scrollHeight');
       await pages[0].evaluate('window.scrollTo(0, document.body.scrollHeight)');
       await pages[0].waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
-     await pages[0].waitForSelector(breedingAndStud.objects.lblFooter)
+      await pages[0].waitForSelector(breedingAndStud.objects.lblFooter)
       expect(await pages[0].isVisible(breedingAndStud.objects.lblFooter)).toBe(true);
     });
 
@@ -173,7 +196,7 @@ describe('Breeding And Stud', () => {
       await pages[0].waitForSelector(breedingAndStud.objects.filtersPanel.bloodline)
       await pages[0].click(breedingAndStud.objects.filtersPanel.bloodline)
       await pages[0].waitForTimeout(1000)
-      await pages[0].click(breedingAndStud.objects.filtersPanel.bloodlineButerinLabel)  
+      await pages[0].click(breedingAndStud.objects.filtersPanel.bloodlineButerinLabel)
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
       expect(horsesList.length).toBeGreaterThanOrEqual(0)
@@ -474,19 +497,18 @@ describe('Breeding And Stud', () => {
       const filterHorseCount = await pages[0].innerText(breedingAndStud.objects.lblFilterCount)
       const horseCount = filterHorseCount.substring(0,filterHorseCount.length-10).split('of')
       for(let horseRow = 2; horseRow<= parseInt(horseCount[1]); horseRow++){
-      await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
-      await pages[0].waitForTimeout(1000)
-      const offspringValue = await pages[0].innerText(breedingAndStud.objects.studList.offspringValue)
-      if(parseInt(offspringValue) === 0 ){
-        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('3 of 3 left')
-      }else if(parseInt(offspringValue) === 1 ){
-        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('2 of 3 left')
-      } 
-       else if(parseInt(offspringValue) === 2 ){
-        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('1 of 3 left')
-      }else{
-        expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow))).toBe('0 of 3 left')
-      }
+        await pages[0].click(breedingAndStud.objects.studList.collapsedPanelOpen(horseRow))
+        await pages[0].waitForTimeout(1000)
+        const offspringValue = await pages[0].innerText(breedingAndStud.objects.studList.offspringValue(horseRow-1))
+        if(parseInt(offspringValue) === 0 ){
+          expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow-1))).toBe('3 of 3 left')
+        }else if(parseInt(offspringValue) === 1 ){
+          expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow-1))).toBe('2 of 3 left')
+        }else if(parseInt(offspringValue) === 2 ){
+          expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow-1))).toBe('1 of 3 left')
+        }else{
+          expect(await pages[0].innerText(breedingAndStud.objects.studList.lblOffspringLeft(horseRow-1))).toBe('0 of 3 left')
+        }
       }
 
     });
@@ -560,7 +582,7 @@ describe('Breeding And Stud', () => {
     });
 
     it('ZED-245 Breeding Service is shown the card "+ Add a Horse to Stud Farm" on the Breeding and Stud view when the user is authenticated.', async () => {
-      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Racehorse to Stud Farm')
       expect((await pages[0].isVisible(breedingAndStud.objects.btnSelectHorse)) &&
             (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(true);
     });
@@ -574,9 +596,9 @@ describe('Breeding And Stud', () => {
       (await pages[0].isEnabled(breedingAndStud.objects.btnSelectHorse)) ).toBe(false);
             
     });
-    
+
     it('ZED- 248 Breeding Service is shown the user stable with a gender filtering when comes from "+ Add Horse > Select Horse" CTA card, showing only Stallion and Colt horses in the list', async () => {
-      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Racehorse to Stud Farm')
       await pages[0].click(breedingAndStud.objects.btnSelectHorse)
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
@@ -596,14 +618,14 @@ describe('Breeding And Stud', () => {
      }); 
 
     it('ZED-249 Breeding Service are shown the number of filters groups selected by the user', async () => {
-      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Horse to Stud Farm')  
+      expect(await pages[0].innerText(breedingAndStud.objects.lblAddHorseStudFarm)).toBe('Add a Racehorse to Stud Farm')
       await pages[0].click(breedingAndStud.objects.btnSelectHorse)
       await pages[0].waitForSelector(breedingAndStud.objects.studList.HorseList)
       expect (await pages[0].innerText(breedingAndStud.objects.lblFilterCounter)).toBe('1')        
     });   
   });
 
-  describe('Stud', function() {
+  describe('Stud', () => {
     it('ZED-57 - Stud Service allows the user to BREED racehorse while racehorse is in STUD', async () => {
       await pages[0].click(breedingAndStud.objects.btnBreeding)
       let res = await pages[0].waitForSelector(breedingAndStud.objects.divPanelFirstRow).catch(() => null)
@@ -1098,11 +1120,7 @@ describe('Breeding And Stud', () => {
 
   describe('Horse Profile', () => {
     beforeEach(async() => {      
-      await pages[0].click(breedingAndStud.objects.btnBreeding)     
-      const breedingmodal = await pages[0].$(breedingAndStud.objects.btnCloseModalBreedingDecay)
-      if (breedingmodal){
-        await pages[0].click(breedingAndStud.objects.btnCloseModalBreedingDecay)
-      }       
+      await pages[0].click(breedingAndStud.objects.btnBreeding)    
       await pages[0].click(breedingAndStud.objects.lstHorses(1))
     })
 
@@ -1415,7 +1433,7 @@ describe('Breeding And Stud', () => {
       expect(horsesList.length).toBeGreaterThanOrEqual(1)      
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.bloodlineButerinCheckBox)) .toBe(false)
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.breedGenesisCheckBox)) .toBe(false)
-      expect(await pages[0].innerText(breedingAndStud.objects.filtersPanel.zedGenerationMin)) .toEqualText('1')
+      expect(await pages[0].innerText(breedingAndStud.objects.filtersPanel.zedGenerationMin)) .toMatchText('1')
      })
 
   });
