@@ -435,7 +435,22 @@ describe('Stable', () => {
         else {
           expect (foalBreed == data.breedGenesis)
         }
-       })
+       });
+
+       it('ZED-411 Verify Genesis Horse Breeding decay in the stable', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.breeds)
+        await pages[0].click(stable.objects.filtersPanel.breedGenesisCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(3000)
+        expect(await pages[0].innerText(stable.objects.stableList.breedingDecay)).toBe('Unlimited');
+        expect(await pages[0].innerText(stable.objects.stableList.breedingDecayLevel)).toBe('Level 0');
+       });
+
       });
 
 
