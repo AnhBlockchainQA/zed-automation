@@ -392,7 +392,51 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(stable.objects.stableList.selectMateBtn)).toBe(false)
        });
 
-    });
+       it('ZED-329 Verify Foal Breed according to the parents breeds', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.breeds)
+        await pages[0].click(stable.objects.filtersPanel.breedLegendaryCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedExclusiveCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedEliteCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedECrossCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedEPacerCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        await pages[0].waitForSelector(stable.objects.loader)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(1000)
+        await pages[0].click(stable.objects.stableList.panelHorseImg)
+        const foalBreed = await pages[0].innerText(stable.objects.stableList.horseBreed)
+        await pages[0].click(stable.objects.stableList.dadHorse)
+        const dadBreed = await pages[1].innerText(stable.objects.stableList.horseBreed)
+        await pages[0].click(stable.objects.stableList.momHorse)
+        const momBreed = await pages[2].innerText(stable.objects.stableList.horseBreed)
+        if (foalBreed == data.breedLegendary){
+        expect(dadBreed).toContain(data.breedGenesis)
+        expect(momBreed).toContain(data.breedGenesis)}
+        else if (foalBreed == data.breedExclusive){
+          expect(data.exclusiveDadBreed).toContain(dadBreed)
+          expect(data.exclusiveMomBreed).toContain(momBreed)
+        }
+        else if (foalBreed == data.breedElite){
+          expect(data.eliteDadBreed).toContain(dadBreed)
+          expect(data.eliteMomBreed).toContain(momBreed)
+        }
+        else if (foalBreed == data.breedCross){
+          expect(data.crossDadBreed).toContain(dadBreed)
+          expect(data.crossMomBreed).toContain(momBreed)
+        }
+        else if  (foalBreed == data.breedPacer) {
+          expect(data.pacerDadBreed).toContain(dadBreed)
+          expect(data.pacerMomBreed).toContain(momBreed)
+        }
+        else {
+          expect (foalBreed == data.breedGenesis)
+        }
+       })
+      });
 
 
     describe('Advanced', function() {
