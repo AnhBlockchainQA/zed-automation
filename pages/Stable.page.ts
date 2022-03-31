@@ -53,6 +53,8 @@ class Stable {
       selectMateBtn: `//button[text()='Select Mate']`,
       dadHorse: `(//div[@class='stats'])[1]`,
       momHorse: `(//div[@class='stats'])[2]`,
+      breedingDecay: `(//span[text()='Unlimited'])[1]`,
+      breedingDecayLevel: `(//div[@class='offspring-info']//div)[3]`
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',
@@ -98,7 +100,7 @@ class Stable {
       bloodlineNakamotoLabel:'//label[@for=\'Nakamoto\']',
       bloodlineLabel : (bloodline: 'bloodline') => `//label[text()='${bloodline}']`,
       breeds: '//span[text()=\'BREEDS\']',
-      breedGenesisCheckBox: '#genesis',
+      breedGenesisCheckBox: `//label[text()='genesis']`,
       breedLegendaryCheckBox: `//label[text()='legendary']`,
       breedExclusiveCheckBox: `//label[text()='exclusive']`,
       breedEliteCheckBox: `//label[text()='elite']`,
