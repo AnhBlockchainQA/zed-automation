@@ -77,6 +77,8 @@ class BreedingAndStud {
     horseOffSpringInfo: `(//div[@class='offspring-info']//div)[1]`,
     horseoffSpring: `(//div[@class='primary-text']/following-sibling::div)[1]`,
     horseColour: `//span[@class='primary-text']`,
+    breedingDecay: `(//div[@class='offspring-info']//span)[1]`,
+    breedingDecayLevel: `(//div[@class='offspring-info']//div)[3]`,
     studList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
@@ -106,7 +108,7 @@ class BreedingAndStud {
       lblOffspringLeft: (id: number) => `(//div[@class='properties-content'])[${id}]/div[8]/div[2]/div[2]`,
       lblCoatValue: (id: number) => ` (//div[@class='properties-content'])[${id}]/div[4]/span`,
     },
-    filtersPanel: {
+      filtersPanel: {
       divPanelFilterStud: '//div[contains(@class,"sidebar-wrapper side-filter-wrapper")]',
       btnCloseFilterPanel:'//div[@class=\'title-wrapper\']//button[1]',
       breeds: '//span[text()=\'BREEDS\']',
