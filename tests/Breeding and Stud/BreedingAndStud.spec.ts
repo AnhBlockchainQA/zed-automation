@@ -1433,7 +1433,23 @@ describe('Breeding And Stud', () => {
       expect(horsesList.length).toBeGreaterThanOrEqual(1)      
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.bloodlineButerinCheckBox)) .toBe(false)
       expect(await pages[0].isChecked(breedingAndStud.objects.filtersPanel.breedGenesisCheckBox)) .toBe(false)
-      expect(await pages[0].innerText(breedingAndStud.objects.filtersPanel.zedGenerationMin)) .toMatchText('1')
+      const zedMin = await pages[0].getAttribute(breedingAndStud.objects.filtersPanel.zedGenerationMin,'value')
+      expect(zedMin).toBe('1')
+     })
+
+     it('ZED-413 Verify Genesis Horse Breeding Decay in the stud', async () => {
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      await pages[0].click(breedingAndStud.objects.btnStableFilterOptions)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.breeds)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.breedGenesisLabel)
+      await pages[0].click(breedingAndStud.objects.filtersPanel.btnCloseFilterPanel)
+      const horsesList= await pages[0].$$(breedingAndStud.objects.studList.HorseList)
+      expect(horsesList.length).toBeGreaterThanOrEqual(0)
+      await pages[0].click(breedingAndStud.objects.divPanelFirstRow)
+      await pages[0].waitForSelector(breedingAndStud.objects.imgHorse)
+      expect(await pages[0].innerText(breedingAndStud.objects.breedingDecay)).toBe('Unlimited');
+      expect(await pages[0].innerText(breedingAndStud.objects.breedingDecayLevel)).toBe('Level 0');
      })
 
   });
