@@ -1,10 +1,13 @@
 import Authorization from '../../pages/Authorization.page';
-import * as data from '../../fixtures/qa.json';
 import Metamask from '../../pages/Metamask.module';
+import * as data from '../../fixtures/qa.json';
 import { BrowserContext } from 'playwright';
+import Racing from '../../pages/Racing.module';
+import { expect } from '@playwright/test';
 
-describe('Racing', () => {
+describe('Stable', () => {
   let auth: Authorization;
+  let racing: Racing;
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
@@ -14,6 +17,7 @@ describe('Racing', () => {
     browserContext = await metamask.init();
     pages = await metamask.authenticate(browserContext);
     auth = new Authorization(pages);
+    racing = new Racing(pages);
   });
 
   beforeEach(async () => {
@@ -27,8 +31,11 @@ describe('Racing', () => {
     await metamask.close(pages, browserContext);
   });
 
-  xit('ZED-XX - Not Implemented Yet', async () => {
-    expect(await pages[0].isVisible(auth.objects.ethBalance)).toBe(true);
+  it('ZED-73 - Racing Service is showing information for Next To Run', async () => {
+    await pages[0].waitForSelector(".header-content .left-part div[data-tour='header-racing'] button");
+    await pages[0].click(".header-content .left-part div[data-tour='header-racing'] button");
+    await pages[0].click("text=Next to Run");
+    expect(pages[0]).toHaveURL("\/upcoming");
   });
 
 });

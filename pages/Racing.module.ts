@@ -11,6 +11,7 @@ class Racing {
     btnStart: '#app .app-content .header-desktop .start-part button',
     btnMetamaskOption: '#login-modal .login-options .metamask-login',
     menuRacing: "(//div[contains(@class, 'primary-text text-uppercase')])[1]",
+    freeEventsList: "//img[@class='free-race-badge']/ancestor::tr",
     events: {
       lstRaces: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',
       lstGates: (id?: number) => id ? `.gate-btn:nth-child(${id}) > div` : '.gate-btn  > div',
