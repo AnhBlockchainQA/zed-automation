@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649174499246" clover="3.2.0">
-  <project timestamp="1649174499246" name="All files">
-    <metrics statements="107" coveredstatements="52" conditionals="5" coveredconditionals="1" methods="18" coveredmethods="7" elements="130" coveredelements="60" complexity="0" loc="107" ncloc="107" packages="1" files="3" classes="3"/>
-    <file name="Authorization.page.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Authorization.page.ts">
+<coverage generated="1649232256671" clover="3.2.0">
+  <project timestamp="1649232256672" name="All files">
+    <metrics statements="107" coveredstatements="52" conditionals="5" coveredconditionals="0" methods="18" coveredmethods="7" elements="130" coveredelements="59" complexity="0" loc="107" ncloc="107" packages="1" files="3" classes="3"/>
+    <file name="Authorization.page.ts" path="/Users/davidle/zed-automation/pages/Authorization.page.ts">
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
@@ -10,8 +10,8 @@
       <line num="42" count="0" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
     </file>
-    <file name="Metamask.module.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Metamask.module.ts">
-      <metrics statements="95" coveredstatements="46" conditionals="1" coveredconditionals="1" methods="10" coveredmethods="5"/>
+    <file name="Metamask.module.ts" path="/Users/davidle/zed-automation/pages/Metamask.module.ts">
+      <metrics statements="95" coveredstatements="46" conditionals="1" coveredconditionals="0" methods="10" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
@@ -19,7 +19,7 @@
       <line num="9" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
       <line num="53" count="1" type="stmt"/>
-      <line num="54" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="54" count="1" type="cond" truecount="0" falsecount="1"/>
       <line num="56" count="1" type="stmt"/>
       <line num="69" count="1" type="stmt"/>
       <line num="70" count="1" type="stmt"/>
@@ -108,7 +108,7 @@
       <line num="202" count="0" type="stmt"/>
       <line num="206" count="1" type="stmt"/>
     </file>
-    <file name="Racing.module.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Racing.module.ts">
+    <file name="Racing.module.ts" path="/Users/davidle/zed-automation/pages/Racing.module.ts">
       <metrics statements="7" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
