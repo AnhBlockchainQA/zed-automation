@@ -6,7 +6,7 @@ import Racing from '../../pages/Racing.module';
 import { expect } from '@playwright/test';
 
 
-describe('Stable', () => {
+describe('Racing', () => {
   let auth: Authorization;
   let racing: Racing;
   let pages: any;
