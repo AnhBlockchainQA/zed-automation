@@ -3,11 +3,8 @@ import Metamask from '../../pages/Metamask.module';
 import * as data from '../../fixtures/qa.json';
 import { BrowserContext } from 'playwright';
 import Racing from '../../pages/Racing.module';
-<<<<<<< HEAD
 import { expect } from '@playwright/test';
-=======
 
->>>>>>> fef35f0dba931c49fcf8abdcd8ae7f98128f632f
 
 describe('Stable', () => {
   let auth: Authorization;
@@ -15,7 +12,6 @@ describe('Stable', () => {
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
-  let racing : Racing;
 
   beforeAll(async () => {
     metamask = new Metamask();
