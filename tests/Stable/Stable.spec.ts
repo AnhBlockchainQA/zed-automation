@@ -1,6 +1,7 @@
 import Authorization from '../../pages/Authorization.page';
 import Metamask from '../../pages/Metamask.module';
 import Stable from '../../pages/Stable.page';
+import HorseProfile from '../../pages/HorseProfile.page';
 import * as data from '../../fixtures/qa.json';
 import { BrowserContext } from 'playwright';
 
@@ -10,6 +11,7 @@ describe('Stable', () => {
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
+  let horseProfile: HorseProfile;
 
   beforeAll(async () => {
     metamask = new Metamask();
@@ -17,6 +19,7 @@ describe('Stable', () => {
     pages = await metamask.authenticate(browserContext);
     auth = new Authorization(pages);
     stable = new Stable(pages);
+    horseProfile = new HorseProfile(pages);
   });
 
   beforeEach(async () => {
@@ -392,7 +395,82 @@ describe('Stable', () => {
         expect(await pages[0].isVisible(stable.objects.stableList.selectMateBtn)).toBe(false)
        });
 
-    });
+       it('ZED-329 Verify Foal Breed according to the parents breeds', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.breeds)
+        await pages[0].click(stable.objects.filtersPanel.breedLegendaryCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedExclusiveCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedEliteCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedECrossCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.breedEPacerCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        await pages[0].waitForSelector(stable.objects.loader)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(1000)
+        await pages[0].click(stable.objects.stableList.panelHorseImg)
+        const foalBreed = await pages[0].innerText(stable.objects.stableList.horseBreed)
+        await pages[0].click(stable.objects.stableList.dadHorse)
+        const dadBreed = await pages[1].innerText(stable.objects.stableList.horseBreed)
+        await pages[0].click(stable.objects.stableList.momHorse)
+        const momBreed = await pages[2].innerText(stable.objects.stableList.horseBreed)
+        if (foalBreed == data.breedLegendary){
+        expect(dadBreed).toContain(data.breedGenesis)
+        expect(momBreed).toContain(data.breedGenesis)}
+        else if (foalBreed == data.breedExclusive){
+          expect(data.exclusiveDadBreed).toContain(dadBreed)
+          expect(data.exclusiveMomBreed).toContain(momBreed)
+        }
+        else if (foalBreed == data.breedElite){
+          expect(data.eliteDadBreed).toContain(dadBreed)
+          expect(data.eliteMomBreed).toContain(momBreed)
+        }
+        else if (foalBreed == data.breedCross){
+          expect(data.crossDadBreed).toContain(dadBreed)
+          expect(data.crossMomBreed).toContain(momBreed)
+        }
+        else if  (foalBreed == data.breedPacer) {
+          expect(data.pacerDadBreed).toContain(dadBreed)
+          expect(data.pacerMomBreed).toContain(momBreed)
+        }
+        else {
+          expect (foalBreed == data.breedGenesis)
+        }
+       });
+
+       it('ZED-411 Verify Genesis Horse Breeding decay in the stable', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.breeds)
+        await pages[0].click(stable.objects.filtersPanel.breedGenesisCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        const list = pages[0].locator(stable.objects.stableList.HorseList)
+        await list.nth(1).click()
+        await pages[0].waitForTimeout(3000)
+        expect(await pages[0].innerText(stable.objects.stableList.breedingDecay)).toBe('Unlimited');
+        expect(await pages[0].innerText(stable.objects.stableList.breedingDecayLevel)).toBe('Level 0');
+       });
+
+       it('ZED-415 Verify Genesis Horse Breeding Decay widget on the horse profile', async () => {
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.imgStableProfile)
+        await pages[0].click(stable.objects.btnStableFilterOptions)
+        await pages[0].click(stable.objects.filtersPanel.breeds)
+        await pages[0].click(stable.objects.filtersPanel.breedGenesisCheckBox)
+        await pages[0].click(stable.objects.filtersPanel.stableFilterClose)
+        await pages[0].waitForTimeout(3000)
+        await pages[0].click(stable.objects.stableList.horseListImage(1))
+        await pages[0].waitForTimeout(1000)
+        await pages[0].click(stable.objects.stableList.horseDetails)
+        await pages[0].waitForTimeout(3000)
+        expect(await pages[0].innerText(horseProfile.objects.breedingDecay)).toBe('Unlimited');
+        expect(await pages[0].innerText(horseProfile.objects.genesisTier)).toBe('Tier 0');
+       });
+
+      });
 
 
     describe('Advanced', function() {
