@@ -25,13 +25,15 @@ class Racing {
       btnClose: '.select-for-nomination-form > svg '
     },
     resultRaceTab:{
-      raceRowCount: "//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr", 
-      raceColCount: "//table[contains(@class,'sc-dtMgUX dKBigf')]/thead[1]/tr/th",
-      eventName: (id: number) => `//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr[${id}]/td[1]/div[1]`,
-      eventType: (id: number) => `//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr[${id}]/td[2]/div[1]`,
-      distance: (id: number) => `//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr[${id}]/td[3]/div[1]`,
-      date: (id: number) => `//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr[${id}]/td[4]/div[1]`,
-      pricePool: (id: number) => `//table[contains(@class,'sc-dtMgUX dKBigf')]/tbody[1]/tr[${id}]/td[5]`,
+      myRacehorseOnlyCheckbox: "//input[@id='my-racehorse-switcher']",
+      raceRowCount: "//table[contains(@class,'sc')]/tbody[1]/tr", 
+      raceColCount: "//table[contains(@class,'sc')]/thead[1]/tr/th",
+      eventName: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]`,
+      registeredIcon: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]/img[1]`,
+      eventType: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[2]/div[1]`,
+      distance: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[3]/div[1]`,
+      date: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[4]/div[1]`,
+      pricePool: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[5]`,
     }
   };
 
