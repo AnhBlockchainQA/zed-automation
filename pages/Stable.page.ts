@@ -28,6 +28,7 @@ class Stable {
     stableList:{
       HorseCard: '//div[@class=\'panel\']',
       HorseList: '(//div[@role=\'tabpanel\'])',
+      horseListImage: (id: number) => `(//div[@class='horse-mask-portrait']/following-sibling::img)[${id}]`,
       horse: (id: number) => `(//div[@role=\'tabpanel\'])[${id}]`,
       txtHorseName: (id: number) => `.panel:nth-child(${id}) .primary-text.name`,
       stableDescription: '//div[@class=\'stable-text\']//p[1]',
@@ -54,7 +55,8 @@ class Stable {
       dadHorse: `(//div[@class='stats'])[1]`,
       momHorse: `(//div[@class='stats'])[2]`,
       breedingDecay: `(//span[text()='Unlimited'])[1]`,
-      breedingDecayLevel: `(//div[@class='offspring-info']//div)[3]`
+      breedingDecayLevel: `(//div[@class='offspring-info']//div)[3]`,
+      horseDetails: `(//div[text()='details'])[1]`,
     },
     btnOwnARacehorse: '//button[text()=\'own a racehorse\']',
     btnUserMenu: '.user-part .menu-button',
