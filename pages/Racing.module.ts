@@ -14,6 +14,10 @@ class Racing {
     racingArrowButton: ".header-content .left-part div[data-tour='header-racing'] button",
     nextToRunLabel : "text=Next to Run",
     eventsLabel : "text=Events",
+    activeMenuLabel : "#sub-header-desktop .sub-headers-content .tab-item.active a .item-content div",
+    eventPopUp: {
+      closeIcon: 'svg[class*="close-icon"]'
+    },
     freeEventsList: "//img[@class='free-race-badge']/ancestor::tr",
     events: {
       lstRaces: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',

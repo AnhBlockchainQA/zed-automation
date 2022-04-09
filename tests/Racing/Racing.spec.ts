@@ -32,19 +32,33 @@ describe('Stable', () => {
   });
 
   it('ZED-73 - Racing Service is showing information for Next To Run', async () => {
+    await pages[0].waitForLoadState();
     await pages[0].waitForSelector(racing.objects.racingArrowButton);
     await pages[0].click(racing.objects.racingArrowButton);
     await pages[0].click(racing.objects.nextToRunLabel);
-    // expect(pages[0]).toHaveURL("\/upcoming");
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    expect(pages[0].locator(racing.objects.activeMenuLabel)).toMatchText('Next To Run');
   });
 
 
   it('ZED-74 - Racing Service is showing openings', async () => {
+    await pages[0].waitForLoadState();
     await pages[0].waitForSelector(racing.objects.racingArrowButton);
     await pages[0].click(racing.objects.racingArrowButton);
     await pages[0].click(racing.objects.eventsLabel);
-    await pages[0].waitForSelector();
-    // expect(pages[0]).toHaveURL("\/upcoming");
+    await pages[0].waitForSelector(racing.objects.eventPopUp.closeIcon);
+    await pages[0].locator(racing.objects.eventPopUp.closeIcon).click();
+    expect(pages[0].locator(racing.objects.freeEventsList)).toBeVisible();
   });
+
+
+  // it('ZED-74 - Racing Service is showing openings', async () => {
+    // await pages[0].waitForSelector(racing.objects.racingArrowButton);
+    // await pages[0].click(racing.objects.racingArrowButton);
+    // await pages[0].click(racing.objects.eventsLabel);
+    // await pages[0].waitForSelector();
+    // expect(pages[0]).toHaveURL("\/upcoming");
+  // });
 
 });
