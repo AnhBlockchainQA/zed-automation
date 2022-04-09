@@ -32,9 +32,9 @@ describe('Stable', () => {
   });
 
   it('ZED-73 - Racing Service is showing information for Next To Run', async () => {
-    await pages[0].waitForSelector(".header-content .left-part div[data-tour='header-racing'] button");
-    await pages[0].click(".header-content .left-part div[data-tour='header-racing'] button");
-    await pages[0].click("text=Next to Run");
+    await pages[0].waitForSelector(racing.objects.racingArrowButton);
+    await pages[0].click(racing.objects.racingArrowButton);
+    await pages[0].click(racing.objects.nextToRunLabel);
     expect(pages[0]).toHaveURL("\/upcoming");
   });
 
