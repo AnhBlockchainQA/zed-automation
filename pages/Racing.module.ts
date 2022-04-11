@@ -32,6 +32,7 @@ class Racing {
       txtRaceName : (id: number) => `.buy-in .events-container .events-content table tbody tr:nth-child(${id}) .buy-in-content .race-info .race-name`,
       distanceRaceDetail : (id: number) => `.buy-in .events-container .events-content table tbody tr .buy-in-content .race-info .race-description .race-details .race-detail:nth-child(2) span`,
     },
+    raceNumber: ".result .results-info h3 span:nth-child(1)",
     freeEventsList: "//img[@class='free-race-badge']/ancestor::tr",
     txtHorseName: (id: number) => `.panel:nth-child(${id}) .primary-text.name`,
     filterButton: "div.result .page-top .filters-btn",
