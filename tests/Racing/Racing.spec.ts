@@ -1,11 +1,11 @@
-import Authorization from '../../pages/Authorization.page';
-import Metamask from '../../pages/Metamask.module';
-import * as data from '../../fixtures/qa.json';
-import { BrowserContext } from 'playwright';
-import Racing from '../../pages/Racing.module';
-import { expect } from '@playwright/test';
+import Authorization from "../../pages/Authorization.page";
+import Metamask from "../../pages/Metamask.module";
+import * as data from "../../fixtures/qa.json";
+import { BrowserContext, ElementHandle } from "playwright";
+import Racing from "../../pages/Racing.module";
+import { expect } from "@playwright/test";
 
-describe('Stable', () => {
+describe("Racing", () => {
   let auth: Authorization;
   let racing: Racing;
   let pages: any;
@@ -31,34 +31,62 @@ describe('Stable', () => {
     await metamask.close(pages, browserContext);
   });
 
-  it('ZED-73 - Racing Service is showing information for Next To Run', async () => {
+  it("ZED-73 - Racing Service is showing information for Next To Run", async () => {
     await pages[0].waitForLoadState();
-    await pages[0].waitForSelector(racing.objects.racingArrowButton);
-    await pages[0].click(racing.objects.racingArrowButton);
-    await pages[0].click(racing.objects.nextToRunLabel);
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.nextToRunLabel);
+    await pages[0].click(racing.objects.racingMenu.nextToRunLabel);
     await pages[0].waitForLoadState();
     await pages[0].waitForSelector(racing.objects.activeMenuLabel);
-    expect(pages[0].locator(racing.objects.activeMenuLabel)).toMatchText('Next To Run');
+    expect(
+      (await pages[0].locator(racing.objects.myRaceLabel).isVisible()) &&
+        (await pages[0].locator(racing.objects.tournamentsLabel).isVisible())
+    ).toBeTruthy();
   });
 
-
-  it('ZED-74 - Racing Service is showing openings', async () => {
+  it("ZED-74 - Racing Service is showing openings", async () => {
     await pages[0].waitForLoadState();
-    await pages[0].waitForSelector(racing.objects.racingArrowButton);
-    await pages[0].click(racing.objects.racingArrowButton);
-    await pages[0].click(racing.objects.eventsLabel);
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.eventsLabel);
+    await pages[0].click(racing.objects.racingMenu.eventsLabel);
     await pages[0].waitForSelector(racing.objects.eventPopUp.closeIcon);
     await pages[0].locator(racing.objects.eventPopUp.closeIcon).click();
-    expect(pages[0].locator(racing.objects.freeEventsList)).toBeVisible();
+    await pages[0].waitForSelector(racing.objects.allEventsList);
+    const counts = await pages[0].$$(racing.objects.allEventsList);
+    expect(counts.length).toBeGreaterThan(0);
   });
 
+  it('ZED-76 - Racing Service shows open race details', async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.eventsLabel);
+    await pages[0].click(racing.objects.racingMenu.eventsLabel);
+    await pages[0].waitForSelector(racing.objects.eventPopUp.closeIcon);
+    await pages[0].locator(racing.objects.eventPopUp.closeIcon).click();
+    await pages[0].waitForSelector(racing.objects.allEventsList);
+    const expectedRaceName = await pages[0].locator(racing.objects.eventWithIndex.eventName(1)).innerText();
+    const list = await pages[0].locator(racing.objects.allEventsList);
+    await list.nth(0).click();
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.eventWithIndex.txtRaceName(1));
+    const actualRaceName = await pages[0].locator(racing.objects.eventWithIndex.txtRaceName(1)).innerText();
+    console.log(actualRaceName);
+    expect(actualRaceName).toContain(expectedRaceName);
+  });
 
-  // it('ZED-74 - Racing Service is showing openings', async () => {
-    // await pages[0].waitForSelector(racing.objects.racingArrowButton);
-    // await pages[0].click(racing.objects.racingArrowButton);
-    // await pages[0].click(racing.objects.eventsLabel);
-    // await pages[0].waitForSelector();
-    // expect(pages[0]).toHaveURL("\/upcoming");
-  // });
+  it("ZED-78 - Racing Service shows list of finished races", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    const counts = await pages[0].$$(racing.objects.resultsList);
+    expect(counts.length).toBeGreaterThan(0);
+  });
 
 });
