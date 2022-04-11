@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649688463943" clover="3.2.0">
-  <project timestamp="1649688463943" name="All files">
-    <metrics statements="112" coveredstatements="52" conditionals="5" coveredconditionals="1" methods="23" coveredmethods="7" elements="140" coveredelements="60" complexity="0" loc="112" ncloc="112" packages="1" files="3" classes="3"/>
+<coverage generated="1649691269545" clover="3.2.0">
+  <project timestamp="1649691269545" name="All files">
+    <metrics statements="120" coveredstatements="53" conditionals="5" coveredconditionals="1" methods="31" coveredmethods="8" elements="156" coveredelements="62" complexity="0" loc="120" ncloc="120" packages="1" files="3" classes="3"/>
     <file name="Authorization.page.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Authorization.page.ts">
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <line num="7" count="1" type="stmt"/>
@@ -108,26 +108,28 @@
       <line num="202" count="0" type="stmt"/>
       <line num="206" count="1" type="stmt"/>
     </file>
-    <file name="Racing.module.ts" path="/Users/davidle/zed-automation/pages/Racing.module.ts">
-      <metrics statements="18" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="6"/>
+    <file name="Racing.module.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Racing.module.ts">
+      <metrics statements="20" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="18" coveredmethods="2"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
       <line num="32" count="0" type="stmt"/>
       <line num="33" count="0" type="stmt"/>
       <line num="34" count="0" type="stmt"/>
-      <line num="37" count="0" type="stmt"/>
-      <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="64" count="1" type="stmt"/>
-      <line num="65" count="0" type="stmt"/>
-      <line num="66" count="1" type="stmt"/>
-      <line num="67" count="1" type="stmt"/>
-      <line num="68" count="1" type="stmt"/>
-      <line num="69" count="1" type="stmt"/>
-      <line num="74" count="0" type="stmt"/>
-      <line num="78" count="0" type="stmt"/>
-      <line num="83" count="1" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="48" count="10" type="stmt"/>
+      <line num="49" count="0" type="stmt"/>
+      <line num="52" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="68" count="0" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="70" count="0" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="77" count="0" type="stmt"/>
+      <line num="81" count="0" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

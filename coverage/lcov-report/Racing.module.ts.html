@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/18</span>
+                <span class='fraction'>4/20</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/16</span>
+                <span class='fraction'>2/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44.44% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/18</span>
+                <span class='fraction'>4/20</span>
             </div>
         
             
@@ -146,7 +146,10 @@
 <a name='L81'></a><a href='#L81'>81</a>
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,6 +196,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -210,12 +215,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -277,6 +282,8 @@ class Racing {
       distanceMinInput: '.result .racing-results-filter-sidebar .distance-part div input.distance-min',
       distanceMaxInput: '.result .racing-results-filter-sidebar .distance-part div input.distance-max',
       distanceFilteredResults: '.result .accordion-container table tbody tr td:nth-child(3) div',
+      resultWithIndex: (id: number) =&gt; `.result .accordion-container table tbody tr:nth-child(${id}) td:nth-child(3) div`,
+      closeIconWithIndex: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`.result .accordion-container table tbody tr:nth-child(${id}) td:nth-child(1) img`,</span>
     },
     events: {
       lstRaces: <span class="fstat-no" title="function not covered" >(i</span>d?: number) =&gt; <span class="cstat-no" title="statement not covered" >id ? `.panel:nth-child(${id})` : '.panel',</span>
@@ -294,12 +301,12 @@ class Racing {
       myRacehorseOnlyCheckbox: "//input[@id='my-racehorse-switcher']",
       raceRowCount: "//table[contains(@class,'sc')]/tbody[1]/tr", 
       raceColCount: "//table[contains(@class,'sc')]/thead[1]/tr/th",
-      eventName: (id: number) =&gt; `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]`,
+      eventName: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]`,</span>
       registeredIcon: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]/img[1]`,</span>
-      eventType: (id: number) =&gt; `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[2]/div[1]`,
-      distance: (id: number) =&gt; `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[3]/div[1]`,
-      date: (id: number) =&gt; `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[4]/div[1]`,
-      pricePool: (id: number) =&gt; `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[5]`,
+      eventType: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[2]/div[1]`,</span>
+      distance: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[3]/div[1]`,</span>
+      date: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[4]/div[1]`,</span>
+      pricePool: <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; <span class="cstat-no" title="statement not covered" >`//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[5]`,</span>
     }
   };
 &nbsp;
@@ -321,7 +328,7 @@ export default Racing;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Apr 11 2022 21:47:43 GMT+0700 (Indochina Time)
+                at Mon Apr 11 2022 22:34:29 GMT+0700 (Indochina Time)
             </div>
         <script src="prettify.js"></script>
         <script>

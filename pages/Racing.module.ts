@@ -45,6 +45,8 @@ class Racing {
       distanceMinInput: '.result .racing-results-filter-sidebar .distance-part div input.distance-min',
       distanceMaxInput: '.result .racing-results-filter-sidebar .distance-part div input.distance-max',
       distanceFilteredResults: '.result .accordion-container table tbody tr td:nth-child(3) div',
+      resultWithIndex: (id: number) => `.result .accordion-container table tbody tr:nth-child(${id}) td:nth-child(3) div`,
+      closeIconWithIndex: (id: number) => `.result .accordion-container table tbody tr:nth-child(${id}) td:nth-child(1) img`,
     },
     events: {
       lstRaces: (id?: number) => id ? `.panel:nth-child(${id})` : '.panel',
