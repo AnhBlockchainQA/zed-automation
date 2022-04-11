@@ -4,3 +4,4 @@ pages/test-user-data-dir
 allure-results/
 allure-report/
 *.webm
+coverage/

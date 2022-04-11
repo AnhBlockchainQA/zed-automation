@@ -11,6 +11,7 @@ class Racing {
     btnStart: '#app .app-content .header-desktop .start-part button',
     btnMetamaskOption: '#login-modal .login-options .metamask-login',
     menuRacing: "(//div[contains(@class, 'primary-text text-uppercase')])[1]",
+    subMenuResults: "//div[text()='Results']",
     racingMenu:{
       racingArrowButton: ".header-content .left-part div[data-tour='header-racing'] button",
       nextToRunLabel : "text=Next to Run",
@@ -56,6 +57,17 @@ class Racing {
       btnAvailNominate: "[class='horse-card closed '] .nominate",
       btnConfirm: '.confirm-btn',
       btnClose: '.select-for-nomination-form > svg '
+    },
+    resultRaceTab:{
+      myRacehorseOnlyCheckbox: "//input[@id='my-racehorse-switcher']",
+      raceRowCount: "//table[contains(@class,'sc')]/tbody[1]/tr", 
+      raceColCount: "//table[contains(@class,'sc')]/thead[1]/tr/th",
+      eventName: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]`,
+      registeredIcon: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[1]/div[1]/img[1]`,
+      eventType: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[2]/div[1]`,
+      distance: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[3]/div[1]`,
+      date: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[4]/div[1]`,
+      pricePool: (id: number) => `//table[contains(@class,'sc')]/tbody[1]/tr[${id}]/td[5]`,
     }
   };
 
