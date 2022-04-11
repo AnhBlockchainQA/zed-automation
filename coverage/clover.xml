@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649605758479" clover="3.2.0">
-  <project timestamp="1649605758480" name="All files">
-    <metrics statements="112" coveredstatements="52" conditionals="5" coveredconditionals="0" methods="23" coveredmethods="7" elements="140" coveredelements="59" complexity="0" loc="112" ncloc="112" packages="1" files="3" classes="3"/>
-    <file name="Authorization.page.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Authorization.page.ts">
+<coverage generated="1649650365453" clover="3.2.0">
+  <project timestamp="1649650365453" name="All files">
+    <metrics statements="118" coveredstatements="57" conditionals="5" coveredconditionals="0" methods="29" coveredmethods="12" elements="152" coveredelements="69" complexity="0" loc="118" ncloc="118" packages="1" files="3" classes="3"/>
+    <file name="Authorization.page.ts" path="/Users/davidle/zed-automation/pages/Authorization.page.ts">
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
@@ -10,7 +10,7 @@
       <line num="42" count="0" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
     </file>
-    <file name="Metamask.module.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Metamask.module.ts">
+    <file name="Metamask.module.ts" path="/Users/davidle/zed-automation/pages/Metamask.module.ts">
       <metrics statements="95" coveredstatements="46" conditionals="1" coveredconditionals="0" methods="10" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
@@ -108,20 +108,26 @@
       <line num="202" count="0" type="stmt"/>
       <line num="206" count="1" type="stmt"/>
     </file>
-    <file name="Racing.module.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Racing.module.ts">
-      <metrics statements="12" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="1"/>
+    <file name="Racing.module.ts" path="/Users/davidle/zed-automation/pages/Racing.module.ts">
+      <metrics statements="18" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="6"/>
       <line num="7" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
       <line num="32" count="0" type="stmt"/>
       <line num="33" count="0" type="stmt"/>
-      <line num="36" count="0" type="stmt"/>
-      <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
       <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="62" count="0" type="stmt"/>
-      <line num="66" count="0" type="stmt"/>
-      <line num="71" count="1" type="stmt"/>
+      <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="74" count="0" type="stmt"/>
+      <line num="78" count="0" type="stmt"/>
+      <line num="83" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
