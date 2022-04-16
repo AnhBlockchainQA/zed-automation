@@ -11,10 +11,10 @@ describe("Racing", () => {
   let pages: any;
   let browserContext: BrowserContext;
   let metamask: Metamask;
-  let dateTimeFormat : Intl.DateTimeFormat = new Intl.DateTimeFormat("en-GB", {
+  let dateTimeFormat: Intl.DateTimeFormat = new Intl.DateTimeFormat("en-GB", {
     day: "2-digit",
     month: "short",
-    year: "numeric"
+    year: "numeric",
   });
   let now: Date = new Date();
 
@@ -43,7 +43,7 @@ describe("Racing", () => {
     await pages[0].click(racing.objects.racingMenu.racingArrowButton);
     await pages[0].waitForSelector(racing.objects.racingMenu.nextToRunLabel);
     await pages[0].click(racing.objects.racingMenu.nextToRunLabel);
-    await pages[0].waitForLoadState();
+    await pages[0].waitForLoadState("domcontentloaded");
     await pages[0].waitForSelector(racing.objects.activeMenuLabel);
     expect(
       (await pages[0].locator(racing.objects.myRaceLabel).isVisible()) &&
@@ -76,7 +76,7 @@ describe("Racing", () => {
     const expectedRaceName = await pages[0].locator(racing.objects.eventWithIndex.eventName(1)).innerText();
     const list = await pages[0].locator(racing.objects.allEventsList);
     await list.nth(0).click();
-    await pages[0].waitForLoadState();
+    await pages[0].waitForLoadState("domcontentloaded");
     await pages[0].waitForSelector(racing.objects.eventWithIndex.txtRaceName(1));
     const actualRaceName = await pages[0].locator(racing.objects.eventWithIndex.txtRaceName(1)).innerText();
     console.log(actualRaceName);
@@ -149,7 +149,7 @@ describe("Racing", () => {
     await pages[0].waitForSelector(racing.objects.filterOptions.distanceMaxInput);
     await pages[0].locator(racing.objects.filterOptions.distanceMaxInput).fill("1800");
     await pages[0].locator(racing.objects.activeMenuLabel).click(); // need to click somewhere to trigger the filter
-    await pages[0].waitForLoadState();
+    await pages[0].waitForLoadState("domcontentloaded");
     await pages[0].waitForSelector(racing.objects.filterOptions.distanceFilteredResults);
     const list = await pages[0].$$(racing.objects.filterOptions.distanceFilteredResults);
     for (let index =0; index<list.length; index++){
@@ -179,11 +179,10 @@ describe("Racing", () => {
     );
     await pages[0].click(racing.objects.filterOptions.todayOption);
     await pages[0].click(racing.objects.activeMenuLabel);
-    await pages[0].waitForLoadState();
-    let expectedDate = dateTimeFormat.format(now);
+    await pages[0].waitForLoadState("domcontentloaded");
     const list = await pages[0].$$(racing.objects.resultsList);
     if (list.length > 0) {
-      for (let index = 0; index <= Math.floor((list.length - 1)/2); index++) {
+      for (let index = 0; index <= Math.floor((list.length - 1) / 2); index++) {
         await pages[0].waitForSelector(
           racing.objects.filterOptions.resultWithDateIndex(index + 1)
         );
@@ -191,9 +190,15 @@ describe("Racing", () => {
           .locator(racing.objects.filterOptions.resultWithDateIndex(index + 1))
           .innerText();
         const actualDate = new Date(dateValue).toISOString().split("T")[0];
-        const expectedDate = now.toISOString().split("T")[0];  
+        const expectedDate = now.toISOString().split("T")[0];
         expect(expectedDate == actualDate).toBeTruthy();
       }
+    } else {
+      expect(
+        await pages[0]
+          .locator(racing.objects.filterOptions.noResult)
+          .isVisible()
+      ).toBeTruthy();
     }
     await pages[0].waitForSelector(
       racing.objects.filterOptions.resetDateFilterIcon
@@ -201,29 +206,50 @@ describe("Racing", () => {
     await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
   });
 
-  // it("ZED-84 - Racing Service allows the user to filter out the results by Yesterday date's", async () => {
-  //   await pages[0].waitForLoadState();
-  //   await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
-  //   await pages[0].click(racing.objects.racingMenu.racingArrowButton);
-  //   await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
-  //   await pages[0].click(racing.objects.racingMenu.resultLabel);
-  //   await pages[0].waitForSelector(racing.objects.activeMenuLabel);
-  //   await pages[0].waitForSelector(racing.objects.filterButton, {
-  //     timeout: 5000,
-  //   });
-  //   await pages[0].click(racing.objects.filterButton);
-  //   await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
-  //   await pages[0].click(racing.objects.filterOptions.dateLabel);
-  //   await pages[0].dispatchEvent(
-  //     racing.objects.filterOptions.dateFilterButton,
-  //     "mousedown"
-  //   );
-  //   await pages[0].click(racing.objects.filterOptions.yesterdayOption);
-  //   await pages[0].click(racing.objects.activeMenuLabel);
-  //   await pages[0].waitForLoadState();
-  //   const list = await pages[0].$$(racing.objects.resultsList);
-    
-  // });
+  it("ZED-84 - Racing Service allows the user to filter out the results by Yesterday date's", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    await pages[0].waitForSelector(racing.objects.filterButton, {
+      timeout: 5000,
+    });
+    await pages[0].click(racing.objects.filterButton);
+    await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
+    await pages[0].click(racing.objects.filterOptions.dateLabel);
+    await pages[0].dispatchEvent(
+      racing.objects.filterOptions.dateFilterButton,
+      "mousedown"
+    );
+    await pages[0].click(racing.objects.filterOptions.yesterdayOption);
+    await pages[0].click(racing.objects.activeMenuLabel);
+    await pages[0].waitForLoadState("domcontentloaded");
+    let expectedDate = dateTimeFormat.format(now);
+    const list = await pages[0].$$(racing.objects.resultsList);
+    if (list.length > 0) {
+      for (let index = 0; index <= Math.floor((list.length - 1) / 2); index++) {
+        await pages[0].waitForSelector(
+          racing.objects.filterOptions.resultWithDateIndex(index + 1)
+        );
+        const dateValue = await pages[0]
+          .locator(racing.objects.filterOptions.resultWithDateIndex(index + 1))
+          .innerText();
+        expect(dateValue).toContain(expectedDate);
+      }
+    } else {
+      expect(
+        await pages[0]
+          .locator(racing.objects.filterOptions.noResult)
+          .isVisible()
+      ).toBeTruthy();
+    }
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.resetDateFilterIcon
+    );
+    await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
+  });
 
   it("ZED-85 - Racing Service allows the user to filter out the results by current week", async () => {
     await pages[0].waitForLoadState();
@@ -244,7 +270,7 @@ describe("Racing", () => {
     );
     await pages[0].click(racing.objects.filterOptions.currentWeekOption);
     await pages[0].click(racing.objects.activeMenuLabel);
-    await pages[0].waitForLoadState();
+    await pages[0].waitForLoadState("domcontentloaded");
     let startDate = new Date(
       now.setDate(now.getDate() - now.getDay() + (now.getDay() == 0 ? -7 : 0))
     )
@@ -255,7 +281,7 @@ describe("Racing", () => {
       .split("T")[0];
     const list = await pages[0].$$(racing.objects.resultsList);
     if (list.length > 0) {
-      for (let index = 0; index <= Math.floor((list.length - 1)/2); index++) {
+      for (let index = 0; index <= Math.floor((list.length - 1) / 2); index++) {
         await pages[0].waitForSelector(
           racing.objects.filterOptions.resultWithDateIndex(index + 1)
         );
@@ -279,5 +305,178 @@ describe("Racing", () => {
     await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
   });
 
+  it("ZED-86 - Racing Service allows the user to filter out the results by last week", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    await pages[0].waitForSelector(racing.objects.filterButton, {
+      timeout: 5000,
+    });
+    await pages[0].click(racing.objects.filterButton);
+    await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
+    await pages[0].click(racing.objects.filterOptions.dateLabel);
+    await pages[0].dispatchEvent(
+      racing.objects.filterOptions.dateFilterButton,
+      "mousedown"
+    );
+    await pages[0].click(racing.objects.filterOptions.lastWeekOption);
+    await pages[0].click(racing.objects.activeMenuLabel);
+    await pages[0].waitForLoadState("domcontentloaded");
+    let previousWeek = new Date(new Date().getTime() - 60 * 60 * 24 * 7 * 1000);
+    var previousWeekDay = new Date(previousWeek);
+    var day = previousWeekDay.getDay();
+    var diffToMonday = previousWeek.getDate() - day + (day === 0 ? -7 : 0);
+    var lastSunday = new Date(previousWeek.setDate(diffToMonday))
+      .toISOString()
+      .split("T")[0];
+    var lastSaturday = new Date(previousWeekDay.setDate(diffToMonday + 6))
+      .toISOString()
+      .split("T")[0];
+    const list = await pages[0].$$(racing.objects.resultsList);
+    if (list.length > 0) {
+      for (let index = 0; index <= Math.floor((list.length - 1) / 2); index++) {
+        await pages[0].waitForSelector(
+          racing.objects.filterOptions.resultWithDateIndex(index + 1)
+        );
+        const dateValue = await pages[0]
+          .locator(racing.objects.filterOptions.resultWithDateIndex(index + 1))
+          .innerText();
+        const eventDate = new Date(dateValue);
+        const eventIsoDate = new Date(
+          eventDate.getTime() - eventDate.getTimezoneOffset() * 60000
+        )
+          .toISOString()
+          .split("T")[0];
+        expect(
+          eventIsoDate >= lastSunday && eventIsoDate <= lastSaturday
+        ).toBeTruthy();
+      }
+    }
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.resetDateFilterIcon
+    );
+    await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
+  });
 
+  it("ZED-87 - Racing Service allows the user to filter out the results by current month", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    await pages[0].waitForSelector(racing.objects.filterButton, {
+      timeout: 5000,
+    });
+    await pages[0].click(racing.objects.filterButton);
+    await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
+    await pages[0].click(racing.objects.filterOptions.dateLabel);
+    await pages[0].dispatchEvent(
+      racing.objects.filterOptions.dateFilterButton,
+      "mousedown"
+    );
+    await pages[0].click(racing.objects.filterOptions.currentMonthOption);
+    await pages[0].click(racing.objects.activeMenuLabel);
+    await pages[0].waitForLoadState("domcontentloaded");
+    let startISODate = new Date(now.getFullYear(), now.getMonth(), 0)
+      .toISOString()
+      .split("T")[0];
+    let endISODate = new Date(now.getFullYear(), now.getMonth() + 1, 0)
+      .toISOString()
+      .split("T")[0];
+    const list = await pages[0].$$(racing.objects.resultsList);
+    if (list.length > 0) {
+      for (let index = 0; index <= Math.floor((list.length - 1) / 2); index++) {
+        await pages[0].waitForSelector(
+          racing.objects.filterOptions.resultWithDateIndex(index + 1)
+        );
+        const dateValue = await pages[0]
+          .locator(racing.objects.filterOptions.resultWithDateIndex(index + 1))
+          .innerText();
+        const eventDate = new Date(dateValue);
+        const eventIsoDate = new Date(
+          eventDate.getTime() - eventDate.getTimezoneOffset() * 60000
+        )
+          .toISOString()
+          .split("T")[0];
+        expect(
+          eventIsoDate >= startISODate && eventIsoDate <= endISODate
+        ).toBeTruthy();
+      }
+    }
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.resetDateFilterIcon
+    );
+    await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
+  });
+
+  it("ZED-88 - Racing Service allows the user to filter out the results by last month", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    await pages[0].waitForSelector(racing.objects.filterButton, {
+      timeout: 5000,
+    });
+    await pages[0].click(racing.objects.filterButton);
+    await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
+    await pages[0].click(racing.objects.filterOptions.dateLabel);
+    await pages[0].dispatchEvent(
+      racing.objects.filterOptions.dateFilterButton,
+      "mousedown"
+    );
+    await pages[0].click(racing.objects.filterOptions.lastMonthOption);
+    await pages[0].click(racing.objects.activeMenuLabel);
+    await pages[0].waitForLoadState("domcontentloaded");
+    const list = await pages[0].$$(racing.objects.resultsList);
+    expect(list.length).toBeGreaterThan(0);
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.resetDateFilterIcon
+    );
+    await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
+  });
+
+  it("ZED-89 - Racing Service allows the user to filter out the results by date range", async () => {
+    await pages[0].waitForLoadState();
+    await pages[0].waitForSelector(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].click(racing.objects.racingMenu.racingArrowButton);
+    await pages[0].waitForSelector(racing.objects.racingMenu.resultLabel);
+    await pages[0].click(racing.objects.racingMenu.resultLabel);
+    await pages[0].waitForSelector(racing.objects.activeMenuLabel);
+    await pages[0].waitForSelector(racing.objects.filterButton, {
+      timeout: 5000,
+    });
+    await pages[0].click(racing.objects.filterButton);
+    await pages[0].waitForSelector(racing.objects.filterOptions.dateLabel);
+    await pages[0].click(racing.objects.filterOptions.dateLabel);
+    await pages[0].dispatchEvent(
+      racing.objects.filterOptions.dateFilterButton,
+      "mousedown"
+    );
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.activeDatesList
+    );
+    const activeDates = await pages[0].$$(
+      racing.objects.filterOptions.activeDatesList
+    );
+    const length = await activeDates.length;
+    await pages[0].click(racing.objects.filterOptions.activeDatesWithIndex(1));
+    await pages[0].waitForTimeout(2000); // add some pacing time to simulate real-user behavior
+    await pages[0].click(
+      racing.objects.filterOptions.activeDatesWithIndex(length)
+    );
+    await pages[0].click(racing.objects.activeMenuLabel);
+    await pages[0].waitForLoadState("domcontentloaded");
+    const list = await pages[0].$$(racing.objects.resultsList);
+    expect(list.length).toBeGreaterThan(0);
+    await pages[0].waitForSelector(
+      racing.objects.filterOptions.resetDateFilterIcon
+    );
+    await pages[0].click(racing.objects.filterOptions.resetDateFilterIcon);
+  });
 });
