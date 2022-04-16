@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649858774408" clover="3.2.0">
-  <project timestamp="1649858774409" name="All files">
+<coverage generated="1650080675984" clover="3.2.0">
+  <project timestamp="1650080675984" name="All files">
     <metrics statements="120" coveredstatements="53" conditionals="5" coveredconditionals="0" methods="31" coveredmethods="8" elements="156" coveredelements="61" complexity="0" loc="120" ncloc="120" packages="1" files="3" classes="3"/>
     <file name="Authorization.page.ts" path="/Users/hienhoang/Documents/zed-automation/pages/Authorization.page.ts">
       <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -118,7 +118,7 @@
       <line num="34" count="0" type="stmt"/>
       <line num="38" count="0" type="stmt"/>
       <line num="56" count="0" type="stmt"/>
-      <line num="57" count="2" type="stmt"/>
+      <line num="57" count="20" type="stmt"/>
       <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="75" count="0" type="stmt"/>
